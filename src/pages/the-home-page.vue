@@ -5,7 +5,7 @@
     <!-- Tagline -->
     <p>
       <span
-        >Character keeper for
+        >A character keeper for
         <a href="https://bladesinthedark.com/" target="_blank"
           >Blades in the Dark</a
         ></span
@@ -26,8 +26,13 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
-const scoundrels: Scoundrel[] = [];
+const scoundrels = ref<Scoundrel[]>([]);
+
+// Fetch the list of saved scoundrels (local storage)
+const savedScoundrels = localStorage.getItem('scoundrels');
+if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
 </script>
 
 <style lang="scss" scoped>
