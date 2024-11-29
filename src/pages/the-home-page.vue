@@ -17,8 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { Scoundrel } from '../Scoundrel';
-
+import { Scoundrel } from '@/scoundrel';
 const scoundrels: Scoundrel[] = [];
 </script>
 
