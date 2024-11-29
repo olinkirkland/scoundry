@@ -1,11 +1,14 @@
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Trad:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+:root {
+  --font-family-logo: 'Barrio', cursive;
+  --font-family-primary: 'Georgia', serif;
+}
 
+// Colors & Shadows
 :root {
   // Colors
-  --color-primary: #339af0; // Used for primary actions, buttons, highlights
-  --color-secondary: #2ecc71; // Used for secondary actions or accents
-  --color-background: #f5f5f5; // Overall page background
+  --color-primary: #ff922b; // Used for primary actions, buttons, highlights
 
   --color-surface: #333333; // For cards, modals, or containers on top of background
   --color-surface-inverted: #f5f5f5; // For cards, modals, or containers on top of surface
@@ -38,9 +41,22 @@
   --shadow-md: rgba(0, 0, 0, 0.4) 0px 2px 12px;
   --shadow-lg: rgba(0, 0, 0, 0.4) 0px 10px 15px;
   --shadow-text: rgba(0, 0, 0, 0.4) 2px 2px 2px;
+}
 
-  // Theme brightness will determine if panels are lighter or darker
-  --theme-brightness: -1;
+.page {
+  height: 100vh;
+}
+
+* {
+  color: var(--color-on-surface);
+  font-size: 1.6rem;
+  font-family: var(--font-family-primary);
+}
+
+a {
+  font-style: italic;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-on-surface);
 }
 
 pre {
@@ -51,12 +67,23 @@ pre {
 }
 
 button {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  font-family: var(--font-family-primary);
+  background-color: var(--color-on-surface);
+  color: var(--color-on-surface-inverted);
   border: none;
-  padding: 0.2rem 0.6rem;
+  height: 3.2rem;
+  padding: 0 1.6rem;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  * {
+    font-family: inherit;
+    color: inherit;
+  }
 
   &:hover {
     filter: brightness(1.05);

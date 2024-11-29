@@ -8,8 +8,8 @@
 
 <style lang="scss" scoped>
 .panel {
-  border: 2px solid red;
+  border: 2px solid var(--color-surface);
   padding: 2rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 </style>
