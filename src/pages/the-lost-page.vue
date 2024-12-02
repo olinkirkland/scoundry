@@ -1,16 +1,17 @@
 <template>
   <div class="page">
-    <Panel id="lost">
+    <panel id="lost">
       <h1>404</h1>
       <p>This page does not exist.</p>
       <button class="btn" @click="onClickGoHome()">Return to Home Page</button>
-    </Panel>
+    </panel>
   </div>
 </template>
 
 <script setup lang="ts">
-import Panel from '@/components/panel.vue';
-import { router } from '@/router';
+import Panel from '../components/panel.vue';
+import { router } from '../router';
+
 function onClickGoHome() {
   router.push('/');
 }

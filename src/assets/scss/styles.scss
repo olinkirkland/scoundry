@@ -66,14 +66,21 @@ pre {
   padding: 1rem;
 }
 
-button {
+.row {
+  display: flex;
+  gap: 0.8rem;
+}
+
+button.btn {
   font-family: var(--font-family-primary);
   background-color: var(--color-on-surface);
   color: var(--color-on-surface-inverted);
   border: none;
-  height: 3.2rem;
+  height: 4rem;
   padding: 0 1.6rem;
   cursor: pointer;
+  border-radius: 99px;
+  border: 1px solid var(--color-on-surface);
 
   display: flex;
   align-items: center;
@@ -92,4 +99,22 @@ button {
   &:active {
     filter: brightness(0.95);
   }
+
+  &.disabled {
+    cursor: unset;
+    opacity: 0.4;
+
+    &:hover {
+      filter: unset;
+    }
+
+    &:active {
+      filter: unset;
+    }
+  }
+}
+
+button.btn.btn--alt {
+  background-color: var(--color-on-surface-inverted);
+  color: var(--color-on-surface);
 }

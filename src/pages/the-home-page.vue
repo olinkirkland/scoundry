@@ -12,9 +12,14 @@
       >
     </p>
     <!-- buttons: new scoundrel -->
-    <button class="btn">
-      <span>Make a new Scoundrel</span>
-    </button>
+    <div class="row">
+      <button class="btn">
+        <span>Make a new Scoundrel</span>
+      </button>
+      <button class="btn btn--alt disabled">
+        <span>Load from disk</span>
+      </button>
+    </div>
     <!-- list of scoundrels; portraits and names -->
     <ul class="scoundrels">
       <li v-for="scoundrel in scoundrels" :key="scoundrel.id">
