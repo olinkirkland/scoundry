@@ -9,6 +9,7 @@
           :stepNumber="steps.findIndex((step) => step.id === s.id) + 1"
           :active="s.id === stepId"
           :completed="steps.indexOf(s) < steps.indexOf(step)"
+          @click="onClickStep(s.id)"
         />
       </ul>
     </div>
@@ -27,6 +28,7 @@ import StepBlock from '@/components/step-block.vue';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
+import { on } from 'events';
 import { computed, ref } from 'vue';
 
 enum Step {
@@ -112,6 +114,15 @@ function onClickNextStep() {
 function onClickDiscard() {
   router.replace({ name: PageName.HOME });
 }
+
+function onClickStep(newStepId: Step) {
+  // Just change the route, don't navigate
+  stepId.value = newStepId;
+  router.replace({
+    name: PageName.EDIT,
+    params: { scoundrelId: scoundrelId.value, stepId: newStepId }
+  });
+}
 </script>
 
 <style lang="scss" scoped>
@@ -137,7 +148,7 @@ ul.steps {
 
 @media (max-width: 768px) {
   ul.steps {
-    max-width: 100%;
+    justify-content: flex-start;
     width: 100%;
     overflow-x: auto;
   }
