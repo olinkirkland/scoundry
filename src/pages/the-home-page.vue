@@ -4,11 +4,9 @@
     <h1>Scoundry</h1>
     <!-- Tagline -->
     <p>
-      <span
-        >A character keeper for
-        <a href="https://bladesinthedark.com/" target="_blank"
-          >Blades in the Dark</a
-        ></span
+      A character keeper for
+      <a href="https://bladesinthedark.com/" target="_blank"
+        >Blades in the Dark</a
       >
     </p>
     <!-- buttons: new scoundrel -->
@@ -42,7 +40,6 @@ if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
 
 function onClickMakeNewScoundrel() {
   // TODO: Exit animation
-  
 
   // Navigate to the make page
   router.push({ name: PageName.MAKE });
@@ -66,7 +63,8 @@ h1 {
   text-align: center;
 }
 
-h1 + p {
+h1 + p,
+a {
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -74,6 +72,15 @@ h1 + p {
 @media (max-width: 768px) {
   h1 {
     font-size: 4.8rem;
+  }
+
+  h1 + p,
+  a {
+    font-size: 1.4rem;
+  }
+
+  .row {
+    flex-direction: column;
   }
 }
 </style>
