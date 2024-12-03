@@ -6,6 +6,7 @@ import TheMakePage from '../pages/the-make-page.vue';
 export enum PageName {
     HOME = 'home',
     MAKE = 'make',
+    EDIT = 'edit',
     LOST = 'lost',
 }
 
@@ -18,11 +19,18 @@ const routes = [
         name: PageName.HOME
     },
     {
-        path: '/make/:id',
+        path: '/make',
         components: {
             page: TheMakePage
         },
         name: PageName.MAKE
+    },
+    {
+        path: '/make/:scoundrelId/:stepId',
+        components: {
+            page: TheMakePage
+        },
+        name: PageName.EDIT
     },
     {
         path: '/:pathMatch(.*)*',

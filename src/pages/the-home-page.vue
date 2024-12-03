@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { router } from '@/router';
+import { PageName, router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
 const scoundrels = ref<Scoundrel[]>([]);
@@ -41,8 +41,11 @@ const savedScoundrels = localStorage.getItem('scoundrels');
 if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
 
 function onClickMakeNewScoundrel() {
-  // Go to the make page with no scoundrelId parameter
-  router.push({ name: 'make' });
+  // TODO: Exit animation
+  
+
+  // Navigate to the make page
+  router.push({ name: PageName.MAKE });
 }
 </script>
 

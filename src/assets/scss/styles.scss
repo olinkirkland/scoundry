@@ -11,13 +11,10 @@
   --color-primary: #ff922b; // Used for primary actions, buttons, highlights
 
   --color-surface: #333333; // For cards, modals, or containers on top of background
-  --color-surface-inverted: #f5f5f5; // For cards, modals, or containers on top of surface
+  --color-surface-lighter: #4a4a4a; // For cards, modals, or containers on top of surface
+  --color-on-surface: #ebebeb; // For cards, modals, or containers on top of surface
+  --color-on-surface-lighter: #f5f5f5; // For cards, modals, or containers on top of surface
   --color-error: #e74c3c; // Used for error states, alerts
-
-  --color-on-primary: #f5f5f5; // Text/icons on primary-colored elements
-  --color-on-secondary: #f5f5f5; // Text/icons on secondary-colored elements
-  --color-on-surface: #f5f5f5; // Text/icons on surface-colored elements
-  --color-on-surface-inverted: #333333; // Text/icons on surface-inverted-colored elements
 
   // Rainbow
   --color-red: #f03e3e;
@@ -44,7 +41,7 @@
 }
 
 .page {
-  height: 100vh;
+  flex: 1;
 }
 
 * {
@@ -52,12 +49,16 @@
   font-size: 1.6rem;
   font-family: var(--font-family-primary);
   outline: none;
+  line-height: 1.4;
 }
 
-a {
+a,
+.link {
   font-style: italic;
   text-decoration: none;
   border-bottom: 1px dashed var(--color-on-surface);
+  cursor: pointer;
+  background-color: transparent;
 }
 
 pre {
@@ -75,9 +76,9 @@ pre {
 button.btn {
   font-family: var(--font-family-primary);
   background-color: var(--color-on-surface);
-  color: var(--color-on-surface-inverted);
+  color: var(--color-surface);
   border: none;
-  height: 4rem;
+  height: 3.2rem;
   padding: 0 1.6rem;
   cursor: pointer;
   border-radius: 99px;
@@ -132,4 +133,15 @@ button.btn {
 button.btn.btn--alt {
   background-color: var(--color-on-surface-inverted);
   color: var(--color-on-surface);
+}
+
+.no-click {
+  pointer-events: none !important;
+  * {
+    pointer-events: none !important;
+  }
+}
+
+.muted {
+  opacity: 0.4;
 }

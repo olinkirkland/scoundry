@@ -15,5 +15,7 @@
   background-color: var(--color-surface);
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 </style>
