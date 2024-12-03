@@ -1,16 +1,13 @@
 <template>
-  <div class="page">
-    <panel id="lost">
-      <h1>404</h1>
-      <p>This page does not exist.</p>
-      <button class="btn" @click="onClickGoHome()">Return to Home Page</button>
-    </panel>
+  <div class="page page--lost">
+    <h1>404</h1>
+    <p>This page does not exist.</p>
+    <button class="btn btn--alt" @click="onClickGoHome()">Return to Home Page</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import Panel from '../components/panel.vue';
-import { router } from '../router';
+import { router } from '@/router';
 
 function onClickGoHome() {
   router.push('/');
@@ -18,12 +15,30 @@ function onClickGoHome() {
 </script>
 
 <style lang="scss" scoped>
-#lost {
-  width: 100%;
-  max-width: 40rem;
+.page--lost {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--font-family-logo);
+  color: var(--color-on-surface);
+  font-size: 12rem;
   text-align: center;
-  > button {
-    margin: 0 auto;
+}
+
+h1 + p {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
   }
 }
 </style>

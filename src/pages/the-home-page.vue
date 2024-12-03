@@ -13,7 +13,7 @@
     </p>
     <!-- buttons: new scoundrel -->
     <div class="row">
-      <button class="btn">
+      <button class="btn" @click="onClickMakeNewScoundrel">
         <span>Make a new Scoundrel</span>
       </button>
       <button class="btn btn--alt disabled">
@@ -31,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+import { router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
 const scoundrels = ref<Scoundrel[]>([]);
@@ -38,6 +39,11 @@ const scoundrels = ref<Scoundrel[]>([]);
 // Fetch the list of saved scoundrels (local storage)
 const savedScoundrels = localStorage.getItem('scoundrels');
 if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
+
+function onClickMakeNewScoundrel() {
+  // Go to the make page with no scoundrelId parameter
+  router.push({ name: 'make' });
+}
 </script>
 
 <style lang="scss" scoped>
