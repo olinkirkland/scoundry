@@ -15,7 +15,14 @@
       </ul>
     </div>
 
-    <div>STEP FORM</div>
+    <div class="form-container">
+      <component
+        v-if="stepId"
+        :is="stepComponents[stepId]"
+        :scoundrel="scoundrel"
+      />
+    </div>
+
     <pre>{{ scoundrel }}</pre>
     <div class="row control-bar">
       <button class="btn btn--alt" @click="onClickDiscard">Discard</button>
@@ -26,20 +33,36 @@
 
 <script setup lang="ts">
 import StepBlock from '@/components/step-block.vue';
+import StepAbilities from '@/components/steps/step-abilities.vue';
+import StepBackground from '@/components/steps/step-background.vue';
+import StepFriendsAndRivals from '@/components/steps/step-friends-and-rivals.vue';
+import StepHeritageAndActions from '@/components/steps/step-heritage-and-actions.vue';
+import StepNameAndLook from '@/components/steps/step-name-and-look.vue';
+import StepPlaybook from '@/components/steps/step-playbook.vue';
+import StepVice from '@/components/steps/step-vice.vue';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
 import { computed, ref } from 'vue';
 
+const stepComponents = {
+  playbook: StepPlaybook,
+  background: StepBackground,
+  actions: StepHeritageAndActions,
+  abilities: StepAbilities,
+  friends: StepFriendsAndRivals,
+  vice: StepVice,
+  name: StepNameAndLook
+};
+
 enum Step {
   PLAYBOOK = 'playbook',
-  HERITAGE = 'heritage',
   BACKGROUND = 'background',
   HERITAGE_AND_ACTIONS = 'actions',
   ABILITIES = 'abilities',
-  FRIENDS_AND_RIVALS = 'friends-and-rivals',
+  FRIENDS_AND_RIVALS = 'friends',
   VICE = 'vice',
-  NAME_AND_LOOK = 'name-and-look'
+  NAME_AND_LOOK = 'name'
 }
 
 const steps = [
@@ -89,7 +112,21 @@ stepId.value = params.stepId as Step | null;
 if (!scoundrelId.value) {
   scoundrelId.value = makeSemanticId();
   scoundrel.value = {
-    id: scoundrelId.value
+    id: scoundrelId.value,
+    actions: {
+      hunt: 0,
+      study: 0,
+      survey: 0,
+      tinker: 0,
+      finesse: 0,
+      prowl: 0,
+      skirmish: 0,
+      wreck: 0,
+      attune: 0,
+      command: 0,
+      consort: 0,
+      sway: 0
+    }
   };
 
   stepId.value = Step.PLAYBOOK;
@@ -149,6 +186,10 @@ function changeStep(newStepId: Step) {
     });
   }
 }
+
+function updateScoundrel(newScoundrel: Partial<Scoundrel>) {
+  scoundrel.value = { ...scoundrel.value, ...newScoundrel };
+}
 </script>
 
 <style lang="scss" scoped>
@@ -160,6 +201,8 @@ ul.steps {
   width: fit-content;
   margin: 1.2rem auto;
   max-width: 96rem;
+  border-radius: 99px;
+  overflow: hidden;
 }
 
 .control-bar {
@@ -169,6 +212,13 @@ ul.steps {
   display: flex;
   justify-content: center;
   padding: 0.8rem;
+}
+
+.form-container {
+  padding: 2rem;
+  background-color: var(--color-surface-lighter);
+  border-radius: 5px;
+  margin: 1.2rem;
 }
 
 @media (max-width: 768px) {

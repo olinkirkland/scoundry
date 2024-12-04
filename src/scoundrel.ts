@@ -9,7 +9,7 @@ export type Scoundrel = {
     abilities: string[],
     contactFriendly: string,
     contactUnfriendly: string,
-    actionRatings: {
+    actions: {
         // Insight
         hunt: number,
         study: number,
