@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="step"
     class="step"
     :class="{ active: props.active, completed: props.completed }"
   >
@@ -8,12 +9,16 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from 'vue';
+
 const props = defineProps<{
   stepLabel: string;
   stepNumber: number;
   active: boolean;
   completed: boolean;
 }>();
+
+const step = ref();
 </script>
 
 <style scoped lang="scss">

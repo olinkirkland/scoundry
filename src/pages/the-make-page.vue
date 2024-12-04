@@ -1,15 +1,16 @@
 <template>
   <div class="page page--make" v-if="scoundrel && step">
     <div>
-      <ul class="steps">
+      <ul ref="stepsEl" class="steps">
         <step-block
           v-for="s in steps"
+          :data-step-id="s.id"
           :key="s.id"
           :stepLabel="s.label"
           :stepNumber="steps.findIndex((step) => step.id === s.id) + 1"
           :active="s.id === stepId"
           :completed="steps.indexOf(s) < steps.indexOf(step)"
-          @click="onClickStep(s.id)"
+          @click="changeStep(s.id)"
         />
       </ul>
     </div>
@@ -28,7 +29,6 @@ import StepBlock from '@/components/step-block.vue';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
-import { on } from 'events';
 import { computed, ref } from 'vue';
 
 enum Step {
@@ -73,6 +73,8 @@ const steps = [
   }
 ];
 
+const stepsEl = ref<HTMLElement | null>(null);
+
 const scoundrel = ref<Partial<Scoundrel> | null>(null);
 const scoundrelId = ref<string | null>(null);
 const stepId = ref<Step | null>(null);
@@ -110,26 +112,42 @@ else {
 function onClickNextStep() {
   const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
   const nextStep = steps[currentStepIndex + 1];
-  if (nextStep) {
-    onClickStep(nextStep.id);
-  } else {
-    // Save the scoundrel
-    // await saveScoundrel(scoundrel.value);
-    router.replace({ name: PageName.HOME });
-  }
+  if (nextStep) changeStep(nextStep.id);
 }
 
 function onClickDiscard() {
   router.replace({ name: PageName.HOME });
 }
 
-function onClickStep(newStepId: Step) {
-  // Just change the route, don't navigate
+function changeStep(newStepId: Step) {
+  // Change the route
   stepId.value = newStepId;
   router.replace({
     name: PageName.EDIT,
     params: { scoundrelId: scoundrelId.value, stepId: newStepId }
   });
+
+  // Scroll ul.steps into view (x-scrollable on mobile)
+  const stepEl = document.querySelector(
+    `ul.steps .step[data-step-id="${newStepId}"]`
+  );
+
+  if (stepsEl.value && stepEl) {
+    const containerRect = stepsEl.value.getBoundingClientRect();
+    const stepRect = stepEl.getBoundingClientRect();
+
+    // Calculate the scroll offset needed to bring `stepEl` into view
+    const newX =
+      stepsEl.value.scrollLeft +
+      stepRect.left -
+      containerRect.left +
+      (stepRect.width - containerRect.width) / 2;
+
+    stepsEl.value.scroll({
+      left: newX,
+      behavior: 'smooth'
+    });
+  }
 }
 </script>
 
@@ -140,9 +158,8 @@ ul.steps {
   justify-content: center;
   gap: 0.4rem;
   width: fit-content;
-  padding: 1.2rem;
+  margin: 1.2rem auto;
   max-width: 96rem;
-  margin: 0 auto;
 }
 
 .control-bar {
@@ -157,8 +174,9 @@ ul.steps {
 @media (max-width: 768px) {
   ul.steps {
     justify-content: flex-start;
-    width: 100%;
+    width: calc(100% - 2.4rem);
     overflow-x: auto;
+    margin: 1.2rem;
   }
 }
 </style>
