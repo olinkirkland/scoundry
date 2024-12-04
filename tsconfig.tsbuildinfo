@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/scoundrel.ts","./src/vite-env.d.ts","./src/router/index.ts","./src/util/id-util.ts","./src/app.vue","./src/components/divider.vue","./src/components/panel.vue","./src/components/step-block.vue","./src/components/the-footer.vue","./src/pages/the-home-page.vue","./src/pages/the-lost-page.vue","./src/pages/the-make-page.vue"],"version":"5.6.3"}
