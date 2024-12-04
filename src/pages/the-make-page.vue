@@ -108,7 +108,15 @@ else {
 }
 
 function onClickNextStep() {
-  // TODO
+  const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
+  const nextStep = steps[currentStepIndex + 1];
+  if (nextStep) {
+    onClickStep(nextStep.id);
+  } else {
+    // Save the scoundrel
+    // await saveScoundrel(scoundrel.value);
+    router.replace({ name: PageName.HOME });
+  }
 }
 
 function onClickDiscard() {
