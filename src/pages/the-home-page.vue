@@ -1,5 +1,5 @@
 <template>
-  <div class="page page--home">
+  <div class="page page--home page-in" ref="page">
     <!-- Logo -->
     <h1>Scoundry</h1>
     <!-- Tagline -->
@@ -32,16 +32,19 @@
 import { PageName, router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
+
+const page = ref<HTMLElement | null>(null);
 const scoundrels = ref<Scoundrel[]>([]);
 
 // Fetch the list of saved scoundrels (local storage)
 const savedScoundrels = localStorage.getItem('scoundrels');
 if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
 
-function onClickMakeNewScoundrel() {
-  // TODO: Exit animation
+async function onClickMakeNewScoundrel() {
+  page.value?.classList.remove('page-in');
+  page.value?.classList.add('page-out');
 
-  // Navigate to the make page
+  await new Promise((resolve) => setTimeout(resolve, 500));
   router.push({ name: PageName.MAKE });
 }
 </script>
@@ -54,6 +57,15 @@ function onClickMakeNewScoundrel() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.page-in {
+  animation: pageIn 0.4s ease-out forwards;
+}
+
+.page-out {
+  animation: pageOut 0.2s ease-out forwards;
+  pointer-events: none;
 }
 
 h1 {
@@ -69,6 +81,26 @@ h1 + p,
 a {
   margin-bottom: 4rem;
   text-align: center;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {

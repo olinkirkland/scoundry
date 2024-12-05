@@ -1,5 +1,5 @@
 <template>
-  <div class="page page--make" v-if="scoundrel && step">
+  <div ref="page" class="page page--make page-in" v-if="scoundrel && step">
     <ul ref="stepsEl" class="steps">
       <step-block
         v-for="s in steps"
@@ -13,7 +13,7 @@
       />
     </ul>
 
-    <div class="form-container">
+    <div ref="stepContainer" class="step-container">
       <component
         v-if="stepId"
         :is="stepComponents[stepId]"
@@ -42,6 +42,9 @@ import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
 import { computed, ref } from 'vue';
+
+const page = ref<HTMLElement | null>(null);
+const stepContainer = ref<HTMLElement | null>(null);
 
 const showModel = ref(false);
 window.addEventListener('keydown', (e) => {
@@ -155,11 +158,38 @@ function onClickNextStep() {
   if (nextStep) changeStep(nextStep.id);
 }
 
-function onClickDiscard() {
+async function onClickDiscard() {
+  page.value?.classList.remove('page-in');
+  page.value?.classList.add('page-out');
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
   router.replace({ name: PageName.HOME });
 }
 
-function changeStep(newStepId: Step) {
+const allAnimationClasses = [
+  'animate-form-in--from-left',
+  'animate-form-in--from-right',
+  'animate-form-out--to-left',
+  'animate-form-out--to-right'
+];
+async function changeStep(newStepId: Step) {
+  // Is the new step to the right or left of the old step?
+  const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
+  console.log('currentStepIndex', currentStepIndex);
+  const newStepIndex = steps.findIndex((s) => s.id === newStepId);
+  console.log('newStepIndex', newStepIndex);
+
+  const animationClassOut =
+    newStepIndex > currentStepIndex
+      ? 'animate-form-out--to-left'
+      : 'animate-form-out--to-right';
+
+  stepContainer.value?.classList.remove(...allAnimationClasses);
+  stepContainer.value?.classList.add(animationClassOut);
+
+  // Wait for the animation to finish (0.4s)
+  await new Promise((resolve) => setTimeout(resolve, 400));
+
   // Change the route
   stepId.value = newStepId;
   router.replace({
@@ -189,6 +219,18 @@ function changeStep(newStepId: Step) {
     left: newX,
     behavior: 'smooth'
   });
+
+  const animationClassIn =
+    newStepIndex > currentStepIndex
+      ? 'animate-form-in--from-right'
+      : 'animate-form-in--from-left';
+
+  stepContainer.value?.classList.remove(...allAnimationClasses);
+  stepContainer.value?.classList.add(animationClassIn);
+
+  // Wait for the animation to finish (0.4s)
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  stepContainer.value?.classList.remove(...allAnimationClasses);
 }
 </script>
 
@@ -219,13 +261,106 @@ ul.steps {
   padding: 0.8rem;
 }
 
-.form-container {
+.step-container {
   flex: 1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   overflow-y: auto;
   > * {
     max-width: 96rem;
     margin: 0 auto;
+  }
+}
+
+.page-in {
+  animation: pageIn 0.4s ease-out forwards;
+}
+
+.page-out {
+  animation: pageOut 0.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-form-in--from-left {
+  animation: from-left 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+.animate-form-in--from-right {
+  animation: from-right 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+.animate-form-out--to-left {
+  animation: to-left 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+.animate-form-out--to-right {
+  animation: to-right 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes to-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+}
+
+@keyframes from-right {
+  from {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes to-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(4rem);
   }
 }
 </style>
