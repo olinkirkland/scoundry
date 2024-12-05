@@ -112,18 +112,18 @@ if (!scoundrelId.value) {
   scoundrel.value = {
     id: scoundrelId.value,
     actions: {
-      hunt: 0,
-      study: 0,
-      survey: 0,
-      tinker: 0,
-      finesse: 0,
-      prowl: 0,
-      skirmish: 0,
-      wreck: 0,
-      attune: 0,
-      command: 0,
-      consort: 0,
-      sway: 0
+      hunt: {},
+      study: {},
+      survey: {},
+      tinker: {},
+      finesse: {},
+      prowl: {},
+      skirmish: {},
+      wreck: {},
+      attune: {},
+      command: {},
+      consort: {},
+      sway: {}
     }
   };
 
@@ -216,7 +216,6 @@ ul.steps {
 
 .form-container {
   flex: 1;
-  padding: 2rem;
   background-color: var(--color-surface-lighter);
   border-radius: 5px;
   margin: 0 1.2rem;

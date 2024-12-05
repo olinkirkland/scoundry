@@ -10,21 +10,18 @@ export type Scoundrel = {
     contactFriendly: string,
     contactUnfriendly: string,
     actions: {
-        // Insight
-        hunt: number,
-        study: number,
-        survey: number,
-        tinker: number,
-        // Prowess
-        finesse: number,
-        prowl: number,
-        skirmish: number,
-        wreck: number,
-        // Resolve
-        attune: number,
-        command: number,
-        consort: number,
-        sway: number
+        hunt: Record<string, number>,
+        study: Record<string, number>,
+        survey: Record<string, number>,
+        tinker: Record<string, number>,
+        finesse: Record<string, number>,
+        prowl: Record<string, number>,
+        skirmish: Record<string, number>,
+        wreck: Record<string, number>,
+        attune: Record<string, number>,
+        command: Record<string, number>,
+        consort: Record<string, number>,
+        sway: Record<string, number>,
     },
     hullOnly?: {
         frame: string,

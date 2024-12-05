@@ -45,8 +45,8 @@
         "tagline": "A subtle manipulator and spy",
         "description": "",
         "actions": {
-            "skirmish": 2,
-            "command": 1
+            "consort": 1,
+            "sway": 2
         }
     },
     {
@@ -55,8 +55,8 @@
         "tagline": "A devious mastermind",
         "description": "",
         "actions": {
-            "consort": 1,
-            "sway": 2
+            "study": 1,
+            "consort": 2
         }
     },
     {

@@ -45,7 +45,7 @@ const props = defineProps<{
   }
 
   p.tagline {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     font-style: italic;
   }
