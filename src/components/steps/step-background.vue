@@ -112,12 +112,12 @@ ul.backgrounds-list {
 
 p.description {
     text-align: center;
-    font-style: italic;
     width: 100%;
     opacity: 0.8;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 0 1.2rem;
     margin-bottom: 1.2rem;
+    max-width: 48rem;
 }
 
 section.selected-background {
@@ -143,6 +143,7 @@ ul.specific-backgrounds-list {
 
     section.selected-background {
         p.description {
+            max-width: 100%;
             text-align: left;
         }
     }

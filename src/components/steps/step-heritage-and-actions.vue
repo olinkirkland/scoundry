@@ -2,8 +2,7 @@
     <step-header>
         <h2>Choose your heritage</h2>
         <p>
-            Your character's heritage describes their origins, and their action
-            dots describe their strengths.
+            Your character's heritage describes their origins and family line.
         </p>
     </step-header>
     <ul class="heritages-list">
@@ -15,6 +14,14 @@
             @click="onClickHeritage(heritage)"
         />
     </ul>
+    <section v-if="scoundrel.heritage" class="selected-heritage">
+        <p class="description">
+            {{
+                heritages.find((h) => h.slug === scoundrel.heritage)
+                    ?.description
+            }}
+        </p>
+    </section>
 </template>
 
 <script setup lang="ts">
@@ -41,19 +48,19 @@ ul.heritages-list {
     flex-wrap: wrap;
     margin: 0 auto;
     width: fit-content;
-
     gap: 0.4rem;
     padding: 1.2rem;
 }
 
 p.description {
     text-align: center;
-    font-style: italic;
     width: 100%;
     opacity: 0.8;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 0 1.2rem;
+    margin: 0 auto;
     margin-bottom: 1.2rem;
+    max-width: 48rem;
 }
 
 section.selected-heritage {
@@ -72,6 +79,7 @@ section.selected-heritage {
 
     section.selected-heritage {
         p.description {
+            max-width: 100%;
             text-align: left;
         }
     }
