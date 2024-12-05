@@ -23,7 +23,11 @@
       <specific-background-card
         v-for="specificBackground in filteredSpecificBackgrounds"
         :key="specificBackground.name"
+        :class="{
+          active: specificBackground.slug === scoundrel.backgroundSpecialization
+        }"
         :specificBackground="specificBackground"
+        @click="onClickSpecificBackground(specificBackground)"
       />
     </ul>
   </section>
@@ -32,7 +36,11 @@
 <script setup lang="ts">
 import specificBackgroundsData from '@/assets/data/backgrounds-specific.json';
 import backgroundsData from '@/assets/data/backgrounds.json';
-import { Background, SpecificBackground } from '@/assets/data/data-types';
+import {
+  Action,
+  Background,
+  SpecificBackground
+} from '@/assets/data/data-types';
 import BackgroundCard from '@/components/background-card.vue';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
@@ -59,6 +67,30 @@ const filteredSpecificBackgrounds = computed(() => {
 
 function onClickBackground(background: Background) {
   props.scoundrel.background = background.slug;
+  props.scoundrel.backgroundSpecialization = '';
+  // Remove all 'background' keys from scoundrel.actions
+  Object.keys(props.scoundrel.actions).forEach((action) => {
+    delete props.scoundrel.actions[action as Action].background;
+  });
+}
+
+function onClickSpecificBackground(specificBackground: SpecificBackground) {
+  // Remove all 'background' keys from scoundrel.actions
+  Object.keys(props.scoundrel.actions).forEach((action) => {
+    delete props.scoundrel.actions[action as Action].background;
+  });
+
+  if (props.scoundrel.backgroundSpecialization === specificBackground.slug) {
+    props.scoundrel.backgroundSpecialization = '';
+    return;
+  }
+
+  props.scoundrel.backgroundSpecialization = specificBackground.slug;
+
+  // Add the new actions
+  for (const action of Object.keys(specificBackground.actions))
+    props.scoundrel.actions[action as Action]['background'] =
+      specificBackground.actions[action as Action];
 }
 </script>
 
@@ -108,12 +140,6 @@ ul.specific-backgrounds-list {
     p.description {
       text-align: left;
     }
-  }
-}
-
-@media (max-width: 768px) {
-  ul.specific-backgrounds-list {
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   }
 }
 </style>

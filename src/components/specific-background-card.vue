@@ -60,10 +60,25 @@ const props = defineProps<{
   &.active {
     transition: none;
     color: var(--color-primary);
+    background-color: transparent;
 
     h2 {
       width: fit-content;
       text-shadow: var(--shadow-text);
+    }
+
+    :deep(.action-tag) {
+      border: 1px solid var(--color-primary) !important;
+      background-color: transparent !important;
+
+      ul.circles-list {
+        > li::before {
+          background-color: var(--color-surface-lighter);
+        }
+        > li::after {
+          background-color: var(--color-primary);
+        }
+      }
     }
   }
 }

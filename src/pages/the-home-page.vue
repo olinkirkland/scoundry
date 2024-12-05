@@ -1,31 +1,30 @@
 <template>
   <div class="page page--home page-in" ref="page">
-    <!-- Logo -->
-    <h1>Scoundry</h1>
-    <!-- Tagline -->
-    <p>
-      A character keeper for
-      <a href="https://bladesinthedark.com/" target="_blank"
-        >Blades in the Dark</a
-      >
-    </p>
-    <!-- buttons: new scoundrel -->
-    <div class="row">
-      <button class="btn" @click="onClickMakeNewScoundrel">
-        <span>Make a new Scoundrel</span>
-      </button>
-      <button class="btn btn--alt disabled">
-        <span>Load from file</span>
-      </button>
-    </div>
-    <!-- list of scoundrels; portraits and names -->
-    <ul class="scoundrels">
-      <li v-for="scoundrel in scoundrels" :key="scoundrel.id">
-        <img :src="scoundrel.portrait" :alt="scoundrel.name" />
-        <p>{{ scoundrel.name }}</p>
-      </li>
-    </ul>
+    <div class="page-content">
+      <h1>Scoundry</h1>
+      <p>
+        A character keeper for
+        <a href="https://bladesinthedark.com/" target="_blank"
+          >Blades in the Dark</a
+        >
+      </p>
+      <div class="row">
+        <button class="btn" @click="onClickMakeNewScoundrel">
+          <span>Make a new Scoundrel</span>
+        </button>
+        <button class="btn btn--alt disabled">
+          <span>Load from file</span>
+        </button>
+      </div>
 
+      <!-- TODO: list of scoundrels; portraits and names -->
+      <ul class="scoundrels">
+        <li v-for="scoundrel in scoundrels" :key="scoundrel.id">
+          <img :src="scoundrel.portrait" :alt="scoundrel.name" />
+          <p>{{ scoundrel.name }}</p>
+        </li>
+      </ul>
+    </div>
     <div class="footer-container">
       <footer>
         <div class="logo-and-olin">
@@ -54,8 +53,8 @@
         <div>
           <p>
             Images are from
-            <a href="https://unsplash.com" target="_blank">Unsplash.com</a> and
-            belong to their respective owners on the site
+            <a href="https://unsplash.com" target="_blank">Unsplash.com</a>
+            and belong to their respective owners on the site
           </p>
           <p>
             Icons are from
@@ -90,7 +89,13 @@ async function onClickMakeNewScoundrel() {
 
 <style lang="scss" scoped>
 .page--home {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.page--home > .page-content {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
