@@ -24,6 +24,8 @@
                     <p>{{ scoundrel.name }}</p>
                 </li>
             </ul>
+
+            <label class="scroll-note">Scroll down to see attribution</label>
         </div>
         <div class="footer-container">
             <footer>
@@ -78,23 +80,23 @@
 </template>
 
 <script setup lang="ts">
-import { PageName, router } from '@/router'
-import { ref } from 'vue'
-import { Scoundrel } from '../scoundrel'
+import { PageName, router } from '@/router';
+import { ref } from 'vue';
+import { Scoundrel } from '../scoundrel';
 
-const page = ref<HTMLElement | null>(null)
-const scoundrels = ref<Scoundrel[]>([])
+const page = ref<HTMLElement | null>(null);
+const scoundrels = ref<Scoundrel[]>([]);
 
 // Fetch the list of saved scoundrels (local storage)
-const savedScoundrels = localStorage.getItem('scoundrels')
-if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels)
+const savedScoundrels = localStorage.getItem('scoundrels');
+if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
 
 async function onClickMakeNewScoundrel() {
-    page.value?.classList.remove('page-in')
-    page.value?.classList.add('page-out')
+    page.value?.classList.remove('page-in');
+    page.value?.classList.add('page-out');
 
-    await new Promise((resolve) => setTimeout(resolve, 500))
-    router.push({ name: PageName.MAKE })
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    router.push({ name: PageName.MAKE });
 }
 </script>
 
@@ -112,6 +114,11 @@ async function onClickMakeNewScoundrel() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    > .scroll-note {
+        position: absolute;
+        bottom: 1rem;
+    }
 }
 
 .page-in {
