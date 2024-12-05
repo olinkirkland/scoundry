@@ -93,6 +93,10 @@ button.btn {
     justify-content: center;
     gap: 0.4rem;
 
+    * {
+        white-space: nowrap;
+    }
+
     &.btn--icon {
         // border: none;
         background-color: transparent;
@@ -130,6 +134,7 @@ button.btn {
 
     &.disabled {
         opacity: 0.4;
+        border: none;
         pointer-events: none;
 
         &:hover {
@@ -189,4 +194,14 @@ input[type='text'] {
         border-color: var(--color-primary);
         box-shadow: var(--shadow-md);
     }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }

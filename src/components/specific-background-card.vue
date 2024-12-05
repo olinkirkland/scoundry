@@ -6,7 +6,7 @@
         v-for="action in Object.keys(specificBackground.actions)"
         :key="action"
         :action="action"
-        :number="specificBackground.actions[action as Action]"
+        :value="specificBackground.actions[action as Action]"
       />
     </ul>
   </div>

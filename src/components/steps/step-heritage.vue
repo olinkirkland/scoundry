@@ -83,6 +83,8 @@ function onClickSpecificHeritage(specificHeritage: string) {
     // Put the caret at the end of the input
     const input = document.querySelector('input');
     input?.focus();
+    // Scroll the input into view
+    input?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 </script>
 

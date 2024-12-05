@@ -45,3 +45,9 @@ export type SpecificHeritage = {
     slug: string;
     description: string;
 };
+
+export type ActionRating = {
+    slug: Action;
+    name: string;
+    description: string;
+};

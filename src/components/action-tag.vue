@@ -1,31 +1,33 @@
 <template>
     <div
         class="action-tag"
+        :class="{ disabled: value == 0 }"
         :style="{ backgroundColor: color, borderColor: color }"
     >
         <ul class="circles-list">
-            <li v-for="i in number" :key="i" :style="{ color }"></li>
+            <li v-for="i in value" :key="i" :style="{ color }"></li>
+            <li class="empty" v-if="value == 0" :style="{ color }"></li>
         </ul>
         <p class="label">{{ label }}</p>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { getActionColorBySlug, getActionLabelBySlug } from '@/util/action-util'
-import { computed } from 'vue'
+import { getActionColorBySlug, getActionLabelBySlug } from '@/util/action-util';
+import { computed } from 'vue';
 
 const props = defineProps<{
-    action: string
-    number: number
-}>()
+    action: string;
+    value: number;
+}>();
 
 const label = computed(() => {
-    return getActionLabelBySlug(props.action)
-})
+    return getActionLabelBySlug(props.action);
+});
 
 const color = computed(() => {
-    return getActionColorBySlug(props.action)
-})
+    return getActionColorBySlug(props.action);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -39,9 +41,13 @@ const color = computed(() => {
     color: var(--color-on-surface);
     border: 1px solid currentColor;
 
+    &.disabled {
+        opacity: 0.4;
+    }
+
     ul.circles-list {
         display: flex;
-        margin-right: 0.8rem;
+        margin-right: 0.6rem;
 
         > li {
             width: 0.8rem;
@@ -67,6 +73,16 @@ const color = computed(() => {
                 height: 1rem;
                 border-radius: 50%;
                 background-color: var(--color-on-surface);
+            }
+
+            // Empty: Show an empty circle
+            &.empty::before {
+                display: none;
+            }
+
+            &.empty::after {
+                background-color: transparent;
+                border: 0.1rem solid var(--color-on-surface);
             }
         }
     }

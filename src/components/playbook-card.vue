@@ -7,7 +7,7 @@
                 v-for="action in Object.keys(playbook.actions)"
                 :key="action"
                 :action="action"
-                :number="playbook.actions[action as Action]"
+                :value="playbook.actions[action as Action]"
             />
         </ul>
         <p class="description">{{ playbook.description }}</p>

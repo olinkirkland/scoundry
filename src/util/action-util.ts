@@ -1,3 +1,6 @@
+import { Action } from '@/assets/data/data-types';
+import { Scoundrel } from '@/scoundrel';
+
 const actionLabels: Record<string, string> = {
     hunt: 'Hunt',
     study: 'Study',
@@ -37,4 +40,13 @@ const actionColors: Record<string, string> = {
 
 export function getActionColorBySlug(slug: string): string {
     return actionColors[slug] || '#ffffff';
+}
+
+export function getActionValueBySlug(
+    actions: Record<string, Record<string, number>>,
+    slug: Action
+): number {
+    if (!actions) return 0;
+    const actionRating = actions[slug];
+    return Object.values(actionRating).reduce((acc, val) => acc + val, 0);
 }
