@@ -63,7 +63,7 @@
         "slug": "tinker",
         "category": "insight",
         "name": "Tinker",
-        "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use the ubiquitous clockwork and electroplasmic devices around the city to your advantage."
+        "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices."
     },
     {
         "slug": "wreck",

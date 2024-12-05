@@ -110,7 +110,7 @@ const resolveActions = computed(() => {
 
 <style scoped lang="scss">
 .actions {
-    max-width: 64rem;
+    max-width: 72rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -135,8 +135,9 @@ const resolveActions = computed(() => {
                 li {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.4rem;
+                    gap: 0.6rem;
                     align-items: flex-start;
+                    height: 12rem;
 
                     p {
                         font-size: 1.2rem;
@@ -155,6 +156,10 @@ const resolveActions = computed(() => {
 
         .attributes-grid {
             grid-template-columns: 1fr;
+
+            .attribute > ul > li {
+                height: auto;
+            }
         }
     }
 }
