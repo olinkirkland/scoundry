@@ -35,6 +35,13 @@ function onClickPlaybook(playbook: Playbook) {
 </script>
 
 <style scoped lang="scss">
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .playbook-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));

@@ -2,12 +2,21 @@
   <div class="playbook-card">
     <h1>{{ playbook.name }}</h1>
     <p class="tagline">{{ playbook.tagline }}</p>
+    <ul class="action-tags">
+      <action-tag
+        v-for="action in Object.keys(playbook.actions)"
+        :key="action"
+        :action="action"
+        :number="playbook.actions[action as Action]"
+      />
+    </ul>
     <p class="description">{{ playbook.description }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Playbook } from '@/assets/data/data-types';
+import { Action, Playbook } from '@/assets/data/data-types';
+import ActionTag from './action-tag.vue';
 
 const props = defineProps<{
   playbook: Playbook;
@@ -41,9 +50,7 @@ const props = defineProps<{
     font-style: italic;
   }
 
-  p.description
-
-  &:hover {
+  p.description &:hover {
     box-shadow: var(--shadow-md);
   }
 
@@ -53,6 +60,13 @@ const props = defineProps<{
     background-color: transparent;
     box-shadow: none !important;
   }
+}
+
+.action-tags {
+  display: flex;
+  gap: 1.2rem;
+  padding-top: 1.2rem;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
