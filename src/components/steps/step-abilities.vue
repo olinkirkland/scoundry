@@ -1,7 +1,7 @@
 <template>
   <step-header>
     <h2>Choose a special ability</h2>
-    <p>What ability sets you apart from the rest?</p>
+    <p>What ability sets your character apart in the crew?</p>
   </step-header>
 </template>
 

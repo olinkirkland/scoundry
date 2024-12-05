@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Underworld",
+        "slug": "underworld",
+        "description": "A street urchin, gang member, young thug, or other outcast who grew up on the streets."
+    },
+    {
+        "name": "Academic",
+        "slug": "academic",
+        "description": "A scholar, a professor or student from Doskvol Academy, a philosopher or journalist, etc."
+    },
+    {
+        "name": "Labor",
+        "slug": "labor",
+        "description": "A servant, a factory worker, a coach driver, a docker, a sailor, a Rail Jack, etc. A stevedore for the North Hook Company."
+    },
+    {
+        "name": "Law",
+        "slug": "law",
+        "description": "An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc."
+    },
+    {
+        "name": "Trade",
+        "slug": "trade",
+        "description": "A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation."
+    },
+    {
+        "name": "Noble",
+        "slug": "noble",
+        "description": "A dilettante, a courtier, the scion of a fallen house, etc."
+    },
+    {
+        "name": "Military",
+        "slug": "military",
+        "description": "An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc."
+    }
+]

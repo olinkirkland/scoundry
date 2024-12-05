@@ -7,3 +7,9 @@ export type Playbook = {
     description: string;
     actions: Record<Action, number>;
 };
+
+export type Background = {
+    name: string;
+    slug: string;
+    description: string;
+}

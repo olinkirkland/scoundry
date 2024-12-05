@@ -1,5 +1,5 @@
 <template>
-  <div class="playbook-card">
+  <div class="background-card">
     <h2>{{ playbook.name }}</h2>
     <p class="tagline">{{ playbook.tagline }}</p>
     <ul class="action-tags">
@@ -24,7 +24,7 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
-.playbook-card {
+.background-card {
   box-shadow: var(--shadow-sm);
   padding: 1.6rem;
   background-color: var(--color-surface);

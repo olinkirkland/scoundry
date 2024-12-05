@@ -1,11 +1,9 @@
 <template>
   <step-header>
-    <h2>Choose your heritage and assign action dots</h2>
+    <h2>Choose your heritage</h2>
     <p>
-      Your character's heritage describes where their family line is from.
-      Assign four action dots. Your playbook begins with three action dots
-      already placed. You get to add four more dots. At the start of the game,
-      no action may have more than two dots.
+      Your character's heritage describes their origins, and their action dots
+      describe their strengths and weaknesses.
     </p>
   </step-header>
 </template>

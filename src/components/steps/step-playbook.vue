@@ -20,9 +20,9 @@
 <script setup lang="ts">
 import { Action, Playbook } from '@/assets/data/data-types';
 import playbooksData from '@/assets/data/playbooks.json';
-import { Scoundrel } from '@/scoundrel';
 import PlaybookCard from '@/components/playbook-card.vue';
 import StepHeader from '@/components/step-header.vue';
+import { Scoundrel } from '@/scoundrel';
 
 const playbooks = playbooksData as unknown as Playbook[];
 
