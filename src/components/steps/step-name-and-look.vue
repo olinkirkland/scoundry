@@ -1,6 +1,6 @@
 <template>
   <step-header>
-    <h2>Record your character's name and look.</h2>
+    <h2>Record your character's name and look</h2>
     <p>
       How is your character known in the underworld? How do they carry
       themselves, and what do they wear?
