@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 
 const props = defineProps<{
   stepLabel: string;
@@ -51,6 +51,7 @@ const step = ref();
   }
 
   &.active {
+    pointer-events: none;
     color: var(--color-primary);
     &::after {
       border-bottom: 0.3rem solid var(--color-primary);
