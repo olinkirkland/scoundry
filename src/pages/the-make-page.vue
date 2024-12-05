@@ -24,7 +24,7 @@
 
     <div class="control-bar">
       <button class="btn btn--alt" @click="onClickDiscard">Discard</button>
-      <button class="btn" @click="onClickNextStep">Next Step</button>
+      <button class="btn" @click="onClickNextStep">Next</button>
     </div>
   </div>
 </template>

@@ -15,7 +15,7 @@
         <span>Make a new Scoundrel</span>
       </button>
       <button class="btn btn--alt disabled">
-        <span>Load from disk</span>
+        <span>Load from file</span>
       </button>
     </div>
     <!-- list of scoundrels; portraits and names -->
