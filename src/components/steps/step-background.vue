@@ -101,7 +101,7 @@ ul.backgrounds-list {
   margin: 0 auto;
   width: fit-content;
 
-  gap: 1.2rem;
+  gap: 0.4rem;
   padding: 1.2rem;
 }
 
@@ -124,7 +124,7 @@ ul.specific-backgrounds-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   grid-auto-rows: 1fr;
-  gap: 0.2rem;
+  gap: 0.4rem;
 }
 
 @media (max-width: 1024px) {

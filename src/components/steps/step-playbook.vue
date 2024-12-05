@@ -50,7 +50,7 @@ function onClickPlaybook(playbook: Playbook) {
 .playbook-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-  gap: 1.2rem;
+  gap: 0.4rem;
   margin-bottom: 1.2rem;
   padding: 1.2rem;
 }
