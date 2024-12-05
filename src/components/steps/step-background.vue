@@ -1,11 +1,7 @@
 <template>
   <step-header>
     <h2>Choose a background</h2>
-    <p>
-      Your character's background describes what they did before they joined the
-      crew. Choose one of the general background options from the list, then
-      write a detail about it that's specific to your character.
-    </p>
+    <p>Describe what your character did before they joined the crew.</p>
   </step-header>
 </template>
 

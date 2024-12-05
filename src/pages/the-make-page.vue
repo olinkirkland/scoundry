@@ -19,7 +19,7 @@
         :is="stepComponents[stepId]"
         :scoundrel="scoundrel"
       />
-      <pre>{{ scoundrel }}</pre>
+      <pre v-if="showModel">{{ scoundrel }}</pre>
     </div>
 
     <div class="control-bar">
@@ -42,6 +42,11 @@ import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
 import { computed, ref } from 'vue';
+
+const showModel = ref(false);
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'm' && e.altKey) showModel.value = !showModel.value;
+});
 
 const stepComponents = {
   playbook: StepPlaybook,
@@ -216,9 +221,11 @@ ul.steps {
 
 .form-container {
   flex: 1;
-  background-color: var(--color-surface-lighter);
-  border-radius: 5px;
-  margin: 0 1.2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   overflow-y: auto;
+  > * {
+    max-width: 96rem;
+    margin: 0 auto;
+  }
 }
 </style>

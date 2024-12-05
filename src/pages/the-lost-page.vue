@@ -27,7 +27,7 @@ function onClickGoHome() {
 }
 
 h1 {
-  font-family: var(--font-family-logo);
+  font-family: var(--font-display);
   color: var(--color-on-surface);
   font-size: 12rem;
   text-align: center;

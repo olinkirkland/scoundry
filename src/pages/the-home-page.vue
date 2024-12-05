@@ -57,9 +57,11 @@ function onClickMakeNewScoundrel() {
 }
 
 h1 {
-  font-family: var(--font-family-logo);
+  font-family: var(--font-display);
   color: var(--color-on-surface);
-  font-size: 12rem;
+  font-size: 20rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
   text-align: center;
 }
 
@@ -71,7 +73,7 @@ a {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 4.8rem;
+    font-size: 7.2rem;
   }
 
   h1 + p,

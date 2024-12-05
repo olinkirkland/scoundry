@@ -77,7 +77,7 @@ footer {
 
     > .logo-and-olin {
       h2 {
-        font-family: var(--font-family-logo);
+        font-family: var(--font-display);
         font-size: 3.2rem;
       }
     }

@@ -1,8 +1,8 @@
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
 :root {
-  --font-family-logo: 'Barrio', cursive;
-  --font-family-primary: 'Georgia', serif;
+  --font-display: 'Smythe', cursive;
+  --font-body: 'Georgia', serif;
 }
 
 // Colors & Shadows
@@ -47,7 +47,7 @@
 * {
   color: var(--color-on-surface);
   font-size: 1.6rem;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-body);
   outline: none;
   line-height: 1.4;
 }
@@ -75,7 +75,7 @@ pre {
 }
 
 button.btn {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-body);
   background-color: var(--color-on-surface);
   color: var(--color-surface);
   border: none;

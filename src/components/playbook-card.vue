@@ -1,6 +1,6 @@
 <template>
   <div class="playbook-card">
-    <h1>{{ playbook.name }}</h1>
+    <h2>{{ playbook.name }}</h2>
     <p class="tagline">{{ playbook.tagline }}</p>
     <ul class="action-tags">
       <action-tag
@@ -39,9 +39,10 @@ const props = defineProps<{
     color: inherit;
   }
 
-  h1 {
-    font-family: var(--font-family-logo);
-    font-size: 4.8rem;
+  h2 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 6.4rem;
   }
 
   p.tagline {
@@ -59,6 +60,10 @@ const props = defineProps<{
     color: var(--color-primary);
     background-color: transparent;
     box-shadow: none !important;
+
+    h2 {
+      text-shadow: var(--shadow-text);
+    }
 
     :deep(.action-tag) {
       border: 1px solid var(--color-primary) !important;

@@ -10,7 +10,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  margin-bottom: 1.2rem;
   padding: 2rem;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.4);
 }
 </style>
