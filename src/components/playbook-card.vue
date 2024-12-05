@@ -71,7 +71,7 @@ const props = defineProps<{
 
             ul.circles-list {
                 > li::before {
-                    background-color: var(--color-surface-lighter);
+                    background-color: var(--color-surface);
                 }
                 > li::after {
                     background-color: var(--color-primary);

@@ -161,3 +161,16 @@ button.btn.btn--alt {
 .spacer {
     flex: 1;
 }
+
+input[type='text'] {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border: 1px solid var(--color-on-surface);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.6rem;
+    width: 100%;
+    max-width: 24rem;
+}
