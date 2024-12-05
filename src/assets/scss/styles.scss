@@ -162,15 +162,31 @@ button.btn.btn--alt {
     flex: 1;
 }
 
+label {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.6;
+    color: var(--color-on-surface);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
 input[type='text'] {
     background-color: var(--color-surface);
     color: var(--color-primary);
-    border: 1px solid var(--color-on-surface);
-    padding: 0.8rem;
-    border-radius: 0.4rem;
+    border: 1px solid var(--color-surface-lighter);
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
     font-family: var(--font-body);
     font-style: italic;
     font-size: 1.6rem;
     width: 100%;
-    max-width: 24rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+
+    &:focus {
+        border-color: var(--color-primary);
+        box-shadow: var(--shadow-md);
+    }
 }

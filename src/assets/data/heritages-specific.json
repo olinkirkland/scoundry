@@ -1,7 +1,237 @@
 [
     {
-        "name": "",
-        "slug": "",
-        "description": ""
+        "category": "any",
+        "name": "Deathlander",
+        "slug": "deathlander"
+    },
+    {
+        "category": "any",
+        "name": "Exile",
+        "slug": "exile"
+    },
+    {
+        "category": "any",
+        "name": "Nomad",
+        "slug": "nomad"
+    },
+    {
+        "category": "any",
+        "name": "Outlaw",
+        "slug": "outlaw"
+    },
+    {
+        "category": "any",
+        "name": "Refugee",
+        "slug": "refugee"
+    },
+    {
+        "name": "Church of Ecstasy",
+        "slug": "church-of-ecstasy",
+        "category": "akoros"
+    },
+    {
+        "name": "Doskvol Academy",
+        "slug": "doskvol-academy",
+        "category": "akoros"
+    },
+    {
+        "name": "Governor’s Stronghold",
+        "slug": "governors-stronghold",
+        "category": "akoros"
+    },
+    {
+        "name": "Ironworks Labor",
+        "slug": "ironworks-labor",
+        "category": "akoros"
+    },
+    {
+        "name": "North Hook Company",
+        "slug": "north-hook-company",
+        "category": "akoros"
+    },
+    {
+        "name": "Radiant Energy Farmers",
+        "slug": "radiant-energy-farmers",
+        "category": "akoros"
+    },
+    {
+        "name": "Couldspire Aeronauts",
+        "slug": "couldspire-aeronauts",
+        "category": "akoros"
+    },
+    {
+        "name": "Ilysian Guard",
+        "slug": "ilysian-guard",
+        "category": "akoros"
+    },
+    {
+        "name": "Imperial City Courtiers",
+        "slug": "imperial-city-courtiers",
+        "category": "akoros"
+    },
+    {
+        "name": "South Point Traders",
+        "slug": "south-point-traders",
+        "category": "akoros"
+    },
+    {
+        "name": "Whitehollow Miners",
+        "slug": "whitehollow-miners",
+        "category": "akoros"
+    },
+    {
+        "name": "Wintercliff Wardens",
+        "slug": "wintercliff-wardens",
+        "category": "akoros"
+    },
+    {
+        "name": "Bonewalker",
+        "slug": "bonewalker",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Lhan Lhaban",
+        "slug": "lhan-lhaban",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Liberators",
+        "slug": "liberators",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Lore Keepers",
+        "slug": "lore-keepers",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Melamatines",
+        "slug": "melamatines",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Vidyad",
+        "slug": "vidyad",
+        "category": "dagger-isles"
+    },
+    {
+        "name": "Bright Harbor Fleet",
+        "slug": "bright-harbor-fleet",
+        "category": "iruvia"
+    },
+    {
+        "name": "City Guardians",
+        "slug": "city-guardians",
+        "category": "iruvia"
+    },
+    {
+        "name": "Emissaries",
+        "slug": "emissaries",
+        "category": "iruvia"
+    },
+    {
+        "name": "Falconers",
+        "slug": "falconers",
+        "category": "iruvia"
+    },
+    {
+        "name": "Lightning Couriers",
+        "slug": "lightning-couriers",
+        "category": "iruvia"
+    },
+    {
+        "name": "Water Bearers",
+        "slug": "water-bearers",
+        "category": "iruvia"
+    },
+    {
+        "name": "Blackvale Coven",
+        "slug": "blackvale-coven",
+        "category": "skovlan"
+    },
+    {
+        "name": "Blood Cullers",
+        "slug": "blood-cullers",
+        "category": "skovlan"
+    },
+    {
+        "name": "Home Guard Militia",
+        "slug": "home-guard-militia",
+        "category": "skovlan"
+    },
+    {
+        "name": "Imperial Collaborators",
+        "slug": "imperial-collaborators",
+        "category": "skovlan"
+    },
+    {
+        "name": "Lockport Scummer",
+        "slug": "lockport-scummer",
+        "category": "skovlan"
+    },
+    {
+        "name": "Onyx Citadel",
+        "slug": "onyx-citadel",
+        "category": "skovlan"
+    },
+    {
+        "name": "Bastion Elders",
+        "slug": "bastion-elders",
+        "category": "severos"
+    },
+    {
+        "name": "Cullfield Observatory",
+        "slug": "cullfield-observatory",
+        "category": "severos"
+    },
+    {
+        "name": "Irondale Metalworks",
+        "slug": "irondale-metalworks",
+        "category": "severos"
+    },
+    {
+        "name": "Spirit Hunters",
+        "slug": "spirit-hunters",
+        "category": "severos"
+    },
+    {
+        "name": "Thorn Devils",
+        "slug": "thorn-devils",
+        "category": "severos"
+    },
+    {
+        "name": "Tyrmoor Clanholder",
+        "slug": "tyrmoor-clanholder",
+        "category": "severos"
+    },
+    {
+        "name": "Confessors",
+        "slug": "confessors",
+        "category": "tycheros"
+    },
+    {
+        "name": "Demon Scholars",
+        "slug": "demon-scholars",
+        "category": "tycheros"
+    },
+    {
+        "name": "Lunarium Players",
+        "slug": "lunarium-players",
+        "category": "tycheros"
+    },
+    {
+        "name": "Seekers",
+        "slug": "seekers",
+        "category": "tycheros"
+    },
+    {
+        "name": "Steelhand",
+        "slug": "steelhand",
+        "category": "tycheros"
+    },
+    {
+        "name": "Void Gate Sentries",
+        "slug": "void-gate-sentries",
+        "category": "tycheros"
     }
 ]

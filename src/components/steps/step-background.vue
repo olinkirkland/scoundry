@@ -39,63 +39,63 @@
 </template>
 
 <script setup lang="ts">
-import specificBackgroundsData from '@/assets/data/backgrounds-specific.json'
-import backgroundsData from '@/assets/data/backgrounds.json'
+import specificBackgroundsData from '@/assets/data/backgrounds-specific.json';
+import backgroundsData from '@/assets/data/backgrounds.json';
 import {
     Action,
     Background,
     SpecificBackground,
-} from '@/assets/data/data-types'
-import BackgroundCard from '@/components/background-card.vue'
-import StepHeader from '@/components/step-header.vue'
-import { Scoundrel } from '@/scoundrel'
-import { computed } from 'vue'
-import SpecificBackgroundCard from '../specific-background-card.vue'
+} from '@/assets/data/data-types';
+import BackgroundCard from '@/components/background-card.vue';
+import StepHeader from '@/components/step-header.vue';
+import { Scoundrel } from '@/scoundrel';
+import { computed } from 'vue';
+import SpecificBackgroundCard from '../specific-background-card.vue';
 
-const backgrounds = backgroundsData as unknown as Background[]
+const backgrounds = backgroundsData as unknown as Background[];
 const specificBackgrounds =
-    specificBackgroundsData as unknown as SpecificBackground[]
+    specificBackgroundsData as unknown as SpecificBackground[];
 
 const props = defineProps<{
-    scoundrel: Scoundrel
-}>()
+    scoundrel: Scoundrel;
+}>();
 
 const filteredSpecificBackgrounds = computed(() => {
-    let filterCategory = props.scoundrel.background
+    let filterCategory = props.scoundrel.background;
     if (['law', 'military'].includes(filterCategory))
-        filterCategory = 'law-and-military'
+        filterCategory = 'law-and-military';
 
     return specificBackgrounds.filter(
         (specificBackground) => specificBackground.category === filterCategory
-    )
-})
+    );
+});
 
 function onClickBackground(background: Background) {
-    props.scoundrel.background = background.slug
-    props.scoundrel.backgroundSpecialization = ''
+    props.scoundrel.background = background.slug;
+    props.scoundrel.backgroundSpecialization = '';
     // Remove all 'background' keys from scoundrel.actions
     Object.keys(props.scoundrel.actions).forEach((action) => {
-        delete props.scoundrel.actions[action as Action].background
-    })
+        delete props.scoundrel.actions[action as Action].background;
+    });
 }
 
 function onClickSpecificBackground(specificBackground: SpecificBackground) {
     // Remove all 'background' keys from scoundrel.actions
     Object.keys(props.scoundrel.actions).forEach((action) => {
-        delete props.scoundrel.actions[action as Action].background
-    })
+        delete props.scoundrel.actions[action as Action].background;
+    });
 
     if (props.scoundrel.backgroundSpecialization === specificBackground.slug) {
-        props.scoundrel.backgroundSpecialization = ''
-        return
+        props.scoundrel.backgroundSpecialization = '';
+        return;
     }
 
-    props.scoundrel.backgroundSpecialization = specificBackground.slug
+    props.scoundrel.backgroundSpecialization = specificBackground.slug;
 
     // Add the new actions
     for (const action of Object.keys(specificBackground.actions))
         props.scoundrel.actions[action as Action]['background'] =
-            specificBackground.actions[action as Action]
+            specificBackground.actions[action as Action];
 }
 </script>
 
