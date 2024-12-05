@@ -248,11 +248,11 @@ ul.steps {
   gap: 0.4rem;
   width: fit-content;
   max-width: calc(100% - 2.4rem);
-  margin: 0 auto;
-  margin-top: 1.2rem;
+  margin: 0.8rem auto;
   border-radius: 99px;
   overflow-x: auto;
   scrollbar-width: none;
+  box-shadow: var(--shadow-md);
 
   > .step {
     &:first-child {

@@ -83,7 +83,7 @@ const props = defineProps<{
 
 .action-tags {
   display: flex;
-  gap: 1.2rem;
+  gap: 0.8rem;
   padding-top: 1.2rem;
   margin-top: auto;
 }

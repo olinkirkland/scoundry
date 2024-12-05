@@ -13,3 +13,10 @@ export type Background = {
     slug: string;
     description: string;
 }
+
+export type SpecificBackground = {
+    category: string;
+    name: string;
+    description: string;
+    actions: Record<Action, number>;
+}

@@ -63,9 +63,6 @@ const props = defineProps<{
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-  }
-
-  h2 {
     font-family: var(--font-body);
     font-weight: normal;
     font-size: 1.6rem;
@@ -78,19 +75,10 @@ const props = defineProps<{
   &.active {
     transition: none;
     color: var(--color-primary);
-    background-color: transparent;
-    box-shadow: none !important;
 
     h2 {
+      width: fit-content;
       text-shadow: var(--shadow-text);
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .background-card {
-    h1 {
-      font-size: 3.2rem;
     }
   }
 }

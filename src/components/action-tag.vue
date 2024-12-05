@@ -33,15 +33,15 @@ const color = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 1rem;
+  padding: 0rem 0.6rem;
+  height: 2rem;
   border-radius: 99px;
   color: var(--color-on-surface);
   border: 1px solid currentColor;
-  gap: 0.4rem;
 
   ul.circles-list {
     display: flex;
-    margin-right: 0.4rem;
+    margin-right: 0.8rem;
 
     > li {
       width: 0.6rem;
