@@ -25,6 +25,45 @@
         <p>{{ scoundrel.name }}</p>
       </li>
     </ul>
+
+    <div class="footer-container">
+      <footer>
+        <div class="logo-and-olin">
+          <h2>www.scoundry.com</h2>
+          <p>
+            Code & website design by
+            <a href="https://olinkirk.land" target="_blank">Olin Kirkland</a>
+          </p>
+          <p class="muted">
+            Copyright © {{ new Date().getFullYear() }} Olin Kirkland
+          </p>
+        </div>
+        <div>
+          <p>
+            This work is based on
+            <a href="http://www.bladesinthedark.com/" target="_blank"
+              >Blades in the Dark</a
+            >
+            — a product of One Seven Design, developed and authored by John
+            Harper, and licensed for our use under the
+            <a href="http://creativecommons.org/licenses/by/3.0" target="_blank"
+              >Creative Commons Attribution 3.0 license</a
+            >
+          </p>
+        </div>
+        <div>
+          <p>
+            Images are from
+            <a href="https://unsplash.com" target="_blank">Unsplash.com</a> and
+            belong to their respective owners on the site
+          </p>
+          <p>
+            Icons are from
+            <a href="https://icons8.com" target="_blank">Icons8.com</a>
+          </p>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -52,7 +91,6 @@ async function onClickMakeNewScoundrel() {
 <style lang="scss" scoped>
 .page--home {
   height: 100vh;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +138,58 @@ a {
   }
   to {
     opacity: 0;
+  }
+}
+
+.footer-container {
+  width: 100%;
+  background-color: var(--color-surface);
+  padding: 0.8rem;
+  border-top: 1px solid var(--color-surface-lighter);
+  box-shadow: var(--shadow-lg);
+}
+
+footer {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  color: var(--color-on-secondary);
+
+  p,
+  a {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  > .logo-and-olin {
+    h2 {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      opacity: 0.4;
+      text-transform: uppercase;
+    }
+  }
+}
+
+footer > button {
+  display: block;
+  margin: 1.2rem auto;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
   }
 }
 

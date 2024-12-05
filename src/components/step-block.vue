@@ -46,15 +46,15 @@ const step = ref();
     height: 100%;
     width: 100%;
     bottom: 0;
-    border-bottom: 0 solid var(--color-primary);
+    border-bottom: 0 solid var(--color-on-surface);
     transition: border-bottom 0.1s;
   }
 
   &.active {
     pointer-events: none;
-    color: var(--color-primary);
+    color: var(--color-on-primary);
     &::after {
-      border-bottom: 0.3rem solid var(--color-primary);
+      border-bottom: 0.3rem solid var(--color-on-surface);
     }
   }
 

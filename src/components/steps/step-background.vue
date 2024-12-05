@@ -36,8 +36,8 @@ import { Background, SpecificBackground } from '@/assets/data/data-types';
 import BackgroundCard from '@/components/background-card.vue';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
-import SpecificBackgroundCard from '../specific-background-card.vue';
 import { computed } from 'vue';
+import SpecificBackgroundCard from '../specific-background-card.vue';
 
 const backgrounds = backgroundsData as unknown as Background[];
 const specificBackgrounds =

@@ -23,8 +23,27 @@
     </div>
 
     <div class="control-bar">
-      <button class="btn btn--alt" @click="onClickDiscard">Discard</button>
-      <button class="btn" @click="onClickNextStep">Next</button>
+      <button class="btn btn--icon" @click="onClickDiscard">
+        <img src="/assets/icons/trash.png" alt="Discard" />
+      </button>
+      <button class="btn btn--icon" @click="onClickSave">
+        <img src="/assets/icons/save.png" alt="Save" />
+      </button>
+      <div class="spacer"></div>
+      <button
+        class="btn"
+        @click="onClickBackStep"
+        :class="{ disabled: isFirstStep }"
+      >
+        Back
+      </button>
+      <button
+        class="btn"
+        @click="onClickNextStep"
+        :class="{ disabled: isLastStep }"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
@@ -158,6 +177,19 @@ function onClickNextStep() {
   if (nextStep) changeStep(nextStep.id);
 }
 
+function onClickBackStep() {
+  const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
+  const prevStep = steps[currentStepIndex - 1];
+  if (prevStep) changeStep(prevStep.id);
+}
+
+async function onClickSave() {
+  // Save the scoundrel
+  // await saveScoundrel(scoundrel.value);
+  // For now, redirect to home
+  // router.replace({ name: PageName.HOME });
+}
+
 async function onClickDiscard() {
   page.value?.classList.remove('page-in');
   page.value?.classList.add('page-out');
@@ -172,7 +204,10 @@ const allAnimationClasses = [
   'animate-form-out--to-left',
   'animate-form-out--to-right'
 ];
+
 async function changeStep(newStepId: Step) {
+  page.value?.classList.add('no-click');
+
   // Is the new step to the right or left of the old step?
   const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
   console.log('currentStepIndex', currentStepIndex);
@@ -231,7 +266,17 @@ async function changeStep(newStepId: Step) {
   // Wait for the animation to finish (0.4s)
   await new Promise((resolve) => setTimeout(resolve, 400));
   stepContainer.value?.classList.remove(...allAnimationClasses);
+
+  page.value?.classList.remove('no-click');
 }
+
+const isFirstStep = computed(() => {
+  return steps.findIndex((s) => s.id === stepId.value) === 0;
+});
+
+const isLastStep = computed(() => {
+  return steps.findIndex((s) => s.id === stepId.value) === steps.length - 1;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -252,7 +297,7 @@ ul.steps {
   border-radius: 99px;
   overflow-x: auto;
   scrollbar-width: none;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 
   > .step {
     &:first-child {
@@ -270,6 +315,7 @@ ul.steps {
 .control-bar {
   bottom: 0;
   width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -282,6 +328,12 @@ ul.steps {
   > * {
     max-width: 96rem;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .control-bar {
+    width: min-content;
   }
 }
 

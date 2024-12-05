@@ -92,6 +92,16 @@ button.btn {
   justify-content: center;
   gap: 0.4rem;
 
+  &.btn--icon {
+    // border: none;
+    background-color: transparent;
+    width: 2rem;
+    > img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   * {
     font-family: inherit;
     color: inherit;
@@ -145,4 +155,8 @@ button.btn.btn--alt {
 
 .muted {
   opacity: 0.4;
+}
+
+.spacer {
+  flex: 1;
 }

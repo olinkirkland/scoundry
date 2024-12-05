@@ -55,6 +55,7 @@ const props = defineProps<{
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.8)
     );
+    transition: opacity 0.2s ease-in-out;
   }
 
   h2 {
@@ -72,13 +73,29 @@ const props = defineProps<{
     font-size: 1.4rem;
   }
 
+  &:hover {
+    box-shadow: var(--shadow-md);
+
+    .overlay {
+      opacity: 0.8;
+    }
+  }
+
   &.active {
     transition: none;
     color: var(--color-primary);
+    background: none;
+    box-shadow: none;
+
+    img,
+    .overlay {
+      display: none;
+    }
 
     h2 {
       width: fit-content;
       text-shadow: var(--shadow-text);
+      border-bottom: 2px solid var(--color-primary);
     }
   }
 }
