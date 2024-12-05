@@ -33,15 +33,16 @@ function onClickClose() {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 6.4rem;
-    padding: 2rem 2rem 1.2rem 2rem;
+    height: 4.8rem;
+    padding: 2rem;
     gap: 1.6rem;
     background-color: var(--color-surface-lighter);
 
     .close {
         position: absolute;
-        right: 2rem;
-        top: 2rem;
+        top: 0;
+        right: 0;
+        padding: 2.5rem;
         border: none;
         box-shadow: none;
         &::after {

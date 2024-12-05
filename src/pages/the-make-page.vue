@@ -202,7 +202,7 @@ async function onClickSave() {
 async function onClickActions() {
     // Open modal with info
     ModalController.open(ActionsModal, {
-        scoundrel
+        scoundrel: scoundrel.value as Scoundrel,
     });
 }
 
