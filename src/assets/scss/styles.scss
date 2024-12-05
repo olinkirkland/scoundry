@@ -97,6 +97,16 @@ button.btn {
         white-space: nowrap;
     }
 
+    > .badge {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: var(--color-red);
+        top: -0.15rem;
+        right: -0.15rem;
+    }
+
     &.btn--icon {
         // border: none;
         background-color: transparent;

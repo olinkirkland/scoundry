@@ -32,9 +32,6 @@
             <button class="btn btn--icon disabled" @click="onClickSave">
                 <img src="/assets/icons/save.png" alt="Save" />
             </button>
-            <button class="btn btn--icon" @click="onClickActions">
-                <img src="/assets/icons/bars.png" alt="Info" />
-            </button>
             <div class="spacer"></div>
             <button
                 class="btn"
@@ -49,6 +46,10 @@
                 :class="{ disabled: isLastStep }"
             >
                 Next
+            </button>
+            <button class="btn btn--icon" @click="onClickActions">
+                <img src="/assets/icons/bars.png" alt="Info" />
+                <div class="badge" v-if="actionsChanged"></div>
             </button>
         </div>
     </div>
@@ -69,7 +70,7 @@ import ModalController from '@/controllers/modal-controller';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 const page = ref<HTMLElement | null>(null);
 const stepContainer = ref<HTMLElement | null>(null);
@@ -180,6 +181,14 @@ else {
     router.replace({ name: PageName.HOME });
 }
 
+const actionsChanged = ref(false);
+// When the scoundrel.actions are changed, change the ref
+watch(
+    () => scoundrel.value?.actions,
+    () => (actionsChanged.value = true),
+    { deep: true }
+);
+
 function onClickNextStep() {
     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
     const nextStep = steps[currentStepIndex + 1];
@@ -204,6 +213,8 @@ async function onClickActions() {
     ModalController.open(ActionsModal, {
         scoundrel: scoundrel.value as Scoundrel,
     });
+
+    actionsChanged.value = false;
 }
 
 async function onClickClose() {
