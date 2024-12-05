@@ -1,19 +1,17 @@
 <template>
   <div class="page page--make" v-if="scoundrel && step">
-    <div>
-      <ul ref="stepsEl" class="steps">
-        <step-block
-          v-for="s in steps"
-          :data-step-id="s.id"
-          :key="s.id"
-          :stepLabel="s.label"
-          :stepNumber="steps.findIndex((step) => step.id === s.id) + 1"
-          :active="s.id === stepId"
-          :completed="steps.indexOf(s) < steps.indexOf(step)"
-          @click="changeStep(s.id)"
-        />
-      </ul>
-    </div>
+    <ul ref="stepsEl" class="steps">
+      <step-block
+        v-for="s in steps"
+        :data-step-id="s.id"
+        :key="s.id"
+        :stepLabel="s.label"
+        :stepNumber="steps.findIndex((step) => step.id === s.id) + 1"
+        :active="s.id === stepId"
+        :completed="steps.indexOf(s) < steps.indexOf(step)"
+        @click="changeStep(s.id)"
+      />
+    </ul>
 
     <div class="form-container">
       <component
@@ -165,30 +163,27 @@ function changeStep(newStepId: Step) {
   });
 
   // Scroll ul.steps into view (x-scrollable on mobile)
-  const stepEl = document.querySelector(
-    `ul.steps .step[data-step-id="${newStepId}"]`
+  if (!stepsEl.value) return;
+  const stepEl = stepsEl.value.querySelector(
+    `.step[data-step-id="${newStepId}"]`
   );
 
-  if (stepsEl.value && stepEl) {
-    const containerRect = stepsEl.value.getBoundingClientRect();
-    const stepRect = stepEl.getBoundingClientRect();
+  if (!stepEl) return;
 
-    // Calculate the scroll offset needed to bring `stepEl` into view
-    const newX =
-      stepsEl.value.scrollLeft +
-      stepRect.left -
-      containerRect.left +
-      (stepRect.width - containerRect.width) / 2;
+  const containerRect = stepsEl.value.getBoundingClientRect();
+  const stepRect = stepEl.getBoundingClientRect();
 
-    stepsEl.value.scroll({
-      left: newX,
-      behavior: 'smooth'
-    });
-  }
-}
+  // Calculate the scroll offset needed to bring `stepEl` into view
+  const newX =
+    stepsEl.value.scrollLeft +
+    stepRect.left -
+    containerRect.left +
+    (stepRect.width - containerRect.width) / 2;
 
-function updateScoundrel(newScoundrel: Partial<Scoundrel>) {
-  scoundrel.value = { ...scoundrel.value, ...newScoundrel };
+  stepsEl.value.scroll({
+    left: newX,
+    behavior: 'smooth'
+  });
 }
 </script>
 
@@ -196,10 +191,9 @@ function updateScoundrel(newScoundrel: Partial<Scoundrel>) {
 ul.steps {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.4rem;
   width: fit-content;
-  margin: 1.2rem auto;
+  margin: 1.2rem;
   border-radius: 99px;
   overflow-x: auto;
 }
@@ -222,9 +216,7 @@ ul.steps {
 
 @media (max-width: 768px) {
   ul.steps {
-    justify-content: flex-start;
     width: calc(100% - 2.4rem);
-    margin: 1.2rem;
   }
 }
 </style>

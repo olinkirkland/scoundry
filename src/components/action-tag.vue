@@ -76,4 +76,10 @@ const color = computed(() => {
     font-size: 1.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .action-tag {
+    padding: 0 0.8rem 0 0.8rem;
+  }
+}
 </style>
