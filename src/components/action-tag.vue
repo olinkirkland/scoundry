@@ -42,7 +42,7 @@ const color = computed(() => {
     border: 1px solid currentColor;
 
     &.disabled {
-        opacity: 0.4;
+        opacity: 0.7;
     }
 
     ul.circles-list {

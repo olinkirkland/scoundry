@@ -85,8 +85,8 @@
 import actionsData from '@/assets/data/actions.json';
 import { Action } from '@/assets/data/data-types';
 import ActionTag from '@/components/action-tag.vue';
-import ModalFrame from '@/components/modals/ModalFrame.vue';
-import ModalHeader from '@/components/modals/ModalHeader.vue';
+import ModalFrame from '@/components/modals/modal-frame.vue';
+import ModalHeader from '@/components/modals/modal-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import { getActionValueBySlug } from '@/util/action-util';
 import { computed } from 'vue';

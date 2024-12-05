@@ -55,8 +55,8 @@
 </template>
 
 <script setup lang="ts">
-import ActionsModal from '@/components/modals/templates/ActionsModal.vue';
-import ConfirmModal from '@/components/modals/templates/ConfirmModal.vue';
+import ActionsModal from '@/components/modals/templates/actions-modal.vue';
+import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/step-abilities.vue';
 import StepBackground from '@/components/steps/step-background.vue';

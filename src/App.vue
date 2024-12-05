@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import TheModalContainer from './components/modals/TheModalContainer.vue';
+import TheModalContainer from './components/modals/the-modal-container.vue';
 </script>
 
 <style lang="scss">

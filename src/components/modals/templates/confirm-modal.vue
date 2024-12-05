@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 import ModalController from '@/controllers/modal-controller';
-import ModalFrame from '@/components/modals/ModalFrame.vue';
-import ModalHeader from '@/components/modals/ModalHeader.vue';
+import ModalFrame from '@/components/modals/modal-frame.vue';
+import ModalHeader from '@/components/modals/modal-header.vue';
 
 const props = defineProps<{
     title: string;
