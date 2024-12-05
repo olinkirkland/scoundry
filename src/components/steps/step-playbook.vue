@@ -40,12 +40,13 @@ function onClickPlaybook(playbook: Playbook) {
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .playbook-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1.2rem;
-  padding: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 </style>
