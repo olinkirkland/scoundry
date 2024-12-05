@@ -1,162 +1,163 @@
 // Typography
 @import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 :root {
-  --font-display: 'Smythe', cursive;
-  --font-body: 'Georgia', serif;
+    --font-display: 'Smythe', cursive;
+    --font-body: 'Libre Baskerville', serif;
 }
 
 // Colors & Shadows
 :root {
-  // Colors
-  --color-primary: #ff922b; // Used for primary actions, buttons, highlights
+    // Colors
+    --color-primary: #ff922b; // Used for primary actions, buttons, highlights
 
-  --color-surface: #333333; // For cards, modals, or containers on top of background
-  --color-surface-lighter: #4a4a4a; // For cards, modals, or containers on top of surface
-  --color-on-surface: #ebebeb; // For cards, modals, or containers on top of surface
-  --color-on-surface-lighter: #f5f5f5; // For cards, modals, or containers on top of surface
-  --color-error: #e74c3c; // Used for error states, alerts
+    --color-surface: #333333; // For cards, modals, or containers on top of background
+    --color-surface-lighter: #4a4a4a; // For cards, modals, or containers on top of surface
+    --color-on-surface: #ebebeb; // For cards, modals, or containers on top of surface
+    --color-on-surface-lighter: #f5f5f5; // For cards, modals, or containers on top of surface
+    --color-error: #e74c3c; // Used for error states, alerts
 
-  // Rainbow
-  --color-red: #f03e3e;
-  --color-orange: #ff922b;
-  --color-yellow: #ffd43b;
-  --color-green: #51cf66;
-  --color-teal: #20c997;
-  --color-blue: #339af0;
-  --color-indigo: #5c7cfa;
-  --color-purple: #7950f2;
-  --color-pink: #e9417c;
-  --color-grey: #adb5bd;
-  --color-light-grey: #ced4da;
-  --color-black: #131313;
+    // Rainbow
+    --color-red: #f03e3e;
+    --color-orange: #ff922b;
+    --color-yellow: #ffd43b;
+    --color-green: #51cf66;
+    --color-teal: #20c997;
+    --color-blue: #339af0;
+    --color-indigo: #5c7cfa;
+    --color-purple: #7950f2;
+    --color-pink: #e9417c;
+    --color-grey: #adb5bd;
+    --color-light-grey: #ced4da;
+    --color-black: #131313;
 
-  // Handwriting
-  --color-handwriting: var(--red);
+    // Handwriting
+    --color-handwriting: var(--red);
 
-  // Shadows
-  --shadow-sm: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-  --shadow-md: rgba(0, 0, 0, 0.4) 0px 2px 12px;
-  --shadow-lg: rgba(0, 0, 0, 0.4) 0px 10px 15px;
-  --shadow-text: rgba(0, 0, 0, 0.4) 2px 2px 2px;
+    // Shadows
+    --shadow-sm: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+    --shadow-md: rgba(0, 0, 0, 0.4) 0px 2px 12px;
+    --shadow-lg: rgba(0, 0, 0, 0.4) 0px 10px 15px;
+    --shadow-text: rgba(0, 0, 0, 0.4) 2px 2px 2px;
 }
 
 .page {
-  flex: 1;
+    flex: 1;
 }
 
 * {
-  color: var(--color-on-surface);
-  font-size: 1.6rem;
-  font-family: var(--font-body);
-  outline: none;
-  line-height: 1.4;
+    color: var(--color-on-surface);
+    font-size: 1.6rem;
+    font-family: var(--font-body);
+    outline: none;
+    line-height: 1.4;
 }
 
 a,
 .link {
-  font-style: italic;
-  text-decoration: none;
-  border-bottom: 1px dashed var(--color-on-surface);
-  cursor: pointer;
-  background-color: transparent;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--color-on-surface);
+    cursor: pointer;
+    background-color: transparent;
 }
 
 pre {
-  background-color: var(--color-surface);
-  color: var(--color-on-surface);
-  border-left: 0.4rem solid var(--color-orange);
-  padding: 1rem;
-  font-family: monospace;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    border-left: 0.4rem solid var(--color-orange);
+    padding: 1rem;
+    font-family: monospace;
 }
 
 .row {
-  display: flex;
-  gap: 0.8rem;
+    display: flex;
+    gap: 0.8rem;
 }
 
 button.btn {
-  font-family: var(--font-body);
-  background-color: var(--color-on-surface);
-  color: var(--color-surface);
-  border: none;
-  height: 3.2rem;
-  padding: 0 1.6rem;
-  cursor: pointer;
-  border-radius: 99px;
-  border: 1px solid var(--color-on-surface);
-  box-shadow: var(--shadow-sm);
-  position: relative;
+    font-family: var(--font-body);
+    background-color: var(--color-on-surface);
+    color: var(--color-surface);
+    border: none;
+    height: 3.2rem;
+    padding: 0 1.6rem;
+    cursor: pointer;
+    border-radius: 99px;
+    border: 1px solid var(--color-on-surface);
+    box-shadow: var(--shadow-sm);
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
 
-  &.btn--icon {
-    // border: none;
-    background-color: transparent;
-    width: 2rem;
-    > img {
-      width: 2rem;
-      height: 2rem;
+    &.btn--icon {
+        // border: none;
+        background-color: transparent;
+        width: 2rem;
+        > img {
+            width: 2rem;
+            height: 2rem;
+        }
     }
-  }
 
-  * {
-    font-family: inherit;
-    color: inherit;
-  }
-
-  &:hover {
-    filter: brightness(1.1);
-    box-shadow: var(--shadow-md);
-  }
-
-  &:active {
-    box-shadow: none;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: calc(100% + 0.8rem);
-      height: calc(100% + 0.8rem);
-      top: -0.4rem;
-      left: -0.4rem;
-      border-radius: 99px;
-      border: 1px solid var(--color-on-surface);
+    * {
+        font-family: inherit;
+        color: inherit;
     }
-  }
-
-  &.disabled {
-    opacity: 0.4;
-    pointer-events: none;
 
     &:hover {
-      filter: unset;
+        filter: brightness(1.1);
+        box-shadow: var(--shadow-md);
     }
 
     &:active {
-      filter: unset;
+        box-shadow: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 0.8rem);
+            height: calc(100% + 0.8rem);
+            top: -0.4rem;
+            left: -0.4rem;
+            border-radius: 99px;
+            border: 1px solid var(--color-on-surface);
+        }
     }
-  }
+
+    &.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+
+        &:hover {
+            filter: unset;
+        }
+
+        &:active {
+            filter: unset;
+        }
+    }
 }
 
 button.btn.btn--alt {
-  background-color: var(--color-on-surface-inverted);
-  color: var(--color-on-surface);
+    background-color: var(--color-on-surface-inverted);
+    color: var(--color-on-surface);
 }
 
 .no-click {
-  pointer-events: none !important;
-  * {
     pointer-events: none !important;
-  }
+    * {
+        pointer-events: none !important;
+    }
 }
 
 .muted {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .spacer {
-  flex: 1;
+    flex: 1;
 }
