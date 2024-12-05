@@ -193,7 +193,7 @@ ul.steps {
   align-items: center;
   gap: 0.4rem;
   width: fit-content;
-  margin: 1.2rem;
+  margin: 1.2rem auto;
   border-radius: 99px;
   overflow-x: auto;
 }
