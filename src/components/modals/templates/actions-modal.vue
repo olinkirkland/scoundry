@@ -137,7 +137,7 @@ const resolveActions = computed(() => {
                     flex-direction: column;
                     gap: 0.6rem;
                     align-items: flex-start;
-                    height: 12rem;
+                    // height: 12rem;
 
                     p {
                         font-size: 1.2rem;
