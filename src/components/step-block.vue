@@ -36,10 +36,6 @@ const step = ref();
   background-color: var(--color-surface-lighter);
   cursor: pointer;
 
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
   &::after {
     content: '';
     position: absolute;
@@ -59,9 +55,11 @@ const step = ref();
   }
 
   > p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: inherit;
     text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }
 </style>
