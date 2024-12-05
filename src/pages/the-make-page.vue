@@ -19,10 +19,10 @@
         :is="stepComponents[stepId]"
         :scoundrel="scoundrel"
       />
+      <pre>{{ scoundrel }}</pre>
     </div>
 
-    <pre>{{ scoundrel }}</pre>
-    <div class="row control-bar">
+    <div class="control-bar">
       <button class="btn btn--alt" @click="onClickDiscard">Discard</button>
       <button class="btn" @click="onClickNextStep">Next Step</button>
     </div>
@@ -74,15 +74,15 @@ const steps = [
   },
   {
     id: Step.HERITAGE_AND_ACTIONS,
-    label: 'Heritage & Actions'
+    label: 'Heritage'
   },
   {
     id: Step.ABILITIES,
-    label: 'Special Ability'
+    label: 'Ability'
   },
   {
     id: Step.FRIENDS_AND_RIVALS,
-    label: 'Friends & Rivals'
+    label: 'Friends'
   },
   {
     id: Step.VICE,
@@ -188,35 +188,38 @@ function changeStep(newStepId: Step) {
 </script>
 
 <style lang="scss" scoped>
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 ul.steps {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   width: fit-content;
+  max-width: calc(100% - 2.4rem);
   margin: 1.2rem auto;
   border-radius: 99px;
   overflow-x: auto;
 }
 
 .control-bar {
-  position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 1rem;
   padding: 0.8rem;
 }
 
 .form-container {
+  flex: 1;
   padding: 2rem;
   background-color: var(--color-surface-lighter);
   border-radius: 5px;
-  margin: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  ul.steps {
-    width: calc(100% - 2.4rem);
-  }
+  margin: 0 1.2rem;
+  overflow-y: auto;
 }
 </style>
