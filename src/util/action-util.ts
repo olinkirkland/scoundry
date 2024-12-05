@@ -16,7 +16,7 @@ export function getActionLabelBySlug(slug: string): string {
     return actionLabels[slug] || slug;
 }
 
-const insightColor = '#f06595';
+const insightColor = '#e9417c';
 const prowessColor = '#f03e3e';
 const resolveColor = '#7950f2';
 

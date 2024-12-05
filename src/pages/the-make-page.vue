@@ -200,9 +200,8 @@ ul.steps {
   gap: 0.4rem;
   width: fit-content;
   margin: 1.2rem auto;
-  max-width: 96rem;
   border-radius: 99px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .control-bar {
@@ -225,7 +224,6 @@ ul.steps {
   ul.steps {
     justify-content: flex-start;
     width: calc(100% - 2.4rem);
-    overflow-x: auto;
     margin: 1.2rem;
   }
 }

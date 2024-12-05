@@ -1,5 +1,8 @@
 <template>
-  <div class="action-tag" :style="{ backgroundColor: color }">
+  <div
+    class="action-tag"
+    :style="{ backgroundColor: color, borderColor: color }"
+  >
     <ul class="circles-list">
       <li v-for="i in number" :key="i" :style="{ color }"></li>
     </ul>
@@ -30,9 +33,10 @@ const color = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0.8rem;
+  padding: 0.2rem 1rem;
   border-radius: 99px;
   color: var(--color-on-surface);
+  border: 1px solid currentColor;
   gap: 0.4rem;
 
   ul.circles-list {
@@ -45,6 +49,7 @@ const color = computed(() => {
       display: flex;
       align-items: center;
       justify-content: center;
+      border: 1px solid currentColor;
 
       &::before {
         content: '';
