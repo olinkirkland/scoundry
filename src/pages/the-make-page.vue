@@ -239,6 +239,7 @@ async function changeStep(newStepId: Step) {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
 ul.steps {
@@ -247,9 +248,23 @@ ul.steps {
   gap: 0.4rem;
   width: fit-content;
   max-width: calc(100% - 2.4rem);
-  margin: 1.2rem auto;
+  margin: 0 auto;
+  margin-top: 1.2rem;
   border-radius: 99px;
   overflow-x: auto;
+  scrollbar-width: none;
+
+  > .step {
+    &:first-child {
+      border-top-left-radius: 99px;
+      border-bottom-left-radius: 99px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 99px;
+      border-bottom-right-radius: 99px;
+    }
+  }
 }
 
 .control-bar {
@@ -263,7 +278,6 @@ ul.steps {
 
 .step-container {
   flex: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   overflow-y: auto;
   > * {
     max-width: 96rem;
