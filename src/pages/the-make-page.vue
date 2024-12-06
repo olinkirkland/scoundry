@@ -26,7 +26,7 @@
             <button class="btn btn--icon" @click="onClickClose">
                 <img src="/assets/icons/close.png" alt="Close" />
             </button>
-            <button class="btn btn--icon disabled" @click="onClickDiscard">
+            <button class="btn btn--icon" @click="onClickDiscard">
                 <img src="/assets/icons/trash.png" alt="Discard" />
             </button>
             <button class="btn btn--icon" @click="onClickSave">
@@ -57,8 +57,8 @@
 
 <script setup lang="ts">
 import ActionsModal from '@/components/modals/templates/actions-modal.vue';
-import SaveModal from '@/components/modals/templates/save-modal.vue';
 import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
+import SaveModal from '@/components/modals/templates/save-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/step-abilities.vue';
 import StepBackground from '@/components/steps/step-background.vue';
@@ -68,6 +68,11 @@ import StepNameAndLook from '@/components/steps/step-name-and-look.vue';
 import StepPlaybook from '@/components/steps/step-playbook.vue';
 import StepVice from '@/components/steps/step-vice.vue';
 import ModalController from '@/controllers/modal-controller';
+import {
+    deleteScoundrel,
+    loadScoundrel,
+    saveScoundrel,
+} from '@/controllers/storage-controller';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
@@ -146,6 +151,7 @@ stepId.value = params.stepId as Step | null;
 
 // If scoundrelId is null, generate a new scoundrel and navigate to the first step
 if (!scoundrelId.value) {
+    console.log('No scoundrelId; generating a new scoundrel');
     scoundrelId.value = makeSemanticId();
     scoundrel.value = {
         id: scoundrelId.value,
@@ -165,21 +171,23 @@ if (!scoundrelId.value) {
         },
     };
 
-    stepId.value = Step.PLAYBOOK;
-
     // Don't push; replace the current route so the user can't go back to the make page
     router.replace({
-        name: PageName.EDIT,
-        params: { scoundrelId: scoundrelId.value, stepId: stepId.value },
+        name: PageName.EDIT_WITH_STEP,
+        params: { scoundrelId: scoundrelId.value, stepId: Step.PLAYBOOK },
     });
+
+    changeStep(Step.PLAYBOOK);
 }
 
 // If scoundrelId is not null, load the scoundrel
 else {
-    // Load the scoundrel
-    // scoundrel.value = await loadScoundrel(scoundrelId.value);
-    // For now, redirect to home
-    router.replace({ name: PageName.HOME });
+    console.log('Loading scoundrel:', scoundrelId.value);
+    scoundrel.value = loadScoundrel(scoundrelId.value);
+    if (!scoundrel.value) {
+        console.error('Scoundrel not found');
+        // TODO: Show error message (modal?)
+    } else if (!stepId.value) changeStep(Step.PLAYBOOK);
 }
 
 const actionsChanged = ref(false);
@@ -187,6 +195,16 @@ const actionsChanged = ref(false);
 watch(
     () => scoundrel.value?.actions,
     () => (actionsChanged.value = true),
+    { deep: true }
+);
+
+// When the scoundrel is changed at all, save it to local storage
+watch(
+    () => scoundrel.value,
+    (newScoundrel) => {
+        if (!newScoundrel) return;
+        saveScoundrel(newScoundrel as Scoundrel);
+    },
     { deep: true }
 );
 
@@ -237,6 +255,9 @@ async function onClickDiscard() {
 }
 
 async function discard() {
+    if (!scoundrelId.value) return;
+    deleteScoundrel(scoundrelId.value);
+
     ModalController.close();
     page.value?.classList.remove('page-in');
     page.value?.classList.add('page-out');
@@ -257,9 +278,7 @@ async function changeStep(newStepId: Step) {
 
     // Is the new step to the right or left of the old step?
     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
-    console.log('currentStepIndex', currentStepIndex);
     const newStepIndex = steps.findIndex((s) => s.id === newStepId);
-    console.log('newStepIndex', newStepIndex);
 
     const animationClassOut =
         newStepIndex > currentStepIndex
@@ -275,7 +294,7 @@ async function changeStep(newStepId: Step) {
     // Change the route
     stepId.value = newStepId;
     router.replace({
-        name: PageName.EDIT,
+        name: PageName.EDIT_WITH_STEP,
         params: { scoundrelId: scoundrelId.value, stepId: newStepId },
     });
 

@@ -7,6 +7,7 @@ export enum PageName {
     HOME = 'home',
     MAKE = 'make',
     EDIT = 'edit',
+    EDIT_WITH_STEP = 'edit-with-step',
     LOST = 'lost',
 }
 
@@ -26,11 +27,18 @@ const routes = [
         name: PageName.MAKE
     },
     {
-        path: '/make/:scoundrelId/:stepId',
+        path: '/make/:scoundrelId',
         components: {
             page: TheMakePage
         },
         name: PageName.EDIT
+    },
+    {
+        path: '/make/:scoundrelId/:stepId',
+        components: {
+            page: TheMakePage
+        },
+        name: PageName.EDIT_WITH_STEP
     },
     {
         path: '/:pathMatch(.*)*',

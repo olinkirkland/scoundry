@@ -17,12 +17,14 @@
                 </button>
             </div>
 
-            <!-- TODO: list of scoundrels; portraits and names -->
-            <ul class="scoundrels">
-                <li v-for="scoundrel in scoundrels" :key="scoundrel.id">
-                    <img :src="scoundrel.portrait" :alt="scoundrel.name" />
-                    <p>{{ scoundrel.name }}</p>
-                </li>
+            <ul class="saved-scoundrels-list" v-if="savedScoundrels.length">
+                <scoundrel-card
+                    v-for="scoundrel in savedScoundrels"
+                    :key="scoundrel.id"
+                    :scoundrel="scoundrel"
+                    :lastUpdated="getLastUpdated(scoundrel.id)"
+                    @click="onClickLoadScoundrel(scoundrel)"
+                ></scoundrel-card>
             </ul>
 
             <label class="scroll-note">Scroll down to see attribution</label>
@@ -80,16 +82,22 @@
 </template>
 
 <script setup lang="ts">
+import ScoundrelCard from '@/components/scoundrel-card.vue';
+import {
+    getSavedMetadata,
+    getSavedScoundrels,
+    Metadata,
+} from '@/controllers/storage-controller';
 import { PageName, router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
 
 const page = ref<HTMLElement | null>(null);
-const scoundrels = ref<Scoundrel[]>([]);
-
-// Fetch the list of saved scoundrels (local storage)
-const savedScoundrels = localStorage.getItem('scoundrels');
-if (savedScoundrels?.length) scoundrels.value = JSON.parse(savedScoundrels);
+const savedScoundrels = ref<Scoundrel[]>([]);
+savedScoundrels.value = getSavedScoundrels().filter(
+    (scoundrel: Scoundrel) => !!scoundrel
+); // Remove any nulls
+const savedMetadata = ref<Metadata[]>(getSavedMetadata()); // Use for timestamps
 
 async function onClickMakeNewScoundrel() {
     page.value?.classList.remove('page-in');
@@ -97,6 +105,19 @@ async function onClickMakeNewScoundrel() {
 
     await new Promise((resolve) => setTimeout(resolve, 500));
     router.push({ name: PageName.MAKE });
+}
+
+function onClickLoadScoundrel(scoundrel: Scoundrel) {
+    router.replace({
+        name: PageName.EDIT,
+        params: { scoundrelId: scoundrel.id },
+    });
+}
+
+function getLastUpdated(scoundrelId: string) {
+    const metadata = savedMetadata.value!.find((m) => m.id === scoundrelId);
+    if (!metadata) return null;
+    return new Date(metadata?.lastUpdated);
 }
 </script>
 
@@ -209,6 +230,17 @@ footer > button {
     display: block;
     margin: 1.2rem auto;
     font-size: 1.2rem;
+}
+
+ul.saved-scoundrels-list {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {

@@ -1,16 +1,33 @@
 import { Scoundrel } from "@/scoundrel";
 
-export function save(scoundrel: Scoundrel) {
-    // Save each scoundrel to their own key 'scoundrel-<id>'
-    // Add their id to the save-list
+export type Metadata = {
+    id: string,
+    lastUpdated: number,
+};
 
-    const savedScoundrels = localStorage.getItem('save-id-list');
-
+export function saveScoundrel(scoundrel: Scoundrel) {
     const key = scoundrel.id;
     localStorage.setItem(`scoundrel-${key}`, JSON.stringify(scoundrel));
+
+    const savedScoundrelsIndexString = localStorage.getItem('save-index') || '[]';
+    const savedScoundrelsIndex = JSON.parse(savedScoundrelsIndexString);
+
+    const metadata: Metadata = {
+        id: key,
+        lastUpdated: new Date().getTime(),
+    };
+
+    // Ensure the id is not already in the list, if it is, remove it
+    const newSavedScoundrelsIndex = savedScoundrelsIndex.filter((saved: any) => saved.id !== key);
+    newSavedScoundrelsIndex.push(metadata);
+
+    // Sort the list by last updated
+    newSavedScoundrelsIndex.sort((a: any, b: any) => b.lastUpdated - a.lastUpdated);
+
+    localStorage.setItem('save-index', JSON.stringify(newSavedScoundrelsIndex));
 }
 
-export function load(id: string): Scoundrel | null {
+export function loadScoundrel(id: string): Scoundrel | null {
     const scoundrel = localStorage.getItem(`scoundrel-${id}`);
     if (!scoundrel) return null;
 
@@ -19,13 +36,33 @@ export function load(id: string): Scoundrel | null {
 
 export function getSavedScoundrels() {
     try {
-        const savedScoundrelsIdsString = localStorage.getItem('save-id-list') || '[]';
-        const savedScoundrelsIds = JSON.parse(savedScoundrelsIdsString);
+        const savedScoundrelsIndexString = localStorage.getItem('save-index') || '[]';
+        const savedScoundrelsIndex = JSON.parse(savedScoundrelsIndexString);
 
         // For each id, load the scoundrel
-        return savedScoundrelsIds.map((id: string) => load(id));
+        return savedScoundrelsIndex.map((metadata: Metadata) => loadScoundrel(metadata.id));
     } catch (e) {
         console.error(e);
         return [];
     }
+}
+
+export function getSavedMetadata(): Metadata[] {
+    try {
+        const savedScoundrelsIndexString = localStorage.getItem('save-index') || '[]';
+        return JSON.parse(savedScoundrelsIndexString);
+    } catch (e) {
+        console.error(e);
+        return [];
+    }
+}
+
+export function deleteScoundrel(id: string) {
+    localStorage.removeItem(`scoundrel-${id}`);
+    const savedScoundrelsIndexString = localStorage.getItem('save-index') || '[]';
+    const savedScoundrelsIndex = JSON.parse(savedScoundrelsIndexString);
+
+    const newSavedScoundrelsIndex
+        = savedScoundrelsIndex.filter((metadata: Metadata) => metadata.id !== id);
+    localStorage.setItem('save-index', JSON.stringify(newSavedScoundrelsIndex));
 }

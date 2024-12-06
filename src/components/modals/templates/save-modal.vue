@@ -78,9 +78,6 @@ function onClickSavePNG() {
         margin-top: auto;
         width: 100%;
         flex-direction: column;
-        > {
-            width: 100%;
-        }
     }
 }
 </style>
