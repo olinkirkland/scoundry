@@ -76,7 +76,10 @@ const semanticName = computed(() => {
             border-radius: 50%;
 
             span {
+                margin-top: 0.1rem;
                 font-size: 1.2rem;
+                font-weight: bold;
+                font-family: var(--font-body);
             }
         }
     }
