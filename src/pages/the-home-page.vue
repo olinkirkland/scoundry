@@ -233,12 +233,13 @@ footer > button {
 }
 
 ul.saved-scoundrels-list {
-    margin-top: 4rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    overflow-x: auto;
+    max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.2rem;
+    padding: 1.2rem;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.1);
 }

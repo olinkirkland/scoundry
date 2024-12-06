@@ -40,6 +40,8 @@ const semanticName = computed(() => {
 <style scoped lang="scss">
 .scoundrel-card {
     cursor: pointer;
+    min-width: 14rem;
+    width: 12rem;
     background-color: var(--color-surface);
     border-radius: 5px;
     padding: 1.2rem;
