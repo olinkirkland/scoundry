@@ -20,7 +20,7 @@ export function getActionLabelBySlug(slug: string): string {
     return actionLabels[slug] || slug;
 }
 
-export const insightColor = '#20c997';
+export const insightColor = '#1fa87f';
 export const prowessColor = '#f03e3e';
 export const resolveColor = '#7950f2';
 

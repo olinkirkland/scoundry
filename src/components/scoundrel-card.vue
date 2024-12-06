@@ -77,7 +77,6 @@ const semanticName = computed(() => {
 
             span {
                 font-size: 1.2rem;
-                text-shadow: var(--shadow-text);
             }
         }
     }
