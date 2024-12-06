@@ -2,15 +2,18 @@
     <ModalFrame>
         <template v-slot:header>
             <ModalHeader closeButton>
-                <h3>Save Your Character</h3>
+                <h3>Export Your Character</h3>
             </ModalHeader>
         </template>
         <template v-slot:content>
             <div class="save">
+                <p>Scoundry saves your changes automatically.</p>
+                <p class="callout">
+                    If you want to share your character, you can copy the JSON
+                    data and import it from the home page.
+                </p>
                 <p>
-                    Either export your character to a JSON file that can be
-                    imported into Scoundry, or save your filled-out character
-                    sheet as a PNG image.
+                    You can save your filled-out character sheet as a PNG image.
                 </p>
                 <div class="row wrap">
                     <button
@@ -24,8 +27,8 @@
                         >
                         <span v-else>Copy Character JSON</span>
                     </button>
-                    <button class="btn" @click="onClickSavePNG">
-                        Save Character Sheet as PNG
+                    <button class="btn disabled" @click="onClickSavePNG">
+                        Save Character Sheet PNG
                     </button>
                 </div>
             </div>
