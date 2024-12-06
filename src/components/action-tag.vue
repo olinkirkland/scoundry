@@ -89,7 +89,7 @@ const color = computed(() => {
 
     p {
         position: relative;
-        font-size: 1.2rem;
+        font-size: 1rem;
         top: 0.05rem;
     }
 }
