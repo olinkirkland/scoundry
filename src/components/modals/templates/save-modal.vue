@@ -19,7 +19,10 @@
                         :disabled="showCopyMessage"
                         @click="onClickCopyJSON"
                     >
-                        Copy Character JSON
+                        <span class="copy-message" v-if="showCopyMessage"
+                            >Copied!</span
+                        >
+                        <span v-else>Copy Character JSON</span>
                     </button>
                     <button class="btn" @click="onClickSavePNG">
                         Save Character Sheet as PNG
