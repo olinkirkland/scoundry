@@ -33,20 +33,40 @@
                 <img src="/assets/icons/save.png" alt="Save" />
             </button>
             <div class="spacer"></div>
+
+            <!-- Back -->
             <button
-                class="btn"
+                class="btn desktop-only"
                 @click="onClickBackStep"
                 :class="{ disabled: isFirstStep }"
             >
-                Back
+                <span>Back</span>
             </button>
             <button
-                class="btn"
+                class="btn btn--icon mobile-only"
+                @click="onClickBackStep"
+                :class="{ disabled: isFirstStep }"
+            >
+                <img src="/assets/icons/left.png" alt="Back" />
+            </button>
+
+            <!-- Next -->
+            <button
+                class="btn desktop-only"
                 @click="onClickNextStep"
                 :class="{ disabled: isLastStep }"
             >
-                Next
+                <span>Next</span>
             </button>
+            <button
+                class="btn btn--icon mobile-only"
+                @click="onClickNextStep"
+                :class="{ disabled: isLastStep }"
+            >
+                <img src="/assets/icons/right.png" alt="Next" />
+            </button>
+
+            <!-- Actions -->
             <button class="btn btn--icon" @click="onClickActions">
                 <img src="/assets/icons/bars.png" alt="Info" />
                 <div class="badge" v-if="actionsChanged"></div>

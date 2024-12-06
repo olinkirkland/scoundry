@@ -15,13 +15,14 @@ const actionLabels: Record<string, string> = {
     consort: 'Consort',
     sway: 'Sway',
 };
+
 export function getActionLabelBySlug(slug: string): string {
     return actionLabels[slug] || slug;
 }
 
-const insightColor = '#20c997';
-const prowessColor = '#f03e3e';
-const resolveColor = '#7950f2';
+export const insightColor = '#20c997';
+export const prowessColor = '#f03e3e';
+export const resolveColor = '#7950f2';
 
 const actionColors: Record<string, string> = {
     hunt: insightColor,

@@ -4,12 +4,27 @@
         <label v-if="props.lastUpdated"
             >Updated {{ props.lastUpdated.toLocaleDateString() }}</label
         >
+        <div class="attributes-row">
+            <li :style="{ backgroundColor: insightColor }">
+                <span>{{ getAttributeValue(scoundrel, 'insight') }}</span>
+            </li>
+            <li :style="{ backgroundColor: prowessColor }">
+                <span>{{ getAttributeValue(scoundrel, 'prowess') }}</span>
+            </li>
+            <li :style="{ backgroundColor: resolveColor }">
+                <span> {{ getAttributeValue(scoundrel, 'resolve') }}</span>
+            </li>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import { Scoundrel } from '@/scoundrel';
-import { getSemanticScoundrelName } from '@/util/scoundrel-util';
+import { insightColor, prowessColor, resolveColor } from '@/util/action-util';
+import {
+    getAttributeValue,
+    getSemanticScoundrelName,
+} from '@/util/scoundrel-util';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -41,6 +56,28 @@ const semanticName = computed(() => {
 
     &:hover {
         box-shadow: var(--shadow-sm);
+    }
+
+    .attributes-row {
+        margin-top: 0.4rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.4rem;
+
+        > li {
+            // Colored circle
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+
+            span {
+                font-size: 1.2rem;
+                text-shadow: var(--shadow-text);
+            }
+        }
     }
 }
 

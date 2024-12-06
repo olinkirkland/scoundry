@@ -220,3 +220,15 @@ input[type='text'] {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none !important;
+    }
+}

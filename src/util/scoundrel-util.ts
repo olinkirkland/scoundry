@@ -6,4 +6,9 @@ export function getSemanticScoundrelName(scoundrel: Scoundrel) {
     if (!scoundrel.playbook) return 'Unnamed Scoundrel';
     const playbook = dataPlaybooks.find((playbook) => playbook.slug === scoundrel.playbook);
     return playbook ? `Unnamed ${playbook.name}` : 'Unnamed Scoundrel';
-}   
+}
+
+export function getAttributeValue(scoundrel: Scoundrel, attribute: 'prowess' | 'insight' | 'resolve'): number {
+    // TODO: Add up the actions for each attribute
+    return 3;
+}
