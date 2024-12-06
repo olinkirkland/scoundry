@@ -6,13 +6,13 @@
 :root {
     --font-display: 'Smythe', cursive;
     --font-body: 'Libre Baskerville', serif;
+    --font-handwriting: 'Gochi Hand', cursive;
 }
 
 // Colors & Shadows
 :root {
     // Colors
     --color-primary: #ff922b; // Used for primary actions, buttons, highlights
-
     --color-surface: #333333; // For cards, modals, or containers on top of background
     --color-surface-lighter: #4a4a4a; // For cards, modals, or containers on top of surface
     --color-on-surface: #ebebeb; // For cards, modals, or containers on top of surface

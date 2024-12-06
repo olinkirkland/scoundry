@@ -31,6 +31,10 @@ const data = {
 export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<HTMLCanvasElement> {
     console.log('painting a sheet for a', scoundrel.playbook);
 
+    if (!document.fonts.check('40px Gochi Hand'))
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+
     return new Promise((resolve, reject) => {
         const template = new Image();
         template.src = `/assets/sheets/sheet-images/${scoundrel.playbook}.png`;

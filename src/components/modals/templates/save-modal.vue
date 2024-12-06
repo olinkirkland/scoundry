@@ -13,7 +13,11 @@
                     data and import it from the home page.
                 </p>
                 <p>
-                    You can save your filled-out character sheet as a PNG image.
+                    You can save your
+                    <span class="filled" :style="{ color: selectedInkColor }"
+                        >filled-out</span
+                    >
+                    character sheet as a PNG image.
                 </p>
                 <ul class="ink-colors">
                     <li
@@ -199,6 +203,11 @@ ul.ink-colors {
             border: 2px solid var(--color-on-surface);
         }
     }
+}
+
+span.filled {
+    font-family: var(--font-handwriting);
+    font-size: 2rem;
 }
 
 @keyframes spin {
