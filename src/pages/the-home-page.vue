@@ -12,8 +12,8 @@
                 <button class="btn" @click="onClickMakeNewScoundrel">
                     <span>Make a new Scoundrel</span>
                 </button>
-                <button class="btn btn--alt disabled">
-                    <span>Load from file</span>
+                <button class="btn btn--alt" @click="onClickLoadFromJSON">
+                    <span>Load from JSON</span>
                 </button>
             </div>
 
@@ -82,7 +82,9 @@
 </template>
 
 <script setup lang="ts">
+import LoadFromJsonModal from '@/components/modals/templates/load-from-json-modal.vue';
 import ScoundrelCard from '@/components/scoundrel-card.vue';
+import ModalController from '@/controllers/modal-controller';
 import {
     getSavedMetadata,
     getSavedScoundrels,
@@ -105,6 +107,10 @@ async function onClickMakeNewScoundrel() {
 
     await new Promise((resolve) => setTimeout(resolve, 500));
     router.push({ name: PageName.MAKE });
+}
+
+async function onClickLoadFromJSON() {
+    ModalController.open(LoadFromJsonModal);
 }
 
 function onClickLoadScoundrel(scoundrel: Scoundrel) {

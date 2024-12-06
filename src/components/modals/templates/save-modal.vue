@@ -40,6 +40,7 @@
 import ModalFrame from '@/components/modals/modal-frame.vue';
 import ModalHeader from '@/components/modals/modal-header.vue';
 import { Scoundrel } from '@/scoundrel';
+import { makeSemanticId } from '@/util/id-util';
 import { ref } from 'vue';
 
 const props = defineProps<{
@@ -49,7 +50,9 @@ const props = defineProps<{
 const showCopyMessage = ref(false);
 
 function onClickCopyJSON() {
-    navigator.clipboard.writeText(JSON.stringify(props.scoundrel));
+    const scoundrelCopy = { ...props.scoundrel };
+    scoundrelCopy.id = makeSemanticId();
+    navigator.clipboard.writeText(JSON.stringify(scoundrelCopy));
     showCopyMessage.value = true;
     setTimeout(() => {
         showCopyMessage.value = false;
