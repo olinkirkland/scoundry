@@ -85,11 +85,16 @@ async function generatePNG() {
 function onClickSavePNG() {
     if (!props.scoundrel.playbook) return;
 
-    // 4. Save the PNG to the user's computer
-    const a = document.createElement('a');
-    a.href = sheetDataUrl.value;
-    a.download = `${makeFileName(getSemanticScoundrelName(props.scoundrel))}.png`;
-    a.click();
+    // Open the PNG in a new tab
+    // window.open(sheetDataUrl.value, '_blank');
+
+    // 4. Save the PNG as a file
+    const fileName = makeFileName(getSemanticScoundrelName(props.scoundrel));
+    const link = document.createElement('a');
+    link.download = `${fileName}.png`;
+    link.href = sheetDataUrl.value.replace('image/png', 'image/octet-stream');
+    link.click();
+    link.remove();
 }
 
 function makeFileName(name: string) {
