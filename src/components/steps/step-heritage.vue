@@ -5,15 +5,17 @@
             Your character's heritage describes their origins and family line.
         </p>
     </step-header>
-    <ul class="heritages-list">
-        <heritage-card
-            v-for="heritage in heritages"
-            :key="heritage.slug"
-            :heritage="heritage"
-            :class="{ active: heritage.slug === scoundrel.heritage }"
-            @click="onClickHeritage(heritage)"
-        />
-    </ul>
+    <div class="list-container">
+        <ul class="heritages-list">
+            <heritage-card
+                v-for="heritage in heritages"
+                :key="heritage.slug"
+                :heritage="heritage"
+                :class="{ active: heritage.slug === scoundrel.heritage }"
+                @click="onClickHeritage(heritage)"
+            />
+        </ul>
+    </div>
     <section v-if="scoundrel.heritage" class="selected-heritage">
         <p class="description">
             {{
@@ -89,13 +91,18 @@ function onClickSpecificHeritage(specificHeritage: string) {
 </script>
 
 <style scoped lang="scss">
+.step-container > .list-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.2rem auto;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: calc(100% - 2.4rem);
+}
+
 ul.heritages-list {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: fit-content;
     gap: 0.4rem;
-    padding: 1.2rem;
 }
 
 p.description {
@@ -161,8 +168,6 @@ ul.specific-heritages {
 
 @media (max-width: 1024px) {
     ul.heritages-list {
-        width: 100%;
-        justify-content: flex-start;
         flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: none;

@@ -3,15 +3,17 @@
         <h2>Choose a background</h2>
         <p>Describe what your character did before they joined the crew.</p>
     </step-header>
-    <ul class="backgrounds-list">
-        <background-card
-            v-for="background in backgrounds"
-            :key="background.slug"
-            :background="background"
-            :class="{ active: background.slug === scoundrel.background }"
-            @click="onClickBackground(background)"
-        />
-    </ul>
+    <div class="list-container">
+        <ul class="backgrounds-list">
+            <background-card
+                v-for="background in backgrounds"
+                :key="background.slug"
+                :background="background"
+                :class="{ active: background.slug === scoundrel.background }"
+                @click="onClickBackground(background)"
+            />
+        </ul>
+    </div>
     <p v-if="scoundrel.background" class="description">
         {{
             backgrounds.find((b) => b.slug === scoundrel.background)
@@ -100,14 +102,18 @@ function onClickSpecificBackground(specificBackground: SpecificBackground) {
 </script>
 
 <style scoped lang="scss">
+.step-container > .list-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.2rem auto;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: calc(100% - 2.4rem);
+}
+
 ul.backgrounds-list {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: fit-content;
-
     gap: 0.4rem;
-    padding: 1.2rem;
 }
 
 p.description {
