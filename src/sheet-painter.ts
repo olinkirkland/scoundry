@@ -28,9 +28,8 @@ const data = {
 };
 
 
-export async function paintSheet(scoundrel: Scoundrel): Promise<HTMLCanvasElement> {
+export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<HTMLCanvasElement> {
     console.log('painting a sheet for a', scoundrel.playbook);
-    const color: string = 'red';
 
     return new Promise((resolve, reject) => {
         const template = new Image();

@@ -15,6 +15,21 @@
                 <p>
                     You can save your filled-out character sheet as a PNG image.
                 </p>
+                <ul class="ink-colors">
+                    <li
+                        v-for="color in inkColors"
+                        :key="color"
+                        @click="onClickChangeInkColor(color)"
+                        :style="{ backgroundColor: color, color: color }"
+                        :class="{ active: color === selectedInkColor }"
+                    >
+                        <img
+                            v-if="color === selectedInkColor"
+                            src="/assets/icons/done.png"
+                            alt="Selected"
+                        />
+                    </li>
+                </ul>
                 <div class="preview-container">
                     <img
                         v-if="!sheetDataUrl"
@@ -58,10 +73,30 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
+const inkColors = [
+    '#f03e3e',
+    '#ff922b',
+    '#ffd43b',
+    '#51cf66',
+    '#20c997',
+    '#339af0',
+    '#5c7cfa',
+    '#7950f2',
+    '#e9417c',
+    '#131313',
+];
+
 const showCopyMessage = ref(false);
+const selectedInkColor = ref(inkColors[0]);
+
 const sheetDataUrl = ref('');
 const sheetPreview = ref<HTMLImageElement | null>(null);
 generatePNG();
+
+function onClickChangeInkColor(color: string) {
+    selectedInkColor.value = color;
+    generatePNG();
+}
 
 function onClickCopyJSON() {
     const scoundrelCopy = { ...props.scoundrel };
@@ -74,7 +109,7 @@ function onClickCopyJSON() {
 }
 
 async function generatePNG() {
-    const canvas = await paintSheet(props.scoundrel);
+    const canvas = await paintSheet(props.scoundrel, selectedInkColor.value);
     console.log(canvas);
     if (!canvas) return;
 
@@ -127,6 +162,42 @@ function makeFileName(name: string) {
 
     > img.preview {
         width: 100%;
+    }
+}
+
+ul.ink-colors {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+
+    > li {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 1.2rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-sm);
+        }
+        &:active {
+            transform: scale(1);
+            filter: brightness(0.9);
+        }
+
+        &.selected {
+            border: 2px solid var(--color-on-surface);
+        }
     }
 }
 
