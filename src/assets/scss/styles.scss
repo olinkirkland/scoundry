@@ -108,7 +108,6 @@ button.btn {
     }
 
     &.btn--icon {
-        // border: none;
         background-color: transparent;
         width: 2rem;
         > img {
@@ -144,7 +143,7 @@ button.btn {
 
     &.disabled {
         opacity: 0.4;
-        border: none;
+        border-color: transparent;
         pointer-events: none;
 
         &:hover {

@@ -29,7 +29,7 @@
             <button class="btn btn--icon disabled" @click="onClickDiscard">
                 <img src="/assets/icons/trash.png" alt="Discard" />
             </button>
-            <button class="btn btn--icon disabled" @click="onClickSave">
+            <button class="btn btn--icon" @click="onClickSave">
                 <img src="/assets/icons/save.png" alt="Save" />
             </button>
             <div class="spacer"></div>
@@ -57,6 +57,7 @@
 
 <script setup lang="ts">
 import ActionsModal from '@/components/modals/templates/actions-modal.vue';
+import SaveModal from '@/components/modals/templates/save-modal.vue';
 import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/step-abilities.vue';
@@ -203,9 +204,9 @@ function onClickBackStep() {
 
 async function onClickSave() {
     // Save the scoundrel
-    // await saveScoundrel(scoundrel.value);
-    // For now, redirect to home
-    // router.replace({ name: PageName.HOME });
+    ModalController.open(SaveModal, {
+        scoundrel: scoundrel.value as Scoundrel,
+    });
 }
 
 async function onClickActions() {
