@@ -78,6 +78,7 @@
 <script setup lang="ts">
 import ActionsModal from '@/components/modals/templates/actions-modal.vue';
 import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
+import ErrorModal from '@/components/modals/templates/error-modal.vue';
 import SaveModal from '@/components/modals/templates/save-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/step-abilities.vue';
@@ -207,6 +208,14 @@ else {
     if (!scoundrel.value) {
         console.error('Scoundrel not found');
         // TODO: Show error message (modal?)
+        ModalController.open(ErrorModal, {
+            title: 'Scoundrel not found',
+            message: 'The scoundrel you are trying to edit could not be found.',
+            onConfirm: () => {
+                ModalController.close();
+                onClickClose();
+            },
+        });
     } else if (!stepId.value) changeStep(Step.PLAYBOOK);
 }
 
