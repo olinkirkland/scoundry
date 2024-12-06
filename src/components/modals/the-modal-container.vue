@@ -21,7 +21,6 @@ const currentModal = shallowRef<ComponentOptions | null>(null);
 const currentModalConfig = shallowRef<any | null>(null);
 const fadeInterval = ref();
 function onClickBackground() {
-    console.log('onClickBackground');
     if (currentModalConfig.value?.closeOnClick) ModalController.close();
 }
 

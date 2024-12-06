@@ -15,6 +15,15 @@
                 <p>
                     You can save your filled-out character sheet as a PNG image.
                 </p>
+                <div class="preview-container">
+                    <img
+                        v-if="!sheetDataUrl"
+                        class="spinner"
+                        src="/assets/icons/loading.png"
+                        alt="Loading"
+                    />
+                    <img ref="sheetPreview" class="preview" />
+                </div>
                 <div class="row wrap">
                     <button
                         class="btn btn--alt"
@@ -27,7 +36,7 @@
                         >
                         <span v-else>Copy Character JSON</span>
                     </button>
-                    <button class="btn disabled" @click="onClickSavePNG">
+                    <button class="btn" @click="onClickSavePNG">
                         Save Character Sheet PNG
                     </button>
                 </div>
@@ -40,7 +49,9 @@
 import ModalFrame from '@/components/modals/modal-frame.vue';
 import ModalHeader from '@/components/modals/modal-header.vue';
 import { Scoundrel } from '@/scoundrel';
+import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
+import { getSemanticScoundrelName } from '@/util/scoundrel-util';
 import { ref } from 'vue';
 
 const props = defineProps<{
@@ -48,6 +59,9 @@ const props = defineProps<{
 }>();
 
 const showCopyMessage = ref(false);
+const sheetDataUrl = ref('');
+const sheetPreview = ref<HTMLImageElement | null>(null);
+generatePNG();
 
 function onClickCopyJSON() {
     const scoundrelCopy = { ...props.scoundrel };
@@ -59,8 +73,23 @@ function onClickCopyJSON() {
     }, 2000);
 }
 
+async function generatePNG() {
+    const canvas = await paintSheet(props.scoundrel);
+    console.log(canvas);
+    if (!canvas) return;
+
+    sheetDataUrl.value = canvas.toDataURL('image/png');
+    sheetPreview.value!.src = sheetDataUrl.value;
+}
+
 function onClickSavePNG() {
-    // TODO
+    if (!props.scoundrel.playbook) return;
+
+    // 4. Save the PNG to the user's computer
+    const a = document.createElement('a');
+    a.href = sheetDataUrl.value;
+    a.download = `${getSemanticScoundrelName(props.scoundrel)}.png`;
+    a.click();
 }
 </script>
 
@@ -71,6 +100,32 @@ function onClickSavePNG() {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.6rem;
+}
+
+.preview-container {
+    width: 100%;
+    min-height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > img.spinner {
+        animation: spin 1s linear infinite;
+    }
+
+    > img.preview {
+        width: 100%;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 768px) {

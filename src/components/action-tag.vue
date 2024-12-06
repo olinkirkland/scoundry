@@ -89,7 +89,7 @@ const color = computed(() => {
 
     p {
         position: relative;
-        font-size: 1rem;
+        font-size: 1.2rem;
         top: 0.05rem;
     }
 }
@@ -97,6 +97,9 @@ const color = computed(() => {
 @media (max-width: 768px) {
     .action-tag {
         padding: 0 0.8rem 0 0.8rem;
+        p {
+            font-size: 1rem;
+        }
     }
 }
 </style>
