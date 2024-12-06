@@ -88,8 +88,14 @@ function onClickSavePNG() {
     // 4. Save the PNG to the user's computer
     const a = document.createElement('a');
     a.href = sheetDataUrl.value;
-    a.download = `${getSemanticScoundrelName(props.scoundrel)}.png`;
+    a.download = `${makeFileName(getSemanticScoundrelName(props.scoundrel))}.png`;
     a.click();
+}
+
+function makeFileName(name: string) {
+    // Replace non-alphanumeric, non-space characters with ''
+    const cleanedName = name.replace(/[^a-zA-Z0-9\s]/g, '');
+    return `${cleanedName.toLowerCase().replace(/\s/g, '-')}__character-sheet`;
 }
 </script>
 
