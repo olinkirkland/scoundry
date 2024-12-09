@@ -1,0 +1,237 @@
+[
+    {
+        "category": null,
+        "label": "Deathlander",
+        "id": "deathlander"
+    },
+    {
+        "category": null,
+        "label": "Exile",
+        "id": "exile"
+    },
+    {
+        "category": null,
+        "label": "Nomad",
+        "id": "nomad"
+    },
+    {
+        "category": null,
+        "label": "Outlaw",
+        "id": "outlaw"
+    },
+    {
+        "category": null,
+        "label": "Refugee",
+        "id": "refugee"
+    },
+    {
+        "label": "Church of Ecstasy",
+        "id": "church-of-ecstasy",
+        "category": "akoros"
+    },
+    {
+        "label": "Doskvol Academy",
+        "id": "doskvol-academy",
+        "category": "akoros"
+    },
+    {
+        "label": "Governor's Stronghold",
+        "id": "governors-stronghold",
+        "category": "akoros"
+    },
+    {
+        "label": "Ironworks Labor",
+        "id": "ironworks-labor",
+        "category": "akoros"
+    },
+    {
+        "label": "North Hook Company",
+        "id": "north-hook-company",
+        "category": "akoros"
+    },
+    {
+        "label": "Radiant Energy Farmers",
+        "id": "radiant-energy-farmers",
+        "category": "akoros"
+    },
+    {
+        "label": "Couldspire Aeronauts",
+        "id": "couldspire-aeronauts",
+        "category": "akoros"
+    },
+    {
+        "label": "Ilysian Guard",
+        "id": "ilysian-guard",
+        "category": "akoros"
+    },
+    {
+        "label": "Imperial City Courtiers",
+        "id": "imperial-city-courtiers",
+        "category": "akoros"
+    },
+    {
+        "label": "South Point Traders",
+        "id": "south-point-traders",
+        "category": "akoros"
+    },
+    {
+        "label": "Whitehollow Miners",
+        "id": "whitehollow-miners",
+        "category": "akoros"
+    },
+    {
+        "label": "Wintercliff Wardens",
+        "id": "wintercliff-wardens",
+        "category": "akoros"
+    },
+    {
+        "label": "Bonewalker",
+        "id": "bonewalker",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Lhan Lhaban",
+        "id": "lhan-lhaban",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Liberators",
+        "id": "liberators",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Lore Keepers",
+        "id": "lore-keepers",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Melamatines",
+        "id": "melamatines",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Vidyad",
+        "id": "vidyad",
+        "category": "dagger-isles"
+    },
+    {
+        "label": "Bright Harbor Fleet",
+        "id": "bright-harbor-fleet",
+        "category": "iruvia"
+    },
+    {
+        "label": "City Guardians",
+        "id": "city-guardians",
+        "category": "iruvia"
+    },
+    {
+        "label": "Emissaries",
+        "id": "emissaries",
+        "category": "iruvia"
+    },
+    {
+        "label": "Falconers",
+        "id": "falconers",
+        "category": "iruvia"
+    },
+    {
+        "label": "Lightning Couriers",
+        "id": "lightning-couriers",
+        "category": "iruvia"
+    },
+    {
+        "label": "Water Bearers",
+        "id": "water-bearers",
+        "category": "iruvia"
+    },
+    {
+        "label": "Blackvale Coven",
+        "id": "blackvale-coven",
+        "category": "skovlan"
+    },
+    {
+        "label": "Blood Cullers",
+        "id": "blood-cullers",
+        "category": "skovlan"
+    },
+    {
+        "label": "Home Guard Militia",
+        "id": "home-guard-militia",
+        "category": "skovlan"
+    },
+    {
+        "label": "Imperial Collaborators",
+        "id": "imperial-collaborators",
+        "category": "skovlan"
+    },
+    {
+        "label": "Lockport Scummer",
+        "id": "lockport-scummer",
+        "category": "skovlan"
+    },
+    {
+        "label": "Onyx Citadel",
+        "id": "onyx-citadel",
+        "category": "skovlan"
+    },
+    {
+        "label": "Bastion Elders",
+        "id": "bastion-elders",
+        "category": "severos"
+    },
+    {
+        "label": "Cullfield Observatory",
+        "id": "cullfield-observatory",
+        "category": "severos"
+    },
+    {
+        "label": "Irondale Metalworks",
+        "id": "irondale-metalworks",
+        "category": "severos"
+    },
+    {
+        "label": "Spirit Hunters",
+        "id": "spirit-hunters",
+        "category": "severos"
+    },
+    {
+        "label": "Thorn Devils",
+        "id": "thorn-devils",
+        "category": "severos"
+    },
+    {
+        "label": "Tyrmoor Clanholder",
+        "id": "tyrmoor-clanholder",
+        "category": "severos"
+    },
+    {
+        "label": "Confessors",
+        "id": "confessors",
+        "category": "tycheros"
+    },
+    {
+        "label": "Demon Scholars",
+        "id": "demon-scholars",
+        "category": "tycheros"
+    },
+    {
+        "label": "Lunarium Players",
+        "id": "lunarium-players",
+        "category": "tycheros"
+    },
+    {
+        "label": "Seekers",
+        "id": "seekers",
+        "category": "tycheros"
+    },
+    {
+        "label": "Steelhand",
+        "id": "steelhand",
+        "category": "tycheros"
+    },
+    {
+        "label": "Void Gate Sentries",
+        "id": "void-gate-sentries",
+        "category": "tycheros"
+    }
+]

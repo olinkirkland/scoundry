@@ -1,17 +1,15 @@
 <template>
     <step-header>
-        <h2>Choose your heritage</h2>
-        <p>
-            Your character's heritage describes their origins and family line.
-        </p>
+        <h2>What are your origins?</h2>
+        <p>Pick a heritage and write a detail specific to you.</p>
     </step-header>
     <div class="list-container">
         <ul class="heritages-list">
             <heritage-card
                 v-for="heritage in heritages"
-                :key="heritage.slug"
+                :key="heritage.id"
                 :heritage="heritage"
-                :class="{ active: heritage.slug === scoundrel.heritage }"
+                :class="{ active: heritage.id === scoundrel.heritage }"
                 @click="onClickHeritage(heritage)"
             />
         </ul>
@@ -19,8 +17,7 @@
     <section v-if="scoundrel.heritage" class="selected-heritage">
         <p class="description">
             {{
-                heritages.find((h) => h.slug === scoundrel.heritage)
-                    ?.description
+                heritages.find((h) => h.id === scoundrel.heritage)?.description
             }}
         </p>
 
@@ -29,30 +26,28 @@
             id="heritageSpecialization"
             class="input-heritage-detail"
             type="text"
-            v-model="scoundrel.heritageSpecialization"
+            v-model="scoundrel.backgroundDetail"
         />
 
         <label>Suggestions (click to apply)</label>
         <ul class="specific-heritages">
             <li
-                v-for="specificHeritage in specificHeritages"
-                :key="specificHeritage.name"
-                @click="onClickSpecificHeritage(specificHeritage.name)"
+                v-for="specificHeritage in heritageDetails"
+                :key="specificHeritage.label"
+                @click="onClickSpecificHeritage(specificHeritage.label)"
                 :class="{
-                    active:
-                        specificHeritage.name ===
-                        scoundrel.heritageSpecialization,
+                    active: specificHeritage.label === scoundrel.backgroundDetail,
                 }"
             >
-                <p>{{ specificHeritage.name }}</p>
+                <p>{{ specificHeritage.label }}</p>
             </li>
         </ul>
     </section>
 </template>
 
 <script setup lang="ts">
-import { Heritage, SpecificHeritage } from '@/assets/data/data-types';
-import specificHeritagesData from '@/assets/data/heritages-specific.json';
+import { Trait, TraitDetail } from '@/assets/data/data-types';
+import specificHeritagesData from '@/assets/data/heritage-details.json';
 import heritagesData from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
@@ -63,25 +58,24 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
-const heritages = heritagesData as unknown as Heritage[];
-const specificHeritages = computed(() => {
+const heritages = heritagesData as unknown as Trait[];
+const heritageDetails = computed(() => {
     const allSpecificHeritages =
-        specificHeritagesData as unknown as SpecificHeritage[];
+        specificHeritagesData as unknown as TraitDetail[];
     return allSpecificHeritages.filter(
-        (sh) =>
-            sh.category === props.scoundrel.heritage || sh.category === 'any'
+        (sh) => sh.trait === props.scoundrel.heritage || sh.trait === 'any'
     );
 });
 
-function onClickHeritage(heritage: Heritage) {
-    props.scoundrel.heritage = heritage.slug;
+function onClickHeritage(heritage: Trait) {
+    props.scoundrel.heritage = heritage.id;
     // Put the caret at the end of the input
     const input = document.querySelector('input');
     input?.focus();
 }
 
 function onClickSpecificHeritage(specificHeritage: string) {
-    props.scoundrel.heritageSpecialization = specificHeritage;
+    props.scoundrel.backgroundDetail = specificHeritage;
     // Put the caret at the end of the input
     const input = document.querySelector('input');
     input?.focus();
@@ -109,7 +103,6 @@ p.description {
     text-align: center;
     width: 100%;
     opacity: 0.8;
-    font-size: 1.2rem;
     padding: 0 1.2rem;
     margin: 0 auto;
     margin-bottom: 1.2rem;

@@ -2,8 +2,8 @@ import { Action } from "./assets/data/data-types";
 import { Scoundrel } from "./scoundrel";
 import { getActionValueBySlug } from "./util/action-util";
 
-import dataHeritages from './assets/data/heritages-specific.json';
-import dataBackgrounds from './assets/data/backgrounds-specific.json';
+import dataHeritages from './assets/data/heritage-details.json';
+import dataBackgrounds from './assets/data/background-details.json';
 
 const data = {
     name: { x: 100, y: 100 },
@@ -55,14 +55,14 @@ export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<H
             ctx.lineWidth = 2;
 
             // Heritage
-            const heritage = dataHeritages.find(h => h.slug === scoundrel.heritageSpecialization);
-            if (scoundrel.heritageSpecialization)
-                ctx.fillText(heritage?.name || scoundrel.heritageSpecialization, data.heritage.x, data.heritage.y);
+            const heritage = dataHeritages.find(h => h.slug === scoundrel.backgroundDetail);
+            if (scoundrel.backgroundDetail)
+                ctx.fillText(heritage?.name || scoundrel.backgroundDetail, data.heritage.x, data.heritage.y);
 
             // Background
-            const background = dataBackgrounds.find(bg => bg.slug === scoundrel.backgroundSpecialization);
-            if (scoundrel.backgroundSpecialization)
-                ctx.fillText(background?.name || scoundrel.backgroundSpecialization, data.background.x, data.background.y);
+            const background = dataBackgrounds.find(bg => bg.slug === scoundrel.backgroundDetail);
+            if (scoundrel.backgroundDetail)
+                ctx.fillText(background?.name || scoundrel.backgroundDetail, data.background.x, data.background.y);
 
             // Fill in Action bubbles
             ['hunt', 'study', 'survey', 'tinker', 'finesse', 'prowl', 'skirmish', 'wreck', 'attune', 'command', 'consort', 'sway'

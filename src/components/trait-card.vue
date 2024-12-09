@@ -1,21 +1,22 @@
 <template>
-    <div class="heritage-card">
-        <img :src="`/assets/images/heritages/${heritage.slug}.jpg`" alt="" />
+    <div class="playbook-card" :class="{ selected }">
+        <img :src="`/assets/images/${trait.image}`" alt="" />
         <div class="overlay"></div>
-        <h2>{{ heritage.name }}</h2>
+        <h2>{{ trait.label }}</h2>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Heritage } from '@/assets/data/data-types';
+import { Trait } from '@/assets/data/data-types';
 
 const props = defineProps<{
-    heritage: Heritage;
+    trait: Trait;
+    selected: boolean;
 }>();
 </script>
 
 <style scoped lang="scss">
-.heritage-card {
+.playbook-card {
     box-shadow: var(--shadow-sm);
     background-color: var(--color-surface);
     transition: box-shadow 0.2s ease-in-out;
@@ -76,7 +77,7 @@ const props = defineProps<{
         }
     }
 
-    &.active {
+    &.selected {
         transition: none;
         color: var(--color-primary);
         background: none;

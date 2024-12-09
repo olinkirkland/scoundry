@@ -140,7 +140,6 @@ const resolveActions = computed(() => {
                     // height: 12rem;
 
                     p {
-                        font-size: 1.2rem;
                         margin-bottom: 0.8rem;
                         opacity: 0.8;
                     }

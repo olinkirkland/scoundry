@@ -13,41 +13,29 @@ export type Action =
     | 'sway';
 
 export type Playbook = {
-    name: string;
-    slug: string;
+    id: string;
+    label: string;
     tagline: string;
     description: string;
     actions: Record<Action, number>;
 };
 
-export type Background = {
-    name: string;
-    slug: string;
+export type Trait = {
+    id: string;
+    label: string;
     description: string;
-};
+    image?: string;
+}
 
-export type SpecificBackground = {
-    category: string;
-    slug: string;
-    name: string;
-    actions: Record<Action, number>;
-};
-
-export type Heritage = {
-    name: string;
-    slug: string;
-    description: string;
-};
-
-export type SpecificHeritage = {
-    category: string;
-    name: string;
-    slug: string;
-    description: string;
-};
+export type TraitDetail = {
+    id: string;
+    trait: string;
+    label: string;
+    suggestedActions: Action[];
+}
 
 export type ActionRating = {
-    slug: Action;
-    name: string;
+    id: Action;
+    label: string;
     description: string;
 };

@@ -1,6 +1,6 @@
 <template>
-    <div class="background-card">
-        <h2>{{ playbook.name }}</h2>
+    <div class="playbook-card">
+        <h2>{{ playbook.label }}</h2>
         <p class="tagline">{{ playbook.tagline }}</p>
         <ul class="action-tags">
             <action-tag
@@ -15,16 +15,16 @@
 </template>
 
 <script setup lang="ts">
-import { Action, Playbook } from '@/assets/data/data-types'
-import ActionTag from './action-tag.vue'
+import { Action, Playbook } from '@/assets/data/data-types';
+import ActionTag from './action-tag.vue';
 
 const props = defineProps<{
-    playbook: Playbook
-}>()
+    playbook: Playbook;
+}>();
 </script>
 
 <style scoped lang="scss">
-.background-card {
+.playbook-card {
     box-shadow: var(--shadow-sm);
     padding: 1.6rem;
     background-color: var(--color-surface);
@@ -46,7 +46,6 @@ const props = defineProps<{
     }
 
     p.tagline {
-        font-size: 1.2rem;
         text-align: center;
         font-style: italic;
     }

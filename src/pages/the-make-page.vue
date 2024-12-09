@@ -81,13 +81,13 @@ import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 import ErrorModal from '@/components/modals/templates/error-modal.vue';
 import SaveModal from '@/components/modals/templates/save-modal.vue';
 import StepBlock from '@/components/step-block.vue';
-import StepAbilities from '@/components/steps/step-abilities.vue';
-import StepBackground from '@/components/steps/step-background.vue';
-import StepFriendsAndRivals from '@/components/steps/step-friends-and-rivals.vue';
-import StepHeritageAndActions from '@/components/steps/step-heritage.vue';
-import StepNameAndLook from '@/components/steps/step-name-and-look.vue';
-import StepPlaybook from '@/components/steps/step-playbook.vue';
-import StepVice from '@/components/steps/step-vice.vue';
+import StepAbilities from '@/components/steps/abilities-step.vue';
+import StepBackground from '@/components/steps/background-step.vue';
+import StepFriendsAndRivals from '@/components/steps/friends-step.vue';
+import StepHeritageAndActions from '@/components/steps/heritage-step.vue';
+import StepNameAndLook from '@/components/steps/name-step.vue';
+import StepPlaybook from '@/components/steps/playbook-step.vue';
+import StepVice from '@/components/steps/vice-step.vue';
 import ModalController from '@/controllers/modal-controller';
 import {
     deleteScoundrel,
