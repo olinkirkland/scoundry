@@ -242,7 +242,7 @@ ul.saved-scoundrels-list {
     margin: 0 auto;
     margin-top: 2.4rem;
     overflow-x: auto;
-    max-width: 100%;
+    max-width: calc(100% - 4rem);
     display: flex;
     gap: 1.2rem;
     padding: 1.2rem;
