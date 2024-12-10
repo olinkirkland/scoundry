@@ -36,6 +36,7 @@ export type TraitDetail = {
 
 export type ActionRating = {
     id: Action;
+    attribute: string;
     label: string;
     description: string;
 };

@@ -99,6 +99,27 @@ button.btn {
         white-space: nowrap;
     }
 
+    &--mini {
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: 1.6rem;
+
+        > img {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        &:active {
+            > img {
+                filter: brightness(0.5);
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     > .badge {
         position: absolute;
         width: 1rem;
@@ -229,6 +250,11 @@ input[type='text'] {
     padding: 0.8rem 1.2rem;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+}
+
+// Checkbox
+input[type='checkbox'] {
+    border: 2px dashed red;
 }
 
 @media (max-width: 768px) {

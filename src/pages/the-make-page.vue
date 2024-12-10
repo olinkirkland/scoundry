@@ -221,11 +221,11 @@ else {
 
 const actionsChanged = ref(false);
 // When the scoundrel.actions are changed, change the ref
-watch(
-    () => scoundrel.value?.actions,
-    () => (actionsChanged.value = true),
-    { deep: true }
-);
+// watch(
+//     () => scoundrel.value?.actions,
+//     () => (actionsChanged.value = true),
+//     { deep: true }
+// );
 
 // When the scoundrel is changed at all, save it to local storage
 watch(

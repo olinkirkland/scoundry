@@ -9,68 +9,73 @@
             <div class="actions">
                 <p>
                     No action may begin with a rating higher than 2 during
-                    character creation. After creation, action ratings may
-                    advance up to 3. When you unlock the Mastery advance for
-                    your crew, you can advance actions up to rating 4.
+                    character creation.
+                    <em class="muted">
+                        After creation, action ratings may advance up to 3. When
+                        you unlock the Mastery advance for your crew, you can
+                        advance actions up to rating 4.
+                    </em>
                 </p>
+                <p>Total action points used: {{ totalActionRatings }}</p>
 
                 <div class="attributes-grid">
-                    <div class="attribute">
-                        <label>Insight</label>
-                        <ul class="insight">
+                    <div
+                        class="attribute"
+                        v-for="attribute in attributes"
+                        :key="attribute.id"
+                    >
+                        <label
+                            >{{ attribute.label }} ({{
+                                getAttributeValue(attribute.id)
+                            }})
+                        </label>
+                        <ul :class="attribute.id">
                             <li
-                                v-for="action in insightActions"
-                                :key="action.slug"
+                                v-for="action in actionsByAttribute(
+                                    attribute.id
+                                )"
+                                :key="action.id"
                             >
-                                <ActionTag
-                                    :action="action.slug"
-                                    :value="
-                                        getActionValueBySlug(
-                                            scoundrel.actions,
-                                            action.slug as Action
-                                        )
-                                    "
-                                />
-                                <p>{{ action.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="attribute">
-                        <label>Prowess</label>
-                        <ul class="prowess">
-                            <li
-                                v-for="action in prowessActions"
-                                :key="action.slug"
-                            >
-                                <ActionTag
-                                    :action="action.slug"
-                                    :value="
-                                        getActionValueBySlug(
-                                            scoundrel.actions,
-                                            action.slug as Action
-                                        )
-                                    "
-                                />
-                                <p>{{ action.description }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="attribute">
-                        <label>Resolve</label>
-                        <ul class="resolve">
-                            <li
-                                v-for="action in resolveActions"
-                                :key="action.slug"
-                            >
-                                <ActionTag
-                                    :action="action.slug"
-                                    :value="
-                                        getActionValueBySlug(
-                                            scoundrel.actions,
-                                            action.slug as Action
-                                        )
-                                    "
-                                />
+                                <div class="action-row">
+                                    <ActionTag
+                                        :action="action.id"
+                                        :value="
+                                            getActionValueBySlug(
+                                                scoundrel.actions,
+                                                action.id as Action
+                                            )
+                                        "
+                                    />
+                                    <div class="controls">
+                                        <button
+                                            class="btn btn--mini"
+                                            :class="{
+                                                disabled:
+                                                    !scoundrel.actions[
+                                                        action.id
+                                                    ].custom,
+                                            }"
+                                            @click="changeAction(action.id, -1)"
+                                        >
+                                            <img
+                                                src="/assets/icons/minus.png"
+                                            />
+                                        </button>
+                                        <button
+                                            class="btn btn--mini"
+                                            :class="{
+                                                disabled:
+                                                    getActionValueBySlug(
+                                                        scoundrel.actions,
+                                                        action.id as Action
+                                                    ) === 4,
+                                            }"
+                                            @click="changeAction(action.id, 1)"
+                                        >
+                                            <img src="/assets/icons/plus.png" />
+                                        </button>
+                                    </div>
+                                </div>
                                 <p>{{ action.description }}</p>
                             </li>
                         </ul>
@@ -82,8 +87,8 @@
 </template>
 
 <script setup lang="ts">
-import actionsData from '@/assets/data/actions.json';
-import { Action } from '@/assets/data/data-types';
+import actionRatingsData from '@/assets/data/action-ratings.json';
+import { Action, ActionRating } from '@/assets/data/data-types';
 import ActionTag from '@/components/action-tag.vue';
 import ModalFrame from '@/components/modals/modal-frame.vue';
 import ModalHeader from '@/components/modals/modal-header.vue';
@@ -95,17 +100,62 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
-const insightActions = computed(() => {
-    return actionsData.filter((action) => action.category === 'insight');
+const attributes = [
+    {
+        id: 'insight',
+        label: 'Insight',
+    },
+    {
+        id: 'prowess',
+        label: 'Prowess',
+    },
+    {
+        id: 'resolve',
+        label: 'Resolve',
+    },
+];
+
+// Add up all values
+const totalActionRatings = computed(() => {
+    let count = 0;
+    for (const action of Object.keys(props.scoundrel.actions)) {
+        count += getActionValueBySlug(
+            props.scoundrel.actions,
+            action as Action
+        );
+    }
+
+    return count;
 });
 
-const prowessActions = computed(() => {
-    return actionsData.filter((action) => action.category === 'prowess');
-});
+function actionsByAttribute(attribute: string) {
+    return (actionRatingsData as unknown as ActionRating[]).filter(
+        (action) => action.attribute === attribute
+    );
+}
 
-const resolveActions = computed(() => {
-    return actionsData.filter((action) => action.category === 'resolve');
-});
+function changeAction(action: Action, value: number) {
+    if (!props.scoundrel.actions[action].custom)
+        props.scoundrel.actions[action].custom = 0;
+
+    if (value < 0) props.scoundrel.actions[action].custom--;
+    if (value > 0) props.scoundrel.actions[action].custom++;
+
+    if (props.scoundrel.actions[action].custom <= 0)
+        delete props.scoundrel.actions[action].custom;
+}
+
+function getAttributeValue(attribute: string) {
+    // Number of actions with this attribute, that have at least 1 point assigned
+    let count = 0;
+    actionsByAttribute(attribute).forEach((action) => {
+        getActionValueBySlug(props.scoundrel.actions, action.id as Action) > 0
+            ? count++
+            : null;
+    });
+
+    return count;
+}
 </script>
 
 <style scoped lang="scss">
@@ -137,15 +187,25 @@ const resolveActions = computed(() => {
                     flex-direction: column;
                     gap: 0.6rem;
                     align-items: flex-start;
-                    // height: 12rem;
 
                     p {
                         margin-bottom: 0.8rem;
-                        opacity: 0.8;
                     }
                 }
             }
         }
+    }
+}
+
+.action-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .controls {
+        display: flex;
+        gap: 0.2rem;
     }
 }
 

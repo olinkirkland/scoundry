@@ -1,74 +1,74 @@
 [
     {
-        "slug": "attune",
-        "category": "resolve",
-        "name": "Attune",
+        "id": "attune",
+        "attribute": "resolve",
+        "label": "Attune",
         "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology."
     },
     {
-        "slug": "command",
-        "category": "resolve",
-        "name": "Command",
+        "id": "command",
+        "attribute": "resolve",
+        "label": "Command",
         "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs."
     },
     {
-        "slug": "consort",
-        "category": "resolve",
-        "name": "Consort",
+        "id": "consort",
+        "attribute": "resolve",
+        "label": "Consort",
         "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places."
     },
     {
-        "slug": "finesse",
-        "category": "prowess",
-        "name": "Finesse",
+        "id": "finesse",
+        "attribute": "prowess",
+        "label": "Finesse",
         "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount."
     },
     {
-        "slug": "hunt",
-        "category": "insight",
-        "name": "Hunt",
+        "id": "hunt",
+        "attribute": "insight",
+        "label": "Hunt",
         "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance."
     },
     {
-        "slug": "prowl",
-        "category": "prowess",
-        "name": "Prowl",
+        "id": "prowl",
+        "attribute": "prowess",
+        "label": "Prowl",
         "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc."
     },
     {
-        "slug": "skirmish",
-        "category": "prowess",
-        "name": "Skirmish",
+        "id": "skirmish",
+        "attribute": "prowess",
+        "label": "Skirmish",
         "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle."
     },
     {
-        "slug": "study",
-        "category": "insight",
-        "name": "Study",
+        "id": "study",
+        "attribute": "insight",
+        "label": "Study",
         "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research."
     },
     {
-        "slug": "survey",
-        "category": "insight",
-        "name": "Survey",
+        "id": "survey",
+        "attribute": "insight",
+        "label": "Survey",
         "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits."
     },
     {
-        "slug": "sway",
-        "category": "resolve",
-        "name": "Sway",
+        "id": "sway",
+        "attribute": "resolve",
+        "label": "Sway",
         "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction."
     },
     {
-        "slug": "tinker",
-        "category": "insight",
-        "name": "Tinker",
+        "id": "tinker",
+        "attribute": "insight",
+        "label": "Tinker",
         "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices."
     },
     {
-        "slug": "wreck",
-        "category": "prowess",
-        "name": "Wreck",
+        "id": "wreck",
+        "attribute": "prowess",
+        "label": "Wreck",
         "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos."
     }
 ]
