@@ -165,19 +165,19 @@ button.btn {
             border: 1px solid var(--color-on-surface);
         }
     }
+}
 
-    &.disabled {
-        opacity: 0.4;
-        border-color: transparent;
-        pointer-events: none;
+.disabled {
+    opacity: 0.4;
+    border-color: transparent;
+    pointer-events: none;
 
-        &:hover {
-            filter: unset;
-        }
+    &:hover {
+        filter: unset;
+    }
 
-        &:active {
-            filter: unset;
-        }
+    &:active {
+        filter: unset;
     }
 }
 

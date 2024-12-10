@@ -1,6 +1,10 @@
 <template>
     <div ref="page" class="page page--make page-in" v-if="scoundrel && step">
-        <ul ref="stepsEl" class="steps">
+        <ul
+            ref="stepsEl"
+            class="steps"
+            :class="{ disabled: !scoundrel.playbook }"
+        >
             <step-block
                 v-for="s in steps"
                 :data-step-id="s.id"
@@ -29,7 +33,11 @@
             <button class="btn btn--icon" @click="onClickDiscard">
                 <img src="/assets/icons/trash.png" alt="Discard" />
             </button>
-            <button class="btn btn--icon" @click="onClickSave">
+            <button
+                class="btn btn--icon"
+                :class="{ disabled: !scoundrel.playbook }"
+                @click="onClickSave"
+            >
                 <img src="/assets/icons/save.png" alt="Save" />
             </button>
             <div class="spacer"></div>
@@ -54,7 +62,7 @@
             <button
                 class="btn desktop-only"
                 @click="onClickNextStep"
-                :class="{ disabled: isLastStep }"
+                :class="{ disabled: isLastStep || !scoundrel.playbook }"
             >
                 <span>Next</span>
             </button>
