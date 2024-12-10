@@ -2,8 +2,8 @@
   <step-header>
     <h2>Choose a close friend and a rival</h2>
     <p>
-      Mark the one who is a close friend, long-time ally, family relation, or
-      lover. Mark one who is a rival, enemy, scorned lover, or betrayed partner.
+      Who is a long-time ally, family relation, or
+      lover? And who is a rival, enemy, scorned lover, or betrayed partner?
     </p>
   </step-header>
 </template>

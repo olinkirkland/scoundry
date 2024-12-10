@@ -5,8 +5,8 @@ import { getActionValue } from "./action-util";
 export function getSemanticScoundrelName(scoundrel: Scoundrel) {
     if (scoundrel.name) return scoundrel.name;
     if (!scoundrel.playbook) return 'Unnamed Scoundrel';
-    const playbook = dataPlaybooks.find((playbook) => playbook.slug === scoundrel.playbook);
-    return playbook ? `Unnamed ${playbook.name}` : 'Unnamed Scoundrel';
+    const playbook = dataPlaybooks.find((playbook) => playbook.id === scoundrel.playbook);
+    return playbook ? `Unnamed ${playbook.label}` : 'Unnamed Scoundrel';
 }
 
 export function getAttributeValue(scoundrel: Scoundrel, attribute: 'prowess' | 'insight' | 'resolve'): number {

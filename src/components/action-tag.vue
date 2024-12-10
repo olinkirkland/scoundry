@@ -26,7 +26,7 @@ const props = defineProps<{
 }>();
 
 const actionRating = computed(() => {
-    return getActionRating(props.action as Action);
+    return getActionRating(props.action as Action)!;
 });
 
 const color = computed(() => {

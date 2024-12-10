@@ -1,16 +1,16 @@
 <template>
     <div class="heritage-card">
-        <img :src="`/assets/images/heritages/${heritage.slug}.jpg`" alt="" />
+        <img :src="`/assets/images/heritages/${heritage.id}.jpg`" alt="" />
         <div class="overlay"></div>
-        <h2>{{ heritage.name }}</h2>
+        <h2>{{ heritage.label }}</h2>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Heritage } from '@/assets/data/data-types';
+import { Trait } from '@/assets/data/data-types';
 
 const props = defineProps<{
-    heritage: Heritage;
+    heritage: Trait;
 }>();
 </script>
 
