@@ -160,7 +160,7 @@ function getLastUpdated(scoundrelId: string) {
 h1 {
     font-family: var(--font-display);
     color: var(--color-on-surface);
-    font-size: 20rem;
+    font-size: 12rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
@@ -258,7 +258,7 @@ ul.saved-scoundrels-list {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 7.2rem;
+        font-size: 5.2rem;
     }
 
     h1 + p,
