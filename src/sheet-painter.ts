@@ -1,6 +1,6 @@
 import { Action } from "./assets/data/data-types";
 import { Scoundrel } from "./scoundrel";
-import { getActionValueBySlug } from "./util/action-util";
+import { getActionValue } from "./util/action-util";
 
 import dataHeritages from './assets/data/heritage-details.json';
 import dataBackgrounds from './assets/data/background-details.json';
@@ -55,14 +55,14 @@ export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<H
             ctx.lineWidth = 2;
 
             // Heritage
-            const heritage = dataHeritages.find(h => h.slug === scoundrel.backgroundDetail);
+            const heritage = dataHeritages.find(h => h.id === scoundrel.heritageDetail);
             if (scoundrel.backgroundDetail)
-                ctx.fillText(heritage?.name || scoundrel.backgroundDetail, data.heritage.x, data.heritage.y);
+                ctx.fillText(heritage?.label || scoundrel.heritageDetail, data.heritage.x, data.heritage.y);
 
             // Background
-            const background = dataBackgrounds.find(bg => bg.slug === scoundrel.backgroundDetail);
+            const background = dataBackgrounds.find(bg => bg.id === scoundrel.backgroundDetail);
             if (scoundrel.backgroundDetail)
-                ctx.fillText(background?.name || scoundrel.backgroundDetail, data.background.x, data.background.y);
+                ctx.fillText(background?.label || scoundrel.backgroundDetail, data.background.x, data.background.y);
 
             // Fill in Action bubbles
             ['hunt', 'study', 'survey', 'tinker', 'finesse', 'prowl', 'skirmish', 'wreck', 'attune', 'command', 'consort', 'sway'
@@ -81,7 +81,7 @@ export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<H
 
 function drawActionBubbleRow(ctx: CanvasRenderingContext2D, scoundrel: Scoundrel, action: Action) {
     // The horizontal offset between bubbles is 27px
-    const bubbleCount = getActionValueBySlug(scoundrel.actions, action);
+    const bubbleCount = getActionValue(scoundrel.actions, action);
     // @ts-ignore
     const point = data.actions[action] as { x: number, y: number };
     for (let i = 0; i < bubbleCount; i++)

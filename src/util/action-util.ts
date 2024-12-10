@@ -1,53 +1,31 @@
-import { Action } from '@/assets/data/data-types';
-import { Scoundrel } from '@/scoundrel';
+import actionRatingsData from '@/assets/data/action-ratings.json';
+import { Action, ActionRating } from '@/assets/data/data-types';
 
-const actionLabels: Record<string, string> = {
-    hunt: 'Hunt',
-    study: 'Study',
-    survey: 'Survey',
-    tinker: 'Tinker',
-    finesse: 'Finesse',
-    prowl: 'Prowl',
-    skirmish: 'Skirmish',
-    wreck: 'Wreck',
-    attune: 'Attune',
-    command: 'Command',
-    consort: 'Consort',
-    sway: 'Sway',
-};
-
-export function getActionLabelBySlug(slug: string): string {
-    return actionLabels[slug] || slug;
+const ATTRIBUTE_COLORS = {
+    insight: '#1fa87f',
+    prowess: '#f03e3e',
+    resolve: '#7950f2'
 }
 
-export const insightColor = '#1fa87f';
-export const prowessColor = '#f03e3e';
-export const resolveColor = '#7950f2';
-
-const actionColors: Record<string, string> = {
-    hunt: insightColor,
-    study: insightColor,
-    survey: insightColor,
-    tinker: insightColor,
-    finesse: prowessColor,
-    prowl: prowessColor,
-    skirmish: prowessColor,
-    wreck: prowessColor,
-    attune: resolveColor,
-    command: resolveColor,
-    consort: resolveColor,
-    sway: resolveColor,
-};
-
-export function getActionColorBySlug(slug: string): string {
-    return actionColors[slug] || '#ffffff';
+export function getAttributeColor(attribute: string): string {
+    if (!(attribute in ATTRIBUTE_COLORS)) {
+        console.error(`Attribute ${attribute} not found in colors.`);
+        return '#000000';
+    }
+    return ATTRIBUTE_COLORS[attribute as keyof typeof ATTRIBUTE_COLORS];
 }
 
-export function getActionValueBySlug(
+export function getActionRating(action: Action): ActionRating | undefined {
+    return (actionRatingsData as ActionRating[]).find(
+        (a) => a.id === action
+    );
+}
+
+export function getActionValue(
     actions: Record<string, Record<string, number>>,
-    slug: Action
+    action: Action
 ): number {
     if (!actions) return 0;
-    const actionRating = actions[slug];
+    const actionRating = actions[action];
     return Object.values(actionRating).reduce((acc, val) => acc + val, 0);
 }

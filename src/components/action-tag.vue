@@ -2,18 +2,22 @@
     <div
         class="action-tag"
         :class="{ disabled: value == 0 }"
-        :style="{ backgroundColor: color, borderColor: color }"
+        :style="{
+            backgroundColor: color,
+            borderColor: color,
+        }"
     >
         <ul class="circles-list">
             <li v-for="i in value" :key="i" :style="{ color }"></li>
             <li class="empty" v-if="value == 0" :style="{ color }"></li>
         </ul>
-        <p class="label">{{ label }}</p>
+        <p class="label">{{ actionRating.label }}</p>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { getActionColorBySlug, getActionLabelBySlug } from '@/util/action-util';
+import { Action } from '@/assets/data/data-types';
+import { getActionRating, getAttributeColor } from '@/util/action-util';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -21,12 +25,12 @@ const props = defineProps<{
     value: number;
 }>();
 
-const label = computed(() => {
-    return getActionLabelBySlug(props.action);
+const actionRating = computed(() => {
+    return getActionRating(props.action as Action);
 });
 
 const color = computed(() => {
-    return getActionColorBySlug(props.action);
+    return getAttributeColor(actionRating.value.attribute);
 });
 </script>
 
