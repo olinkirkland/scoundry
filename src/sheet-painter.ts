@@ -2,8 +2,8 @@ import { Action } from "./assets/data/data-types";
 import { Scoundrel } from "./scoundrel";
 import { getActionValue } from "./util/action-util";
 
-import dataHeritages from './assets/data/heritage-details.json';
 import dataBackgrounds from './assets/data/background-details.json';
+import dataHeritages from './assets/data/heritage-details.json';
 
 const data = {
     name: { x: 100, y: 100 },
@@ -46,7 +46,15 @@ const data = {
         survivor: { x: 1097, y: 638.5 },
         'tough-as-nails': { x: 1097, y: 724 },
         vengeful: { x: 1097, y: 783 },
-
+        // Leech
+        alchemist: { x: 1097, y: 269 },
+        analyst: { x: 1097, y: 350 },
+        artificer: { x: 1097, y: 431 },
+        fortitude: { x: 1097, y: 512 },
+        'ghost-ward': { x: 1097, y: 593.5 },
+        physicker: { x: 1097, y: 649.5 },
+        saboteur: { x: 1097, y: 730 },
+        venomous: { x: 1097, y: 787 },
     }
 };
 

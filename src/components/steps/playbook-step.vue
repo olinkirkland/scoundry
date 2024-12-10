@@ -43,6 +43,9 @@ function onClickPlaybook(playbook: Playbook) {
         const modifier = playbook.actions[action as Action];
         props.scoundrel.actions[action as Action].playbook = modifier;
     });
+
+    // Clear the abilities array
+    props.scoundrel.abilities = [];
 }
 </script>
 
