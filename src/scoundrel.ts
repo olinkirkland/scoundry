@@ -4,7 +4,7 @@ export type Scoundrel = {
     name: string,
     portrait: string,
     heritage: string,
-    backgroundDetail: string,
+    heritageDetail: string,
     background: string,
     backgroundDetail: string,
     lookAndStyle: string,

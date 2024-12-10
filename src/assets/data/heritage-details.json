@@ -1,237 +1,472 @@
 [
     {
-        "category": null,
+        "trait": null,
         "label": "Deathlander",
-        "id": "deathlander"
+        "id": "deathlander",
+        "suggestedActions": [
+            "attune",
+            "hunt",
+            "prowl"
+        ]
     },
     {
-        "category": null,
+        "trait": null,
         "label": "Exile",
-        "id": "exile"
+        "id": "exile",
+        "suggestedActions": [
+            "command",
+            "consort",
+            "sway"
+        ]
     },
     {
-        "category": null,
+        "trait": null,
         "label": "Nomad",
-        "id": "nomad"
+        "id": "nomad",
+        "suggestedActions": [
+            "consort",
+            "finesse",
+            "survey"
+        ]
     },
     {
-        "category": null,
+        "trait": null,
         "label": "Outlaw",
-        "id": "outlaw"
+        "id": "outlaw",
+        "suggestedActions": [
+            "consort",
+            "sway",
+            "prowl"
+        ]
     },
     {
-        "category": null,
+        "trait": null,
         "label": "Refugee",
-        "id": "refugee"
+        "id": "refugee",
+        "suggestedActions": [
+            "consort",
+            "finesse",
+            "skirmish"
+        ]
     },
     {
         "label": "Church of Ecstasy",
         "id": "church-of-ecstasy",
-        "category": "akoros"
+        "suggestedActions": [
+            "attune",
+            "command",
+            "sway"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Doskvol Academy",
         "id": "doskvol-academy",
-        "category": "akoros"
+        "suggestedActions": [
+            "command",
+            "finesse",
+            "study"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Governor's Stronghold",
         "id": "governors-stronghold",
-        "category": "akoros"
+        "suggestedActions": [
+            "command",
+            "consort",
+            "sway"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Ironworks Labor",
         "id": "ironworks-labor",
-        "category": "akoros"
+        "suggestedActions": [
+            "consort",
+            "tinker",
+            "wreck"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "North Hook Company",
         "id": "north-hook-company",
-        "category": "akoros"
+        "suggestedActions": [
+            "command",
+            "finesse",
+            "sway"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Radiant Energy Farmers",
         "id": "radiant-energy-farmers",
-        "category": "akoros"
+        "suggestedActions": [
+            "study",
+            "survey",
+            "tinker"
+        ],
+        "trait": "akoros"
     },
     {
-        "label": "Couldspire Aeronauts",
-        "id": "couldspire-aeronauts",
-        "category": "akoros"
+        "label": "Cloudspire Aeronauts",
+        "id": "cloudspire-aeronauts",
+        "suggestedActions": [
+            "study",
+            "tinker",
+            "wreck"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Ilysian Guard",
         "id": "ilysian-guard",
-        "category": "akoros"
+        "suggestedActions": [
+            "command",
+            "hunt",
+            "skirmish"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Imperial City Courtiers",
         "id": "imperial-city-courtiers",
-        "category": "akoros"
+        "suggestedActions": [
+            "command",
+            "consort",
+            "sway"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "South Point Traders",
         "id": "south-point-traders",
-        "category": "akoros"
+        "suggestedActions": [
+            "consort",
+            "finesse",
+            "sway"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Whitehollow Miners",
         "id": "whitehollow-miners",
-        "category": "akoros"
+        "suggestedActions": [
+            "study",
+            "tinker",
+            "wreck"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Wintercliff Wardens",
         "id": "wintercliff-wardens",
-        "category": "akoros"
+        "suggestedActions": [
+            "attune",
+            "hunt",
+            "study"
+        ],
+        "trait": "akoros"
     },
     {
         "label": "Bonewalker",
         "id": "bonewalker",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "attune",
+            "consort",
+            "study"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Lhan Lhaban",
         "id": "lhan-lhaban",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "consort",
+            "finesse",
+            "skirmish"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Liberators",
         "id": "liberators",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "prowl",
+            "skirmish",
+            "wreck"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Lore Keepers",
         "id": "lore-keepers",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "consort",
+            "study",
+            "sway"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Melamatines",
         "id": "melamatines",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "attune",
+            "prowl",
+            "survey"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Vidyad",
         "id": "vidyad",
-        "category": "dagger-isles"
+        "suggestedActions": [
+            "finesse",
+            "survey",
+            "tinker"
+        ],
+        "trait": "dagger-isles"
     },
     {
         "label": "Bright Harbor Fleet",
         "id": "bright-harbor-fleet",
-        "category": "iruvia"
+        "suggestedActions": [
+            "command",
+            "study",
+            "sway"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "City Guardians",
         "id": "city-guardians",
-        "category": "iruvia"
+        "suggestedActions": [
+            "attune",
+            "hunt",
+            "skirmish"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "Emissaries",
         "id": "emissaries",
-        "category": "iruvia"
+        "suggestedActions": [
+            "command",
+            "consort",
+            "sway"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "Falconers",
         "id": "falconers",
-        "category": "iruvia"
+        "suggestedActions": [
+            "command",
+            "hunt",
+            "sway"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "Lightning Couriers",
         "id": "lightning-couriers",
-        "category": "iruvia"
+        "suggestedActions": [
+            "finesse",
+            "prowl",
+            "survey"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "Water Bearers",
         "id": "water-bearers",
-        "category": "iruvia"
+        "suggestedActions": [
+            "consort",
+            "prowl",
+            "skirmish"
+        ],
+        "trait": "iruvia"
     },
     {
         "label": "Blackvale Coven",
         "id": "blackvale-coven",
-        "category": "skovlan"
+        "suggestedActions": [
+            "attune",
+            "hunt",
+            "study"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Blood Cullers",
         "id": "blood-cullers",
-        "category": "skovlan"
+        "suggestedActions": [
+            "attune",
+            "finesse",
+            "tinker"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Home Guard Militia",
         "id": "home-guard-militia",
-        "category": "skovlan"
+        "suggestedActions": [
+            "hunt",
+            "skirmish",
+            "wreck"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Imperial Collaborators",
         "id": "imperial-collaborators",
-        "category": "skovlan"
+        "suggestedActions": [
+            "prowl",
+            "skirmish",
+            "survey"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Lockport Scummer",
         "id": "lockport-scummer",
-        "category": "skovlan"
+        "suggestedActions": [
+            "attune",
+            "tinker",
+            "wreck"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Onyx Citadel",
         "id": "onyx-citadel",
-        "category": "skovlan"
+        "suggestedActions": [
+            "attune",
+            "consort",
+            "study"
+        ],
+        "trait": "skovlan"
     },
     {
         "label": "Bastion Elders",
         "id": "bastion-elders",
-        "category": "severos"
+        "suggestedActions": [
+            "command",
+            "study",
+            "sway"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Cullfield Observatory",
         "id": "cullfield-observatory",
-        "category": "severos"
+        "suggestedActions": [
+            "study",
+            "survey",
+            "tinker"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Irondale Metalworks",
         "id": "irondale-metalworks",
-        "category": "severos"
+        "suggestedActions": [
+            "study",
+            "tinker",
+            "wreck"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Spirit Hunters",
         "id": "spirit-hunters",
-        "category": "severos"
+        "suggestedActions": [
+            "finesse",
+            "hunt",
+            "skirmish"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Thorn Devils",
         "id": "thorn-devils",
-        "category": "severos"
+        "suggestedActions": [
+            "hunt",
+            "prowl",
+            "skirmish"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Tyrmoor Clanholder",
         "id": "tyrmoor-clanholder",
-        "category": "severos"
+        "suggestedActions": [
+            "finesse",
+            "hunt",
+            "skirmish"
+        ],
+        "trait": "severos"
     },
     {
         "label": "Confessors",
         "id": "confessors",
-        "category": "tycheros"
+        "suggestedActions": [
+            "hunt",
+            "prowl",
+            "skirmish"
+        ],
+        "trait": "tycheros"
     },
     {
         "label": "Demon Scholars",
         "id": "demon-scholars",
-        "category": "tycheros"
+        "suggestedActions": [
+            "attune",
+            "consort",
+            "study"
+        ],
+        "trait": "tycheros"
     },
     {
         "label": "Lunarium Players",
         "id": "lunarium-players",
-        "category": "tycheros"
+        "suggestedActions": [
+            "consort",
+            "finesse",
+            "sway"
+        ],
+        "trait": "tycheros"
     },
     {
         "label": "Seekers",
         "id": "seekers",
-        "category": "tycheros"
+        "suggestedActions": [
+            "attune",
+            "prowl",
+            "survey"
+        ],
+        "trait": "tycheros"
     },
     {
         "label": "Steelhand",
         "id": "steelhand",
-        "category": "tycheros"
+        "suggestedActions": [
+            "prowl",
+            "survey",
+            "tinker"
+        ],
+        "trait": "tycheros"
     },
     {
         "label": "Void Gate Sentries",
         "id": "void-gate-sentries",
-        "category": "tycheros"
+        "suggestedActions": [
+            "attune",
+            "command",
+            "tinker"
+        ],
+        "trait": "tycheros"
     }
 ]
