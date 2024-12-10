@@ -153,4 +153,10 @@ p.reference {
         scrollbar-width: none;
     }
 }
+
+@media (max-width: 768px) {
+    p.description {
+        text-align: left;
+    }
+}
 </style>

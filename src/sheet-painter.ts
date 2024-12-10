@@ -27,13 +27,13 @@ const data = {
     },
     abilities: {
         battleborn: { x: 1097, y: 271 },
-        bodyguard: { x: 1097, y: 271 },
-        'ghost-fighter': { x: 1097, y: 271 },
-        leader: { x: 1097, y: 271 },
-        mule: { x: 1097, y: 271 },
-        'not-to-be-trifled-with': { x: 1097, y: 271 },
-        savage: { x: 1097, y: 271 },
-        vigorous: { x: 1097, y: 271 },
+        bodyguard: { x: 1097, y: 337.5 },
+        'ghost-fighter': { x: 1097, y: 431.5 },
+        leader: { x: 1097, y: 525 },
+        mule: { x: 1097, y: 619 },
+        'not-to-be-trifled-with': { x: 1097, y: 654 },
+        savage: { x: 1097, y: 745 },
+        vigorous: { x: 1097, y: 809 },
     }
 };
 

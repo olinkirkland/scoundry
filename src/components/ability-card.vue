@@ -34,7 +34,7 @@ const props = defineProps<{
         text-transform: uppercase;
         text-align: center;
         font-size: 2rem;
-        margin-bottom: 1em;
+        margin-bottom: 0.8rem;
         border-bottom: 1px solid currentColor;
         font-weight: normal;
     }
