@@ -14,8 +14,8 @@
     </ul>
     <section class="veteran">
         <p>
-            You can add an Ability from another Playbook by using a
-            <strong>Veteran Advance</strong>.
+            You can add a special ability from another playbook by using a
+            <strong>veteran advance</strong>.
         </p>
         <button class="btn btn--alt disabled">Use a Veteran Advance</button>
     </section>
