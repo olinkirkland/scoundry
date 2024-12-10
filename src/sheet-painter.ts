@@ -7,8 +7,10 @@ import dataBackgrounds from './assets/data/background-details.json';
 
 const data = {
     name: { x: 100, y: 100 },
-    heritage: { x: 105, y: 400 },
-    background: { x: 605, y: 400 },
+    heritages: {},
+    backgrounds: {},
+    heritageText: { x: 105, y: 400 },
+    backgroundText: { x: 605, y: 400 },
     actions: {
         // The vertical offset between bubbles is 28.6px
         // The x values represent where a row of bubbles starts
@@ -67,12 +69,12 @@ export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<H
             // Heritage
             const heritage = dataHeritages.find(h => h.id === scoundrel.heritageDetail);
             if (scoundrel.backgroundDetail)
-                ctx.fillText(heritage?.label || scoundrel.heritageDetail, data.heritage.x, data.heritage.y);
+                ctx.fillText(heritage?.label || scoundrel.heritageDetail, data.heritageText.x, data.heritageText.y);
 
             // Background
             const background = dataBackgrounds.find(bg => bg.id === scoundrel.backgroundDetail);
             if (scoundrel.backgroundDetail)
-                ctx.fillText(background?.label || scoundrel.backgroundDetail, data.background.x, data.background.y);
+                ctx.fillText(background?.label || scoundrel.backgroundDetail, data.backgroundText.x, data.backgroundText.y);
 
             // Fill in Action bubbles
             ['hunt', 'study', 'survey', 'tinker', 'finesse', 'prowl', 'skirmish', 'wreck', 'attune', 'command', 'consort', 'sway'

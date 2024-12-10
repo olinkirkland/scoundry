@@ -62,7 +62,13 @@
     {
         "id": "ghost-hunter",
         "label": "Ghost Hunter",
-        "description": "Your hunting pet is imbued with spirit energy. It gains potency when tracking or fighting the supernatural, and gains an arcane ability: ghost-form, mind-link, or arrow-swift. Take this ability again to choose an additional arcane ability for your pet.",
+        "description": "Your hunting pet is imbued with spirit energy. It gains potency when tracking or fighting the supernatural, and gains one arcane ability: ghost-form, mind-link, or arrow-swift.",
+        "category": "hound"
+    },
+    {
+        "id": "ghost-hunter-2",
+        "label": "Ghost Hunter +",
+        "description": "Ghost Hunter is required to take this ability. Choose an additional arcane ability for your pet.",
         "category": "hound"
     },
     {
