@@ -17,7 +17,7 @@
             You can add an Ability from another Playbook by using a
             <strong>Veteran Advance</strong>.
         </p>
-        <button class="btn btn--alt">Add another Ability</button>
+        <button class="btn btn--alt disabled">Use a Veteran Advance</button>
     </section>
 </template>
 
@@ -56,5 +56,13 @@ function onClickAbility(ability: Trait) {
     gap: 0.4rem;
     margin-bottom: 1.2rem;
     padding: 1.2rem;
+}
+
+section.veteran {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+    gap: 1rem;
 }
 </style>
