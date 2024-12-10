@@ -14,8 +14,8 @@
                     advance.
                 </p>
 
-                <div class="callout">
-                    Action Ratings suggested by your Background and Heritage:
+                <div class="callout" v-if="hasSuggestedActions">
+                    Action ratings suggested by your background and heritage:
                     <span v-html="suggestedRatingsHTML"></span>
                 </div>
 
@@ -134,6 +134,25 @@ const totalActionRatings = computed(() => {
     return count;
 });
 
+const hasSuggestedActions = computed(() => {
+    const heritageDetails = heritageDetailsData as unknown as TraitDetail[];
+    const backgroundDetails = backgroundDetailsData as unknown as TraitDetail[];
+
+    const heritageDetailActions =
+        heritageDetails.find(
+            (detail) => detail.label === props.scoundrel.heritageDetail
+        )?.suggestedActions || [];
+
+    const backgroundDetailActions =
+        backgroundDetails.find(
+            (detail) => detail.label === props.scoundrel.backgroundDetail
+        )?.suggestedActions || [];
+
+    return (
+        heritageDetailActions.length > 0 || backgroundDetailActions.length > 0
+    );
+});
+
 const suggestedRatingsHTML = computed(() => {
     const heritageDetails = heritageDetailsData as unknown as TraitDetail[];
     const backgroundDetails = backgroundDetailsData as unknown as TraitDetail[];
@@ -243,7 +262,8 @@ function getAttributeValue(attribute: string) {
             flex-direction: column;
             gap: 0.8rem;
             padding: 1.2rem;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
 
             ul {
                 display: flex;

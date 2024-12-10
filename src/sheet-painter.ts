@@ -25,6 +25,16 @@ const data = {
         consort: { x: 1838.5, y: 707.7 },
         sway: { x: 1838.5, y: 736.3 },
     },
+    abilities: {
+        battleborn: { x: 1097, y: 271 },
+        bodyguard: { x: 1097, y: 271 },
+        'ghost-fighter': { x: 1097, y: 271 },
+        leader: { x: 1097, y: 271 },
+        mule: { x: 1097, y: 271 },
+        'not-to-be-trifled-with': { x: 1097, y: 271 },
+        savage: { x: 1097, y: 271 },
+        vigorous: { x: 1097, y: 271 },
+    }
 };
 
 
@@ -68,6 +78,15 @@ export async function paintSheet(scoundrel: Scoundrel, color: string): Promise<H
             ['hunt', 'study', 'survey', 'tinker', 'finesse', 'prowl', 'skirmish', 'wreck', 'attune', 'command', 'consort', 'sway'
             ].forEach((action, i) => {
                 drawActionBubbleRow(ctx, scoundrel, action as Action);
+            });
+
+            // Fill in Abilities bubbles
+            scoundrel.abilities.forEach((ability) => {
+                // Draw one bubble for each ability
+                if (data.abilities.hasOwnProperty(ability)) {
+                    const point = data.abilities[ability as keyof typeof data.abilities];
+                    drawBubble(ctx, point);
+                }
             });
 
             resolve(canvas);
