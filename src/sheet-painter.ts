@@ -28,6 +28,7 @@ const data = {
         sway: { x: 1838.5, y: 736.3 },
     },
     abilities: {
+        // Cutter
         battleborn: { x: 1097, y: 271 },
         bodyguard: { x: 1097, y: 337.5 },
         'ghost-fighter': { x: 1097, y: 431.5 },
@@ -36,6 +37,16 @@ const data = {
         'not-to-be-trifled-with': { x: 1097, y: 654 },
         savage: { x: 1097, y: 745 },
         vigorous: { x: 1097, y: 809 },
+        // Hound
+        sharpshooter: { x: 1097, y: 269 },
+        focused: { x: 1097, y: 355 },
+        'ghost-hunter': { x: 1097, y: 440.5 },
+        'ghost-hunter-2': { x: 1122, y: 440.5 },
+        scout: { x: 1097, y: 553 },
+        survivor: { x: 1097, y: 638.5 },
+        'tough-as-nails': { x: 1097, y: 724 },
+        vengeful: { x: 1097, y: 783 },
+
     }
 };
 
