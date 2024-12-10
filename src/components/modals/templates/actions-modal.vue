@@ -278,8 +278,8 @@ function getAttributeValue(attribute: string) {
 }
 
 :deep(.suggestion--important) {
-    font-weight: bold;
-    font-style: italic;
+    // font-weight: bold;
+    // font-style: italic;
 }
 
 @media (max-width: 768px) {

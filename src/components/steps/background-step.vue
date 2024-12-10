@@ -104,6 +104,8 @@ function onClickBackgroundDetail(backgroundDetail: TraitDetail) {
 
 ul.backgrounds-list {
     display: flex;
+    width: fit-content;
+    margin: 0 auto;
     gap: 0.4rem;
 }
 
@@ -113,7 +115,7 @@ p.description {
     opacity: 0.8;
     padding: 0 1.2rem;
     margin-bottom: 1.2rem;
-    max-width: 48rem;
+    max-width: 64rem;
 }
 
 input {
@@ -134,18 +136,8 @@ ul.background-details-list {
 
 @media (max-width: 1024px) {
     ul.backgrounds-list {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: none;
-    }
-
-    section.selected-background {
-        p.description {
-            max-width: 100%;
-            text-align: left;
-        }
     }
 }
 </style>

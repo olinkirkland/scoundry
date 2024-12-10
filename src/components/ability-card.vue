@@ -1,30 +1,20 @@
 <template>
-    <div class="playbook-card">
-        <h2>{{ playbook.label }}</h2>
-        <p class="tagline">{{ playbook.tagline }}</p>
-        <ul class="action-tags">
-            <action-tag
-                v-for="action in Object.keys(playbook.actions)"
-                :key="action"
-                :action="action"
-                :value="playbook.actions[action as Action]"
-            />
-        </ul>
-        <p class="description">{{ playbook.description }}</p>
+    <div class="ability-card">
+        <h2>{{ ability.label }}</h2>
+        <p class="description">{{ ability.description }}</p>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Action, Playbook } from '@/assets/data/data-types';
-import ActionTag from './action-tag.vue';
+import { Trait } from '@/assets/data/data-types';
 
 const props = defineProps<{
-    playbook: Playbook;
+    ability: Trait;
 }>();
 </script>
 
 <style scoped lang="scss">
-.playbook-card {
+.ability-card {
     box-shadow: var(--shadow-sm);
     padding: 1.6rem;
     background-color: var(--color-surface);
@@ -42,7 +32,11 @@ const props = defineProps<{
     h2 {
         font-family: var(--font-display);
         text-transform: uppercase;
-        font-size: 5.6rem;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1em;
+        border-bottom: 1px solid currentColor;
+        font-weight: normal;
     }
 
     p.tagline {
@@ -80,17 +74,10 @@ const props = defineProps<{
     }
 }
 
-.action-tags {
-    display: flex;
-    gap: 0.8rem;
-    padding-top: 1.2rem;
-    margin-top: auto;
-}
-
 @media (max-width: 768px) {
-    .playbook-card {
+    .ability-card {
         h1 {
-            font-size: 3.2rem;
+            font-size: 2rem;
         }
     }
 }
