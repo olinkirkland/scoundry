@@ -1,3 +1,4 @@
+import rough from 'roughjs';
 import { Action } from './assets/data/data-types';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
@@ -7,8 +8,23 @@ import dataHeritages from './assets/data/heritage-details.json';
 
 const data = {
     name: { x: 100, y: 100 },
-    heritages: {},
-    backgrounds: {},
+    heritages: {
+        akoros: { x: 272, y: 428, w: 110 },
+        'dagger-isles': { x: 460, y: 428, w: 260 },
+        iruvia: { x: 138, y: 453, w: 95 },
+        severos: { x: 240, y: 453, w: 110 },
+        skovlan: { x: 136, y: 453, w: 95 },
+        tycheros: { x: 480, y: 453, w: 135 },
+    },
+    backgrounds: {
+        academic: { x: 826, y: 428, w: 140 },
+        labor: { x: 942, y: 428, w: 90 },
+        law: { x: 1026, y: 428, w: 75 },
+        trade: { x: 636, y: 453, w: 95 },
+        military: { x: 742, y: 453, w: 120 },
+        noble: { x: 848, y: 453, w: 90 },
+        underworld: { x: 976, y: 453, w: 160 },
+    },
     heritageText: { x: 105, y: 400 },
     backgroundText: { x: 605, y: 400 },
     actions: {
@@ -111,35 +127,76 @@ export async function paintSheet(
             const canvas = document.createElement('canvas');
             canvas.width = template.width;
             canvas.height = template.height;
-
+            const roughCanvas = rough.canvas(canvas);
             const ctx = canvas.getContext('2d')!;
             ctx.drawImage(template, 0, 0);
-
-            // Font and color
-            // Use Gochi Hand
             ctx.font = '40px Gochi Hand';
             ctx.fillStyle = color;
             ctx.strokeStyle = 'red';
             ctx.lineWidth = 2;
 
-            // Heritage
-            const heritage = dataHeritages.find(
+            // Circle Heritage
+            const heritageBoxHeight = 36;
+            const heritage =
+                data.heritages[
+                    scoundrel.heritage as keyof typeof data.heritages
+                ];
+            if (heritage) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    heritage.x - heritage.w / 2,
+                    heritage.y - heritageBoxHeight / 2,
+                    heritage.w,
+                    heritageBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4,
+                    }
+                );
+            }
+
+            // Circle Background
+            const backgroundBoxHeight = 36;
+            const background =
+                data.backgrounds[
+                    scoundrel.background as keyof typeof data.backgrounds
+                ];
+            if (background) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    background.x - background.w / 2,
+                    background.y - backgroundBoxHeight / 2,
+                    background.w,
+                    backgroundBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4,
+                    }
+                );
+            }
+
+            // Write Heritage Detail
+            const heritageDetail = dataHeritages.find(
                 (h) => h.id === scoundrel.heritageDetail
             );
             if (scoundrel.backgroundDetail)
                 ctx.fillText(
-                    heritage?.label || scoundrel.heritageDetail,
+                    heritageDetail?.label || scoundrel.heritageDetail,
                     data.heritageText.x,
                     data.heritageText.y
                 );
 
-            // Background
-            const background = dataBackgrounds.find(
+            // Write Background Detail
+            const backgroundDetail = dataBackgrounds.find(
                 (bg) => bg.id === scoundrel.backgroundDetail
             );
             if (scoundrel.backgroundDetail)
                 ctx.fillText(
-                    background?.label || scoundrel.backgroundDetail,
+                    backgroundDetail?.label || scoundrel.backgroundDetail,
                     data.backgroundText.x,
                     data.backgroundText.y
                 );
