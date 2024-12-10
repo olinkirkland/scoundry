@@ -35,6 +35,14 @@
                 @click="onClickHeritageDetail(detail)"
             />
         </ul>
+
+        <p class="reference">
+            Full descriptions of these heritages can be found in the
+            <a href="https://johnharper.itch.io/deep-cuts" target="_blank"
+                >Deep Cuts</a
+            >
+            Blades in the Dark expansion.
+        </p>
     </section>
 </template>
 
@@ -127,6 +135,11 @@ ul.heritage-details-list {
     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
     grid-auto-rows: 1fr;
     gap: 0.4rem;
+}
+
+p.reference {
+    margin: 0.8rem;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
