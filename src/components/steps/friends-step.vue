@@ -10,10 +10,10 @@
         <li v-for="friendOrRival in friendsAndRivals">
             <div class="row">
                 <button class="btn btn--icon">
-                    <img src="/assets/icons/minus.png" />
+                    <img src="/assets/icons/down.png" />
                 </button>
                 <button class="btn btn--icon">
-                    <img src="/assets/icons/plus.png" />
+                    <img src="/assets/icons/up.png" />
                 </button>
             </div>
             <p>{{ friendOrRival.label }}</p>
@@ -27,6 +27,7 @@ import StepHeader from '@/components/step-header.vue';
 import dataFriendsAndRivals from '@/assets/data/friends-and-rivals.json';
 import { computed } from 'vue';
 import { Trait } from '@/assets/data/data-types';
+import { Scoundrel } from '@/scoundrel';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
