@@ -1,99 +1,88 @@
 <template>
-    <ModalFrame>
-        <template v-slot:header>
-            <ModalHeader closeButton>
-                <h3>Action Ratings</h3>
-            </ModalHeader>
-        </template>
-        <template v-slot:content>
-            <div class="actions">
-                <p>
-                    
-                </p>
+    <step-header>
+        <h2>What are your strongest attributes?</h2>
+        <p>
+            During creation, assign
+            <strong>4 more</strong> action dots (a total of 7, including the
+            ones from your Playbook). No action may begin with more than 2 dots.
+            After creation, action ratings may advance up to 3 and up to 4 after
+            unlocking the crew's mastery advance.
+        </p>
+    </step-header>
 
-                <div class="callout" v-if="hasSuggestedActions">
-                    Action ratings suggested by your background and heritage:
-                    <span v-html="suggestedRatingsHTML"></span>
-                </div>
+    <div class="callout" v-if="hasSuggestedActions">
+        Action ratings suggested by your background and heritage:
+        <span v-html="suggestedRatingsHTML"></span>
+    </div>
 
-                <p>Total action points used: {{ totalActionRatings }}</p>
+    <div class="action-tally">
+        <p>Total action points used: {{ totalActionRatings }}</p>
+    </div>
 
-                <div class="attributes-grid">
-                    <div
-                        class="attribute"
-                        v-for="attribute in attributes"
-                        :key="attribute.id"
-                    >
-                        <label
-                            >{{ attribute.label }} ({{
-                                getAttributeValue(attribute.id)
-                            }})
-                        </label>
-                        <ul :class="attribute.id">
-                            <li
-                                v-for="action in actionsByAttribute(
-                                    attribute.id
-                                )"
-                                :key="action.id"
+    <div class="attributes-list">
+        <div
+            class="attribute"
+            v-for="attribute in attributes"
+            :key="attribute.id"
+        >
+            <label
+                >{{ attribute.label }} ({{ getAttributeValue(attribute.id) }})
+            </label>
+            <ul :class="attribute.id">
+                <li
+                    v-for="action in actionsByAttribute(attribute.id)"
+                    :key="action.id"
+                >
+                    <div class="action-row">
+                        <ActionTag
+                            :action="action.id"
+                            :value="
+                                getActionValue(
+                                    scoundrel.actions,
+                                    action.id as Action
+                                )
+                            "
+                        />
+                        <div class="controls">
+                            <button
+                                class="btn btn--mini"
+                                :class="{
+                                    disabled:
+                                        !scoundrel.actions[action.id].custom,
+                                }"
+                                @click="changeAction(action.id, -1)"
                             >
-                                <div class="action-row">
-                                    <ActionTag
-                                        :action="action.id"
-                                        :value="
-                                            getActionValue(
-                                                scoundrel.actions,
-                                                action.id as Action
-                                            )
-                                        "
-                                    />
-                                    <div class="controls">
-                                        <button
-                                            class="btn btn--mini"
-                                            :class="{
-                                                disabled:
-                                                    !scoundrel.actions[
-                                                        action.id
-                                                    ].custom,
-                                            }"
-                                            @click="changeAction(action.id, -1)"
-                                        >
-                                            <img
-                                                src="/assets/icons/minus.png"
-                                            />
-                                        </button>
-                                        <button
-                                            class="btn btn--mini"
-                                            :class="{
-                                                disabled:
-                                                    getActionValue(
-                                                        scoundrel.actions,
-                                                        action.id as Action
-                                                    ) === 4,
-                                            }"
-                                            @click="changeAction(action.id, 1)"
-                                        >
-                                            <img src="/assets/icons/plus.png" />
-                                        </button>
-                                    </div>
-                                </div>
-                                <p>{{ action.description }}</p>
-                            </li>
-                        </ul>
+                                <img src="/assets/icons/minus.png" />
+                            </button>
+                            <button
+                                class="btn btn--mini"
+                                :class="{
+                                    disabled:
+                                        getActionValue(
+                                            scoundrel.actions,
+                                            action.id as Action
+                                        ) === 4,
+                                }"
+                                @click="changeAction(action.id, 1)"
+                            >
+                                <img src="/assets/icons/plus.png" />
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </template>
-    </ModalFrame>
+                    <p>{{ action.description }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
+import StepHeader from '@/components/step-header.vue';
 import actionRatingsData from '@/assets/data/action-ratings.json';
 import backgroundDetailsData from '@/assets/data/background-details.json';
 import { Action, ActionRating, TraitDetail } from '@/assets/data/data-types';
 import heritageDetailsData from '@/assets/data/heritage-details.json';
 import ActionTag from '@/components/action-tag.vue';
-import ModalFrame from '@/components/modals/modal-frame.vue';
-import ModalHeader from '@/components/modals/modal-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import {
     getActionRating,
@@ -243,39 +232,31 @@ function getAttributeValue(attribute: string) {
 </script>
 
 <style scoped lang="scss">
-.actions {
-    max-width: 72rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    justify-content: space-between;
+.attributes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    > .attribute {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
 
-    .attributes-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.4rem;
-        > .attribute {
+        ul {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
-            padding: 1.2rem;
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
 
-            ul {
+            li {
                 display: flex;
                 flex-direction: column;
-                gap: 0.8rem;
+                gap: 0.6rem;
+                align-items: flex-start;
 
-                li {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.6rem;
-                    align-items: flex-start;
-
-                    p {
-                        margin-bottom: 0.8rem;
-                    }
+                p {
+                    margin-bottom: 0.8rem;
                 }
             }
         }
@@ -299,16 +280,18 @@ function getAttributeValue(attribute: string) {
     // font-style: italic;
 }
 
+.action-tally {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
-    .actions {
-        max-width: 100%;
+    .attributes-list {
+        grid-template-columns: 1fr;
 
-        .attributes-grid {
-            grid-template-columns: 1fr;
-
-            .attribute > ul > li {
-                height: auto;
-            }
+        .attribute > ul > li {
+            height: auto;
         }
     }
 }

@@ -75,10 +75,10 @@
             </button>
 
             <!-- Actions -->
-            <button class="btn btn--icon" @click="onClickActions">
+            <!-- <button class="btn btn--icon" @click="onClickActions">
                 <img src="/assets/icons/bars.png" alt="Info" />
                 <div class="badge" v-if="actionsChanged"></div>
-            </button>
+            </button> -->
         </div>
     </div>
 </template>
@@ -92,7 +92,8 @@ import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/abilities-step.vue';
 import StepBackground from '@/components/steps/background-step.vue';
 import StepFriendsAndRivals from '@/components/steps/friends-step.vue';
-import StepHeritageAndActions from '@/components/steps/heritage-step.vue';
+import StepActions from '@/components/steps/actions-step.vue';
+import StepHeritage from '@/components/steps/heritage-step.vue';
 import StepNameAndLook from '@/components/steps/name-step.vue';
 import StepPlaybook from '@/components/steps/playbook-step.vue';
 import StepVice from '@/components/steps/vice-step.vue';
@@ -118,7 +119,8 @@ window.addEventListener('keydown', (e) => {
 const stepComponents = {
     playbook: StepPlaybook,
     background: StepBackground,
-    actions: StepHeritageAndActions,
+    heritage: StepHeritage,
+    actions: StepActions,
     abilities: StepAbilities,
     friends: StepFriendsAndRivals,
     vice: StepVice,
@@ -128,7 +130,8 @@ const stepComponents = {
 enum Step {
     PLAYBOOK = 'playbook',
     BACKGROUND = 'background',
-    HERITAGE_AND_ACTIONS = 'actions',
+    HERITAGE = 'heritage',
+    ACTIONS = 'actions',
     ABILITIES = 'abilities',
     FRIENDS_AND_RIVALS = 'friends',
     VICE = 'vice',
@@ -145,8 +148,12 @@ const steps = [
         label: 'Background',
     },
     {
-        id: Step.HERITAGE_AND_ACTIONS,
+        id: Step.HERITAGE,
         label: 'Heritage',
+    },
+    {
+        id: Step.ACTIONS,
+        label: 'Actions',
     },
     {
         id: Step.ABILITIES,
