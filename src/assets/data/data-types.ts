@@ -26,14 +26,14 @@ export type Trait = {
     description: string;
     category: string;
     image?: string;
-}
+};
 
 export type TraitDetail = {
     id: string;
     trait: string;
     label: string;
     suggestedActions: Action[];
-}
+};
 
 export type ActionRating = {
     id: Action;

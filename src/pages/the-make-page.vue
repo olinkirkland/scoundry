@@ -271,14 +271,14 @@ async function onClickSave() {
     });
 }
 
-async function onClickActions() {
-    // Open modal with info
-    ModalController.open(ActionsModal, {
-        scoundrel: scoundrel.value as Scoundrel,
-    });
+// async function onClickActions() {
+//     // Open modal with info
+//     ModalController.open(ActionsModal, {
+//         scoundrel: scoundrel.value as Scoundrel,
+//     });
 
-    actionsChanged.value = false;
-}
+//     actionsChanged.value = false;
+// }
 
 async function onClickClose() {
     page.value?.classList.remove('page-in');
