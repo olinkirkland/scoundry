@@ -1,5 +1,10 @@
-# Vue 3 + TypeScript + Vite
+# Scoundry
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Scoundry is an easy-to-use character keeper web-app for Blades in the Dark. It's intended to be used to fill out playbooks step-by-step digitally, by choosing options from lists and responding to prompts, rather than only filling out the playbooks by hand. The idea is to consolidate the information from the playerkit (and some stuff from Deep Cuts like the new heritages and backgrounds) into a single, easy-to-use interface.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Finally, users can export their sheet as a PNG or JSON (JSON can be used to import the character back into Scoundry later or on another device, like by sharing).
+
+## Stack
+
+- VueJS is used, there is no server-side component. The app is hosted on GitHub Pages.
+- RoughJS and Canvas are used to generate the character sheet as a PNG.
