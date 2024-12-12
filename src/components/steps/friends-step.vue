@@ -23,11 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import StepHeader from '@/components/step-header.vue';
-import dataFriendsAndRivals from '@/assets/data/friends-and-rivals.json';
-import { computed } from 'vue';
 import { Trait } from '@/assets/data/data-types';
+import dataFriendsAndRivals from '@/assets/data/friends-and-rivals.json';
+import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
+import { computed } from 'vue';
 
 const props = defineProps<{
     scoundrel: Scoundrel;

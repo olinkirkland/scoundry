@@ -26,7 +26,7 @@ const props = defineProps<{
     cursor: pointer;
     border-radius: 5px;
     overflow: hidden;
-    width: max-content;
+    width: 12rem;
     min-width: 12rem;
     height: 6.4rem;
 

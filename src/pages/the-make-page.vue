@@ -84,15 +84,14 @@
 </template>
 
 <script setup lang="ts">
-import ActionsModal from '@/components/modals/templates/actions-modal.vue';
 import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 import ErrorModal from '@/components/modals/templates/error-modal.vue';
 import SaveModal from '@/components/modals/templates/save-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/abilities-step.vue';
+import StepActions from '@/components/steps/actions-step.vue';
 import StepBackground from '@/components/steps/background-step.vue';
 import StepFriendsAndRivals from '@/components/steps/friends-step.vue';
-import StepActions from '@/components/steps/actions-step.vue';
 import StepHeritage from '@/components/steps/heritage-step.vue';
 import StepNameAndLook from '@/components/steps/name-step.vue';
 import StepPlaybook from '@/components/steps/playbook-step.vue';

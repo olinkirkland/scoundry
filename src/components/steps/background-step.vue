@@ -3,17 +3,20 @@
         <h2>What did you do before you joined the crew?</h2>
         <p>Pick a background and write a detail specific to you.</p>
     </step-header>
-    <div class="list-container">
-        <ul class="backgrounds-list">
-            <trait-card
-                v-for="background in backgrounds"
-                :key="background.id"
-                :trait="background"
-                :selected="background.id === scoundrel.background"
-                @click="onClickBackground(background)"
-            />
-        </ul>
+    <div class="list-container-frame">
+        <div class="list-container">
+            <ul class="backgrounds-list">
+                <trait-card
+                    v-for="background in backgrounds"
+                    :key="background.id"
+                    :trait="background"
+                    :selected="background.id === scoundrel.background"
+                    @click="onClickBackground(background)"
+                />
+            </ul>
+        </div>
     </div>
+
     <p v-if="selectedBackground" class="description">
         {{ selectedBackground.description }}
     </p>
@@ -101,20 +104,23 @@ function onClickBackgroundDetail(backgroundDetail: TraitDetail) {
 </script>
 
 <style scoped lang="scss">
-.step-container > .list-container {
+.list-container-frame {
     display: flex;
     justify-content: center;
-    margin: 1.2rem auto;
-    border-radius: 5px;
     overflow: hidden;
-    max-width: calc(100% - 2.4rem);
-}
-
-ul.backgrounds-list {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 0.4rem;
+    > .list-container {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        margin: 0 1.2rem;
+        overflow: hidden;
+        > ul.backgrounds-list {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            gap: 0.4rem;
+        }
+    }
 }
 
 p.description {

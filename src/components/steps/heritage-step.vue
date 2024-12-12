@@ -3,16 +3,18 @@
         <h2>What are your origins?</h2>
         <p>Pick a heritage and write a detail specific to you.</p>
     </step-header>
-    <div class="list-container">
-        <ul class="heritages-list">
-            <trait-card
-                v-for="heritage in heritages"
-                :key="heritage.id"
-                :trait="heritage"
-                :selected="heritage.id === scoundrel.heritage"
-                @click="onClickHeritage(heritage)"
-            />
-        </ul>
+    <div class="list-container-frame">
+        <div class="list-container">
+            <ul class="heritages-list">
+                <trait-card
+                    v-for="heritage in heritages"
+                    :key="heritage.id"
+                    :trait="heritage"
+                    :selected="heritage.id === scoundrel.heritage"
+                    @click="onClickHeritage(heritage)"
+                />
+            </ul>
+        </div>
     </div>
     <p v-if="selectedHeritage" class="description">
         {{ selectedHeritage.description }}
@@ -96,20 +98,23 @@ function onClickHeritageDetail(heritageDetail: TraitDetail) {
 </script>
 
 <style scoped lang="scss">
-.step-container > .list-container {
+.list-container-frame {
     display: flex;
     justify-content: center;
-    margin: 1.2rem auto;
-    border-radius: 5px;
     overflow: hidden;
-    max-width: calc(100% - 2.4rem);
-}
-
-ul.heritages-list {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 0.4rem;
+    > .list-container {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        margin: 0 1.2rem;
+        overflow: hidden;
+        > ul.heritages-list {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            gap: 0.4rem;
+        }
+    }
 }
 
 p.description {
