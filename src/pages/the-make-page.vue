@@ -364,6 +364,9 @@ async function changeStep(newStepId: Step) {
         behavior: 'smooth',
     });
 
+    // Ensure the step is scrolled to the top
+    stepContainer.value?.scrollTo(0, 0);
+
     const animationClassIn =
         newStepIndex > currentStepIndex
             ? 'animate-form-in--from-right'
