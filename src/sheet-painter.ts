@@ -108,6 +108,50 @@ const data = {
         tempest: { x: 1097, y: 724.5 },
         warded: { x: 1097, y: 808.5 },
     },
+    friends: {
+        // Cutter: marlane, chael, mercy, grace, sawtooth
+        marlane: { x: 1110, y: 958 },
+        chael: { x: 1110, y: 1000 },
+        mercy: { x: 1110, y: 1042 },
+        grace: { x: 1110, y: 1084 },
+        sawtooth: { x: 1110, y: 1126 },
+        // Hound: steiner, celene, melvir, veleris, casta
+        steiner: { x: 1110, y: 958 },
+        celene: { x: 1110, y: 1000 },
+        melvir: { x: 1110, y: 1042 },
+        veleris: { x: 1110, y: 1084 },
+        casta: { x: 1110, y: 1126 },
+        // Leech: stazia, velren, eckerd, jul, malista
+        stazia: { x: 1110, y: 958 },
+        veldren: { x: 1110, y: 1000 },
+        eckerd: { x: 1110, y: 1042 },
+        jul: { x: 1110, y: 1084 },
+        malista: { x: 1110, y: 1126 },
+        // Lurk: telda, darmot, frake, 'roslyn-kellis', petra
+        telda: { x: 1110, y: 958 },
+        darmot: { x: 1110, y: 1000 },
+        frake: { x: 1110, y: 1042 },
+        'roslyn-kellis': { x: 1110, y: 1084 },
+        petra: { x: 1110, y: 1126 },
+        // Slide: bryl, 'bazso-baz', khyra, nyryx, harker
+        bryl: { x: 1110, y: 958 },
+        'bazso-baz': { x: 1110, y: 1000 },
+        khyra: { x: 1110, y: 1042 },
+        nyryx: { x: 1110, y: 1084 },
+        harker: { x: 1110, y: 1126 },
+        // Spider: salia, augus, jennah, riven, jeren
+        salia: { x: 1110, y: 958 },
+        augus: { x: 1110, y: 1000 },
+        jennah: { x: 1110, y: 1042 },
+        riven: { x: 1110, y: 1084 },
+        jeren: { x: 1110, y: 1126 },
+        // Whisper: 'nyryx-2', scurlock, setarra, quellyn, flynn
+        'nyryx-2': { x: 1110, y: 958 },
+        scurlock: { x: 1110, y: 1000 },
+        setarra: { x: 1110, y: 1042 },
+        quellyn: { x: 1110, y: 1084 },
+        flynn: { x: 1110, y: 1126 },
+    },
 };
 
 export async function paintSheet(
@@ -229,6 +273,28 @@ export async function paintSheet(
                 }
             });
 
+            // Fill in Friends triangles
+            scoundrel.friends.forEach((f) => {
+                console.log('drawing a triangle for', f);
+                const point = data.friends[f as keyof typeof data.friends];
+                if (!point) return console.error('No point for', f);
+                drawTriangleUp(ctx, point);
+            });
+
+            // Fill in Rivals triangles
+            scoundrel.rivals.forEach((r) => {
+                console.log('drawing a triangle for', r);
+                const point = data.friends[r as keyof typeof data.friends];
+                if (!point) return console.error('No point for', r);
+                const offset = { x: 28, y: -14 };
+                if (scoundrel.playbook === 'whisper') offset.x = 24.5;
+
+                drawTriangleDown(ctx, {
+                    x: point.x + offset.x,
+                    y: point.y + offset.y,
+                });
+            });
+
             resolve(canvas);
         };
 
@@ -236,6 +302,32 @@ export async function paintSheet(
             reject(new Error(`Failed to load image: ${template.src}`));
         };
     });
+}
+
+function drawTriangleUp(
+    ctx: CanvasRenderingContext2D,
+    point: { x: number; y: number }
+) {
+    const width = 12.5;
+    const height = 21;
+    ctx.beginPath();
+    ctx.moveTo(point.x, point.y - height);
+    ctx.lineTo(point.x + width, point.y);
+    ctx.lineTo(point.x - width, point.y);
+    ctx.fill();
+}
+
+function drawTriangleDown(
+    ctx: CanvasRenderingContext2D,
+    point: { x: number; y: number }
+) {
+    const width = 12.5;
+    const height = 21;
+    ctx.beginPath();
+    ctx.moveTo(point.x, point.y + height);
+    ctx.lineTo(point.x + width, point.y);
+    ctx.lineTo(point.x - width, point.y);
+    ctx.fill();
 }
 
 function drawActionBubbleRow(

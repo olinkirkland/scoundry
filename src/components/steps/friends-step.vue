@@ -21,22 +21,22 @@
                 <button
                     class="btn btn--icon"
                     :class="{
-                        disabled: scoundrel.friends.includes(person.id),
-                        selected: scoundrel.rivals.includes(person.id),
-                    }"
-                    @click="togglePersonRole(person.id, 'rivals')"
-                >
-                    <img src="/assets/icons/triangle-down.png" />
-                </button>
-                <button
-                    class="btn btn--icon"
-                    :class="{
                         disabled: scoundrel.rivals.includes(person.id),
                         selected: scoundrel.friends.includes(person.id),
                     }"
                     @click="togglePersonRole(person.id, 'friends')"
                 >
                     <img src="/assets/icons/triangle-up.png" />
+                </button>
+                <button
+                    class="btn btn--icon"
+                    :class="{
+                        disabled: scoundrel.friends.includes(person.id),
+                        selected: scoundrel.rivals.includes(person.id),
+                    }"
+                    @click="togglePersonRole(person.id, 'rivals')"
+                >
+                    <img src="/assets/icons/triangle-down.png" />
                 </button>
             </div>
             <div class="body">
