@@ -73,12 +73,6 @@
             >
                 <img src="/assets/icons/right.png" alt="Next" />
             </button>
-
-            <!-- Actions -->
-            <!-- <button class="btn btn--icon" @click="onClickActions">
-                <img src="/assets/icons/bars.png" alt="Info" />
-                <div class="badge" v-if="actionsChanged"></div>
-            </button> -->
         </div>
     </div>
 </template>
@@ -233,14 +227,6 @@ else {
     } else if (!stepId.value) changeStep(Step.PLAYBOOK);
 }
 
-const actionsChanged = ref(false);
-// When the scoundrel.actions are changed, change the ref
-// watch(
-//     () => scoundrel.value?.actions,
-//     () => (actionsChanged.value = true),
-//     { deep: true }
-// );
-
 // When the scoundrel is changed at all, save it to local storage
 watch(
     () => scoundrel.value,
@@ -249,6 +235,15 @@ watch(
         saveScoundrel(newScoundrel as Scoundrel);
     },
     { deep: true }
+);
+
+watch(
+    () => scoundrel.value?.playbook,
+    (newPlaybook, oldPlaybook) => {
+        if (!oldPlaybook && newPlaybook) {
+            onClickNextStep();
+        }
+    }
 );
 
 function onClickNextStep() {
@@ -269,15 +264,6 @@ async function onClickSave() {
         scoundrel: scoundrel.value as Scoundrel,
     });
 }
-
-// async function onClickActions() {
-//     // Open modal with info
-//     ModalController.open(ActionsModal, {
-//         scoundrel: scoundrel.value as Scoundrel,
-//     });
-
-//     actionsChanged.value = false;
-// }
 
 async function onClickClose() {
     page.value?.classList.remove('page-in');
