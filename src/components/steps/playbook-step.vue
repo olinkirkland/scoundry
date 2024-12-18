@@ -46,6 +46,10 @@ function onClickPlaybook(playbook: Playbook) {
 
     // Clear the abilities array
     props.scoundrel.abilities = [];
+
+    // Remove all friends and rivals
+    props.scoundrel.friends = [];
+    props.scoundrel.rivals = [];
 }
 </script>
 

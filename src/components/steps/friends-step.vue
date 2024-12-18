@@ -7,17 +7,42 @@
         </p>
     </step-header>
     <ul class="friends-list">
-        <li v-for="friendOrRival in friendsAndRivals">
-            <div class="row">
-                <button class="btn btn--icon">
-                    <img src="/assets/icons/down.png" />
+        <li
+            v-for="person in friendsAndRivals"
+            class="person-card"
+            :class="{
+                'person-card--selected':
+                    scoundrel.friends.includes(person.id) ||
+                    scoundrel.rivals.includes(person.id),
+            }"
+        >
+            <div class="background-fill"></div>
+            <div class="buttons">
+                <button
+                    class="btn btn--icon"
+                    :class="{
+                        disabled: scoundrel.friends.includes(person.id),
+                        selected: scoundrel.rivals.includes(person.id),
+                    }"
+                    @click="togglePersonRole(person.id, 'rivals')"
+                >
+                    <img src="/assets/icons/triangle-down.png" />
                 </button>
-                <button class="btn btn--icon">
-                    <img src="/assets/icons/up.png" />
+                <button
+                    class="btn btn--icon"
+                    :class="{
+                        disabled: scoundrel.rivals.includes(person.id),
+                        selected: scoundrel.friends.includes(person.id),
+                    }"
+                    @click="togglePersonRole(person.id, 'friends')"
+                >
+                    <img src="/assets/icons/triangle-up.png" />
                 </button>
             </div>
-            <p>{{ friendOrRival.label }}</p>
-            <label>{{ friendOrRival.description }}</label>
+            <div class="body">
+                <p>{{ person.label }}</p>
+                <label>{{ person.description }}</label>
+            </div>
         </li>
     </ul>
 </template>
@@ -33,12 +58,73 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
+if (!props.scoundrel.friends) props.scoundrel.friends = [];
+if (!props.scoundrel.rivals) props.scoundrel.rivals = [];
+
 const friendsAndRivals = computed(() => {
     const allFriendsAndRivals = dataFriendsAndRivals as unknown as Trait[];
     return allFriendsAndRivals.filter(
         (c) => c.category === props.scoundrel.playbook
     );
 });
+
+function togglePersonRole(id: string, role: 'friends' | 'rivals') {
+    const personIndex = props.scoundrel[role].indexOf(id);
+    if (personIndex === -1) props.scoundrel[role].push(id);
+    else props.scoundrel[role].splice(personIndex, 1);
+}
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+ul.friends-list {
+    padding: 1.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+li.person-card {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid var(--color-on-surface);
+    padding: 1.2rem;
+    align-items: center;
+    > .background-fill {
+        transition: all 0.2s;
+        background-color: var(--color-primary);
+        opacity: 0;
+    }
+
+    &.person-card--selected {
+        border-color: var(--color-primary);
+        > .background-fill {
+            opacity: 0.1;
+        }
+    }
+
+    > .buttons {
+        display: flex;
+
+        > button.btn {
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            transition: all 0.2s;
+
+            &:after {
+                display: none;
+            }
+
+            &.disabled > img {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+        }
+    }
+
+    > .body {
+        flex: 1;
+    }
+}
+</style>

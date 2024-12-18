@@ -2,37 +2,31 @@
     {
         "label": "Akoros",
         "id": "akoros",
-        "image": "heritages/akoros.jpg",
         "description": "The largest and most industrialized land in the Imperium, and home to the capital city as well as Duskwall itself. They're known as a diverse conglomeration of cultures, somewhat like Europe."
     },
     {
         "label": "Dagger Isles",
         "id": "dagger-isles",
-        "image": "heritages/dagger-isles.jpg",
         "description": "People in the Dagger Isles often grow up on ships and travel a lot before settling down. They're known as corsairs and merchants who live without lightning barriers, dealing with spirits in other ways."
     },
     {
         "label": "Iruvia",
         "id": "iruvia",
-        "image": "heritages/iruvia.jpg",
         "description": "A rich and powerful desert kingdom far to the south. A diverse land of varying cultures similar to old Persia, Egypt, and India."
     },
     {
         "label": "Skovlan",
         "id": "skovlan",
-        "image": "heritages/skovlan.jpg",
         "description": "A cold and rugged island kingdom just across the sea from Duskwall. Skovlan was last to be brought under Imperial rule, over the course of the Unity War, which ended only a few years ago."
     },
     {
         "label": "Severos",
         "id": "severos",
-        "image": "heritages/severos.jpg",
         "description": "Most Severosi live in nomadic horse-tribes scattered across the blasted deathlands, surviving within the ruins of ancient arcane fortresses which still repel spirits."
     },
     {
         "label": "Tycheros",
         "id": "tycheros",
-        "image": "heritages/tycheros.jpg",
         "description": "A semi-mythical place far away beyond the northern Void Sea. It's said the people there are part-demon. If you choose Tycherosi heritage, also create a demonic tell that marks your character."
     }
 ]

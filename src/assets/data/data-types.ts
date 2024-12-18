@@ -26,6 +26,7 @@ export type Trait = {
     description: string;
     category: string;
     image?: string;
+    color?: string;
 };
 
 export type TraitDetail = {

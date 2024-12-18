@@ -1,6 +1,6 @@
 <template>
     <div class="playbook-card" :class="{ selected }">
-        <img :src="`/assets/images/${trait.image}`" alt="" />
+        <!-- <img :src="`/assets/images/${trait.image}`" alt="" /> -->
         <div class="overlay"></div>
         <h2>{{ trait.label }}</h2>
     </div>
@@ -18,7 +18,6 @@ const props = defineProps<{
 <style scoped lang="scss">
 .playbook-card {
     box-shadow: var(--shadow-sm);
-    background-color: var(--color-surface);
     transition: box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -53,8 +52,8 @@ const props = defineProps<{
         left: 0;
         background: linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.8)
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4)
         );
         transition: opacity 0.2s ease-in-out;
     }
