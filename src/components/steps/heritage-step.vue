@@ -102,6 +102,7 @@ function onClickHeritageDetail(heritageDetail: TraitDetail) {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 1rem !important;
     > .list-container {
         border-radius: 5px;
         display: flex;

@@ -10,68 +10,73 @@
         </p>
     </step-header>
 
-    <div class="callout" v-if="hasSuggestedActions">
-        Action ratings suggested by your background and heritage:
-        <span v-html="suggestedRatingsHTML"></span>
-    </div>
+    <div class="actions">
+        <div class="callout" v-if="hasSuggestedActions">
+            Action ratings suggested by your background and heritage:
+            <span v-html="suggestedRatingsHTML"></span>
+        </div>
 
-    <div class="action-tally">
-        <p>Total action points used: {{ totalActionRatings }}</p>
-    </div>
+        <div class="action-tally">
+            <p>Total action points used: {{ totalActionRatings }}</p>
+        </div>
 
-    <div class="attributes-list">
-        <div
-            class="attribute"
-            v-for="attribute in attributes"
-            :key="attribute.id"
-        >
-            <label
-                >{{ attribute.label }} ({{ getAttributeValue(attribute.id) }})
-            </label>
-            <ul :class="attribute.id">
-                <li
-                    v-for="action in actionsByAttribute(attribute.id)"
-                    :key="action.id"
-                >
-                    <div class="action-row">
-                        <ActionTag
-                            :action="action.id"
-                            :value="
-                                getActionValue(
-                                    scoundrel.actions,
-                                    action.id as Action
-                                )
-                            "
-                        />
-                        <div class="controls">
-                            <button
-                                class="btn btn--mini"
-                                :class="{
-                                    disabled:
-                                        !scoundrel.actions[action.id].custom,
-                                }"
-                                @click="changeAction(action.id, -1)"
-                            >
-                                <img src="/assets/icons/minus.png" />
-                            </button>
-                            <button
-                                class="btn btn--mini"
-                                :class="{
-                                    disabled:
-                                        getActionValue(
-                                            scoundrel.actions,
-                                            action.id as Action
-                                        ) === 4,
-                                }"
-                                @click="changeAction(action.id, 1)"
-                            >
-                                <img src="/assets/icons/plus.png" />
-                            </button>
+        <div class="attributes-list">
+            <div
+                class="attribute"
+                v-for="attribute in attributes"
+                :key="attribute.id"
+            >
+                <label
+                    >{{ attribute.label }} ({{
+                        getAttributeValue(attribute.id)
+                    }})
+                </label>
+                <ul :class="attribute.id">
+                    <li
+                        v-for="action in actionsByAttribute(attribute.id)"
+                        :key="action.id"
+                    >
+                        <div class="action-row">
+                            <ActionTag
+                                :action="action.id"
+                                :value="
+                                    getActionValue(
+                                        scoundrel.actions,
+                                        action.id as Action
+                                    )
+                                "
+                            />
+                            <div class="controls">
+                                <button
+                                    class="btn btn--mini"
+                                    :class="{
+                                        disabled:
+                                            !scoundrel.actions[action.id]
+                                                .custom,
+                                    }"
+                                    @click="changeAction(action.id, -1)"
+                                >
+                                    <img src="/assets/icons/minus.png" />
+                                </button>
+                                <button
+                                    class="btn btn--mini"
+                                    :class="{
+                                        disabled:
+                                            getActionValue(
+                                                scoundrel.actions,
+                                                action.id as Action
+                                            ) === 4,
+                                    }"
+                                    @click="changeAction(action.id, 1)"
+                                >
+                                    <img src="/assets/icons/plus.png" />
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <p>{{ action.description }}</p>
-                </li>
-            </ul>
+                        <p>{{ action.description }}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -232,6 +237,10 @@ function getAttributeValue(attribute: string) {
 </script>
 
 <style scoped lang="scss">
+.actions {
+    padding: 0 1.2rem;
+}
+
 .attributes-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
