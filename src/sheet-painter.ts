@@ -152,6 +152,16 @@ const data = {
         quellyn: { x: 1110, y: 1084 },
         flynn: { x: 1110, y: 1126 },
     },
+    vices: {
+        faith: { x: 320, y: 542, w: 75 },
+        gambling: { x: 430, y: 542, w: 130 },
+        luxury: { x: 547, y: 542, w: 105 },
+        obligation: { x: 672, y: 542, w: 145 },
+        pleasure: { x: 808, y: 542, w: 125 },
+        stupor: { x: 920, y: 542, w: 100 },
+        weird: { x: 1015, y: 542, w: 95 },
+    },
+    viceText: { x: 100, y: 515 },
 };
 
 export async function paintSheet(
@@ -160,7 +170,7 @@ export async function paintSheet(
 ): Promise<HTMLCanvasElement> {
     console.log('painting a sheet for a', scoundrel.playbook);
 
-    if (!document.fonts.check('40px Gochi Hand'))
+    if (!document.fonts.check('32px Gochi Hand'))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
     return new Promise((resolve, reject) => {
@@ -174,7 +184,7 @@ export async function paintSheet(
             const roughCanvas = rough.canvas(canvas);
             const ctx = canvas.getContext('2d')!;
             ctx.drawImage(template, 0, 0);
-            ctx.font = '40px Gochi Hand';
+            ctx.font = '32px Gochi Hand';
             ctx.fillStyle = color;
             ctx.strokeStyle = 'red';
             ctx.lineWidth = 2;
@@ -294,6 +304,28 @@ export async function paintSheet(
                     y: point.y + offset.y,
                 });
             });
+
+            // Circle Vice
+            const viceBoxHeight = 36;
+            const vice = data.vices[scoundrel.vice as keyof typeof data.vices];
+            if (vice) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    vice.x - vice.w / 2,
+                    vice.y - viceBoxHeight / 2,
+                    vice.w,
+                    viceBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4,
+                    }
+                );
+            }
+
+            // Write Vice Detail
+            ctx.fillText(scoundrel.viceDetail, data.viceText.x, data.viceText.y);
 
             resolve(canvas);
         };

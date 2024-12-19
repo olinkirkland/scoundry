@@ -4,8 +4,8 @@
         "name": "Mother Narya",
         "trait": "faith",
         "description": "House of the Weeping Lady",
-        "district": "Six-towers",
-        "label": "Mother Narya; House of the Weeping Lady; Six-towers"
+        "district": "Six towers",
+        "label": "Mother Narya; House of the Weeping Lady; Six towers"
     },
     {
         "id": "ilacille",
@@ -36,16 +36,16 @@
         "name": "Spogg's dice game",
         "trait": "gambling",
         "description": null,
-        "district": "Crows-foot",
-        "label": "Spogg's dice game; Crows-foot"
+        "district": "Crows foot",
+        "label": "Spogg's dice game; Crows foot"
     },
     {
         "id": "grist",
         "name": "Grist",
         "trait": "gambling",
         "description": "Boxing",
-        "district": "The-docks",
-        "label": "Grist; Boxing; The-docks"
+        "district": "The docks",
+        "label": "Grist; Boxing; The docks"
     },
     {
         "id": "helene",
@@ -84,8 +84,8 @@
         "name": "Singer",
         "trait": ["luxury", "pleasure"],
         "description": "Bath house",
-        "district": "Crows-foot",
-        "label": "Singer; Bath house; Crows-foot"
+        "district": "Crows foot",
+        "label": "Singer; Bath house; Crows foot"
     },
     {
         "id": "harvale-brogan",
@@ -116,8 +116,8 @@
         "name": "Chef Roselle",
         "trait": ["luxury", "pleasure"],
         "description": "The Golden Plum restaurant",
-        "district": "Six-towers",
-        "label": "Chef Roselle; The Golden Plum restaurant; Six-towers"
+        "district": "Six towers",
+        "label": "Chef Roselle; The Golden Plum restaurant; Six towers"
     },
     {
         "id": "maestro-helleren",
@@ -156,8 +156,8 @@
         "name": "Mardin Gull",
         "trait": ["pleasure", "stupor"],
         "description": "The Leaky Bucket, tavern",
-        "district": "Crows-foot",
-        "label": "Mardin Gull; The Leaky Bucket, tavern; Crows-foot"
+        "district": "Crows foot",
+        "label": "Mardin Gull; The Leaky Bucket, tavern; Crows foot"
     },
     {
         "id": "pux-bolin",
@@ -204,32 +204,32 @@
         "name": "Eldrin Prichard",
         "trait": ["pleasure", "stupor"],
         "description": "The Silver Swan pleasure barge",
-        "district": "Brightstone-canals",
-        "label": "Eldrin Prichard; The Silver Swan pleasure barge; Brightstone-canals"
+        "district": "Brightstone canals",
+        "label": "Eldrin Prichard; The Silver Swan pleasure barge; Brightstone canals"
     },
     {
         "id": "jewel-bird-shine",
         "name": "Jewel, Bird, and Shine",
         "trait": ["pleasure", "stupor"],
         "description": "Catcrawl Alley",
-        "district": "The-docks",
-        "label": "Jewel, Bird, and Shine; Catcrawl Alley; The-docks"
+        "district": "The docks",
+        "label": "Jewel, Bird, and Shine; Catcrawl Alley; The docks"
     },
     {
         "id": "hooded-proprietor",
         "name": "The hooded proprietor",
         "trait": "weird",
         "description": "A half-flooded grotto tavern near the docks. Strange passageways lead to stranger chambers beyond.",
-        "district": "The-docks",
-        "label": "The hooded proprietor; A half-flooded grotto tavern near the docks. Strange passageways lead to stranger chambers beyond.; The-docks"
+        "district": "The docks",
+        "label": "The hooded proprietor; A half-flooded grotto tavern near the docks. Strange passageways lead to stranger chambers beyond.; The docks"
     },
     {
         "id": "father-yoren",
         "name": "Father Yoren",
         "trait": "weird",
         "description": "House of the Weeping Lady",
-        "district": "Six-towers",
-        "label": "Father Yoren; House of the Weeping Lady; Six-towers"
+        "district": "Six towers",
+        "label": "Father Yoren; House of the Weeping Lady; Six towers"
     },
     {
         "id": "salia",
@@ -244,8 +244,8 @@
         "name": "Sister Thorn",
         "trait": "weird",
         "description": "Deathlands scavenger gang",
-        "district": "Gaddoc-station",
-        "label": "Sister Thorn; Deathlands scavenger gang; Gaddoc-station"
+        "district": "Gaddoc station",
+        "label": "Sister Thorn; Deathlands scavenger gang; Gaddoc station"
     },
     {
         "id": "ojak",
