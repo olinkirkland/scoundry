@@ -25,6 +25,8 @@ export type Scoundrel = {
         consort: Record<string, number>;
         sway: Record<string, number>;
     };
+    vice: string;
+    viceDetail: string;
     hullOnly?: {
         frame: string;
         functions: string[];

@@ -287,7 +287,7 @@ export async function paintSheet(
                 const point = data.friends[r as keyof typeof data.friends];
                 if (!point) return console.error('No point for', r);
                 const offset = { x: 28, y: -14 };
-                if (scoundrel.playbook === 'whisper') offset.x = 24.5;
+                if (scoundrel.playbook === 'whisper') offset.x = 24.5; // Misprint in the Whisper playbook
 
                 drawTriangleDown(ctx, {
                     x: point.x + offset.x,

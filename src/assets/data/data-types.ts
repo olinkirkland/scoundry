@@ -36,6 +36,15 @@ export type TraitDetail = {
     suggestedActions: Action[];
 };
 
+export type Address = {
+    id: string;
+    trait?: string | string[];
+    label: string;
+    name: string;
+    description?: string;
+    district: string;
+};
+
 export type ActionRating = {
     id: Action;
     attribute: string;
