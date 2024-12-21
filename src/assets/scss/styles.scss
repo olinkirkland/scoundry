@@ -254,6 +254,10 @@ input[type='text'] {
     border-radius: 5px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 // Checkbox
 input[type='checkbox'] {
     border: 2px dashed red;

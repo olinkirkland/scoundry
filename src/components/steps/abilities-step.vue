@@ -3,7 +3,7 @@
         <h2>Choose a <strong>special ability</strong></h2>
         <p>What ability sets your character apart in the crew?</p>
     </step-header>
-    <ul class="abilities-list" v-if="scoundrel.abilities?.length">
+    <ul class="abilities-list" v-if="scoundrel.abilities">
         <ability-card
             v-for="ability in abilities"
             :key="ability.id"
@@ -12,7 +12,7 @@
             @click="onClickAbility(ability)"
         />
     </ul>
-    <section class="veteran">
+    <section class="veteran hidden">
         <p>
             You can add a special ability from another playbook by using a
             <strong>veteran advance</strong>.

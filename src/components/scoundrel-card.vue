@@ -1,5 +1,10 @@
 <template>
     <div class="scoundrel-card">
+        <img
+            class="portrait"
+            v-if="props.scoundrel.portrait"
+            :src="`/assets/${props.scoundrel.portrait}`"
+        />
         <p>{{ semanticName }}</p>
         <label v-if="props.lastUpdated"
             >Updated {{ props.lastUpdated.toLocaleDateString() }}</label
@@ -33,10 +38,20 @@ const semanticName = computed(() => {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
 
     gap: 0.4rem;
     transition: all 0.2s;
     text-align: center;
+
+    img.portrait {
+        width: 6.4rem;
+        height: 6.4rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
 
     > * {
         cursor: inherit;
@@ -45,6 +60,7 @@ const semanticName = computed(() => {
 
     &:hover {
         box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-on-surface);
     }
 }
 
