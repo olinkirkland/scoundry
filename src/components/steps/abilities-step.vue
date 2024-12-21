@@ -3,7 +3,7 @@
         <h2>Choose a <strong>special ability</strong></h2>
         <p>What ability sets your character apart in the crew?</p>
     </step-header>
-    <ul class="abilities-list">
+    <ul class="abilities-list" v-if="scoundrel.abilities?.length">
         <ability-card
             v-for="ability in abilities"
             :key="ability.id"
@@ -36,16 +36,16 @@ const abilities = computed(() =>
 );
 
 const props = defineProps<{
-    scoundrel: Scoundrel;
+    scoundrel: Partial<Scoundrel>;
 }>();
 
 if (!props.scoundrel.abilities) props.scoundrel.abilities = [];
 
 function onClickAbility(ability: Trait) {
     // Toggle the ability in the scoundrel's abilities array
-    const index = props.scoundrel.abilities.indexOf(ability.id);
-    if (index === -1) props.scoundrel.abilities.push(ability.id);
-    else props.scoundrel.abilities.splice(index, 1);
+    const index = props.scoundrel.abilities!.indexOf(ability.id);
+    if (index === -1) props.scoundrel.abilities!.push(ability.id);
+    else props.scoundrel.abilities!.splice(index, 1);
 }
 </script>
 
