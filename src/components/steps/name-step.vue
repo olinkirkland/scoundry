@@ -118,4 +118,16 @@ function joinWithAnd(arr: string[]) {
     align-items: center;
     gap: 1rem;
 }
+
+@media (max-width: 768px) {
+    .name > .input-with-suggestions {
+        &:last-child {
+            flex: unset;
+        }
+        > .input-block {
+            width: 100%;
+            margin: 0 1.2rem;
+        }
+    }
+}
 </style>
