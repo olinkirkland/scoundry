@@ -2,12 +2,13 @@ export type Scoundrel = {
     id: string;
     playbook: string;
     name: string;
+    alias: string;
+    look: string;
     portrait: string;
     heritage: string;
     heritageDetail: string;
     background: string;
     backgroundDetail: string;
-    lookAndStyle: string;
     abilities: string[];
     friends: string[];
     rivals: string[];

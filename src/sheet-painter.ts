@@ -7,7 +7,9 @@ import dataBackgrounds from './assets/data/background-details.json';
 import dataHeritages from './assets/data/heritage-details.json';
 
 const data = {
-    name: { x: 100, y: 100 },
+    name: { x: 100, y: 235 },
+    alias: { x: 704, y: 235 },
+    look: { x: 100, y: 316 },
     heritages: {
         akoros: { x: 272, y: 428, w: 110 },
         'dagger-isles': { x: 460, y: 428, w: 260 },
@@ -325,7 +327,20 @@ export async function paintSheet(
             }
 
             // Write Vice Detail
-            ctx.fillText(scoundrel.viceDetail, data.viceText.x, data.viceText.y);
+            ctx.fillText(
+                scoundrel.viceDetail,
+                data.viceText.x,
+                data.viceText.y
+            );
+
+            // Name
+            ctx.fillText(scoundrel.name, data.name.x, data.name.y);
+
+            // Alias
+            ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
+
+            // Look
+            ctx.fillText(scoundrel.look, data.look.x, data.look.y);
 
             resolve(canvas);
         };
