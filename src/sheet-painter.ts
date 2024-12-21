@@ -334,13 +334,16 @@ export async function paintSheet(
             );
 
             // Name
-            ctx.fillText(scoundrel.name, data.name.x, data.name.y);
+            if (scoundrel.name)
+                ctx.fillText(scoundrel.name, data.name.x, data.name.y);
 
             // Alias
-            ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
+            if (scoundrel.alias)
+                ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
 
             // Look
-            ctx.fillText(scoundrel.look, data.look.x, data.look.y);
+            if (scoundrel.look)
+                ctx.fillText(scoundrel.look, data.look.x, data.look.y);
 
             resolve(canvas);
         };

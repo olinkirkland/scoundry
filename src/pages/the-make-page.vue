@@ -19,7 +19,7 @@
 
         <div ref="stepContainer" class="step-container">
             <component
-                v-if="stepId"
+                v-if="stepId && (scoundrel.playbook || stepId === Step.PLAYBOOK)"
                 :is="stepComponents[stepId]"
                 :scoundrel="scoundrel"
             />
