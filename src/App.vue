@@ -18,7 +18,7 @@ import TheModalContainer from './components/modals/the-modal-container.vue';
     position: relative;
     background-color: var(--color-surface);
     height: 100vh;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ import TheModalContainer from './components/modals/the-modal-container.vue';
 .pattern {
     width: 100%;
     height: 100vh;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 
     opacity: 0.1;
 

@@ -272,6 +272,15 @@ input[type='checkbox'] {
     .desktop-only {
         display: none !important;
     }
+
+    // Hide all scrollbars on mobile
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar { 
+            display: none;
+        }
+    }
 }
 
 @media (min-width: 768px) {
