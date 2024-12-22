@@ -45,6 +45,11 @@
     --shadow-text: rgba(0, 0, 0, 0.4) 2px 2px 2px;
 }
 
+// Disable the overscroll effect on mobile
+html, body {
+    overscroll-behavior: none;
+}
+
 .page {
     flex: 1;
 }
