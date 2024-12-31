@@ -55,12 +55,13 @@
 </template>
 
 <script setup lang="ts">
-import stepHeader from '../step-header.vue';
+import { trackEvent } from '@/main';
 import { Scoundrel } from '@/scoundrel';
 import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
 import { getSemanticScoundrelName } from '@/util/scoundrel-util';
 import { ref } from 'vue';
+import stepHeader from '../step-header.vue';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -92,6 +93,7 @@ function onClickChangeInkColor(color: string) {
 }
 
 function onClickCopyJSON() {
+    trackEvent('copy-json');
     const scoundrelCopy = { ...props.scoundrel };
     scoundrelCopy.id = makeSemanticId();
     navigator.clipboard.writeText(JSON.stringify(scoundrelCopy));
@@ -102,6 +104,18 @@ function onClickCopyJSON() {
 }
 
 async function generatePNG() {
+    trackEvent('generate-png', {
+        inkColor: selectedInkColor.value,
+        playbook: props.scoundrel.playbook,
+        background: props.scoundrel.background,
+        backgroundDetail: props.scoundrel.backgroundDetail,
+        heritage: props.scoundrel.heritage,
+        heritageDetail: props.scoundrel.heritageDetail,
+        name: props.scoundrel.name,
+        alias: props.scoundrel.alias,
+        vice: props.scoundrel.vice,
+        viceDetail: props.scoundrel.viceDetail,
+    });
     const canvas = await paintSheet(props.scoundrel, selectedInkColor.value);
     console.log(canvas);
     if (!canvas) return;

@@ -95,10 +95,10 @@ import {
     getSavedScoundrels,
     Metadata,
 } from '@/controllers/storage-controller';
+import { APP_VERSION } from '@/main';
 import { PageName, router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
-import { APP_VERSION } from '@/main';
 
 const page = ref<HTMLElement | null>(null);
 const savedScoundrels = ref<Scoundrel[]>([]);

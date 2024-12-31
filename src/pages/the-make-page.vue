@@ -42,7 +42,8 @@
 
             <!-- Next -->
             <button
-                class="btn" v-if="!isLastStep"
+                class="btn"
+                v-if="!isLastStep"
                 @click="onClickNextStep"
                 :class="{ disabled: !scoundrel.playbook }"
             >
@@ -71,6 +72,7 @@ import {
     loadScoundrel,
     saveScoundrel,
 } from '@/controllers/storage-controller';
+import { trackEvent } from '@/main';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { makeSemanticId } from '@/util/id-util';
@@ -218,13 +220,16 @@ watch(
     { deep: true }
 );
 
-// Automatically progress to the next step when the playbook is selected
-// watch(
-//     () => scoundrel.value?.playbook,
-//     (newPlaybook, oldPlaybook) => {
-//         if (!oldPlaybook && newPlaybook) onClickNextStep();
-//     }
-// );
+// Track the scoundrel's playbook; when it changes, track the event
+watch(
+    () => scoundrel.value?.playbook,
+    (newPlaybook, oldPlaybook) => {
+        if (!oldPlaybook && newPlaybook)
+            trackEvent('new-character', {
+                playbook: newPlaybook,
+            });
+    }
+);
 
 function onClickNextStep() {
     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
@@ -250,7 +255,8 @@ async function onClickDiscard() {
     // Are you sure?
     ModalController.open(ConfirmModal, {
         title: 'Delete scoundrel?',
-        message: 'Are you sure you want to delete this scoundrel? This action cannot be undone.',
+        message:
+            'Are you sure you want to delete this scoundrel? This action cannot be undone.',
         confirmText: 'Delete',
         onConfirm: discard,
     });
