@@ -135,7 +135,7 @@ import {
     getActionValue,
     getAttributeColor,
 } from '@/util/action-util';
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -167,6 +167,20 @@ const attributes = [
         label: 'Resolve',
     },
 ];
+
+// Check when the sticky action tally should change its style (add the .pinned class)
+// Wait for the element to be rendered
+onMounted(() => {
+    const el = document.querySelector('.action-tally')!;
+    const observer = new IntersectionObserver(
+        ([e]) => {
+            e.target.classList.toggle('pinned', e.intersectionRatio < 1);
+        },
+        { threshold: 1 }
+    );
+
+    observer.observe(el);
+});
 
 // Add up all values
 const totalActionRatings = computed(() => {
@@ -358,7 +372,7 @@ function getAttributeValue(attribute: string) {
     padding: 0.8rem;
     display: flex;
     position: sticky;
-    top: 0;
+    top: -1px;
     justify-content: center;
     background-color: var(--color-primary);
     z-index: 1;
@@ -366,6 +380,11 @@ function getAttributeValue(attribute: string) {
     * {
         color: var(--color-surface);
     }
+}
+
+.pinned {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 @media (max-width: 768px) {
