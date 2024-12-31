@@ -7,16 +7,12 @@
         </p>
     </step-header>
     <div class="save">
-        <p class="callout">
-            If you want to share your character, you can copy the JSON data and
-            import it from the home page.
-        </p>
         <p>
-            You can save your
+            Choose an
             <span class="filled" :style="{ color: selectedInkColor }"
-                >filled-out</span
+                >ink color</span
             >
-            character sheet as a PNG image.
+            for your character sheet.
         </p>
         <ul class="ink-colors">
             <li
@@ -60,8 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import ModalFrame from '@/components/modals/modal-frame.vue';
-import ModalHeader from '@/components/modals/modal-header.vue';
+import stepHeader from '../step-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
@@ -140,11 +135,11 @@ function makeFileName(name: string) {
 
 <style scoped lang="scss">
 .save {
-    max-width: 56rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.6rem;
+    padding: 1.2rem;
 }
 
 .preview-container {
@@ -215,9 +210,6 @@ span.filled {
 }
 
 @media (max-width: 768px) {
-    .save {
-        max-width: 100%;
-    }
     .row {
         margin-top: auto;
         width: 100%;

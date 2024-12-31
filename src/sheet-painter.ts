@@ -327,11 +327,12 @@ export async function paintSheet(
             }
 
             // Write Vice Detail
-            ctx.fillText(
-                scoundrel.viceDetail,
-                data.viceText.x,
-                data.viceText.y
-            );
+            if (scoundrel.viceDetail)
+                ctx.fillText(
+                    scoundrel.viceDetail,
+                    data.viceText.x,
+                    data.viceText.y
+                );
 
             // Name
             if (scoundrel.name)
