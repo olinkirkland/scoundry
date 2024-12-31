@@ -2,6 +2,17 @@
     <step-header>
         <h2>What are your origins?</h2>
         <p>Pick a heritage and write a detail specific to you.</p>
+        <a
+            @click="
+                ModalController.open(ImageModal, {
+                    title: 'World Map',
+                    image: '/assets/images/world-map.png',
+                    backgroundColor: '#ffffff'
+                })
+            "
+        >
+            <span>World Map</span>
+        </a>
     </step-header>
     <div class="list-container-frame">
         <div class="list-container">
@@ -54,8 +65,10 @@ import heritageDetailsData from '@/assets/data/heritage-details.json';
 import heritagesData from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
+import ModalController from '@/controllers/modal-controller';
 import { Scoundrel } from '@/scoundrel';
 import { computed } from 'vue';
+import ImageModal from '../modals/templates/image-modal.vue';
 import TraitDetailCard from '../trait-detail-card.vue';
 
 const props = defineProps<{
