@@ -19,7 +19,9 @@
 
         <div ref="stepContainer" class="step-container">
             <component
-                v-if="stepId && (scoundrel.playbook || stepId === Step.PLAYBOOK)"
+                v-if="
+                    stepId && (scoundrel.playbook || stepId === Step.PLAYBOOK)
+                "
                 :is="stepComponents[stepId]"
                 :scoundrel="scoundrel"
             />
@@ -27,51 +29,24 @@
         </div>
 
         <div class="control-bar">
-            <button class="btn btn--icon" @click="onClickClose">
-                <img src="/assets/icons/close.png" alt="Close" />
+            <!-- Discard -->
+            <button class="btn btn--alt" @click="onClickDiscard">
+                <span>Delete</span>
             </button>
-            <button class="btn btn--icon" @click="onClickDiscard">
-                <img src="/assets/icons/trash.png" alt="Discard" />
-            </button>
-            <button
-                class="btn btn--icon"
-                :class="{ disabled: !scoundrel.playbook }"
-                @click="onClickSave"
-            >
-                <img src="/assets/icons/save.png" alt="Save" />
-            </button>
-            <div class="spacer"></div>
 
-            <!-- Back -->
-            <button
-                class="btn desktop-only"
-                @click="onClickBackStep"
-                :class="{ disabled: isFirstStep }"
-            >
-                <span>Back</span>
-            </button>
-            <button
-                class="btn btn--icon mobile-only"
-                @click="onClickBackStep"
-                :class="{ disabled: isFirstStep }"
-            >
-                <img src="/assets/icons/left.png" alt="Back" />
+            <!-- Home -->
+            <button class="btn btn--alt" @click="onClickClose">
+                <span>Home</span>
+                <!-- <img src="/assets/icons/home.png" alt="Home" /> -->
             </button>
 
             <!-- Next -->
             <button
-                class="btn desktop-only"
+                class="btn"
                 @click="onClickNextStep"
                 :class="{ disabled: isLastStep || !scoundrel.playbook }"
             >
                 <span>Next</span>
-            </button>
-            <button
-                class="btn btn--icon mobile-only"
-                @click="onClickNextStep"
-                :class="{ disabled: isLastStep }"
-            >
-                <img src="/assets/icons/right.png" alt="Next" />
             </button>
         </div>
     </div>
@@ -80,11 +55,11 @@
 <script setup lang="ts">
 import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 import ErrorModal from '@/components/modals/templates/error-modal.vue';
-import SaveModal from '@/components/modals/templates/save-modal.vue';
 import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/abilities-step.vue';
 import StepActions from '@/components/steps/actions-step.vue';
 import StepBackground from '@/components/steps/background-step.vue';
+import StepFinish from '@/components/steps/finish-step.vue';
 import StepFriendsAndRivals from '@/components/steps/friends-step.vue';
 import StepHeritage from '@/components/steps/heritage-step.vue';
 import StepNameAndLook from '@/components/steps/name-step.vue';
@@ -118,6 +93,7 @@ const stepComponents = {
     friends: StepFriendsAndRivals,
     vice: StepVice,
     name: StepNameAndLook,
+    finish: StepFinish,
 };
 
 enum Step {
@@ -129,6 +105,7 @@ enum Step {
     FRIENDS_AND_RIVALS = 'friends',
     VICE = 'vice',
     NAME_AND_LOOK = 'name',
+    FINISH = 'finish',
 }
 
 const steps = [
@@ -163,6 +140,10 @@ const steps = [
     {
         id: Step.NAME_AND_LOOK,
         label: 'Name & Look',
+    },
+    {
+        id: Step.FINISH,
+        label: 'Export',
     },
 ];
 
@@ -237,14 +218,13 @@ watch(
     { deep: true }
 );
 
-watch(
-    () => scoundrel.value?.playbook,
-    (newPlaybook, oldPlaybook) => {
-        if (!oldPlaybook && newPlaybook) {
-            onClickNextStep();
-        }
-    }
-);
+// Automatically progress to the next step when the playbook is selected
+// watch(
+//     () => scoundrel.value?.playbook,
+//     (newPlaybook, oldPlaybook) => {
+//         if (!oldPlaybook && newPlaybook) onClickNextStep();
+//     }
+// );
 
 function onClickNextStep() {
     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
@@ -252,18 +232,11 @@ function onClickNextStep() {
     if (nextStep) changeStep(nextStep.id);
 }
 
-function onClickBackStep() {
-    const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
-    const prevStep = steps[currentStepIndex - 1];
-    if (prevStep) changeStep(prevStep.id);
-}
-
-async function onClickSave() {
-    // Save the scoundrel
-    ModalController.open(SaveModal, {
-        scoundrel: scoundrel.value as Scoundrel,
-    });
-}
+// function onClickBackStep() {
+//     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
+//     const prevStep = steps[currentStepIndex - 1];
+//     if (prevStep) changeStep(prevStep.id);
+// }
 
 async function onClickClose() {
     page.value?.classList.remove('page-in');
@@ -277,7 +250,7 @@ async function onClickDiscard() {
     // Are you sure?
     ModalController.open(ConfirmModal, {
         title: 'Delete scoundrel?',
-        message: 'Are you sure you want to delete this scoundrel?',
+        message: 'Are you sure you want to delete this scoundrel? This action cannot be undone.',
         confirmText: 'Delete',
         onConfirm: discard,
     });

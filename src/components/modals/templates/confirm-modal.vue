@@ -9,7 +9,7 @@
             <div class="confirm">
                 <p v-html="props.message"></p>
 
-                <div class="row wrap center">
+                <div class="choices">
                     <button class="btn btn--alt" @click="props.onConfirm">
                         <span>{{ props.confirmText || 'Yes' }}</span>
                     </button>
@@ -49,5 +49,18 @@ function onClickCancel() {
     flex-direction: column;
     gap: 1.6rem;
     justify-content: space-between;
+    height: 100%;
+}
+
+.choices {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .choices {
+        flex-direction: column;
+    }
 }
 </style>

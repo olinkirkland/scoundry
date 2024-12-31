@@ -46,7 +46,8 @@
 }
 
 // Disable the overscroll effect on mobile
-html, body {
+html,
+body {
     overscroll-behavior: none;
 }
 
@@ -104,6 +105,11 @@ button.btn {
 
     * {
         white-space: nowrap;
+    }
+
+    > img {
+        width: 2.4rem;
+        height: 2.4rem;
     }
 
     &--mini {
@@ -277,7 +283,7 @@ input[type='checkbox'] {
     * {
         scrollbar-width: none;
         -ms-overflow-style: none;
-        &::-webkit-scrollbar { 
+        &::-webkit-scrollbar {
             display: none;
         }
     }
