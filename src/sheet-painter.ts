@@ -328,10 +328,12 @@ export async function paintSheet(
 
             // Write Vice Detail
             if (scoundrel.viceDetail)
-                ctx.fillText(
+                fillMultilineText(
+                    ctx,
                     scoundrel.viceDetail,
                     data.viceText.x,
-                    data.viceText.y
+                    data.viceText.y,
+                    940
                 );
 
             // Name
@@ -344,7 +346,13 @@ export async function paintSheet(
 
             // Look
             if (scoundrel.look)
-                ctx.fillText(scoundrel.look, data.look.x, data.look.y);
+                fillMultilineText(
+                    ctx,
+                    scoundrel.look,
+                    data.look.x,
+                    data.look.y,
+                    940
+                );
 
             resolve(canvas);
         };
@@ -353,6 +361,40 @@ export async function paintSheet(
             reject(new Error(`Failed to load image: ${template.src}`));
         };
     });
+}
+
+function fillMultilineText(
+    ctx: CanvasRenderingContext2D,
+    text: string,
+    x: number,
+    y: number,
+    maxWidth: number
+) {
+    // Fill a text box with a maximum width and a maximum number of lines
+    // Use an ellipsis to cut off the text if it's too long
+    const lines: { text: string; x: number; y: number }[] = [];
+    const LINE_HEIGHT = 32;
+    const words = text.split(' ');
+    let line = '';
+    let lineCount = 0;
+    for (let i = 0; i < words.length; i++) {
+        const testLine = line + words[i] + ' ';
+        const metrics = ctx.measureText(testLine);
+        const testWidth = metrics.width;
+        if (testWidth > maxWidth && i > 0) {
+            lines.push({ text: line, x, y });
+            line = words[i] + ' ';
+            y += LINE_HEIGHT;
+            lineCount++;
+        } else {
+            line = testLine;
+        }
+    }
+    lines.push({ text: line, x, y });
+    // Move the text up by line count * line height
+    lines.forEach((line) => (line.y -= lineCount * LINE_HEIGHT));
+
+    lines.forEach((line) => ctx.fillText(line.text, line.x, line.y));
 }
 
 function drawTriangleUp(

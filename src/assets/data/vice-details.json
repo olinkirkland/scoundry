@@ -219,9 +219,9 @@
         "id": "hooded-proprietor",
         "name": "The hooded proprietor",
         "trait": "weird",
-        "description": "A half-flooded grotto tavern near the docks. Strange passageways lead to stranger chambers beyond.",
+        "description": "A half-flooded grotto tavern near the docks",
         "district": "The docks",
-        "label": "The hooded proprietor; A half-flooded grotto tavern near the docks. Strange passageways lead to stranger chambers beyond.; The docks"
+        "label": "The hooded proprietor; A half-flooded grotto tavern; The docks"
     },
     {
         "id": "father-yoren",
