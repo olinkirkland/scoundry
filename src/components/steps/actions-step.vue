@@ -2,22 +2,28 @@
     <step-header>
         <h2>What are your strongest attributes?</h2>
         <p>
+            Assign action dots to attributes that best represent your scoundrel.
+        </p>
+    </step-header>
+
+    <div class="actions">
+        <div class="callout options">
             During creation, assign
             <strong>4 more</strong> action dots (a total of 7, including the
             ones from your Playbook). No action may begin with more than 2 dots.
             After creation, action ratings may advance up to 3 and up to 4 after
             unlocking the crew's mastery advance.
-        </p>
-    </step-header>
-
-    <div class="actions">
-        <div class="callout" v-if="hasSuggestedActions">
+        </div>
+        <div class="callout suggested-actions" v-if="hasSuggestedActions">
             Action ratings suggested by your background and heritage:
             <span v-html="suggestedRatingsHTML"></span>
         </div>
 
         <div class="action-tally">
-            <p>Total action points used: {{ totalActionRatings }}</p>
+            <p>
+                Total action dots used:
+                <strong>{{ totalActionRatings }}</strong>
+            </p>
         </div>
 
         <div class="attributes-list">
@@ -99,6 +105,11 @@ import { computed } from 'vue';
 const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
+
+if (!props.scoundrel.optionActionsCreatingCharacter)
+    props.scoundrel.optionActionsCreatingCharacter = true;
+if (!props.scoundrel.optionActionsMasteryAdvance)
+    props.scoundrel.optionActionsMasteryAdvance = false;
 
 const attributes = [
     {
@@ -224,7 +235,7 @@ function changeAction(action: Action, value: number) {
 }
 
 function getAttributeValue(attribute: string) {
-    // Number of actions with this attribute, that have at least 1 point assigned
+    // Number of actions with this attribute, that have at least 1 dot assigned
     let count = 0;
     actionsByAttribute(attribute).forEach((action) => {
         getActionValue(props.scoundrel.actions, action.id as Action) > 0
@@ -239,6 +250,15 @@ function getAttributeValue(attribute: string) {
 <style scoped lang="scss">
 .actions {
     padding: 0 1.2rem;
+}
+
+.options {
+    margin-bottom: 0.8rem;
+}
+
+.suggested-actions {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .attributes-list {
@@ -290,11 +310,17 @@ function getAttributeValue(attribute: string) {
 }
 
 .action-tally {
-    padding: 1.2rem;
+    padding: 0.8rem;
     display: flex;
-    position: sticky; // In order for thsi to work, the parent must have a height set
+    position: sticky;
+    top: 0;
     justify-content: center;
-    border: 1px solid red;
+    background-color: var(--color-primary);
+    z-index: 1;
+
+    * {
+        color: var(--color-surface);
+    }
 }
 
 @media (max-width: 768px) {

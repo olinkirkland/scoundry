@@ -26,6 +26,8 @@ export type Scoundrel = {
         consort: Record<string, number>;
         sway: Record<string, number>;
     };
+    optionActionsCreatingCharacter: boolean;
+    optionActionsMasteryAdvance: boolean;
     vice: string;
     viceDetail: string;
     hullOnly?: {
