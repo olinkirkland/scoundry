@@ -82,12 +82,12 @@
 </template>
 
 <script setup lang="ts">
-import StepHeader from '@/components/step-header.vue';
 import actionRatingsData from '@/assets/data/action-ratings.json';
 import backgroundDetailsData from '@/assets/data/background-details.json';
 import { Action, ActionRating, TraitDetail } from '@/assets/data/data-types';
 import heritageDetailsData from '@/assets/data/heritage-details.json';
 import ActionTag from '@/components/action-tag.vue';
+import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import {
     getActionRating,
@@ -292,7 +292,9 @@ function getAttributeValue(attribute: string) {
 .action-tally {
     padding: 1.2rem;
     display: flex;
+    position: sticky; // In order for thsi to work, the parent must have a height set
     justify-content: center;
+    border: 1px solid red;
 }
 
 @media (max-width: 768px) {

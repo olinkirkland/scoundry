@@ -115,12 +115,12 @@ button.btn {
     &--mini {
         background: transparent;
         border: none;
-        padding: 0;
-        height: 1.6rem;
+        padding: 0.2rem;
+        height: 2.4rem;
 
         > img {
-            width: 1.4rem;
-            height: 1.4rem;
+            width: 2rem;
+            height: 2rem;
         }
 
         &:active {
