@@ -141,9 +141,10 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
-if (!props.scoundrel.optionActionsCreatingCharacter)
+// Default options
+if (props.scoundrel.optionActionsCreatingCharacter === undefined)
     props.scoundrel.optionActionsCreatingCharacter = true;
-if (!props.scoundrel.optionActionsMasteryAdvance)
+if (!props.scoundrel.optionActionsMasteryAdvance === undefined)
     props.scoundrel.optionActionsMasteryAdvance = false;
 
 const maxActionValue = computed(() => {

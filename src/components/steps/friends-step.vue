@@ -17,31 +17,31 @@
             }"
         >
             <div class="background-fill"></div>
-            <div class="buttons">
-                <button
-                    class="btn btn--icon"
-                    :class="{
-                        disabled: scoundrel.rivals.includes(person.id),
-                        selected: scoundrel.friends.includes(person.id),
-                    }"
-                    @click="togglePersonRole(person.id, 'friends')"
-                >
-                    <img src="/assets/icons/triangle-up.png" />
-                </button>
-                <button
-                    class="btn btn--icon"
-                    :class="{
-                        disabled: scoundrel.friends.includes(person.id),
-                        selected: scoundrel.rivals.includes(person.id),
-                    }"
-                    @click="togglePersonRole(person.id, 'rivals')"
-                >
-                    <img src="/assets/icons/triangle-down.png" />
-                </button>
-            </div>
             <div class="body">
                 <p>{{ person.label }}</p>
                 <label>{{ person.description }}</label>
+            </div>
+            <div class="checkboxes">
+                <div
+                    class="checkbox-group"
+                    @click="togglePersonRole(person.id, 'friends')"
+                >
+                    <input
+                        type="checkbox"
+                        :checked="scoundrel.friends.includes(person.id)"
+                    />
+                    <label>Friend</label>
+                </div>
+                <div
+                    class="checkbox-group"
+                    @click="togglePersonRole(person.id, 'rivals')"
+                >
+                    <input
+                        type="checkbox"
+                        :checked="scoundrel.rivals.includes(person.id)"
+                    />
+                    <label>Rival</label>
+                </div>
             </div>
         </li>
     </ul>
@@ -72,6 +72,11 @@ function togglePersonRole(id: string, role: 'friends' | 'rivals') {
     const personIndex = props.scoundrel[role].indexOf(id);
     if (personIndex === -1) props.scoundrel[role].push(id);
     else props.scoundrel[role].splice(personIndex, 1);
+    // Ensure that a person can't be both a friend and a rival
+    const otherRole = role === 'friends' ? 'rivals' : 'friends';
+    const otherRoleIndex = props.scoundrel[otherRole].indexOf(id);
+    if (otherRoleIndex !== -1)
+        props.scoundrel[otherRole].splice(otherRoleIndex, 1);
 }
 </script>
 
@@ -85,46 +90,39 @@ ul.friends-list {
 }
 
 li.person-card {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    padding: 1rem;
     gap: 1rem;
     border: 1px solid var(--color-on-surface);
-    padding: 1.2rem;
     align-items: center;
     > .background-fill {
+        position: absolute;
         transition: all 0.2s;
+        top: 0;
+        left: 0;
         background-color: var(--color-primary);
+        width: 100%;
+        height: 100%;
         opacity: 0;
     }
 
     &.person-card--selected {
         border-color: var(--color-primary);
         > .background-fill {
-            opacity: 0.1;
-        }
-    }
-
-    > .buttons {
-        display: flex;
-
-        > button.btn {
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            transition: all 0.2s;
-
-            &:after {
-                display: none;
-            }
-
-            &.disabled > img {
-                width: 1.4rem;
-                height: 1.4rem;
-            }
+            opacity: 0.05;
         }
     }
 
     > .body {
         flex: 1;
+        text-align: center;
+    }
+
+    .checkboxes {
+        display: flex;
+        gap: 1rem;
     }
 }
 </style>
