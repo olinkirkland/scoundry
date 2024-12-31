@@ -222,6 +222,58 @@ label {
     letter-spacing: 1.5px;
 }
 
+.checkbox-group {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    * {
+        cursor: pointer;
+    }
+
+    label {
+        margin-bottom: 0;
+        opacity: initial;
+        text-transform: initial;
+        letter-spacing: initial;
+        font-size: 1.4rem;
+        font-style: italic;
+        text-align: left;
+    }
+}
+
+input[type='checkbox'] {
+    // Use the checkbox hack to style the checkbox
+    // Use the checkbox-checked.png and checkbox-unchecked.png images
+
+    display: none;
+    & + label {
+        position: relative;
+        padding-left: 2.4rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    & + label::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    &:checked + label::before {
+        background-image: url('/assets/icons/checkbox-checked.png');
+        background-size: cover;
+    }
+
+    &:not(:checked) + label::before {
+        background-image: url('/assets/icons/checkbox-unchecked.png');
+        background-size: cover;
+    }
+}
+
 .input-block {
     max-width: 40rem;
     display: flex;

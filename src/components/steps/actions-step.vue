@@ -8,11 +8,41 @@
 
     <div class="actions">
         <div class="callout options">
-            During creation, assign
-            <strong>4 more</strong> action dots (a total of 7, including the
-            ones from your Playbook). No action may begin with more than 2 dots.
-            After creation, action ratings may advance up to 3 and up to 4 after
-            unlocking the crew's mastery advance.
+            <div
+                class="checkbox-group"
+                :class="{ disabled: scoundrel.optionActionsMasteryAdvance }"
+            >
+                <input
+                    type="checkbox"
+                    id="optionActionsCreatingCharacter"
+                    v-model="scoundrel.optionActionsCreatingCharacter"
+                />
+                <label for="optionActionsCreatingCharacter"
+                    >Character Creation: 7 action dots total, limit 2 dots per
+                    action</label
+                >
+            </div>
+            <div
+                class="checkbox-group"
+                :class="{ disabled: scoundrel.optionActionsCreatingCharacter }"
+            >
+                <input
+                    type="checkbox"
+                    id="optionActionsMasteryAdvance"
+                    v-model="scoundrel.optionActionsMasteryAdvance"
+                />
+                <label for="optionActionsMasteryAdvance"
+                    >Mastery Advance: Allow actions to advance to 4</label
+                >
+            </div>
+
+            <!-- <p>
+                During creation, assign
+                <strong>4 more</strong> action dots (a total of 7, including the
+                ones from your Playbook). No action may begin with more than 2
+                dots. After creation, action ratings may advance up to 3 and up
+                to 4 after unlocking the crew's mastery advance.
+            </p> -->
         </div>
         <div class="callout suggested-actions" v-if="hasSuggestedActions">
             Action ratings suggested by your background and heritage:
@@ -21,8 +51,11 @@
 
         <div class="action-tally">
             <p>
-                Total action dots used:
-                <strong>{{ totalActionRatings }}</strong>
+                <strong>{{ totalActionRatings }}</strong
+                ><span v-if="scoundrel.optionActionsCreatingCharacter">
+                    of 7</span
+                >
+                action dots assigned
             </p>
         </div>
 
@@ -71,7 +104,9 @@
                                             getActionValue(
                                                 scoundrel.actions,
                                                 action.id as Action
-                                            ) === 4,
+                                            ) === maxActionValue ||
+                                            (scoundrel.optionActionsCreatingCharacter &&
+                                                totalActionRatings >= 7),
                                     }"
                                     @click="changeAction(action.id, 1)"
                                 >
@@ -110,6 +145,12 @@ if (!props.scoundrel.optionActionsCreatingCharacter)
     props.scoundrel.optionActionsCreatingCharacter = true;
 if (!props.scoundrel.optionActionsMasteryAdvance)
     props.scoundrel.optionActionsMasteryAdvance = false;
+
+const maxActionValue = computed(() => {
+    if (props.scoundrel.optionActionsCreatingCharacter) return 2;
+    if (props.scoundrel.optionActionsMasteryAdvance) return 4;
+    return 3;
+});
 
 const attributes = [
     {
@@ -254,6 +295,9 @@ function getAttributeValue(attribute: string) {
 
 .options {
     margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .suggested-actions {
