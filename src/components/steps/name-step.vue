@@ -126,18 +126,15 @@ function getPortraitSource(portraitPath: string) {
 
 <style scoped lang="scss">
 .name {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 2rem;
+    padding: 0 1.2rem;
+    max-width: 96rem;
 
-    // Last elmeent stretches whole rwo
-    > .input-with-suggestions:last-child {
-        flex: 1 1 100%;
-
-        .input-block {
-            width: 100%;
-        }
+    > :last-child {
+        grid-column: 1 / -1;
     }
 }
 
@@ -146,6 +143,11 @@ function getPortraitSource(portraitPath: string) {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    .input-block {
+        max-width: unset;
+        width: 100%;
+    }
 }
 
 .portraits-block {
@@ -204,13 +206,7 @@ function getPortraitSource(portraitPath: string) {
 
 @media (max-width: 768px) {
     .name > .input-with-suggestions {
-        &:last-child {
-            flex: unset;
-        }
-        > .input-block {
-            width: 100%;
-            margin: 0 1.2rem;
-        }
+        grid-column: 1 / -1;
     }
 }
 </style>
