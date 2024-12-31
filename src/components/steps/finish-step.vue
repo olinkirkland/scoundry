@@ -206,6 +206,10 @@ ul.ink-colors {
     }
 }
 
+.row {
+    margin: 0 auto;
+}
+
 span.filled {
     font-family: var(--font-handwriting);
     font-size: 2rem;

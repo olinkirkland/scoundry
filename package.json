@@ -10,8 +10,10 @@
     "deploy": "npm run build && node scripts/copy-cname.mjs && node scripts/copy-index-as-404.mjs && gh-pages -d dist"
   },
   "dependencies": {
+    "@types/mixpanel-browser": "^2.50.2",
     "@types/vue-router": "^2.0.0",
     "gh-pages": "^6.2.0",
+    "mixpanel-browser": "^2.58.0",
     "roughjs": "^4.6.6",
     "sass-embedded": "^1.81.0",
     "vue": "^3.5.13",

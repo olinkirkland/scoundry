@@ -32,9 +32,12 @@
         <div class="footer-container">
             <footer>
                 <div class="logo-and-olin">
-                    <h2>www.scoundry.com</h2>
+                    <h2>
+                        www.scoundry.com
+                        <span class="version">v{{ APP_VERSION }}</span>
+                    </h2>
                     <p>
-                        Code & website design by
+                        Code & design by
                         <a href="https://olinkirk.land" target="_blank"
                             >Olin Kirkland</a
                         >
@@ -63,11 +66,13 @@
                 </div>
                 <div>
                     <p>
-                        Images are from
-                        <a href="https://unsplash.com" target="_blank"
-                            >Unsplash.com</a
+                        Portrait images are from
+                        <a
+                            href="https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment"
+                            target="_blank"
+                            >The Library of Congress</a
                         >
-                        and belong to their respective owners on the site
+                        with no known restrictions their use.
                     </p>
                     <p>
                         Icons are from
@@ -93,6 +98,7 @@ import {
 import { PageName, router } from '@/router';
 import { ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
+import { APP_VERSION } from '@/main';
 
 const page = ref<HTMLElement | null>(null);
 const savedScoundrels = ref<Scoundrel[]>([]);
@@ -158,6 +164,7 @@ function getLastUpdated(scoundrelId: string) {
 }
 
 h1 {
+    position: relative;
     font-family: var(--font-display);
     color: var(--color-on-surface);
     font-size: 12rem;
@@ -238,6 +245,11 @@ footer > button {
     font-size: 1.2rem;
 }
 
+.version {
+    font-size: 1.2rem;
+    text-transform: none;
+}
+
 ul.saved-scoundrels-list {
     margin: 0 auto;
     margin-top: 2.4rem;
@@ -254,9 +266,7 @@ ul.saved-scoundrels-list {
     footer {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 768px) {
     h1 {
         font-size: 5.2rem;
     }
