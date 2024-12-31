@@ -8,6 +8,7 @@
                     >Blades in the Dark</a
                 >
             </p>
+
             <div class="row">
                 <button class="btn" @click="onClickMakeNewScoundrel">
                     <span>Make a new Scoundrel</span>
@@ -40,6 +41,11 @@
                         Code & design by
                         <a href="https://olinkirk.land" target="_blank"
                             >Olin Kirkland</a
+                        >
+                    </p>
+                    <p>
+                        <a @click="ModalController.open(NewsModal)"
+                            >News & Updates</a
                         >
                     </p>
                     <p class="muted">
@@ -88,6 +94,7 @@
 
 <script setup lang="ts">
 import LoadFromJsonModal from '@/components/modals/templates/load-from-json-modal.vue';
+import NewsModal from '@/components/modals/templates/news-modal.vue';
 import ScoundrelCard from '@/components/scoundrel-card.vue';
 import ModalController from '@/controllers/modal-controller';
 import {
@@ -265,6 +272,12 @@ ul.saved-scoundrels-list {
 @media (max-width: 768px) {
     footer {
         grid-template-columns: 1fr;
+
+        // Add lines between sections
+        > div:not(:last-child) {
+            border-bottom: 1px solid var(--color-surface-lighter);
+            padding-bottom: 2rem;
+        }
     }
 
     h1 {

@@ -41,11 +41,7 @@
     }
 }
 
-:deep(.modal__content > div) {
+:deep(.modal__content > *) {
     width: 100%;
-}
-
-:deep(section:last-of-type) {
-    padding-bottom: 2rem;
 }
 </style>
