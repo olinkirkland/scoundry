@@ -1,34 +1,33 @@
 <template>
     <step-header>
         <h2>Export your <strong>scoundrel</strong></h2>
-        <p>
-            Scoundry saves your character automatically. You can also export
-            your character from this page.
-        </p>
+        <p>Share or print your character sheet.</p>
     </step-header>
     <div class="save">
-        <p>
-            Choose an
-            <span class="filled" :style="{ color: selectedInkColor }"
-                >ink color</span
-            >
-            for your character sheet.
-        </p>
-        <ul class="ink-colors">
-            <li
-                v-for="color in inkColors"
-                :key="color"
-                @click="onClickChangeInkColor(color)"
-                :style="{ backgroundColor: color, color: color }"
-                :class="{ active: color === selectedInkColor }"
-            >
-                <img
-                    v-if="color === selectedInkColor"
-                    src="/assets/icons/done.png"
-                    alt="Selected"
-                />
-            </li>
-        </ul>
+        <div class="ink-row">
+            <p>
+                Choose an
+                <span class="filled" :style="{ color: selectedInkColor }"
+                    >ink color</span
+                >
+                for your sheet.
+            </p>
+            <ul class="ink-colors">
+                <li
+                    v-for="color in inkColors"
+                    :key="color"
+                    @click="onClickChangeInkColor(color)"
+                    :style="{ backgroundColor: color, color: color }"
+                    :class="{ active: color === selectedInkColor }"
+                >
+                    <img
+                        v-if="color === selectedInkColor"
+                        src="/assets/icons/done.png"
+                        alt="Selected"
+                    />
+                </li>
+            </ul>
+        </div>
         <div class="preview-container">
             <img
                 v-if="!sheetDataUrl"
@@ -142,6 +141,17 @@ function makeFileName(name: string) {
     padding: 1.2rem;
 }
 
+.ink-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    gap: 1.2rem;
+    > p {
+        white-space: nowrap;
+    }
+}
+
 .preview-container {
     width: 100%;
     min-height: 8rem;
@@ -160,10 +170,11 @@ function makeFileName(name: string) {
 }
 
 ul.ink-colors {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 0.6rem;
 
     > li {
@@ -210,6 +221,12 @@ span.filled {
 }
 
 @media (max-width: 768px) {
+    .ink-row {
+        align-items: center;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
     .row {
         margin-top: auto;
         width: 100%;

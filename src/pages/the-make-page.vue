@@ -42,9 +42,9 @@
 
             <!-- Next -->
             <button
-                class="btn"
+                class="btn" v-if="!isLastStep"
                 @click="onClickNextStep"
-                :class="{ disabled: isLastStep || !scoundrel.playbook }"
+                :class="{ disabled: !scoundrel.playbook }"
             >
                 <span>Next</span>
             </button>
