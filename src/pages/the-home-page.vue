@@ -104,7 +104,7 @@ import {
 } from '@/controllers/storage-controller';
 import { APP_VERSION } from '@/main';
 import { PageName, router } from '@/router';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
 
 const page = ref<HTMLElement | null>(null);
@@ -114,6 +114,17 @@ savedScoundrels.value = getSavedScoundrels().filter(
 ); // Remove any nulls
 const savedMetadata = ref<Metadata[]>(getSavedMetadata()); // Use for timestamps
 
+onMounted(() => {
+    fetch('/assets/news.json?_t=' + Date.now())
+        .then((response) => response.json())
+        .then((data) => {
+            const lastNewsIdSeen = localStorage.getItem('lastNewsIdSeen');
+            const newsIds = data.map((n: any) => n.id);
+            const newestNewsId = newsIds[0].toString();
+            if (newestNewsId !== lastNewsIdSeen)
+                ModalController.open(NewsModal);
+        });
+});
 async function onClickMakeNewScoundrel() {
     page.value?.classList.remove('page-in');
     page.value?.classList.add('page-out');
@@ -122,9 +133,9 @@ async function onClickMakeNewScoundrel() {
     router.push({ name: PageName.MAKE });
 }
 
-async function onClickLoadFromJSON() {
-    ModalController.open(LoadFromJsonModal);
-}
+// async function onClickLoadFromJSON() {
+//     ModalController.open(LoadFromJsonModal);
+// }
 
 function onClickLoadScoundrel(scoundrel: Scoundrel) {
     router.replace({

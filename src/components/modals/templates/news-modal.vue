@@ -55,6 +55,7 @@ fetch('/assets/news.json?_t=' + Date.now())
     .then((response) => response.json())
     .then((data) => {
         newsItems.value = data;
+        localStorage.setItem('lastNewsIdSeen', data[0].id);
     });
 </script>
 
