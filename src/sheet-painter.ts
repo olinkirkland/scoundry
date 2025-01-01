@@ -147,12 +147,12 @@ const data = {
         jennah: { x: 1110, y: 1042 },
         riven: { x: 1110, y: 1084 },
         jeren: { x: 1110, y: 1126 },
-        // Whisper: 'nyryx-2', scurlock, setarra, quellyn, flynn
+        // Whisper: 'nyryx-2', scurlock, setarra, quellyn, flint
         'nyryx-2': { x: 1110, y: 958 },
         scurlock: { x: 1110, y: 1000 },
         setarra: { x: 1110, y: 1042 },
         quellyn: { x: 1110, y: 1084 },
-        flynn: { x: 1110, y: 1126 },
+        flint: { x: 1110, y: 1126 },
     },
     vices: {
         faith: { x: 320, y: 542, w: 75 },
