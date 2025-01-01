@@ -38,17 +38,30 @@
             <img ref="sheetPreview" class="preview" />
         </div>
         <div class="row wrap">
-            <button
+            <!-- <button
                 class="btn btn--alt"
-                :class="{ 'no-click': showCopyMessage }"
-                :disabled="showCopyMessage"
+                :class="{ 'no-click': showCopyJsonMessage }"
+                :disabled="showCopyJsonMessage"
                 @click="onClickCopyJSON"
             >
-                <span class="copy-message" v-if="showCopyMessage">Copied!</span>
-                <span v-else>Copy Character JSON</span>
+                <span class="copy-message" v-if="showCopyJsonMessage"
+                    >Copied!</span
+                >
+                <span v-else>Copy JSON</span>
+            </button> -->
+            <button
+                class="btn btn--alt"
+                :class="{ 'no-click': showCopyUrlMessage }"
+                :disabled="showCopyUrlMessage"
+                @click="onClickCopyURL"
+            >
+                <span class="copy-message" v-if="showCopyUrlMessage"
+                    >Copied!</span
+                >
+                <span v-else>Share as URL</span>
             </button>
             <button class="btn" @click="onClickSavePNG">
-                Save Character Sheet PNG
+                Save as Image
             </button>
         </div>
     </div>
@@ -59,7 +72,10 @@ import { trackEvent } from '@/main';
 import { Scoundrel } from '@/scoundrel';
 import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
-import { getSemanticScoundrelName } from '@/util/scoundrel-util';
+import {
+    encodeJsonToUrl,
+    getSemanticScoundrelName,
+} from '@/util/scoundrel-util';
 import { ref } from 'vue';
 import stepHeader from '../step-header.vue';
 
@@ -80,16 +96,33 @@ const inkColors = [
     '#131313',
 ];
 
-const showCopyMessage = ref(false);
+const showCopyJsonMessage = ref(false);
+const showCopyUrlMessage = ref(false);
 const selectedInkColor = ref(inkColors[0]);
 
 const sheetDataUrl = ref('');
 const sheetPreview = ref<HTMLImageElement | null>(null);
 generatePNG();
 
+let generatedUrl = '';
+try {
+    generatedUrl = `${window.location.origin}/import/${encodeJsonToUrl(props.scoundrel)}`;
+} catch (e) {
+    console.error('Error encoding scoundrel to base64', e);
+}
+
 function onClickChangeInkColor(color: string) {
     selectedInkColor.value = color;
     generatePNG();
+}
+
+function onClickCopyURL() {
+    trackEvent('copy-url');
+    navigator.clipboard.writeText(generatedUrl);
+    showCopyUrlMessage.value = true;
+    setTimeout(() => {
+        showCopyUrlMessage.value = false;
+    }, 2000);
 }
 
 function onClickCopyJSON() {
@@ -97,9 +130,9 @@ function onClickCopyJSON() {
     const scoundrelCopy = { ...props.scoundrel };
     scoundrelCopy.id = makeSemanticId();
     navigator.clipboard.writeText(JSON.stringify(scoundrelCopy));
-    showCopyMessage.value = true;
+    showCopyJsonMessage.value = true;
     setTimeout(() => {
-        showCopyMessage.value = false;
+        showCopyJsonMessage.value = false;
     }, 2000);
 }
 

@@ -13,7 +13,7 @@ app.use(router);
 app.mount('#app');
 
 mixpanel.init('e25d2f8346d1c0731fbb322d6f4c9d94');
-trackEvent('Page Load', {
+trackEvent('page-load', {
     version: APP_VERSION,
     path: window.location.pathname,
 });

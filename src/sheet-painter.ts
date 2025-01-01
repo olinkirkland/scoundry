@@ -170,7 +170,7 @@ export async function paintSheet(
     scoundrel: Scoundrel,
     color: string
 ): Promise<HTMLCanvasElement> {
-    console.log('painting a sheet for a', scoundrel.playbook);
+    // console.log('painting a sheet for a', scoundrel.playbook);
 
     if (!document.fonts.check('32px Gochi Hand'))
         await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -287,7 +287,7 @@ export async function paintSheet(
 
             // Fill in Friends triangles
             scoundrel.friends.forEach((f) => {
-                console.log('drawing a triangle for', f);
+                // console.log('drawing a triangle for', f);
                 const point = data.friends[f as keyof typeof data.friends];
                 if (!point) return console.error('No point for', f);
                 drawTriangleUp(ctx, point);
@@ -295,7 +295,7 @@ export async function paintSheet(
 
             // Fill in Rivals triangles
             scoundrel.rivals.forEach((r) => {
-                console.log('drawing a triangle for', r);
+                // console.log('drawing a triangle for', r);
                 const point = data.friends[r as keyof typeof data.friends];
                 if (!point) return console.error('No point for', r);
                 const offset = { x: 28, y: -14 };

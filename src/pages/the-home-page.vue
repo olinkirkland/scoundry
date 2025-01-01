@@ -13,9 +13,9 @@
                 <button class="btn" @click="onClickMakeNewScoundrel">
                     <span>Make a new Scoundrel</span>
                 </button>
-                <button class="btn btn--alt" @click="onClickLoadFromJSON">
+                <!-- <button class="btn btn--alt" @click="onClickLoadFromJSON">
                     <span>Load from JSON</span>
-                </button>
+                </button> -->
             </div>
 
             <ul class="saved-scoundrels-list" v-if="savedScoundrels.length">

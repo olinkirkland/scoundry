@@ -10,7 +10,10 @@
                 <p v-html="props.message"></p>
 
                 <div class="row wrap center">
-                    <button class="btn" @click="props.onConfirm">
+                    <button
+                        class="btn"
+                        @click="props.onConfirm || ModalController.close()"
+                    >
                         <span>{{ props.confirmText || 'Ok' }}</span>
                     </button>
                 </div>
@@ -22,6 +25,7 @@
 <script setup lang="ts">
 import ModalFrame from '@/components/modals/modal-frame.vue';
 import ModalHeader from '@/components/modals/modal-header.vue';
+import ModalController from '@/controllers/modal-controller';
 
 const props = defineProps<{
     title: string;

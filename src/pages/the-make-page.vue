@@ -82,9 +82,9 @@ const page = ref<HTMLElement | null>(null);
 const stepContainer = ref<HTMLElement | null>(null);
 
 const showModel = ref(false);
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'm' && e.altKey) showModel.value = !showModel.value;
-});
+// window.addEventListener('keydown', (e) => {
+//     if (e.key === 'm' && e.altKey) showModel.value = !showModel.value;
+// });
 
 const stepComponents = {
     playbook: StepPlaybook,
