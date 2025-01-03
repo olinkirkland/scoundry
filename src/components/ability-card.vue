@@ -2,6 +2,7 @@
     <div class="ability-card">
         <h2>{{ ability.label }}</h2>
         <p class="description">{{ ability.description }}</p>
+        <div class="overlay"></div>
     </div>
 </template>
 
@@ -24,6 +25,18 @@ const props = defineProps<{
     align-items: center;
     cursor: pointer;
     border-radius: 5px;
+    border: 1px solid transparent;
+    position: relative;
+
+    > .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-primary);
+        opacity: 0;
+    }
 
     * {
         color: inherit;
@@ -51,11 +64,15 @@ const props = defineProps<{
     &.active {
         transition: none;
         color: var(--color-primary);
-        background-color: transparent;
+        border: 1px solid var(--color-primary);
         box-shadow: none !important;
 
         h2 {
             text-shadow: var(--shadow-text);
+        }
+
+        > .overlay {
+            opacity: 0.05;
         }
 
         :deep(.action-tag) {

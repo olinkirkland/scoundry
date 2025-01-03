@@ -4,7 +4,7 @@
         <p>Share or print your character sheet.</p>
     </step-header>
     <div class="save">
-        <span class="sheet-type">
+        <span class="sheet-type" v-if="false">
             <a
                 @click="onClickChangeSheetType('classic')"
                 :class="{

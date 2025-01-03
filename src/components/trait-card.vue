@@ -30,6 +30,9 @@ const props = defineProps<{
     justify-content: center;
     align-content: center;
 
+    background-color: var(--color-surface);
+    border-radius: 5px;
+
     * {
         color: inherit;
     }

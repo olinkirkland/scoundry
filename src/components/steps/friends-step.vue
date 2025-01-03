@@ -86,7 +86,7 @@ ul.friends-list {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 1rem;
+    gap: 0.4rem;
 }
 
 li.person-card {
@@ -95,8 +95,10 @@ li.person-card {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    border: 1px solid var(--color-on-surface);
+    border: 1px solid transparent;
+    background-color: var(--color-surface);
     align-items: center;
+    border-radius: 5px;
     > .background-fill {
         position: absolute;
         transition: all 0.2s;

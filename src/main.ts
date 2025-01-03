@@ -3,7 +3,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import { router } from './router';
 
-export const APP_VERSION = '1.1.0';
+export const APP_VERSION = '1.1.2';
 
 // Create the app
 const app = createApp(App);
