@@ -1,5 +1,7 @@
 export type Scoundrel = {
     id: string;
+    preferredInkColor: string;
+    preferredSheetType: string;
     playbook: string;
     name?: string;
     alias?: string;

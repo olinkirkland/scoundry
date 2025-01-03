@@ -6,20 +6,19 @@
     <div class="save">
         <span class="sheet-type">
             <a
-                @click="
-                    sheetType = 'classic';
-                    generatePNG();
-                "
-                :class="{ selected: sheetType === 'classic' }"
+                @click="onClickChangeSheetType('classic')"
+                :class="{
+                    selected: props.scoundrel.preferredSheetType === 'classic',
+                }"
                 >Classic</a
             >
             or
             <a
-                @click="
-                    sheetType = 'deep-cuts';
-                    generatePNG();
-                "
-                :class="{ selected: sheetType === 'deep-cuts' }"
+                @click="onClickChangeSheetType('deep-cuts')"
+                :class="{
+                    selected:
+                        props.scoundrel.preferredSheetType === 'deep-cuts',
+                }"
             >
                 Deep Cuts
             </a>
@@ -29,7 +28,9 @@
         <div class="ink-row">
             <p>
                 Choose an
-                <span class="filled" :style="{ color: selectedInkColor }"
+                <span
+                    class="filled"
+                    :style="{ color: props.scoundrel.preferredInkColor }"
                     >ink color</span
                 >
                 for your sheet.
@@ -40,10 +41,12 @@
                     :key="color"
                     @click="onClickChangeInkColor(color)"
                     :style="{ backgroundColor: color, color: color }"
-                    :class="{ active: color === selectedInkColor }"
+                    :class="{
+                        active: color === props.scoundrel.preferredInkColor,
+                    }"
                 >
                     <img
-                        v-if="color === selectedInkColor"
+                        v-if="color === props.scoundrel.preferredInkColor"
                         src="/assets/icons/done.png"
                         alt="Selected"
                     />
@@ -116,10 +119,13 @@ const inkColors = [
     '#131313',
 ];
 
-const sheetType = ref<'classic' | 'deep-cuts'>('classic');
+if (!props.scoundrel.preferredInkColor)
+    props.scoundrel.preferredInkColor = inkColors[0];
+if (!props.scoundrel.preferredSheetType)
+    props.scoundrel.preferredSheetType = 'classic';
+
 const showCopyJsonMessage = ref(false);
 const showCopyUrlMessage = ref(false);
-const selectedInkColor = ref(inkColors[0]);
 
 const sheetDataUrl = ref('');
 const sheetPreview = ref<HTMLImageElement | null>(null);
@@ -133,7 +139,12 @@ try {
 }
 
 function onClickChangeInkColor(color: string) {
-    selectedInkColor.value = color;
+    props.scoundrel.preferredInkColor = color;
+    generatePNG();
+}
+
+function onClickChangeSheetType(type: 'classic' | 'deep-cuts') {
+    props.scoundrel.preferredSheetType = type;
     generatePNG();
 }
 
@@ -159,7 +170,7 @@ function onClickCopyJSON() {
 
 async function generatePNG() {
     trackEvent('generate-png', {
-        inkColor: selectedInkColor.value,
+        inkColor: props.scoundrel.preferredInkColor,
         playbook: props.scoundrel.playbook,
         background: props.scoundrel.background,
         backgroundDetail: props.scoundrel.backgroundDetail,
@@ -169,12 +180,9 @@ async function generatePNG() {
         alias: props.scoundrel.alias,
         vice: props.scoundrel.vice,
         viceDetail: props.scoundrel.viceDetail,
+        sheetType: props.scoundrel.preferredSheetType,
     });
-    const canvas = await paintSheet(
-        props.scoundrel,
-        selectedInkColor.value,
-        sheetType.value
-    );
+    const canvas = await paintSheet(props.scoundrel);
     console.log(canvas);
     if (!canvas) return;
 
