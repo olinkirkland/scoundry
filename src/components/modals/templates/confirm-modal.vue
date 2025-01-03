@@ -44,7 +44,7 @@ function onClickCancel() {
 </script>
 
 <style scoped lang="scss">
-.info {
+.confirm {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
