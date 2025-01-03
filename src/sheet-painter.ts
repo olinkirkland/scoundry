@@ -167,43 +167,24 @@ const dataClassic = {
 };
 
 const dataDeepCuts = {
-    name: { x: 225, y: 190 },
-    alias: { x: 0, y: 0 },
+    nameAndAlias: { x: 225, y: 190 },
     look: { x: 225, y: 410 },
-    heritages: {
-        akoros: { x: 272, y: 428, w: 110 },
-        'dagger-isles': { x: 460, y: 428, w: 260 },
-        iruvia: { x: 138, y: 453, w: 95 },
-        severos: { x: 240, y: 453, w: 110 },
-        skovlan: { x: 356, y: 453, w: 120 },
-        tycheros: { x: 480, y: 453, w: 135 },
-    },
-    backgrounds: {
-        academic: { x: 826, y: 428, w: 140 },
-        labor: { x: 942, y: 428, w: 90 },
-        law: { x: 1026, y: 428, w: 75 },
-        trade: { x: 636, y: 453, w: 95 },
-        military: { x: 742, y: 453, w: 120 },
-        noble: { x: 848, y: 453, w: 90 },
-        underworld: { x: 976, y: 453, w: 160 },
-    },
-    heritageText: { x: 225, y: 302 },
-    backgroundText: { x: 0, y: 0 },
+    heritageAndBackground: { x: 225, y: 302 },
     actions: {
-        // The vertical offset between bubbles is 28.6px
+        // The vertical offset between bubbles (of the same attribute) is 34.5px
         // The x values represent where a row of bubbles starts
-        hunt: { x: 1838.5, y: 325.5 },
-        study: { x: 1838.5, y: 354.1 },
-        survey: { x: 1838.5, y: 382.7 },
-        tinker: { x: 1838.5, y: 411.3 },
-        finesse: { x: 1838.5, y: 488 },
-        prowl: { x: 1838.5, y: 516.6 },
-        skirmish: { x: 1838.5, y: 545.2 },
-        wreck: { x: 1838.5, y: 573.8 },
-        attune: { x: 1838.5, y: 650.5 },
-        command: { x: 1838.5, y: 679.1 },
-        consort: { x: 1838.5, y: 707.7 },
-        sway: { x: 1838.5, y: 736.3 },
+        hunt: { x: 1852, y: 165.5 },
+        study: { x: 1852, y: 200 },
+        survey: { x: 1852, y: 235 },
+        tinker: { x: 1852, y: 270 },
+        finesse: { x: 1852, y: 365.5 },
+        prowl: { x: 1852, y: 400 },
+        skirmish: { x: 1852, y: 435 },
+        wreck: { x: 1852, y: 470 },
+        attune: { x: 1852, y: 565.5 },
+        command: { x: 1852, y: 600 },
+        consort: { x: 1852, y: 635 },
+        sway: { x: 1852, y: 670 },
     },
     abilities: {
         // Cutter
@@ -314,16 +295,8 @@ const dataDeepCuts = {
         quellyn: { x: 1110, y: 1084 },
         flint: { x: 1110, y: 1126 },
     },
-    vices: {
-        faith: { x: 320, y: 542, w: 75 },
-        gambling: { x: 430, y: 542, w: 130 },
-        luxury: { x: 547, y: 542, w: 105 },
-        obligation: { x: 672, y: 542, w: 145 },
-        pleasure: { x: 808, y: 542, w: 125 },
-        stupor: { x: 920, y: 542, w: 100 },
-        weird: { x: 1015, y: 542, w: 95 },
-    },
-    viceText: { x: 100, y: 515 },
+    vice: { x: 520, y: 1565 },
+    viceText: { x: 520, y: 1615 },
 };
 
 export async function paintSheet(
@@ -437,7 +410,7 @@ export async function paintSheet(
                     'consort',
                     'sway',
                 ].forEach((action, i) => {
-                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions);
+                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions, 27, 8);
                 });
 
                 // Fill in Abilities bubbles
@@ -498,7 +471,7 @@ export async function paintSheet(
                         scoundrel.viceDetail,
                         data.viceText.x,
                         data.viceText.y,
-                        940
+                        940, 32
                     );
 
                 // Name
@@ -516,7 +489,7 @@ export async function paintSheet(
                         scoundrel.look,
                         data.look.x,
                         data.look.y,
-                        940
+                        940, 32
                     );
 
                 resolve(canvas);
@@ -545,17 +518,6 @@ export async function paintSheet(
                 ctx.strokeStyle = 'red';
                 ctx.lineWidth = 2;
 
-                const heritage =
-                    data.heritages[
-                    scoundrel.heritage as keyof typeof data.heritages
-                    ];
-
-                // Circle Background
-                const background =
-                    data.backgrounds[
-                    scoundrel.background as keyof typeof data.backgrounds
-                    ];
-
                 let heritageAndBackground = '';
 
                 // Write Heritage Detail
@@ -564,6 +526,8 @@ export async function paintSheet(
                 );
                 if (scoundrel.heritageDetail)
                     heritageAndBackground += heritageDetail?.label || scoundrel.heritageDetail;
+                if (scoundrel.heritageDetail && scoundrel.heritage)
+                    heritageAndBackground += ` (${scoundrel.heritage})`;
 
                 // Write Background Detail
                 const backgroundDetail = dataBackgrounds.find(
@@ -572,11 +536,15 @@ export async function paintSheet(
                 if (scoundrel.backgroundDetail) {
                     if (heritageAndBackground.length > 0) heritageAndBackground += ' / ';
                     heritageAndBackground += backgroundDetail?.label || scoundrel.backgroundDetail;
+                    if (scoundrel.background) heritageAndBackground += ` (${scoundrel.background})`;
                 }
-                ctx.fillText(
+                fillMultilineText(
+                    ctx,
                     heritageAndBackground,
-                    data.heritageText.x,
-                    data.heritageText.y
+                    data.heritageAndBackground.x,
+                    data.heritageAndBackground.y,
+                    800,
+                    40
                 );
 
                 // Fill in Action bubbles
@@ -594,7 +562,7 @@ export async function paintSheet(
                     'consort',
                     'sway',
                 ].forEach((action, i) => {
-                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions);
+                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions, 29, 9.5);
                 });
 
                 // Fill in Abilities bubbles
@@ -629,24 +597,9 @@ export async function paintSheet(
                     });
                 });
 
-                // Circle Vice
-                const viceBoxHeight = 36;
-                const vice = data.vices[scoundrel.vice as keyof typeof data.vices];
-                if (vice) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        vice.x - vice.w / 2,
-                        vice.y - viceBoxHeight / 2,
-                        vice.w,
-                        viceBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
+                // Write Vice
+                if (scoundrel.vice)
+                    ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y - 60);
 
                 // Write Vice Detail
                 if (scoundrel.viceDetail)
@@ -655,7 +608,9 @@ export async function paintSheet(
                         scoundrel.viceDetail,
                         data.viceText.x,
                         data.viceText.y,
-                        940
+                        400,
+                        40,
+                        false
                     );
 
                 // Name
@@ -666,7 +621,7 @@ export async function paintSheet(
                         if (nameAndAlias.length > 0) nameAndAlias += ' / ';
                         nameAndAlias += scoundrel.alias;
                     }
-                    ctx.fillText(nameAndAlias, data.name.x, data.name.y);
+                    ctx.fillText(nameAndAlias, data.nameAndAlias.x, data.nameAndAlias.y);
                 }
 
                 // Look
@@ -676,7 +631,8 @@ export async function paintSheet(
                         scoundrel.look,
                         data.look.x,
                         data.look.y,
-                        800
+                        800,
+                        40
                     );
 
                 resolve(canvas);
@@ -698,12 +654,13 @@ function fillMultilineText(
     text: string,
     x: number,
     y: number,
-    maxWidth: number
+    maxWidth: number,
+    lineHeight: number,
+    directionUp = true
 ) {
     // Fill a text box with a maximum width and a maximum number of lines
     // Use an ellipsis to cut off the text if it's too long
     const lines: { text: string; x: number; y: number }[] = [];
-    const LINE_HEIGHT = 32;
     const words = text.split(' ');
     let line = '';
     let lineCount = 0;
@@ -714,7 +671,7 @@ function fillMultilineText(
         if (testWidth > maxWidth && i > 0) {
             lines.push({ text: line, x, y });
             line = words[i] + ' ';
-            y += LINE_HEIGHT;
+            y += lineHeight;
             lineCount++;
         } else {
             line = testLine;
@@ -722,8 +679,8 @@ function fillMultilineText(
     }
     lines.push({ text: line, x, y });
     // Move the text up by line count * line height
-    lines.forEach((line) => (line.y -= lineCount * LINE_HEIGHT));
-
+    if (!directionUp) lines.forEach((line) => (line.y -= lineCount * lineHeight));
+    else lines.forEach((line) => (line.y -= lineCount * lineHeight));
     lines.forEach((line) => ctx.fillText(line.text, line.x, line.y));
 }
 
@@ -757,21 +714,22 @@ function drawActionBubbleRow(
     ctx: CanvasRenderingContext2D,
     scoundrel: Scoundrel,
     action: Action,
-    actions: { [key: string]: { x: number; y: number } }
+    actions: { [key: string]: { x: number; y: number } },
+    offset,
+    radius
 ) {
-    // The horizontal offset between bubbles is 27px
     const bubbleCount = getActionValue(scoundrel.actions, action);
     // @ts-ignore
     const point = actions[action];
     for (let i = 0; i < bubbleCount; i++)
-        drawBubble(ctx, { x: point.x + i * 27, y: point.y });
+        drawBubble(ctx, { x: point.x + i * offset, y: point.y }, radius);
 }
 
 function drawBubble(
     ctx: CanvasRenderingContext2D,
-    point: { x: number; y: number }
+    point: { x: number; y: number },
+    radius = 8
 ) {
-    const radius = 8;
     ctx.beginPath();
     ctx.arc(point.x, point.y, radius, 0, 2 * Math.PI);
     ctx.fill();
