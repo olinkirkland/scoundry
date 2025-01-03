@@ -4,6 +4,28 @@
         <p>Share or print your character sheet.</p>
     </step-header>
     <div class="save">
+        <span class="sheet-type">
+            <a
+                @click="
+                    sheetType = 'classic';
+                    generatePNG();
+                "
+                :class="{ selected: sheetType === 'classic' }"
+                >Classic</a
+            >
+            or
+            <a
+                @click="
+                    sheetType = 'deep-cuts';
+                    generatePNG();
+                "
+                :class="{ selected: sheetType === 'deep-cuts' }"
+            >
+                Deep Cuts
+            </a>
+            ?
+        </span>
+
         <div class="ink-row">
             <p>
                 Choose an
@@ -60,9 +82,7 @@
                 >
                 <span v-else>Share as URL</span>
             </button>
-            <button class="btn" @click="onClickSavePNG">
-                Save as Image
-            </button>
+            <button class="btn" @click="onClickSavePNG">Save as Image</button>
         </div>
     </div>
 </template>
@@ -96,6 +116,7 @@ const inkColors = [
     '#131313',
 ];
 
+const sheetType = ref<'classic' | 'deep-cuts'>('classic');
 const showCopyJsonMessage = ref(false);
 const showCopyUrlMessage = ref(false);
 const selectedInkColor = ref(inkColors[0]);
@@ -149,7 +170,11 @@ async function generatePNG() {
         vice: props.scoundrel.vice,
         viceDetail: props.scoundrel.viceDetail,
     });
-    const canvas = await paintSheet(props.scoundrel, selectedInkColor.value);
+    const canvas = await paintSheet(
+        props.scoundrel,
+        selectedInkColor.value,
+        sheetType.value
+    );
     console.log(canvas);
     if (!canvas) return;
 
@@ -260,6 +285,14 @@ ul.ink-colors {
 span.filled {
     font-family: var(--font-handwriting);
     font-size: 2rem;
+}
+
+.sheet-type {
+    margin: 0 auto;
+
+    > a.selected {
+        color: var(--color-primary);
+    }
 }
 
 @keyframes spin {

@@ -67,7 +67,7 @@ a,
 .link {
     font-style: italic;
     text-decoration: none;
-    border-bottom: 1px dashed var(--color-on-surface);
+    border-bottom: 1px dashed currentColor;
     cursor: pointer;
     background-color: transparent;
 }

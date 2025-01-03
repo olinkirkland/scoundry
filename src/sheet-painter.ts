@@ -15,7 +15,7 @@ const data = {
         'dagger-isles': { x: 460, y: 428, w: 260 },
         iruvia: { x: 138, y: 453, w: 95 },
         severos: { x: 240, y: 453, w: 110 },
-        skovlan: { x: 136, y: 453, w: 95 },
+        skovlan: { x: 356, y: 453, w: 120 },
         tycheros: { x: 480, y: 453, w: 135 },
     },
     backgrounds: {
@@ -168,16 +168,18 @@ const data = {
 
 export async function paintSheet(
     scoundrel: Scoundrel,
-    color: string
+    color: string,
+    sheetType: 'classic' | 'deep-cuts'
 ): Promise<HTMLCanvasElement> {
-    // console.log('painting a sheet for a', scoundrel.playbook);
+    console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
 
     if (!document.fonts.check('32px Gochi Hand'))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
     return new Promise((resolve, reject) => {
         const template = new Image();
-        template.src = `/assets/sheets/sheet-images/${scoundrel.playbook}.png`;
+        const dc = sheetType === 'deep-cuts';
+        template.src = `/assets/sheets/sheet-images/${dc ? 'dc-' : ''}${scoundrel.playbook}.png`;
 
         template.onload = () => {
             const canvas = document.createElement('canvas');
@@ -195,7 +197,7 @@ export async function paintSheet(
             const heritageBoxHeight = 36;
             const heritage =
                 data.heritages[
-                    scoundrel.heritage as keyof typeof data.heritages
+                scoundrel.heritage as keyof typeof data.heritages
                 ];
             if (heritage) {
                 // Use roughjs to draw the oval
@@ -217,7 +219,7 @@ export async function paintSheet(
             const backgroundBoxHeight = 36;
             const background =
                 data.backgrounds[
-                    scoundrel.background as keyof typeof data.backgrounds
+                scoundrel.background as keyof typeof data.backgrounds
                 ];
             if (background) {
                 // Use roughjs to draw the oval
