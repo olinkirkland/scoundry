@@ -659,12 +659,15 @@ export async function paintSheet(
                     );
 
                 // Name
-                if (scoundrel.name)
-                    ctx.fillText(scoundrel.name, data.name.x, data.name.y);
-
-                // Alias
-                if (scoundrel.alias)
-                    ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
+                if (scoundrel.name || scoundrel.alias) {
+                    let nameAndAlias = '';
+                    if (scoundrel.name) nameAndAlias += scoundrel.name;
+                    if (scoundrel.alias) {
+                        if (nameAndAlias.length > 0) nameAndAlias += ' / ';
+                        nameAndAlias += scoundrel.alias;
+                    }
+                    ctx.fillText(nameAndAlias, data.name.x, data.name.y);
+                }
 
                 // Look
                 if (scoundrel.look)
