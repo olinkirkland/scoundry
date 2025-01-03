@@ -110,7 +110,6 @@ function onClickBackgroundDetail(backgroundDetail: TraitDetail) {
     overflow: hidden;
     margin-bottom: 1rem !important;
     > .list-container {
-        border-radius: 5px;
         display: flex;
         justify-content: center;
         margin: 0 1.2rem;

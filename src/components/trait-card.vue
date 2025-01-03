@@ -1,6 +1,5 @@
 <template>
-    <div class="playbook-card" :class="{ selected }">
-        <!-- <img :src="`/assets/images/${trait.image}`" alt="" /> -->
+    <div class="trait-card" :class="{ selected }">
         <div class="overlay"></div>
         <h2>{{ trait.label }}</h2>
     </div>
@@ -16,14 +15,11 @@ const props = defineProps<{
 </script>
 
 <style scoped lang="scss">
-.playbook-card {
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s ease-in-out;
+.trait-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border-radius: 5px;
     overflow: hidden;
     width: 12rem;
     min-width: 12rem;
@@ -50,12 +46,8 @@ const props = defineProps<{
         height: 100%;
         top: 0;
         left: 0;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.4)
-        );
-        transition: opacity 0.2s ease-in-out;
+        background-color: var(--color-primary);
+        opacity: 0;
     }
 
     h2 {
@@ -69,28 +61,23 @@ const props = defineProps<{
     }
 
     &:hover {
-        box-shadow: var(--shadow-md);
-
-        .overlay {
-            opacity: 0.8;
+        &:not(.selected) {
+            text-decoration: underline;
         }
     }
 
     &.selected {
         transition: none;
         color: var(--color-primary);
-        background: none;
-        box-shadow: none;
+        border: 1px solid var(--color-primary);
 
-        img,
         .overlay {
-            display: none;
+            opacity: 0.05;
         }
 
         h2 {
             width: fit-content;
             text-shadow: var(--shadow-text);
-            border-bottom: 2px solid var(--color-primary);
         }
     }
 }
