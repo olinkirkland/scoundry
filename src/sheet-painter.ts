@@ -167,9 +167,9 @@ const dataClassic = {
 };
 
 const dataDeepCuts = {
-    name: { x: 100, y: 235 },
-    alias: { x: 704, y: 235 },
-    look: { x: 100, y: 316 },
+    name: { x: 225, y: 190 },
+    alias: { x: 0, y: 0 },
+    look: { x: 225, y: 410 },
     heritages: {
         akoros: { x: 272, y: 428, w: 110 },
         'dagger-isles': { x: 460, y: 428, w: 260 },
@@ -187,8 +187,8 @@ const dataDeepCuts = {
         noble: { x: 848, y: 453, w: 90 },
         underworld: { x: 976, y: 453, w: 160 },
     },
-    heritageText: { x: 105, y: 400 },
-    backgroundText: { x: 605, y: 400 },
+    heritageText: { x: 225, y: 302 },
+    backgroundText: { x: 0, y: 0 },
     actions: {
         // The vertical offset between bubbles is 28.6px
         // The x values represent where a row of bubbles starts
@@ -334,7 +334,7 @@ export async function paintSheet(
     const sheetType = scoundrel.preferredSheetType;
 
     console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
-    
+
     if (!document.fonts.check('32px Gochi Hand'))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -404,7 +404,7 @@ export async function paintSheet(
                 const heritageDetail = dataHeritages.find(
                     (h) => h.id === scoundrel.heritageDetail
                 );
-                if (scoundrel.backgroundDetail)
+                if (scoundrel.heritageDetail)
                     ctx.fillText(
                         heritageDetail?.label || scoundrel.heritageDetail,
                         data.heritageText.x,
@@ -545,71 +545,39 @@ export async function paintSheet(
                 ctx.strokeStyle = 'red';
                 ctx.lineWidth = 2;
 
-                // Circle Heritage
-                const heritageBoxHeight = 36;
                 const heritage =
                     data.heritages[
                     scoundrel.heritage as keyof typeof data.heritages
                     ];
-                if (heritage) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        heritage.x - heritage.w / 2,
-                        heritage.y - heritageBoxHeight / 2,
-                        heritage.w,
-                        heritageBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
 
                 // Circle Background
-                const backgroundBoxHeight = 36;
                 const background =
                     data.backgrounds[
                     scoundrel.background as keyof typeof data.backgrounds
                     ];
-                if (background) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        background.x - background.w / 2,
-                        background.y - backgroundBoxHeight / 2,
-                        background.w,
-                        backgroundBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
+
+                let heritageAndBackground = '';
 
                 // Write Heritage Detail
                 const heritageDetail = dataHeritages.find(
                     (h) => h.id === scoundrel.heritageDetail
                 );
-                if (scoundrel.backgroundDetail)
-                    ctx.fillText(
-                        heritageDetail?.label || scoundrel.heritageDetail,
-                        data.heritageText.x,
-                        data.heritageText.y
-                    );
+                if (scoundrel.heritageDetail)
+                    heritageAndBackground += heritageDetail?.label || scoundrel.heritageDetail;
 
                 // Write Background Detail
                 const backgroundDetail = dataBackgrounds.find(
                     (bg) => bg.id === scoundrel.backgroundDetail
                 );
-                if (scoundrel.backgroundDetail)
-                    ctx.fillText(
-                        backgroundDetail?.label || scoundrel.backgroundDetail,
-                        data.backgroundText.x,
-                        data.backgroundText.y
-                    );
+                if (scoundrel.backgroundDetail) {
+                    if (heritageAndBackground.length > 0) heritageAndBackground += ' / ';
+                    heritageAndBackground += backgroundDetail?.label || scoundrel.backgroundDetail;
+                }
+                ctx.fillText(
+                    heritageAndBackground,
+                    data.heritageText.x,
+                    data.heritageText.y
+                );
 
                 // Fill in Action bubbles
                 [
@@ -705,7 +673,7 @@ export async function paintSheet(
                         scoundrel.look,
                         data.look.x,
                         data.look.y,
-                        940
+                        800
                     );
 
                 resolve(canvas);
