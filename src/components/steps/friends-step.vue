@@ -113,6 +113,21 @@ li.person-card {
         > .background-fill {
             opacity: 0.05;
         }
+
+        * {
+            color: var(--color-primary);
+        }
+
+        .checkboxes .checkbox-group {
+            input[type='checkbox'] {
+                &:checked + label::before {
+                    background-image: url('/assets/icons/checkbox-checked__primary.png');
+                }
+                &:not(:checked) + label::before {
+                    background-image: url('/assets/icons/checkbox-unchecked__primary.png');
+                }
+            }
+        }
     }
 
     > .body {
