@@ -253,49 +253,49 @@ const dataDeepCuts = {
     },
     friends: {
         // Cutter: marlane, chael, mercy, grace, sawtooth
-        marlane: { x: 1110, y: 958 },
-        chael: { x: 1110, y: 1000 },
-        mercy: { x: 1110, y: 1042 },
-        grace: { x: 1110, y: 1084 },
-        sawtooth: { x: 1110, y: 1126 },
+        marlane: { x: 2075, y: 773 },
+        chael: { x: 2075, y: 854 },
+        mercy: { x: 2075, y: 935 },
+        grace: { x: 2075, y: 1018 },
+        sawtooth: { x: 2075, y: 1102 },
         // Hound: steiner, celene, melvir, veleris, casta
-        steiner: { x: 1110, y: 958 },
-        celene: { x: 1110, y: 1000 },
-        melvir: { x: 1110, y: 1042 },
-        veleris: { x: 1110, y: 1084 },
-        casta: { x: 1110, y: 1126 },
+        steiner: { x: 2075, y: 773 },
+        celene: { x: 2075, y: 854 },
+        melvir: { x: 2075, y: 935 },
+        veleris: { x: 2075, y: 1018 },
+        casta: { x: 2075, y: 1102 },
         // Leech: stazia, velren, eckerd, jul, malista
-        stazia: { x: 1110, y: 958 },
-        veldren: { x: 1110, y: 1000 },
-        eckerd: { x: 1110, y: 1042 },
-        jul: { x: 1110, y: 1084 },
-        malista: { x: 1110, y: 1126 },
+        stazia: { x: 2075, y: 773 },
+        veldren: { x: 2075, y: 854 },
+        eckerd: { x: 2075, y: 935 },
+        jul: { x: 2075, y: 1018 },
+        malista: { x: 2075, y: 1102 },
         // Lurk: telda, darmot, frake, 'roslyn-kellis', petra
-        telda: { x: 1110, y: 958 },
-        darmot: { x: 1110, y: 1000 },
-        frake: { x: 1110, y: 1042 },
-        'roslyn-kellis': { x: 1110, y: 1084 },
-        petra: { x: 1110, y: 1126 },
+        telda: { x: 2075, y: 773 },
+        darmot: { x: 2075, y: 854 },
+        frake: { x: 2075, y: 935 },
+        'roslyn-kellis': { x: 2075, y: 1018 },
+        petra: { x: 2075, y: 1102 },
         // Slide: bryl, 'bazso-baz', khyra, nyryx, harker
-        bryl: { x: 1110, y: 958 },
-        'bazso-baz': { x: 1110, y: 1000 },
-        khyra: { x: 1110, y: 1042 },
-        nyryx: { x: 1110, y: 1084 },
-        harker: { x: 1110, y: 1126 },
+        bryl: { x: 2075, y: 773 },
+        'bazso-baz': { x: 2075, y: 854 },
+        khyra: { x: 2075, y: 935 },
+        nyryx: { x: 2075, y: 1018 },
+        harker: { x: 2075, y: 1102 },
         // Spider: salia, augus, jennah, riven, jeren
-        salia: { x: 1110, y: 958 },
-        augus: { x: 1110, y: 1000 },
-        jennah: { x: 1110, y: 1042 },
-        riven: { x: 1110, y: 1084 },
-        jeren: { x: 1110, y: 1126 },
+        salia: { x: 2075, y: 773 },
+        augus: { x: 2075, y: 854 },
+        jennah: { x: 2075, y: 935 },
+        riven: { x: 2075, y: 1018 },
+        jeren: { x: 2075, y: 1102 },
         // Whisper: 'nyryx-2', scurlock, setarra, quellyn, flint
-        'nyryx-2': { x: 1110, y: 958 },
-        scurlock: { x: 1110, y: 1000 },
-        setarra: { x: 1110, y: 1042 },
-        quellyn: { x: 1110, y: 1084 },
-        flint: { x: 1110, y: 1126 },
+        'nyryx-2': { x: 2075, y: 773 },
+        scurlock: { x: 2075, y: 854 },
+        setarra: { x: 2075, y: 935 },
+        quellyn: { x: 2075, y: 1018 },
+        flint: { x: 2075, y: 1102 },
     },
-    vice: { x: 520, y: 1565 },
+    vice: { x: 520, y: 1505 },
     viceText: { x: 520, y: 1615 },
 };
 
@@ -577,29 +577,26 @@ export async function paintSheet(
 
                 // Fill in Friends triangles
                 scoundrel.friends.forEach((f) => {
-                    // console.log('drawing a triangle for', f);
                     const point = data.friends[f as keyof typeof data.friends];
                     if (!point) return console.error('No point for', f);
-                    drawTriangleUp(ctx, point);
+                    drawTriangleUp(ctx, point, .85);
                 });
 
                 // Fill in Rivals triangles
                 scoundrel.rivals.forEach((r) => {
-                    // console.log('drawing a triangle for', r);
                     const point = data.friends[r as keyof typeof data.friends];
                     if (!point) return console.error('No point for', r);
-                    const offset = { x: 28, y: -14 };
-                    if (scoundrel.playbook === 'whisper') offset.x = 24.5; // Misprint in the Whisper playbook
+                    const offset = { x: 0, y: 11 };
 
                     drawTriangleDown(ctx, {
                         x: point.x + offset.x,
                         y: point.y + offset.y,
-                    });
+                    }, .85);
                 });
 
                 // Write Vice
                 if (scoundrel.vice)
-                    ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y - 60);
+                    ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y);
 
                 // Write Vice Detail
                 if (scoundrel.viceDetail)
@@ -686,10 +683,11 @@ function fillMultilineText(
 
 function drawTriangleUp(
     ctx: CanvasRenderingContext2D,
-    point: { x: number; y: number }
+    point: { x: number; y: number },
+    size: number = 1
 ) {
-    const width = 12.5;
-    const height = 21;
+    const width = 12.5 * size;
+    const height = 21 * size;
     ctx.beginPath();
     ctx.moveTo(point.x, point.y - height);
     ctx.lineTo(point.x + width, point.y);
@@ -699,10 +697,11 @@ function drawTriangleUp(
 
 function drawTriangleDown(
     ctx: CanvasRenderingContext2D,
-    point: { x: number; y: number }
+    point: { x: number; y: number },
+    size: number = 1
 ) {
-    const width = 12.5;
-    const height = 21;
+    const width = 12.5 * size;
+    const height = 21 * size;
     ctx.beginPath();
     ctx.moveTo(point.x, point.y + height);
     ctx.lineTo(point.x + width, point.y);
@@ -715,8 +714,8 @@ function drawActionBubbleRow(
     scoundrel: Scoundrel,
     action: Action,
     actions: { [key: string]: { x: number; y: number } },
-    offset,
-    radius
+    offset: number,
+    radius: number
 ) {
     const bubbleCount = getActionValue(scoundrel.actions, action);
     // @ts-ignore
