@@ -335,7 +335,6 @@ ul.ink-colors {
 @media (max-width: 768px) {
     .ink-row {
         align-items: center;
-        flex-direction: column;
         gap: 0.6rem;
     }
 
