@@ -26,15 +26,9 @@
         </span>
 
         <div class="ink-row">
-            <p>
-                Choose an
-                <span
-                    class="filled"
-                    :style="{ color: props.scoundrel.preferredInkColor }"
-                    >ink color</span
-                >
-                for your sheet.
-            </p>
+            <button class="btn btn--mini" @click="cycleFont">
+                <img src="/assets/icons/font.png" alt="Change font" />
+            </button>
             <ul class="ink-colors">
                 <li
                     v-for="color in inkColors"
@@ -53,14 +47,19 @@
                 </li>
             </ul>
         </div>
+
         <div class="preview-container">
             <img
-                v-if="!sheetDataUrl"
+                v-if="isLoading"
                 class="spinner"
                 src="/assets/icons/loading.png"
                 alt="Loading"
             />
-            <img ref="sheetPreview" class="preview" />
+            <img
+                ref="sheetPreview"
+                class="preview"
+                :class="{ 'is-loading': isLoading }"
+            />
         </div>
         <div class="row wrap">
             <!-- <button
@@ -99,7 +98,7 @@ import {
     encodeJsonToUrl,
     getSemanticScoundrelName,
 } from '@/util/scoundrel-util';
-import { ref } from 'vue';
+import { ref, computed, defineProps } from 'vue';
 import stepHeader from '../step-header.vue';
 
 const props = defineProps<{
@@ -119,16 +118,20 @@ const inkColors = [
     '#131313',
 ];
 
+const fonts = ['font-sheet-1', 'font-sheet-2', 'font-sheet-3'];
+
 if (!props.scoundrel.preferredInkColor)
     props.scoundrel.preferredInkColor = inkColors[0];
 if (!props.scoundrel.preferredSheetType)
     props.scoundrel.preferredSheetType = 'classic';
+if (!props.scoundrel.preferredFont) props.scoundrel.preferredFont = fonts[0];
 
 const showCopyJsonMessage = ref(false);
 const showCopyUrlMessage = ref(false);
 
 const sheetDataUrl = ref('');
 const sheetPreview = ref<HTMLImageElement | null>(null);
+const isLoading = ref(true);
 generatePNG();
 
 let generatedUrl = '';
@@ -136,6 +139,13 @@ try {
     generatedUrl = `${window.location.origin}/import/${encodeJsonToUrl(props.scoundrel)}`;
 } catch (e) {
     console.error('Error encoding scoundrel to base64', e);
+}
+
+function cycleFont() {
+    const currentIndex = fonts.indexOf(props.scoundrel.preferredFont);
+    const nextIndex = (currentIndex + 1) % fonts.length;
+    props.scoundrel.preferredFont = fonts[nextIndex];
+    generatePNG();
 }
 
 function onClickChangeInkColor(color: string) {
@@ -169,6 +179,10 @@ function onClickCopyJSON() {
 }
 
 async function generatePNG() {
+    // Show the loading spinner
+    isLoading.value = true;
+    // sheetPreview.value.style.opacity = '0.1';
+
     trackEvent('generate-png', {
         inkColor: props.scoundrel.preferredInkColor,
         playbook: props.scoundrel.playbook,
@@ -182,12 +196,17 @@ async function generatePNG() {
         viceDetail: props.scoundrel.viceDetail,
         sheetType: props.scoundrel.preferredSheetType,
     });
+
     const canvas = await paintSheet(props.scoundrel);
     console.log(canvas);
     if (!canvas) return;
 
     sheetDataUrl.value = canvas.toDataURL('image/png');
     sheetPreview.value!.src = sheetDataUrl.value;
+    sheetPreview.value.style.opacity = '1';
+
+    // Hide the loading spinner
+    isLoading.value = false;
 }
 
 function onClickSavePNG() {
@@ -235,17 +254,23 @@ function makeFileName(name: string) {
 .preview-container {
     width: 100%;
     min-height: 8rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     > img.spinner {
+        position: absolute;
         animation: spin 1s linear infinite;
     }
 
     > img.preview {
         width: 100%;
+        transition: all 0.2s;
+        &.is-loading {
+            opacity: 0.4 !important;
+        }
     }
 }
 
@@ -288,11 +313,6 @@ ul.ink-colors {
 
 .row {
     margin: 0 auto;
-}
-
-span.filled {
-    font-family: var(--font-handwriting);
-    font-size: 2rem;
 }
 
 .sheet-type {

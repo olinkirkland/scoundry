@@ -306,9 +306,15 @@ export async function paintSheet(
     const color = scoundrel.preferredInkColor;
     const sheetType = scoundrel.preferredSheetType;
 
-    console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
+    // Get the scss variable for the preferred font
+    const fontVariable = getComputedStyle(document.documentElement).getPropertyValue(`--${scoundrel.preferredFont}`);
+    if (!fontVariable) console.error(`No font variable found for ${scoundrel.preferredFont}`);
+    const font = fontVariable.replace(/"/g, '');
 
-    if (!document.fonts.check('32px Gochi Hand'))
+    console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
+    console.log(`using ${font} in ${color}`);
+
+    if (!document.fonts.check(`32px ${font}`))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
     if (sheetType === 'classic') {
@@ -324,7 +330,7 @@ export async function paintSheet(
                 const roughCanvas = rough.canvas(canvas);
                 const ctx = canvas.getContext('2d')!;
                 ctx.drawImage(template, 0, 0);
-                ctx.font = '32px Gochi Hand';
+                ctx.font = `32px ${font}`;
                 ctx.fillStyle = color;
                 ctx.strokeStyle = 'red';
                 ctx.lineWidth = 2;
@@ -513,7 +519,7 @@ export async function paintSheet(
                 const roughCanvas = rough.canvas(canvas);
                 const ctx = canvas.getContext('2d')!;
                 ctx.drawImage(template, 0, 0);
-                ctx.font = '40px Gochi Hand';
+                ctx.font = `40px ${font}`;
                 ctx.fillStyle = color;
                 ctx.strokeStyle = 'red';
                 ctx.lineWidth = 2;
