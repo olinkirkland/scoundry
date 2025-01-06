@@ -1,0 +1,172 @@
+{
+    "User-interface": {
+        "Home-page": {
+            "tagline": "A character keeper for <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
+            "new-scoundrel-button": "Make a new scoundrel",
+            "scroll-prompt": "Scroll down to see attribution",
+            "Attribution": {
+                "code-and-design": "Code & design by <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+                "news-and-updates": "News & Updates",
+                "copyright": "Copyright © 2025 Olin Kirkland",
+                "license-blades-in-the-dark": "This work is based on <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — a product of One Seven Design, developed and authored by John Harper, and licensed for our use under the <a href=\"http://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
+                "license-portraits": "Portrait images are from <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> with no known restrictions their use.",
+                "license-icons": "Icons are from <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>"
+            }
+        },
+        "Make-page": {
+            "Step-navigation": {
+                "playbook": "Playbook",
+                "background": "Background",
+                "heritage": "Heritage",
+                "actions": "Actions",
+                "abilities": "Abilities",
+                "friends": "Friends",
+                "vice": "Vice",
+                "name-and-look": "Name & Look",
+                "export": "Export"
+            },
+            "Controls": {
+                "delete-button": "Delete",
+                "home-button": "Home",
+                "next-button": "Next"
+            }
+        },
+        "Steps": {
+            "Playbook": {
+                "title": "What kind of <strong>Scoundrel</strong> are you?",
+                "subtitle": "Your playbook represents your reputation in the underworld, your special abilities, and how you advance."
+            },
+            "Background": {
+                "title": "What did you do before you joined the crew?",
+                "subtitle": "Pick a background and write a detail specific to you.",
+                "select-prompt": "Select a background to see its description and suggested details.",
+                "detail-prompt": "A detail about your background",
+                "deep-cuts-tagline": "Full descriptions of these backgrounds can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
+            },
+            "Heritage": {
+                "title": "What are your origins?",
+                "subtitle": "Pick a heritage and write a detail specific to you.",
+                "world-map-button": "World Map",
+                "select-prompt": "Select a heritage to see its description and suggested details.",
+                "detail-prompt": "A detail about your heritage",
+                "deep-cuts-tagline": "Full descriptions of these heritages can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
+            },
+            "Actions": {
+                "title": "What do you do best?",
+                "subtitle": "Assign action dots to actions that best represent you.",
+                "Options": {
+                    "character-creation-button": "Character Creation: 7 action dots total, limit 2 per action",
+                    "mastery-advance-button": "Mastery Advance: Allow actions to advance to 4"
+                },
+                "suggested-actions": "Actions suggested by your background and heritage:",
+                "Action-tally": {
+                    "with-character-creation": "{count} of 7 action dots assigned",
+                    "without-character-creation": "{count} action dots assigned"
+                },
+                "Attributes": {
+                    "Insight": "Insight",
+                    "Prowess": "Prowess",
+                    "Resolve": "Resolve"
+                },
+                "Actions": {
+                    "Hunt": {
+                        "label": "Hunt",
+                        "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance."
+                    },
+                    "Study": {
+                        "label": "Study",
+                        "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research."
+                    },
+                    "Survey": {
+                        "label": "Survey",
+                        "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits."
+                    },
+                    "Tinker": {
+                        "label": "Tinker",
+                        "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices."
+                    },
+                    "Finesse": {
+                        "label": "Finesse",
+                        "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount."
+                    },
+                    "Prowl": {
+                        "label": "Prowl",
+                        "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc."
+                    },
+                    "Skirmish": {
+                        "label": "Skirmish",
+                        "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle."
+                    },
+                    "Wreck": {
+                        "label": "Wreck",
+                        "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos."
+                    },
+                    "Attune": {
+                        "label": "Attune",
+                        "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology."
+                    },
+                    "Command": {
+                        "label": "Command",
+                        "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs."
+                    },
+                    "Consort": {
+                        "label": "Consort",
+                        "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places."
+                    },
+                    "Sway": {
+                        "label": "Sway",
+                        "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction."
+                    }
+                }
+            },
+            "Abilities": {
+                "title": "What ability sets you apart in the crew?",
+                "subtitle": "Choose a special ability"
+            },
+            "Friends": {
+                "title": "Who owes you one and who's your bitter enemy?",
+                "subtitle": "Mark one long-time ally, family relation, or lover. Then mark one rival, enemy, or betrayed partner.",
+                "friend-button": "Friend",
+                "rival-button": "Rival"
+            },
+            "Vice": {
+                "title": "Where do you go to get rid of your stress?",
+                "description": "Choose a vice and record the name and location of your vice purveyor.",
+                "select-prompt": "Select a vice to see its description and suggested purveyors.",
+                "purveyor-prompt": "A description of where you go to indulge"
+            },
+            "Name-and-look": {
+                "title": "What are you known as in the underworld and what do you look like?",
+                "subtitle": "Record a name, criminal alias, and briefly describe your appearance.",
+                "name-prompt": "Your name",
+                "randomize-name-button": "Randomize name",
+                "alias-prompt": "Your alias",
+                "randomize-alias-button": "Randomize alias",
+                "look-prompt": "Your look",
+                "randomize-look-button": "Randomize look",
+                "portrait-prompt": "Choose a portrait"
+            },
+            "Export": {
+                "title": "Export your scoundrel",
+                "subtitle": "Customize and share your character sheet.",
+                "Controls": {
+                    "share-as-url-button": "Share as URL",
+                    "save-as-image-button": "Save as image"
+                }
+            }
+        },
+        "Modals": {
+            "News-and-updates": {
+                "title": "News & Updates"
+            },
+            "Delete-scoundrel": {
+                "title": "Delete scoundrel?",
+                "description": "Are you sure you want to delete this scoundrel? This action cannot be undone.",
+                "Controls": {
+                    "cancel-button": "No, I changed my mind",
+                    "delete-button": "Delete"
+                }
+            }
+        }
+    }
+}
