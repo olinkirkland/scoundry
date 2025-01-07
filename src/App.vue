@@ -8,6 +8,9 @@
 
 <script setup lang="ts">
 import TheModalContainer from './components/modals/the-modal-container.vue';
+import { initializeI18nInstance } from './i18n/locale';
+
+initializeI18nInstance();
 </script>
 
 <style lang="scss">

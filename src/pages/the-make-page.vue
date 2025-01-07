@@ -377,8 +377,10 @@ ul.steps {
     margin: 0.8rem auto;
     border-radius: 99px;
     overflow-x: auto;
-    scrollbar-width: none;
     box-shadow: var(--shadow-sm);
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 
     > .step {
         &:first-child {

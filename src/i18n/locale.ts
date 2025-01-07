@@ -1,4 +1,4 @@
-import { createI18n } from 'vue-i18n';
+import { createI18n, useI18n } from 'vue-i18n';
 import en from './locales/en.json';
 
 
@@ -15,5 +15,14 @@ const i18n = createI18n<[MessageSchema], 'en'>({ // Add languages here
         // es,
     },
 });
+
+let i18nInstance: any;
+export function initializeI18nInstance() {
+    i18nInstance = useI18n();
+}
+
+export function changeLanguage(language: string) {
+    if (i18nInstance) i18nInstance.locale.value = language;
+}
 
 export default i18n;

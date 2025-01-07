@@ -175,17 +175,19 @@
                     "cancel-button": "Keep tracking disabled"
                 }
             },
-            "Language": {
-                "title": "Language",
-                "message": "Select a language to use for the user interface and character sheet.",
-                "Languages": {
-                    "en": "English",
-                    "es": "Español"
-                }
-            },
             "Settings": {
                 "title": "Settings",
-                "tracking": "Enable anonymous tracking"
+                "Tracking": {
+                    "label": "Enable anonymous tracking",
+                    "description": "Minimal tracking helps improve Scoundry by collecting anonymous data on characters, page visits, and feature usage. No personal information is collected or shared."
+                },
+                "Language": {
+                    "label": "Select the language for the app",
+                    "Languages": {
+                        "en": "English",
+                        "es": "Español"
+                    }
+                }
             }
         }
     }
