@@ -6,14 +6,18 @@
             :class="{ disabled: !scoundrel.playbook }"
         >
             <step-block
-                v-for="s in steps"
-                :data-step-id="s.id"
-                :key="s.id"
-                :stepLabel="s.label"
-                :stepNumber="steps.findIndex((step) => step.id === s.id) + 1"
-                :active="s.id === stepId"
-                :completed="steps.indexOf(s) < steps.indexOf(step)"
-                @click="changeStep(s.id)"
+                v-for="step in steps"
+                :data-step-id="step"
+                :key="step"
+                :stepLabel="
+                    useI18n().t(
+                        `User-interface.Make-page.Step-navigation.${step}`
+                    )
+                "
+                :stepNumber="steps.findIndex((s) => s === step) + 1"
+                :active="step === stepId"
+                :completed="steps.indexOf(step) < steps.indexOf(step)"
+                @click="changeStep(step)"
             />
         </ul>
 
@@ -31,12 +35,16 @@
         <div class="control-bar">
             <!-- Discard -->
             <button class="btn btn--alt" @click="onClickDiscard">
-                <span>Delete</span>
+                <span>
+                    {{ $t('User-interface.Make-page.Controls.delete-button') }}
+                </span>
             </button>
 
             <!-- Home -->
             <button class="btn btn--alt" @click="onClickClose">
-                <span>Home</span>
+                <span>
+                    {{ $t('User-interface.Make-page.Controls.home-button') }}
+                </span>
                 <!-- <img src="/assets/icons/home.png" alt="Home" /> -->
             </button>
 
@@ -47,7 +55,9 @@
                 @click="onClickNextStep"
                 :class="{ disabled: !scoundrel.playbook }"
             >
-                <span>Next</span>
+                <span>
+                    {{ $t('User-interface.Make-page.Controls.next-button') }}
+                </span>
             </button>
         </div>
     </div>
@@ -60,7 +70,7 @@ import StepBlock from '@/components/step-block.vue';
 import StepAbilities from '@/components/steps/abilities-step.vue';
 import StepActions from '@/components/steps/actions-step.vue';
 import StepBackground from '@/components/steps/background-step.vue';
-import StepFinish from '@/components/steps/finish-step.vue';
+import StepExport from '@/components/steps/export-step.vue';
 import StepFriendsAndRivals from '@/components/steps/friends-step.vue';
 import StepHeritage from '@/components/steps/heritage-step.vue';
 import StepNameAndLook from '@/components/steps/name-step.vue';
@@ -77,26 +87,12 @@ import { Scoundrel } from '@/scoundrel';
 import { trackEvent } from '@/tracker';
 import { makeSemanticId } from '@/util/id-util';
 import { computed, ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const page = ref<HTMLElement | null>(null);
 const stepContainer = ref<HTMLElement | null>(null);
 
 const showModel = ref(false);
-// window.addEventListener('keydown', (e) => {
-//     if (e.key === 'm' && e.altKey) showModel.value = !showModel.value;
-// });
-
-const stepComponents = {
-    playbook: StepPlaybook,
-    background: StepBackground,
-    heritage: StepHeritage,
-    actions: StepActions,
-    abilities: StepAbilities,
-    friends: StepFriendsAndRivals,
-    vice: StepVice,
-    name: StepNameAndLook,
-    finish: StepFinish,
-};
 
 enum Step {
     PLAYBOOK = 'playbook',
@@ -104,49 +100,34 @@ enum Step {
     HERITAGE = 'heritage',
     ACTIONS = 'actions',
     ABILITIES = 'abilities',
-    FRIENDS_AND_RIVALS = 'friends',
+    FRIENDS = 'friends',
     VICE = 'vice',
-    NAME_AND_LOOK = 'name',
-    FINISH = 'finish',
+    NAME_AND_LOOK = 'name-and-look',
+    EXPORT = 'export',
 }
 
+const stepComponents = {
+    [Step.PLAYBOOK]: StepPlaybook,
+    [Step.BACKGROUND]: StepBackground,
+    [Step.HERITAGE]: StepHeritage,
+    [Step.ACTIONS]: StepActions,
+    [Step.ABILITIES]: StepAbilities,
+    [Step.FRIENDS]: StepFriendsAndRivals,
+    [Step.VICE]: StepVice,
+    [Step.NAME_AND_LOOK]: StepNameAndLook,
+    [Step.EXPORT]: StepExport,
+};
+
 const steps = [
-    {
-        id: Step.PLAYBOOK,
-        label: 'Playbook',
-    },
-    {
-        id: Step.BACKGROUND,
-        label: 'Background',
-    },
-    {
-        id: Step.HERITAGE,
-        label: 'Heritage',
-    },
-    {
-        id: Step.ACTIONS,
-        label: 'Actions',
-    },
-    {
-        id: Step.ABILITIES,
-        label: 'Abilities',
-    },
-    {
-        id: Step.FRIENDS_AND_RIVALS,
-        label: 'Friends',
-    },
-    {
-        id: Step.VICE,
-        label: 'Vice',
-    },
-    {
-        id: Step.NAME_AND_LOOK,
-        label: 'Name & Look',
-    },
-    {
-        id: Step.FINISH,
-        label: 'Export',
-    },
+    Step.PLAYBOOK,
+    Step.BACKGROUND,
+    Step.HERITAGE,
+    Step.ACTIONS,
+    Step.ABILITIES,
+    Step.FRIENDS,
+    Step.VICE,
+    Step.NAME_AND_LOOK,
+    Step.EXPORT,
 ];
 
 const stepsEl = ref<HTMLElement | null>(null);
@@ -155,7 +136,7 @@ const scoundrel = ref<Partial<Scoundrel> | null>(null);
 const scoundrelId = ref<string | null>(null);
 const stepId = ref<Step | null>(null);
 
-const step = computed(() => steps.find((s) => s.id === stepId.value));
+const step = computed(() => steps.find((s) => s === stepId.value));
 
 const { params } = router.currentRoute.value;
 scoundrelId.value = params.scoundrelId as string | null;
@@ -232,16 +213,10 @@ watch(
 );
 
 function onClickNextStep() {
-    const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
+    const currentStepIndex = steps.findIndex((s) => s === stepId.value);
     const nextStep = steps[currentStepIndex + 1];
-    if (nextStep) changeStep(nextStep.id);
+    if (nextStep) changeStep(nextStep);
 }
-
-// function onClickBackStep() {
-//     const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
-//     const prevStep = steps[currentStepIndex - 1];
-//     if (prevStep) changeStep(prevStep.id);
-// }
 
 async function onClickClose() {
     page.value?.classList.remove('page-in');
@@ -285,8 +260,8 @@ async function changeStep(newStepId: Step) {
     page.value?.classList.add('no-click');
 
     // Is the new step to the right or left of the old step?
-    const currentStepIndex = steps.findIndex((s) => s.id === stepId.value);
-    const newStepIndex = steps.findIndex((s) => s.id === newStepId);
+    const currentStepIndex = steps.findIndex((s) => s === stepId.value);
+    const newStepIndex = steps.findIndex((s) => s === newStepId);
 
     const animationClassOut =
         newStepIndex > currentStepIndex
@@ -348,11 +323,11 @@ async function changeStep(newStepId: Step) {
 }
 
 const isFirstStep = computed(() => {
-    return steps.findIndex((s) => s.id === stepId.value) === 0;
+    return steps.findIndex((s) => s === stepId.value) === 0;
 });
 
 const isLastStep = computed(() => {
-    return steps.findIndex((s) => s.id === stepId.value) === steps.length - 1;
+    return steps.findIndex((s) => s === stepId.value) === steps.length - 1;
 });
 </script>
 
