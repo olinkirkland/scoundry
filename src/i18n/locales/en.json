@@ -3,12 +3,13 @@
         "Home-page": {
             "tagline": "A character keeper for <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
             "new-scoundrel-button": "Make a new scoundrel",
+            "last-updated": "Updated {date}",
             "scroll-prompt": "Scroll down to see attribution",
             "Attribution": {
                 "code-and-design": "Code & design by <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
                 "news-and-updates": "News & Updates",
-                "copyright": "Copyright © 2025 Olin Kirkland",
-                "license-blades-in-the-dark": "This work is based on <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — a product of One Seven Design, developed and authored by John Harper, and licensed for our use under the <a href=\"http://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
+                "copyright": "Copyright © {year} Olin Kirkland",
+                "license-blades-in-the-dark": "This work is based on <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — a product of One Seven Design, developed and authored by John Harper, and licensed for our use under the <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
                 "license-portraits": "Portrait images are from <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> with no known restrictions their use.",
                 "license-icons": "Icons are from <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>"
             }

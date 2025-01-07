@@ -6,9 +6,13 @@
             :src="`/assets/${props.scoundrel.portrait}`"
         />
         <p>{{ semanticName }}</p>
-        <label v-if="props.lastUpdated"
-            >Updated {{ props.lastUpdated.toLocaleDateString() }}</label
-        >
+        <label v-if="props.lastUpdated">
+            {{
+                $t('User-interface.Home-page.last-updated', {
+                    date: props.lastUpdated.toLocaleDateString(),
+                })
+            }}
+        </label>
     </div>
 </template>
 

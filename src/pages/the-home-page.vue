@@ -2,12 +2,7 @@
     <div class="page page--home page-in" ref="page">
         <div class="page-content">
             <h1>Scoundry</h1>
-            <p>
-                A character keeper for
-                <a href="https://bladesinthedark.com/" target="_blank"
-                    >Blades in the Dark</a
-                >
-            </p>
+            <p v-html="$t('User-interface.Home-page.tagline')"></p>
 
             <div class="row center">
                 <button
@@ -18,7 +13,11 @@
                 </button>
 
                 <button class="btn" @click="onClickMakeNewScoundrel">
-                    <span>Make a new Scoundrel</span>
+                    <span>
+                        {{
+                            $t('User-interface.Home-page.new-scoundrel-button')
+                        }}
+                    </span>
                 </button>
             </div>
 
@@ -32,7 +31,9 @@
                 ></scoundrel-card>
             </ul>
 
-            <label class="scroll-note">Scroll down to see attribution</label>
+            <label class="scroll-note">
+                {{ $t('User-interface.Home-page.scroll-prompt') }}
+            </label>
         </div>
         <div class="footer-container">
             <footer>
@@ -41,55 +42,58 @@
                         www.scoundry.com
                         <span class="version">v{{ APP_VERSION }}</span>
                     </h2>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.code-and-design'
+                            )
+                        "
+                    ></p>
                     <p>
-                        Code & design by
-                        <a href="https://olinkirk.land" target="_blank"
-                            >Olin Kirkland</a
-                        >
+                        <a @click="ModalController.open(NewsModal)">
+                            {{
+                                $t(
+                                    'User-interface.Home-page.Attribution.news-and-updates'
+                                )
+                            }}
+                        </a>
                     </p>
-                    <p>
-                        <a @click="ModalController.open(NewsModal)"
-                            >News & Updates</a
-                        >
-                    </p>
-                    <p class="muted">
-                        Copyright © {{ new Date().getFullYear() }} Olin
-                        Kirkland
-                    </p>
+                    <p
+                        class="muted"
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.copyright',
+                                {
+                                    year: new Date().getFullYear(),
+                                }
+                            )
+                        "
+                    ></p>
                 </div>
                 <div>
-                    <p>
-                        This work is based on
-                        <a
-                            href="http://www.bladesinthedark.com/"
-                            target="_blank"
-                            >Blades in the Dark</a
-                        >
-                        — a product of One Seven Design, developed and authored
-                        by John Harper, and licensed for our use under the
-                        <a
-                            href="http://creativecommons.org/licenses/by/3.0"
-                            target="_blank"
-                            >Creative Commons Attribution 3.0 license</a
-                        >
-                    </p>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.license-blades-in-the-dark'
+                            )
+                        "
+                    ></p>
                 </div>
                 <div>
-                    <p>
-                        Portrait images are from
-                        <a
-                            href="https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment"
-                            target="_blank"
-                            >The Library of Congress</a
-                        >
-                        with no known restrictions their use.
-                    </p>
-                    <p>
-                        Icons are from
-                        <a href="https://icons8.com" target="_blank"
-                            >Icons8.com</a
-                        >
-                    </p>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.license-portraits'
+                            )
+                        "
+                    ></p>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.license-icons'
+                            )
+                        "
+                    ></p>
                 </div>
             </footer>
         </div>
