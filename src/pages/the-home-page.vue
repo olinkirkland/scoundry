@@ -4,20 +4,19 @@
             <h1>Scoundry</h1>
             <p v-html="$t('User-interface.Home-page.tagline')"></p>
 
-            <div class="row center">
-                <button
-                    class="btn btn--mini"
-                    @click="ModalController.open(SettingsModal)"
-                >
-                    <img src="/assets/icons/gear.png" />
-                </button>
-
+            <div class="row controls">
                 <button class="btn" @click="onClickMakeNewScoundrel">
                     <span>
                         {{
                             $t('User-interface.Home-page.new-scoundrel-button')
                         }}
                     </span>
+                </button>
+                <button
+                    class="btn btn--alt"
+                    @click="ModalController.open(SettingsModal)"
+                >
+                    {{ $t('User-interface.Home-page.settings-button') }}
                 </button>
             </div>
 
@@ -285,6 +284,13 @@ ul.saved-scoundrels-list {
 }
 
 @media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0 1.2rem;
+    }
+
     footer {
         grid-template-columns: 1fr;
 

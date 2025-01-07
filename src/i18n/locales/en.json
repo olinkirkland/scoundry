@@ -3,6 +3,7 @@
         "Home-page": {
             "tagline": "A character keeper for <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
             "new-scoundrel-button": "Make a new scoundrel",
+            "settings-button": "Settings",
             "last-updated": "Updated {date}",
             "scroll-prompt": "Scroll down to see attribution",
             "Attribution": {
@@ -160,19 +161,24 @@
             "News-and-updates": {
                 "title": "News & Updates"
             },
+            "Confirm": {
+                "Controls": {
+                    "confirm-button": "Yes",
+                    "cancel-button": "No, I changed my mind"
+                }
+            },
             "Delete-scoundrel": {
                 "title": "Delete scoundrel?",
                 "message": "Are you sure you want to delete this scoundrel? This action cannot be undone.",
                 "Controls": {
-                    "cancel-button": "No, I changed my mind",
-                    "delete-button": "Delete"
+                    "confirm-button": "Delete"
                 }
             },
             "Tracking-consent": {
                 "title": "Tracking Preferences",
                 "message": "Minimal tracking helps improve Scoundry by collecting anonymous data on characters, page visits, and feature usage. No personal information is collected or shared.",
                 "Controls": {
-                    "ok-button": "I'm okay with tracking",
+                    "confirm-button": "I'm okay with tracking",
                     "cancel-button": "Keep tracking disabled"
                 }
             },

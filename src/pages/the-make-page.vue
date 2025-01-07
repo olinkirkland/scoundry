@@ -82,6 +82,7 @@ import {
     loadScoundrel,
     saveScoundrel,
 } from '@/controllers/storage-controller';
+import i18n from '@/i18n/locale';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { trackEvent } from '@/tracker';
@@ -229,10 +230,13 @@ async function onClickClose() {
 async function onClickDiscard() {
     // Are you sure?
     ModalController.open(ConfirmModal, {
-        title: 'Delete scoundrel?',
-        message:
-            'Are you sure you want to delete this scoundrel? This action cannot be undone.',
-        confirmText: 'Delete',
+        title: i18n.global.t('User-interface.Modals.Delete-scoundrel.title'),
+        message: i18n.global.t(
+            'User-interface.Modals.Delete-scoundrel.message'
+        ),
+        confirmText: i18n.global.t(
+            'User-interface.Modals.Delete-scoundrel.Controls.confirm-button'
+        ),
         onConfirm: discard,
     });
 }

@@ -18,7 +18,12 @@
                         :class="{ 'btn--alt': !isConfirmButtonCta }"
                         @click="props.onConfirm"
                     >
-                        <span>{{ props.confirmText || 'Yes' }}</span>
+                        <span>{{
+                            props.confirmText ||
+                            useI18n().t(
+                                'User-interface.Modals.Confirm.Controls.confirm-button'
+                            )
+                        }}</span>
                     </button>
                     <button
                         class="btn"
@@ -26,7 +31,10 @@
                         @click="onClickCancel"
                     >
                         <span>{{
-                            props.cancelText || 'No, I changed my mind'
+                            props.cancelText ||
+                            useI18n().t(
+                                'User-interface.Modals.Confirm.Controls.cancel-button'
+                            )
                         }}</span>
                     </button>
                 </div>
@@ -39,6 +47,7 @@
 import ModalFrame from '@/components/modals/modal-frame.vue';
 import ModalHeader from '@/components/modals/modal-header.vue';
 import ModalController from '@/controllers/modal-controller';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps<{
     title: string;
