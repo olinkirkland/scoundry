@@ -9,13 +9,27 @@
                 >
             </p>
 
-            <div class="row">
+            <div class="row center">
+                <div class="minis">
+                    <button
+                        class="btn btn--mini"
+                        @click="ModalController.open(LanguageModal)"
+                    >
+                        <img
+                            :src="`/assets/icons/flag-${useI18n().locale.value}.png`"
+                        />
+                    </button>
+                    <button
+                        class="btn btn--mini"
+                        @click="ModalController.open(SettingsModal)"
+                    >
+                        <img src="/assets/icons/gear.png" />
+                    </button>
+                </div>
+
                 <button class="btn" @click="onClickMakeNewScoundrel">
                     <span>Make a new Scoundrel</span>
                 </button>
-                <!-- <button class="btn btn--alt" @click="onClickLoadFromJSON">
-                    <span>Load from JSON</span>
-                </button> -->
             </div>
 
             <ul class="saved-scoundrels-list" v-if="savedScoundrels.length">
@@ -104,7 +118,10 @@ import {
 import { APP_VERSION } from '@/main';
 import { PageName, router } from '@/router';
 import { onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { Scoundrel } from '../scoundrel';
+import LanguageModal from '@/components/modals/templates/language-modal.vue';
+import SettingsModal from '@/components/modals/templates/settings-modal.vue';
 
 const page = ref<HTMLElement | null>(null);
 const savedScoundrels = ref<Scoundrel[]>([]);
@@ -174,6 +191,11 @@ function getLastUpdated(scoundrelId: string) {
 .page-out {
     animation: pageOut 0.2s ease-out forwards;
     pointer-events: none;
+}
+
+.minis {
+    display: flex;
+    gap: 0.4rem;
 }
 
 h1 {

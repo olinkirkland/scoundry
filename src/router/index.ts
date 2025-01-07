@@ -86,8 +86,8 @@ router.beforeEach(async (to, from, next) => {
         ModalController.open(ConfirmModal, {
             title: i18n.global.t('User-interface.Modals.Tracking-consent.title'),
             message: i18n.global.t('User-interface.Modals.Tracking-consent.message'),
-            confirmText: i18n.global.t('User-interface.Modals.Tracking-consent.buttons.ok-button'),
-            cancelText: i18n.global.t('User-interface.Modals.Tracking-consent.buttons.cancel-button'),
+            confirmText: i18n.global.t('User-interface.Modals.Tracking-consent.Controls.ok-button'),
+            cancelText: i18n.global.t('User-interface.Modals.Tracking-consent.Controls.cancel-button'),
             isConfirmButtonCta: true,
             onConfirm: () => { localStorage.setItem('allowTracking', 'true'); ModalController.close(); },
             onCancel: () => { localStorage.setItem('allowTracking', 'false'); ModalController.close(); },
