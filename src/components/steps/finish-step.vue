@@ -90,7 +90,6 @@
 </template>
 
 <script setup lang="ts">
-import { trackEvent } from '@/main';
 import { Scoundrel } from '@/scoundrel';
 import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
@@ -100,6 +99,7 @@ import {
 } from '@/util/scoundrel-util';
 import { ref, computed, defineProps } from 'vue';
 import stepHeader from '../step-header.vue';
+import { trackEvent } from '@/tracker';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -203,7 +203,7 @@ async function generatePNG() {
 
     sheetDataUrl.value = canvas.toDataURL('image/png');
     sheetPreview.value!.src = sheetDataUrl.value;
-    sheetPreview.value.style.opacity = '1';
+    sheetPreview.value!.style.opacity = '1';
 
     // Hide the loading spinner
     isLoading.value = false;

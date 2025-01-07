@@ -93,7 +93,6 @@
 </template>
 
 <script setup lang="ts">
-import LoadFromJsonModal from '@/components/modals/templates/load-from-json-modal.vue';
 import NewsModal from '@/components/modals/templates/news-modal.vue';
 import ScoundrelCard from '@/components/scoundrel-card.vue';
 import ModalController from '@/controllers/modal-controller';

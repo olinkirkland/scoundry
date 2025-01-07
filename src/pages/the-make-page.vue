@@ -72,9 +72,9 @@ import {
     loadScoundrel,
     saveScoundrel,
 } from '@/controllers/storage-controller';
-import { trackEvent } from '@/main';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
+import { trackEvent } from '@/tracker';
 import { makeSemanticId } from '@/util/id-util';
 import { computed, ref, watch } from 'vue';
 
