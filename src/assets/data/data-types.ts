@@ -12,14 +12,6 @@ export type Action =
     | 'consort'
     | 'sway';
 
-export type Playbook = {
-    id: string;
-    label: string;
-    tagline: string;
-    description: string;
-    actions: Record<Action, number>;
-};
-
 export type Trait = {
     id: string;
     label: string;

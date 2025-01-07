@@ -1,26 +1,32 @@
 <template>
     <div class="playbook-card">
-        <h2>{{ playbook.label }}</h2>
-        <p class="tagline">{{ playbook.tagline }}</p>
+        <h2>{{ $t(`Playbooks.${playbookCapitalized}.label`) }}</h2>
+        <p class="tagline">
+            {{ $t(`Playbooks.${playbookCapitalized}.tagline`) }}
+        </p>
+
         <ul class="action-tags">
             <action-tag
-                v-for="action in Object.keys(playbook.actions)"
+                v-for="action in Object.keys(actions)"
                 :key="action"
                 :action="action"
-                :value="playbook.actions[action as Action]"
+                :value="actions[action as Action]"
             />
         </ul>
-        <p class="description">{{ playbook.description }}</p>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Action, Playbook } from '@/assets/data/data-types';
+import { Action } from '@/assets/data/data-types';
 import ActionTag from './action-tag.vue';
 
 const props = defineProps<{
-    playbook: Playbook;
+    playbook: string;
+    actions: Record<Action, number>;
 }>();
+
+const playbookCapitalized =
+    props.playbook.charAt(0).toUpperCase() + props.playbook.slice(1);
 </script>
 
 <style scoped lang="scss">

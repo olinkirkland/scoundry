@@ -1,72 +1,30 @@
-[
-    {
-        "id": "cutter",
-        "label": "Cutter",
-        "tagline": "A dangerous and intimidating fighter",
-        "description": "",
-        "actions": {
-            "skirmish": 2,
-            "command": 1
-        }
+{
+    "cutter": {
+        "skirmish": 2,
+        "command": 1
     },
-    {
-        "id": "hound",
-        "label": "Hound",
-        "tagline": "A deadly sharpshooter and tracker",
-        "description": "",
-        "actions": {
-            "hunt": 2,
-            "survey": 1
-        }
+    "hound": {
+        "hunt": 2,
+        "survey": 1
     },
-    {
-        "id": "leech",
-        "label": "Leech",
-        "tagline": "A saboteur and technician",
-        "description": "",
-        "actions": {
-            "tinker": 2,
-            "wreck": 1
-        }
+    "leech": {
+        "tinker": 2,
+        "wreck": 1
     },
-    {
-        "id": "lurk",
-        "label": "Lurk",
-        "tagline": "A stealthy infiltrator and burglar",
-        "description": "",
-        "actions": {
-            "finesse": 1,
-            "prowl": 2
-        }
+    "lurk": {
+        "finesse": 1,
+        "prowl": 2
     },
-    {
-        "id": "slide",
-        "label": "Slide",
-        "tagline": "A subtle manipulator and spy",
-        "description": "",
-        "actions": {
-            "consort": 1,
-            "sway": 2
-        }
+    "slide": {
+        "consort": 1,
+        "sway": 2
     },
-    {
-        "id": "spider",
-        "label": "Spider",
-        "tagline": "A devious mastermind",
-        "description": "",
-        "actions": {
-            "study": 1,
-            "consort": 2
-        }
+    "spider": {
+        "study": 1,
+        "consort": 2
     },
-    {
-        "id": "whisper",
-        "label": "Whisper",
-        "tagline": "An arcane adept and channeler",
-        "description": "",
-        "actions": {
-            "study": 1,
-            "attune": 2
-        }
+    "whisper": {
+        "study": 1,
+        "attune": 2
     }
-]
+}

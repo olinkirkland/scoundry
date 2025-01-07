@@ -197,5 +197,35 @@
                 }
             }
         }
+    },
+    "Playbooks": {
+        "Cutter": {
+            "label": "Cutter",
+            "tagline": "A dangerous and intimidating fighter"
+        },
+        "Hound": {
+            "label": "Hound",
+            "tagline": "A deadly sharpshooter and tracker"
+        },
+        "Leech": {
+            "label": "Leech",
+            "tagline": "A saboteur and technician"
+        },
+        "Lurk": {
+            "label": "Lurk",
+            "tagline": "A stealthy infiltrator and burglar"
+        },
+        "Slide": {
+            "label": "Slide",
+            "tagline": "A subtle manipulator and spy"
+        },
+        "Spider": {
+            "label": "Spider",
+            "tagline": "A devious mastermind"
+        },
+        "Whisper": {
+            "label": "Whisper",
+            "tagline": "An arcane adept and channeler"
+        }
     }
 }
