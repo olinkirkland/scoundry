@@ -1,6 +1,6 @@
 <template>
     <div class="trait-detail-card" :class="{ selected }">
-        <h2>{{ traitDetail.label }}</h2>
+        <h2>{{ label }}</h2>
         <ul class="action-tags">
             <suggested-action-tag
                 v-for="action in traitDetail.suggestedActions"
@@ -17,6 +17,7 @@ import SuggestedActionTag from './suggested-action-tag.vue';
 
 const props = defineProps<{
     traitDetail: TraitDetail;
+    label?: string;
     selected: boolean;
 }>();
 </script>

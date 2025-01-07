@@ -2,7 +2,6 @@
     {
         "trait": "academic",
         "id": "antiquarian",
-        "label": "Antiquarian",
         "suggestedActions": [
             "attune",
             "study",
@@ -12,7 +11,6 @@
     {
         "trait": "academic",
         "id": "criminologist",
-        "label": "Criminologist",
         "suggestedActions": [
             "consort",
             "study",
@@ -22,7 +20,6 @@
     {
         "trait": "academic",
         "id": "demonologist",
-        "label": "Demonologist",
         "suggestedActions": [
             "attune",
             "consort",
@@ -32,7 +29,6 @@
     {
         "trait": "academic",
         "id": "electrochemist",
-        "label": "Electrochemist",
         "suggestedActions": [
             "attune",
             "study",
@@ -42,7 +38,6 @@
     {
         "trait": "academic",
         "id": "engineer",
-        "label": "Engineer",
         "suggestedActions": [
             "study",
             "tinker",
@@ -52,7 +47,6 @@
     {
         "trait": "academic",
         "id": "naturalist",
-        "label": "Naturalist",
         "suggestedActions": [
             "attune",
             "hunt",
@@ -62,7 +56,6 @@
     {
         "trait": "academic",
         "id": "psychometrist",
-        "label": "Psychometrist",
         "suggestedActions": [
             "consort",
             "study",
@@ -72,7 +65,6 @@
     {
         "trait": "academic",
         "id": "scholar",
-        "label": "Scholar",
         "suggestedActions": [
             "consort",
             "study",
@@ -82,7 +74,6 @@
     {
         "trait": "academic",
         "id": "spectrologist",
-        "label": "Spectrologist",
         "suggestedActions": [
             "attune",
             "study",
@@ -92,7 +83,6 @@
     {
         "trait": "law-and-military",
         "id": "acolyte-spirit-warden",
-        "label": "Acolyte Spirit Warden",
         "suggestedActions": [
             "attune",
             "command",
@@ -102,7 +92,6 @@
     {
         "trait": "law-and-military",
         "id": "bluecoat",
-        "label": "Bluecoat",
         "suggestedActions": [
             "command",
             "skirmish",
@@ -112,7 +101,6 @@
     {
         "trait": "law-and-military",
         "id": "bounty-hunter",
-        "label": "Bounty Hunter",
         "suggestedActions": [
             "consort",
             "hunt",
@@ -122,7 +110,6 @@
     {
         "trait": "law-and-military",
         "id": "diplomat",
-        "label": "Diplomat",
         "suggestedActions": [
             "study",
             "consort",
@@ -132,7 +119,6 @@
     {
         "trait": "law-and-military",
         "id": "firefighter",
-        "label": "Firefighter",
         "suggestedActions": [
             "command",
             "survey",
@@ -142,7 +128,6 @@
     {
         "trait": "law-and-military",
         "id": "leviathan-hunter",
-        "label": "Leviathan Hunter",
         "suggestedActions": [
             "finesse",
             "hunt",
@@ -152,7 +137,6 @@
     {
         "trait": "law-and-military",
         "id": "military-guardsman",
-        "label": "Military Guardsman",
         "suggestedActions": [
             "command",
             "hunt",
@@ -162,7 +146,6 @@
     {
         "trait": "law-and-military",
         "id": "ministry-agent",
-        "label": "Ministry Agent",
         "suggestedActions": [
             "hunt",
             "prowl",
@@ -172,7 +155,6 @@
     {
         "trait": "law-and-military",
         "id": "rifle-scout",
-        "label": "Rifle Scout",
         "suggestedActions": [
             "hunt",
             "prowl",
@@ -182,7 +164,7 @@
     {
         "trait": "law-and-military",
         "id": "sparkwright",
-        "label": "Sparkwright",
+        
         "suggestedActions": [
             "finesse",
             "study",
@@ -192,7 +174,7 @@
     {
         "trait": "labor",
         "id": "docker",
-        "label": "Docker",
+        
         "suggestedActions": [
             "consort",
             "skirmish",
@@ -202,7 +184,7 @@
     {
         "trait": "labor",
         "id": "driver",
-        "label": "Driver",
+        
         "suggestedActions": [
             "finesse",
             "prowl",
@@ -212,7 +194,7 @@
     {
         "trait": "labor",
         "id": "factory-worker",
-        "label": "Factory Worker",
+        
         "suggestedActions": [
             "command",
             "tinker",
@@ -222,7 +204,7 @@
     {
         "trait": "labor",
         "id": "farmhand",
-        "label": "Farmhand",
+        
         "suggestedActions": [
             "finesse",
             "study",
@@ -232,7 +214,7 @@
     {
         "trait": "labor",
         "id": "fighter",
-        "label": "Fighter",
+        
         "suggestedActions": [
             "command",
             "prowl",
@@ -242,7 +224,7 @@
     {
         "trait": "labor",
         "id": "linewalker",
-        "label": "Linewalker",
+        
         "suggestedActions": [
             "finesse",
             "prowl",
@@ -252,7 +234,7 @@
     {
         "trait": "labor",
         "id": "miner",
-        "label": "Miner",
+        
         "suggestedActions": [
             "survey",
             "tinker",
@@ -262,7 +244,7 @@
     {
         "trait": "labor",
         "id": "rail-jack",
-        "label": "Rail Jack",
+        
         "suggestedActions": [
             "attune",
             "prowl",
@@ -272,7 +254,7 @@
     {
         "trait": "labor",
         "id": "sailor",
-        "label": "Sailor",
+        
         "suggestedActions": [
             "command",
             "finesse",
@@ -282,7 +264,7 @@
     {
         "trait": "labor",
         "id": "scavenger",
-        "label": "Scavenger",
+        
         "suggestedActions": [
             "hunt",
             "survey",
@@ -292,7 +274,7 @@
     {
         "trait": "labor",
         "id": "sentry",
-        "label": "Sentry",
+        
         "suggestedActions": [
             "hunt",
             "skirmish",
@@ -302,7 +284,7 @@
     {
         "trait": "labor",
         "id": "servant",
-        "label": "Servant",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -312,7 +294,7 @@
     {
         "trait": "noble",
         "id": "artist",
-        "label": "Artist",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -322,7 +304,7 @@
     {
         "trait": "noble",
         "id": "captain",
-        "label": "Captain",
+        
         "suggestedActions": [
             "command",
             "finesse",
@@ -332,7 +314,7 @@
     {
         "trait": "noble",
         "id": "councilor",
-        "label": "Councilor",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -342,7 +324,7 @@
     {
         "trait": "noble",
         "id": "courtier",
-        "label": "Courtier",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -352,7 +334,7 @@
     {
         "trait": "noble",
         "id": "dilettante",
-        "label": "Dilettante",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -362,7 +344,7 @@
     {
         "trait": "noble",
         "id": "duelist",
-        "label": "Duelist",
+        
         "suggestedActions": [
             "finesse",
             "skirmish",
@@ -372,7 +354,7 @@
     {
         "trait": "noble",
         "id": "envoy",
-        "label": "Envoy",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -382,7 +364,7 @@
     {
         "trait": "noble",
         "id": "explorer",
-        "label": "Explorer",
+        
         "suggestedActions": [
             "hunt",
             "finesse",
@@ -392,7 +374,7 @@
     {
         "trait": "noble",
         "id": "occultist",
-        "label": "Occultist",
+        
         "suggestedActions": [
             "attune",
             "consort",
@@ -402,7 +384,7 @@
     {
         "trait": "noble",
         "id": "steward",
-        "label": "Steward",
+        
         "suggestedActions": [
             "command",
             "study",
@@ -412,7 +394,7 @@
     {
         "trait": "trade",
         "id": "artisan",
-        "label": "Artisan",
+        
         "suggestedActions": [
             "finesse",
             "study",
@@ -422,7 +404,7 @@
     {
         "trait": "trade",
         "id": "courier",
-        "label": "Courier",
+        
         "suggestedActions": [
             "hunt",
             "prowl",
@@ -432,7 +414,7 @@
     {
         "trait": "trade",
         "id": "gondolier",
-        "label": "Gondolier",
+        
         "suggestedActions": [
             "attune",
             "finesse",
@@ -442,7 +424,7 @@
     {
         "trait": "trade",
         "id": "journalist",
-        "label": "Journalist",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -452,7 +434,7 @@
     {
         "trait": "trade",
         "id": "mediciner",
-        "label": "Mediciner",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -462,7 +444,7 @@
     {
         "trait": "trade",
         "id": "merchant",
-        "label": "Merchant",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -472,7 +454,7 @@
     {
         "trait": "trade",
         "id": "purveyor",
-        "label": "Purveyor",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -482,7 +464,7 @@
     {
         "trait": "trade",
         "id": "secretary",
-        "label": "Secretary",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -492,7 +474,7 @@
     {
         "trait": "trade",
         "id": "technician",
-        "label": "Technician",
+        
         "suggestedActions": [
             "study",
             "tinker",
@@ -502,7 +484,7 @@
     {
         "trait": "trade",
         "id": "taverner",
-        "label": "Taverner",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -512,7 +494,7 @@
     {
         "trait": "underworld",
         "id": "convict",
-        "label": "Convict",
+        
         "suggestedActions": [
             "consort",
             "command",
@@ -522,7 +504,7 @@
     {
         "trait": "underworld",
         "id": "cultist",
-        "label": "Cultist",
+        
         "suggestedActions": [
             "attune",
             "consort",
@@ -532,7 +514,7 @@
     {
         "trait": "underworld",
         "id": "dealer",
-        "label": "Dealer",
+        
         "suggestedActions": [
             "consort",
             "sway",
@@ -542,7 +524,7 @@
     {
         "trait": "underworld",
         "id": "fence",
-        "label": "Fence",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -552,7 +534,7 @@
     {
         "trait": "underworld",
         "id": "hustler",
-        "label": "Hustler",
+        
         "suggestedActions": [
             "consort",
             "study",
@@ -562,7 +544,7 @@
     {
         "trait": "underworld",
         "id": "informant",
-        "label": "Informant",
+        
         "suggestedActions": [
             "hunt",
             "study",
@@ -572,7 +554,7 @@
     {
         "trait": "underworld",
         "id": "lark",
-        "label": "Lark",
+        
         "suggestedActions": [
             "consort",
             "finesse",
@@ -582,7 +564,7 @@
     {
         "trait": "underworld",
         "id": "roof-runner",
-        "label": "Roof Runner",
+        
         "suggestedActions": [
             "hunt",
             "prowl",
@@ -592,7 +574,7 @@
     {
         "trait": "underworld",
         "id": "thief",
-        "label": "Thief",
+        
         "suggestedActions": [
             "finesse",
             "prowl",
@@ -602,7 +584,7 @@
     {
         "trait": "underworld",
         "id": "thug",
-        "label": "Thug",
+        
         "suggestedActions": [
             "command",
             "skirmish",

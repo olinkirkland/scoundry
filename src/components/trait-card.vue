@@ -1,15 +1,13 @@
 <template>
     <div class="trait-card" :class="{ selected }">
         <div class="overlay"></div>
-        <h2>{{ trait.label }}</h2>
+        <h2>{{ label }}</h2>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Trait } from '@/assets/data/data-types';
-
 const props = defineProps<{
-    trait: Trait;
+    label: string;
     selected: boolean;
 }>();
 </script>

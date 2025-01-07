@@ -61,7 +61,7 @@
 
 <script setup lang="ts">
 import { Trait, TraitDetail } from '@/assets/data/data-types';
-import heritageDetailsData from '@/assets/data/heritage-details.json';
+import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import heritagesData from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';

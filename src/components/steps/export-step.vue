@@ -208,6 +208,7 @@ async function generatePNG() {
     if (!canvas) return;
 
     sheetDataUrl.value = canvas.toDataURL('image/png');
+    if (!sheetPreview.value) return (isLoading.value = false);
     sheetPreview.value!.src = sheetDataUrl.value;
     sheetPreview.value!.style.opacity = '1';
 

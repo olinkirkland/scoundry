@@ -3,8 +3,8 @@ import { Action } from './assets/data/data-types';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
 
-import dataBackgrounds from './assets/data/background-details.json';
-import dataHeritages from './assets/data/heritage-details.json';
+import dataBackgrounds from './assets/data/background-suggestions.json';
+import dataHeritages from './assets/data/heritage-suggestions.json';
 
 const dataClassic = {
     name: { x: 100, y: 235 },

@@ -13,6 +13,10 @@
                 "license-blades-in-the-dark": "This work is based on <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — a product of One Seven Design, developed and authored by John Harper, and licensed for our use under the <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
                 "license-portraits": "Portrait images are from <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> with no known restrictions their use.",
                 "license-icons": "Icons are from <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>"
+            },
+            "Scoundrel-card": {
+                "no-playbook": "Unnamed Scoundrel",
+                "no-name": "Unnamed {playbook}"
             }
         },
         "Make-page": {
@@ -189,7 +193,7 @@
                     "description": "Minimal tracking helps improve Scoundry by collecting anonymous data on characters, page visits, and feature usage. No personal information is collected or shared."
                 },
                 "Language": {
-                    "label": "Select the language for the app",
+                    "label": "Select the app language",
                     "Languages": {
                         "en": "English",
                         "es": "Español"
@@ -227,5 +231,100 @@
             "label": "Whisper",
             "tagline": "An arcane adept and channeler"
         }
-    }
+    },
+    "Backgrounds": {
+        "Underworld": {
+            "label": "Underworld",
+            "tagline": "A street urchin, gang member, young thug, or other outcast who grew up on the streets."
+        },
+        "Academic": {
+            "label": "Academic",
+            "tagline": "A scholar, a professor or student from Doskvol Academy, a philosopher or journalist, etc."
+        },
+        "Labor": {
+            "label": "Labor",
+            "tagline": "A servant, a factory worker, a coach driver, a docker, a sailor, a Rail Jack, etc. A stevedore for the North Hook Company."
+        },
+        "Law": {
+            "label": "Law",
+            "tagline": "An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc."
+        },
+        "Trade": {
+            "label": "Trade",
+            "tagline": "A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation."
+        },
+        "Noble": {
+            "label": "Noble",
+            "tagline": "A dilettante, a courtier, the scion of a fallen house, etc."
+        },
+        "Military": {
+            "label": "Military",
+            "tagline": "An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc."
+        }
+    },
+    "Background-suggestions": {
+        "antiquarian": "Antiquarian",
+        "criminologist": "Criminologist",
+        "demonologist": "Demonologist",
+        "electrochemist": "Electrochemist",
+        "engineer": "Engineer",
+        "naturalist": "Naturalist",
+        "psychometrist": "Psychometrist",
+        "scholar": "Scholar",
+        "spectrologist": "Spectrologist",
+        "acolyte-spirit-warden": "Acolyte Spirit Warden",
+        "bluecoat": "Bluecoat",
+        "bounty-hunter": "Bounty Hunter",
+        "diplomat": "Diplomat",
+        "firefighter": "Firefighter",
+        "leviathan-hunter": "Leviathan Hunter",
+        "military-guardsman": "Military Guardsman",
+        "ministry-agent": "Ministry Agent",
+        "rifle-scout": "Rifle Scout",
+        "sparkwright": "Sparkwright",
+        "docker": "Docker",
+        "driver": "Driver",
+        "factory-worker": "Factory Worker",
+        "farmhand": "Farmhand",
+        "fighter": "Fighter",
+        "linewalker": "Linewalker",
+        "miner": "Miner",
+        "rail-jack": "Rail Jack",
+        "sailor": "Sailor",
+        "scavenger": "Scavenger",
+        "sentry": "Sentry",
+        "servant": "Servant",
+        "artist": "Artist",
+        "captain": "Captain",
+        "councilor": "Councilor",
+        "courtier": "Courtier",
+        "dilettante": "Dilettante",
+        "duelist": "Duelist",
+        "envoy": "Envoy",
+        "explorer": "Explorer",
+        "occultist": "Occultist",
+        "steward": "Steward",
+        "artisan": "Artisan",
+        "courier": "Courier",
+        "gondolier": "Gondolier",
+        "journalist": "Journalist",
+        "mediciner": "Mediciner",
+        "merchant": "Merchant",
+        "purveyor": "Purveyor",
+        "secretary": "Secretary",
+        "technician": "Technician",
+        "taverner": "Taverner",
+        "convict": "Convict",
+        "cultist": "Cultist",
+        "dealer": "Dealer",
+        "fence": "Fence",
+        "hustler": "Hustler",
+        "informant": "Informant",
+        "lark": "Lark",
+        "roof-runner": "Roof Runner",
+        "thief": "Thief",
+        "thug": "Thug"
+    },
+    "Heritages": {},
+    "Heritage-suggestions": {}
 }

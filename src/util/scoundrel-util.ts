@@ -1,15 +1,14 @@
-import dataPlaybooks from '@/assets/data/playbooks.json';
+import i18n from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { getActionValue } from './action-util';
 import { makeSemanticId } from './id-util';
+import { capitalize } from './string-util';
 
 export function getSemanticScoundrelName(scoundrel: Scoundrel) {
     if (scoundrel.name) return scoundrel.name;
-    if (!scoundrel.playbook) return 'Unnamed Scoundrel';
-    const playbook = dataPlaybooks.find(
-        (playbook) => playbook.id === scoundrel.playbook
-    );
-    return playbook ? `Unnamed ${playbook.label}` : 'Unnamed Scoundrel';
+    if (!scoundrel.playbook) return i18n.global.t('User-interface.Home-page.Scoundrel-card.no-playbook');
+    const playbookLabel = i18n.global.t(`Playbooks.${capitalize(scoundrel.playbook)}.label`);
+    return i18n.global.t('User-interface.Home-page.Scoundrel-card.no-name', { playbook: playbookLabel });
 }
 
 export function getAttributeValue(

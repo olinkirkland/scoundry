@@ -124,9 +124,9 @@
 
 <script setup lang="ts">
 import actionRatingsData from '@/assets/data/action-ratings.json';
-import backgroundDetailsData from '@/assets/data/background-details.json';
+import backgroundDetailsData from '@/assets/data/background-suggestions.json';
 import { Action, ActionRating, TraitDetail } from '@/assets/data/data-types';
-import heritageDetailsData from '@/assets/data/heritage-details.json';
+import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import ActionTag from '@/components/action-tag.vue';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';

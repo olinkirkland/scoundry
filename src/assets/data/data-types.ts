@@ -14,8 +14,6 @@ export type Action =
 
 export type Trait = {
     id: string;
-    label: string;
-    description: string;
     category: string;
     image?: string;
     color?: string;
@@ -24,7 +22,6 @@ export type Trait = {
 export type TraitDetail = {
     id: string;
     trait: string;
-    label: string;
     suggestedActions: Action[];
 };
 
