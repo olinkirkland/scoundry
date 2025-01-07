@@ -52,7 +52,7 @@ const props = defineProps<{
         font-weight: normal;
     }
 
-    p.tagline {
+    p.description {
         text-align: center;
         font-style: italic;
     }

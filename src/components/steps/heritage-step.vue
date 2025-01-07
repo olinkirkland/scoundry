@@ -1,17 +1,21 @@
 <template>
     <step-header>
-        <h2>What are your origins?</h2>
-        <p>Pick a heritage and write a detail specific to you.</p>
+        <h2 v-html="$t('User-interface.Steps.Heritage.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Heritage.subtitle')"></p>
         <a
             @click="
                 ModalController.open(ImageModal, {
-                    title: 'World Map',
+                    title: i18n.global.t(
+                        'User-interface.Modals.World-map.title'
+                    ),
                     image: '/assets/images/world-map.png',
-                    backgroundColor: '#ffffff'
+                    backgroundColor: '#ffffff',
                 })
             "
         >
-            <span>World Map</span>
+            <span>
+                {{ $t('User-interface.Steps.Heritage.world-map-button') }}
+            </span>
         </a>
     </step-header>
     <div class="list-container-frame">
@@ -19,23 +23,31 @@
             <ul class="heritages-list">
                 <trait-card
                     v-for="heritage in heritages"
-                    :key="heritage.id"
-                    :trait="heritage"
-                    :selected="heritage.id === scoundrel.heritage"
+                    :key="heritage"
+                    :label="
+                        useI18n().t(`Heritages.${capitalize(heritage)}.label`)
+                    "
+                    :selected="heritage === scoundrel.heritage"
                     @click="onClickHeritage(heritage)"
                 />
             </ul>
         </div>
     </div>
+
     <p v-if="selectedHeritage" class="description">
-        {{ selectedHeritage.description }}
+        {{ $t(`Heritages.${capitalize(selectedHeritage)}.description`) }}
     </p>
-    <p v-else class="description">
-        Select a heritage to see its description and suggested details.
-    </p>
+    <p
+        v-else
+        class="description"
+        v-html="$t('User-interface.Steps.Heritage.select-prompt')"
+    ></p>
+
     <section v-if="scoundrel.heritage" class="selected-heritage">
         <div class="input-block">
-            <label>A detail about your heritage</label>
+            <label>
+                {{ $t('User-interface.Steps.Heritage.detail-prompt') }}
+            </label>
             <input type="text" v-model="scoundrel.heritageDetail" />
         </div>
 
@@ -43,31 +55,35 @@
             <trait-detail-card
                 v-for="detail in filteredHeritageDetails"
                 :key="detail.id"
-                :selected="detail.label === scoundrel.heritageDetail"
+                :label="useI18n().t(`Heritage-suggestions.${detail.id}`)"
+                :selected="
+                    useI18n().t(`Heritage-suggestions.${detail.id}`) ===
+                    scoundrel.heritageDetail
+                "
                 :traitDetail="detail"
                 @click="onClickHeritageDetail(detail)"
             />
         </ul>
 
-        <p class="reference">
-            Full descriptions of these heritages can be found in the
-            <a href="https://johnharper.itch.io/deep-cuts" target="_blank"
-                >Deep Cuts</a
-            >
-            Blades in the Dark expansion.
-        </p>
+        <p
+            class="reference"
+            v-html="$t('User-interface.Steps.Heritage.deep-cuts-description')"
+        ></p>
     </section>
 </template>
 
 <script setup lang="ts">
-import { Trait, TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/assets/data/data-types';
 import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
-import heritagesData from '@/assets/data/heritages.json';
+import heritages from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
 import ModalController from '@/controllers/modal-controller';
+import i18n from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
+import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import ImageModal from '../modals/templates/image-modal.vue';
 import TraitDetailCard from '../trait-detail-card.vue';
 
@@ -75,16 +91,15 @@ const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
-const heritages = heritagesData as unknown as Trait[];
 const heritageDetails = heritageDetailsData as unknown as TraitDetail[];
 
 const selectedHeritage = computed(() =>
-    heritages.find((b) => b.id === props.scoundrel.heritage)
+    heritages.find((h) => h === props.scoundrel.heritage)
 );
 
 const filteredHeritageDetails = computed(() => {
     if (!selectedHeritage.value) return [];
-    let heritageDetailsFilter = selectedHeritage.value.id;
+    let heritageDetailsFilter = selectedHeritage.value;
     return heritageDetails.filter(
         (heritageDetail) =>
             heritageDetail.trait === heritageDetailsFilter ||
@@ -92,21 +107,23 @@ const filteredHeritageDetails = computed(() => {
     );
 });
 
-function onClickHeritage(heritage: Trait) {
+function onClickHeritage(heritage: string) {
     // Choose the heritage, and clear the heritage detail
-    props.scoundrel.heritage = heritage.id;
+    props.scoundrel.heritage = heritage;
     props.scoundrel.heritageDetail = '';
 }
 
 function onClickHeritageDetail(heritageDetail: TraitDetail) {
+    const label = i18n.global.t(`Heritage-suggestions.${heritageDetail.id}`);
+
     // Set the heritage detail to empty if it's already selected
-    if (props.scoundrel.heritageDetail === heritageDetail.label) {
+    if (props.scoundrel.heritageDetail === label) {
         props.scoundrel.heritageDetail = '';
         return;
     }
 
     // Choose the heritage detail
-    props.scoundrel.heritageDetail = heritageDetail.label;
+    props.scoundrel.heritageDetail = label;
 }
 </script>
 

@@ -2,7 +2,7 @@
     <div class="page page--home page-in" ref="page">
         <div class="page-content">
             <h1>Scoundry</h1>
-            <p v-html="$t('User-interface.Home-page.tagline')"></p>
+            <p v-html="$t('User-interface.Home-page.description')"></p>
 
             <div class="row controls">
                 <button class="btn" @click="onClickMakeNewScoundrel">

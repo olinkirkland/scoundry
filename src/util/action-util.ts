@@ -1,5 +1,4 @@
-import actionRatingsData from '@/assets/data/action-ratings.json';
-import { Action, ActionRating } from '@/assets/data/data-types';
+import attributesData from '@/assets/data/attributes.json';
 
 const ATTRIBUTE_COLORS = {
     insight: '#1fa87f',
@@ -15,15 +14,16 @@ export function getAttributeColor(attribute: string): string {
     return ATTRIBUTE_COLORS[attribute as keyof typeof ATTRIBUTE_COLORS];
 }
 
-export function getActionRating(action: Action): ActionRating | undefined {
-    return (actionRatingsData as ActionRating[]).find(
-        (a) => a.id === action
-    );
+export function getAttribute(action: string): string | undefined {
+    if (attributesData.resolve.includes(action)) return 'resolve';
+    if (attributesData.insight.includes(action)) return 'insight';
+    if (attributesData.prowess.includes(action)) return 'prowess';
+    console.error(`Action ${action} not found in attributes.`);
 }
 
 export function getActionValue(
     actions: Record<string, Record<string, number>>,
-    action: Action
+    action: string
 ): number {
     if (!actions) return 0;
     const actionRating = actions[action];

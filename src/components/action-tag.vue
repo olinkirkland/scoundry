@@ -11,13 +11,13 @@
             <li v-for="i in value" :key="i" :style="{ color }"></li>
             <li class="empty" v-if="value == 0" :style="{ color }"></li>
         </ul>
-        <p class="label">{{ actionRating.label }}</p>
+        <p class="label">{{ $t(`Actions.${capitalize(action)}.label`) }}</p>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { Action } from '@/assets/data/data-types';
-import { getActionRating, getAttributeColor } from '@/util/action-util';
+import { getAttribute, getAttributeColor } from '@/util/action-util';
+import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -25,12 +25,9 @@ const props = defineProps<{
     value: number;
 }>();
 
-const actionRating = computed(() => {
-    return getActionRating(props.action as Action)!;
-});
-
 const color = computed(() => {
-    return getAttributeColor(actionRating.value.attribute);
+    const attribute = getAttribute(props.action)!;
+    return getAttributeColor(attribute);
 });
 </script>
 

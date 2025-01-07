@@ -22,7 +22,7 @@
     </div>
 
     <p v-if="selectedBackground" class="description">
-        {{ $t(`Backgrounds.${capitalize(selectedBackground)}.tagline`) }}
+        {{ $t(`Backgrounds.${capitalize(selectedBackground)}.description`) }}
     </p>
     <p
         v-else
@@ -54,7 +54,7 @@
 
         <p
             class="reference"
-            v-html="$t('User-interface.Steps.Background.deep-cuts-tagline')"
+            v-html="$t('User-interface.Steps.Background.deep-cuts-description')"
         ></p>
     </section>
 </template>

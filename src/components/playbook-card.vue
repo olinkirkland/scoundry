@@ -1,8 +1,8 @@
 <template>
     <div class="playbook-card">
         <h2>{{ $t(`Playbooks.${playbookCapitalized}.label`) }}</h2>
-        <p class="tagline">
-            {{ $t(`Playbooks.${playbookCapitalized}.tagline`) }}
+        <p class="description">
+            {{ $t(`Playbooks.${playbookCapitalized}.description`) }}
         </p>
 
         <ul class="action-tags">
@@ -51,7 +51,7 @@ const playbookCapitalized =
         font-size: 5.6rem;
     }
 
-    p.tagline {
+    p.description {
         text-align: center;
         font-style: italic;
     }

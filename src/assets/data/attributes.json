@@ -1,0 +1,20 @@
+{
+    "resolve": [
+        "attune",
+        "command",
+        "consort",
+        "sway"
+    ],
+    "prowess": [
+        "finesse",
+        "prowl",
+        "skirmish",
+        "wreck"
+    ],
+    "insight": [
+        "hunt",
+        "study",
+        "survey",
+        "tinker"
+    ]
+}

@@ -1,9 +1,7 @@
 <template>
     <step-header>
-        <h2>What are your strongest attributes?</h2>
-        <p>
-            Assign action dots to attributes that best represent your scoundrel.
-        </p>
+        <h2 v-html="$t('User-interface.Steps.Actions.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Actions.subtitle')"></p>
     </step-header>
 
     <div class="actions">
@@ -17,10 +15,13 @@
                     id="optionActionsCreatingCharacter"
                     v-model="scoundrel.optionActionsCreatingCharacter"
                 />
-                <label for="optionActionsCreatingCharacter"
-                    >Character Creation: 7 action dots total, limit 2 dots per
-                    action</label
-                >
+                <label for="optionActionsCreatingCharacter">
+                    {{
+                        $t(
+                            'User-interface.Steps.Actions.Options.character-creation-button'
+                        )
+                    }}
+                </label>
             </div>
             <div
                 class="checkbox-group"
@@ -31,58 +32,62 @@
                     id="optionActionsMasteryAdvance"
                     v-model="scoundrel.optionActionsMasteryAdvance"
                 />
-                <label for="optionActionsMasteryAdvance"
-                    >Mastery Advance: Allow actions to advance to 4</label
-                >
+                <label for="optionActionsMasteryAdvance">
+                    {{
+                        $t(
+                            'User-interface.Steps.Actions.Options.mastery-advance-button'
+                        )
+                    }}
+                </label>
             </div>
-
-            <!-- <p>
-                During creation, assign
-                <strong>4 more</strong> action dots (a total of 7, including the
-                ones from your Playbook). No action may begin with more than 2
-                dots. After creation, action ratings may advance up to 3 and up
-                to 4 after unlocking the crew's mastery advance.
-            </p> -->
         </div>
         <div class="callout suggested-actions" v-if="hasSuggestedActions">
-            Action ratings suggested by your background and heritage:
+            {{ $t('User-interface.Steps.Actions.suggested-actions') }}
             <span v-html="suggestedRatingsHTML"></span>
         </div>
 
         <div class="action-tally">
-            <p>
-                <strong>{{ totalActionRatings }}</strong
-                ><span v-if="scoundrel.optionActionsCreatingCharacter">
-                    of 7</span
-                >
-                action dots assigned
-            </p>
+            <p
+                v-if="scoundrel.optionActionsCreatingCharacter"
+                v-html="
+                    $t(
+                        'User-interface.Steps.Actions.Action-tally.with-character-creation',
+                        { count: totalActionRatings }
+                    )
+                "
+            ></p>
+            <p
+                v-else
+                v-html="
+                    $t(
+                        'User-interface.Steps.Actions.Action-tally.without-character-creation',
+                        { count: totalActionRatings }
+                    )
+                "
+            ></p>
         </div>
 
         <div class="attributes-list">
             <div
                 class="attribute"
                 v-for="attribute in attributes"
-                :key="attribute.id"
+                :key="attribute"
             >
                 <label
-                    >{{ attribute.label }} ({{
-                        getAttributeValue(attribute.id)
+                    >{{ $t(`Attributes.${attribute}`) }} ({{
+                        getAttributeValue(attribute)
                     }})
                 </label>
-                <ul :class="attribute.id">
+                <ul :class="attribute">
                     <li
-                        v-for="action in actionsByAttribute(attribute.id)"
-                        :key="action.id"
+                        v-for="action in actionsByAttribute(attribute)"
+                        :key="action"
                     >
                         <div class="action-row">
                             <ActionTag
-                                :action="action.id"
+                                :action="action"
                                 :value="
-                                    getActionValue(
-                                        scoundrel.actions,
-                                        action.id as Action
-                                    )
+                                    getActionValue(scoundrel.actions, action)
                                 "
                             />
                             <div class="controls">
@@ -90,10 +95,9 @@
                                     class="btn btn--mini"
                                     :class="{
                                         disabled:
-                                            !scoundrel.actions[action.id]
-                                                .custom,
+                                            !scoundrel.actions[action].custom,
                                     }"
-                                    @click="changeAction(action.id, -1)"
+                                    @click="changeAction(action, -1)"
                                 >
                                     <img src="/assets/icons/minus.png" />
                                 </button>
@@ -103,18 +107,22 @@
                                         disabled:
                                             getActionValue(
                                                 scoundrel.actions,
-                                                action.id as Action
+                                                action
                                             ) === maxActionValue ||
                                             (scoundrel.optionActionsCreatingCharacter &&
                                                 totalActionRatings >= 7),
                                     }"
-                                    @click="changeAction(action.id, 1)"
+                                    @click="changeAction(action, 1)"
                                 >
                                     <img src="/assets/icons/plus.png" />
                                 </button>
                             </div>
                         </div>
-                        <p>{{ action.description }}</p>
+                        <p>
+                            {{
+                                $t(`Actions.${capitalize(action)}.description`)
+                            }}
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -123,23 +131,27 @@
 </template>
 
 <script setup lang="ts">
-import actionRatingsData from '@/assets/data/action-ratings.json';
+import attributesData from '@/assets/data/attributes.json';
 import backgroundDetailsData from '@/assets/data/background-suggestions.json';
-import { Action, ActionRating, TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/assets/data/data-types';
 import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import ActionTag from '@/components/action-tag.vue';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import {
-    getActionRating,
     getActionValue,
+    getAttribute,
     getAttributeColor,
 } from '@/util/action-util';
+import { capitalize } from '@/util/string-util';
 import { computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
+
+const attributes = Object.keys(attributesData);
 
 // Default options
 if (props.scoundrel.optionActionsCreatingCharacter === undefined)
@@ -152,21 +164,6 @@ const maxActionValue = computed(() => {
     if (props.scoundrel.optionActionsMasteryAdvance) return 4;
     return 3;
 });
-
-const attributes = [
-    {
-        id: 'insight',
-        label: 'Insight',
-    },
-    {
-        id: 'prowess',
-        label: 'Prowess',
-    },
-    {
-        id: 'resolve',
-        label: 'Resolve',
-    },
-];
 
 // Check when the sticky action tally should change its style (add the .pinned class)
 // Wait for the element to be rendered
@@ -186,7 +183,7 @@ onMounted(() => {
 const totalActionRatings = computed(() => {
     let count = 0;
     for (const action of Object.keys(props.scoundrel.actions)) {
-        count += getActionValue(props.scoundrel.actions, action as Action);
+        count += getActionValue(props.scoundrel.actions, action);
     }
 
     return count;
@@ -198,12 +195,16 @@ const hasSuggestedActions = computed(() => {
 
     const heritageDetailActions =
         heritageDetails.find(
-            (detail) => detail.label === props.scoundrel.heritageDetail
+            (detail) =>
+                useI18n().t(`Heritage-suggestions.${detail.id}`) ===
+                props.scoundrel.heritageDetail
         )?.suggestedActions || [];
 
     const backgroundDetailActions =
         backgroundDetails.find(
-            (detail) => detail.label === props.scoundrel.backgroundDetail
+            (detail) =>
+                useI18n().t(`Background-suggestions.${detail.id}`) ===
+                props.scoundrel.backgroundDetail
         )?.suggestedActions || [];
 
     return (
@@ -215,71 +216,76 @@ const suggestedRatingsHTML = computed(() => {
     const heritageDetails = heritageDetailsData as unknown as TraitDetail[];
     const backgroundDetails = backgroundDetailsData as unknown as TraitDetail[];
 
-    // Remember: Heritage detail and background detail are stored in the scoundrel as the label, not the id
+    // Heritage detail is stored in the scoundrel as the localized label, not the id
     const heritageDetailActions =
-        heritageDetails.find(
-            (detail) => detail.label === props.scoundrel.heritageDetail
-        )?.suggestedActions || [];
+        heritageDetails.find((detail) => {
+            const heritageDetailLabel = useI18n().t(
+                `Heritage-suggestions.${detail.id}`
+            );
+            return heritageDetailLabel === props.scoundrel.heritageDetail;
+        })?.suggestedActions || [];
+
+    // Background detail is stored in the scoundrel as the localized label, not the id
     const backgroundDetailActions =
-        backgroundDetails.find(
-            (detail) => detail.label === props.scoundrel.backgroundDetail
-        )?.suggestedActions || [];
+        backgroundDetails.find((detail) => {
+            const backgroundDetailLabel = useI18n().t(
+                `Background-suggestions.${detail.id}`
+            );
+            return backgroundDetailLabel === props.scoundrel.backgroundDetail;
+        })?.suggestedActions || [];
 
     // isImportant is true if the action is suggested by both the background and heritage
     const suggestedActions: {
-        actionRating: ActionRating;
+        action: string;
         isImportant: boolean;
-        color: string;
     }[] = [];
 
     heritageDetailActions.forEach((action) => {
-        const actionRating = getActionRating(action)!;
         suggestedActions.push({
-            actionRating,
+            action,
             isImportant: false,
-            color: getAttributeColor(actionRating.attribute),
         });
     });
 
     backgroundDetailActions.forEach((action) => {
-        const actionRating = getActionRating(action)!;
         const index = suggestedActions.findIndex(
-            (a) => a.actionRating.id === actionRating.id
+            (suggestedAction) => suggestedAction.action === action
         );
         if (index === -1)
             suggestedActions.push({
-                actionRating,
+                action,
                 isImportant: false,
-                color: getAttributeColor(actionRating.attribute),
             });
         else suggestedActions[index].isImportant = true;
     });
 
-    // Sort suggestedActions by their attribute
-    const attributesOrder = ['insight', 'prowess', 'resolve'];
+    // Sort suggestedActions by their attribute (order of attributes.json)
+    const attributesOrder = Object.keys(attributesData);
     suggestedActions.sort((a, b) => {
-        const aIndex = attributesOrder.indexOf(a.actionRating!.attribute);
-        const bIndex = attributesOrder.indexOf(b.actionRating!.attribute);
+        const aIndex = attributesOrder.indexOf(getAttribute(a.action)!);
+        const bIndex = attributesOrder.indexOf(getAttribute(b.action)!);
         if (aIndex < bIndex) return -1;
         if (aIndex > bIndex) return 1;
         return 0;
     });
 
+    console.log(suggestedActions);
+
     return suggestedActions
-        .map(
-            (action) =>
-                `<span style="color: ${action.color}" class="suggestion${action.isImportant ? '--important' : ''}">${action.actionRating.label}</span>`
-        )
+        .map((suggestedAction) => {
+            const actionLabel = useI18n().t(
+                `Actions.${capitalize(suggestedAction.action)}.label`
+            );
+            return `<span style="color: ${getAttributeColor(getAttribute(suggestedAction.action)!)}" class="suggestion${suggestedAction.isImportant ? '--important' : ''}">${actionLabel}</span>`;
+        })
         .join(', ');
 });
 
-function actionsByAttribute(attribute: string) {
-    return (actionRatingsData as unknown as ActionRating[]).filter(
-        (action) => action.attribute === attribute
-    );
+function actionsByAttribute(attribute: string): string[] {
+    return attributesData[attribute as keyof typeof attributesData];
 }
 
-function changeAction(action: Action, value: number) {
+function changeAction(action: string, value: number) {
     if (!props.scoundrel.actions[action].custom)
         props.scoundrel.actions[action].custom = 0;
 
@@ -294,9 +300,7 @@ function getAttributeValue(attribute: string) {
     // Number of actions with this attribute, that have at least 1 dot assigned
     let count = 0;
     actionsByAttribute(attribute).forEach((action) => {
-        getActionValue(props.scoundrel.actions, action.id as Action) > 0
-            ? count++
-            : null;
+        getActionValue(props.scoundrel.actions, action) > 0 ? count++ : null;
     });
 
     return count;
@@ -361,11 +365,6 @@ function getAttributeValue(attribute: string) {
         display: flex;
         gap: 0.2rem;
     }
-}
-
-:deep(.suggestion--important) {
-    // font-weight: bold;
-    // font-style: italic;
 }
 
 .action-tally {

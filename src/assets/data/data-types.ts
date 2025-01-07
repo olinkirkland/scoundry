@@ -1,17 +1,3 @@
-export type Action =
-    | 'hunt'
-    | 'study'
-    | 'survey'
-    | 'tinker'
-    | 'finesse'
-    | 'prowl'
-    | 'skirmish'
-    | 'wreck'
-    | 'attune'
-    | 'command'
-    | 'consort'
-    | 'sway';
-
 export type Trait = {
     id: string;
     category: string;
@@ -22,7 +8,7 @@ export type Trait = {
 export type TraitDetail = {
     id: string;
     trait: string;
-    suggestedActions: Action[];
+    suggestedActions: string[];
 };
 
 export type Address = {
@@ -32,11 +18,4 @@ export type Address = {
     name: string;
     description?: string;
     district: string;
-};
-
-export type ActionRating = {
-    id: Action;
-    attribute: string;
-    label: string;
-    description: string;
 };

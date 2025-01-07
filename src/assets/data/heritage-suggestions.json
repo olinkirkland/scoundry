@@ -1,7 +1,6 @@
 [
     {
         "trait": null,
-        "label": "Deathlander",
         "id": "deathlander",
         "suggestedActions": [
             "attune",
@@ -11,7 +10,6 @@
     },
     {
         "trait": null,
-        "label": "Exile",
         "id": "exile",
         "suggestedActions": [
             "command",
@@ -21,7 +19,6 @@
     },
     {
         "trait": null,
-        "label": "Nomad",
         "id": "nomad",
         "suggestedActions": [
             "consort",
@@ -31,7 +28,6 @@
     },
     {
         "trait": null,
-        "label": "Outlaw",
         "id": "outlaw",
         "suggestedActions": [
             "consort",
@@ -41,7 +37,6 @@
     },
     {
         "trait": null,
-        "label": "Refugee",
         "id": "refugee",
         "suggestedActions": [
             "consort",
@@ -50,7 +45,6 @@
         ]
     },
     {
-        "label": "Church of Ecstasy",
         "id": "church-of-ecstasy",
         "suggestedActions": [
             "attune",
@@ -60,7 +54,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Doskvol Academy",
         "id": "doskvol-academy",
         "suggestedActions": [
             "command",
@@ -70,7 +63,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Governor's Stronghold",
         "id": "governors-stronghold",
         "suggestedActions": [
             "command",
@@ -80,7 +72,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Ironworks Labor",
         "id": "ironworks-labor",
         "suggestedActions": [
             "consort",
@@ -90,7 +81,6 @@
         "trait": "akoros"
     },
     {
-        "label": "North Hook Company",
         "id": "north-hook-company",
         "suggestedActions": [
             "command",
@@ -100,7 +90,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Radiant Energy Farmers",
         "id": "radiant-energy-farmers",
         "suggestedActions": [
             "study",
@@ -110,7 +99,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Cloudspire Aeronauts",
         "id": "cloudspire-aeronauts",
         "suggestedActions": [
             "study",
@@ -120,7 +108,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Ilysian Guard",
         "id": "ilysian-guard",
         "suggestedActions": [
             "command",
@@ -130,7 +117,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Imperial City Courtiers",
         "id": "imperial-city-courtiers",
         "suggestedActions": [
             "command",
@@ -140,7 +126,6 @@
         "trait": "akoros"
     },
     {
-        "label": "South Point Traders",
         "id": "south-point-traders",
         "suggestedActions": [
             "consort",
@@ -150,7 +135,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Whitehollow Miners",
         "id": "whitehollow-miners",
         "suggestedActions": [
             "study",
@@ -160,7 +144,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Wintercliff Wardens",
         "id": "wintercliff-wardens",
         "suggestedActions": [
             "attune",
@@ -170,7 +153,6 @@
         "trait": "akoros"
     },
     {
-        "label": "Bonewalker",
         "id": "bonewalker",
         "suggestedActions": [
             "attune",
@@ -180,7 +162,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Lhan Lhaban",
         "id": "lhan-lhaban",
         "suggestedActions": [
             "consort",
@@ -190,7 +171,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Liberators",
         "id": "liberators",
         "suggestedActions": [
             "prowl",
@@ -200,7 +180,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Lore Keepers",
         "id": "lore-keepers",
         "suggestedActions": [
             "consort",
@@ -210,7 +189,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Melamatines",
         "id": "melamatines",
         "suggestedActions": [
             "attune",
@@ -220,7 +198,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Vidyad",
         "id": "vidyad",
         "suggestedActions": [
             "finesse",
@@ -230,7 +207,6 @@
         "trait": "dagger-isles"
     },
     {
-        "label": "Bright Harbor Fleet",
         "id": "bright-harbor-fleet",
         "suggestedActions": [
             "command",
@@ -240,7 +216,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "City Guardians",
         "id": "city-guardians",
         "suggestedActions": [
             "attune",
@@ -250,7 +225,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "Emissaries",
         "id": "emissaries",
         "suggestedActions": [
             "command",
@@ -260,7 +234,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "Falconers",
         "id": "falconers",
         "suggestedActions": [
             "command",
@@ -270,7 +243,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "Lightning Couriers",
         "id": "lightning-couriers",
         "suggestedActions": [
             "finesse",
@@ -280,7 +252,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "Water Bearers",
         "id": "water-bearers",
         "suggestedActions": [
             "consort",
@@ -290,7 +261,6 @@
         "trait": "iruvia"
     },
     {
-        "label": "Blackvale Coven",
         "id": "blackvale-coven",
         "suggestedActions": [
             "attune",
@@ -300,7 +270,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Blood Cullers",
         "id": "blood-cullers",
         "suggestedActions": [
             "attune",
@@ -310,7 +279,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Home Guard Militia",
         "id": "home-guard-militia",
         "suggestedActions": [
             "hunt",
@@ -320,7 +288,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Imperial Collaborators",
         "id": "imperial-collaborators",
         "suggestedActions": [
             "prowl",
@@ -330,7 +297,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Lockport Scummer",
         "id": "lockport-scummer",
         "suggestedActions": [
             "attune",
@@ -340,7 +306,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Onyx Citadel",
         "id": "onyx-citadel",
         "suggestedActions": [
             "attune",
@@ -350,7 +315,6 @@
         "trait": "skovlan"
     },
     {
-        "label": "Bastion Elders",
         "id": "bastion-elders",
         "suggestedActions": [
             "command",
@@ -360,7 +324,6 @@
         "trait": "severos"
     },
     {
-        "label": "Cullfield Observatory",
         "id": "cullfield-observatory",
         "suggestedActions": [
             "study",
@@ -370,7 +333,6 @@
         "trait": "severos"
     },
     {
-        "label": "Irondale Metalworks",
         "id": "irondale-metalworks",
         "suggestedActions": [
             "study",
@@ -380,7 +342,6 @@
         "trait": "severos"
     },
     {
-        "label": "Spirit Hunters",
         "id": "spirit-hunters",
         "suggestedActions": [
             "finesse",
@@ -390,7 +351,6 @@
         "trait": "severos"
     },
     {
-        "label": "Thorn Devils",
         "id": "thorn-devils",
         "suggestedActions": [
             "hunt",
@@ -400,7 +360,6 @@
         "trait": "severos"
     },
     {
-        "label": "Tyrmoor Clanholder",
         "id": "tyrmoor-clanholder",
         "suggestedActions": [
             "finesse",
@@ -410,7 +369,6 @@
         "trait": "severos"
     },
     {
-        "label": "Confessors",
         "id": "confessors",
         "suggestedActions": [
             "hunt",
@@ -420,7 +378,6 @@
         "trait": "tycheros"
     },
     {
-        "label": "Demon Scholars",
         "id": "demon-scholars",
         "suggestedActions": [
             "attune",
@@ -430,7 +387,6 @@
         "trait": "tycheros"
     },
     {
-        "label": "Lunarium Players",
         "id": "lunarium-players",
         "suggestedActions": [
             "consort",
@@ -440,7 +396,6 @@
         "trait": "tycheros"
     },
     {
-        "label": "Seekers",
         "id": "seekers",
         "suggestedActions": [
             "attune",
@@ -450,7 +405,6 @@
         "trait": "tycheros"
     },
     {
-        "label": "Steelhand",
         "id": "steelhand",
         "suggestedActions": [
             "prowl",
@@ -460,7 +414,6 @@
         "trait": "tycheros"
     },
     {
-        "label": "Void Gate Sentries",
         "id": "void-gate-sentries",
         "suggestedActions": [
             "attune",

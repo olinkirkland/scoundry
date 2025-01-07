@@ -1,19 +1,20 @@
 <template>
     <div class="suggested-action-tag">
-        <p :style="{ color }">{{ actionRating.label }}</p>
+        <p :style="{ color }">
+            {{ $t(`Actions.${capitalize(action)}.label`) }}
+        </p>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Action } from '@/assets/data/data-types';
-import { getActionRating, getAttributeColor } from '@/util/action-util';
+import { getAttribute, getAttributeColor } from '@/util/action-util';
+import { capitalize } from '@/util/string-util';
 
 const props = defineProps<{
-    action: Action;
+    action: string;
 }>();
 
-const actionRating = getActionRating(props.action)!;
-const color = getAttributeColor(actionRating.attribute);
+const color = getAttributeColor(getAttribute(props.action)!);
 </script>
 
 <style scoped lang="scss"></style>

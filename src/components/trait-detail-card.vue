@@ -61,6 +61,7 @@ const props = defineProps<{
         transition: none;
         color: var(--color-primary);
         background-color: transparent;
+        box-shadow: none;
 
         h2 {
             width: fit-content;

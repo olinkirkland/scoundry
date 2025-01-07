@@ -1,7 +1,7 @@
 {
     "User-interface": {
         "Home-page": {
-            "tagline": "A character keeper for <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
+            "description": "A character keeper for <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
             "new-scoundrel-button": "Make a new scoundrel",
             "settings-button": "Settings",
             "last-updated": "Updated {date}",
@@ -47,7 +47,7 @@
                 "subtitle": "Pick a background and write a detail specific to you.",
                 "select-prompt": "Select a background to see its description and suggested details.",
                 "detail-prompt": "A detail about your background",
-                "deep-cuts-tagline": "Full descriptions of these backgrounds can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
+                "deep-cuts-description": "Full descriptions of these backgrounds can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
             },
             "Heritage": {
                 "title": "What are your origins?",
@@ -55,19 +55,19 @@
                 "world-map-button": "World Map",
                 "select-prompt": "Select a heritage to see its description and suggested details.",
                 "detail-prompt": "A detail about your heritage",
-                "deep-cuts-tagline": "Full descriptions of these heritages can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
+                "deep-cuts-description": "Full descriptions of these heritages can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion."
             },
             "Actions": {
                 "title": "What do you do best?",
-                "subtitle": "Assign action dots to actions that best represent you.",
+                "subtitle": "Assign dots to actions that best represent you.",
                 "Options": {
                     "character-creation-button": "Character Creation: 7 action dots total, limit 2 per action",
                     "mastery-advance-button": "Mastery Advance: Allow actions to advance to 4"
                 },
                 "suggested-actions": "Actions suggested by your background and heritage:",
                 "Action-tally": {
-                    "with-character-creation": "{count} of 7 action dots assigned",
-                    "without-character-creation": "{count} action dots assigned"
+                    "with-character-creation": "<strong>{count}</strong> of 7 action dots assigned",
+                    "without-character-creation": "<strong>{count}</strong> action dots assigned"
                 },
                 "Attributes": {
                     "Insight": "Insight",
@@ -165,6 +165,9 @@
             "News-and-updates": {
                 "title": "News & Updates"
             },
+            "World-map": {
+                "title": "The Shattered Isles"
+            },
             "Confirm": {
                 "Controls": {
                     "confirm-button": "Yes",
@@ -205,61 +208,61 @@
     "Playbooks": {
         "Cutter": {
             "label": "Cutter",
-            "tagline": "A dangerous and intimidating fighter"
+            "description": "A dangerous and intimidating fighter"
         },
         "Hound": {
             "label": "Hound",
-            "tagline": "A deadly sharpshooter and tracker"
+            "description": "A deadly sharpshooter and tracker"
         },
         "Leech": {
             "label": "Leech",
-            "tagline": "A saboteur and technician"
+            "description": "A saboteur and technician"
         },
         "Lurk": {
             "label": "Lurk",
-            "tagline": "A stealthy infiltrator and burglar"
+            "description": "A stealthy infiltrator and burglar"
         },
         "Slide": {
             "label": "Slide",
-            "tagline": "A subtle manipulator and spy"
+            "description": "A subtle manipulator and spy"
         },
         "Spider": {
             "label": "Spider",
-            "tagline": "A devious mastermind"
+            "description": "A devious mastermind"
         },
         "Whisper": {
             "label": "Whisper",
-            "tagline": "An arcane adept and channeler"
+            "description": "An arcane adept and channeler"
         }
     },
     "Backgrounds": {
         "Underworld": {
             "label": "Underworld",
-            "tagline": "A street urchin, gang member, young thug, or other outcast who grew up on the streets."
+            "description": "A street urchin, gang member, young thug, or other outcast who grew up on the streets."
         },
         "Academic": {
             "label": "Academic",
-            "tagline": "A scholar, a professor or student from Doskvol Academy, a philosopher or journalist, etc."
+            "description": "A scholar, a professor or student from Doskvol Academy, a philosopher or journalist, etc."
         },
         "Labor": {
             "label": "Labor",
-            "tagline": "A servant, a factory worker, a coach driver, a docker, a sailor, a Rail Jack, etc. A stevedore for the North Hook Company."
+            "description": "A servant, a factory worker, a coach driver, a docker, a sailor, a Rail Jack, etc. A stevedore for the North Hook Company."
         },
         "Law": {
             "label": "Law",
-            "tagline": "An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc."
+            "description": "An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc."
         },
         "Trade": {
             "label": "Trade",
-            "tagline": "A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation."
+            "description": "A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation."
         },
         "Noble": {
             "label": "Noble",
-            "tagline": "A dilettante, a courtier, the scion of a fallen house, etc."
+            "description": "A dilettante, a courtier, the scion of a fallen house, etc."
         },
         "Military": {
             "label": "Military",
-            "tagline": "An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc."
+            "description": "An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc."
         }
     },
     "Background-suggestions": {
@@ -325,6 +328,134 @@
         "thief": "Thief",
         "thug": "Thug"
     },
-    "Heritages": {},
-    "Heritage-suggestions": {}
+    "Heritages": {
+        "Akoros": {
+            "label": "Akoros",
+            "description": "The largest and most industrialized land in the Imperium, and home to the capital city as well as Duskwall itself. They're known as a diverse conglomeration of cultures, somewhat like Europe."
+        },
+        "Dagger-isles": {
+            "label": "Dagger Isles",
+            "description": "People in the Dagger Isles often grow up on ships and travel a lot before settling down. They're known as corsairs and merchants who live without lightning barriers, dealing with spirits in other ways."
+        },
+        "Iruvia": {
+            "label": "Iruvia",
+            "description": "A rich and powerful desert kingdom far to the south. A diverse land of varying cultures similar to old Persia, Egypt, and India."
+        },
+        "Skovlan": {
+            "label": "Skovlan",
+            "description": "A cold and rugged island kingdom just across the sea from Duskwall. Skovlan was last to be brought under Imperial rule, over the course of the Unity War, which ended only a few years ago."
+        },
+        "Severos": {
+            "label": "Severos",
+            "description": "Most Severosi live in nomadic horse-tribes scattered across the blasted deathlands, surviving within the ruins of ancient arcane fortresses which still repel spirits."
+        },
+        "Tycheros": {
+            "label": "Tycheros",
+            "description": "A semi-mythical place far away beyond the northern Void Sea. It's said the people there are part-demon. If you choose Tycherosi heritage, also create a demonic tell that marks your character."
+        }
+    },
+    "Heritage-suggestions": {
+        "deathlander": "Deathlander",
+        "exile": "Exile",
+        "nomad": "Nomad",
+        "outlaw": "Outlaw",
+        "refugee": "Refugee",
+        "church-of-ecstasy": "Church of Ecstasy",
+        "doskvol-academy": "Doskvol Academy",
+        "governors-stronghold": "Governor's Stronghold",
+        "ironworks-labor": "Ironworks Labor",
+        "north-hook-company": "North Hook Company",
+        "radiant-energy-farmers": "Radiant Energy Farmers",
+        "cloudspire-aeronauts": "Cloudspire Aeronauts",
+        "ilysian-guard": "Ilysian Guard",
+        "imperial-city-courtiers": "Imperial City Courtiers",
+        "south-point-traders": "South Point Traders",
+        "whitehollow-miners": "Whitehollow Miners",
+        "wintercliff-wardens": "Wintercliff Wardens",
+        "bonewalker": "Bonewalker",
+        "lhan-lhaban": "Lhan Lhaban",
+        "liberators": "Liberators",
+        "lore-keepers": "Lore Keepers",
+        "melamatines": "Melamatines",
+        "vidyad": "Vidyad",
+        "bright-harbor-fleet": "Bright Harbor Fleet",
+        "city-guardians": "City Guardians",
+        "emissaries": "Emissaries",
+        "falconers": "Falconers",
+        "lightning-couriers": "Lightning Couriers",
+        "water-bearers": "Water Bearers",
+        "blackvale-coven": "Blackvale Coven",
+        "blood-cullers": "Blood Cullers",
+        "home-guard-militia": "Home Guard Militia",
+        "imperial-collaborators": "Imperial Collaborators",
+        "lockport-scummer": "Lockport Scummer",
+        "onyx-citadel": "Onyx Citadel",
+        "bastion-elders": "Bastion Elders",
+        "cullfield-observatory": "Cullfield Observatory",
+        "irondale-metalworks": "Irondale Metalworks",
+        "spirit-hunters": "Spirit Hunters",
+        "thorn-devils": "Thorn Devils",
+        "tyrmoor-clanholder": "Tyrmoor Clanholder",
+        "confessors": "Confessors",
+        "demon-scholars": "Demon Scholars",
+        "lunarium-players": "Lunarium Players",
+        "seekers": "Seekers",
+        "steelhand": "Steelhand",
+        "void-gate-sentries": "Void Gate Sentries"
+    },
+    "Attributes": {
+        "insight": "Insight",
+        "prowess": "Prowess",
+        "resolve": "Resolve"
+    },
+    "Actions": {
+        "Attune": {
+            "label": "Attune",
+            "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology."
+        },
+        "Command": {
+            "label": "Command",
+            "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs."
+        },
+        "Consort": {
+            "label": "Consort",
+            "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places."
+        },
+        "Finesse": {
+            "label": "Finesse",
+            "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount."
+        },
+        "Hunt": {
+            "label": "Hunt",
+            "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance."
+        },
+        "Prowl": {
+            "label": "Prowl",
+            "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc."
+        },
+        "Skirmish": {
+            "label": "Skirmish",
+            "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle."
+        },
+        "Study": {
+            "label": "Study",
+            "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research."
+        },
+        "Survey": {
+            "label": "Survey",
+            "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits."
+        },
+        "Sway": {
+            "label": "Sway",
+            "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction."
+        },
+        "Tinker": {
+            "label": "Tinker",
+            "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices."
+        },
+        "Wreck": {
+            "label": "Wreck",
+            "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos."
+        }
+    }
 }
