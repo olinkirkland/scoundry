@@ -161,7 +161,7 @@
             },
             "Delete-scoundrel": {
                 "title": "Delete scoundrel?",
-                "description": "Are you sure you want to delete this scoundrel? This action cannot be undone.",
+                "message": "Are you sure you want to delete this scoundrel? This action cannot be undone.",
                 "Controls": {
                     "cancel-button": "No, I changed my mind",
                     "delete-button": "Delete"
@@ -169,10 +169,10 @@
             },
             "Tracking-consent": {
                 "title": "Tracking Preferences",
-                "description": "I use minimal tracking to understand how our character builder is being used and improve your experience. This includes anonymous data about the characters you create, page visits, and feature usage. No personal information is collected or shared.",
+                "message": "Minimal tracking helps improve Scoundry by collecting anonymous data on characters, page visits, and feature usage. No personal information is collected or shared.",
                 "buttons": {
-                    "confirm": "I'm okay with tracking",
-                    "cancel": "Disable tracking"
+                    "ok-button": "I'm okay with tracking",
+                    "cancel-button": "Keep tracking disabled"
                 }
             }
         }

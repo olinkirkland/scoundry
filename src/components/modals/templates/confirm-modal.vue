@@ -9,11 +9,22 @@
             <div class="confirm">
                 <p v-html="props.message"></p>
 
-                <div class="choices">
-                    <button class="btn btn--alt" @click="props.onConfirm">
+                <div
+                    class="choices"
+                    :class="{ 'reverse-order': props.isConfirmButtonCta }"
+                >
+                    <button
+                        class="btn"
+                        :class="{ 'btn--alt': !isConfirmButtonCta }"
+                        @click="props.onConfirm"
+                    >
                         <span>{{ props.confirmText || 'Yes' }}</span>
                     </button>
-                    <button class="btn" @click="onClickCancel">
+                    <button
+                        class="btn"
+                        :class="{ 'btn--alt': isConfirmButtonCta }"
+                        @click="onClickCancel"
+                    >
                         <span>{{
                             props.cancelText || 'No, I changed my mind'
                         }}</span>
@@ -36,6 +47,7 @@ const props = defineProps<{
     onCancel?: () => void;
     confirmText?: string;
     cancelText?: string;
+    isConfirmButtonCta?: boolean;
 }>();
 
 function onClickCancel() {
@@ -46,6 +58,7 @@ function onClickCancel() {
 <style scoped lang="scss">
 .confirm {
     display: flex;
+    max-width: 64rem;
     flex-direction: column;
     gap: 1.6rem;
     justify-content: space-between;
@@ -56,11 +69,19 @@ function onClickCancel() {
     display: flex;
     gap: 0.8rem;
     justify-content: center;
+
+    &.reverse-order {
+        flex-direction: row-reverse;
+    }
 }
 
 @media (max-width: 768px) {
     .choices {
         flex-direction: column;
+
+        &.reverse-order {
+            flex-direction: column-reverse;
+        }
     }
 }
 </style>

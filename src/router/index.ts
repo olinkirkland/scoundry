@@ -1,12 +1,12 @@
+import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
+import ModalController from '@/controllers/modal-controller';
+import i18n from '@/i18n/locale';
 import TheImportPage from '@/pages/the-import-page.vue';
 import { startTracking, stopTracking } from '@/tracker';
 import { RouterOptions, createRouter, createWebHistory } from 'vue-router';
 import TheHomePage from '../pages/the-home-page.vue';
 import TheLostPage from '../pages/the-lost-page.vue';
 import TheMakePage from '../pages/the-make-page.vue';
-import ModalController from '@/controllers/modal-controller';
-import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
-import { useI18n } from 'vue-i18n';
 
 export enum PageName {
     HOME = 'home',
@@ -81,14 +81,18 @@ router.beforeEach(async (to, from, next) => {
     if (window.location.hostname === 'localhost')
         allowTracking = false;
 
-    // If localStorage is not available, prompt the user to allow tracking
-    ModalController.open(ConfirmModal, {
-        title: useI18n().t('Modals.Tracking-consent.title'),
-        description: useI18n().t('Modals.Tracking-consent.description'),
-        confirmText: useI18n().t('Modals.Tracking-consent.ok-button'),
-        cancelText: useI18n().t('Modals.Tracking-consent.cancel-button'),
-
-    });
+    if (localStorage.getItem('allowTracking') === null) {
+        // If localStorage is not available, prompt the user to allow tracking
+        ModalController.open(ConfirmModal, {
+            title: i18n.global.t('User-interface.Modals.Tracking-consent.title'),
+            message: i18n.global.t('User-interface.Modals.Tracking-consent.message'),
+            confirmText: i18n.global.t('User-interface.Modals.Tracking-consent.buttons.ok-button'),
+            cancelText: i18n.global.t('User-interface.Modals.Tracking-consent.buttons.cancel-button'),
+            isConfirmButtonCta: true,
+            onConfirm: () => { localStorage.setItem('allowTracking', 'true'); ModalController.close(); },
+            onCancel: () => { localStorage.setItem('allowTracking', 'false'); ModalController.close(); },
+        });
+    }
 
     if (allowTracking) startTracking();
     else stopTracking();

@@ -132,10 +132,6 @@ async function onClickMakeNewScoundrel() {
     router.push({ name: PageName.MAKE });
 }
 
-// async function onClickLoadFromJSON() {
-//     ModalController.open(LoadFromJsonModal);
-// }
-
 function onClickLoadScoundrel(scoundrel: Scoundrel) {
     router.replace({
         name: PageName.EDIT,

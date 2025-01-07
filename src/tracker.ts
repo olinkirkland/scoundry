@@ -3,12 +3,16 @@ import mixpanel from 'mixpanel-browser';
 let isTrackingAllowed = false;
 
 export function startTracking() {
-    mixpanel.init('e25d2f8346d1c0731fbb322d6f4c9d94');
-    isTrackingAllowed = true;
+    try {
+        mixpanel.init('e25d2f8346d1c0731fbb322d6f4c9d94');
+        isTrackingAllowed = true;
+    } catch (error) { }
 }
 
 export function stopTracking() {
-    mixpanel.reset();
+    try { mixpanel.reset(); }
+    catch (error) { }
+
     isTrackingAllowed = false;
 }
 
