@@ -26,8 +26,14 @@
         </span>
 
         <div class="ink-row">
-            <button class="btn btn--mini" @click="cycleFont">
-                <img src="/assets/icons/font.png" alt="Change font" />
+            <button class="btn btn--mini cycle-font" @click="cycleFont">
+                <!-- <img src="/assets/icons/font.png" alt="Change font" /> -->
+                <span
+                    :style="{
+                        fontFamily: `var(--${props.scoundrel.preferredFont})`,
+                    }"
+                    >Aa</span
+                >
             </button>
             <ul class="ink-colors">
                 <li
@@ -320,6 +326,13 @@ ul.ink-colors {
 
     > a.selected {
         color: var(--color-primary);
+    }
+}
+
+.cycle-font {
+    > span {
+        font-size: 1.6rem;
+        color: var(--color-on-surface);
     }
 }
 
