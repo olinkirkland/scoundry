@@ -2,7 +2,9 @@
     <ModalFrame>
         <template v-slot:header>
             <ModalHeader close-button>
-                <h3>News & Updates</h3>
+                <h3>
+                    {{ $t('User-interface.Modals.News-and-updates.title') }}
+                </h3>
             </ModalHeader>
         </template>
         <template v-slot:content>

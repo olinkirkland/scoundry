@@ -13,7 +13,10 @@ const i18n = createI18n<[MessageSchema], 'en'>({
     // Add languages here
     legacy: false, // you must set `false`, to use Composition API
     locale: localStorage.getItem('language') || 'en',
-    fallbackLocale: 'en',
+    // fallbackLocale: 'en',
+    missing: (locale, key) => {
+        return `[${key}]`;
+    },
     warnHtmlMessage: false,
     messages: {
         en, // English
