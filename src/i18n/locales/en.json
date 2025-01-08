@@ -683,5 +683,147 @@
             "label": "Warded",
             "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself when you deal with arcane forces."
         }
+    },
+    "Friends": {
+        "Marlane": {
+            "label": "Marlane",
+            "description": "A pugilist"
+        },
+        "Chael": {
+            "label": "Chael",
+            "description": "A vicious thug"
+        },
+        "Mercy": {
+            "label": "Mercy",
+            "description": "A cold killer"
+        },
+        "Grace": {
+            "label": "Grace",
+            "description": "An extortionist"
+        },
+        "Sawtooth": {
+            "label": "Sawtooth",
+            "description": "A physicker"
+        },
+        "Steiner": {
+            "label": "Steiner",
+            "description": "An assassin"
+        },
+        "Celene": {
+            "label": "Celene",
+            "description": "A sentinel"
+        },
+        "Melvir": {
+            "label": "Melvir",
+            "description": "A physicker"
+        },
+        "Veleris": {
+            "label": "Veleris",
+            "description": "A spy"
+        },
+        "Casta": {
+            "label": "Casta",
+            "description": "A bounty hunter"
+        },
+        "Stazia": {
+            "label": "Stazia",
+            "description": "An apothecary"
+        },
+        "Veldren": {
+            "label": "Veldren",
+            "description": "A psychonaut"
+        },
+        "Eckerd": {
+            "label": "Eckerd",
+            "description": "A corpse thief"
+        },
+        "Jul": {
+            "label": "Jul",
+            "description": "A blood dealer"
+        },
+        "Malista": {
+            "label": "Malista",
+            "description": "A priestess"
+        },
+        "Telda": {
+            "label": "Telda",
+            "description": "A beggar"
+        },
+        "Darmot": {
+            "label": "Darmot",
+            "description": "A bluecoat"
+        },
+        "Frake": {
+            "label": "Frake",
+            "description": "A locksmith"
+        },
+        "Roslyn Kellis": {
+            "label": "Roslyn Kellis",
+            "description": "A noble"
+        },
+        "Petra": {
+            "label": "Petra",
+            "description": "A city clerk"
+        },
+        "Bryl": {
+            "label": "Bryl",
+            "description": "A drug dealer"
+        },
+        "Bazso Baz": {
+            "label": "Bazso Baz",
+            "description": "A gang leader"
+        },
+        "Khyra": {
+            "label": "Khyra",
+            "description": "A tavern owner"
+        },
+        "Nyryx": {
+            "label": "Nyryx",
+            "description": "A prostitute"
+        },
+        "Harker": {
+            "label": "Harker",
+            "description": "A jail bird"
+        },
+        "Salia": {
+            "label": "Salia",
+            "description": "An information broker"
+        },
+        "Augus": {
+            "label": "Augus",
+            "description": "A master architect"
+        },
+        "Jennah": {
+            "label": "Jennah",
+            "description": "A servant"
+        },
+        "Riven": {
+            "label": "Riven",
+            "description": "A chemist"
+        },
+        "Jeren": {
+            "label": "Jeren",
+            "description": "A bluecoat archivist"
+        },
+        "Nyryx-2": {
+            "label": "Nyryx",
+            "description": "A possessor ghost"
+        },
+        "Scurlock": {
+            "label": "Scurlock",
+            "description": "A vampire"
+        },
+        "Setarra": {
+            "label": "Setarra",
+            "description": "A demon"
+        },
+        "Quellyn": {
+            "label": "Quellyn",
+            "description": "A witch"
+        },
+        "Flint": {
+            "label": "Flint",
+            "description": "A spirit trafficker"
+        }
     }
 }

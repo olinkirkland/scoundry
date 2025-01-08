@@ -1,5 +1,5 @@
 import rough from 'roughjs';
-import { Action } from './assets/data/data-types';
+import { Action } from './data-types';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
 

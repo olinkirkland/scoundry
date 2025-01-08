@@ -73,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-import { TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/data-types';
 import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import heritages from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';

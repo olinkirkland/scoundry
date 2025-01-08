@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/data-types';
 import SuggestedActionTag from './suggested-action-tag.vue';
 
 const props = defineProps<{

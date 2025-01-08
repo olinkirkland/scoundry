@@ -62,7 +62,7 @@
 <script setup lang="ts">
 import backgroundDetailsData from '@/assets/data/background-suggestions.json';
 import backgrounds from '@/assets/data/backgrounds.json';
-import { TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/data-types';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
 import i18n from '@/i18n/locale';

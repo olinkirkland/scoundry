@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { Action } from '@/assets/data/data-types';
+import { Action } from '@/data-types';
 import ActionTag from './action-tag.vue';
 
 const props = defineProps<{

@@ -52,7 +52,7 @@
 <script setup lang="ts">
 import viceDetailsData from '@/assets/data/vice-details.json';
 import vicesData from '@/assets/data/vices.json';
-import { Trait, Address } from '@/assets/data/data-types';
+import { Trait, Address } from '@/data-types';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
 import { Scoundrel } from '@/scoundrel';

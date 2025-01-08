@@ -1,212 +1,51 @@
-[
-    {
-        "id": "marlane",
-        "label": "Marlane",
-        "description": "A pugilist",
-        "category": "cutter"
-    },
-    {
-        "id": "chael",
-        "label": "Chael",
-        "description": "A vicious thug",
-        "category": "cutter"
-    },
-    {
-        "id": "mercy",
-        "label": "Mercy",
-        "description": "A cold killer",
-        "category": "cutter"
-    },
-    {
-        "id": "grace",
-        "label": "Grace",
-        "description": "An extortionist",
-        "category": "cutter"
-    },
-    {
-        "id": "sawtooth",
-        "label": "Sawtooth",
-        "description": "A physicker",
-        "category": "cutter"
-    },
-    {
-        "id": "steiner",
-        "label": "Steiner",
-        "description": "An assassin",
-        "category": "hound"
-    },
-    {
-        "id": "celene",
-        "label": "Celene",
-        "description": "A sentinel",
-        "category": "hound"
-    },
-    {
-        "id": "melvir",
-        "label": "Melvir",
-        "description": "A physicker",
-        "category": "hound"
-    },
-    {
-        "id": "veleris",
-        "label": "Veleris",
-        "description": "A spy",
-        "category": "hound"
-    },
-    {
-        "id": "casta",
-        "label": "Casta",
-        "description": "A bounty hunter",
-        "category": "hound"
-    },
-    {
-        "id": "stazia",
-        "label": "Stazia",
-        "description": "An apothecary",
-        "category": "leech"
-    },
-    {
-        "id": "veldren",
-        "label": "Veldren",
-        "description": "A psychonaut",
-        "category": "leech"
-    },
-    {
-        "id": "eckerd",
-        "label": "Eckerd",
-        "description": "A corpse thief",
-        "category": "leech"
-    },
-    {
-        "id": "jul",
-        "label": "Jul",
-        "description": "A blood dealer",
-        "category": "leech"
-    },
-    {
-        "id": "malista",
-        "label": "Malista",
-        "description": "A priestess",
-        "category": "leech"
-    },
-    {
-        "id": "telda",
-        "label": "Telda",
-        "description": "A beggar",
-        "category": "lurk"
-    },
-    {
-        "id": "darmot",
-        "label": "Darmot",
-        "description": "A bluecoat",
-        "category": "lurk"
-    },
-    {
-        "id": "frake",
-        "label": "Frake",
-        "description": "A locksmith",
-        "category": "lurk"
-    },
-    {
-        "id": "roslyn-kellis",
-        "label": "Roslyn Kellis",
-        "description": "A noble",
-        "category": "lurk"
-    },
-    {
-        "id": "petra",
-        "label": "Petra",
-        "description": "A city clerk",
-        "category": "lurk"
-    },
-    {
-        "id": "bryl",
-        "label": "Bryl",
-        "description": "A drug dealer",
-        "category": "slide"
-    },
-    {
-        "id": "bazso-baz",
-        "label": "Bazso Baz",
-        "description": "A gang leader",
-        "category": "slide"
-    },
-    {
-        "id": "khyra",
-        "label": "Khyra",
-        "description": "A tavern owner",
-        "category": "slide"
-    },
-    {
-        "id": "nyryx",
-        "label": "Nyryx",
-        "description": "A prostitute",
-        "category": "slide"
-    },
-    {
-        "id": "harker",
-        "label": "Harker",
-        "description": "A jail bird",
-        "category": "slide"
-    },
-    {
-        "id": "salia",
-        "label": "Salia",
-        "description": "An information broker",
-        "category": "spider"
-    },
-    {
-        "id": "augus",
-        "label": "Augus",
-        "description": "A master architect",
-        "category": "spider"
-    },
-    {
-        "id": "jennah",
-        "label": "Jennah",
-        "description": "A servant",
-        "category": "spider"
-    },
-    {
-        "id": "riven",
-        "label": "Riven",
-        "description": "A chemist",
-        "category": "spider"
-    },
-    {
-        "id": "jeren",
-        "label": "Jeren",
-        "description": "A bluecoat archivist",
-        "category": "spider"
-    },
-    {
-        "id": "nyryx-2",
-        "label": "Nyryx",
-        "description": "A possessor ghost",
-        "category": "whisper"
-    },
-    {
-        "id": "scurlock",
-        "label": "Scurlock",
-        "description": "A vampire",
-        "category": "whisper"
-    },
-    {
-        "id": "setarra",
-        "label": "Setarra",
-        "description": "A demon",
-        "category": "whisper"
-    },
-    {
-        "id": "quellyn",
-        "label": "Quellyn",
-        "description": "A witch",
-        "category": "whisper"
-    },
-    {
-        "id": "flint",
-        "label": "Flint",
-        "description": "A spirit trafficker",
-        "category": "whisper"
-    }
-]
+{
+    "cutter": [
+        "marlane",
+        "chael",
+        "mercy",
+        "grace",
+        "sawtooth"
+    ],
+    "hound": [
+        "steiner",
+        "celene",
+        "melvir",
+        "veleris",
+        "casta"
+    ],
+    "leech": [
+        "stazia",
+        "veldren",
+        "eckerd",
+        "jul",
+        "malista"
+    ],
+    "lurk": [
+        "telda",
+        "darmot",
+        "frake",
+        "roslyn-kellis",
+        "petra"
+    ],
+    "slide": [
+        "bryl",
+        "bazso-baz",
+        "khyra",
+        "nyryx",
+        "harker"
+    ],
+    "spider": [
+        "salia",
+        "augus",
+        "jennah",
+        "riven",
+        "jeren"
+    ],
+    "whisper": [
+        "nyryx-2",
+        "scurlock",
+        "setarra",
+        "quellyn",
+        "flint"
+    ]
+}

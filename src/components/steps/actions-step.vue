@@ -133,7 +133,7 @@
 <script setup lang="ts">
 import attributesData from '@/assets/data/attributes.json';
 import backgroundDetailsData from '@/assets/data/background-suggestions.json';
-import { TraitDetail } from '@/assets/data/data-types';
+import { TraitDetail } from '@/data-types';
 import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import ActionTag from '@/components/action-tag.vue';
 import StepHeader from '@/components/step-header.vue';
