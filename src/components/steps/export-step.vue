@@ -1,14 +1,14 @@
 <template>
     <step-header>
-        <h2>Export your <strong>scoundrel</strong></h2>
-        <p>Share or print your character sheet.</p>
+        <h2 v-html="$t('User-interface.Steps.Export.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Export.subtitle')"></p>
     </step-header>
     <div class="save">
         <span class="sheet-type" v-if="false">
             <a
                 @click="onClickChangeSheetType('classic')"
                 :class="{
-                    selected: props.scoundrel.preferredSheetType === 'classic',
+                    selected: props.scoundrel.preferredSheetType === 'classic'
                 }"
                 >Classic</a
             >
@@ -16,8 +16,7 @@
             <a
                 @click="onClickChangeSheetType('deep-cuts')"
                 :class="{
-                    selected:
-                        props.scoundrel.preferredSheetType === 'deep-cuts',
+                    selected: props.scoundrel.preferredSheetType === 'deep-cuts'
                 }"
             >
                 Deep Cuts
@@ -30,7 +29,7 @@
                 <!-- <img src="/assets/icons/font.png" alt="Change font" /> -->
                 <span
                     :style="{
-                        fontFamily: `var(--${props.scoundrel.preferredFont})`,
+                        fontFamily: `var(--${props.scoundrel.preferredFont})`
                     }"
                     >Aa</span
                 >
@@ -42,7 +41,7 @@
                     @click="onClickChangeInkColor(color)"
                     :style="{ backgroundColor: color, color: color }"
                     :class="{
-                        active: color === props.scoundrel.preferredInkColor,
+                        active: color === props.scoundrel.preferredInkColor
                     }"
                 >
                     <img
@@ -101,7 +100,7 @@ import { paintSheet } from '@/sheet-painter';
 import { makeSemanticId } from '@/util/id-util';
 import {
     encodeJsonToUrl,
-    getSemanticScoundrelName,
+    getSemanticScoundrelName
 } from '@/util/scoundrel-util';
 import { ref, computed, defineProps } from 'vue';
 import stepHeader from '../step-header.vue';
@@ -121,7 +120,7 @@ const inkColors = [
     '#5c7cfa',
     '#7950f2',
     '#e9417c',
-    '#131313',
+    '#131313'
 ];
 
 const fonts = ['font-sheet-1', 'font-sheet-2', 'font-sheet-3'];
@@ -200,7 +199,7 @@ async function generatePNG() {
         alias: props.scoundrel.alias,
         vice: props.scoundrel.vice,
         viceDetail: props.scoundrel.viceDetail,
-        sheetType: props.scoundrel.preferredSheetType,
+        sheetType: props.scoundrel.preferredSheetType
     });
 
     const canvas = await paintSheet(props.scoundrel);

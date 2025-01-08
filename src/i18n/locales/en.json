@@ -142,7 +142,7 @@
                 "purveyor-prompt": "A description of where you go to indulge"
             },
             "Name-and-look": {
-                "title": "What are you known as in the underworld and what do you look like?",
+                "title": "What do people call you? What do you look like?",
                 "subtitle": "Record a name, criminal alias, and briefly describe your appearance.",
                 "name-prompt": "Your name",
                 "randomize-name-button": "Randomize name",
@@ -1160,6 +1160,48 @@
             "wide-belt": "a wide belt",
             "work-boots": "work boots",
             "work-trousers": "work trousers"
+        }
+    },
+    "Names": {
+        "Aliases": {
+            "bell": "Bell",
+            "birch": "Birch",
+            "bricks": "Bricks",
+            "bug": "Bug",
+            "chime": "Chime",
+            "coil": "Coil",
+            "cricket": "Cricket",
+            "cross": "Cross",
+            "crow": "Crow",
+            "echo": "Echo",
+            "flint": "Flint",
+            "frog": "Frog",
+            "frost": "Frost",
+            "grip": "Grip",
+            "gunner": "Gunner",
+            "hammer": "Hammer",
+            "hook": "Hook",
+            "junker": "Junker",
+            "mist": "Mist",
+            "moon": "Moon",
+            "nail": "Nail",
+            "needle": "Needle",
+            "ogre": "Ogre",
+            "pool": "Pool",
+            "ring": "Ring",
+            "ruby": "Ruby",
+            "silver": "Silver",
+            "skinner": "Skinner",
+            "song": "Song",
+            "spur": "Spur",
+            "tackle": "Tackle",
+            "thistle": "Thistle",
+            "thorn": "Thorn",
+            "tick-Tock": "Tick-Tock",
+            "twelves": "Twelves",
+            "vixen": "Vixen",
+            "whip": "Whip",
+            "wicker": "Wicker"
         }
     }
 }

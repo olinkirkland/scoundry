@@ -101,7 +101,9 @@ function randomizeName() {
 }
 
 function randomizeAlias() {
-    props.scoundrel.alias = randomItem(aliases);
+    props.scoundrel.alias = i18n.global.t(
+        'Names.Aliases.' + randomItem(aliases)
+    );
 }
 
 function randomizeLook() {
