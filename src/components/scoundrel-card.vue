@@ -9,10 +9,15 @@
         <label v-if="props.lastUpdated">
             {{
                 $t('User-interface.Home-page.last-updated', {
-                    date: props.lastUpdated.toLocaleDateString(),
+                    date: props.lastUpdated.toLocaleDateString()
                 })
             }}
         </label>
+        <img
+            v-if="props.scoundrel.language"
+            class="flag"
+            :src="`/assets/icons/flag-${props.scoundrel.language}.png`"
+        />
     </div>
 </template>
 
@@ -33,6 +38,7 @@ const semanticName = computed(() => {
 
 <style scoped lang="scss">
 .scoundrel-card {
+    position: relative;
     cursor: pointer;
     min-width: 14rem;
     width: 12rem;
@@ -44,6 +50,7 @@ const semanticName = computed(() => {
     justify-content: center;
     align-items: center;
     border: 1px solid transparent;
+    top: 0;
 
     gap: 0.4rem;
     transition: all 0.2s;
@@ -57,14 +64,25 @@ const semanticName = computed(() => {
         margin-bottom: 1rem;
     }
 
+    img.flag {
+        position: absolute;
+        width: 2.4rem;
+        height: 2.4rem;
+        top: 0;
+        right: 0;
+        padding: 0.4rem;
+        opacity: 0.8;
+    }
+
     > * {
         cursor: inherit;
         margin: 0;
     }
 
     &:hover {
-        box-shadow: var(--shadow-sm);
-        border: 1px solid var(--color-on-surface);
+        box-shadow: var(--shadow-md);
+        transform: rotate(1deg);
+        top: -0.6rem;
     }
 }
 

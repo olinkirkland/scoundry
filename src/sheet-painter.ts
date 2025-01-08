@@ -1,5 +1,4 @@
 import rough from 'roughjs';
-import { Action } from './data-types';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
 
@@ -16,7 +15,7 @@ const dataClassic = {
         iruvia: { x: 138, y: 453, w: 95 },
         severos: { x: 240, y: 453, w: 110 },
         skovlan: { x: 356, y: 453, w: 120 },
-        tycheros: { x: 480, y: 453, w: 135 },
+        tycheros: { x: 480, y: 453, w: 135 }
     },
     backgrounds: {
         academic: { x: 826, y: 428, w: 140 },
@@ -25,7 +24,7 @@ const dataClassic = {
         trade: { x: 636, y: 453, w: 95 },
         military: { x: 742, y: 453, w: 120 },
         noble: { x: 848, y: 453, w: 90 },
-        underworld: { x: 976, y: 453, w: 160 },
+        underworld: { x: 976, y: 453, w: 160 }
     },
     heritageText: { x: 105, y: 400 },
     backgroundText: { x: 605, y: 400 },
@@ -43,7 +42,7 @@ const dataClassic = {
         attune: { x: 1838.5, y: 650.5 },
         command: { x: 1838.5, y: 679.1 },
         consort: { x: 1838.5, y: 707.7 },
-        sway: { x: 1838.5, y: 736.3 },
+        sway: { x: 1838.5, y: 736.3 }
     },
     abilities: {
         // Cutter
@@ -108,7 +107,7 @@ const dataClassic = {
         ritual: { x: 1097, y: 555 },
         'strange-methods': { x: 1097, y: 640 },
         tempest: { x: 1097, y: 724.5 },
-        warded: { x: 1097, y: 808.5 },
+        warded: { x: 1097, y: 808.5 }
     },
     friends: {
         // Cutter: marlane, chael, mercy, grace, sawtooth
@@ -152,7 +151,7 @@ const dataClassic = {
         scurlock: { x: 1110, y: 1000 },
         setarra: { x: 1110, y: 1042 },
         quellyn: { x: 1110, y: 1084 },
-        flint: { x: 1110, y: 1126 },
+        flint: { x: 1110, y: 1126 }
     },
     vices: {
         faith: { x: 320, y: 542, w: 75 },
@@ -161,9 +160,9 @@ const dataClassic = {
         obligation: { x: 672, y: 542, w: 145 },
         pleasure: { x: 808, y: 542, w: 125 },
         stupor: { x: 920, y: 542, w: 100 },
-        weird: { x: 1015, y: 542, w: 95 },
+        weird: { x: 1015, y: 542, w: 95 }
     },
-    viceText: { x: 100, y: 515 },
+    viceText: { x: 100, y: 515 }
 };
 
 const dataDeepCuts = {
@@ -184,7 +183,7 @@ const dataDeepCuts = {
         attune: { x: 1852, y: 565.5 },
         command: { x: 1852, y: 600 },
         consort: { x: 1852, y: 635 },
-        sway: { x: 1852, y: 670 },
+        sway: { x: 1852, y: 670 }
     },
     abilities: {
         // Cutter
@@ -249,7 +248,7 @@ const dataDeepCuts = {
         ritual: { x: 1049, y: 555 },
         'strange-methods': { x: 1049, y: 640 },
         tempest: { x: 1049, y: 724.5 },
-        warded: { x: 1049, y: 808.5 },
+        warded: { x: 1049, y: 808.5 }
     },
     friends: {
         // Cutter: marlane, chael, mercy, grace, sawtooth
@@ -293,23 +292,18 @@ const dataDeepCuts = {
         scurlock: { x: 2075, y: 854 },
         setarra: { x: 2075, y: 935 },
         quellyn: { x: 2075, y: 1018 },
-        flint: { x: 2075, y: 1102 },
+        flint: { x: 2075, y: 1102 }
     },
     vice: { x: 520, y: 1505 },
-    viceText: { x: 520, y: 1615 },
+    viceText: { x: 520, y: 1615 }
 };
 
 export async function paintSheet(
-    scoundrel: Scoundrel,
+    scoundrel: Scoundrel
 ): Promise<HTMLCanvasElement> {
-
     const color = scoundrel.preferredInkColor;
     const sheetType = scoundrel.preferredSheetType;
-
-    // Get the scss variable for the preferred font
-    const fontVariable = getComputedStyle(document.documentElement).getPropertyValue(`--${scoundrel.preferredFont}`);
-    if (!fontVariable) console.error(`No font variable found for ${scoundrel.preferredFont}`);
-    const font = fontVariable.replace(/"/g, '');
+    const font = getFont(scoundrel.preferredFont);
 
     console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
     console.log(`using ${font} in ${color}`);
@@ -317,338 +311,380 @@ export async function paintSheet(
     if (!document.fonts.check(`32px ${font}`))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    if (sheetType === 'classic') {
-        const data = dataClassic;
-        return new Promise((resolve, reject) => {
-            const template = new Image();
-            template.src = `/assets/sheets/sheet-images/${scoundrel.playbook}.png`;
+    if (sheetType === 'classic')
+        return paintClassicSheet(scoundrel, color, font);
+    if (sheetType === 'deep-cuts')
+        return paintDeepCutsSheet(scoundrel, color, font);
 
-            template.onload = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = template.width;
-                canvas.height = template.height;
-                const roughCanvas = rough.canvas(canvas);
-                const ctx = canvas.getContext('2d')!;
-                ctx.drawImage(template, 0, 0);
-                ctx.font = `32px ${font}`;
-                ctx.fillStyle = color;
-                ctx.strokeStyle = 'red';
-                ctx.lineWidth = 2;
+    return new Promise((resolve, reject) => {
+        reject(new Error(`Invalid sheet type ${sheetType}`));
+    });
+}
 
-                // Circle Heritage
-                const heritageBoxHeight = 36;
-                const heritage =
-                    data.heritages[
+async function paintClassicSheet(
+    scoundrel: Scoundrel,
+    color: string,
+    font: string
+): Promise<HTMLCanvasElement> {
+    const data = dataClassic;
+    return new Promise((resolve, reject) => {
+        const template = new Image();
+        template.src = `/assets/sheets/${scoundrel.language || 'en'}/${scoundrel.playbook}.png`; // en is the default language and fallback for previous app versions
+
+        template.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = template.width;
+            canvas.height = template.height;
+            const roughCanvas = rough.canvas(canvas);
+            const ctx = canvas.getContext('2d')!;
+            ctx.drawImage(template, 0, 0);
+            ctx.font = `32px ${font}`;
+            ctx.fillStyle = color;
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+
+            // Circle Heritage
+            const heritageBoxHeight = 36;
+            const heritage =
+                data.heritages[
                     scoundrel.heritage as keyof typeof data.heritages
-                    ];
-                if (heritage) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        heritage.x - heritage.w / 2,
-                        heritage.y - heritageBoxHeight / 2,
-                        heritage.w,
-                        heritageBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
-
-                // Circle Background
-                const backgroundBoxHeight = 36;
-                const background =
-                    data.backgrounds[
-                    scoundrel.background as keyof typeof data.backgrounds
-                    ];
-                if (background) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        background.x - background.w / 2,
-                        background.y - backgroundBoxHeight / 2,
-                        background.w,
-                        backgroundBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
-
-                // Write Heritage Detail
-                const heritageDetail = dataHeritages.find(
-                    (h) => h.id === scoundrel.heritageDetail
-                );
-                if (scoundrel.heritageDetail)
-                    ctx.fillText(
-                        heritageDetail?.label || scoundrel.heritageDetail,
-                        data.heritageText.x,
-                        data.heritageText.y
-                    );
-
-                // Write Background Detail
-                const backgroundDetail = dataBackgrounds.find(
-                    (bg) => bg.id === scoundrel.backgroundDetail
-                );
-                if (scoundrel.backgroundDetail)
-                    ctx.fillText(
-                        backgroundDetail?.label || scoundrel.backgroundDetail,
-                        data.backgroundText.x,
-                        data.backgroundText.y
-                    );
-
-                // Fill in Action bubbles
-                [
-                    'hunt',
-                    'study',
-                    'survey',
-                    'tinker',
-                    'finesse',
-                    'prowl',
-                    'skirmish',
-                    'wreck',
-                    'attune',
-                    'command',
-                    'consort',
-                    'sway',
-                ].forEach((action, i) => {
-                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions, 27, 8);
-                });
-
-                // Fill in Abilities bubbles
-                scoundrel.abilities.forEach((ability) => {
-                    // Draw one bubble for each ability
-                    if (data.abilities.hasOwnProperty(ability)) {
-                        const point =
-                            data.abilities[ability as keyof typeof data.abilities];
-                        drawBubble(ctx, point);
+                ];
+            if (heritage) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    heritage.x - heritage.w / 2,
+                    heritage.y - heritageBoxHeight / 2,
+                    heritage.w,
+                    heritageBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4
                     }
-                });
-
-                // Fill in Friends triangles
-                scoundrel.friends.forEach((f) => {
-                    // console.log('drawing a triangle for', f);
-                    const point = data.friends[f as keyof typeof data.friends];
-                    if (!point) return console.error('No point for', f);
-                    drawTriangleUp(ctx, point);
-                });
-
-                // Fill in Rivals triangles
-                scoundrel.rivals.forEach((r) => {
-                    // console.log('drawing a triangle for', r);
-                    const point = data.friends[r as keyof typeof data.friends];
-                    if (!point) return console.error('No point for', r);
-                    const offset = { x: 28, y: -14 };
-                    if (scoundrel.playbook === 'whisper') offset.x = 24.5; // Misprint in the Whisper playbook
-
-                    drawTriangleDown(ctx, {
-                        x: point.x + offset.x,
-                        y: point.y + offset.y,
-                    });
-                });
-
-                // Circle Vice
-                const viceBoxHeight = 36;
-                const vice = data.vices[scoundrel.vice as keyof typeof data.vices];
-                if (vice) {
-                    // Use roughjs to draw the oval
-                    // No fill; thick, colored stroke
-                    roughCanvas.rectangle(
-                        vice.x - vice.w / 2,
-                        vice.y - viceBoxHeight / 2,
-                        vice.w,
-                        viceBoxHeight,
-                        {
-                            roughness: 2,
-                            stroke: color,
-                            strokeWidth: 4,
-                        }
-                    );
-                }
-
-                // Write Vice Detail
-                if (scoundrel.viceDetail)
-                    fillMultilineText(
-                        ctx,
-                        scoundrel.viceDetail,
-                        data.viceText.x,
-                        data.viceText.y,
-                        940, 32
-                    );
-
-                // Name
-                if (scoundrel.name)
-                    ctx.fillText(scoundrel.name, data.name.x, data.name.y);
-
-                // Alias
-                if (scoundrel.alias)
-                    ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
-
-                // Look
-                if (scoundrel.look)
-                    fillMultilineText(
-                        ctx,
-                        scoundrel.look,
-                        data.look.x,
-                        data.look.y,
-                        940, 32
-                    );
-
-                resolve(canvas);
-            };
-
-            template.onerror = (error) => {
-                reject(new Error(`Failed to load image: ${template.src}`));
-            };
-        });
-    }
-    if (sheetType === 'deep-cuts') {
-        const data = dataDeepCuts;
-        return new Promise((resolve, reject) => {
-            const template = new Image();
-            template.src = `/assets/sheets/sheet-images/dc-${scoundrel.playbook}.png`;
-
-            template.onload = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = template.width;
-                canvas.height = template.height;
-                const roughCanvas = rough.canvas(canvas);
-                const ctx = canvas.getContext('2d')!;
-                ctx.drawImage(template, 0, 0);
-                ctx.font = `40px ${font}`;
-                ctx.fillStyle = color;
-                ctx.strokeStyle = 'red';
-                ctx.lineWidth = 2;
-
-                let heritageAndBackground = '';
-
-                // Write Heritage Detail
-                const heritageDetail = dataHeritages.find(
-                    (h) => h.id === scoundrel.heritageDetail
                 );
-                if (scoundrel.heritageDetail)
-                    heritageAndBackground += heritageDetail?.label || scoundrel.heritageDetail;
-                if (scoundrel.heritageDetail && scoundrel.heritage)
-                    heritageAndBackground += ` (${scoundrel.heritage})`;
+            }
 
-                // Write Background Detail
-                const backgroundDetail = dataBackgrounds.find(
-                    (bg) => bg.id === scoundrel.backgroundDetail
+            // Circle Background
+            const backgroundBoxHeight = 36;
+            const background =
+                data.backgrounds[
+                    scoundrel.background as keyof typeof data.backgrounds
+                ];
+            if (background) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    background.x - background.w / 2,
+                    background.y - backgroundBoxHeight / 2,
+                    background.w,
+                    backgroundBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4
+                    }
                 );
-                if (scoundrel.backgroundDetail) {
-                    if (heritageAndBackground.length > 0) heritageAndBackground += ' / ';
-                    heritageAndBackground += backgroundDetail?.label || scoundrel.backgroundDetail;
-                    if (scoundrel.background) heritageAndBackground += ` (${scoundrel.background})`;
+            }
+
+            // Write Heritage Detail
+            const heritageDetail = dataHeritages.find(
+                (h) => h.id === scoundrel.heritageDetail
+            );
+            if (scoundrel.heritageDetail)
+                ctx.fillText(
+                    heritageDetail?.label || scoundrel.heritageDetail,
+                    data.heritageText.x,
+                    data.heritageText.y
+                );
+
+            // Write Background Detail
+            const backgroundDetail = dataBackgrounds.find(
+                (bg) => bg.id === scoundrel.backgroundDetail
+            );
+            if (scoundrel.backgroundDetail)
+                ctx.fillText(
+                    backgroundDetail?.label || scoundrel.backgroundDetail,
+                    data.backgroundText.x,
+                    data.backgroundText.y
+                );
+
+            // Fill in Action bubbles
+            [
+                'hunt',
+                'study',
+                'survey',
+                'tinker',
+                'finesse',
+                'prowl',
+                'skirmish',
+                'wreck',
+                'attune',
+                'command',
+                'consort',
+                'sway'
+            ].forEach((action, i) => {
+                drawActionBubbleRow(
+                    ctx,
+                    scoundrel,
+                    action as Action,
+                    data.actions,
+                    27,
+                    8
+                );
+            });
+
+            // Fill in Abilities bubbles
+            scoundrel.abilities.forEach((ability) => {
+                // Draw one bubble for each ability
+                if (data.abilities.hasOwnProperty(ability)) {
+                    const point =
+                        data.abilities[ability as keyof typeof data.abilities];
+                    drawBubble(ctx, point);
                 }
+            });
+
+            // Fill in Friends triangles
+            scoundrel.friends.forEach((f) => {
+                // console.log('drawing a triangle for', f);
+                const point = data.friends[f as keyof typeof data.friends];
+                if (!point) return console.error('No point for', f);
+                drawTriangleUp(ctx, point);
+            });
+
+            // Fill in Rivals triangles
+            scoundrel.rivals.forEach((r) => {
+                // console.log('drawing a triangle for', r);
+                const point = data.friends[r as keyof typeof data.friends];
+                if (!point) return console.error('No point for', r);
+                const offset = { x: 28, y: -14 };
+                if (scoundrel.playbook === 'whisper') offset.x = 24.5; // Misprint in the Whisper playbook
+
+                drawTriangleDown(ctx, {
+                    x: point.x + offset.x,
+                    y: point.y + offset.y
+                });
+            });
+
+            // Circle Vice
+            const viceBoxHeight = 36;
+            const vice = data.vices[scoundrel.vice as keyof typeof data.vices];
+            if (vice) {
+                // Use roughjs to draw the oval
+                // No fill; thick, colored stroke
+                roughCanvas.rectangle(
+                    vice.x - vice.w / 2,
+                    vice.y - viceBoxHeight / 2,
+                    vice.w,
+                    viceBoxHeight,
+                    {
+                        roughness: 2,
+                        stroke: color,
+                        strokeWidth: 4
+                    }
+                );
+            }
+
+            // Write Vice Detail
+            if (scoundrel.viceDetail)
                 fillMultilineText(
                     ctx,
-                    heritageAndBackground,
-                    data.heritageAndBackground.x,
-                    data.heritageAndBackground.y,
+                    scoundrel.viceDetail,
+                    data.viceText.x,
+                    data.viceText.y,
+                    940,
+                    32
+                );
+
+            // Name
+            if (scoundrel.name)
+                ctx.fillText(scoundrel.name, data.name.x, data.name.y);
+
+            // Alias
+            if (scoundrel.alias)
+                ctx.fillText(scoundrel.alias, data.alias.x, data.alias.y);
+
+            // Look
+            if (scoundrel.look)
+                fillMultilineText(
+                    ctx,
+                    scoundrel.look,
+                    data.look.x,
+                    data.look.y,
+                    940,
+                    32
+                );
+
+            resolve(canvas);
+        };
+
+        template.onerror = (error) => {
+            reject(new Error(`Failed to load image: ${template.src}`));
+        };
+    });
+}
+
+async function paintDeepCutsSheet(
+    scoundrel: Scoundrel,
+    color: string,
+    font: string
+): Promise<HTMLCanvasElement> {
+    const data = dataDeepCuts;
+    return new Promise((resolve, reject) => {
+        const template = new Image();
+        template.src = `/assets/sheets/sheet-images/dc-${scoundrel.playbook}.png`;
+
+        template.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = template.width;
+            canvas.height = template.height;
+            const roughCanvas = rough.canvas(canvas);
+            const ctx = canvas.getContext('2d')!;
+            ctx.drawImage(template, 0, 0);
+            ctx.font = `40px ${font}`;
+            ctx.fillStyle = color;
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+
+            let heritageAndBackground = '';
+
+            // Write Heritage Detail
+            const heritageDetail = dataHeritages.find(
+                (h) => h.id === scoundrel.heritageDetail
+            );
+            if (scoundrel.heritageDetail)
+                heritageAndBackground +=
+                    heritageDetail?.label || scoundrel.heritageDetail;
+            if (scoundrel.heritageDetail && scoundrel.heritage)
+                heritageAndBackground += ` (${scoundrel.heritage})`;
+
+            // Write Background Detail
+            const backgroundDetail = dataBackgrounds.find(
+                (bg) => bg.id === scoundrel.backgroundDetail
+            );
+            if (scoundrel.backgroundDetail) {
+                if (heritageAndBackground.length > 0)
+                    heritageAndBackground += ' / ';
+                heritageAndBackground +=
+                    backgroundDetail?.label || scoundrel.backgroundDetail;
+                if (scoundrel.background)
+                    heritageAndBackground += ` (${scoundrel.background})`;
+            }
+            fillMultilineText(
+                ctx,
+                heritageAndBackground,
+                data.heritageAndBackground.x,
+                data.heritageAndBackground.y,
+                800,
+                40
+            );
+
+            // Fill in Action bubbles
+            [
+                'hunt',
+                'study',
+                'survey',
+                'tinker',
+                'finesse',
+                'prowl',
+                'skirmish',
+                'wreck',
+                'attune',
+                'command',
+                'consort',
+                'sway'
+            ].forEach((action, i) => {
+                drawActionBubbleRow(
+                    ctx,
+                    scoundrel,
+                    action as Action,
+                    data.actions,
+                    29,
+                    9.5
+                );
+            });
+
+            // Fill in Abilities bubbles
+            scoundrel.abilities.forEach((ability) => {
+                // Draw one bubble for each ability
+                if (data.abilities.hasOwnProperty(ability)) {
+                    const point =
+                        data.abilities[ability as keyof typeof data.abilities];
+                    drawBubble(ctx, point);
+                }
+            });
+
+            // Fill in Friends triangles
+            scoundrel.friends.forEach((f) => {
+                const point = data.friends[f as keyof typeof data.friends];
+                if (!point) return console.error('No point for', f);
+                drawTriangleUp(ctx, point, 0.85);
+            });
+
+            // Fill in Rivals triangles
+            scoundrel.rivals.forEach((r) => {
+                const point = data.friends[r as keyof typeof data.friends];
+                if (!point) return console.error('No point for', r);
+                const offset = { x: 0, y: 11 };
+
+                drawTriangleDown(
+                    ctx,
+                    {
+                        x: point.x + offset.x,
+                        y: point.y + offset.y
+                    },
+                    0.85
+                );
+            });
+
+            // Write Vice
+            if (scoundrel.vice)
+                ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y);
+
+            // Write Vice Detail
+            if (scoundrel.viceDetail)
+                fillMultilineText(
+                    ctx,
+                    scoundrel.viceDetail,
+                    data.viceText.x,
+                    data.viceText.y,
+                    400,
+                    40,
+                    false
+                );
+
+            // Name
+            if (scoundrel.name || scoundrel.alias) {
+                let nameAndAlias = '';
+                if (scoundrel.name) nameAndAlias += scoundrel.name;
+                if (scoundrel.alias) {
+                    if (nameAndAlias.length > 0) nameAndAlias += ' / ';
+                    nameAndAlias += scoundrel.alias;
+                }
+                ctx.fillText(
+                    nameAndAlias,
+                    data.nameAndAlias.x,
+                    data.nameAndAlias.y
+                );
+            }
+
+            // Look
+            if (scoundrel.look)
+                fillMultilineText(
+                    ctx,
+                    scoundrel.look,
+                    data.look.x,
+                    data.look.y,
                     800,
                     40
                 );
 
-                // Fill in Action bubbles
-                [
-                    'hunt',
-                    'study',
-                    'survey',
-                    'tinker',
-                    'finesse',
-                    'prowl',
-                    'skirmish',
-                    'wreck',
-                    'attune',
-                    'command',
-                    'consort',
-                    'sway',
-                ].forEach((action, i) => {
-                    drawActionBubbleRow(ctx, scoundrel, action as Action, data.actions, 29, 9.5);
-                });
+            resolve(canvas);
+        };
 
-                // Fill in Abilities bubbles
-                scoundrel.abilities.forEach((ability) => {
-                    // Draw one bubble for each ability
-                    if (data.abilities.hasOwnProperty(ability)) {
-                        const point =
-                            data.abilities[ability as keyof typeof data.abilities];
-                        drawBubble(ctx, point);
-                    }
-                });
-
-                // Fill in Friends triangles
-                scoundrel.friends.forEach((f) => {
-                    const point = data.friends[f as keyof typeof data.friends];
-                    if (!point) return console.error('No point for', f);
-                    drawTriangleUp(ctx, point, .85);
-                });
-
-                // Fill in Rivals triangles
-                scoundrel.rivals.forEach((r) => {
-                    const point = data.friends[r as keyof typeof data.friends];
-                    if (!point) return console.error('No point for', r);
-                    const offset = { x: 0, y: 11 };
-
-                    drawTriangleDown(ctx, {
-                        x: point.x + offset.x,
-                        y: point.y + offset.y,
-                    }, .85);
-                });
-
-                // Write Vice
-                if (scoundrel.vice)
-                    ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y);
-
-                // Write Vice Detail
-                if (scoundrel.viceDetail)
-                    fillMultilineText(
-                        ctx,
-                        scoundrel.viceDetail,
-                        data.viceText.x,
-                        data.viceText.y,
-                        400,
-                        40,
-                        false
-                    );
-
-                // Name
-                if (scoundrel.name || scoundrel.alias) {
-                    let nameAndAlias = '';
-                    if (scoundrel.name) nameAndAlias += scoundrel.name;
-                    if (scoundrel.alias) {
-                        if (nameAndAlias.length > 0) nameAndAlias += ' / ';
-                        nameAndAlias += scoundrel.alias;
-                    }
-                    ctx.fillText(nameAndAlias, data.nameAndAlias.x, data.nameAndAlias.y);
-                }
-
-                // Look
-                if (scoundrel.look)
-                    fillMultilineText(
-                        ctx,
-                        scoundrel.look,
-                        data.look.x,
-                        data.look.y,
-                        800,
-                        40
-                    );
-
-                resolve(canvas);
-            };
-
-            template.onerror = (error) => {
-                reject(new Error(`Failed to load image: ${template.src}`));
-            };
-        });
-    }
-
-    return new Promise((resolve, reject) => {
-        reject(new Error(`Invalid sheet type ${sheetType}`));
+        template.onerror = (error) => {
+            reject(new Error(`Failed to load image: ${template.src}`));
+        };
     });
 }
 
@@ -682,7 +718,8 @@ function fillMultilineText(
     }
     lines.push({ text: line, x, y });
     // Move the text up by line count * line height
-    if (!directionUp) lines.forEach((line) => (line.y -= lineCount * lineHeight));
+    if (!directionUp)
+        lines.forEach((line) => (line.y -= lineCount * lineHeight));
     else lines.forEach((line) => (line.y -= lineCount * lineHeight));
     lines.forEach((line) => ctx.fillText(line.text, line.x, line.y));
 }
@@ -738,4 +775,14 @@ function drawBubble(
     ctx.beginPath();
     ctx.arc(point.x, point.y, radius, 0, 2 * Math.PI);
     ctx.fill();
+}
+
+function getFont(variableName: string) {
+    const fontVariable = getComputedStyle(
+        document.documentElement
+    ).getPropertyValue(`--${variableName}`);
+    if (!fontVariable)
+        console.error(`No font variable found for ${variableName}`);
+
+    const font = fontVariable.replace(/"/g, '');
 }

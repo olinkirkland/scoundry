@@ -37,4 +37,8 @@ export function changeLanguage(language: string) {
     localStorage.setItem('language', language);
 }
 
+export function getLanguage() {
+    return i18nInstance.locale.value;
+}
+
 export default i18n;

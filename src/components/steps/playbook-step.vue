@@ -19,7 +19,9 @@
 import playbooksData from '@/assets/data/playbooks.json';
 import PlaybookCard from '@/components/playbook-card.vue';
 import StepHeader from '@/components/step-header.vue';
+import { getLanguage } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
+import { useI18n } from 'vue-i18n';
 
 const playbooksActions = playbooksData as unknown as Record<
     string,
@@ -32,6 +34,7 @@ const props = defineProps<{
 
 function onClickPlaybook(playbook: string) {
     props.scoundrel.playbook = playbook;
+    props.scoundrel.language = getLanguage();
 
     // Remove all 'playbook' keys from scoundrel.actions
     Object.keys(props.scoundrel.actions).forEach((action) => {

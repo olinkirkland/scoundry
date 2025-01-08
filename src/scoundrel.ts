@@ -1,5 +1,6 @@
 export type Scoundrel = {
     id: string;
+    language: string; // en, es, de
     preferredInkColor: string;
     preferredSheetType: string;
     preferredFont: string;
@@ -29,7 +30,6 @@ export type Scoundrel = {
         // command: Record<string, number>;
         // consort: Record<string, number>;
         // sway: Record<string, number>;
-
     };
     optionActionsCreatingCharacter: boolean;
     optionActionsMasteryAdvance: boolean;

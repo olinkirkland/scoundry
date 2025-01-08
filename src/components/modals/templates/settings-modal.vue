@@ -132,7 +132,7 @@ const languageFeatures = {
     },
     de: {
         ui: true,
-        data: false,
+        data: true,
         sheets: false
     }
 };
