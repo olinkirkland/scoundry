@@ -63,7 +63,7 @@
                             $t(
                                 'User-interface.Home-page.Attribution.copyright',
                                 {
-                                    year: new Date().getFullYear(),
+                                    year: new Date().getFullYear()
                                 }
                             )
                         "
@@ -107,12 +107,13 @@ import ModalController from '@/controllers/modal-controller';
 import {
     getSavedMetadata,
     getSavedScoundrels,
-    Metadata,
+    Metadata
 } from '@/controllers/storage-controller';
 import { APP_VERSION } from '@/main';
 import { PageName, router } from '@/router';
 import { onMounted, ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
+import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 
 const page = ref<HTMLElement | null>(null);
 const savedScoundrels = ref<Scoundrel[]>([]);
@@ -141,9 +142,14 @@ async function onClickMakeNewScoundrel() {
 }
 
 function onClickLoadScoundrel(scoundrel: Scoundrel) {
+    // Opening a scoundrel that has a different language will change the language of the app
+    ModalController.open(ConfirmModal, {
+          
+    });
+
     router.replace({
         name: PageName.EDIT,
-        params: { scoundrelId: scoundrel.id },
+        params: { scoundrelId: scoundrel.id }
     });
 }
 

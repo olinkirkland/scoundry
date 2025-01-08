@@ -784,5 +784,5 @@ function getFont(variableName: string) {
     if (!fontVariable)
         console.error(`No font variable found for ${variableName}`);
 
-    const font = fontVariable.replace(/"/g, '');
+    return fontVariable.replace(/"/g, '');
 }

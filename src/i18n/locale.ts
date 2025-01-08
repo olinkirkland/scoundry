@@ -41,4 +41,8 @@ export function getLanguage() {
     return i18nInstance.locale.value;
 }
 
+export function t(key: string, data?: Record<string, string>) {
+    return i18nInstance.t(key, data);
+}
+
 export default i18n;

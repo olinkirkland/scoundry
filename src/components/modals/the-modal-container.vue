@@ -24,6 +24,8 @@ function onClickBackground() {
     if (currentModalConfig.value?.closeOnClick) ModalController.close();
 }
 
+const queue = [];
+
 ModalController.getInstance().addEventListener(({ modal, modalConfig }) => {
     (document.activeElement as HTMLElement)?.blur();
 
