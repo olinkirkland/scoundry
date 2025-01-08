@@ -1,14 +1,14 @@
 <template>
     <step-header>
-        <h2>Choose a <strong>special ability</strong></h2>
-        <p>What ability sets your character apart in the crew?</p>
+        <h2 v-html="$t('User-interface.Steps.Abilities.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Abilities.subtitle')"></p>
     </step-header>
     <ul class="abilities-list" v-if="scoundrel.abilities">
         <ability-card
             v-for="ability in abilities"
-            :key="ability.id"
+            :key="ability"
             :ability="ability"
-            :class="{ active: scoundrel.abilities.includes(ability.id) }"
+            :class="{ active: scoundrel.abilities.includes(ability) }"
             @click="onClickAbility(ability)"
         />
     </ul>
@@ -23,28 +23,23 @@
 
 <script setup lang="ts">
 import abilitiesData from '@/assets/data/abilities.json';
-import { Trait } from '@/assets/data/data-types';
 import StepHeader from '@/components/step-header.vue';
 import { Scoundrel } from '@/scoundrel';
 import AbilityCard from '../ability-card.vue';
-import { computed } from 'vue';
-
-const abilities = computed(() =>
-    (abilitiesData as unknown as Trait[]).filter(
-        (a) => a.category === props.scoundrel.playbook
-    )
-);
 
 const props = defineProps<{
     scoundrel: Partial<Scoundrel>;
 }>();
 
+const abilities =
+    abilitiesData[props.scoundrel.playbook as keyof typeof abilitiesData];
+
 if (!props.scoundrel.abilities) props.scoundrel.abilities = [];
 
-function onClickAbility(ability: Trait) {
+function onClickAbility(ability: string) {
     // Toggle the ability in the scoundrel's abilities array
-    const index = props.scoundrel.abilities!.indexOf(ability.id);
-    if (index === -1) props.scoundrel.abilities!.push(ability.id);
+    const index = props.scoundrel.abilities!.indexOf(ability);
+    if (index === -1) props.scoundrel.abilities!.push(ability);
     else props.scoundrel.abilities!.splice(index, 1);
 }
 </script>

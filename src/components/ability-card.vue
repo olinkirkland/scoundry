@@ -1,16 +1,19 @@
 <template>
     <div class="ability-card">
-        <h2>{{ ability.label }}</h2>
-        <p class="description">{{ ability.description }}</p>
+        <h2>{{ $t(`Abilities.${capitalize(ability)}.label`) }}</h2>
+        <p
+            class="description"
+            v-html="$t(`Abilities.${capitalize(ability)}.description`)"
+        ></p>
         <div class="overlay"></div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Trait } from '@/assets/data/data-types';
+import { capitalize } from '@/util/string-util';
 
 const props = defineProps<{
-    ability: Trait;
+    ability: string;
 }>();
 </script>
 
@@ -46,15 +49,28 @@ const props = defineProps<{
         font-family: var(--font-display);
         text-transform: uppercase;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.4rem;
         margin-bottom: 0.8rem;
-        border-bottom: 1px solid currentColor;
         font-weight: normal;
+        line-height: 1;
     }
 
     p.description {
-        text-align: center;
-        font-style: italic;
+        :deep(ul) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            padding-left: 0.8rem;
+            > li {
+                &::before {
+                    content: '❖';
+                    margin-right: 0.4rem;
+                }
+            }
+        }
+        :deep(br) {
+            margin-bottom: 0.8rem;
+        }
     }
 
     p.description &:hover {

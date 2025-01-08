@@ -127,7 +127,7 @@
             },
             "Abilities": {
                 "title": "What ability sets you apart in the crew?",
-                "subtitle": "Choose a special ability"
+                "subtitle": "Choose a special ability."
             },
             "Friends": {
                 "title": "Who owes you one and who's your bitter enemy?",
@@ -456,6 +456,232 @@
         "Wreck": {
             "label": "Wreck",
             "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos."
+        }
+    },
+    "Abilities": {
+        "Battleborn": {
+            "label": "Battleborn",
+            "description": "You may expend your special armor to reduce harm from an attack in combat or to push yourself during a fight."
+        },
+        "Bodyguard": {
+            "label": "Bodyguard",
+            "description": "When you protect a teammate, take +1d to your resistance roll.<br />When you gather info to anticipate possible threats in the current situation, you get +1 effect."
+        },
+        "Ghost-fighter": {
+            "label": "Ghost Fighter",
+            "description": "You may imbue your hands, melee weapons, or tools with spirit energy.<br /><ul><li>You gain potency in combat vs. the supernatural.</li><li>You may grapple with spirits to restrain and capture them.</li></ul>"
+        },
+        "Leader": {
+            "label": "Leader",
+            "description": "When you Command a cohort in combat, they continue to fight when they would otherwise break (they're not taken out when they suffer level 3 harm).<br />They gain +1 effect and 1 armor."
+        },
+        "Mule": {
+            "label": "Mule",
+            "description": "Your load limits are higher.<br /><ul><li>Light: 5</li><li>Normal: 7</li><li>Heavy: 8</li></ul>"
+        },
+        "Not-to-be-trifled-with": {
+            "label": "Not to be Trifled With",
+            "description": "You can push yourself to do one of the following: perform a feat of physical force that verges on the superhuman—engage a small gang on equal footing in close combat."
+        },
+        "Savage": {
+            "label": "Savage",
+            "description": "When you unleash physical violence, it's especially frightening.<br />When you Command a frightened target, take +1d."
+        },
+        "Vigorous": {
+            "label": "Vigorous",
+            "description": "You recover from harm faster. Permanently fill in one of your healing clock segments.<br />Take +1d to healing treatment rolls."
+        },
+        "Sharpshooter": {
+            "label": "Sharpshooter",
+            "description": "You can push yourself to do one of the following:<br /><ul><li>Make a ranged attack at extreme distance beyond what's normal for the weapon.</li><li>Unleash a barrage of rapid fire to suppress the enemy.</li></ul>"
+        },
+        "Focused": {
+            "label": "Focused",
+            "description": "You may expend your special armor to resist a consequence of surprise or mental harm (fear, confusion, losing track of someone) or to push yourself for ranged combat or tracking."
+        },
+        "Ghost-hunter": {
+            "label": "Ghost Hunter",
+            "description": "Your hunting pet is imbued with spirit energy.<br /><ul><li>It gains potency when tracking or fighting the supernatural.</li><li>It gains one arcane ability: ghost-form, mind-link, or arrow-swift.</li></ul>"
+        },
+        "Ghost-hunter-2": {
+            "label": "Ghost Hunter +",
+            "description": "Choose an additional arcane ability for your pet.<br /><em>The Ghost Hunter ability is required to take this ability.</em>"
+        },
+        "Scout": {
+            "label": "Scout",
+            "description": "When you gather info to locate a target, you get +1 effect.<br />When you hide in a prepared position or use camouflage, you get +1d to rolls to avoid detection."
+        },
+        "Survivor": {
+            "label": "Survivor",
+            "description": "From hard-won experience or occult ritual, you are immune to the poisonous miasma of the deathlands and are able to subsist on the strange flora and fauna there.<br />You get +1 stress box."
+        },
+        "Tough-as-nails": {
+            "label": "Tough as Nails",
+            "description": "Penalties from harm are one level less severe.<br /><em>Level 4 harm is still fatal.</em>"
+        },
+        "Vengeful": {
+            "label": "Vengeful",
+            "description": "You gain an additional xp trigger: You got payback against someone who harmed you or someone you care about.<br />If your crew helped you get payback, also mark crew xp."
+        },
+        "Alchemist": {
+            "label": "Alchemist",
+            "description": "When you invent or craft a creation with alchemical features, take +1 result level to your roll.<br />You begin with one special formula already known."
+        },
+        "Analyst": {
+            "label": "Analyst",
+            "description": "During downtime, you get two ticks to distribute among any long-term project clocks that involve investigation or learning a new formula or design plan."
+        },
+        "Artificer": {
+            "label": "Artificer",
+            "description": "When you invent or craft a creation with spark-craft features, take +1 result level to your roll.<br />You begin with one special design already known."
+        },
+        "Fortitude": {
+            "label": "Fortitude",
+            "description": "You may expend your special armor to do one of the following:<br /><ul><li>Resist a consequence of fatigue, weakness, or chemical effects.</li><li>Push yourself when working with technical skill or handling alchemicals.</li></ul>"
+        },
+        "Ghost-ward": {
+            "label": "Ghost Ward",
+            "description": "You know how to Wreck an area with arcane substances and methods so it is either anathema or enticing to spirits (your choice)."
+        },
+        "Physicker": {
+            "label": "Physicker",
+            "description": "You can Tinker with bones, blood, and bodily humours to treat wounds or stabilize the dying.<br />You may study a malady or corpse.<br />Everyone in your crew gets +1d to their healing treatment rolls."
+        },
+        "Saboteur": {
+            "label": "Saboteur",
+            "description": "When you Wreck, the work is much quieter than it should be and the damage is hidden from casual inspection."
+        },
+        "Venomous": {
+            "label": "Venomous",
+            "description": "Choose a drug or poison (from your bandolier stock) to which you have become immune.<br />You can push yourself to secrete it through your skin or saliva or exhale it as a vapor."
+        },
+        "Infiltrator": {
+            "label": "Infiltrator",
+            "description": "You are not affected by quality or Tier when you bypass security measures."
+        },
+        "Ambush": {
+            "label": "Ambush",
+            "description": "When you attack from hiding or spring a trap, you get +1d."
+        },
+        "Daredevil": {
+            "label": "Daredevil",
+            "description": "When you roll a desperate action, you get +1d to your roll if you also take -1d to any resistance rolls against consequences from your action."
+        },
+        "The-devils-footsteps": {
+            "label": "The Devil's Footsteps",
+            "description": "When you push yourself, choose one of the following additional benefits:<br /><ul><li>Perform a feat of athletics that verges on the superhuman.</li><li>Maneuver to confuse your enemies so they mistakenly attack each other.</li></ul>"
+        },
+        "Expertise": {
+            "label": "Expertise",
+            "description": "Choose one of your action ratings. When you lead a group action using that action, you can suffer only 1 stress at most regardless of the number of failed rolls."
+        },
+        "Ghost-veil": {
+            "label": "Ghost Veil",
+            "description": "You may shift partially into the ghost field, becoming shadowy and insubstantial for a few moments.<br />Take 2 stress when you shift, plus 1 stress for each extra feature:<br /><ul><li>It lasts for a few minutes rather than moments.</li><li>You are invisible rather than shadowy.</li><li>You may float through the air like a ghost.</li></ul>"
+        },
+        "Reflexes": {
+            "label": "Reflexes",
+            "description": "When there's a question about who acts first, the answer is you (two characters with Reflexes act simultaneously)."
+        },
+        "Shadow": {
+            "label": "Shadow",
+            "description": "You may expend your special armor to resist a consequence from detection or security measures, or to push yourself for a feat of athletics or stealth."
+        },
+        "Rooks-gambit": {
+            "label": "Rook's Gambit",
+            "description": "Take 2 stress to roll your best action rating while performing a different action.<br /><em>Say how you adapt your skill to this use.</em>"
+        },
+        "Cloak-and-dagger": {
+            "label": "Cloak & Dagger",
+            "description": "When you use a disguise or other form of covert misdirection, you get +1d to rolls to confuse or deflect suspicion.<br />When you throw off your disguise, the resulting surprise gives you the initiative in the situation."
+        },
+        "Ghost-voice": {
+            "label": "Ghost Voice",
+            "description": "You know the secret method to interact with a ghost or demon as if it was a normal human, regardless of how wild or feral it appears.<br />You gain potency when communicating with the supernatural."
+        },
+        "Like-looking-into-a-mirror": {
+            "label": "Like Looking into a Mirror",
+            "description": "You can always tell when someone is lying to you."
+        },
+        "A-little-something-on-the-side": {
+            "label": "A Little Something on the Side",
+            "description": "At the end of each downtime phase, you earn +2 stash."
+        },
+        "Mesmerism": {
+            "label": "Mesmerism",
+            "description": "When you Sway someone, you may cause them to forget that it's happened until they next interact with you."
+        },
+        "Subterfuge": {
+            "label": "Subterfuge",
+            "description": "You may expend your special armor to resist a consequence from suspicion or persuasion, or to push yourself for subterfuge."
+        },
+        "Trust-in-me": {
+            "label": "Trust in Me",
+            "description": "You get +1d versus a target with whom you have an intimate relationship."
+        },
+        "Foresight": {
+            "label": "Foresight",
+            "description": "Two times per score you can assist a teammate without paying stress.<br /><em>Say how you prepared for this.</em>"
+        },
+        "Calculating": {
+            "label": "Calculating",
+            "description": "Due to your careful planning, during downtime, you may give yourself or another crew member +1 downtime action."
+        },
+        "Connected": {
+            "label": "Connected",
+            "description": "During downtime, you get +1 result level when you acquire an asset or reduce heat."
+        },
+        "Functioning-vice": {
+            "label": "Functioning Vice",
+            "description": "When you indulge your vice, you may adjust the dice outcome by 1 or 2 (up or down).<br />An ally who joins in your vice may do the same."
+        },
+        "Ghost-contract": {
+            "label": "Ghost Contract",
+            "description": "When you shake on a deal, you and your partner—human or otherwise—both bear a mark of your oath. If either breaks the contract, they take level 3 harm, <em>Cursed</em>."
+        },
+        "Jail-bird": {
+            "label": "Jail Bird",
+            "description": "When incarcerated:<br /><ul><li>Your wanted level counts as 1 less</li><li>Your Tier counts as 1 more</li><li>You gain +1 faction status with a faction you help on the inside (in addition to your incarceration roll).</li></ul>"
+        },
+        "Mastermind": {
+            "label": "Mastermind",
+            "description": "You may expend your special armor to protect a teammate, or to push yourself when you gather information or work on a long-term project."
+        },
+        "Weaving-the-web": {
+            "label": "Weaving the Web",
+            "description": "You gain +1d to Consort when you gather information on a target for a score.<br />You get +1d to the engagement roll for that operation."
+        },
+        "Compel": {
+            "label": "Compel",
+            "description": "You can Attune to the ghost field to force a nearby ghost to appear and obey a command you give it.<br />You are not supernaturally terrified by a ghost you summon or compel (though your allies may be)."
+        },
+        "Ghost-mind": {
+            "label": "Ghost Mind",
+            "description": "You're always aware of supernatural entities in your presence.<br />Take +1d when you gather info about the supernatural."
+        },
+        "Iron-will": {
+            "label": "Iron Will",
+            "description": "You're immune to the terror that some supernatural entities inflict on sight.<br />Take +1d to resistance rolls with Resolve."
+        },
+        "Occultist": {
+            "label": "Occultist",
+            "description": "You know the secret ways to Consort with ancient powers, forgotten gods or demons. Once you've consorted with one, you get +1d to command cultists who worship it."
+        },
+        "Ritual": {
+            "label": "Ritual",
+            "description": "You can Study an occult ritual (or create a new one) to summon a supernatural effect or being.<br />You know the arcane methods to perform ritual sorcery.<br />You begin with one ritual already learned."
+        },
+        "Strange-methods": {
+            "label": "Strange Methods",
+            "description": "When you invent or craft a creation with arcane features, take +1 result level to your roll.<br />You begin with one arcane design already known."
+        },
+        "Tempest": {
+            "label": "Tempest",
+            "description": "You can push yourself to do one of the following:<br /><ul><li>Unleash a stroke of lightning as a weapon.</li><li>Summon a storm in your immediate vicinity (torrential rain, roaring winds, heavy fog, chilling frost/snow, etc.).</li></ul>"
+        },
+        "Warded": {
+            "label": "Warded",
+            "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself when you deal with arcane forces."
         }
     }
 }

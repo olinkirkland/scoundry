@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import { Action } from '@/assets/data/data-types';
 import playbooksData from '@/assets/data/playbooks.json';
 import PlaybookCard from '@/components/playbook-card.vue';
 import StepHeader from '@/components/step-header.vue';
@@ -24,7 +23,7 @@ import { Scoundrel } from '@/scoundrel';
 
 const playbooksActions = playbooksData as unknown as Record<
     string,
-    Record<Action, number>
+    Record<string, number>
 >;
 
 const props = defineProps<{
@@ -36,15 +35,15 @@ function onClickPlaybook(playbook: string) {
 
     // Remove all 'playbook' keys from scoundrel.actions
     Object.keys(props.scoundrel.actions).forEach((action) => {
-        delete props.scoundrel.actions[action as Action].playbook;
+        delete props.scoundrel.actions[action].playbook;
     });
 
     const actions = playbooksActions[playbook];
 
     // Add the new playbook's actions to scoundrel.actions
     Object.keys(actions).forEach((action) => {
-        const modifier = actions[action as Action];
-        props.scoundrel.actions[action as Action].playbook = modifier;
+        const modifier = actions[action];
+        props.scoundrel.actions[action].playbook = modifier;
     });
 
     // Clear the abilities array
