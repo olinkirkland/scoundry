@@ -18,5 +18,5 @@ app.mount('#app');
 
 trackEvent('page-load', {
     version: APP_VERSION,
-    path: window.location.pathname,
+    path: window.location.pathname
 });

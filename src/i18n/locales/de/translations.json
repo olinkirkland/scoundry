@@ -1,0 +1,245 @@
+{
+    "User-interface": {
+        "Home-page": {
+            "Attribution": {
+                "code-and-design": "Code & Design von <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+                "copyright": "Copyright © {year} Olin Kirkland",
+                "license-blades-in-the-dark": "Diese Arbeit basiert auf <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — ein Produkt von One Seven Design, entwickelt und geschrieben von John Harper, und lizenziert für unsere Nutzung unter der <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0-Lizenz</a>",
+                "license-icons": "Icons stammen von <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
+                "license-portraits": "Porträtbilder stammen aus <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> ohne bekannte Einschränkungen ihrer Nutzung.",
+                "news-and-updates": "Neuigkeiten & Updates"
+            },
+            "Scoundrel-card": {
+                "no-name": "Unbenannter {playbook}",
+                "no-playbook": "Unbenannter Schurke"
+            },
+            "description": "Eine Charaktererstellungs Hilfe für <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
+            "last-updated": "Aktualisiert {date}",
+            "new-scoundrel-button": "Neuer Schurke",
+            "scroll-prompt": "Scrolle weiter, um die Zuordnung zu sehen",
+            "settings-button": "Einstellungen"
+        },
+        "Make-page": {
+            "Controls": {
+                "delete-button": "Löschen",
+                "home-button": "Startseite",
+                "next-button": "Weiter"
+            },
+            "Step-navigation": {
+                "abilities": "Fähigkeiten",
+                "actions": "Aktionen",
+                "background": "Hintergrund",
+                "export": "Exportieren",
+                "friends": "Freunde",
+                "heritage": "Herkunft",
+                "name-and-look": "Name & Aussehen",
+                "playbook": "Playbook",
+                "vice": "Laster"
+            }
+        },
+        "Modals": {
+            "Confirm": {
+                "Controls": {
+                    "cancel-button": "Nein, ich habe es mir anders überlegt",
+                    "confirm-button": "Ja"
+                }
+            },
+            "Delete-scoundrel": {
+                "Controls": {
+                    "confirm-button": "Löschen"
+                },
+                "message": "Sind Sie sicher, dass Sie diesen Schurken löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+                "title": "Schurken löschen?"
+            },
+            "News-and-updates": {
+                "title": "Neuigkeiten & Updates"
+            },
+            "Settings": {
+                "Language": {
+                    "Language-features": {
+                        "data": "Spieldaten",
+                        "sheets": "Sheets",
+                        "ui": "Benutzeroberfläche"
+                    },
+                    "Languages": {
+                        "de": "Deutsch",
+                        "en": "Englisch",
+                        "es": "Spanisch"
+                    },
+                    "label": "App-Sprache auswählen"
+                },
+                "Tracking": {
+                    "description": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
+                    "label": "Anonymes Tracking aktivieren"
+                },
+                "title": "Einstellungen"
+            },
+            "Tracking-consent": {
+                "Controls": {
+                    "cancel-button": "Tracking deaktiviert lassen",
+                    "confirm-button": "Tracking ist in Ordnung"
+                },
+                "message": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
+                "title": "Tracking-Einstellungen"
+            },
+            "World-map": {
+                "title": "Die Zerbrochenen Inseln"
+            }
+        },
+        "Steps": {
+            "Abilities": {
+                "subtitle": "Wähle eine Sonderfähigkeit.",
+                "title": "Welche Fähigkeit hebt dich in der Bande hervor?"
+            },
+            "Actions": {
+                "Action-tally": {
+                    "with-character-creation": "<strong>{count}</strong> von 7 Aktionspunkten zugewiesen",
+                    "without-character-creation": "<strong>{count}</strong> Aktionspunkte zugewiesen"
+                },
+                "Actions": {
+                    "Attune": {
+                        "description": "Einstimmen auf Geister und das Geisterfeld; elektroplasmische Energie kanalisieren; Geister wahrnehmen und mit ihnen kommunizieren; Spektrologie verstehen.",
+                        "label": "Einstimmen"
+                    },
+                    "Command": {
+                        "description": "Gehorsam mit deiner Persönlichkeit erzwingen; einschüchtern oder drohen; eine Aktion mit einer der Banden-Gruppen anführen.",
+                        "label": "Befehlen"
+                    },
+                    "Consort": {
+                        "description": "Verkehre mit Verbindungen aus deinem Erbe, Hintergrund, Freundeskreis oder Rivalen, um Zugang zu Ressourcen, Informationen, Personen oder Orten zu erhalten.",
+                        "label": "Verkehren"
+                    },
+                    "Finesse": {
+                        "description": "Nimm geschickt etwas aus jemandes Tasche; wende subtile Ablenkung oder Fingerfertigkeit an; führe ein Fahrzeug oder reite ein Tier.",
+                        "label": "Geschick"
+                    },
+                    "Hunt": {
+                        "description": "Verfolge ein Ziel; sammle Informationen über dessen Standort und Bewegungen; greife aus der Distanz mit Präzisionsschüssen an.",
+                        "label": "Jagen"
+                    },
+                    "Prowl": {
+                        "description": "Schleiche unbemerkt umher und überwinde Hindernisse; klettere, schwimme, renne, springe und rolle. Überfalle mit naher Gewalt – wie ein Hinterhalt oder Kehlschnitt.",
+                        "label": "Schleichen"
+                    },
+                    "Skirmish": {
+                        "description": "Kämpfe im Nahkampf mit einem Gegner; greife an oder verteidige eine Position; raufe und ringe.",
+                        "label": "Kämpfen"
+                    },
+                    "Study": {
+                        "description": "Untersuche eine Person, ein Dokument oder einen Gegenstand genau, um Informationen zu sammeln und Wissen anzuwenden.",
+                        "label": "Studieren"
+                    },
+                    "Survey": {
+                        "description": "Beobachte einen Ort oder eine Situation, um zu verstehen, was vor sich geht; erkenne Gefahr, bevor sie eintritt.",
+                        "label": "Erforschen"
+                    },
+                    "Sway": {
+                        "description": "Beeinflusse jemanden mit Charme, Logik, Täuschung, Verkleidung oder Bluff; ändere Einstellungen oder Verhalten durch Manipulation.",
+                        "label": "Beeinflussen"
+                    },
+                    "Tinker": {
+                        "description": "Tüftele an Mechanismen, um sie zu erstellen, zu modifizieren, zu deaktivieren oder zu reparieren. Entschärfe Fallen oder knacke Schlösser.",
+                        "label": "Tüfteln"
+                    },
+                    "Wreck": {
+                        "description": "Zerstöre Orte, Gegenstände oder Hindernisse mit roher Gewalt oder gezielter Sabotage; stifte Ablenkung und Chaos.",
+                        "label": "Zerstören"
+                    }
+                },
+                "Attributes": {
+                    "Insight": "Verstand",
+                    "Prowess": "Zähigkeit",
+                    "Resolve": "Wille"
+                },
+                "Options": {
+                    "character-creation-button": "Charaktererstellung: Insgesamt 7 Aktionspunkte, maximal 2 pro Aktion",
+                    "mastery-advance-button": "Meisterschaftsfortschritt: Aktionen bis Stufe 4 erlauben"
+                },
+                "subtitle": "Verteile Punkte auf Aktionen, die dich am besten repräsentieren.",
+                "suggested-actions": "Aktionen, die durch deinen Hintergrund und dein Erbe vorgeschlagen werden:",
+                "title": "Was kannst du am besten?"
+            },
+            "Background": {
+                "deep-cuts-description": "Ausführliche Beschreibungen dieser Hintergründe findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
+                "detail-prompt": "Ein Detail über deinen Hintergrund",
+                "select-prompt": "Wähle einen Hintergrund aus, um dessen Beschreibung und empfohlene Details zu sehen.",
+                "subtitle": "Wähle einen Hintergrund und beschreibe ein für dich spezifisches Detail.",
+                "title": "Was hast du getan, bevor du dich der Bande angeschlossen hast?"
+            },
+            "Export": {
+                "Controls": {
+                    "copied": "Kopiert!",
+                    "save-as-image-button": "Als Bild speichern",
+                    "share-as-url-button": "Als URL teilen"
+                },
+                "subtitle": "Passe dein Charakterblatt an und teile es.",
+                "title": "Exportiere deinen Schurken"
+            },
+            "Friends": {
+                "friend-button": "Freund",
+                "rival-button": "Rivale",
+                "subtitle": "Markiere einen langjährigen Verbündeten oder Geliebten und einen Rivalen oder Feind.",
+                "title": "Wer schuldet dir etwas und wer ist dein erbitterter Feind?"
+            },
+            "Heritage": {
+                "deep-cuts-description": "Ausführliche Beschreibungen dieser Herkünfte findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
+                "detail-prompt": "Ein Detail über deine Herkunft",
+                "select-prompt": "Wähle eine Herkunft aus, um deren Beschreibung und empfohlene Details zu sehen.",
+                "subtitle": "Wähle eine Herkunft und beschreibe ein für dich spezifisches Detail.",
+                "title": "Woher kommst du?",
+                "world-map-button": "Weltkarte"
+            },
+            "Name-and-look": {
+                "alias-prompt": "Dein Alias",
+                "look-prompt": "Dein Aussehen",
+                "name-prompt": "Dein Name",
+                "portrait-prompt": "Wähle ein Porträt",
+                "randomize-alias-button": "Alias zufällig wählen",
+                "randomize-look-button": "Aussehen zufällig wählen",
+                "randomize-name-button": "Name zufällig wählen",
+                "subtitle": "Notiere einen Namen, einen kriminellen Alias und beschreibe kurz dein Aussehen.",
+                "title": "Wie nennt man dich? Wie siehst du aus?"
+            },
+            "Playbook": {
+                "subtitle": "Dein Charakterbogen repräsentiert deinen Ruf, deine Sonderfähigkeiten und deine Entwicklungsmöglichkeiten.",
+                "title": "Was für ein <strong>Schurke</strong> bist du?"
+            },
+            "Vice": {
+                "description": "Wähle ein Laster und notiere den Namen und Ort deines Versorgers.",
+                "purveyor-prompt": "Eine Beschreibung, wo du deinem Laster nachgehst",
+                "select-prompt": "Wähle ein Laster aus, um dessen Beschreibung und empfohlene Versorger zu sehen.",
+                "title": "Wo gehst du hin, um deinen Stress abzubauen?"
+            }
+        }
+    },
+    "Playbooks": {
+        "Cutter": {
+            "description": "Ein gefährlicher und einschüchternder Kämpfer",
+            "label": "Schnitter"
+        },
+        "Hound": {
+            "description": "Ein tödlicher Scharfschütze und Fährtenleser",
+            "label": "Bluthund"
+        },
+        "Leech": {
+            "description": "Ein Saboteur und Techniker",
+            "label": "Schröpfer"
+        },
+        "Lurk": {
+            "description": "Ein heimlicher Eindringling und Dieb",
+            "label": "Lauerer"
+        },
+        "Slide": {
+            "description": "Ein subtiler Manipulator und Spion",
+            "label": "Emissär"
+        },
+        "Spider": {
+            "description": "Ein verschlagener Strippenzieher",
+            "label": "Spinne"
+        },
+        "Whisper": {
+            "description": "Ein arkaner Adept und Medium",
+            "label": "Flüsterer"
+        }
+    }
+}
