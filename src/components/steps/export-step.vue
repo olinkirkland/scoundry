@@ -67,29 +67,30 @@
             />
         </div>
         <div class="row wrap">
-            <!-- <button
-                class="btn btn--alt"
-                :class="{ 'no-click': showCopyJsonMessage }"
-                :disabled="showCopyJsonMessage"
-                @click="onClickCopyJSON"
-            >
-                <span class="copy-message" v-if="showCopyJsonMessage"
-                    >Copied!</span
-                >
-                <span v-else>Copy JSON</span>
-            </button> -->
             <button
                 class="btn btn--alt"
                 :class="{ 'no-click': showCopyUrlMessage }"
                 :disabled="showCopyUrlMessage"
                 @click="onClickCopyURL"
             >
-                <span class="copy-message" v-if="showCopyUrlMessage"
-                    >Copied!</span
-                >
-                <span v-else>Share as URL</span>
+                <span class="copy-message" v-if="showCopyUrlMessage">
+                    {{ $t('User-interface.Steps.Export.Controls.copied') }}
+                </span>
+                <span v-else>
+                    {{
+                        $t(
+                            'User-interface.Steps.Export.Controls.share-as-url-button'
+                        )
+                    }}
+                </span>
             </button>
-            <button class="btn" @click="onClickSavePNG">Save as Image</button>
+            <button class="btn" @click="onClickSavePNG">
+                {{
+                    $t(
+                        'User-interface.Steps.Export.Controls.save-as-image-button'
+                    )
+                }}
+            </button>
         </div>
     </div>
 </template>
@@ -97,14 +98,14 @@
 <script setup lang="ts">
 import { Scoundrel } from '@/scoundrel';
 import { paintSheet } from '@/sheet-painter';
+import { trackEvent } from '@/tracker';
 import { makeSemanticId } from '@/util/id-util';
 import {
     encodeJsonToUrl,
     getSemanticScoundrelName
 } from '@/util/scoundrel-util';
-import { ref, computed, defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 import stepHeader from '../step-header.vue';
-import { trackEvent } from '@/tracker';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -186,8 +187,6 @@ function onClickCopyJSON() {
 async function generatePNG() {
     // Show the loading spinner
     isLoading.value = true;
-    // sheetPreview.value.style.opacity = '0.1';
-
     trackEvent('generate-png', {
         inkColor: props.scoundrel.preferredInkColor,
         playbook: props.scoundrel.playbook,
@@ -217,11 +216,6 @@ async function generatePNG() {
 
 function onClickSavePNG() {
     if (!props.scoundrel.playbook) return;
-
-    // Open the PNG in a new tab
-    // window.open(sheetDataUrl.value, '_blank');
-
-    // 4. Save the PNG as a file
     const fileName = makeFileName(getSemanticScoundrelName(props.scoundrel));
     const link = document.createElement('a');
     link.download = `${fileName}.png`;

@@ -157,6 +157,7 @@
                 "subtitle": "Customize and share your character sheet.",
                 "Controls": {
                     "share-as-url-button": "Share as URL",
+                    "copied": "Copied!",
                     "save-as-image-button": "Save as image"
                 }
             }
