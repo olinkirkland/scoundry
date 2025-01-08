@@ -1010,5 +1010,200 @@
         "water-bearers": "Wasserträger",
         "whitehollow-miners": "Whitehollow Bergleute",
         "wintercliff-wardens": "Wintercliff Wächter"
+    },
+    "Vice-suggestions": {
+        "Aranna-the-blessed": {
+            "description": "Kultist eines vergessenen Gottes",
+            "district": "Nightmarket",
+            "label": "Aranna die Gesegnete",
+            "text": "Aranna die Gesegnete; Kultist eines vergessenen Gottes; Nightmarket"
+        },
+        "Avrick": {
+            "description": "Pulverhändler",
+            "district": "Barrowcleft",
+            "label": "Avrick",
+            "text": "Avrick; Pulverhändler; Barrowcleft"
+        },
+        "Chef-roselle": {
+            "description": "Das Restaurant Golden Plum",
+            "district": "Six Towers",
+            "label": "Chef Roselle",
+            "text": "Chef Roselle; Das Restaurant Golden Plum; Six Towers"
+        },
+        "Circle-of-flame": {
+            "description": "Eine geheime Gesellschaft",
+            "label": "Der Kreis der Flamme",
+            "text": "Der Kreis der Flamme; Eine geheime Gesellschaft"
+        },
+        "Dunridge-sons": {
+            "description": "Feine Stoffe und Maßschneiderei",
+            "district": "Nightmarket",
+            "label": "Dunridge & Söhne",
+            "text": "Dunridge & Söhne; Feine Stoffe und Maßschneiderei; Nightmarket"
+        },
+        "Eldrin-prichard": {
+            "description": "Die Lustbarkeitsbarke Silber-Schwan",
+            "district": "Brightstone Kanäle",
+            "label": "Eldrin Prichard",
+            "text": "Eldrin Prichard; Die Lustbarkeitsbarke Silber-Schwan; Brightstone Kanäle"
+        },
+        "Family-members": {
+            "description": "Heritage oder Hintergrund (oder ehemalige Mitbewerber)",
+            "label": "Familienmitglieder",
+            "text": "Familienmitglieder; Heritage oder Hintergrund (oder ehemalige Mitbewerber)"
+        },
+        "Father-yoren": {
+            "description": "Haus der Wehenden Dame",
+            "district": "Six Towers",
+            "label": "Vater Yoren",
+            "text": "Vater Yoren; Haus der Wehenden Dame; Six Towers"
+        },
+        "Grist": {
+            "description": "Boxen",
+            "district": "Die Docks",
+            "label": "Grist",
+            "text": "Grist; Boxen; Die Docks"
+        },
+        "Harvale-brogan": {
+            "description": "Der Centuralia Club",
+            "district": "Brightstone",
+            "label": "Harvale Brogan",
+            "text": "Harvale Brogan; Der Centuralia Club; Brightstone"
+        },
+        "Helene": {
+            "description": "Silber-Stag Casino",
+            "district": "Silkshore",
+            "label": "Helene",
+            "text": "Helene; Silber-Stag Casino; Silkshore"
+        },
+        "Hooded-proprietor": {
+            "description": "Eine halbüberflutete Grottenkneipe in der Nähe der Docks",
+            "district": "Die Docks",
+            "label": "Der verhüllte Inhaber",
+            "text": "Der verhüllte Inhaber; Eine halbüberflutete Grottenkneipe; Die Docks"
+        },
+        "Hutton": {
+            "description": "Skovlander Flüchtlinge/Revolutionäre",
+            "district": "Charhollow",
+            "label": "Hutton",
+            "text": "Hutton; Skovlander Flüchtlinge/Revolutionäre; Charhollow"
+        },
+        "Ilacille": {
+            "description": "Die Ruinen des Tempels zu vergessenen Göttern",
+            "district": "Coalridge",
+            "label": "Ilacille",
+            "text": "Ilacille; Die Ruinen des Tempels zu vergessenen Göttern; Coalridge"
+        },
+        "Jewel-bird-shine": {
+            "description": "Catcrawl Alley",
+            "district": "Die Docks",
+            "label": "Jewel, Bird und Shine",
+            "text": "Jewel, Bird und Shine; Catcrawl Alley; Die Docks"
+        },
+        "Lady-dusk": {
+            "description": "Der Dusk Manor Club",
+            "district": "Whitecrown",
+            "label": "Lady Dusk",
+            "text": "Lady Dusk; Der Dusk Manor Club; Whitecrown"
+        },
+        "Lady-freyla": {
+            "description": "The Emperor's Cask, Bar",
+            "district": "Whitecrown",
+            "label": "Lady Freyla",
+            "text": "Lady Freyla; The Emperor's Cask, Bar; Whitecrown"
+        },
+        "Lord-penderyn": {
+            "description": "Das Archiv der Echos",
+            "district": "Charterhall",
+            "label": "Lord Penderyn",
+            "text": "Lord Penderyn; Das Archiv der Echos; Charterhall"
+        },
+        "Madame-tesslyn": {
+            "description": "Die Rote Lampe, Bordell",
+            "district": "Silkshore",
+            "label": "Madame Tesslyn",
+            "text": "Madame Tesslyn; Die Rote Lampe, Bordell; Silkshore"
+        },
+        "Maestro-helleren": {
+            "description": "Spiregarden Theater",
+            "district": "Whitecrown",
+            "label": "Maestro Helleren",
+            "text": "Maestro Helleren; Spiregarden Theater; Whitecrown"
+        },
+        "Mardin-gull": {
+            "description": "Der Leaky Bucket, Taverne",
+            "district": "Crows Foot",
+            "label": "Mardin Gull",
+            "text": "Mardin Gull; Der Leaky Bucket, Taverne; Crows Foot"
+        },
+        "Master-vreen": {
+            "description": "Hundrennrennen",
+            "district": "Nightmarket",
+            "label": "Master Vreen",
+            "text": "Master Vreen; Hundrennrennen; Nightmarket"
+        },
+        "Mother-narya": {
+            "description": "Haus der Wehenden Dame",
+            "district": "Six Towers",
+            "label": "Mutter Narya",
+            "text": "Mutter Narya; Haus der Wehenden Dame; Six Towers"
+        },
+        "Nelisanne": {
+            "description": "Die Kirche der Ekstase des Fleisches",
+            "district": "Brightstone",
+            "label": "Nelisanne",
+            "text": "Nelisanne; Die Kirche der Ekstase des Fleisches; Brightstone"
+        },
+        "Ojak": {
+            "description": "Tycherosi Dachmarkt Verkäufer",
+            "district": "Silkshore",
+            "label": "Ojak",
+            "text": "Ojak; Tycherosi Dachmarkt Verkäufer; Silkshore"
+        },
+        "Pux-bolin": {
+            "description": "The Harping Monkey, Taverne",
+            "district": "Nightmarket",
+            "label": "Pux Bolin",
+            "text": "Pux Bolin; The Harping Monkey, Taverne; Nightmarket"
+        },
+        "Rolan-volaris": {
+            "description": "Der Schleier, Sozialclub",
+            "district": "Nightmarket",
+            "label": "Rolan Volaris",
+            "text": "Rolan Volaris; Der Schleier, Sozialclub; Nightmarket"
+        },
+        "Salia": {
+            "description": "Ein Geist der Versöhnten, der nach Belieben von Körper zu Körper wechselt",
+            "label": "\"Salia\"",
+            "text": "\"Salia\"; Ein Geist der Versöhnten, der nach Belieben von Körper zu Körper wechselt"
+        },
+        "Sergeant-velk": {
+            "description": "Die Kampfgruben",
+            "district": "Dunslough",
+            "label": "Sergeant Velk",
+            "text": "Sergeant Velk; Die Kampfgruben; Dunslough"
+        },
+        "Singer": {
+            "description": "Badehaus",
+            "district": "Crows Foot",
+            "label": "Singer",
+            "text": "Singer; Badehaus; Crows Foot"
+        },
+        "Sister-thorn": {
+            "description": "Scavenger-Gang der Deathlands",
+            "district": "Gaddoc Station",
+            "label": "Sister Thorn",
+            "text": "Sister Thorn; Scavenger-Gang der Deathlands; Gaddoc Station"
+        },
+        "Spoggs": {
+            "district": "Crows Foot",
+            "label": "Spogg's Würfelspiel",
+            "text": "Spogg's Würfelspiel; Crows Foot"
+        },
+        "Travens": {
+            "district": "Coalridge",
+            "label": "Travens Rauchshop",
+            "text": "Travens Rauchshop; Coalridge"
+        }
     }
 }
