@@ -1055,5 +1055,111 @@
             "district": "Nightmarket",
             "text": "Aranna the Blessed; Cultist of a forgotten god; Nightmarket"
         }
+    },
+    "Looks": {
+        "Templates": {
+            "one-adjective-one-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1}",
+            "one-adjective-two-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1} and {apparel2}",
+            "two-adjectives-one-apparel": "{personWordArticle} {personWordAdjective1} and {personWordAdjective2} {personWord} {wearingVerb} {apparel1}",
+            "two-adjectives-two-apparel": "{personWordArticle} {personWordAdjective1} and {personWordAdjective2} {personWord} {wearingVerb} {apparel1} and {apparel2}"
+        },
+        "Person-words": {
+            "man": {
+                "article": "a",
+                "word": "man"
+            },
+            "woman": {
+                "article": "a",
+                "word": "woman"
+            },
+            "person": {
+                "article": "a",
+                "word": "person"
+            },
+            "child": {
+                "article": "a",
+                "word": "child"
+            }
+        },
+        "Person-word-adjectives": {
+            "affable": "affable",
+            "athletic": "athletic",
+            "bony": "bony",
+            "bright": "bright",
+            "brooding": "brooding",
+            "calm": "calm",
+            "chiseled": "chiseled",
+            "cold": "cold",
+            "dark": "dark",
+            "delicate": "delicate",
+            "fair": "fair",
+            "fierce": "fierce",
+            "grimy": "grimy",
+            "handsome": "handsome",
+            "huge": "huge",
+            "hunched": "hunched",
+            "languid": "languid",
+            "lovely": "lovely",
+            "open": "open",
+            "plump": "plump",
+            "rough": "rough",
+            "sad": "sad",
+            "scarred": "scarred",
+            "slim": "slim",
+            "soft": "soft",
+            "squat": "squat",
+            "stern": "stern",
+            "stout": "stout",
+            "striking": "striking",
+            "twitchy": "twitchy",
+            "weathered": "weathered",
+            "wiry": "wiry",
+            "worn": "worn"
+        },
+        "Joining-words": {
+            "and": "and",
+            "wearing": "wearing",
+            "sporting": "sporting",
+            "dressed-in": "dressed in"
+        },
+        "Apparel": {
+            "collared-shirt": "a collared shirt",
+            "eel-skin-bodysuit": "an eel-skin bodysuit",
+            "fitted-dress": "a fitted dress",
+            "fitted-leggings": "fitted leggings",
+            "half-cape": "a half-cape",
+            "heavy-cloak": "a heavy cloak",
+            "heavy-jacket": "a heavy jacket",
+            "hide-and-furs": "hide & furs",
+            "hood-and-veil": "a hood & veil",
+            "hooded-cape": "a hooded cape",
+            "hooded-coat": "a hooded coat",
+            "knit-cap": "a knit cap",
+            "knit-sweater": "a knit sweater",
+            "leathers": "leathers",
+            "long-coat": "a long coat",
+            "long-scarf": "a long scarf",
+            "loose-silks": "loose silks",
+            "mask-and-robes": "a mask & robes",
+            "rags-and-tatters": "rags & tatters",
+            "rough-tunic": "a rough tunic",
+            "scavenged-uniform": "a scavenged uniform",
+            "sharp-trousers": "sharp trousers",
+            "short-cloak": "a short cloak",
+            "skirt-and-blouse": "a skirt & blouse",
+            "slim-jacket": "a slim jacket",
+            "soft-boots": "soft boots",
+            "suit-and-tie": "a suit & tie",
+            "suspenders": "suspenders",
+            "tall-boots": "tall boots",
+            "thick-greatcoat": "a thick greatcoat",
+            "tricorn-hat": "a tricorn hat",
+            "vest": "a vest",
+            "fancy-waistcoat": "a fancy waistcoat",
+            "waxed-coat": "a waxed coat",
+            "wide-belt": "a wide belt",
+            "work-boots": "work boots",
+            "work-trousers": "work trousers"
+        }
     }
 }

@@ -1,42 +1,59 @@
 <template>
     <step-header>
-        <h2>Record your name and look</h2>
-        <p>
-            Your name is your identity. Your look is your brand. Both are
-            important to your reputation.
-        </p>
+        <h2 v-html="$t('User-interface.Steps.Name-and-look.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Name-and-look.subtitle')"></p>
     </step-header>
     <div class="name">
         <div class="input-with-suggestions">
             <div class="input-block">
-                <label>Your name</label>
+                <label>
+                    {{ $t('User-interface.Steps.Name-and-look.name-prompt') }}
+                </label>
                 <input type="text" v-model="scoundrel.name" />
             </div>
             <button class="btn btn--alt" @click="randomizeName">
-                Randomize Name
+                {{
+                    $t(
+                        'User-interface.Steps.Name-and-look.randomize-name-button'
+                    )
+                }}
             </button>
         </div>
         <div class="input-with-suggestions">
             <div class="input-block">
-                <label>Your alias</label>
+                <label>
+                    {{ $t('User-interface.Steps.Name-and-look.alias-prompt') }}
+                </label>
                 <input type="text" v-model="scoundrel.alias" />
             </div>
             <button class="btn btn--alt" @click="randomizeAlias">
-                Randomize Alias
+                {{
+                    $t(
+                        'User-interface.Steps.Name-and-look.randomize-alias-button'
+                    )
+                }}
             </button>
         </div>
         <div class="input-with-suggestions">
             <div class="input-block">
-                <label>Your look</label>
+                <label>
+                    {{ $t('User-interface.Steps.Name-and-look.look-prompt') }}
+                </label>
                 <input type="text" v-model="scoundrel.look" />
             </div>
             <button class="btn btn--alt" @click="randomizeLook">
-                Randomize Look
+                {{
+                    $t(
+                        'User-interface.Steps.Name-and-look.randomize-look-button'
+                    )
+                }}
             </button>
         </div>
     </div>
     <div class="portraits-block">
-        <label>Choose a portrait</label>
+        <label>
+            {{ $t('User-interface.Steps.Name-and-look.portrait-prompt') }}
+        </label>
         <ul class="portraits-list">
             <li
                 v-for="portrait in portraits"
@@ -63,8 +80,10 @@ import looksData from '@/assets/data/looks.json';
 import namesData from '@/assets/data/names.json';
 import portraitsData from '@/assets/data/portraits.json';
 import StepHeader from '@/components/step-header.vue';
+import i18n from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { randomItem } from '@/util/random';
+import { capitalize } from '@/util/string-util';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -73,8 +92,8 @@ const props = defineProps<{
 const firstNames = namesData.firstNames;
 const lastNames = namesData.lastNames;
 const aliases = namesData.aliases;
-const adjectives = looksData.adjectives;
-const clothes = looksData.clothes;
+const adjectives = looksData.personWordAdjectives;
+const apparel = looksData.apparel;
 const portraits = portraitsData;
 
 function randomizeName() {
@@ -86,35 +105,60 @@ function randomizeAlias() {
 }
 
 function randomizeLook() {
-    const adjectiveCount = Math.floor(Math.random() * 2) + 1;
-    const adjectiveList = Array.from({ length: adjectiveCount }, () =>
-        randomItem(adjectives).toLowerCase()
-    );
-    const clothesCount = Math.floor(Math.random() * 2) + 1;
-    const clothesList = Array.from({ length: clothesCount }, () =>
-        randomItem(clothes).toLowerCase()
-    );
-    const personWord = randomItem(['man', 'woman', 'person']);
-    const wearingWord = randomItem(['wearing', 'sporting', 'dressed in']);
+    const lookTemplatesKeys = [
+        'one-adjective-one-apparel',
+        'one-adjective-two-apparel',
+        'two-adjectives-one-apparel',
+        'two-adjectives-two-apparel'
+    ];
 
-    const aOrAn =
-        adjectiveList[0].startsWith('a') ||
-        adjectiveList[0].startsWith('e') ||
-        adjectiveList[0].startsWith('i') ||
-        adjectiveList[0].startsWith('o') ||
-        adjectiveList[0].startsWith('u')
-            ? 'An'
-            : 'A';
+    const personWordsKeys = ['man', 'woman', 'person', 'child'];
+    const wearingWordsKeys = ['wearing', 'sporting', 'dressed-in'];
 
-    let sentence = `${aOrAn} ${joinWithAnd(adjectiveList)} ${personWord} ${wearingWord} ${joinWithAnd(clothesList)}`;
-    props.scoundrel.look = sentence;
+    const personWordKey = randomItem(personWordsKeys);
+    const personWordArticle = i18n.global.t(
+        `Looks.Person-words.${personWordKey}.article`
+    );
+    const personWord = i18n.global.t(
+        `Looks.Person-words.${personWordKey}.word`
+    );
+    const personWordAdjective1 = i18n.global.t(
+        `Looks.Person-word-adjectives.${randomItem(adjectives)}`
+    );
+    const personWordAdjective2 = i18n.global.t(
+        `Looks.Person-word-adjectives.${randomItem(adjectives)}`
+    );
+    const wearingWordKey = randomItem(wearingWordsKeys);
+    const wearingWord = i18n.global.t(`Looks.Joining-words.${wearingWordKey}`);
+
+    const apparel1 = i18n.global.t(`Looks.Apparel.${randomItem(apparel)}`);
+    const apparel2 = i18n.global.t(`Looks.Apparel.${randomItem(apparel)}`);
+
+    const lookTemplate = randomItem(lookTemplatesKeys);
+    const look = i18n.global.t(`Looks.Templates.${lookTemplate}`, {
+        personWordArticle: personWordArticle,
+        personWordAdjective1: personWordAdjective1,
+        personWordAdjective2: personWordAdjective2,
+        personWord: personWord,
+        wearingVerb: wearingWord,
+        apparel1: apparel1,
+        apparel2: apparel2
+    });
+
+    props.scoundrel.look = capitalize(look);
+    return;
 }
 
 function joinWithAnd(arr: string[]) {
     if (arr.length === 0) return '';
     if (arr.length === 1) return arr[0];
-    if (arr.length === 2) return arr.join(' and ');
-    return arr.slice(0, -1).join(', ') + ', and ' + arr.slice(-1);
+    if (arr.length === 2)
+        return arr.join(` ${i18n.global.t('Looks.Joining-words.and')} `);
+    return (
+        arr.slice(0, -1).join(', ') +
+        `, ${i18n.global.t('Looks.Joining-words.and')} ` +
+        arr.slice(-1)
+    );
 }
 
 function getPortraitSource(portraitPath: string) {
