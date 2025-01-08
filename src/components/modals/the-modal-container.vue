@@ -24,16 +24,27 @@ function onClickBackground() {
     if (currentModalConfig.value?.closeOnClick) ModalController.close();
 }
 
-const queue = [];
+const queue: { modal: any; modalConfig: any }[] = [];
 
 ModalController.getInstance().addEventListener(({ modal, modalConfig }) => {
     (document.activeElement as HTMLElement)?.blur();
 
     // Close
-    if (!modal) return (currentModal.value = null);
+    if (!modal && !queue.length) return (currentModal.value = null);
+
+    // Open next modal
+    const openNext = !modal && queue.length;
 
     // Open
-    currentModal.value = { ...modal };
+    if (currentModal.value) {
+        queue.push({ modal, modalConfig });
+        return;
+    }
+
+    const { modalFromQueue, modalConfigFromQueue } = queue.shift();
+    currentModal.value = openNext
+        ? { ...modalFromQueue }
+        : ({ ...modal! } as any);
     currentModalConfig.value = { ...modalConfig };
 
     requestAnimationFrame(() => {
