@@ -884,7 +884,6 @@
         },
         "Spoggs": {
             "label": "Spogg's dice game",
-            "description": null,
             "district": "Crows foot",
             "text": "Spogg's dice game; Crows foot"
         },
@@ -932,7 +931,6 @@
         },
         "Travens": {
             "label": "Traven's smoke shop",
-            "description": null,
             "district": "Coalridge",
             "text": "Traven's smoke shop; Coalridge"
         },
@@ -957,7 +955,6 @@
         "Family-members": {
             "label": "Family members",
             "description": "Heritage or background (or former co-workers)",
-            "district": null,
             "text": "Family members; Heritage or background (or former co-workers)"
         },
         "Hutton": {
@@ -969,7 +966,6 @@
         "Circle-of-flame": {
             "label": "The Circle of Flame",
             "description": "A secret society",
-            "district": null,
             "text": "The Circle of Flame; A secret society"
         },
         "Mardin-gull": {
@@ -1035,7 +1031,6 @@
         "Salia": {
             "label": "“Salia”",
             "description": "A spirit of the Reconciled, which moves from body to body at their whim",
-            "district": null,
             "text": "“Salia”; A spirit of the Reconciled, which moves from body to body at their whim"
         },
         "Sister-thorn": {
