@@ -7,15 +7,6 @@ export type Trait = {
 
 export type TraitDetail = {
     id: string;
-    trait: string;
-    suggestedActions: string[];
-};
-
-export type Address = {
-    id: string;
-    trait?: string | string[];
-    label: string;
-    name: string;
-    description?: string;
-    district: string;
+    trait: string | string[];
+    suggestedActions?: string[];
 };

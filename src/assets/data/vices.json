@@ -1,37 +1,9 @@
 [
-    {
-        "id": "faith",
-        "label": "Faith",
-        "description": "You're dedicated to an unseen power, forgotten god, ancestor, etc."
-    },
-    {
-        "id": "gambling",
-        "label": "Gambling",
-        "description": "You crave games of chance, betting on sporting events, etc."
-    },
-    {
-        "id": "luxury",
-        "label": "Luxury",
-        "description": "Expensive and/or ostentatious displays of opulence."
-    },
-    {
-        "id": "obligation",
-        "label": "Obligation",
-        "description": "You're devoted to a family, a cause, a charity, etc."
-    },
-    {
-        "id": "pleasure",
-        "label": "Pleasure",
-        "description": "Gratification from lovers, food, drink, drugs, art, theater, etc."
-    },
-    {
-        "id": "stupor",
-        "label": "Stupor",
-        "description": "You seek oblivion in the abuse of drugs, drink to excess, getting beaten to a pulp in the fighting pits, etc."
-    },
-    {
-        "id": "weird",
-        "label": "Weird",
-        "description": "You experiment with strange essences, consort with rogue spirits, observe bizarre rituals or taboos, etc."
-    }
+    "faith",
+    "gambling",
+    "luxury",
+    "obligation",
+    "pleasure",
+    "stupor",
+    "weird"
 ]

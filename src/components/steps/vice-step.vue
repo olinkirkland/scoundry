@@ -1,101 +1,125 @@
 <template>
     <step-header>
-        <h2>Choose your vice</h2>
-        <p>
-            Every scoundrel is in thrall to some vice or another, which they
-            indulge to deal with stress. Record the name and location of your
-            vice purveyor.
-        </p>
+        <h2 v-html="$t('User-interface.Steps.Vice.title')"></h2>
+        <p v-html="$t('User-interface.Steps.Vice.description')"></p>
     </step-header>
     <div class="list-container-frame">
         <div class="list-container">
             <ul class="vices-list">
                 <trait-card
                     v-for="vice in vices"
-                    :key="vice.id"
-                    :trait="vice"
-                    :selected="vice.id === scoundrel.vice"
+                    :key="vice"
+                    :label="i18n.global.t(`Vices.${capitalize(vice)}.label`)"
+                    :selected="vice === scoundrel.vice"
                     @click="onClickVice(vice)"
                 />
             </ul>
         </div>
     </div>
 
-    <p v-if="selectedVice" class="description">
-        {{ selectedVice.description }}
+    <p v-if="scoundrel.vice" class="description">
+        {{ $t(`Vices.${capitalize(scoundrel.vice)}.description`) }}
     </p>
     <p v-else class="description">
-        Select a vice to see its description and suggested purveyors.
+        {{ $t('User-interface.Steps.Vice.select-prompt') }}
     </p>
     <section v-if="scoundrel.vice" class="selected-vice">
         <div class="input-block">
-            <label>A description of where you go to indulge</label>
+            <label>
+                {{ $t('User-interface.Steps.Vice.purveyor-prompt') }}
+            </label>
             <input type="text" v-model="scoundrel.viceDetail" />
         </div>
 
         <ul class="vice-details-list">
             <li
-                v-for="detail in filteredViceDetails"
+                v-for="detail in filteredViceSuggestions"
                 :key="detail.id"
                 class="vice-detail"
-                :class="{ selected: detail.label === scoundrel.viceDetail }"
-                @click="onClickViceDetail(detail)"
+                :class="{
+                    selected:
+                        i18n.global.t(
+                            `Vice-suggestions.${capitalize(detail.id)}.text`
+                        ) === scoundrel.viceDetail
+                }"
+                @click="onClickViceDetail(detail.id)"
             >
-                <h2>{{ detail.name }}</h2>
-                <p v-if="detail.description">{{ detail.description }}</p>
-                <label v-if="detail.district">{{ detail.district }}</label>
+                <h2>
+                    {{ $t(`Vice-suggestions.${capitalize(detail.id)}.label`) }}
+                </h2>
+                <p
+                    v-if="
+                        $te(
+                            `Vice-suggestions.${capitalize(detail.id)}.description`
+                        )
+                    "
+                >
+                    {{
+                        $t(
+                            `Vice-suggestions.${capitalize(detail.id)}.description`
+                        )
+                    }}
+                </p>
+                <label
+                    v-if="
+                        $te(
+                            `Vice-suggestions.${capitalize(detail.id)}.district`
+                        )
+                    "
+                    >{{
+                        $t(`Vice-suggestions.${capitalize(detail.id)}.district`)
+                    }}</label
+                >
             </li>
         </ul>
     </section>
 </template>
 
 <script setup lang="ts">
-import viceDetailsData from '@/assets/data/vice-details.json';
-import vicesData from '@/assets/data/vices.json';
-import { Trait, Address } from '@/data-types';
+import viceSuggestions from '@/assets/data/vice-suggestions.json';
+import vices from '@/assets/data/vices.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
+import { TraitDetail } from '@/data-types';
+import i18n from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
+import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
 }>();
 
-const vices = vicesData as unknown as Trait[];
-const viceDetails = viceDetailsData as unknown as Address[];
-
-const selectedVice = computed(() =>
-    vices.find((b) => b.id === props.scoundrel.vice)
-);
-
-const filteredViceDetails = computed(() => {
-    if (!selectedVice.value) return [];
-    let viceDetailsFilter = selectedVice.value.id;
-
-    return viceDetails.filter(
-        (viceDetail) =>
-            !viceDetail.trait ||
-            viceDetail.trait === viceDetailsFilter ||
-            viceDetail.trait.includes(viceDetailsFilter)
+const filteredViceSuggestions = computed(() => {
+    if (!props.scoundrel.vice) return [];
+    return viceSuggestions.filter(
+        (viceSuggestion: TraitDetail) =>
+            !viceSuggestion.trait ||
+            viceSuggestion.trait === props.scoundrel.vice ||
+            viceSuggestion.trait.includes(props.scoundrel.vice)
     );
 });
 
-function onClickVice(vice: Trait) {
+function onClickVice(vice: string) {
     // Choose the vice, and clear the vice detail
-    props.scoundrel.vice = vice.id;
+    props.scoundrel.vice = vice;
     props.scoundrel.viceDetail = '';
 }
 
-function onClickViceDetail(viceDetail: Address) {
+function onClickViceDetail(viceDetail: string) {
     // Set the vice detail to empty if it's already selected
-    if (props.scoundrel.viceDetail === viceDetail.label) {
+    if (
+        props.scoundrel.viceDetail ===
+        i18n.global.t(`Vice-suggestions.${capitalize(viceDetail)}.text`)
+    ) {
         props.scoundrel.viceDetail = '';
         return;
     }
 
     // Choose the vice detail
-    props.scoundrel.viceDetail = viceDetail.label;
+    props.scoundrel.viceDetail = i18n.global.t(
+        `Vice-suggestions.${capitalize(viceDetail)}.text`
+    );
 }
 </script>
 
@@ -158,6 +182,10 @@ ul.vice-details-list > li {
 
     > h2 {
         font-size: 1.6rem;
+    }
+
+    > p {
+        text-align: center;
     }
 
     &.selected {

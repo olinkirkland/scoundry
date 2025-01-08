@@ -825,5 +825,235 @@
             "label": "Flint",
             "description": "A spirit trafficker"
         }
+    },
+    "Vices": {
+        "Faith": {
+            "label": "Faith",
+            "description": "You're dedicated to an unseen power, forgotten god, ancestor, etc."
+        },
+        "Gambling": {
+            "label": "Gambling",
+            "description": "You crave games of chance, betting on sporting events, etc."
+        },
+        "Luxury": {
+            "label": "Luxury",
+            "description": "Expensive and/or ostentatious displays of opulence."
+        },
+        "Obligation": {
+            "label": "Obligation",
+            "description": "You're devoted to a family, a cause, a charity, etc."
+        },
+        "Pleasure": {
+            "label": "Pleasure",
+            "description": "Gratification from lovers, food, drink, drugs, art, theater, etc."
+        },
+        "Stupor": {
+            "label": "Stupor",
+            "description": "You seek oblivion in the abuse of drugs, drink to excess, getting beaten to a pulp in the fighting pits, etc."
+        },
+        "Weird": {
+            "label": "Weird",
+            "description": "You experiment with strange essences, consort with rogue spirits, observe bizarre rituals or taboos, etc."
+        }
+    },
+    "Vice-suggestions": {
+        "Mother-narya": {
+            "label": "Mother Narya",
+            "description": "House of the Weeping Lady",
+            "district": "Six towers",
+            "text": "Mother Narya; House of the Weeping Lady; Six towers"
+        },
+        "Ilacille": {
+            "label": "Ilacille",
+            "description": "The ruins of the Temple to forgotten gods",
+            "district": "Coalridge",
+            "text": "Ilacille; The ruins of the Temple to forgotten gods; Coalridge"
+        },
+        "Nelisanne": {
+            "label": "Nelisanne",
+            "description": "The Church of the Ecstasy of the Flesh",
+            "district": "Brightstone",
+            "text": "Nelisanne; The Church of the Ecstasy of the Flesh; Brightstone"
+        },
+        "Lord-penderyn": {
+            "label": "Lord Penderyn",
+            "description": "The Archive of Echoes",
+            "district": "Charterhall",
+            "text": "Lord Penderyn; The Archive of Echoes; Charterhall"
+        },
+        "Spoggs": {
+            "label": "Spogg's dice game",
+            "description": null,
+            "district": "Crows foot",
+            "text": "Spogg's dice game; Crows foot"
+        },
+        "Grist": {
+            "label": "Grist",
+            "description": "Boxing",
+            "district": "The docks",
+            "text": "Grist; Boxing; The docks"
+        },
+        "Helene": {
+            "label": "Helene",
+            "description": "Silver Stag casino",
+            "district": "Silkshore",
+            "text": "Helene; Silver Stag casino; Silkshore"
+        },
+        "Master-vreen": {
+            "label": "Master Vreen",
+            "description": "Hound racing",
+            "district": "Nightmarket",
+            "text": "Master Vreen; Hound racing; Nightmarket"
+        },
+        "Lady-dusk": {
+            "label": "Lady Dusk",
+            "description": "The Dusk Manor Club",
+            "district": "Whitecrown",
+            "text": "Lady Dusk; The Dusk Manor Club; Whitecrown"
+        },
+        "Sergeant-velk": {
+            "label": "Sergeant Velk",
+            "description": "The fighting pits",
+            "district": "Dunslough",
+            "text": "Sergeant Velk; The fighting pits; Dunslough"
+        },
+        "Singer": {
+            "label": "Singer",
+            "description": "Bath house",
+            "district": "Crows foot",
+            "text": "Singer; Bath house; Crows foot"
+        },
+        "Harvale-brogan": {
+            "label": "Harvale Brogan",
+            "description": "The Centuralia Club",
+            "district": "Brightstone",
+            "text": "Harvale Brogan; The Centuralia Club; Brightstone"
+        },
+        "Travens": {
+            "label": "Traven's smoke shop",
+            "description": null,
+            "district": "Coalridge",
+            "text": "Traven's smoke shop; Coalridge"
+        },
+        "Dunridge-sons": {
+            "label": "Dunridge & Sons",
+            "description": "Fine fabrics and tailoring",
+            "district": "Nightmarket",
+            "text": "Dunridge & Sons; Fine fabrics and tailoring; Nightmarket"
+        },
+        "Chef-roselle": {
+            "label": "Chef Roselle",
+            "description": "The Golden Plum restaurant",
+            "district": "Six towers",
+            "text": "Chef Roselle; The Golden Plum restaurant; Six towers"
+        },
+        "Maestro-helleren": {
+            "label": "Maestro Helleren",
+            "description": "Spiregarden theater",
+            "district": "Whitecrown",
+            "text": "Maestro Helleren; Spiregarden theater; Whitecrown"
+        },
+        "Family-members": {
+            "label": "Family members",
+            "description": "Heritage or background (or former co-workers)",
+            "district": null,
+            "text": "Family members; Heritage or background (or former co-workers)"
+        },
+        "Hutton": {
+            "label": "Hutton",
+            "description": "Skovlander Refugees/Revolutionaries",
+            "district": "Charhollow",
+            "text": "Hutton; Skovlander Refugees/Revolutionaries; Charhollow"
+        },
+        "Circle-of-flame": {
+            "label": "The Circle of Flame",
+            "description": "A secret society",
+            "district": null,
+            "text": "The Circle of Flame; A secret society"
+        },
+        "Mardin-gull": {
+            "label": "Mardin Gull",
+            "description": "The Leaky Bucket, tavern",
+            "district": "Crows foot",
+            "text": "Mardin Gull; The Leaky Bucket, tavern; Crows foot"
+        },
+        "Pux-bolin": {
+            "label": "Pux Bolin",
+            "description": "The Harping Monkey, tavern",
+            "district": "Nightmarket",
+            "text": "Pux Bolin; The Harping Monkey, tavern; Nightmarket"
+        },
+        "Lady-freyla": {
+            "label": "Lady Freyla",
+            "description": "The Emperor's Cask, bar",
+            "district": "Whitecrown",
+            "text": "Lady Freyla; The Emperor's Cask, bar; Whitecrown"
+        },
+        "Avrick": {
+            "label": "Avrick",
+            "description": "Powder dealer",
+            "district": "Barrowcleft",
+            "text": "Avrick; Powder dealer; Barrowcleft"
+        },
+        "Rolan-volaris": {
+            "label": "Rolan Volaris",
+            "description": "The Veil, social club",
+            "district": "Nightmarket",
+            "text": "Rolan Volaris; The Veil, social club; Nightmarket"
+        },
+        "Madame-tesslyn": {
+            "label": "Madame Tesslyn",
+            "description": "The Red Lamp, brothel",
+            "district": "Silkshore",
+            "text": "Madame Tesslyn; The Red Lamp, brothel; Silkshore"
+        },
+        "Eldrin-prichard": {
+            "label": "Eldrin Prichard",
+            "description": "The Silver Swan pleasure barge",
+            "district": "Brightstone canals",
+            "text": "Eldrin Prichard; The Silver Swan pleasure barge; Brightstone canals"
+        },
+        "Jewel-bird-shine": {
+            "label": "Jewel, Bird, and Shine",
+            "description": "Catcrawl Alley",
+            "district": "The docks",
+            "text": "Jewel, Bird, and Shine; Catcrawl Alley; The docks"
+        },
+        "Hooded-proprietor": {
+            "label": "The hooded proprietor",
+            "description": "A half-flooded grotto tavern near the docks",
+            "district": "The docks",
+            "text": "The hooded proprietor; A half-flooded grotto tavern; The docks"
+        },
+        "Father-yoren": {
+            "label": "Father Yoren",
+            "description": "House of the Weeping Lady",
+            "district": "Six towers",
+            "text": "Father Yoren; House of the Weeping Lady; Six towers"
+        },
+        "Salia": {
+            "label": "“Salia”",
+            "description": "A spirit of the Reconciled, which moves from body to body at their whim",
+            "district": null,
+            "text": "“Salia”; A spirit of the Reconciled, which moves from body to body at their whim"
+        },
+        "Sister-thorn": {
+            "label": "Sister Thorn",
+            "description": "Deathlands scavenger gang",
+            "district": "Gaddoc station",
+            "text": "Sister Thorn; Deathlands scavenger gang; Gaddoc station"
+        },
+        "Ojak": {
+            "label": "Ojak",
+            "description": "Tycherosi rooftop market vendor",
+            "district": "Silkshore",
+            "text": "Ojak; Tycherosi rooftop market vendor; Silkshore"
+        },
+        "Aranna-the-blessed": {
+            "label": "Aranna the Blessed",
+            "description": "Cultist of a forgotten god",
+            "district": "Nightmarket",
+            "text": "Aranna the Blessed; Cultist of a forgotten god; Nightmarket"
+        }
     }
 }

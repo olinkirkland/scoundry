@@ -1,0 +1,134 @@
+[
+    {
+        "id": "mother-narya",
+        "trait": "faith"
+    },
+    {
+        "id": "ilacille",
+        "trait": "faith"
+    },
+    {
+        "id": "nelisanne",
+        "trait": "faith"
+    },
+    {
+        "id": "lord-penderyn",
+        "trait": "faith"
+    },
+    {
+        "id": "spoggs",
+        "trait": "gambling"
+    },
+    {
+        "id": "grist",
+        "trait": "gambling"
+    },
+    {
+        "id": "helene",
+        "trait": "gambling"
+    },
+    {
+        "id": "master-vreen",
+        "trait": "gambling"
+    },
+    {
+        "id": "lady-dusk",
+        "trait": "gambling"
+    },
+    {
+        "id": "sergeant-velk",
+        "trait": "gambling"
+    },
+    {
+        "id": "singer",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "harvale-brogan",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "travens",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "dunridge-sons",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "chef-roselle",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "maestro-helleren",
+        "trait": ["luxury", "pleasure"]
+    },
+    {
+        "id": "family-members",
+        "trait": "obligation"
+    },
+    {
+        "id": "hutton",
+        "trait": "obligation"
+    },
+    {
+        "id": "circle-of-flame",
+        "trait": "obligation"
+    },
+    {
+        "id": "mardin-gull",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "pux-bolin",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "lady-freyla",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "avrick",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "rolan-volaris",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "madame-tesslyn",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "eldrin-prichard",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "jewel-bird-shine",
+        "trait": ["pleasure", "stupor"]
+    },
+    {
+        "id": "hooded-proprietor",
+        "trait": "weird"
+    },
+    {
+        "id": "father-yoren",
+        "trait": "weird"
+    },
+    {
+        "id": "salia",
+        "trait": "weird"
+    },
+    {
+        "id": "sister-thorn",
+        "trait": "weird"
+    },
+    {
+        "id": "ojak",
+        "trait": "weird"
+    },
+    {
+        "id": "aranna-the-blessed",
+        "trait": "weird"
+    }
+]
