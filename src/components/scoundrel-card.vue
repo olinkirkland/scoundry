@@ -1,10 +1,24 @@
 <template>
     <div class="scoundrel-card">
-        <img
-            class="portrait"
-            v-if="props.scoundrel.portrait"
-            :src="`/assets/${props.scoundrel.portrait}`"
-        />
+        <div class="portrait-container">
+            <img
+                class="portrait"
+                v-if="props.scoundrel.portrait"
+                :src="`/assets/${props.scoundrel.portrait}`"
+            />
+
+            <img
+                v-if="
+                    props.scoundrel.language &&
+                    !(
+                        useI18n().locale.value === 'en' &&
+                        props.scoundrel.language === 'en'
+                    )
+                "
+                class="flag"
+                :src="`/assets/icons/flag-${props.scoundrel.language}.png`"
+            />
+        </div>
         <p>{{ semanticName }}</p>
         <label v-if="props.lastUpdated">
             {{
@@ -13,18 +27,15 @@
                 })
             }}
         </label>
-        <img
-            v-if="props.scoundrel.language"
-            class="flag"
-            :src="`/assets/icons/flag-${props.scoundrel.language}.png`"
-        />
     </div>
 </template>
 
 <script setup lang="ts">
+import i18n from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { getSemanticScoundrelName } from '@/util/scoundrel-util';
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -60,21 +71,23 @@ const semanticName = computed(() => {
         line-height: 1.4;
     }
 
-    img.portrait {
-        width: 6.4rem;
-        height: 6.4rem;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-    }
+    .portrait-container {
+        position: relative;
 
-    img.flag {
-        position: absolute;
-        width: 2rem;
-        height: 2rem;
-        bottom: 0.4rem;
-        right: 0.4rem;
-        opacity: 0.8;
+        img.portrait {
+            width: 6.4rem;
+            height: 6.4rem;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        img.flag {
+            position: absolute;
+            width: 2.4rem;
+            height: 2.4rem;
+            bottom: 0.2rem;
+            right: 0.2rem;
+        }
     }
 
     > * {

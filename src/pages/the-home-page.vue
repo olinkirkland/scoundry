@@ -142,11 +142,6 @@ async function onClickMakeNewScoundrel() {
 }
 
 function onClickLoadScoundrel(scoundrel: Scoundrel) {
-    // Opening a scoundrel that has a different language will change the language of the app
-    ModalController.open(ConfirmModal, {
-          
-    });
-
     router.replace({
         name: PageName.EDIT,
         params: { scoundrelId: scoundrel.id }

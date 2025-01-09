@@ -80,9 +80,9 @@ import ModalController from '@/controllers/modal-controller';
 import {
     deleteScoundrel,
     loadScoundrel,
-    saveScoundrel,
+    saveScoundrel
 } from '@/controllers/storage-controller';
-import i18n from '@/i18n/locale';
+import { changeLanguage, getLanguage, t } from '@/i18n/locale';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { trackEvent } from '@/tracker';
@@ -104,7 +104,7 @@ enum Step {
     FRIENDS = 'friends',
     VICE = 'vice',
     NAME_AND_LOOK = 'name-and-look',
-    EXPORT = 'export',
+    EXPORT = 'export'
 }
 
 const stepComponents = {
@@ -116,7 +116,7 @@ const stepComponents = {
     [Step.FRIENDS]: StepFriendsAndRivals,
     [Step.VICE]: StepVice,
     [Step.NAME_AND_LOOK]: StepNameAndLook,
-    [Step.EXPORT]: StepExport,
+    [Step.EXPORT]: StepExport
 };
 
 const steps = [
@@ -128,7 +128,7 @@ const steps = [
     Step.FRIENDS,
     Step.VICE,
     Step.NAME_AND_LOOK,
-    Step.EXPORT,
+    Step.EXPORT
 ];
 
 const stepsEl = ref<HTMLElement | null>(null);
@@ -161,14 +161,14 @@ if (!scoundrelId.value) {
             attune: {},
             command: {},
             consort: {},
-            sway: {},
-        },
+            sway: {}
+        }
     };
 
     // Don't push; replace the current route so the user can't go back to the make page
     router.replace({
         name: PageName.EDIT_WITH_STEP,
-        params: { scoundrelId: scoundrelId.value, stepId: Step.PLAYBOOK },
+        params: { scoundrelId: scoundrelId.value, stepId: Step.PLAYBOOK }
     });
 
     changeStep(Step.PLAYBOOK);
@@ -178,6 +178,41 @@ if (!scoundrelId.value) {
 else {
     console.log('Loading scoundrel:', scoundrelId.value);
     scoundrel.value = loadScoundrel(scoundrelId.value);
+
+    // Opening a scoundrel that has a different language will change the language of the app
+    const currentLanguage = t(
+        `User-interface.Modals.Settings.Language.Languages.${getLanguage()}`
+    );
+    const newLanguage = t(
+        `User-interface.Modals.Settings.Language.Languages.${scoundrel.value?.language || 'en'}`
+    );
+
+    if (scoundrel.value?.language && scoundrel.value.language !== getLanguage())
+        ModalController.open(ConfirmModal, {
+            title: t('User-interface.Modals.Change-language.title'),
+            message: t('User-interface.Modals.Change-language.message', {
+                newLanguage,
+                currentLanguage
+            }),
+            confirmText: t(
+                'User-interface.Modals.Change-language.Controls.confirm-button',
+                { newLanguage }
+            ),
+            cancelText: t(
+                'User-interface.Modals.Change-language.Controls.cancel-button',
+                { currentLanguage }
+            ),
+            onConfirm: () => {
+                changeLanguage(scoundrel.value?.language || 'en');
+                ModalController.close();
+            },
+            onCancel: () => {
+                // Redirect back to the home page
+                ModalController.close();
+                onClickClose();
+            }
+        });
+
     if (!scoundrel.value) {
         console.error('Scoundrel not found');
         // TODO: Show error message (modal?)
@@ -187,7 +222,7 @@ else {
             onConfirm: () => {
                 ModalController.close();
                 onClickClose();
-            },
+            }
         });
     } else if (!stepId.value) changeStep(Step.PLAYBOOK);
 }
@@ -208,7 +243,7 @@ watch(
     (newPlaybook, oldPlaybook) => {
         if (!oldPlaybook && newPlaybook)
             trackEvent('new-character', {
-                playbook: newPlaybook,
+                playbook: newPlaybook
             });
     }
 );
@@ -230,14 +265,12 @@ async function onClickClose() {
 async function onClickDiscard() {
     // Are you sure?
     ModalController.open(ConfirmModal, {
-        title: i18n.global.t('User-interface.Modals.Delete-scoundrel.title'),
-        message: i18n.global.t(
-            'User-interface.Modals.Delete-scoundrel.message'
-        ),
-        confirmText: i18n.global.t(
+        title: t('User-interface.Modals.Delete-scoundrel.title'),
+        message: t('User-interface.Modals.Delete-scoundrel.message'),
+        confirmText: t(
             'User-interface.Modals.Delete-scoundrel.Controls.confirm-button'
         ),
-        onConfirm: discard,
+        onConfirm: discard
     });
 }
 
@@ -257,7 +290,7 @@ const allAnimationClasses = [
     'animate-form-in--from-left',
     'animate-form-in--from-right',
     'animate-form-out--to-left',
-    'animate-form-out--to-right',
+    'animate-form-out--to-right'
 ];
 
 async function changeStep(newStepId: Step) {
@@ -282,7 +315,7 @@ async function changeStep(newStepId: Step) {
     stepId.value = newStepId;
     router.replace({
         name: PageName.EDIT_WITH_STEP,
-        params: { scoundrelId: scoundrelId.value, stepId: newStepId },
+        params: { scoundrelId: scoundrelId.value, stepId: newStepId }
     });
 
     // Scroll ul.steps into view (x-scrollable on mobile)
@@ -305,7 +338,7 @@ async function changeStep(newStepId: Step) {
 
     stepsEl.value.scroll({
         left: newX,
-        behavior: 'smooth',
+        behavior: 'smooth'
     });
 
     // Ensure the step is scrolled to the top

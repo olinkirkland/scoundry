@@ -84,6 +84,14 @@
             },
             "World-map": {
                 "title": "Die Zerbrochenen Inseln"
+            },
+            "Change-language": {
+                "title": "Lade einen Schurken in einer anderen Sprache",
+                "message": "Du versuchst, einen Schurken in der Sprache <strong>{newLanguage}</strong> zu laden, aber deine aktuelle Sprache ist <strong>{currentLanguage}</strong>. Möchtest du zur Sprache <strong>{newLanguage}</strong> wechseln?",
+                "Controls": {
+                    "cancel-button": "Nein, {currentLanguage} beibehalten",
+                    "confirm-button": "Ja, zu {newLanguage} wechseln"
+                }
             }
         },
         "Steps": {

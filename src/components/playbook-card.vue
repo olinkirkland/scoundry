@@ -10,19 +10,18 @@
                 v-for="action in Object.keys(actions)"
                 :key="action"
                 :action="action"
-                :value="actions[action as Action]"
+                :value="actions[action]"
             />
         </ul>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Action } from '@/data-types';
 import ActionTag from './action-tag.vue';
 
 const props = defineProps<{
     playbook: string;
-    actions: Record<Action, number>;
+    actions: Record<string, number>;
 }>();
 
 const playbookCapitalized =
