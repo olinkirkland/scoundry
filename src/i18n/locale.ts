@@ -1,7 +1,7 @@
 import { createI18n, useI18n } from 'vue-i18n';
 import en from './locales/en/translations.json';
 import de from './locales/de/translations.json';
-import es from './locales/es/translations-.json';
+import es from './locales/es/translations.json';
 
 // Use the i18n-editor from https://github.com/jcbvm/i18n-editor/releases/tag/1.0.0
 

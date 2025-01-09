@@ -1,660 +1,4 @@
 {
-    "User-interface": {
-        "Home-page": {
-            "Attribution": {
-                "code-and-design": "Code & Design von <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
-                "copyright": "Copyright © {year} Olin Kirkland",
-                "license-blades-in-the-dark": "Diese Arbeit basiert auf <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — ein Produkt von One Seven Design, entwickelt und geschrieben von John Harper, und lizenziert für unsere Nutzung unter der <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0-Lizenz</a>",
-                "license-icons": "Icons stammen von <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
-                "license-portraits": "Porträtbilder stammen aus <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> ohne bekannte Einschränkungen ihrer Nutzung.",
-                "news-and-updates": "Neuigkeiten & Updates"
-            },
-            "Scoundrel-card": {
-                "no-name": "Unbenannter {playbook}",
-                "no-playbook": "Unbenannter Schurke"
-            },
-            "description": "Eine Charaktererstellungs Hilfe für <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
-            "last-updated": "Aktualisiert {date}",
-            "new-scoundrel-button": "Neuer Schurke",
-            "scroll-prompt": "Scrolle weiter, um die Zuordnung zu sehen",
-            "settings-button": "Einstellungen"
-        },
-        "Make-page": {
-            "Controls": {
-                "delete-button": "Löschen",
-                "home-button": "Startseite",
-                "next-button": "Weiter"
-            },
-            "Step-navigation": {
-                "abilities": "Fähigkeiten",
-                "actions": "Aktionen",
-                "background": "Hintergrund",
-                "export": "Exportieren",
-                "friends": "Freunde",
-                "heritage": "Herkunft",
-                "name-and-look": "Name & Aussehen",
-                "playbook": "Playbook",
-                "vice": "Laster"
-            }
-        },
-        "Modals": {
-            "Confirm": {
-                "Controls": {
-                    "cancel-button": "Nein, ich habe es mir anders überlegt",
-                    "confirm-button": "Ja"
-                }
-            },
-            "Delete-scoundrel": {
-                "Controls": {
-                    "confirm-button": "Löschen"
-                },
-                "message": "Sind Sie sicher, dass Sie diesen Schurken löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
-                "title": "Schurken löschen?"
-            },
-            "News-and-updates": {
-                "title": "Neuigkeiten & Updates"
-            },
-            "Settings": {
-                "Language": {
-                    "Language-features": {
-                        "data": "Spieldaten",
-                        "sheets": "Sheets",
-                        "ui": "Benutzeroberfläche"
-                    },
-                    "Languages": {
-                        "de": "Deutsch",
-                        "en": "Englisch",
-                        "es": "Spanisch"
-                    },
-                    "label": "App-Sprache auswählen"
-                },
-                "Tracking": {
-                    "description": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
-                    "label": "Anonymes Tracking aktivieren"
-                },
-                "title": "Einstellungen"
-            },
-            "Tracking-consent": {
-                "Controls": {
-                    "cancel-button": "Tracking deaktiviert lassen",
-                    "confirm-button": "Tracking ist in Ordnung"
-                },
-                "message": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
-                "title": "Tracking-Einstellungen"
-            },
-            "World-map": {
-                "title": "Die Zerbrochenen Inseln"
-            },
-            "Change-language": {
-                "title": "Lade einen Schurken in einer anderen Sprache",
-                "message": "Du versuchst, einen Schurken in der Sprache <strong>{newLanguage}</strong> zu laden, aber deine aktuelle Sprache ist <strong>{currentLanguage}</strong>. Möchtest du zur Sprache <strong>{newLanguage}</strong> wechseln?",
-                "Controls": {
-                    "cancel-button": "Nein, {currentLanguage} beibehalten",
-                    "confirm-button": "Ja, zu {newLanguage} wechseln"
-                }
-            }
-        },
-        "Steps": {
-            "Abilities": {
-                "subtitle": "Wähle eine Sonderfähigkeit.",
-                "title": "Welche Fähigkeit hebt dich in der Bande hervor?"
-            },
-            "Actions": {
-                "Action-tally": {
-                    "with-character-creation": "<strong>{count}</strong> von 7 Aktionspunkten zugewiesen",
-                    "without-character-creation": "<strong>{count}</strong> Aktionspunkte zugewiesen"
-                },
-                "Actions": {
-                    "Attune": {
-                        "description": "Einstimmen auf Geister und das Geisterfeld; elektroplasmische Energie kanalisieren; Geister wahrnehmen und mit ihnen kommunizieren; Spektrologie verstehen.",
-                        "label": "Einstimmen"
-                    },
-                    "Command": {
-                        "description": "Gehorsam mit deiner Persönlichkeit erzwingen; einschüchtern oder drohen; eine Aktion mit einer der Banden-Gruppen anführen.",
-                        "label": "Befehlen"
-                    },
-                    "Consort": {
-                        "description": "Verkehre mit Verbindungen aus deinem Erbe, Hintergrund, Freundeskreis oder Rivalen, um Zugang zu Ressourcen, Informationen, Personen oder Orten zu erhalten.",
-                        "label": "Verkehren"
-                    },
-                    "Finesse": {
-                        "description": "Nimm geschickt etwas aus jemandes Tasche; wende subtile Ablenkung oder Fingerfertigkeit an; führe ein Fahrzeug oder reite ein Tier.",
-                        "label": "Geschick"
-                    },
-                    "Hunt": {
-                        "description": "Verfolge ein Ziel; sammle Informationen über dessen Standort und Bewegungen; greife aus der Distanz mit Präzisionsschüssen an.",
-                        "label": "Jagen"
-                    },
-                    "Prowl": {
-                        "description": "Schleiche unbemerkt umher und überwinde Hindernisse; klettere, schwimme, renne, springe und rolle. Überfalle mit naher Gewalt – wie ein Hinterhalt oder Kehlschnitt.",
-                        "label": "Schleichen"
-                    },
-                    "Skirmish": {
-                        "description": "Kämpfe im Nahkampf mit einem Gegner; greife an oder verteidige eine Position; raufe und ringe.",
-                        "label": "Kämpfen"
-                    },
-                    "Study": {
-                        "description": "Untersuche eine Person, ein Dokument oder einen Gegenstand genau, um Informationen zu sammeln und Wissen anzuwenden.",
-                        "label": "Studieren"
-                    },
-                    "Survey": {
-                        "description": "Beobachte einen Ort oder eine Situation, um zu verstehen, was vor sich geht; erkenne Gefahr, bevor sie eintritt.",
-                        "label": "Erforschen"
-                    },
-                    "Sway": {
-                        "description": "Beeinflusse jemanden mit Charme, Logik, Täuschung, Verkleidung oder Bluff; ändere Einstellungen oder Verhalten durch Manipulation.",
-                        "label": "Beeinflussen"
-                    },
-                    "Tinker": {
-                        "description": "Tüftele an Mechanismen, um sie zu erstellen, zu modifizieren, zu deaktivieren oder zu reparieren. Entschärfe Fallen oder knacke Schlösser.",
-                        "label": "Tüfteln"
-                    },
-                    "Wreck": {
-                        "description": "Zerstöre Orte, Gegenstände oder Hindernisse mit roher Gewalt oder gezielter Sabotage; stifte Ablenkung und Chaos.",
-                        "label": "Zerstören"
-                    }
-                },
-                "Attributes": {
-                    "Insight": "Verstand",
-                    "Prowess": "Zähigkeit",
-                    "Resolve": "Wille"
-                },
-                "Options": {
-                    "character-creation-button": "Charaktererstellung: Insgesamt 7 Aktionspunkte, maximal 2 pro Aktion",
-                    "mastery-advance-button": "Meisterschaftsfortschritt: Aktionen bis Stufe 4 erlauben"
-                },
-                "subtitle": "Verteile Punkte auf Aktionen, die dich am besten repräsentieren.",
-                "suggested-actions": "Aktionen, die durch deinen Hintergrund und dein Erbe vorgeschlagen werden:",
-                "title": "Was kannst du am besten?"
-            },
-            "Background": {
-                "deep-cuts-description": "Ausführliche Beschreibungen dieser Hintergründe findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
-                "detail-prompt": "Ein Detail über deinen Hintergrund",
-                "select-prompt": "Wähle einen Hintergrund aus, um dessen Beschreibung und empfohlene Details zu sehen.",
-                "subtitle": "Wähle einen Hintergrund und beschreibe ein für dich spezifisches Detail.",
-                "title": "Was hast du getan, bevor du dich der Bande angeschlossen hast?"
-            },
-            "Export": {
-                "Controls": {
-                    "copied": "Kopiert!",
-                    "save-as-image-button": "Als Bild speichern",
-                    "share-as-url-button": "Als URL teilen"
-                },
-                "subtitle": "Passe dein Charakterblatt an und teile es.",
-                "title": "Exportiere deinen Schurken"
-            },
-            "Friends": {
-                "friend-button": "Freund",
-                "rival-button": "Rivale",
-                "subtitle": "Markiere einen langjährigen Verbündeten oder Geliebten und einen Rivalen oder Feind.",
-                "title": "Wer schuldet dir etwas und wer ist dein erbitterter Feind?"
-            },
-            "Heritage": {
-                "deep-cuts-description": "Ausführliche Beschreibungen dieser Herkünfte findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
-                "detail-prompt": "Ein Detail über deine Herkunft",
-                "select-prompt": "Wähle eine Herkunft aus, um deren Beschreibung und empfohlene Details zu sehen.",
-                "subtitle": "Wähle eine Herkunft und beschreibe ein für dich spezifisches Detail.",
-                "title": "Woher kommst du?",
-                "world-map-button": "Weltkarte"
-            },
-            "Name-and-look": {
-                "alias-prompt": "Dein Alias",
-                "look-prompt": "Dein Aussehen",
-                "name-prompt": "Dein Name",
-                "portrait-prompt": "Wähle ein Porträt",
-                "randomize-alias-button": "Alias zufällig wählen",
-                "randomize-look-button": "Aussehen zufällig wählen",
-                "randomize-name-button": "Name zufällig wählen",
-                "subtitle": "Notiere einen Namen, einen kriminellen Alias und beschreibe kurz dein Aussehen.",
-                "title": "Wie nennt man dich? Wie siehst du aus?"
-            },
-            "Playbook": {
-                "subtitle": "Dein Charakterbogen repräsentiert deinen Ruf, deine Sonderfähigkeiten und deine Entwicklungsmöglichkeiten.",
-                "title": "Was für ein <strong>Schurke</strong> bist du?"
-            },
-            "Vice": {
-                "description": "Wähle ein Laster und notiere den Namen und Ort deines Versorgers.",
-                "purveyor-prompt": "Eine Beschreibung, wo du deinem Laster nachgehst",
-                "select-prompt": "Wähle ein Laster aus, um dessen Beschreibung und empfohlene Versorger zu sehen.",
-                "title": "Wo gehst du hin, um deinen Stress abzubauen?"
-            }
-        }
-    },
-    "Playbooks": {
-        "Cutter": {
-            "description": "Ein gefährlicher und einschüchternder Kämpfer",
-            "label": "Schnitter"
-        },
-        "Hound": {
-            "description": "Ein tödlicher Scharfschütze und Fährtenleser",
-            "label": "Bluthund"
-        },
-        "Leech": {
-            "description": "Ein Saboteur und Techniker",
-            "label": "Schröpfer"
-        },
-        "Lurk": {
-            "description": "Ein heimlicher Eindringling und Dieb",
-            "label": "Lauerer"
-        },
-        "Slide": {
-            "description": "Ein subtiler Manipulator und Spion",
-            "label": "Emissär"
-        },
-        "Spider": {
-            "description": "Ein verschlagener Strippenzieher",
-            "label": "Spinne"
-        },
-        "Whisper": {
-            "description": "Ein arkaner Adept und Medium",
-            "label": "Flüsterer"
-        }
-    },
-    "Actions": {
-        "Attune": {
-            "description": "Einstimmen auf Geister und das Geisterfeld; elektroplasmische Energie kanalisieren; Geister wahrnehmen und mit ihnen kommunizieren; Spektrologie verstehen.",
-            "label": "Einstimmen"
-        },
-        "Command": {
-            "description": "Gehorsam mit deiner Persönlichkeit erzwingen; einschüchtern oder drohen; eine Aktion mit einer der Banden-Gruppen anführen.",
-            "label": "Befehlen"
-        },
-        "Consort": {
-            "description": "Verkehre mit Verbindungen aus deinem Erbe, Hintergrund, Freundeskreis oder Rivalen, um Zugang zu Ressourcen, Informationen, Personen oder Orten zu erhalten.",
-            "label": "Verkehren"
-        },
-        "Finesse": {
-            "description": "Geschickt etwas aus jemandes Tasche nehmen; subtile Ablenkung oder Fingerfertigkeit anwenden; ein Fahrzeug oder ein Reittier führen.",
-            "label": "Geschick"
-        },
-        "Hunt": {
-            "description": "Verfolge ein Ziel; sammle Informationen über seinen Standort und seine Bewegungen; greife aus der Distanz mit Präzisionsschüssen an.",
-            "label": "Jagen"
-        },
-        "Prowl": {
-            "description": "Schleiche unbemerkt umher und überwinde Hindernisse; klettere, schwimme, renne, springe und rolle. Überfalle mit naher Gewalt – etwa ein Hinterhalt oder Kehlschnitt.",
-            "label": "Schleichen"
-        },
-        "Skirmish": {
-            "description": "Kämpfe im Nahkampf mit einem Gegner; greife an oder verteidige eine Position; raufe und ringe.",
-            "label": "Kämpfen"
-        },
-        "Study": {
-            "description": "Untersuche eine Person, ein Dokument oder einen Gegenstand genau, um Informationen zu sammeln und Wissen anzuwenden.",
-            "label": "Studieren"
-        },
-        "Survey": {
-            "description": "Erfasse einen Ort oder eine Situation, um zu verstehen, was vor sich geht; erkenne Gefahr, bevor sie eintritt.",
-            "label": "Erforschen"
-        },
-        "Sway": {
-            "description": "Beeinflusse jemanden mit Charme, Logik, Täuschung, Verkleidung oder Bluff; ändere Einstellungen oder Verhalten durch Manipulation.",
-            "label": "Beeinflussen"
-        },
-        "Tinker": {
-            "description": "Tüftele an Mechanismen, um sie zu erstellen, zu modifizieren, zu deaktivieren oder zu reparieren. Entschärfe Fallen, knacke Schlösser oder Tresore.",
-            "label": "Tüfteln"
-        },
-        "Wreck": {
-            "description": "Zerstöre Orte, Gegenstände oder Hindernisse mit roher Gewalt oder gezielter Sabotage; durchbreche Verteidigungen und stifte Chaos.",
-            "label": "Zerstören"
-        }
-    },
-    "Attributes": {
-        "insight": "Verstand",
-        "prowess": "Zähigkeit",
-        "resolve": "Wille"
-    },
-    "Looks": {
-        "Apparel": {
-            "collared-shirt": "ein Hemd mit Kragen",
-            "eel-skin-bodysuit": "ein Aalhaut-Body",
-            "fancy-waistcoat": "eine elegante Weste",
-            "fitted-dress": "ein tailliertes Kleid",
-            "fitted-leggings": "hautenge Leggings",
-            "half-cape": "ein Schultercape",
-            "heavy-cloak": "ein schwerer Umhang",
-            "heavy-jacket": "eine schwere Jacke",
-            "hide-and-furs": "Felle und Pelze",
-            "hood-and-veil": "eine Kapuze und Schleier",
-            "hooded-cape": "ein Kapuzenumhang",
-            "hooded-coat": "ein Kapuzenmantel",
-            "knit-cap": "eine Strickmütze",
-            "knit-sweater": "ein Strickpullover",
-            "leathers": "Lederkleidung",
-            "long-coat": "ein langer Mantel",
-            "long-scarf": "ein langer Schal",
-            "loose-silks": "fließende Seide",
-            "mask-and-robes": "eine Maske und Robe",
-            "rags-and-tatters": "Lumpen",
-            "rough-tunic": "ein grober Kittel",
-            "scavenged-uniform": "eine ausgemusterte Uniform",
-            "sharp-trousers": "schnittige Hose",
-            "short-cloak": "ein kurzer Umhang",
-            "skirt-and-blouse": "ein Rock und Bluse",
-            "slim-jacket": "eine enge Jacke",
-            "soft-boots": "weiche Stiefel",
-            "suit-and-tie": "ein Anzug mit Krawatte",
-            "suspenders": "Hosenträger",
-            "tall-boots": "hohe Stiefel",
-            "thick-greatcoat": "ein dicker Kutschermantel",
-            "tricorn-hat": "ein Dreispitz",
-            "vest": "ein Wams oder eine Weste",
-            "waxed-coat": "ein gewachster Regenmantel",
-            "wide-belt": "ein breiter Gürtel",
-            "work-boots": "Arbeitsstiefel",
-            "work-trousers": "Arbeitshose"
-        },
-        "Joining-words": {
-            "and": "und",
-            "dressed-in": "gekleidet in",
-            "sporting": "trägt",
-            "wearing": "trägt"
-        },
-        "Person-word-adjectives": {
-            "affable": "umgänglich",
-            "athletic": "sportlich",
-            "bony": "knochig",
-            "bright": "munter",
-            "brooding": "grüblerisch",
-            "calm": "gelassen",
-            "chiseled": "markant",
-            "cold": "kalt",
-            "dark": "düster",
-            "delicate": "zierlich",
-            "fair": "attraktiv",
-            "fierce": "grimmig",
-            "grimy": "schmuddelig",
-            "handsome": "gutaussehend",
-            "huge": "massig",
-            "hunched": "gebeugt",
-            "languid": "träge",
-            "lovely": "anmutig",
-            "open": "offen",
-            "plump": "mollig",
-            "rough": "derb",
-            "sad": "traurig",
-            "scarred": "vernarbt",
-            "slim": "schlank",
-            "soft": "weich",
-            "squat": "stämmig",
-            "stern": "streng",
-            "stout": "kräftig",
-            "striking": "auffallend",
-            "twitchy": "nervös",
-            "weathered": "wettergegerbt",
-            "wiry": "drahtig",
-            "worn": "verlebt"
-        },
-        "Person-words": {
-            "child": {
-                "article": "ein",
-                "word": "Kind"
-            },
-            "man": {
-                "article": "ein",
-                "word": "Mann"
-            },
-            "person": {
-                "article": "eine",
-                "word": "Person"
-            },
-            "woman": {
-                "article": "eine",
-                "word": "Frau"
-            }
-        },
-        "Templates": {
-            "one-adjective-one-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1}",
-            "one-adjective-two-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1} und {apparel2}",
-            "two-adjectives-one-apparel": "{personWordArticle} {personWordAdjective1} und {personWordAdjective2} {personWord} {wearingVerb} {apparel1}",
-            "two-adjectives-two-apparel": "{personWordArticle} {personWordAdjective1} und {personWordAdjective2} {personWord} {wearingVerb} {apparel1} und {apparel2}"
-        }
-    },
-    "Names": {
-        "Aliases": {
-            "bell": "Bell",
-            "birch": "Birch",
-            "bricks": "Bricks",
-            "bug": "Bug",
-            "chime": "Chime",
-            "coil": "Coil",
-            "cricket": "Cricket",
-            "cross": "Cross",
-            "crow": "Crow",
-            "echo": "Echo",
-            "flint": "Flint",
-            "frog": "Frog",
-            "frost": "Frost",
-            "grip": "Grip",
-            "gunner": "Gunner",
-            "hammer": "Hammer",
-            "hook": "Hook",
-            "junker": "Junker",
-            "mist": "Mist",
-            "moon": "Moon",
-            "nail": "Nail",
-            "needle": "Needle",
-            "ogre": "Ogre",
-            "pool": "Pool",
-            "ring": "Ring",
-            "ruby": "Ruby",
-            "silver": "Silver",
-            "skinner": "Skinner",
-            "song": "Song",
-            "spur": "Spur",
-            "tackle": "Tackle",
-            "thistle": "Thistle",
-            "thorn": "Thorn",
-            "tick-Tock": "Tick-Tock",
-            "twelves": "Twelves",
-            "vixen": "Vixen",
-            "whip": "Whip",
-            "wicker": "Wicker"
-        }
-    },
-    "Backgrounds": {
-        "Academic": {
-            "description": "Ein Gelehrter, ein Professor oder Student der Akademie von Doskvol, ein Philosoph, Journalist, etc.",
-            "label": "Akademiker"
-        },
-        "Labor": {
-            "description": "Ein Diener, ein Fabrikarbeiter, ein Kutscher, ein Hafenarbeiter, ein Seemann, ein Rail Jack, etc. Ein Stauer der North Hook Company.",
-            "label": "Arbeiter"
-        },
-        "Law": {
-            "description": "Ein Anwalt oder Barrister, ein Blaurock oder Inspektor (oder sogar Geisterwart), ein Gefängniswärter aus Ironhook, etc.",
-            "label": "Gesetz"
-        },
-        "Military": {
-            "description": "Ein imperialer oder skovischer Soldat, ein Söldner, ein Geheimdienstler, ein Stratege, ein Ausbilder, etc.",
-            "label": "Militär"
-        },
-        "Noble": {
-            "description": "Ein Dilettant, ein Höfling, der Spross eines gefallenen Hauses, etc.",
-            "label": "Adel"
-        },
-        "Trade": {
-            "description": "Ein Ladenbesitzer, ein Händler, ein Handwerker, ein Spediteur, etc. Ein Vermittler des Ministeriums für Erhaltung.",
-            "label": "Handel"
-        },
-        "Underworld": {
-            "description": "Ein Straßenkind, Bandenmitglied, junger Schläger oder ein anderer Ausgestoßener, der auf der Straße aufgewachsen ist.",
-            "label": "Unterwelt"
-        }
-    },
-    "Friends": {
-        "Augus": {
-            "description": "Ein Meisterarchitekt",
-            "label": "Augus"
-        },
-        "Bazso-baz": {
-            "description": "Ein Bandenführer",
-            "label": "Bazso Baz"
-        },
-        "Bryl": {
-            "description": "Ein Drogenhändler",
-            "label": "Bryl"
-        },
-        "Casta": {
-            "description": "Ein Kopfgeldjäger",
-            "label": "Casta"
-        },
-        "Celene": {
-            "description": "Eine Wächterin",
-            "label": "Celene"
-        },
-        "Chael": {
-            "description": "Ein brutaler Schläger",
-            "label": "Chael"
-        },
-        "Darmot": {
-            "description": "Ein Blaurock",
-            "label": "Darmot"
-        },
-        "Eckerd": {
-            "description": "Ein Leichendieb",
-            "label": "Eckerd"
-        },
-        "Flint": {
-            "description": "Ein Geisterhändler",
-            "label": "Flint"
-        },
-        "Frake": {
-            "description": "Ein Schlosser",
-            "label": "Frake"
-        },
-        "Grace": {
-            "description": "Eine Erpresserin",
-            "label": "Grace"
-        },
-        "Harker": {
-            "description": "Ein Gefängnisinsasse",
-            "label": "Harker"
-        },
-        "Jennah": {
-            "description": "Eine Dienerin",
-            "label": "Jennah"
-        },
-        "Jeren": {
-            "description": "Ein Blaurock-Archivar",
-            "label": "Jeren"
-        },
-        "Jul": {
-            "description": "Ein Blutdealer",
-            "label": "Jul"
-        },
-        "Khyra": {
-            "description": "Eine Tavernenbesitzerin",
-            "label": "Khyra"
-        },
-        "Malista": {
-            "description": "Eine Priesterin",
-            "label": "Malista"
-        },
-        "Marlane": {
-            "description": "Ein Faustkämpfer",
-            "label": "Marlane"
-        },
-        "Melvir": {
-            "description": "Ein Heiler",
-            "label": "Melvir"
-        },
-        "Mercy": {
-            "description": "Eine kaltblütige Killerin",
-            "label": "Mercy"
-        },
-        "Nyryx-2": {
-            "description": "Ein besitzergreifender Geist",
-            "label": "Nyryx"
-        },
-        "Nyryx": {
-            "description": "Eine Prostituierte",
-            "label": "Nyryx"
-        },
-        "Petra": {
-            "description": "Eine Stadtangestellte",
-            "label": "Petra"
-        },
-        "Quellyn": {
-            "description": "Eine Hexe",
-            "label": "Quellyn"
-        },
-        "Riven": {
-            "description": "Ein Chemiker",
-            "label": "Riven"
-        },
-        "Roslyn Kellis": {
-            "description": "Ein Adeliger",
-            "label": "Roslyn Kellis"
-        },
-        "Salia": {
-            "description": "Eine Informationsmaklerin",
-            "label": "Salia"
-        },
-        "Sawtooth": {
-            "description": "Ein Heiler",
-            "label": "Sawtooth"
-        },
-        "Scurlock": {
-            "description": "Ein Vampir",
-            "label": "Scurlock"
-        },
-        "Setarra": {
-            "description": "Ein Dämon",
-            "label": "Setarra"
-        },
-        "Stazia": {
-            "description": "Ein Apotheker",
-            "label": "Stazia"
-        },
-        "Steiner": {
-            "description": "Ein Auftragsmörder",
-            "label": "Steiner"
-        },
-        "Telda": {
-            "description": "Eine Bettlerin",
-            "label": "Telda"
-        },
-        "Veldren": {
-            "description": "Ein Psychonaut",
-            "label": "Veldren"
-        },
-        "Veleris": {
-            "description": "Ein Spion",
-            "label": "Veleris"
-        }
-    },
-    "Vices": {
-        "Faith": {
-            "description": "Du bist einem unsichtbaren Machtwesen, vergessenen Gott, Ahnengeist, etc. verschrieben.",
-            "label": "Glaube"
-        },
-        "Gambling": {
-            "description": "Du liebst Glücksspiele, Wetten auf Sportveranstaltungen, etc.",
-            "label": "Glücksspiel"
-        },
-        "Luxury": {
-            "description": "Teure und/oder prunkvolle Zurschaustellungen von Reichtum.",
-            "label": "Luxus"
-        },
-        "Obligation": {
-            "description": "Du bist einer Familie, einer Sache, einer Wohltätigkeitsorganisation, etc. verpflichtet.",
-            "label": "Pflicht"
-        },
-        "Pleasure": {
-            "description": "Genuss durch Liebhaber, Essen, Trinken, Drogen, Kunst, Theater, etc.",
-            "label": "Vergnügen"
-        },
-        "Stupor": {
-            "description": "Du suchst Vergessen durch Drogenmissbrauch, exzessives Trinken, Prügeleien in Kampfgruben, etc.",
-            "label": "Rausch"
-        },
-        "Weird": {
-            "description": "Du experimentierst mit seltsamen Essenzen, verkehrst mit wilden Geistern, beobachtest bizarre Rituale oder Tabus, etc.",
-            "label": "Spleen"
-        }
-    },
     "Abilities": {
         "A-little-something-on-the-side": {
             "description": "Am Ende jeder Freizeitphase erhältst du +2 Vorrat.",
@@ -881,31 +225,60 @@
             "label": "Das Netz weben"
         }
     },
-    "Heritages": {
-        "Akoros": {
-            "description": "Das größte und am stärksten industrialisierte Land des Imperiums, Heimat der Hauptstadt sowie von Duskwall. Es ist bekannt als ein vielfältiges Konglomerat von Kulturen, ähnlich wie Europa.",
-            "label": "Akoros"
+    "Actions": {
+        "Attune": {
+            "description": "Einstimmen auf Geister und das Geisterfeld; elektroplasmische Energie kanalisieren; Geister wahrnehmen und mit ihnen kommunizieren; Spektrologie verstehen.",
+            "label": "Einstimmen"
         },
-        "Dagger-isles": {
-            "description": "Menschen von den Dolchinseln wachsen oft auf Schiffen auf und reisen viel, bevor sie sesshaft werden. Sie sind bekannt als Korsaren und Händler, die ohne Blitzbarrieren leben und auf andere Weise mit Geistern umgehen.",
-            "label": "Dolchinseln"
+        "Command": {
+            "description": "Gehorsam mit deiner Persönlichkeit erzwingen; einschüchtern oder drohen; eine Aktion mit einer der Banden-Gruppen anführen.",
+            "label": "Befehlen"
         },
-        "Iruvia": {
-            "description": "Ein reiches und mächtiges Wüstenkönigreich weit im Süden. Ein vielfältiges Land mit Kulturen, die alten Reichen wie Persien, Ägypten und Indien ähneln.",
-            "label": "Iruvia"
+        "Consort": {
+            "description": "Verkehre mit Verbindungen aus deinem Erbe, Hintergrund, Freundeskreis oder Rivalen, um Zugang zu Ressourcen, Informationen, Personen oder Orten zu erhalten.",
+            "label": "Verkehren"
         },
-        "Severos": {
-            "description": "Die meisten Severosi leben in nomadischen Pferdestämmen, die über die verwüsteten Todeslande verstreut sind. Sie überleben in den Ruinen alter arkaner Festungen, die Geister noch immer abwehren.",
-            "label": "Severos"
+        "Finesse": {
+            "description": "Geschickt etwas aus jemandes Tasche nehmen; subtile Ablenkung oder Fingerfertigkeit anwenden; ein Fahrzeug oder ein Reittier führen.",
+            "label": "Geschick"
         },
-        "Skovlan": {
-            "description": "Ein kaltes und raues Inselkönigreich, das direkt jenseits des Meeres von Duskwall liegt. Skovlan war das letzte Land, das während des Einheitskriegs unter imperiale Herrschaft gebracht wurde – ein Konflikt, der erst vor wenigen Jahren endete.",
-            "label": "Skovlan"
+        "Hunt": {
+            "description": "Verfolge ein Ziel; sammle Informationen über seinen Standort und seine Bewegungen; greife aus der Distanz mit Präzisionsschüssen an.",
+            "label": "Jagen"
         },
-        "Tycheros": {
-            "description": "Ein halb-mythischer Ort weit entfernt jenseits des nördlichen Leeren Meeres. Es heißt, die Menschen dort seien teils Dämonen. Wenn du Tycherosi-Herkunft wählst, erstelle auch ein dämonisches Merkmal, das deinen Charakter kennzeichnet.",
-            "label": "Tycheros"
+        "Prowl": {
+            "description": "Schleiche unbemerkt umher und überwinde Hindernisse; klettere, schwimme, renne, springe und rolle. Überfalle mit naher Gewalt – etwa ein Hinterhalt oder Kehlschnitt.",
+            "label": "Schleichen"
+        },
+        "Skirmish": {
+            "description": "Kämpfe im Nahkampf mit einem Gegner; greife an oder verteidige eine Position; raufe und ringe.",
+            "label": "Kämpfen"
+        },
+        "Study": {
+            "description": "Untersuche eine Person, ein Dokument oder einen Gegenstand genau, um Informationen zu sammeln und Wissen anzuwenden.",
+            "label": "Studieren"
+        },
+        "Survey": {
+            "description": "Erfasse einen Ort oder eine Situation, um zu verstehen, was vor sich geht; erkenne Gefahr, bevor sie eintritt.",
+            "label": "Erforschen"
+        },
+        "Sway": {
+            "description": "Beeinflusse jemanden mit Charme, Logik, Täuschung, Verkleidung oder Bluff; ändere Einstellungen oder Verhalten durch Manipulation.",
+            "label": "Beeinflussen"
+        },
+        "Tinker": {
+            "description": "Tüftele an Mechanismen, um sie zu erstellen, zu modifizieren, zu deaktivieren oder zu reparieren. Entschärfe Fallen, knacke Schlösser oder Tresore.",
+            "label": "Tüfteln"
+        },
+        "Wreck": {
+            "description": "Zerstöre Orte, Gegenstände oder Hindernisse mit roher Gewalt oder gezielter Sabotage; durchbreche Verteidigungen und stifte Chaos.",
+            "label": "Zerstören"
         }
+    },
+    "Attributes": {
+        "insight": "Verstand",
+        "prowess": "Zähigkeit",
+        "resolve": "Wille"
     },
     "Background-suggestions": {
         "acolyte-spirit-warden": "Akolyth Geistwächter",
@@ -970,6 +343,178 @@
         "thief": "Dieb",
         "thug": "Schläger"
     },
+    "Backgrounds": {
+        "Academic": {
+            "description": "Ein Gelehrter, ein Professor oder Student der Akademie von Doskvol, ein Philosoph, Journalist, etc.",
+            "label": "Akademiker"
+        },
+        "Labor": {
+            "description": "Ein Diener, ein Fabrikarbeiter, ein Kutscher, ein Hafenarbeiter, ein Seemann, ein Rail Jack, etc. Ein Stauer der North Hook Company.",
+            "label": "Arbeiter"
+        },
+        "Law": {
+            "description": "Ein Anwalt oder Barrister, ein Blaurock oder Inspektor (oder sogar Geisterwart), ein Gefängniswärter aus Ironhook, etc.",
+            "label": "Gesetz"
+        },
+        "Military": {
+            "description": "Ein imperialer oder skovischer Soldat, ein Söldner, ein Geheimdienstler, ein Stratege, ein Ausbilder, etc.",
+            "label": "Militär"
+        },
+        "Noble": {
+            "description": "Ein Dilettant, ein Höfling, der Spross eines gefallenen Hauses, etc.",
+            "label": "Adel"
+        },
+        "Trade": {
+            "description": "Ein Ladenbesitzer, ein Händler, ein Handwerker, ein Spediteur, etc. Ein Vermittler des Ministeriums für Erhaltung.",
+            "label": "Handel"
+        },
+        "Underworld": {
+            "description": "Ein Straßenkind, Bandenmitglied, junger Schläger oder ein anderer Ausgestoßener, der auf der Straße aufgewachsen ist.",
+            "label": "Unterwelt"
+        }
+    },
+    "Friends": {
+        "Augus": {
+            "description": "Ein Meisterarchitekt",
+            "label": "Augus"
+        },
+        "Bazso-baz": {
+            "description": "Ein Bandenführer",
+            "label": "Bazso Baz"
+        },
+        "Bryl": {
+            "description": "Ein Drogenhändler",
+            "label": "Bryl"
+        },
+        "Casta": {
+            "description": "Ein Kopfgeldjäger",
+            "label": "Casta"
+        },
+        "Celene": {
+            "description": "Eine Wächterin",
+            "label": "Celene"
+        },
+        "Chael": {
+            "description": "Ein brutaler Schläger",
+            "label": "Chael"
+        },
+        "Darmot": {
+            "description": "Ein Blaurock",
+            "label": "Darmot"
+        },
+        "Eckerd": {
+            "description": "Ein Leichendieb",
+            "label": "Eckerd"
+        },
+        "Flint": {
+            "description": "Ein Geisterhändler",
+            "label": "Flint"
+        },
+        "Frake": {
+            "description": "Ein Schlosser",
+            "label": "Frake"
+        },
+        "Grace": {
+            "description": "Eine Erpresserin",
+            "label": "Grace"
+        },
+        "Harker": {
+            "description": "Ein Gefängnisinsasse",
+            "label": "Harker"
+        },
+        "Jennah": {
+            "description": "Eine Dienerin",
+            "label": "Jennah"
+        },
+        "Jeren": {
+            "description": "Ein Blaurock-Archivar",
+            "label": "Jeren"
+        },
+        "Jul": {
+            "description": "Ein Blutdealer",
+            "label": "Jul"
+        },
+        "Khyra": {
+            "description": "Eine Tavernenbesitzerin",
+            "label": "Khyra"
+        },
+        "Malista": {
+            "description": "Eine Priesterin",
+            "label": "Malista"
+        },
+        "Marlane": {
+            "description": "Ein Faustkämpfer",
+            "label": "Marlane"
+        },
+        "Melvir": {
+            "description": "Ein Heiler",
+            "label": "Melvir"
+        },
+        "Mercy": {
+            "description": "Eine kaltblütige Killerin",
+            "label": "Mercy"
+        },
+        "Nyryx-2": {
+            "description": "Ein besitzergreifender Geist",
+            "label": "Nyryx"
+        },
+        "Nyryx": {
+            "description": "Eine Prostituierte",
+            "label": "Nyryx"
+        },
+        "Petra": {
+            "description": "Eine Stadtangestellte",
+            "label": "Petra"
+        },
+        "Quellyn": {
+            "description": "Eine Hexe",
+            "label": "Quellyn"
+        },
+        "Riven": {
+            "description": "Ein Chemiker",
+            "label": "Riven"
+        },
+        "Roslyn Kellis": {
+            "description": "Ein Adeliger",
+            "label": "Roslyn Kellis"
+        },
+        "Salia": {
+            "description": "Eine Informationsmaklerin",
+            "label": "Salia"
+        },
+        "Sawtooth": {
+            "description": "Ein Heiler",
+            "label": "Sawtooth"
+        },
+        "Scurlock": {
+            "description": "Ein Vampir",
+            "label": "Scurlock"
+        },
+        "Setarra": {
+            "description": "Ein Dämon",
+            "label": "Setarra"
+        },
+        "Stazia": {
+            "description": "Ein Apotheker",
+            "label": "Stazia"
+        },
+        "Steiner": {
+            "description": "Ein Auftragsmörder",
+            "label": "Steiner"
+        },
+        "Telda": {
+            "description": "Eine Bettlerin",
+            "label": "Telda"
+        },
+        "Veldren": {
+            "description": "Ein Psychonaut",
+            "label": "Veldren"
+        },
+        "Veleris": {
+            "description": "Ein Spion",
+            "label": "Veleris"
+        }
+    },
     "Heritage-suggestions": {
         "bastion-elders": "Bastion Älteste",
         "blackvale-coven": "Blackvale Bund",
@@ -1018,6 +563,442 @@
         "water-bearers": "Wasserträger",
         "whitehollow-miners": "Whitehollow Bergleute",
         "wintercliff-wardens": "Wintercliff Wächter"
+    },
+    "Heritages": {
+        "Akoros": {
+            "description": "Das größte und am stärksten industrialisierte Land des Imperiums, Heimat der Hauptstadt sowie von Duskwall. Es ist bekannt als ein vielfältiges Konglomerat von Kulturen, ähnlich wie Europa.",
+            "label": "Akoros"
+        },
+        "Dagger-isles": {
+            "description": "Menschen von den Dolchinseln wachsen oft auf Schiffen auf und reisen viel, bevor sie sesshaft werden. Sie sind bekannt als Korsaren und Händler, die ohne Blitzbarrieren leben und auf andere Weise mit Geistern umgehen.",
+            "label": "Dolchinseln"
+        },
+        "Iruvia": {
+            "description": "Ein reiches und mächtiges Wüstenkönigreich weit im Süden. Ein vielfältiges Land mit Kulturen, die alten Reichen wie Persien, Ägypten und Indien ähneln.",
+            "label": "Iruvia"
+        },
+        "Severos": {
+            "description": "Die meisten Severosi leben in nomadischen Pferdestämmen, die über die verwüsteten Todeslande verstreut sind. Sie überleben in den Ruinen alter arkaner Festungen, die Geister noch immer abwehren.",
+            "label": "Severos"
+        },
+        "Skovlan": {
+            "description": "Ein kaltes und raues Inselkönigreich, das direkt jenseits des Meeres von Duskwall liegt. Skovlan war das letzte Land, das während des Einheitskriegs unter imperiale Herrschaft gebracht wurde – ein Konflikt, der erst vor wenigen Jahren endete.",
+            "label": "Skovlan"
+        },
+        "Tycheros": {
+            "description": "Ein halb-mythischer Ort weit entfernt jenseits des nördlichen Leeren Meeres. Es heißt, die Menschen dort seien teils Dämonen. Wenn du Tycherosi-Herkunft wählst, erstelle auch ein dämonisches Merkmal, das deinen Charakter kennzeichnet.",
+            "label": "Tycheros"
+        }
+    },
+    "Looks": {
+        "Apparel": {
+            "collared-shirt": "ein Hemd mit Kragen",
+            "eel-skin-bodysuit": "ein Aalhaut-Body",
+            "fancy-waistcoat": "eine elegante Weste",
+            "fitted-dress": "ein tailliertes Kleid",
+            "fitted-leggings": "hautenge Leggings",
+            "half-cape": "ein Schultercape",
+            "heavy-cloak": "ein schwerer Umhang",
+            "heavy-jacket": "eine schwere Jacke",
+            "hide-and-furs": "Felle und Pelze",
+            "hood-and-veil": "eine Kapuze und Schleier",
+            "hooded-cape": "ein Kapuzenumhang",
+            "hooded-coat": "ein Kapuzenmantel",
+            "knit-cap": "eine Strickmütze",
+            "knit-sweater": "ein Strickpullover",
+            "leathers": "Lederkleidung",
+            "long-coat": "ein langer Mantel",
+            "long-scarf": "ein langer Schal",
+            "loose-silks": "fließende Seide",
+            "mask-and-robes": "eine Maske und Robe",
+            "rags-and-tatters": "Lumpen",
+            "rough-tunic": "ein grober Kittel",
+            "scavenged-uniform": "eine ausgemusterte Uniform",
+            "sharp-trousers": "schnittige Hose",
+            "short-cloak": "ein kurzer Umhang",
+            "skirt-and-blouse": "ein Rock und Bluse",
+            "slim-jacket": "eine enge Jacke",
+            "soft-boots": "weiche Stiefel",
+            "suit-and-tie": "ein Anzug mit Krawatte",
+            "suspenders": "Hosenträger",
+            "tall-boots": "hohe Stiefel",
+            "thick-greatcoat": "ein dicker Kutschermantel",
+            "tricorn-hat": "ein Dreispitz",
+            "vest": "ein Wams oder eine Weste",
+            "waxed-coat": "ein gewachster Regenmantel",
+            "wide-belt": "ein breiter Gürtel",
+            "work-boots": "Arbeitsstiefel",
+            "work-trousers": "Arbeitshose"
+        },
+        "Joining-words": {
+            "and": "und",
+            "dressed-in": "gekleidet in",
+            "sporting": "trägt",
+            "wearing": "trägt"
+        },
+        "Person-word-adjectives": {
+            "affable": "umgänglich",
+            "athletic": "sportlich",
+            "bony": "knochig",
+            "bright": "munter",
+            "brooding": "grüblerisch",
+            "calm": "gelassen",
+            "chiseled": "markant",
+            "cold": "kalt",
+            "dark": "düster",
+            "delicate": "zierlich",
+            "fair": "attraktiv",
+            "fierce": "grimmig",
+            "grimy": "schmuddelig",
+            "handsome": "gutaussehend",
+            "huge": "massig",
+            "hunched": "gebeugt",
+            "languid": "träge",
+            "lovely": "anmutig",
+            "open": "offen",
+            "plump": "mollig",
+            "rough": "derb",
+            "sad": "traurig",
+            "scarred": "vernarbt",
+            "slim": "schlank",
+            "soft": "weich",
+            "squat": "stämmig",
+            "stern": "streng",
+            "stout": "kräftig",
+            "striking": "auffallend",
+            "twitchy": "nervös",
+            "weathered": "wettergegerbt",
+            "wiry": "drahtig",
+            "worn": "verlebt"
+        },
+        "Person-words": {
+            "child": {
+                "article": "ein",
+                "word": "Kind"
+            },
+            "man": {
+                "article": "ein",
+                "word": "Mann"
+            },
+            "person": {
+                "article": "eine",
+                "word": "Person"
+            },
+            "woman": {
+                "article": "eine",
+                "word": "Frau"
+            }
+        },
+        "Templates": {
+            "one-adjective-one-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1}",
+            "one-adjective-two-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1} und {apparel2}",
+            "two-adjectives-one-apparel": "{personWordArticle} {personWordAdjective1} und {personWordAdjective2} {personWord} {wearingVerb} {apparel1}",
+            "two-adjectives-two-apparel": "{personWordArticle} {personWordAdjective1} und {personWordAdjective2} {personWord} {wearingVerb} {apparel1} und {apparel2}"
+        }
+    },
+    "Names": {
+        "Aliases": {
+            "bell": "Bell",
+            "birch": "Birch",
+            "bricks": "Bricks",
+            "bug": "Bug",
+            "chime": "Chime",
+            "coil": "Coil",
+            "cricket": "Cricket",
+            "cross": "Cross",
+            "crow": "Crow",
+            "echo": "Echo",
+            "flint": "Flint",
+            "frog": "Frog",
+            "frost": "Frost",
+            "grip": "Grip",
+            "gunner": "Gunner",
+            "hammer": "Hammer",
+            "hook": "Hook",
+            "junker": "Junker",
+            "mist": "Mist",
+            "moon": "Moon",
+            "nail": "Nail",
+            "needle": "Needle",
+            "ogre": "Ogre",
+            "pool": "Pool",
+            "ring": "Ring",
+            "ruby": "Ruby",
+            "silver": "Silver",
+            "skinner": "Skinner",
+            "song": "Song",
+            "spur": "Spur",
+            "tackle": "Tackle",
+            "thistle": "Thistle",
+            "thorn": "Thorn",
+            "tick-Tock": "Tick-Tock",
+            "twelves": "Twelves",
+            "vixen": "Vixen",
+            "whip": "Whip",
+            "wicker": "Wicker"
+        }
+    },
+    "Playbooks": {
+        "Cutter": {
+            "description": "Ein gefährlicher und einschüchternder Kämpfer",
+            "label": "Schnitter"
+        },
+        "Hound": {
+            "description": "Ein tödlicher Scharfschütze und Fährtenleser",
+            "label": "Bluthund"
+        },
+        "Leech": {
+            "description": "Ein Saboteur und Techniker",
+            "label": "Schröpfer"
+        },
+        "Lurk": {
+            "description": "Ein heimlicher Eindringling und Dieb",
+            "label": "Lauerer"
+        },
+        "Slide": {
+            "description": "Ein subtiler Manipulator und Spion",
+            "label": "Emissär"
+        },
+        "Spider": {
+            "description": "Ein verschlagener Strippenzieher",
+            "label": "Spinne"
+        },
+        "Whisper": {
+            "description": "Ein arkaner Adept und Medium",
+            "label": "Flüsterer"
+        }
+    },
+    "User-interface": {
+        "Home-page": {
+            "Attribution": {
+                "code-and-design": "Code & Design von <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+                "copyright": "Copyright © {year} Olin Kirkland",
+                "license-blades-in-the-dark": "Diese Arbeit basiert auf <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — ein Produkt von One Seven Design, entwickelt und geschrieben von John Harper, und lizenziert für unsere Nutzung unter der <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0-Lizenz</a>",
+                "license-icons": "Icons stammen von <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
+                "license-portraits": "Porträtbilder stammen aus <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> ohne bekannte Einschränkungen ihrer Nutzung.",
+                "news-and-updates": "Neuigkeiten & Updates"
+            },
+            "Scoundrel-card": {
+                "no-name": "Unbenannter {playbook}",
+                "no-playbook": "Unbenannter Schurke"
+            },
+            "description": "Eine Charaktererstellungs Hilfe für <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
+            "last-updated": "Aktualisiert {date}",
+            "new-scoundrel-button": "Neuer Schurke",
+            "scroll-prompt": "Scrolle weiter, um die Zuordnung zu sehen",
+            "settings-button": "Einstellungen"
+        },
+        "Make-page": {
+            "Controls": {
+                "delete-button": "Löschen",
+                "home-button": "Startseite",
+                "next-button": "Weiter"
+            },
+            "Step-navigation": {
+                "abilities": "Fähigkeiten",
+                "actions": "Aktionen",
+                "background": "Hintergrund",
+                "export": "Exportieren",
+                "friends": "Freunde",
+                "heritage": "Herkunft",
+                "name-and-look": "Name & Aussehen",
+                "playbook": "Playbook",
+                "vice": "Laster"
+            }
+        },
+        "Modals": {
+            "Change-language": {
+                "Controls": {
+                    "cancel-button": "Nein, {currentLanguage} beibehalten",
+                    "confirm-button": "Ja, zu {newLanguage} wechseln"
+                },
+                "message": "Du versuchst, einen Schurken in der Sprache <strong>{newLanguage}</strong> zu laden, aber deine aktuelle Sprache ist <strong>{currentLanguage}</strong>. Möchtest du zur Sprache <strong>{newLanguage}</strong> wechseln?",
+                "title": "Lade einen Schurken in einer anderen Sprache"
+            },
+            "Import": {
+                "Failed": {
+                    "message": "Das Charakterblatt konnte nicht importiert werden. Bitte überprüfe die URL und versuche es erneut.",
+                    "title": "Import fehlgeschlagen"
+                },
+                "Success": {
+                    "message": "Charakterblatt erfolgreich importiert!",
+                    "title": "Import erfolgreich"
+                }
+            },
+
+            "Confirm": {
+                "Controls": {
+                    "cancel-button": "Nein, ich habe es mir anders überlegt",
+                    "confirm-button": "Ja"
+                }
+            },
+            "Delete-scoundrel": {
+                "Controls": {
+                    "confirm-button": "Löschen"
+                },
+                "message": "Sind Sie sicher, dass Sie diesen Schurken löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+                "title": "Schurken löschen?"
+            },
+            "News-and-updates": {
+                "title": "Neuigkeiten & Updates"
+            },
+            "Settings": {
+                "Language": {
+                    "Language-features": {
+                        "data": "Spieldaten",
+                        "sheets": "Sheets",
+                        "ui": "Benutzeroberfläche"
+                    },
+                    "Languages": {
+                        "de": "Deutsch",
+                        "en": "Englisch",
+                        "es": "Spanisch"
+                    },
+                    "label": "App-Sprache auswählen"
+                },
+                "Tracking": {
+                    "description": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
+                    "label": "Anonymes Tracking aktivieren"
+                },
+                "title": "Einstellungen"
+            },
+            "Tracking-consent": {
+                "Controls": {
+                    "cancel-button": "Tracking deaktiviert lassen",
+                    "confirm-button": "Tracking ist in Ordnung"
+                },
+                "message": "Minimales Tracking hilft dabei, Scoundry zu verbessern, indem anonym Daten zu Charakteren, Seitenaufrufen und der Nutzung von Funktionen gesammelt werden. Es werden keine persönlichen Informationen erfasst oder weitergegeben.",
+                "title": "Tracking-Einstellungen"
+            },
+            "World-map": {
+                "title": "Die Zerbrochenen Inseln"
+            }
+        },
+        "Steps": {
+            "Abilities": {
+                "subtitle": "Wähle eine Sonderfähigkeit.",
+                "title": "Welche Fähigkeit hebt dich in der Bande hervor?"
+            },
+            "Actions": {
+                "Action-tally": {
+                    "with-character-creation": "<strong>{count}</strong> von 7 Aktionspunkten zugewiesen",
+                    "without-character-creation": "<strong>{count}</strong> Aktionspunkte zugewiesen"
+                },
+                "Actions": {
+                    "Attune": {
+                        "description": "Einstimmen auf Geister und das Geisterfeld; elektroplasmische Energie kanalisieren; Geister wahrnehmen und mit ihnen kommunizieren; Spektrologie verstehen.",
+                        "label": "Einstimmen"
+                    },
+                    "Command": {
+                        "description": "Gehorsam mit deiner Persönlichkeit erzwingen; einschüchtern oder drohen; eine Aktion mit einer der Banden-Gruppen anführen.",
+                        "label": "Befehlen"
+                    },
+                    "Consort": {
+                        "description": "Verkehre mit Verbindungen aus deinem Erbe, Hintergrund, Freundeskreis oder Rivalen, um Zugang zu Ressourcen, Informationen, Personen oder Orten zu erhalten.",
+                        "label": "Verkehren"
+                    },
+                    "Finesse": {
+                        "description": "Nimm geschickt etwas aus jemandes Tasche; wende subtile Ablenkung oder Fingerfertigkeit an; führe ein Fahrzeug oder reite ein Tier.",
+                        "label": "Geschick"
+                    },
+                    "Hunt": {
+                        "description": "Verfolge ein Ziel; sammle Informationen über dessen Standort und Bewegungen; greife aus der Distanz mit Präzisionsschüssen an.",
+                        "label": "Jagen"
+                    },
+                    "Prowl": {
+                        "description": "Schleiche unbemerkt umher und überwinde Hindernisse; klettere, schwimme, renne, springe und rolle. Überfalle mit naher Gewalt – wie ein Hinterhalt oder Kehlschnitt.",
+                        "label": "Schleichen"
+                    },
+                    "Skirmish": {
+                        "description": "Kämpfe im Nahkampf mit einem Gegner; greife an oder verteidige eine Position; raufe und ringe.",
+                        "label": "Kämpfen"
+                    },
+                    "Study": {
+                        "description": "Untersuche eine Person, ein Dokument oder einen Gegenstand genau, um Informationen zu sammeln und Wissen anzuwenden.",
+                        "label": "Studieren"
+                    },
+                    "Survey": {
+                        "description": "Beobachte einen Ort oder eine Situation, um zu verstehen, was vor sich geht; erkenne Gefahr, bevor sie eintritt.",
+                        "label": "Erforschen"
+                    },
+                    "Sway": {
+                        "description": "Beeinflusse jemanden mit Charme, Logik, Täuschung, Verkleidung oder Bluff; ändere Einstellungen oder Verhalten durch Manipulation.",
+                        "label": "Beeinflussen"
+                    },
+                    "Tinker": {
+                        "description": "Tüftele an Mechanismen, um sie zu erstellen, zu modifizieren, zu deaktivieren oder zu reparieren. Entschärfe Fallen oder knacke Schlösser.",
+                        "label": "Tüfteln"
+                    },
+                    "Wreck": {
+                        "description": "Zerstöre Orte, Gegenstände oder Hindernisse mit roher Gewalt oder gezielter Sabotage; stifte Ablenkung und Chaos.",
+                        "label": "Zerstören"
+                    }
+                },
+                "Attributes": {
+                    "Insight": "Verstand",
+                    "Prowess": "Zähigkeit",
+                    "Resolve": "Wille"
+                },
+                "Options": {
+                    "character-creation-button": "Charaktererstellung: Insgesamt 7 Aktionspunkte, maximal 2 pro Aktion",
+                    "mastery-advance-button": "Meisterschaftsfortschritt: Aktionen bis Stufe 4 erlauben"
+                },
+                "subtitle": "Verteile Punkte auf Aktionen, die dich am besten repräsentieren.",
+                "suggested-actions": "Aktionen, die durch deinen Hintergrund und dein Erbe vorgeschlagen werden:",
+                "title": "Was kannst du am besten?"
+            },
+            "Background": {
+                "deep-cuts-description": "Ausführliche Beschreibungen dieser Hintergründe findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
+                "detail-prompt": "Ein Detail über deinen Hintergrund",
+                "select-prompt": "Wähle einen Hintergrund aus, um dessen Beschreibung und empfohlene Details zu sehen.",
+                "subtitle": "Wähle einen Hintergrund und beschreibe ein für dich spezifisches Detail.",
+                "title": "Was hast du getan, bevor du dich der Bande angeschlossen hast?"
+            },
+            "Export": {
+                "Controls": {
+                    "copied": "Kopiert!",
+                    "save-as-image-button": "Als Bild speichern",
+                    "share-as-url-button": "Als URL teilen"
+                },
+                "subtitle": "Passe dein Charakterblatt an und teile es.",
+                "title": "Exportiere deinen Schurken"
+            },
+            "Friends": {
+                "friend-button": "Freund",
+                "rival-button": "Rivale",
+                "subtitle": "Markiere einen langjährigen Verbündeten oder Geliebten und einen Rivalen oder Feind.",
+                "title": "Wer schuldet dir etwas und wer ist dein erbitterter Feind?"
+            },
+            "Heritage": {
+                "deep-cuts-description": "Ausführliche Beschreibungen dieser Herkünfte findest du in der <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>-Erweiterung für Blades in the Dark.",
+                "detail-prompt": "Ein Detail über deine Herkunft",
+                "select-prompt": "Wähle eine Herkunft aus, um deren Beschreibung und empfohlene Details zu sehen.",
+                "subtitle": "Wähle eine Herkunft und beschreibe ein für dich spezifisches Detail.",
+                "title": "Woher kommst du?",
+                "world-map-button": "Weltkarte"
+            },
+            "Name-and-look": {
+                "alias-prompt": "Dein Alias",
+                "look-prompt": "Dein Aussehen",
+                "name-prompt": "Dein Name",
+                "portrait-prompt": "Wähle ein Porträt",
+                "randomize-alias-button": "Alias zufällig wählen",
+                "randomize-look-button": "Aussehen zufällig wählen",
+                "randomize-name-button": "Name zufällig wählen",
+                "subtitle": "Notiere einen Namen, einen kriminellen Alias und beschreibe kurz dein Aussehen.",
+                "title": "Wie nennt man dich? Wie siehst du aus?"
+            },
+            "Playbook": {
+                "subtitle": "Dein Charakterbogen repräsentiert deinen Ruf, deine Sonderfähigkeiten und deine Entwicklungsmöglichkeiten.",
+                "title": "Was für ein <strong>Schurke</strong> bist du?"
+            },
+            "Vice": {
+                "description": "Wähle ein Laster und notiere den Namen und Ort deines Versorgers.",
+                "purveyor-prompt": "Eine Beschreibung, wo du deinem Laster nachgehst",
+                "select-prompt": "Wähle ein Laster aus, um dessen Beschreibung und empfohlene Versorger zu sehen.",
+                "title": "Wo gehst du hin, um deinen Stress abzubauen?"
+            }
+        }
     },
     "Vice-suggestions": {
         "Aranna-the-blessed": {
@@ -1212,6 +1193,36 @@
             "district": "Coalridge",
             "label": "Travens Rauchshop",
             "text": "Travens Rauchshop; Coalridge"
+        }
+    },
+    "Vices": {
+        "Faith": {
+            "description": "Du bist einem unsichtbaren Machtwesen, vergessenen Gott, Ahnengeist, etc. verschrieben.",
+            "label": "Glaube"
+        },
+        "Gambling": {
+            "description": "Du liebst Glücksspiele, Wetten auf Sportveranstaltungen, etc.",
+            "label": "Glücksspiel"
+        },
+        "Luxury": {
+            "description": "Teure und/oder prunkvolle Zurschaustellungen von Reichtum.",
+            "label": "Luxus"
+        },
+        "Obligation": {
+            "description": "Du bist einer Familie, einer Sache, einer Wohltätigkeitsorganisation, etc. verpflichtet.",
+            "label": "Pflicht"
+        },
+        "Pleasure": {
+            "description": "Genuss durch Liebhaber, Essen, Trinken, Drogen, Kunst, Theater, etc.",
+            "label": "Vergnügen"
+        },
+        "Stupor": {
+            "description": "Du suchst Vergessen durch Drogenmissbrauch, exzessives Trinken, Prügeleien in Kampfgruben, etc.",
+            "label": "Rausch"
+        },
+        "Weird": {
+            "description": "Du experimentierst mit seltsamen Essenzen, verkehrst mit wilden Geistern, beobachtest bizarre Rituale oder Tabus, etc.",
+            "label": "Spleen"
         }
     }
 }
