@@ -3,8 +3,12 @@
         <div class="portrait-container">
             <img
                 class="portrait"
-                v-if="props.scoundrel.portrait"
-                :src="`/assets/${props.scoundrel.portrait}`"
+                :src="
+                    props.scoundrel.portrait
+                        ? `/assets/${props.scoundrel.portrait}`
+                        : '/assets/icons/theater.png'
+                "
+                :style="{ opacity: props.scoundrel.portrait ? 1 : 0.2 }"
             />
 
             <img
@@ -82,6 +86,8 @@ const semanticName = computed(() => {
         }
 
         img.flag {
+            // border: 0.2rem solid var(--color-surface);
+            border-radius: 50%;
             position: absolute;
             width: 2.4rem;
             height: 2.4rem;
