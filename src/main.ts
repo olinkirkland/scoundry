@@ -4,7 +4,7 @@ import i18n from './i18n/locale';
 import { router } from './router';
 import { trackEvent } from './tracker';
 
-export const APP_VERSION = '1.1.2';
+export const APP_VERSION = '1.2.0';
 
 // Create the app
 const app = createApp(App);

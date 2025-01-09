@@ -41,13 +41,6 @@
                         www.scoundry.com
                         <span class="version">v{{ APP_VERSION }}</span>
                     </h2>
-                    <p
-                        v-html="
-                            $t(
-                                'User-interface.Home-page.Attribution.code-and-design'
-                            )
-                        "
-                    ></p>
                     <p>
                         <a @click="ModalController.open(NewsModal)">
                             {{
@@ -57,6 +50,20 @@
                             }}
                         </a>
                     </p>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.code-and-design'
+                            )
+                        "
+                    ></p>
+                    <p
+                        v-html="
+                            $t(
+                                'User-interface.Home-page.Attribution.localization'
+                            )
+                        "
+                    ></p>
                     <p
                         class="muted"
                         v-html="
