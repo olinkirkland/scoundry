@@ -29,11 +29,16 @@ const queue: { modal: any; modalConfig: any }[] = [];
 ModalController.getInstance().addEventListener(({ modal, modalConfig }) => {
     (document.activeElement as HTMLElement)?.blur();
 
-    // Close
-    if (!modal && !queue.length) return (currentModal.value = null);
+    // If no modal was passed, close the current one
+    if (!modal) {
+        currentModal.value = null;
+        if (!queue.length) return;
 
-    // Open next modal
-    const openNext = !modal && queue.length;
+        // If there are modals in the queue, open the next one
+        const { modal, modalConfig } = queue.shift()!;
+        ModalController.open(modal, modalConfig);
+        return;
+    }
 
     // Open
     if (currentModal.value) {
@@ -41,11 +46,10 @@ ModalController.getInstance().addEventListener(({ modal, modalConfig }) => {
         return;
     }
 
-    const { modalFromQueue, modalConfigFromQueue } = queue.shift();
-    currentModal.value = openNext
-        ? { ...modalFromQueue }
-        : ({ ...modal! } as any);
-    currentModalConfig.value = { ...modalConfig };
+    if (modal) {
+        currentModal.value = { ...modal! } as any;
+        currentModalConfig.value = { ...modalConfig };
+    }
 
     requestAnimationFrame(() => {
         if (fadeInterval.value) clearInterval(fadeInterval.value);

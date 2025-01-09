@@ -56,6 +56,10 @@ const semanticName = computed(() => {
     transition: all 0.2s;
     text-align: center;
 
+    p {
+        line-height: 1.4;
+    }
+
     img.portrait {
         width: 6.4rem;
         height: 6.4rem;

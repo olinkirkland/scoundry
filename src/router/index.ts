@@ -79,7 +79,7 @@ router.beforeEach(async (to, from, next) => {
     // Disable tracking on localhost
     if (window.location.hostname === 'localhost') allowTracking = false;
 
-    if (localStorage.getItem('allowTracking') === null) {
+    if (localStorage.getItem('enableTracking') === null) {
         // If localStorage is not available, prompt the user to allow tracking
         ModalController.open(ConfirmModal, {
             title: t('User-interface.Modals.Tracking-consent.title'),
@@ -92,11 +92,11 @@ router.beforeEach(async (to, from, next) => {
             ),
             isConfirmButtonCta: true,
             onConfirm: () => {
-                localStorage.setItem('allowTracking', 'true');
+                localStorage.setItem('enableTracking', 'true');
                 ModalController.close();
             },
             onCancel: () => {
-                localStorage.setItem('allowTracking', 'false');
+                localStorage.setItem('enableTracking', 'false');
                 ModalController.close();
             }
         });
