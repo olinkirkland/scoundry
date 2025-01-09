@@ -469,7 +469,7 @@ function drawBubble(
 }
 
 async function getFont(variableName: string) {
-    await new Promise((resolve) => setTimeout(resolve, 200));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const fontVariable = getComputedStyle(
         document.documentElement
     ).getPropertyValue(`--${variableName}`);
@@ -487,6 +487,5 @@ async function fetchSheetData(
     const response = await fetch(
         `/assets/sheets/${language}/data/${variation}.json`
     );
-    console.log('response:', response);
     return response.json();
 }
