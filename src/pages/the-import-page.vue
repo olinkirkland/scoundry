@@ -11,6 +11,7 @@ import ErrorModal from '@/components/modals/templates/error-modal.vue';
 import InfoModal from '@/components/modals/templates/info-modal.vue';
 import ModalController from '@/controllers/modal-controller';
 import { saveScoundrel } from '@/controllers/storage-controller';
+import { t } from '@/i18n/locale';
 import { PageName, router } from '@/router';
 import { Scoundrel } from '@/scoundrel';
 import { decodeUrlToJson } from '@/util/scoundrel-util';
@@ -33,13 +34,13 @@ if (scoundrel) {
     });
 
     ModalController.open(InfoModal, {
-        title: 'Success',
-        message: 'Character sheet imported successfully!',
+        title: t('User-interface.Modals.Import.Success.title'),
+        message: t('User-interface.Modals.Import.Success.message'),
     });
 } else {
     ModalController.open(ErrorModal, {
-        title: 'Error',
-        message: 'Failed to import character sheet.',
+        title: t('User-interface.Modals.Import.Failed.title'),
+        message: t('User-interface.Modals.Import.Failed.message'),
     });
 }
 </script>

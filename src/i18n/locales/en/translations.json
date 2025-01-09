@@ -861,6 +861,16 @@
                     "cancel-button": "No, keep using {currentLanguage}",
                     "confirm-button": "Yes, switch to {newLanguage}"
                 }
+            },
+            "Import": {
+                "Success": {
+                    "message": "Character sheet imported successfully!",
+                    "title": "Import successful"
+                },
+                "Failed": {
+                    "message": "The character sheet could not be imported. Please check the URL and try again.",
+                    "title": "Import failed"
+                }
             }
         },
         "Steps": {

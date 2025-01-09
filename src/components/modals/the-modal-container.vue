@@ -42,11 +42,28 @@ ModalController.getInstance().addEventListener(({ modal, modalConfig }) => {
 
     // Open
     if (currentModal.value) {
+        // If a matching modalConfig is already in the queue, don't add it again
+        const queueIncludingCurrent = [
+            ...queue,
+            { modal: currentModal.value, modalConfig: currentModalConfig.value }
+        ];
+
+        const isModalAlreadyInQueue = queueIncludingCurrent.find(
+            (queued) =>
+                JSON.stringify(queued.modalConfig) ===
+                JSON.stringify(modalConfig)
+        );
+
+        if (isModalAlreadyInQueue) return;
+
+        // Add the modal to the queue
+        console.log('Queueing modal', JSON.stringify(modalConfig));
         queue.push({ modal, modalConfig });
         return;
     }
 
     if (modal) {
+        console.log('Opening modal', JSON.stringify(modalConfig));
         currentModal.value = { ...modal! } as any;
         currentModalConfig.value = { ...modalConfig };
     }
