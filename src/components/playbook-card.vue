@@ -47,7 +47,7 @@ const playbookCapitalized =
     h2 {
         font-family: var(--font-display);
         text-transform: uppercase;
-        font-size: 5.6rem;
+        font-size: 4.8rem;
     }
 
     p.description {

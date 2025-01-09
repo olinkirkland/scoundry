@@ -469,7 +469,7 @@ function drawBubble(
 }
 
 async function getFont(variableName: string) {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 400));
     const fontVariable = getComputedStyle(
         document.documentElement
     ).getPropertyValue(`--${variableName}`);

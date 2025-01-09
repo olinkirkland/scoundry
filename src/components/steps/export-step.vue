@@ -252,6 +252,7 @@ function makeFileName(name: string) {
 }
 
 .preview-container {
+    position: relative;
     width: 100%;
     min-height: 8rem;
     height: fit-content;
