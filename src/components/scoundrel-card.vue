@@ -66,11 +66,10 @@ const semanticName = computed(() => {
 
     img.flag {
         position: absolute;
-        width: 2.4rem;
-        height: 2.4rem;
-        top: 0;
-        right: 0;
-        padding: 0.4rem;
+        width: 2rem;
+        height: 2rem;
+        bottom: 0.4rem;
+        right: 0.4rem;
         opacity: 0.8;
     }
 
