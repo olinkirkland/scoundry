@@ -43,7 +43,7 @@ async function paintClassicSheet(
             const roughCanvas = rough.canvas(canvas);
             const ctx = canvas.getContext('2d')!;
             ctx.drawImage(template, 0, 0);
-            ctx.font = `32px ${font}`;
+            ctx.font = `24px ${font}`;
             ctx.fillStyle = color;
             ctx.strokeStyle = 'red';
             ctx.lineWidth = 2;
@@ -145,23 +145,20 @@ async function paintClassicSheet(
 
             // Fill in Friends triangles
             scoundrel.friends.forEach((f) => {
-                // console.log('drawing a triangle for', f);
-                const point = data.friends[f as keyof typeof data.friends];
+                const point =
+                    data.friends[f as keyof typeof data.friends].friend;
                 if (!point) return console.error('No point for', f);
                 drawTriangleUp(ctx, point);
             });
 
             // Fill in Rivals triangles
             scoundrel.rivals.forEach((r) => {
-                // console.log('drawing a triangle for', r);
-                const point = data.friends[r as keyof typeof data.friends];
+                const point =
+                    data.friends[r as keyof typeof data.friends].rival;
                 if (!point) return console.error('No point for', r);
-                const offset = { x: 28, y: -14 };
-                if (scoundrel.playbook === 'whisper') offset.x = 24.5; // Misprint in the Whisper playbook
-
                 drawTriangleDown(ctx, {
-                    x: point.x + offset.x,
-                    y: point.y + offset.y
+                    x: point.x,
+                    y: point.y
                 });
             });
 
@@ -192,7 +189,7 @@ async function paintClassicSheet(
                     data.viceText.x,
                     data.viceText.y,
                     940,
-                    32
+                    24
                 );
 
             // Name
@@ -211,7 +208,7 @@ async function paintClassicSheet(
                     data.look.x,
                     data.look.y,
                     940,
-                    32
+                    24
                 );
 
             resolve(canvas);
