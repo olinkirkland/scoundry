@@ -63,9 +63,9 @@
         "saboteur": { "x": 1096, "y": 741.5 },
         "venomous": { "x": 1096, "y": 793 },
 
-        "infiltrator": { "x": 1097, "y": 238 },
-        "ambush": { "x": 1097, "y": 300 },
-        "expertise": { "x": 1097, "y": 400 },
+        "infiltrator": { "x": 1097, "y": 240 },
+        "ambush": { "x": 1097, "y": 298.5 },
+        "expertise": { "x": 1097, "y": 380 },
         "the-devils-footsteps": { "x": 1097, "y": 500 },
         "reflexes": { "x": 1097, "y": 600 },
         "shadow": { "x": 1097, "y": 700 },
