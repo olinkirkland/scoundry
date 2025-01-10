@@ -65,7 +65,7 @@ import backgrounds from '@/assets/data/backgrounds.json';
 import { TraitDetail } from '@/data-types';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
-import i18n from '@/i18n/locale';
+import { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
@@ -104,9 +104,7 @@ function onClickBackground(background: string) {
 }
 
 function onClickBackgroundDetail(backgroundDetail: TraitDetail) {
-    const label = i18n.global.t(
-        `Background-suggestions.${backgroundDetail.id}`
-    );
+    const label = t(`Background-suggestions.${backgroundDetail.id}`);
 
     // Set the background detail to empty if it's already selected
     if (props.scoundrel.backgroundDetail === label) {

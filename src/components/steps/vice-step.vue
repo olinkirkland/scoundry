@@ -9,7 +9,7 @@
                 <trait-card
                     v-for="vice in vices"
                     :key="vice"
-                    :label="i18n.global.t(`Vices.${capitalize(vice)}.label`)"
+                    :label="t(`Vices.${capitalize(vice)}.label`)"
                     :selected="vice === scoundrel.vice"
                     @click="onClickVice(vice)"
                 />
@@ -38,9 +38,8 @@
                 class="vice-detail"
                 :class="{
                     selected:
-                        i18n.global.t(
-                            `Vice-suggestions.${capitalize(detail.id)}.text`
-                        ) === scoundrel.viceDetail
+                        t(`Vice-suggestions.${capitalize(detail.id)}.text`) ===
+                        scoundrel.viceDetail
                 }"
                 @click="onClickViceDetail(detail.id)"
             >
@@ -81,7 +80,7 @@ import vices from '@/assets/data/vices.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
 import { TraitDetail } from '@/data-types';
-import i18n from '@/i18n/locale';
+import { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
@@ -110,14 +109,14 @@ function onClickViceDetail(viceDetail: string) {
     // Set the vice detail to empty if it's already selected
     if (
         props.scoundrel.viceDetail ===
-        i18n.global.t(`Vice-suggestions.${capitalize(viceDetail)}.text`)
+        t(`Vice-suggestions.${capitalize(viceDetail)}.text`)
     ) {
         props.scoundrel.viceDetail = '';
         return;
     }
 
     // Choose the vice detail
-    props.scoundrel.viceDetail = i18n.global.t(
+    props.scoundrel.viceDetail = t(
         `Vice-suggestions.${capitalize(viceDetail)}.text`
     );
 }

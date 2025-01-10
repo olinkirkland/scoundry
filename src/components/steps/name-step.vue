@@ -80,7 +80,7 @@ import looksData from '@/assets/data/looks.json';
 import namesData from '@/assets/data/names.json';
 import portraitsData from '@/assets/data/portraits.json';
 import StepHeader from '@/components/step-header.vue';
-import i18n from '@/i18n/locale';
+import { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { randomItem } from '@/util/random';
 import { capitalize } from '@/util/string-util';
@@ -101,9 +101,7 @@ function randomizeName() {
 }
 
 function randomizeAlias() {
-    props.scoundrel.alias = i18n.global.t(
-        'Names.Aliases.' + randomItem(aliases)
-    );
+    props.scoundrel.alias = t('Names.Aliases.' + randomItem(aliases));
 }
 
 function randomizeLook() {
@@ -118,26 +116,22 @@ function randomizeLook() {
     const wearingWordsKeys = ['wearing', 'sporting', 'dressed-in'];
 
     const personWordKey = randomItem(personWordsKeys);
-    const personWordArticle = i18n.global.t(
-        `Looks.Person-words.${personWordKey}.article`
-    );
-    const personWord = i18n.global.t(
-        `Looks.Person-words.${personWordKey}.word`
-    );
-    const personWordAdjective1 = i18n.global.t(
+    const personWordArticle = t(`Looks.Person-words.${personWordKey}.article`);
+    const personWord = t(`Looks.Person-words.${personWordKey}.word`);
+    const personWordAdjective1 = t(
         `Looks.Person-word-adjectives.${randomItem(adjectives)}`
     );
-    const personWordAdjective2 = i18n.global.t(
+    const personWordAdjective2 = t(
         `Looks.Person-word-adjectives.${randomItem(adjectives)}`
     );
     const wearingWordKey = randomItem(wearingWordsKeys);
-    const wearingWord = i18n.global.t(`Looks.Joining-words.${wearingWordKey}`);
+    const wearingWord = t(`Looks.Joining-words.${wearingWordKey}`);
 
-    const apparel1 = i18n.global.t(`Looks.Apparel.${randomItem(apparel)}`);
-    const apparel2 = i18n.global.t(`Looks.Apparel.${randomItem(apparel)}`);
+    const apparel1 = t(`Looks.Apparel.${randomItem(apparel)}`);
+    const apparel2 = t(`Looks.Apparel.${randomItem(apparel)}`);
 
     const lookTemplate = randomItem(lookTemplatesKeys);
-    const look = i18n.global.t(`Looks.Templates.${lookTemplate}`, {
+    const look = t(`Looks.Templates.${lookTemplate}`, {
         personWordArticle: personWordArticle,
         personWordAdjective1: personWordAdjective1,
         personWordAdjective2: personWordAdjective2,
@@ -154,11 +148,10 @@ function randomizeLook() {
 function joinWithAnd(arr: string[]) {
     if (arr.length === 0) return '';
     if (arr.length === 1) return arr[0];
-    if (arr.length === 2)
-        return arr.join(` ${i18n.global.t('Looks.Joining-words.and')} `);
+    if (arr.length === 2) return arr.join(` ${t('Looks.Joining-words.and')} `);
     return (
         arr.slice(0, -1).join(', ') +
-        `, ${i18n.global.t('Looks.Joining-words.and')} ` +
+        `, ${t('Looks.Joining-words.and')} ` +
         arr.slice(-1)
     );
 }

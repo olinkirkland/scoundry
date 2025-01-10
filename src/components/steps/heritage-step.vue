@@ -5,11 +5,9 @@
         <a
             @click="
                 ModalController.open(ImageModal, {
-                    title: i18n.global.t(
-                        'User-interface.Modals.World-map.title'
-                    ),
+                    title: t('User-interface.Modals.World-map.title'),
                     image: '/assets/images/world-map.png',
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#ffffff'
                 })
             "
         >
@@ -79,7 +77,7 @@ import heritages from '@/assets/data/heritages.json';
 import StepHeader from '@/components/step-header.vue';
 import TraitCard from '@/components/trait-card.vue';
 import ModalController from '@/controllers/modal-controller';
-import i18n from '@/i18n/locale';
+import { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { capitalize } from '@/util/string-util';
 import { computed } from 'vue';
@@ -114,7 +112,7 @@ function onClickHeritage(heritage: string) {
 }
 
 function onClickHeritageDetail(heritageDetail: TraitDetail) {
-    const label = i18n.global.t(`Heritage-suggestions.${heritageDetail.id}`);
+    const label = t(`Heritage-suggestions.${heritageDetail.id}`);
 
     // Set the heritage detail to empty if it's already selected
     if (props.scoundrel.heritageDetail === label) {

@@ -1,4 +1,4 @@
-import i18n from '@/i18n/locale';
+import i18n, { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { getActionValue } from './action-util';
 import { makeSemanticId } from './id-util';
@@ -6,9 +6,9 @@ import { capitalize } from './string-util';
 
 export function getSemanticScoundrelName(scoundrel: Scoundrel) {
     if (scoundrel.name) return scoundrel.name;
-    if (!scoundrel.playbook) return i18n.global.t('User-interface.Home-page.Scoundrel-card.no-playbook');
-    const playbookLabel = i18n.global.t(`Playbooks.${capitalize(scoundrel.playbook)}.label`);
-    return i18n.global.t('User-interface.Home-page.Scoundrel-card.no-name', { playbook: playbookLabel });
+    if (!scoundrel.playbook) return t('User-interface.Home-page.Scoundrel-card.no-playbook');
+    const playbookLabel = t(`Playbooks.${capitalize(scoundrel.playbook)}.label`);
+    return t('User-interface.Home-page.Scoundrel-card.no-name', { playbook: playbookLabel });
 }
 
 export function getAttributeValue(
