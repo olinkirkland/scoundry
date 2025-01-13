@@ -80,6 +80,22 @@
                                 )
                             }}</span>
                         </li>
+                        <li
+                            :class="{
+                                enabled:
+                                    !languageFeatures[
+                                        useI18n().locale
+                                            .value as keyof typeof languageFeatures
+                                    ].deepCuts
+                            }"
+                        >
+                            <img src="/assets/icons/done.png" />
+                            <span>{{
+                                $t(
+                                    'User-interface.Modals.Settings.Language.Language-features.deep-cuts'
+                                )
+                            }}</span>
+                        </li>
                     </ul>
                 </section>
                 <section>
@@ -123,17 +139,20 @@ const languageFeatures = {
     en: {
         ui: true,
         data: true,
-        sheets: true
+        sheets: true,
+        deepCuts: true
     },
     es: {
         ui: true,
-        data: false,
-        sheets: false
+        data: true,
+        sheets: true,
+        deepCuts: false
     },
     de: {
         ui: true,
         data: true,
-        sheets: false
+        sheets: true,
+        deepCuts: false
     }
 };
 
