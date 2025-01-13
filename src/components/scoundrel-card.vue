@@ -62,7 +62,7 @@ const semanticName = computed(() => {
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     border: 1px solid transparent;
     top: 0;
