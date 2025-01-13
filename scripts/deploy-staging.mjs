@@ -26,27 +26,28 @@ try {
     try {
         execSync(`git remote add staging-repo ${REPO_URL}`);
     } catch (e) {
-        console.log('Remote "staging-repo" already exists.');
     }
 
-    // Temporarily add `dist` to Git index even if it's ignored
-    console.log('Temporarily adding dist directory to Git index...');
+    // Commit any changes in `dist`
+    console.log('Preparing dist directory for deployment...');
     execSync(`git add -f ${DIST_DIR}`);
-
-    // Commit the dist changes
-    console.log('Committing dist directory changes...');
     execSync('git commit -m "Deploy dist directory to gh-pages"', { stdio: 'inherit' });
 
-    // Push the subtree (without --squash)
-    console.log('Pushing dist directory to staging repo gh-pages...');
+    // Create a subtree split and push
+    console.log('Creating subtree split...');
+    const ghPagesBranch = execSync(`git subtree split --prefix=${DIST_DIR}`)
+        .toString()
+        .trim();
+
+    console.log('Force pushing dist directory to staging repo gh-pages...');
     execSync(
-        `git subtree push --prefix=${DIST_DIR} staging-repo gh-pages`,
+        `git push staging-repo ${ghPagesBranch}:gh-pages --force`,
         { stdio: 'inherit' }
     );
 
     // Remove `dist` from the index to respect .gitignore
     console.log('Cleaning up: removing dist from Git index...');
-    execSync(`git reset ${DIST_DIR}`);
+    execSync('git reset', { stdio: 'inherit' });
 
     console.log('Deployment to staging completed successfully!');
 } catch (error) {
