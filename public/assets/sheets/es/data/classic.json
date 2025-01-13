@@ -82,22 +82,22 @@
         "ghost-voice": { "x": 1097, "y": 757 },
 
         "foresight": { "x": 1097, "y": 238 },
-        "calculating": { "x": 1097, "y": 300 },
-        "connected": { "x": 1097, "y": 400 },
-        "functioning-vice": { "x": 1097, "y": 500 },
-        "ghost-contract": { "x": 1097, "y": 600 },
-        "jail-bird": { "x": 1097, "y": 700 },
-        "mastermind": { "x": 1097, "y": 800 },
-        "weaving-the-web": { "x": 1097, "y": 900 },
+        "calculating": { "x": 1097, "y": 315 },
+        "connected": { "x": 1097, "y": 392.5 },
+        "ghost-contract": { "x": 1097, "y": 445.5 },
+        "mastermind": { "x": 1097, "y": 546.5 },
+        "jail-bird": { "x": 1097, "y": 623.5 },
+        "weaving-the-web": { "x": 1097, "y": 724.5 },
+        "functioning-vice": { "x": 1097, "y": 801.5 },
 
-        "compel": { "x": 1097, "y": 238 },
-        "ghost-mind": { "x": 1097, "y": 300 },
-        "iron-will": { "x": 1097, "y": 400 },
-        "occultist": { "x": 1097, "y": 500 },
-        "ritual": { "x": 1097, "y": 600 },
-        "strange-methods": { "x": 1097, "y": 700 },
-        "tempest": { "x": 1097, "y": 800 },
-        "warded": { "x": 1097, "y": 900 }
+        "compel": { "x": 1095.5, "y": 229.5 },
+        "ghost-mind": { "x": 1095.5, "y": 334 },
+        "strange-methods": { "x": 1095.5, "y": 414 },
+        "occultist": { "x": 1095.5, "y": 494.5 },
+        "warded": { "x": 1095.5, "y": 575 },
+        "ritual": { "x": 1095.5, "y": 630 },
+        "tempest": { "x": 1095.5, "y": 710 },
+        "iron-will": { "x": 1095.5, "y": 790 }
     },
     "friends": {
         "marlane": {
