@@ -19,8 +19,8 @@
         "noble": { "x": 848, "y": 453, "w": 90 },
         "underworld": { "x": 976, "y": 453, "w": 160 }
     },
-    "heritageText": { "x": 105, "y": 400 },
-    "backgroundText": { "x": 605, "y": 400 },
+    "heritageText": { "x": 88, "y": 360 },
+    "backgroundText": { "x": 588, "y": 360 },
     "actions": {
         "survey": { "x": 2000, "y": 302 },
         "hunt": { "x": 2000, "y": 330.6 },
@@ -139,5 +139,5 @@
         "stupor": { "x": 920, "y": 542, "w": 100 },
         "weird": { "x": 1015, "y": 542, "w": 95 }
     },
-    "viceText": { "x": 100, "y": 515 }
+    "viceText": { "x": 88, "y": 465 }
 }
