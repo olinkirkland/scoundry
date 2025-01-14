@@ -124,7 +124,7 @@ const inkColors = [
     '#131313'
 ];
 
-const fonts = ['font-sheet-1', 'font-sheet-2', 'font-sheet-3'];
+const fonts = ['font-sheet-1', 'font-sheet-2', 'font-sheet-3', 'font-sheet-4'];
 
 if (!props.scoundrel.preferredInkColor)
     props.scoundrel.preferredInkColor = inkColors[0];

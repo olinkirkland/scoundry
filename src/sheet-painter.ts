@@ -13,7 +13,7 @@ export async function paintSheet(
     console.log(`painting a ${sheetType} sheet for a ${scoundrel.playbook}`);
     console.log(`using ${font} in ${color}`);
 
-    if (!document.fonts.check(`32px ${font}`))
+    if (!document.fonts.check(`36px ${font}`))
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
     if (sheetType === 'classic')
@@ -43,7 +43,7 @@ async function paintClassicSheet(
             const roughCanvas = rough.canvas(canvas);
             const ctx = canvas.getContext('2d')!;
             ctx.drawImage(template, 0, 0);
-            ctx.font = `24px ${font}`;
+            ctx.font = `28px ${font}`;
             ctx.fillStyle = color;
             ctx.strokeStyle = 'red';
             ctx.lineWidth = 2;
