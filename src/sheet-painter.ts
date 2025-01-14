@@ -1,6 +1,7 @@
 import rough from 'roughjs';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
+import { RoughCanvas } from 'roughjs/bin/canvas';
 
 export async function paintSheet(
     scoundrel: Scoundrel
@@ -55,18 +56,15 @@ async function paintClassicSheet(
                     scoundrel.heritage as keyof typeof data.heritages
                 ];
             if (heritage) {
-                // Use roughjs to draw the oval
-                // No fill; thick, colored stroke
-                roughCanvas.rectangle(
-                    heritage.x - heritage.w / 2,
-                    heritage.y - heritageBoxHeight / 2,
+                drawRectangle(
+                    roughCanvas,
+                    {
+                        x: heritage.x - heritage.w / 2,
+                        y: heritage.y - heritageBoxHeight / 2
+                    },
                     heritage.w,
                     heritageBoxHeight,
-                    {
-                        roughness: 2,
-                        stroke: color,
-                        strokeWidth: 4
-                    }
+                    color
                 );
             }
 
@@ -77,18 +75,15 @@ async function paintClassicSheet(
                     scoundrel.background as keyof typeof data.backgrounds
                 ];
             if (background) {
-                // Use roughjs to draw the oval
-                // No fill; thick, colored stroke
-                roughCanvas.rectangle(
-                    background.x - background.w / 2,
-                    background.y - backgroundBoxHeight / 2,
+                drawRectangle(
+                    roughCanvas,
+                    {
+                        x: background.x - background.w / 2,
+                        y: background.y - backgroundBoxHeight / 2
+                    },
                     background.w,
                     backgroundBoxHeight,
-                    {
-                        roughness: 2,
-                        stroke: color,
-                        strokeWidth: 4
-                    }
+                    color
                 );
             }
 
@@ -166,18 +161,15 @@ async function paintClassicSheet(
             const viceBoxHeight = 36;
             const vice = data.vices[scoundrel.vice as keyof typeof data.vices];
             if (vice) {
-                // Use roughjs to draw the oval
-                // No fill; thick, colored stroke
-                roughCanvas.rectangle(
-                    vice.x - vice.w / 2,
-                    vice.y - viceBoxHeight / 2,
+                drawRectangle(
+                    roughCanvas,
+                    {
+                        x: vice.x - vice.w / 2,
+                        y: vice.y - viceBoxHeight / 2
+                    },
                     vice.w,
                     viceBoxHeight,
-                    {
-                        roughness: 2,
-                        stroke: color,
-                        strokeWidth: 4
-                    }
+                    color
                 );
             }
 
@@ -463,6 +455,37 @@ function drawBubble(
     ctx.beginPath();
     ctx.arc(point.x, point.y, radius, 0, 2 * Math.PI);
     ctx.fill();
+}
+
+function drawRectangle(
+    roughCanvas: RoughCanvas,
+    point: { x: number; y: number },
+    width: number,
+    height: number,
+    color: string
+) {
+    roughCanvas.rectangle(point.x, point.y, width, height, {
+        roughness: 2,
+        stroke: color,
+        strokeWidth: 2
+    });
+
+    if (localStorage.getItem('debug') === 'true') {
+        // Draw a cross in the center
+        const size = 6;
+        const p = { x: point.x + width / 2, y: point.y + height / 2 };
+        roughCanvas.line(p.x - size, p.y, p.x + size, p.y, {
+            roughness: 0,
+            stroke: color,
+            strokeWidth: 4
+        });
+
+        roughCanvas.line(p.x, p.y - size, p.x, p.y + size, {
+            roughness: 0,
+            stroke: color,
+            strokeWidth: 4
+        });
+    }
 }
 
 async function getFont(variableName: string) {

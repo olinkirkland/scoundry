@@ -136,7 +136,7 @@ const savedMetadata = ref<Metadata[]>(getSavedMetadata()); // Use for timestamps
 // isStaging if the url is 'lab.scoundry.com' or localStorage contains 'lab === "true"'
 const isStaging =
     location.hostname === 'lab.scoundry.com' ||
-    localStorage.getItem('lab') === 'true';
+    localStorage.getItem('debug') === 'true';
 
 onMounted(() => {
     fetch('/assets/news.json?_t=' + Date.now())
