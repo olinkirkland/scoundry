@@ -1,7 +1,12 @@
 <template>
     <div class="page page--home page-in" ref="page">
         <div class="page-content">
-            <h1>Scoundry</h1>
+            <div class="title">
+                <h1>Scoundry</h1>
+                <div class="lab-banner" v-if="isStaging">
+                    {{ $t('User-interface.Home-page.lab-banner') }}
+                </div>
+            </div>
             <p v-html="$t('User-interface.Home-page.description')"></p>
 
             <div class="row controls">
@@ -120,7 +125,6 @@ import { APP_VERSION } from '@/main';
 import { PageName, router } from '@/router';
 import { onMounted, ref } from 'vue';
 import { Scoundrel } from '../scoundrel';
-import ConfirmModal from '@/components/modals/templates/confirm-modal.vue';
 
 const page = ref<HTMLElement | null>(null);
 const savedScoundrels = ref<Scoundrel[]>([]);
@@ -128,6 +132,11 @@ savedScoundrels.value = getSavedScoundrels().filter(
     (scoundrel: Scoundrel) => !!scoundrel
 ); // Remove any nulls
 const savedMetadata = ref<Metadata[]>(getSavedMetadata()); // Use for timestamps
+
+// isStaging if the url is 'lab.scoundry.com' or localStorage contains 'lab === "true"'
+const isStaging =
+    location.hostname === 'lab.scoundry.com' ||
+    localStorage.getItem('lab') === 'true';
 
 onMounted(() => {
     fetch('/assets/news.json?_t=' + Date.now())
@@ -192,17 +201,33 @@ function getLastUpdated(scoundrelId: string) {
     pointer-events: none;
 }
 
-h1 {
+.title {
     position: relative;
-    font-family: var(--font-display);
-    color: var(--color-on-surface);
-    font-size: 12rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-align: center;
+
+    h1 {
+        position: relative;
+        font-family: var(--font-display);
+        color: var(--color-on-surface);
+        font-size: 12rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-align: center;
+    }
+
+    .lab-banner {
+        position: absolute;
+        transform: rotate(-5deg);
+        bottom: 3.2rem;
+        right: -2.4rem;
+        z-index: 99;
+        background-color: var(--color-purple);
+        padding: 0rem 0.8rem;
+        font-size: 2.4rem;
+        font-family: var(--font-sheet-2);
+    }
 }
 
-h1 + p,
+.title + p,
 a {
     margin-bottom: 4rem;
     text-align: center;
@@ -309,11 +334,18 @@ ul.saved-scoundrels-list {
         }
     }
 
-    h1 {
-        font-size: 5.2rem;
-    }
+    .title {
+        > h1 {
+            font-size: 5.2rem;
+        }
 
-    h1 + p,
+        .lab-banner {
+            font-size: 1.2rem;
+            bottom: 0.4rem;
+            right: -0.4rem;
+        }
+    }
+    .title + p,
     a {
         font-size: 1.4rem;
     }
