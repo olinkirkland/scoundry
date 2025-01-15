@@ -233,6 +233,7 @@ function getLastUpdated(scoundrelId: string) {
 .title + p,
 a {
     margin-bottom: 4rem;
+    padding: 0 1.2rem;
     text-align: center;
 }
 
