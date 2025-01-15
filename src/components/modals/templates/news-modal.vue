@@ -56,7 +56,7 @@ const newsItems = ref([] as NewsItem[]);
 fetch('/assets/news.json?_t=' + Date.now())
     .then((response) => response.json())
     .then((data) => {
-        newsItems.value = data;
+        newsItems.value = data.reverse();
         localStorage.setItem('lastNewsIdSeen', data[0].id);
     });
 </script>
@@ -67,6 +67,12 @@ fetch('/assets/news.json?_t=' + Date.now())
     max-width: 64rem;
     display: flex;
     flex-direction: column;
+
+    > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
 }
 
 .preview-container {
@@ -102,6 +108,10 @@ fetch('/assets/news.json?_t=' + Date.now())
 
         * {
             line-height: 1.6;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 0.8rem;
         }
 
         h3 {

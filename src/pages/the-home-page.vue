@@ -143,9 +143,12 @@ onMounted(() => {
         .then((response) => response.json())
         .then((data) => {
             const lastNewsIdSeen = localStorage.getItem('lastNewsIdSeen');
-            const newsIds = data.map((n: any) => n.id);
-            const newestNewsId = newsIds[0].toString();
-            if (newestNewsId !== lastNewsIdSeen)
+            const newsIds = data
+                .map((n: any) => n.id)
+                .sort()
+                .reverse();
+            const largestNewsId = newsIds[0].toString();
+            if (largestNewsId !== lastNewsIdSeen)
                 ModalController.open(NewsModal);
         });
 });
@@ -284,6 +287,11 @@ footer {
     }
 
     > .logo-and-olin {
+        p,
+        a {
+            text-align: left;
+        }
+
         h2 {
             font-family: var(--font-display);
             font-size: 2.4rem;
