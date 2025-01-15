@@ -229,7 +229,7 @@ async function paintDeepCutsSheet(
             const roughCanvas = rough.canvas(canvas);
             const ctx = canvas.getContext('2d')!;
             ctx.drawImage(template, 0, 0);
-            ctx.font = `40px ${font}`;
+            ctx.font = `32px ${font}`;
             ctx.fillStyle = color;
             ctx.strokeStyle = 'red';
             ctx.lineWidth = 2;
@@ -280,7 +280,7 @@ async function paintDeepCutsSheet(
                     action,
                     data.actions,
                     29,
-                    9.5
+                    10
                 );
             });
 
@@ -290,7 +290,7 @@ async function paintDeepCutsSheet(
                 if (data.abilities.hasOwnProperty(ability)) {
                     const point =
                         data.abilities[ability as keyof typeof data.abilities];
-                    drawBubble(ctx, point);
+                    drawBubble(ctx, point, 12);
                 }
             });
 
