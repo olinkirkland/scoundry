@@ -1,58 +1,34 @@
 [
     {
-        "path": "portraits/edward-roye.png",
+        "path": "portraits/david-dudley-field.png",
         "source": "Library of Congress"
     },
-    {
-        "path": "portraits/emma-bostwick.png",
-        "source": "Library of Congress"
-    },
+    { "path": "portraits/edward-roye.png", "source": "Library of Congress" },
+    { "path": "portraits/emma-bostwick.png", "source": "Library of Congress" },
     {
         "path": "portraits/george-wallace-jones.png",
         "source": "Library of Congress"
     },
-    {
-        "path": "portraits/jacob-collamer.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/john-kennedy.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/john-van-buren.png",
-        "source": "Library of Congress"
-    },
+    { "path": "portraits/jacob-collamer.png", "source": "Library of Congress" },
+    { "path": "portraits/james-duncan.png", "source": "Library of Congress" },
+    { "path": "portraits/john-hanson.png", "source": "Library of Congress" },
+    { "path": "portraits/john-kennedy.png", "source": "Library of Congress" },
+    { "path": "portraits/john-van-buren.png", "source": "Library of Congress" },
+    { "path": "portraits/louis-blane.png", "source": "Library of Congress" },
+    { "path": "portraits/man-1.png", "source": "Library of Congress" },
     {
         "path": "portraits/nathaniel-hawthorne.png",
         "source": "Library of Congress"
     },
-    {
-        "path": "portraits/robert-smalls.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/susie-taylor.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/tom-thumb.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/william-cranch.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/woman-1.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/woman-2.png",
-        "source": "Library of Congress"
-    },
-    {
-        "path": "portraits/wong-kim-ark.png",
-        "source": "Wikicommons"
-    }
+    { "path": "portraits/officer-1.png", "source": "Library of Congress" },
+    { "path": "portraits/robert-smalls.png", "source": "Library of Congress" },
+    { "path": "portraits/susie-taylor.png", "source": "Library of Congress" },
+    { "path": "portraits/tom-thumb.png", "source": "Library of Congress" },
+    { "path": "portraits/william-allen.png", "source": "Library of Congress" },
+    { "path": "portraits/william-cranch.png", "source": "Library of Congress" },
+    { "path": "portraits/woman-1.png", "source": "Library of Congress" },
+    { "path": "portraits/woman-2.png", "source": "Library of Congress" },
+    { "path": "portraits/woman-3.png", "source": "Library of Congress" },
+    { "path": "portraits/woman-4.png", "source": "Library of Congress" },
+    { "path": "portraits/wong-kim-ark.png", "source": "Library of Congress" }
 ]
