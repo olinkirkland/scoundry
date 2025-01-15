@@ -220,7 +220,7 @@ async function paintDeepCutsSheet(
     const data = await fetchSheetData(scoundrel.language || 'en', 'deep-cuts');
     return new Promise((resolve, reject) => {
         const template = new Image();
-        template.src = `/assets/sheets/sheet-images/dc-${scoundrel.playbook}.png`;
+        template.src = `/assets/sheets/${scoundrel.language || 'en'}/${scoundrel.playbook}-dc.png`; // en is the default language and fallback for previous app versions
 
         template.onload = () => {
             const canvas = document.createElement('canvas');

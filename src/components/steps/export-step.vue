@@ -4,15 +4,16 @@
         <p v-html="$t('User-interface.Steps.Export.subtitle')"></p>
     </step-header>
     <div class="save">
-        <span class="sheet-type" v-if="false">
+        <div class="sheet-type" v-if="props.scoundrel.language === 'en'">
             <a
                 @click="onClickChangeSheetType('classic')"
                 :class="{
                     selected: props.scoundrel.preferredSheetType === 'classic'
                 }"
-                >Classic</a
             >
-            or
+                {{ $t('User-interface.Steps.Export.Controls.classic-sheet') }}
+            </a>
+            <span>❖</span>
             <a
                 @click="onClickChangeSheetType('deep-cuts')"
                 :class="{
@@ -21,8 +22,7 @@
             >
                 Deep Cuts
             </a>
-            ?
-        </span>
+        </div>
 
         <div class="ink-row">
             <button class="btn btn--mini cycle-font" @click="cycleFont">
@@ -317,6 +317,8 @@ ul.ink-colors {
 }
 
 .sheet-type {
+    display: flex;
+    gap: 1.2rem;
     margin: 0 auto;
 
     > a.selected {
