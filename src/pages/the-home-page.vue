@@ -230,8 +230,7 @@ function getLastUpdated(scoundrelId: string) {
     }
 }
 
-.title + p,
-a {
+.title + p {
     margin-bottom: 4rem;
     padding: 0 1.2rem;
     text-align: center;
@@ -288,11 +287,6 @@ footer {
     }
 
     > .logo-and-olin {
-        p,
-        a {
-            text-align: left;
-        }
-
         h2 {
             font-family: var(--font-display);
             font-size: 2.4rem;
