@@ -228,120 +228,120 @@
   "Actions": {
     "Attune": {
       "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology.",
-      "label": "Attune"
+      "label": "Communier"
     },
     "Command": {
       "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs.",
-      "label": "Command"
+      "label": "Commander"
     },
     "Consort": {
       "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places.",
-      "label": "Consort"
+      "label": "Côtoyer"
     },
     "Finesse": {
       "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount.",
-      "label": "Finesse"
+      "label": "Manoeuvrer"
     },
     "Hunt": {
       "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance.",
-      "label": "Hunt"
+      "label": "Traquer"
     },
     "Prowl": {
       "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc.",
-      "label": "Prowl"
+      "label": "Rôder"
     },
     "Skirmish": {
       "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle.",
-      "label": "Skirmish"
+      "label": "Combattre"
     },
     "Study": {
       "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research.",
-      "label": "Study"
+      "label": "Etudier"
     },
     "Survey": {
       "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits.",
-      "label": "Survey"
+      "label": "Surveiller"
     },
     "Sway": {
       "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction.",
-      "label": "Sway"
+      "label": "Influencer"
     },
     "Tinker": {
       "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices.",
-      "label": "Tinker"
+      "label": "Bricoler"
     },
     "Wreck": {
       "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos.",
-      "label": "Wreck"
+      "label": "Démolir"
     }
   },
   "Attributes": {
-    "insight": "Insight",
-    "prowess": "Prowess",
-    "resolve": "Resolve"
+    "insight": "Perspicacité",
+    "prowess": "Prouesse",
+    "resolve": "Détermination"
   },
   "Background-suggestions": {
     "acolyte-spirit-warden": "Acolyte Spirit Warden",
-    "antiquarian": "Antiquarian",
+    "antiquarian": "Antiquaire",
     "artisan": "Artisan",
-    "artist": "Artist",
-    "bluecoat": "Bluecoat",
-    "bounty-hunter": "Bounty Hunter",
-    "captain": "Captain",
-    "convict": "Convict",
-    "councilor": "Councilor",
-    "courier": "Courier",
-    "courtier": "Courtier",
-    "criminologist": "Criminologist",
-    "cultist": "Cultist",
-    "dealer": "Dealer",
-    "demonologist": "Demonologist",
+    "artist": "Artiste",
+    "bluecoat": "Manteau bleu",
+    "bounty-hunter": "Chasseur de prime",
+    "captain": "Capitaine",
+    "convict": "Condamné",
+    "councilor": "Conseiller",
+    "courier": "Coursier",
+    "courtier": "Courtisan",
+    "criminologist": "Criminologue",
+    "cultist": "Cultiste",
+    "dealer": "Trafiquant",
+    "demonologist": "Démonologue",
     "dilettante": "Dilettante",
-    "diplomat": "Diplomat",
+    "diplomat": "Diplomate",
     "docker": "Docker",
-    "driver": "Driver",
-    "duelist": "Duelist",
-    "electrochemist": "Electrochemist",
-    "engineer": "Engineer",
-    "envoy": "Envoy",
-    "explorer": "Explorer",
-    "factory-worker": "Factory Worker",
-    "farmhand": "Farmhand",
-    "fence": "Fence",
-    "fighter": "Fighter",
-    "firefighter": "Firefighter",
+    "driver": "Conducteur",
+    "duelist": "Dueliste",
+    "electrochemist": "Electrochimiste",
+    "engineer": "Ingénieur",
+    "envoy": "Emissaire",
+    "explorer": "Explorateur",
+    "factory-worker": "Ouvrier",
+    "farmhand": "Ouvrier agricole",
+    "fence": "Receleur",
+    "fighter": "Combattant",
+    "firefighter": "Pompier",
     "gondolier": "Gondolier",
-    "hustler": "Hustler",
-    "informant": "Informant",
-    "journalist": "Journalist",
+    "hustler": "Arnaqueur",
+    "informant": "Informateur",
+    "journalist": "Journaliste",
     "lark": "Lark",
-    "leviathan-hunter": "Leviathan Hunter",
+    "leviathan-hunter": "Chasseur de léviathans",
     "linewalker": "Linewalker",
-    "mediciner": "Mediciner",
-    "merchant": "Merchant",
-    "military-guardsman": "Military Guardsman",
-    "miner": "Miner",
-    "ministry-agent": "Ministry Agent",
-    "naturalist": "Naturalist",
-    "occultist": "Occultist",
-    "psychometrist": "Psychometrist",
-    "purveyor": "Purveyor",
-    "rail-jack": "Rail Jack",
-    "rifle-scout": "Rifle Scout",
-    "roof-runner": "Roof Runner",
-    "sailor": "Sailor",
-    "scavenger": "Scavenger",
-    "scholar": "Scholar",
-    "secretary": "Secretary",
-    "sentry": "Sentry",
-    "servant": "Servant",
+    "mediciner": "Médecin",
+    "merchant": "Marchant",
+    "military-guardsman": "Garde militaire",
+    "miner": "Mineur",
+    "ministry-agent": "Agent du ministère",
+    "naturalist": "Naturaliste",
+    "occultist": "Occultiste",
+    "psychometrist": "Psychometricien",
+    "purveyor": "Fournisseur",
+    "rail-jack": "Cheminot",
+    "rifle-scout": "Eclaireur",
+    "roof-runner": "Monte en l'air",
+    "sailor": "Marin",
+    "scavenger": "Pilleur",
+    "scholar": "Erudit",
+    "secretary": "Secrétaire",
+    "sentry": "Sentinelle",
+    "servant": "Serviteur",
     "sparkwright": "Sparkwright",
-    "spectrologist": "Spectrologist",
-    "steward": "Steward",
-    "taverner": "Taverner",
-    "technician": "Technician",
-    "thief": "Thief",
-    "thug": "Thug"
+    "spectrologist": "Spectrologue",
+    "steward": "Intendant",
+    "taverner": "Tavernier",
+    "technician": "Technicien",
+    "thief": "Voleur",
+    "thug": "Voyou"
   },
   "Backgrounds": {
     "Academic": {
@@ -375,143 +375,143 @@
   },
   "Friends": {
     "Augus": {
-      "description": "A master architect",
+      "description": "Un maitre architecte",
       "label": "Augus"
     },
     "Bazso-baz": {
-      "description": "A gang leader",
+      "description": "Un chef de gang",
       "label": "Bazso Baz"
     },
     "Bryl": {
-      "description": "A drug dealer",
+      "description": "Un trafiquant de drogues",
       "label": "Bryl"
     },
     "Casta": {
-      "description": "A bounty hunter",
+      "description": "Un chasseur de primes",
       "label": "Casta"
     },
     "Celene": {
-      "description": "A sentinel",
+      "description": "Une sentinelle",
       "label": "Celene"
     },
     "Chael": {
-      "description": "A vicious thug",
+      "description": "Un voyou vicieux",
       "label": "Chael"
     },
     "Darmot": {
-      "description": "A bluecoat",
+      "description": "Un manteau bleu",
       "label": "Darmot"
     },
     "Eckerd": {
-      "description": "A corpse thief",
+      "description": "Un voleur de cadavres",
       "label": "Eckerd"
     },
     "Flint": {
-      "description": "A spirit trafficker",
+      "description": "Un trafiquant d'esprits",
       "label": "Flint"
     },
     "Frake": {
-      "description": "A locksmith",
+      "description": "Un serrurier",
       "label": "Frake"
     },
     "Grace": {
-      "description": "An extortionist",
+      "description": "Une extorqueuse",
       "label": "Grace"
     },
     "Harker": {
-      "description": "A jail bird",
+      "description": "Un gibier de potence",
       "label": "Harker"
     },
     "Jennah": {
-      "description": "A servant",
+      "description": "Une domestique",
       "label": "Jennah"
     },
     "Jeren": {
-      "description": "A bluecoat archivist",
+      "description": "Un archiviste des manteaux bleus",
       "label": "Jeren"
     },
     "Jul": {
-      "description": "A blood dealer",
+      "description": "Un trafiquant de sang",
       "label": "Jul"
     },
     "Khyra": {
-      "description": "A tavern owner",
+      "description": "Une tenancière de taverne",
       "label": "Khyra"
     },
     "Malista": {
-      "description": "A priestess",
+      "description": "Une prétresse",
       "label": "Malista"
     },
     "Marlane": {
-      "description": "A pugilist",
+      "description": "Un pugiliste",
       "label": "Marlane"
     },
     "Melvir": {
-      "description": "A physicker",
+      "description": "Un médecin",
       "label": "Melvir"
     },
     "Mercy": {
-      "description": "A cold killer",
+      "description": "Une tueuse de sang-froid",
       "label": "Mercy"
     },
     "Nyryx-2": {
-      "description": "A possessor ghost",
+      "description": "Un fantôme possesseur",
       "label": "Nyryx"
     },
     "Nyryx": {
-      "description": "A prostitute",
+      "description": "Une prostituée",
       "label": "Nyryx"
     },
     "Petra": {
-      "description": "A city clerk",
+      "description": "Une secrétaire municipale",
       "label": "Petra"
     },
     "Quellyn": {
-      "description": "A witch",
+      "description": "Une sorcière",
       "label": "Quellyn"
     },
     "Riven": {
-      "description": "A chemist",
+      "description": "Un chimiste",
       "label": "Riven"
     },
     "Roslyn-kellis": {
-      "description": "A noble",
+      "description": "Une noble",
       "label": "Roslyn Kellis"
     },
     "Salia": {
-      "description": "An information broker",
+      "description": "Une courtière en informations",
       "label": "Salia"
     },
     "Sawtooth": {
-      "description": "A physicker",
+      "description": "Un médecin",
       "label": "Sawtooth"
     },
     "Scurlock": {
-      "description": "A vampire",
+      "description": "Un vampire",
       "label": "Scurlock"
     },
     "Setarra": {
-      "description": "A demon",
+      "description": "Un démon",
       "label": "Setarra"
     },
     "Stazia": {
-      "description": "An apothecary",
+      "description": "Un aptothicaire",
       "label": "Stazia"
     },
     "Steiner": {
-      "description": "An assassin",
+      "description": "Un assassin",
       "label": "Steiner"
     },
     "Telda": {
-      "description": "A beggar",
+      "description": "Un mendiant",
       "label": "Telda"
     },
     "Veldren": {
-      "description": "A psychonaut",
+      "description": "Un psychonaute",
       "label": "Veldren"
     },
     "Veleris": {
-      "description": "A spy",
+      "description": "Un espion",
       "label": "Veleris"
     }
   },
