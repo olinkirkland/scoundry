@@ -345,32 +345,32 @@
   },
   "Backgrounds": {
     "Academic": {
-      "description": "A scholar, a professor or student from Doskvol Academy, a philosopher or journalist, etc.",
-      "label": "Academic"
+      "description": "Un érudit, un professeur ou un étudiant à l'Académie de Doskvol, un philosohe ou un journaliste, etc.",
+      "label": "Académique"
     },
     "Labor": {
-      "description": "A servant, a factory worker, a coach driver, a docker, a sailor, a Rail Jack, etc. A stevedore for the North Hook Company.",
-      "label": "Labor"
+      "description": "Un domestique, un ouvrier, un cocher, un docker, un marin, un poseur de rails, etc. Un débardeur pour la Compagnie Crochet Nord.",
+      "label": "Labeur"
     },
     "Law": {
-      "description": "An advocate or barrister, a Bluecoat or inspector (or even Spirit Warden), a prison guard from Ironhook, etc.",
-      "label": "Law"
+      "description": "Un avocat ou un juriste, un Manteau Bleu ou un inspecteur (voire un Gardien Spirite), un maton dans la prison de Crochet-de-Fer, etc.",
+      "label": "Loi"
     },
     "Military": {
-      "description": "An Imperial or Skovlander soldier, a mercenary, an intelligence operative, a strategist, a training instructor, etc.",
-      "label": "Military"
+      "description": "Un soldat impérial ou Skovlandien, un mercenaire, un agent de renseignement, un stratège, un sergent instructeur, etc.",
+      "label": "Militaire"
     },
     "Noble": {
-      "description": "A dilettante, a courtier, the scion of a fallen house, etc.",
+      "description": "Une dilettante, un courtisan, l'héritier d'une famille en déclin, etc.",
       "label": "Noble"
     },
     "Trade": {
-      "description": "A shopkeeper, a merchant, a skilled crafts-person, a shipping agent, etc. A liaison to the Ministry of Preservation.",
-      "label": "Trade"
+      "description": "Un boutiquier, un marchand, un artisan de talent, un coursier, etc. Un agent de liaison auprès du Ministère de la Préservation.",
+      "label": "Commerce"
     },
     "Underworld": {
-      "description": "A street urchin, gang member, young thug, or other outcast who grew up on the streets.",
-      "label": "Underworld"
+      "description": "Un enfant des rues, un gangster, un jeune voyou, ou tout autre paria ayant grandi dans le caniveau.",
+      "label": "Bas-Fonds"
     }
   },
   "Friends": {
@@ -799,10 +799,10 @@
       "Step-navigation": {
         "abilities": "Capacités",
         "actions": "Actions",
-        "background": "Background",
+        "background": "Antécédents",
         "export": "Exportation",
         "friends": "Contacts",
-        "heritage": "Héritage",
+        "heritage": "Origines",
         "name-and-look": "Nom & Apparence",
         "playbook": "Livret",
         "vice": "Vice"
@@ -889,51 +889,51 @@
         },
         "Actions": {
           "Attune": {
-            "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology.",
+            "description": "Communier avec les esprits et le champ ectoplasmique; Canaliser l'énergie electroplasmique; percevoir et communiquer avec les esprits; comprendre la spectrologie.",
             "label": "Communier"
           },
           "Command": {
-            "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs.",
+            "description": "Se faire obéir par la force ou l'aura; intimider ou menacer; mener une action avec une cohorte du gang.",
             "label": "Commander"
           },
           "Consort": {
-            "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places.",
+            "description": "Côtoyer les relations issues de vos origines, vos antécédents, amis et rivaux pour obtenir des ressources, informations, personnes ou lieux.",
             "label": "Côtoyer"
           },
           "Finesse": {
-            "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount.",
+            "description": "Subtiliser un objet des poches de quelqu'un; faire usage d'habiles manipulations et de subtils détournement d'attention; contrôler un véhicule ou une monture.",
             "label": "Manoeuvrer"
           },
           "Hunt": {
-            "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance.",
+            "description": "Traquer une cible; collecter des informations à propos de sa localisation et ses déplacements; attaquer à distance au fusil de précision.",
             "label": "Traquer"
           },
           "Prowl": {
-            "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc.",
+            "description": "Rôder discrêtement et franchir des obstacles; grimper, nager, courir, sauter, rouler. Attaquer par surprise - poignarder, égorger, etc.",
             "label": "Rôder"
           },
           "Skirmish": {
-            "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle.",
+            "description": "Combattre un adversaire en combat rapproché; monter à l'assaut ou tenir une position; se bagarrer, lutter.",
             "label": "Combattre"
           },
           "Study": {
-            "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research.",
+            "description": "Etudier une personne, un document, faire l'examen approfondi d'un objet pour collecter des informations; acquérir une meilleure compréhension; faire des recherches.",
             "label": "Etudier"
           },
           "Survey": {
-            "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits.",
+            "description": "Surveiller un lieu ou une situation pour comprendre de quoi il retourne; sentir les embrouilles avant qu'elles n'arrivent; collecter des informations concernant une opportunité.",
             "label": "Surveiller"
           },
           "Sway": {
-            "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction.",
+            "description": "Influencer une personne par le charme, le raisonnement, la tromperie, le bluff; modifier la disposition ou le comportement par la manipulation et la séduction.",
             "label": "Influencer"
           },
           "Tinker": {
-            "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices.",
+            "description": "Bricoler des mécanismes pour créer, modifier, désactiver ou réparer; désactiver un piège, forcer une serrure, ouvrir un coffre-fort. Utiliser un engin electroplasmique.",
             "label": "Bricoler"
           },
           "Wreck": {
-            "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos.",
+            "description": "Démolir un lieu, un objet ou un obstacle par la force brute ou le sabotage précis; pénétrer les défenses par la force; semer le désordre et la distraction.",
             "label": "Démolir"
           }
         },
