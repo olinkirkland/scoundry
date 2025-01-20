@@ -2,6 +2,7 @@ import { createI18n, useI18n } from 'vue-i18n';
 import en from './locales/en/translations.json';
 import de from './locales/de/translations.json';
 import es from './locales/es/translations.json';
+import fr from './locales/fr/translations.json';
 
 // Use the i18n-editor from https://github.com/jcbvm/i18n-editor/releases/tag/1.0.0
 
@@ -23,7 +24,9 @@ const i18n = createI18n<[MessageSchema], 'en'>({
         // @ts-ignore
         de, // German
         // @ts-ignore
-        es // Spanish
+        es, // Spanish
+        // @ts-ignore
+        fr, // French
     }
 });
 
