@@ -227,51 +227,52 @@
   },
   "Actions": {
     "Attune": {
-      "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology.",
+      "description": "Communier avec les esprits et le champ ectoplasmique; Canaliser l'énergie electroplasmique; percevoir et communiquer avec les esprits; comprendre la spectrologie.",
       "label": "Communier"
     },
     "Command": {
-      "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs.",
+      "description": "Se faire obéir par la force ou l'aura; intimider ou menacer; mener une action avec une cohorte du gang.",
       "label": "Commander"
     },
     "Consort": {
-      "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places.",
+      "description": "Côtoyer les relations issues de vos origines, vos antécédents, amis et rivaux pour obtenir des ressources, informations, personnes ou lieux.",
       "label": "Côtoyer"
     },
     "Finesse": {
-      "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount.",
+      "description": "Subtiliser un objet des poches de quelqu'un; faire usage d'habiles manipulations et de subtils détournement d'attention; contrôler un véhicule ou une monture.",
       "label": "Manoeuvrer"
     },
     "Hunt": {
-      "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance.",
+      "description": "Traquer une cible; collecter des informations à propos de sa localisation et ses déplacements; attaquer à distance au fusil de précision.",
       "label": "Traquer"
     },
     "Prowl": {
-      "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc.",
+      "description": "Rôder discrêtement et franchir des obstacles; grimper, nager, courir, sauter, rouler. Attaquer par surprise - poignarder, égorger, etc.",
       "label": "Rôder"
     },
     "Skirmish": {
-      "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle.",
+      "description": "Combattre un adversaire en combat rapproché; monter à l'assaut ou tenir une position; se bagarrer, lutter.",
       "label": "Combattre"
     },
     "Study": {
-      "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research.",
+      "description": "Etudier une personne, un document, faire l'examen approfondi d'un objet pour collecter des informations; acquérir une meilleure compréhension; faire des recherches.",
       "label": "Etudier"
     },
     "Survey": {
       "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits.",
+      "description": "Surveiller un lieu ou une situation pour comprendre de quoi il retourne; sentir les embrouilles avant qu'elles n'arrivent; collecter des informations concernant une opportunité.",
       "label": "Surveiller"
     },
     "Sway": {
-      "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction.",
+      "description": "Influencer une personne par le charme, le raisonnement, la tromperie, le bluff; modifier la disposition ou le comportement par la manipulation et la séduction.",
       "label": "Influencer"
     },
     "Tinker": {
-      "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices.",
+      "description": "Bricoler des mécanismes pour créer, modifier, désactiver ou réparer; désactiver un piège, forcer une serrure, ouvrir un coffre-fort. Utiliser un engin electroplasmique.",
       "label": "Bricoler"
     },
     "Wreck": {
-      "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos.",
+      "description": "Démolir un lieu, un objet ou un obstacle par la force brute ou le sabotage précis; pénétrer les défenses par la force; semer le désordre et la distraction.",
       "label": "Démolir"
     }
   },
@@ -788,7 +789,7 @@
       "last-updated": "Updated {date}",
       "new-scoundrel-button": "Make a new scoundrel",
       "scroll-prompt": "Scroll down to see attribution",
-      "settings-button": "Settings"
+      "settings-button": "Paramètres"
     },
     "Make-page": {
       "Controls": {
@@ -801,7 +802,7 @@
         "actions": "Actions",
         "background": "Background",
         "export": "Exportation",
-        "friends": "Friends",
+        "friends": "Contacts",
         "heritage": "Héritage",
         "name-and-look": "Nom & Apparence",
         "playbook": "Livret",
@@ -879,99 +880,99 @@
     },
     "Steps": {
       "Abilities": {
-        "subtitle": "Choose a special ability.",
-        "title": "What ability sets you apart in the crew?"
+        "subtitle": "Chosissez une capacité spéciale.",
+        "title": "Quel talent vous rend unique dans la bande ?"
       },
       "Actions": {
         "Action-tally": {
-          "with-character-creation": "<strong>{count}</strong> of 7 action dots assigned",
-          "without-character-creation": "<strong>{count}</strong> action dots assigned"
+          "with-character-creation": "<strong>{count}</strong> sur 7 points d'action attribués",
+          "without-character-creation": "<strong>{count}</strong> points d'action attribués"
         },
         "Actions": {
           "Attune": {
             "description": "Attune to spirits and the ghost field; channel electroplasmic energy; perceive and communicate with ghosts; understand spectrology.",
-            "label": "Attune"
+            "label": "Communier"
           },
           "Command": {
             "description": "Command obedience with your force of personality; intimidate or threaten; lead an action with one of the crew's gangs.",
-            "label": "Command"
+            "label": "Commander"
           },
           "Consort": {
             "description": "Consort with connections from your heritage, background, friends, or rivals to gain access to resources, information, people, or places.",
-            "label": "Consort"
+            "label": "Côtoyer"
           },
           "Finesse": {
             "description": "Finesse an item from someone's pocket; employ subtle misdirection or sleight-of-hand; handle a vehicle or a mount.",
-            "label": "Finesse"
+            "label": "Manoeuvrer"
           },
           "Hunt": {
             "description": "Hunt a target; gather information about its location and movements; attack with precision shooting from a distance.",
-            "label": "Hunt"
+            "label": "Traquer"
           },
           "Prowl": {
             "description": "Prowl about unseen and traverse obstacles; climb, swim, run, jump, and tumble. Ambush with close violence—a backstab, throat cutting, black-jack, etc.",
-            "label": "Prowl"
+            "label": "Rôder"
           },
           "Skirmish": {
             "description": "Skirmish with an opponent in close combat; assault or hold a position; brawl and wrestle.",
-            "label": "Skirmish"
+            "label": "Combattre"
           },
           "Study": {
             "description": "Study a person, document, or item with close scrutiny to gather information and apply knowledge; gain a deeper understanding; do research.",
-            "label": "Study"
+            "label": "Etudier"
           },
           "Survey": {
             "description": "Survey a location or situation to understand what's going on; sense trouble before it happens; gather information about opportunities or exploits.",
-            "label": "Survey"
+            "label": "Surveiller"
           },
           "Sway": {
             "description": "Sway someone with charm, logic, deception, disguise, or bluff; change attitudes or behavior with manipulation or seduction.",
-            "label": "Sway"
+            "label": "Influencer"
           },
           "Tinker": {
             "description": "Tinker with mechanisms to create, modify, disable, or repair; disable a trap, pick a lock, or crack a safe. Use electroplasmic devices.",
-            "label": "Tinker"
+            "label": "Bricoler"
           },
           "Wreck": {
             "description": "Wreck a place, item, or obstacle with savage force or carefully applied sabotage; breach defenses with force; create distractions and chaos.",
-            "label": "Wreck"
+            "label": "Démolir"
           }
         },
         "Attributes": {
-          "Insight": "Insight",
-          "Prowess": "Prowess",
-          "Resolve": "Resolve"
+          "Insight": "Perspicacité",
+          "Prowess": "Prouesse",
+          "Resolve": "Détermination"
         },
         "Options": {
-          "character-creation-button": "Character Creation: 7 action dots total, limit 2 per action",
-          "mastery-advance-button": "Mastery Advance: Allow actions to advance to 4"
+          "character-creation-button": "Création de personnage : 7 points d'action au total, maximum 2 par action",
+          "mastery-advance-button": "Amélioration Maitrise : Permet d'avancer une action jusqu'à 4"
         },
-        "subtitle": "Assign dots to actions that best represent you.",
-        "suggested-actions": "Actions suggested by your background and heritage:",
-        "title": "What do you do best?"
+        "subtitle": "Assignez des points aux actions qui vous représentent le mieux.",
+        "suggested-actions": "Actions suggérées par votre passé et votre héritage :",
+        "title": "Dans quel domaine excellez-vous ?"
       },
       "Background": {
         "deep-cuts-description": "Full descriptions of these backgrounds can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion.",
-        "detail-prompt": "A detail about your background",
-        "select-prompt": "Select a background to see its description and suggested details.",
-        "subtitle": "Pick a background and write a detail specific to you.",
-        "title": "What did you do before you joined the crew?"
+        "detail-prompt": "Un détail à propos de votre passé",
+        "select-prompt": "Choisissez un passé pour voir sa description et des détails suggérés.",
+        "subtitle": "Choisissez un passé et écrivez un détail qui vous est propre.",
+        "title": "Que faisiez-vous avant de rejoindre la bande ?"
       },
       "Export": {
         "Controls": {
           "classic-sheet": "Standard",
-          "copied": "Copied!",
-          "save-as-image-button": "Save as image",
-          "share-as-url-button": "Share as URL"
+          "copied": "Copié!",
+          "save-as-image-button": "Sauver comme image",
+          "share-as-url-button": "Partager comme URL"
         },
-        "subtitle": "Customize and share your character sheet.",
-        "title": "Export your scoundrel"
+        "subtitle": "Modifiez et partagez votre fiche de personnage.",
+        "title": "Exportez votre personnage"
       },
       "Friends": {
-        "friend-button": "Friend",
+        "friend-button": "Allié",
         "rival-button": "Rival",
-        "subtitle": "Mark one long-time ally, family relation, or lover. Then mark one rival, enemy, or betrayed partner.",
-        "title": "Who owes you one and who's your bitter enemy?"
+        "subtitle": "Marquez un allié de longue date, une relation familiale ou amant. Marquez ensuite un rival, ennemi, ou partenaire trahis.",
+        "title": "Qui vous en doit une, et qui est votre ennemi déclaré ?"
       },
       "Heritage": {
         "deep-cuts-description": "Full descriptions of these heritages can be found in the <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark expansion.",
@@ -982,80 +983,80 @@
         "world-map-button": "World Map"
       },
       "Name-and-look": {
-        "alias-prompt": "Your alias",
-        "look-prompt": "Your look",
-        "name-prompt": "Your name",
-        "portrait-prompt": "Choose a portrait",
-        "randomize-alias-button": "Randomize alias",
-        "randomize-look-button": "Randomize look",
-        "randomize-name-button": "Randomize name",
-        "subtitle": "Record a name, criminal alias, and briefly describe your appearance.",
-        "title": "What do people call you? What do you look like?"
+        "alias-prompt": "Votre alias",
+        "look-prompt": "Votre apparence",
+        "name-prompt": "Votre nom",
+        "portrait-prompt": "Choisissez un portrait",
+        "randomize-alias-button": "Alias aléatoire",
+        "randomize-look-button": "Apparence aléatoire",
+        "randomize-name-button": "Nom aléatoire",
+        "subtitle": "Enregistrez un nom, un alias et décrivez brèvement votre apparence.",
+        "title": "Comment vous appelle-t-on ? A quoi ressemblez-vous ?"
       },
       "Playbook": {
-        "subtitle": "Your playbook represents your reputation in the underworld, your special abilities, and how you advance.",
-        "title": "What kind of <strong>Scoundrel</strong> are you?"
+        "subtitle": "Votre livret représente votre réputation dans les bas-fonds, vos talents particuliers et comment vous progressez.",
+        "title": "Quel genre de <strong>Gredin</strong> êtes vous ?"
       },
       "Vice": {
-        "description": "Choose a vice and record the name and location of your vice purveyor.",
-        "purveyor-prompt": "A description of where you go to indulge",
-        "select-prompt": "Select a vice to see its description and suggested purveyors.",
-        "title": "Where do you go to get rid of your stress?"
+        "description": "Choisissez un vice et enregistrez le nom et l'adresse de votre pourvoyeur.",
+        "purveyor-prompt": "Une description de l'endroit ou vous allez pour décompresser",
+        "select-prompt": "Choisissez un vice pour voir sa description et les pourvoyeurs suggérés.",
+        "title": "Ou allez vous pour décompresser ?"
       }
     }
   },
   "Vice-suggestions": {
     "Aranna-the-blessed": {
-      "description": "Cultist of a forgotten god",
-      "district": "Nightmarket",
-      "label": "Aranna the Blessed",
-      "text": "Aranna the Blessed; Cultist of a forgotten god; Nightmarket"
+      "description": "Cultiste d'un dieu oublié",
+      "district": "Marché nocturne",
+      "label": "Aranna la bénie",
+      "text": "Aranna la bénie; Cultiste d'un dieu oublié; Marché nocturne"
     },
     "Avrick": {
-      "description": "Powder dealer",
-      "district": "Barrowcleft",
+      "description": "Trafiquant de poudre",
+      "district": "Crête-Charbon",
       "label": "Avrick",
-      "text": "Avrick; Powder dealer; Barrowcleft"
+      "text": "Avrick; Trafiquant de poudre; Crête-Charbon"
     },
     "Chef-roselle": {
-      "description": "The Golden Plum restaurant",
-      "district": "Six towers",
+      "description": "Le restaurant de la prune dorée",
+      "district": "Six tours",
       "label": "Chef Roselle",
-      "text": "Chef Roselle; The Golden Plum restaurant; Six towers"
+      "text": "Le restaurant de la prune dorée; Six tours; Chef Roselle"
     },
     "Circle-of-flame": {
-      "description": "A secret society",
-      "label": "The Circle of Flame",
-      "text": "The Circle of Flame; A secret society"
+      "description": "Une société secrête",
+      "label": "Le cercle de flammes",
+      "text": "Une société secrête; Le cercle de flammes"
     },
     "Dunridge-sons": {
-      "description": "Fine fabrics and tailoring",
-      "district": "Nightmarket",
+      "description": "Tissus rafinés et tailleur",
+      "district": "Marché nocturne",
       "label": "Dunridge & Sons",
-      "text": "Dunridge & Sons; Fine fabrics and tailoring; Nightmarket"
+      "text": "Dunridge & Sons; Tissus rafinés et tailleur; Marché nocturne"
     },
     "Eldrin-prichard": {
-      "description": "The Silver Swan pleasure barge",
-      "district": "Brightstone canals",
+      "description": "La barge des plaisirs du cigne d'argent",
+      "district": "Les canaux de Pierre-Claire",
       "label": "Eldrin Prichard",
-      "text": "Eldrin Prichard; The Silver Swan pleasure barge; Brightstone canals"
+      "text": "Eldrin Prichard; La barge des plaisirs du cigne d'argent; Les canaux de Pierre-Claire"
     },
     "Family-members": {
-      "description": "Heritage or background (or former co-workers)",
-      "label": "Family members",
-      "text": "Family members; Heritage or background (or former co-workers)"
+      "description": "Parents (origines) ou anciens collègues (antécédents)",
+      "label": "Parents",
+      "text": "Parents; Parents (origines) ou anciens collègues (antécédents)"
     },
     "Father-yoren": {
-      "description": "House of the Weeping Lady",
-      "district": "Six towers",
-      "label": "Father Yoren",
-      "text": "Father Yoren; House of the Weeping Lady; Six towers"
+      "description": "La maison de la pleureuse",
+      "district": "Six tours",
+      "label": "Père Yoren",
+      "text": "Père Yoren; La maison de la pleureuse; Six tours"
     },
     "Grist": {
-      "description": "Boxing",
-      "district": "The docks",
+      "description": "Combats de boxe",
+      "district": "Les docks",
       "label": "Grist",
-      "text": "Grist; Boxing; The docks"
+      "text": "Grist; Combats de boxe; Les docks"
     },
     "Harvale-brogan": {
       "description": "The Centuralia Club",
