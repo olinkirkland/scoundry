@@ -165,7 +165,7 @@
       "label": "Féroce"
     },
     "Scout": {
-      "description": " quand vous recueillez des informations pour découvrir la localisation d’une manœuvrer cible, vous obtenez +1 effet.<br />Quand vous vous dissimulez dans un affût préparé à l’avance ou rôder que vous utilisez un camouflage, vous obtenez +1 dé aux jets pour éviter d’être repéré.",
+      "description": "Quand vous recueillez des informations pour découvrir la localisation d’une manœuvrer cible, vous obtenez +1 effet.<br />Quand vous vous dissimulez dans un affût préparé à l’avance ou rôder que vous utilisez un camouflage, vous obtenez +1 dé aux jets pour éviter d’être repéré.",
       "label": "Eclaireur"
     },
     "Shadow": {
@@ -592,101 +592,101 @@
   },
   "Looks": {
     "Apparel": {
-      "collared-shirt": "a collared shirt",
-      "eel-skin-bodysuit": "an eel-skin bodysuit",
-      "fancy-waistcoat": "a fancy waistcoat",
-      "fitted-dress": "a fitted dress",
-      "fitted-leggings": "fitted leggings",
-      "half-cape": "a half-cape",
-      "heavy-cloak": "a heavy cloak",
-      "heavy-jacket": "a heavy jacket",
-      "hide-and-furs": "hide & furs",
-      "hood-and-veil": "a hood & veil",
-      "hooded-cape": "a hooded cape",
-      "hooded-coat": "a hooded coat",
-      "knit-cap": "a knit cap",
-      "knit-sweater": "a knit sweater",
-      "leathers": "leathers",
-      "long-coat": "a long coat",
-      "long-scarf": "a long scarf",
-      "loose-silks": "loose silks",
-      "mask-and-robes": "a mask & robes",
-      "rags-and-tatters": "rags & tatters",
-      "rough-tunic": "a rough tunic",
-      "scavenged-uniform": "a scavenged uniform",
-      "sharp-trousers": "sharp trousers",
-      "short-cloak": "a short cloak",
-      "skirt-and-blouse": "a skirt & blouse",
-      "slim-jacket": "a slim jacket",
-      "soft-boots": "soft boots",
-      "suit-and-tie": "a suit & tie",
-      "suspenders": "suspenders",
-      "tall-boots": "tall boots",
-      "thick-greatcoat": "a thick greatcoat",
-      "tricorn-hat": "a tricorn hat",
-      "vest": "a vest",
-      "waxed-coat": "a waxed coat",
-      "wide-belt": "a wide belt",
-      "work-boots": "work boots",
-      "work-trousers": "work trousers"
+      "collared-shirt": "une chemise à col",
+      "eel-skin-bodysuit": "une combinaison en peau d'anguille",
+      "fancy-waistcoat": "un gilet luxueux",
+      "fitted-dress": "une robe cintrée",
+      "fitted-leggings": "des jambières ajustées",
+      "half-cape": "une demi-cape",
+      "heavy-cloak": "une cape épaisse",
+      "heavy-jacket": "une veste épaisse",
+      "hide-and-furs": "des peaux et fourrures",
+      "hood-and-veil": "un capuchon et un voile",
+      "hooded-cape": "une cape à capuchon",
+      "hooded-coat": "un manteau à capuchon",
+      "knit-cap": "un bonnet en tricot",
+      "knit-sweater": "un chandail en tricot",
+      "leathers": "des habits de cuir",
+      "long-coat": "un manteau long",
+      "long-scarf": "une longue écharpe",
+      "loose-silks": "des soies amples",
+      "mask-and-robes": "un masque et une robe",
+      "rags-and-tatters": "des loques",
+      "rough-tunic": "une tunique de toile brute",
+      "scavenged-uniform": "un uniforme rapiécé",
+      "sharp-trousers": "un pantalon court",
+      "short-cloak": "une cape courte",
+      "skirt-and-blouse": "une jupe et un chemisier",
+      "slim-jacket": "une veste légère",
+      "soft-boots": "des bottes souples",
+      "suit-and-tie": "un costume cravate",
+      "suspenders": "des bretelles",
+      "tall-boots": "des bottes montantes",
+      "thick-greatcoat": "un grand manteau épais",
+      "tricorn-hat": "un tricorne",
+      "vest": "une veste",
+      "waxed-coat": "un manteau ciré",
+      "wide-belt": "une large ceinture",
+      "work-boots": "des bottes de chantier",
+      "work-trousers": "un pantalon de travail"
     },
     "Joining-words": {
-      "and": "and",
-      "dressed-in": "dressed in",
-      "sporting": "sporting",
-      "wearing": "wearing"
+      "and": "et",
+      "dressed-in": "habillé avec",
+      "sporting": "arborant",
+      "wearing": "portant"
     },
     "Person-word-adjectives": {
       "affable": "affable",
-      "athletic": "athletic",
-      "bony": "bony",
-      "bright": "bright",
-      "brooding": "brooding",
-      "calm": "calm",
-      "chiseled": "chiseled",
-      "cold": "cold",
-      "dark": "dark",
-      "delicate": "delicate",
-      "fair": "fair",
-      "fierce": "fierce",
-      "grimy": "grimy",
-      "handsome": "handsome",
+      "athletic": "athlétique",
+      "bony": "osseux",
+      "bright": "brillant",
+      "brooding": "ténébreux",
+      "calm": "calme",
+      "chiseled": "ciselé",
+      "cold": "froid",
+      "dark": "sombre",
+      "delicate": "délicat",
+      "fair": "joli",
+      "fierce": "féroce",
+      "grimy": "sinistre",
+      "handsome": "beau",
       "huge": "huge",
-      "hunched": "hunched",
-      "languid": "languid",
-      "lovely": "lovely",
-      "open": "open",
-      "plump": "plump",
-      "rough": "rough",
-      "sad": "sad",
-      "scarred": "scarred",
-      "slim": "slim",
-      "soft": "soft",
-      "squat": "squat",
-      "stern": "stern",
-      "stout": "stout",
-      "striking": "striking",
-      "twitchy": "twitchy",
-      "weathered": "weathered",
-      "wiry": "wiry",
-      "worn": "worn"
+      "hunched": "courbé",
+      "languid": "languissant",
+      "lovely": "charmant",
+      "open": "ouvert",
+      "plump": "dodue",
+      "rough": "brutal",
+      "sad": "triste",
+      "scarred": "effrayé",
+      "slim": "maigre",
+      "soft": "doux",
+      "squat": "trapu",
+      "stern": "sévère",
+      "stout": "corpulent",
+      "striking": "saisissant",
+      "twitchy": "nerveux",
+      "weathered": "usé",
+      "wiry": "râblé",
+      "worn": "usé"
     },
     "Person-words": {
       "child": {
-        "article": "a",
-        "word": "child"
+        "article": "un",
+        "word": "enfant"
       },
       "man": {
-        "article": "a",
-        "word": "man"
+        "article": "un",
+        "word": "homme"
       },
       "person": {
-        "article": "a",
-        "word": "person"
+        "article": "une",
+        "word": "personne"
       },
       "woman": {
-        "article": "a",
-        "word": "woman"
+        "article": "une",
+        "word": "femme"
       }
     },
     "Templates": {
@@ -741,31 +741,31 @@
   "Playbooks": {
     "Cutter": {
       "description": "A dangerous and intimidating fighter",
-      "label": "Cutter"
+      "label": "Ecorcheur"
     },
     "Hound": {
       "description": "A deadly sharpshooter and tracker",
-      "label": "Hound"
+      "label": "Limier"
     },
     "Leech": {
       "description": "A saboteur and technician",
-      "label": "Leech"
+      "label": "Sangsue"
     },
     "Lurk": {
       "description": "A stealthy infiltrator and burglar",
-      "label": "Lurk"
+      "label": "Guetteur"
     },
     "Slide": {
       "description": "A subtle manipulator and spy",
-      "label": "Slide"
+      "label": "Arlequin"
     },
     "Spider": {
       "description": "A devious mastermind",
-      "label": "Spider"
+      "label": "Araignée"
     },
     "Whisper": {
       "description": "An arcane adept and channeler",
-      "label": "Whisper"
+      "label": "Haruspice"
     }
   },
   "User-interface": {
@@ -792,56 +792,56 @@
     },
     "Make-page": {
       "Controls": {
-        "delete-button": "Delete",
-        "home-button": "Home",
-        "next-button": "Next"
+        "delete-button": "Supprimer",
+        "home-button": "Accueil",
+        "next-button": "Suivant"
       },
       "Step-navigation": {
-        "abilities": "Abilities",
+        "abilities": "Capacités",
         "actions": "Actions",
         "background": "Background",
-        "export": "Export",
+        "export": "Exportation",
         "friends": "Friends",
-        "heritage": "Heritage",
-        "name-and-look": "Name & Look",
-        "playbook": "Playbook",
+        "heritage": "Héritage",
+        "name-and-look": "Nom & Apparence",
+        "playbook": "Livret",
         "vice": "Vice"
       }
     },
     "Modals": {
       "Change-language": {
         "Controls": {
-          "cancel-button": "No, keep using {currentLanguage}",
-          "confirm-button": "Yes, switch to {newLanguage}"
+          "cancel-button": "Non, continuer d'utiliser la langue {currentLanguage}",
+          "confirm-button": "Oui, passer à la langue {newLanguage}"
         },
-        "message": "You're trying to load a Scoundrel using the <strong>{newLanguage}</strong> language but your current language is <strong>{currentLanguage}</strong>. Would you like to switch to the <strong>{newLanguage}</strong> language?",
-        "title": "Load a Scoundrel with a different language"
+        "message": "Vous essayez de charger un personnage en langue <strong>{newLanguage}</strong> mais votre langue actuelle est <strong>{currentLanguage}</strong>. Aimeriez-vous passer à la langue <strong>{newLanguage}</strong> ?",
+        "title": "Charger un personnage en langue différente"
       },
       "Confirm": {
         "Controls": {
-          "cancel-button": "No, I changed my mind",
-          "confirm-button": "Yes"
+          "cancel-button": "Non, j'ai changé d'avis.",
+          "confirm-button": "Oui"
         }
       },
       "Delete-scoundrel": {
         "Controls": {
-          "confirm-button": "Delete"
+          "confirm-button": "Supprimer"
         },
-        "message": "Are you sure you want to delete this scoundrel? This action cannot be undone.",
-        "title": "Delete scoundrel?"
+        "message": "Etes vous certain de vouloir supprimer ce personnage ? Cette action ne pourra pas être annulée.",
+        "title": "Supprimer le personnage ?"
       },
       "Import": {
         "Failed": {
-          "message": "The character sheet could not be imported. Please check the URL and try again.",
-          "title": "Import failed"
+          "message": "La fiche de personnage n'a pas pu être importée. Veuillez vérifier l'URL et essayer à nouveau.",
+          "title": "Echec de l'importation"
         },
         "Success": {
-          "message": "Character sheet imported successfully!",
-          "title": "Import successful"
+          "message": "La fiche de personnage a été importée avec succès !",
+          "title": "Réussite de l'importation"
         }
       },
       "News-and-updates": {
-        "title": "News & Updates"
+        "title": "Nouvelles & Mises à jour"
       },
       "Settings": {
         "Language": {
@@ -852,11 +852,12 @@
             "ui": "User interface"
           },
           "Languages": {
-            "de": "German",
-            "en": "English",
-            "es": "Spanish"
+            "de": "Allemand",
+            "en": "Anglais",
+            "es": "Espagnol",
+            "fr": "Français"
           },
-          "label": "Select the app language"
+          "label": "Choisissez la langue de l'application"
         },
         "Tracking": {
           "description": "Minimal tracking helps improve Scoundry by collecting anonymous data on characters, page visits, and feature usage. No personal information is collected or shared.",
