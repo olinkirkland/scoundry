@@ -156,7 +156,7 @@ const languageFeatures = {
     },
     fr: {
         ui: true,
-        data: true,
+        data: false,
         sheets: false,
         deepCuts: false
     }
