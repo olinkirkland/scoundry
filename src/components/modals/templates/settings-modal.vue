@@ -162,9 +162,7 @@ const languageFeatures = {
     }
 };
 
-const isTrackingEnabled = ref(
-    localStorage.getItem('tracking') === 'true'
-);
+const isTrackingEnabled = ref(localStorage.getItem('tracking') === 'true');
 
 function onChangeEnableTracking(e: any) {
     const allowTracking = e.target.checked;
