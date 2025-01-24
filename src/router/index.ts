@@ -75,11 +75,11 @@ export const router = createRouter(routerOptions as RouterOptions);
 router.beforeEach(async (to, from, next) => {
     // Only track if the user has allowed it
     let allowTracking: boolean = false;
-    if (localStorage.getItem('allowTracking') === 'true') allowTracking = true;
+    if (localStorage.getItem('tracking') === 'true') allowTracking = true;
     // Disable tracking on localhost
     if (window.location.hostname === 'localhost') allowTracking = false;
 
-    if (localStorage.getItem('enableTracking') === null) {
+    if (localStorage.getItem('tracking') === null) {
         // If localStorage is not available, prompt the user to allow tracking
         ModalController.open(ConfirmModal, {
             title: t('User-interface.Modals.Tracking-consent.title'),
@@ -92,11 +92,11 @@ router.beforeEach(async (to, from, next) => {
             ),
             isConfirmButtonCta: true,
             onConfirm: () => {
-                localStorage.setItem('enableTracking', 'true');
+                localStorage.setItem('tracking', 'true');
                 ModalController.close();
             },
             onCancel: () => {
-                localStorage.setItem('enableTracking', 'false');
+                localStorage.setItem('tracking', 'false');
                 ModalController.close();
             }
         });
