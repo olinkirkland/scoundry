@@ -67,11 +67,22 @@
             >
                 <img :src="`/assets/${portrait.path}`" />
             </li>
+            <li v-if="scoundrel.portrait && !portraitSource" class="selected">
+                <img :src="scoundrel.portrait" />
+            </li>
         </ul>
-        <label v-if="scoundrel.portrait"
-            >{{ scoundrel.portrait }} ...
-            {{ getPortraitSource(scoundrel.portrait) }}</label
-        >
+        <label v-if="scoundrel.portrait && portraitSource">{{
+            portraitSource
+        }}</label>
+        <label v-else-if="scoundrel.portrait">{{
+            $t('User-interface.Steps.Name-and-look.portrait-custom')
+        }}</label>
+    </div>
+    <div class="input-block">
+        <label>
+            {{ $t('User-interface.Steps.Name-and-look.portrait-url-prompt') }}
+        </label>
+        <input type="text" v-model="scoundrel.portrait" />
     </div>
 </template>
 
@@ -84,6 +95,7 @@ import { t } from '@/i18n/locale';
 import { Scoundrel } from '@/scoundrel';
 import { randomItem } from '@/util/random';
 import { capitalize } from '@/util/string-util';
+import { computed } from 'vue';
 
 const props = defineProps<{
     scoundrel: Scoundrel;
@@ -95,6 +107,13 @@ const aliases = namesData.aliases;
 const adjectives = looksData.personWordAdjectives;
 const apparel = looksData.apparel;
 const portraits = portraitsData;
+
+const portraitSource = computed(() => {
+    if (getPortraitSource(props.scoundrel.portrait) === null) return '';
+    return `${props.scoundrel.portrait} ... ${getPortraitSource(
+        props.scoundrel.portrait
+    )}`;
+});
 
 function randomizeName() {
     props.scoundrel.name = `${randomItem(firstNames)} ${randomItem(lastNames)}`;
@@ -145,21 +164,10 @@ function randomizeLook() {
     return;
 }
 
-function joinWithAnd(arr: string[]) {
-    if (arr.length === 0) return '';
-    if (arr.length === 1) return arr[0];
-    if (arr.length === 2) return arr.join(` ${t('Looks.Joining-words.and')} `);
-    return (
-        arr.slice(0, -1).join(', ') +
-        `, ${t('Looks.Joining-words.and')} ` +
-        arr.slice(-1)
-    );
-}
-
 function getPortraitSource(portraitPath: string) {
     const source = portraits.find((p) => p.path === portraitPath)?.source;
     if (source) return `(${source})`;
-    return 'No source';
+    return null;
 }
 </script>
 

@@ -3,11 +3,7 @@
         <div class="portrait-container">
             <img
                 class="portrait"
-                :src="
-                    props.scoundrel.portrait
-                        ? `/assets/${props.scoundrel.portrait}`
-                        : '/assets/icons/theater.png'
-                "
+                :src="portraitUrl"
                 :style="{ opacity: props.scoundrel.portrait ? 1 : 0.2 }"
             />
 
@@ -35,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import i18n from '@/i18n/locale';
+import portraits from '@/assets/data/portraits.json';
 import { Scoundrel } from '@/scoundrel';
 import { getSemanticScoundrelName } from '@/util/scoundrel-util';
 import { computed } from 'vue';
@@ -48,6 +44,16 @@ const props = defineProps<{
 
 const semanticName = computed(() => {
     return getSemanticScoundrelName(props.scoundrel);
+});
+
+const portraitUrl = computed(() => {
+    if (!props.scoundrel.portrait) return '/assets/icons/theater.png';
+    const isAsset = portraits.find(
+        (p) => p.path === props.scoundrel.portrait
+    )?.source;
+    return isAsset
+        ? `/assets/${props.scoundrel.portrait}`
+        : props.scoundrel.portrait;
 });
 </script>
 

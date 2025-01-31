@@ -95,7 +95,7 @@
                                     class="btn btn--mini"
                                     :class="{
                                         disabled:
-                                            !scoundrel.actions[action].custom,
+                                            !scoundrel.actions[action].custom
                                     }"
                                     @click="changeAction(action, -1)"
                                 >
@@ -110,7 +110,7 @@
                                                 action
                                             ) === maxActionValue ||
                                             (scoundrel.optionActionsCreatingCharacter &&
-                                                totalActionRatings >= 7),
+                                                totalActionRatings >= 7)
                                     }"
                                     @click="changeAction(action, 1)"
                                 >
@@ -133,15 +133,15 @@
 <script setup lang="ts">
 import attributesData from '@/assets/data/attributes.json';
 import backgroundDetailsData from '@/assets/data/background-suggestions.json';
-import { TraitDetail } from '@/data-types';
 import heritageDetailsData from '@/assets/data/heritage-suggestions.json';
 import ActionTag from '@/components/action-tag.vue';
 import StepHeader from '@/components/step-header.vue';
+import { TraitDetail } from '@/data-types';
 import { Scoundrel } from '@/scoundrel';
 import {
     getActionValue,
     getAttribute,
-    getAttributeColor,
+    getAttributeColor
 } from '@/util/action-util';
 import { capitalize } from '@/util/string-util';
 import { computed, onMounted } from 'vue';
@@ -243,7 +243,7 @@ const suggestedRatingsHTML = computed(() => {
     heritageDetailActions.forEach((action) => {
         suggestedActions.push({
             action,
-            isImportant: false,
+            isImportant: false
         });
     });
 
@@ -254,7 +254,7 @@ const suggestedRatingsHTML = computed(() => {
         if (index === -1)
             suggestedActions.push({
                 action,
-                isImportant: false,
+                isImportant: false
             });
         else suggestedActions[index].isImportant = true;
     });
