@@ -2,22 +2,22 @@
   "Abilities": {
     "A-little-something-on-the-side": {
       "description": "À la fin de chaque temps mort, vous gagnez +2 magot.",
-      "label": "À-côtés"
+      "label": "Petits à-côtés"
     },
     "Alchemist": {
-      "description": "Quand vous inventez ou fabriquez une création avec la caractéristique alchimique, vous obtenez +1 niveau de résultat à vote jet. <br />Vous débutez avec une formule déjà connue.",
+      "description": "Quand vous inventez ou fabriquez une formule alchimique, vous obtenez +1 niveau de résultat à vote jet. <br />Vous débutez avec une formule déjà connue.",
       "label": "Alchimiste"
     },
     "Ambush": {
-      "description": "Quand vous passez à l'attaque depuis une cachette ou en déclenchant un piège, vous gagnez +1 dé à votre jet.",
+      "description": "Quand vous passez à l'attaque depuis une cachette ou déclenchez un piège, vous gagnez +1 dé à votre jet.",
       "label": "Embuscade"
     },
     "Analyst": {
-      "description": "Pendant un temps mort, vous cochez deux segments dans n'importe quel compteur de projet à long terme qui implique une investigation, l'apprentissage d'une nouvelle formule, ou la conception d'une nouvelle invention.",
+      "description": "Pendant un temps mort, vous cochez deux segments à distribuer dans tout compteur de projet à long terme qui implique une investigation, l'apprentissage d'une nouvelle formule ou la conception d'une nouvelle invention.",
       "label": "Analyste"
     },
     "Artificer": {
-      "description": "Quand vous inventez ou fabriquez une création avec la caractéristique d'étincelle, vous obtenez +1 niveau de résultat à votre jet. Vous débutez avec une invention déjà connue.",
+      "description": "Quand vous inventez ou fabriquez une création à étincelle, vous obtenez +1 niveau de résultat à votre jet.<br />Vous débutez avec une invention déjà connue.",
       "label": "Artificier"
     },
     "Battleborn": {
@@ -25,19 +25,19 @@
       "label": "Guerrier né"
     },
     "Bodyguard": {
-      "description": "Quand vous protégez un coéquipier, vous gagnez +1 dé à votre jet de résistance.<br />Quand vous recueillez des informations afin d'anticiper de possibles menaces, vous obtenez +1 effet.",
-      "label": "Guarde du corps"
+      "description": "Si vous protégez un coéquipier, vous gagnez +1 dé à votre jet de résistance.<br />Quand vous recueillez des informations afin d'anticiper de possibles menaces, vous obtenez +1 effet.",
+      "label": "Garde du corps"
     },
     "Calculating": {
       "description": "Grâce à votre planification minutieuse, pendant les temps morts, vous pouvez octroyer, à vous-même ou à un membre de la bande, une activité de temps mort supplémentaire.",
       "label": "Prévoyant"
     },
     "Cloak-and-dagger": {
-      "description": "Lorsque vous utilisez un déguisement ou une autre forme d'artifice, vous gagnez +1 dé sur vos jets visant à provoquer la confusion ou éviter la suspicion.<br />Quand enfin vous tombez le masque, l'effet de surprise qui en résulte vous donne l'initiative dans cette situation.",
-      "label": "De cape & d'épée"
+      "description": "Lorsque vous usez d'un déguisement ou d'un autre artifice, vous gagnez +1 dé sur vos jets visant à provoquer la confusion ou éviter la suspicion.<br />Quand finalement vous tombez le masque, l'effet de surprise qui en résulte vous confère l'initiative.",
+      "label": "Le masque"
     },
     "Compel": {
-      "description": "Vous êtes capable de Communier avec le champ ectoplasmique afin de contraindre un fantôme se trouvant aux alentours à se manifester et obéir à vos ordres.<br />Vous n'êtes pas terrifié par les fantômes que vous invoquez ou tentez de contraindre (mais vos alliés peuvent l'être).",
+      "description": "Vous pouvez Communier avec le champ spectral pour contraindre un fantôme proche à se manifester et obéir à un ordre de vous.<br />Vous n'êtes pas terrifié par un fantôme que vous invoquez ou tentez de contraindre (mais vos alliés risquent de l'être).",
       "label": "Contrainte"
     },
     "Connected": {
@@ -45,75 +45,75 @@
       "label": "Influent"
     },
     "Daredevil": {
-      "description": "Quand vous êtes dans une position désespérée, vous pouvez gagner +1 dé à votre jet d'action si vous subissez -1 dé au jet de résistance contre les conséquences de cette action.",
+      "description": "Quand vous êtes en position désespérée, vous gagnez +1 dé à votre jet d'action si vous prenez -1 dé au jet de résistance contre les conséquences de l'action.",
       "label": "Casse-cou"
     },
     "Expertise": {
-      "description": "Choisissez l'une de vos valeurs d'action. Quand vous menez une action de groupe en usant de cette action, vous ne subissez au maximum qu'un point de stress, peu importe le nombre de jets ratés.",
+      "description": "Choisissez l'une de vos valeurs d'action. Quand vous menez une action de groupe utilisant cette action, vous ne subissez au maximum qu'un point de stress, peu importe le nombre de jets ratés.",
       "label": "Expertise"
     },
     "Focused": {
-      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence en lien avec la surprise ou une blessure mentale (la peur, la confusion, la perte de la surveiller trace de votre cible) ou pour vous dépasser au combat à distance ou au pistage.",
+      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence liée à la surprise ou au mental (la peur, la confusion, la perte de la piste de votre cible) ou pour vous dépasser en combat à distance ou en cours de traque.",
       "label": "Concentration"
     },
     "Foresight": {
-      "description": "Deux fois par coup, vous pouvez aider un coéquipier sans payer le coût en stress.<br /><em>Décrivez comment vous vous y étiez préparé.</em>",
+      "description": "Deux fois par coup, vous pouvez assister un coéquipier sans payer le coût en stress.<br />Décrivez comment vous vous y êtes préparé.",
       "label": "Anticipation"
     },
     "Fortitude": {
-      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence en rapport avec la fatigue, la faiblesse ou les effets chimiques, ou pour vous dépasser dans un domaine technique ou quand vous manipulez des produits alchimiques.",
+      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence liée à la fatigue, la faiblesse ou les effets chimiques, ou pour vous dépasser dans un domaine technique ou quand vous manipulez des produits alchimiques.",
       "label": "Force d'âme"
     },
     "Functioning-vice": {
-      "description": "Lorsque vous vous adonnez à votre vice, vous pouvez ajuster le résultat de votre jet de 1 ou 2 (en positif ou négatif). Un allié qui se joint à vous peut en faire de même.",
+      "description": "Lorsque vous vous adonnez à votre vice, vous pouvez ajuster le résultat de votre jet de 1 ou 2 (en positif ou négatif). Un allié vous accompagnant peut en faire de même.",
       "label": "Vice caché"
     },
     "Ghost-contract": {
-      "description": "Lorsque vous concluez un marché, votre partenaire et vous — humain ou autre — portez désormaischacun la marque de ce serment. Si l'un de vous deux enfreint les termes du contrat, il subitune blessure de niveau 3, <em>\"Maudit\"</em>",
-      "label": "Contrat spirite"
+      "description": "Lorsque vous concluez un marché en vous serrant la main ou en rédigeant un contrat écrit, votre partenaire et vous — humain ou autre — portez désormais chacun la marque de ce serment. Si l'un de vous deux enfreint les termes du contrat, il subit une blessure de niveau 3, \"Maudit\".",
+      "label": "Contrat spectral"
     },
     "Ghost-fighter": {
-      "description": "Vous pouvez imprégner d'énergie spirituelle vos mains, vos armes de mêlée ou vos outils.<br /><ul><li>Vous bénéficiez d'un effet puissant lorsque vous affrontez le surnaturel.</li><li>Vous pouvez lutter physiquement avec un esprit, le restreindre et le capturer.</li></ul>",
-      "label": "Combattant des arcanes"
+      "description": "Vous pouvez imprégner d'énergie spirituelle vos mains, vos armes de mêlée ou vos outils. Vous êtes puissant en combat contre le surnaturel. Vous pouvez interagir fortement avec le surnaturel, voire lutter contre des esprits pour les maîtriser et les capturer.",
+      "label": "Combattant spectral"
     },
     "Ghost-hunter-2": {
-      "description": "Choisissez une capacité ésotérique supplémentaire pour votre animal. <em>La capacité Chasseur de fantômes est requise pour choisir cette capacité.</em>",
-      "label": "Chasseur de fantôme +"
+      "description": "Choisissez une capacité occulte supplémentaire pour votre animal. <em>La capacité Chasseur spectral est requise pour choisir cette capacité.</em>",
+      "label": "Chasseur spectral +"
     },
     "Ghost-hunter": {
-      "description": "Votre animal de compagnie est imprégné d'énergie spirite.<br /><ul><li>Cela le rend puissant lorsqu'il traque ou combat des entités surnaturelles</li><li>Il gagne une capacité ésotérique au choix : forme fantomatique, lien mental ou rapide comme l'éclair.</li></ul>",
-      "label": "Chasseur de fantômes"
+      "description": "Votre animal de compagnie est imprégné d'énergie spirituelle. Cela le rend puissant lorsqu'il piste ou combat des entités surnaturelles et lui confère une capacité occulte au choix : forme spectrale, lien mental ou rapide comme l'éclair.",
+      "label": "Chasseur spectral"
     },
     "Ghost-mind": {
-      "description": "Vous êtes toujours conscient des entités surnaturelles qui vous entourent. <br />Vous obtenez +1 dé quand vous recueillez des informations sur le surnaturel.",
-      "label": "Medium"
+      "description": "Vous êtes toujours conscient des entités surnaturelles qui vous entourent. Vous gagnez +1 dé quand vous recueillez des informations sur le surnaturel.",
+      "label": "Médium"
     },
     "Ghost-veil": {
-      "description": "Vous pouvez traverser partiellement le voile qui nous sépare du champ ectoplasmique, pour l'espace de quelques instants paraître sombre et éthéré.<br />Vous subissez 2 stress au moment où vous traversez le voile, plus 1 stress pour chacun des bénéfices ci-après : <ul><li>cela dure quelques minutes au lieu de quelques instants</li><li>vous êtes invisible</li><li>vous êtes capable de flotter dans l'air tel un fantôme.</li></ul>",
-      "label": "Voile spirite"
+      "description": "Vous pouvez transférez partiellement votre essence dans le champ spectral, et devenir l'espace de quelques instants fantomatique et immatériel. Vous subissez 2 stress au moment du passage, plus 1 stress pour chacun des bénéfices ci-après : cela dure quelques minutes au lieu de quelques instants ; vous êtes invisible ; vous pouvez flotter dans l'air tel un fantôme.",
+      "label": "Voile spectral"
     },
     "Ghost-voice": {
-      "description": "Vous êtes initié aux mystères permettant de converser avec un fantôme ou un démon comme s'il s'agissait d'un être humain ordinaire, en dépit de leur éventuelle apparence terrifiante ou sauvage. <br />Cela vous rend puissant lorsque vous communiquez avec les entités surnaturelles.",
-      "label": "Voix fantomatique"
+      "description": "Vous êtes initié aux mystères permettant de converser avec un fantôme ou un démon comme s'il s'agissait d'un être humain ordinaire, aussi terrifiant ou sauvage qu'il apparaisse. Vous êtes puissant quand vous communiquez avec les entités surnaturelles.",
+      "label": "Voix spectrale"
     },
     "Ghost-ward": {
-      "description": "Vous savez comment Démolir un lieu avec des substances ou méthodes ésotériques, de sorte que le lieu devient à votre guise anathème ou attirant pour les esprits.",
-      "label": "Sceau surnaturel"
+      "description": "Quand vous Démolissez un lieu à l'aide de substances occultes, le ruinant pour toute autre utilisation, l'endroit devient, à votre guise, un lieu attirant ou au contraire repoussant pour les esprits.",
+      "label": "Sceau spectral"
     },
     "Infiltrator": {
-      "description": "Vous n'êtes pas affecté par la qualité ou le rang quand vous contournez des mesures de sécurité.",
+      "description": "Vous n'êtes pas affecté par la qualité ou le rang des mesures de sécurité.",
       "label": "Infiltré"
     },
     "Iron-will": {
-      "description": "Vous êtes insensible à la terreur que provoque la vue de certaines entités surnaturelles.<br />Quand vous faites un jet de résistance avec Détermination, vous obtenez un dé supplémentaire.",
+      "description": "Vous êtes insensible à la terreur que provoque la vue de certaines entités surnaturelles. Quand vous faites un jet de résistance avec votre Détermination, vous obtenez un dé supplémentaire.",
       "label": "Volonté de fer"
     },
     "Jail-bird": {
-      "description": "Lorsque vous êtes incarcéré, votre niveau d'avis de recherche est comptabilisé comme étant inférieur d'un degré, votre Rang supérieur d'un degré et vous gagnez +1 relation avec la faction qui vous aidera durant votre incarcération, en plus de ce que vous obtiendrez sur votre jet d'incarcération.",
+      "description": "Lorsque vous êtes incarcéré, votre niveau d'avis de recherche est comptabilisé comme inférieur d'un degré, votre rang comme supérieur d'un degré et vous gagnez +1 relation avec une faction que vous aiderez durant votre incarcération, en plus de ce que vous obtiendrez sur votre jet d'incarcération.",
       "label": "Gibier de potence"
     },
     "Leader": {
-      "description": "Quand vous Commandez une cohorte en combat, vos hommes continuent à se battre alors même qu'ils devraient se disperser (la cohorte n'est pas mise hors de combat lorsqu'elle subit une blessure de niveau 3). La cohorte bénéficie de +1 effet et 1 armure.",
+      "description": "Quand vous Commandez vos comparses au combat, ils continuent à se battre même s'ils devaient se disperser (ils ne sont pas hors de combat par une blessure de niveau 3). Ils bénéficient en outre de +1 effet et 1 armure.",
       "label": "Meneur"
     },
     "Like-looking-into-a-mirror": {
@@ -125,47 +125,47 @@
       "label": "Tête pensante"
     },
     "Mesmerism": {
-      "description": "Quand vous influencez quelqu'un, vous pouvez lui ôter tout souvenir de ce qui vient de se passer jusqu'à votre prochaine interaction.",
-      "label": "Mesmérisme"
+      "description": "Quand vous Influencez quelqu'un, vous pouvez lui ôter tout souvenir de ce qui vient de se passer jusqu'à votre prochaine interaction avec lui.",
+      "label": "Magnétisme"
     },
     "Mule": {
-      "description": "Vos limites de charge sont augmentées..<br /><ul><li>Légère: 5</li><li>Normale: 7</li><li>Lourde: 8</li></ul>",
-      "label": "Bourrique"
+      "description": "Vos limites de charge augmentent. Légère : 5. Normale : 7. Lourde : 8.",
+      "label": "Mule"
     },
     "Not-to-be-trifled-with": {
-      "description": "Vous pouvez vous dépassez afin d'accomplir l'un des exploits suivants : accomplir un tour de force physique proche du surhumain ou affronter en combat rapproché un petit gang à jeu égal.",
-      "label": "A ne pas prendre à la légère"
+      "description": "Vous pouvez vous dépasser pour : soit accomplir un tour de force physique proche du surhumain, soit affronter en combat rapproché un petit gang (jusqu'à six personnes) à jeu égal.",
+      "label": "À ne pas prendre à la légère"
     },
     "Occultist": {
-      "description": "Vous connaissez les secrets permettant de Côtoyer les puissances primordiales, les dieux oubliés ou les démons. Une fois que vous avez côtoyé l'une de ces entités, vous gagnez +1 dé pour Commander aux cultistes qui les vénèrent.",
+      "description": "Vous connaissez les secrets permettant de Côtoyer les puissances primordiales, les dieux oubliés ou les démons. Une fois que vous avez Côtoyé l'une de ces entités, vous gagnez +1 dé pour Commander aux sectateurs qui la vénèrent.",
       "label": "Occultiste"
     },
     "Physicker": {
-      "description": "Vous êtes capable de Bricoler les os fracturés, de transfuser du sang ou d'autres fluides corporels, de recoudre les plaies et de stabiliser les mourants.<br />Vous pouvez Étudier une maladie ou un cadavre.<br />Tous les membres de votre bande (vous inclus) gagnez +1 dé sur vos jets de guérison.",
+      "description": "Vous êtes capable de Bricoler les os fracturés, de transfuser du sang ou d'autres fluides corporels, de recoudre les plaies et de stabiliser les mourants. Vous pouvez Étudier une maladie ou un cadavre. Tous les membres de votre bande (vous inclus) gagnent +1 dé sur les jets de guérison.",
       "label": "Médecin"
     },
     "Reflexes": {
-      "description": "Quand il est question de savoir qui agit en premier, c'est vous (quand plusieurs personnes possèdent la capacité Réflexes, ils agissent simultanément).",
+      "description": "Vous agissez toujours en premier.",
       "label": "Réflexes"
     },
     "Ritual": {
-      "description": "Vous connaissez les secrets ésotériques permettant d'accomplir un rituel de sorcellerie. Vous pouvez Étudier un rituel occulte (ou en créer un nouveau) afin d'invoquer un effet ou un être surnaturel. Vous débutez avec un rituel déjà connu.",
+      "description": "Vous connaissez les méthodes arcaniques de la sorcellerie rituelle. Vous pouvez Étudier un rituel occulte (ou en créer un nouveau) pour invoquer un effet ou un être surnaturel. Vous débutez avec un rituel déjà connu.",
       "label": "Rituel"
     },
     "Rooks-gambit": {
-      "description": "Vous gagnez 2 points de stress pour utiliser votre meilleure valeur d'action alors que vous accomplissez un autre type d'action.<br /><em>Expliquez comment vous adaptez cette compétence à cet autre domaine.</em>",
+      "description": "Prenez 2 points de stress pour utiliser votre meilleure valeur d'action alors que vous accomplissez une autre action. Expliquez comment vous adaptez cette compétence à un tout autre domaine.",
       "label": "Gambit de la tour"
     },
     "Saboteur": {
-      "description": "Quand vous Démolissez, votre ouvrage est beaucoup plus silencieux qu'il ne devrait l'être et vos dégâts sont admirablement dissimulés en cas d'inspection de routine.",
+      "description": "Quand vous Démolissez, c'est beaucoup plus silencieux que ça ne devrait l'être et les dégâts ne sont pas décelables par une inspection de routine.",
       "label": "Saboteur"
     },
     "Savage": {
-      "description": "Vos déchainements de violence vous rendent particulièrement effrayant.<br />Quand vous Commandez une cible effrayée, gagnez +1 dé.",
+      "description": "Vos déchaînements de violence vous rendent particulièrement effrayant. Quand vous Commandez une cible effrayée, gagnez +1 dé à votre jet.",
       "label": "Féroce"
     },
     "Scout": {
-      "description": "Quand vous recueillez des informations pour découvrir la localisation d'une manœuvrer cible, vous obtenez +1 effet.<br />Quand vous vous dissimulez dans un affût préparé à l'avance ou rôder que vous utilisez un camouflage, vous obtenez +1 dé aux jets pour éviter d'être repéré.",
+      "description": "Quand vous recueillez des informations pour découvrir la localisation d'une cible, vous obtenez +1 effet. Quand vous vous mettez à l'affût ou vous camouflez, vous gagnez +1 dé aux jets pour éviter d'être repéré.",
       "label": "Éclaireur"
     },
     "Shadow": {
@@ -173,11 +173,11 @@
       "label": "Ombre"
     },
     "Sharpshooter": {
-      "description": "Vous pouvez vous dépasser pour accomplir l'une des choses suivantes : effectuer un tir à une distance extrême qui va au-delà de la portée normale de l'arme ou effectuer un tir de suppression pour neutraliser l'ennemi.",
+      "description": "Vous pouvez vous dépasser pour : tirer au-delà de la portée normale de votre arme, soit faire un tir de barrage pour neutraliser l'ennemi.",
       "label": "Tireur d'élite"
     },
     "Strange-methods": {
-      "description": "Quand vous inventez ou fabriquez une création avec la caractéristique ésotérique, vous obtenez +1 niveau de résultat à votre jet. Vous débutez avec un modèle de création ésotérique déjà connu.",
+      "description": "Quand vous inventez ou fabriquez quelque chose d'occulte, vous obtenez +1 niveau de résultat à votre jet. Vous débutez avec une formule de création occulte déjà connue.",
       "label": "Méthodes étranges"
     },
     "Subterfuge": {
@@ -185,15 +185,15 @@
       "label": "Subterfuge"
     },
     "Survivor": {
-      "description": "Que ce soit via une expérience durement acquise ou par le biais d'un rituel occulte, vous êtes immunisé contre les miasmes empoisonnés des terres mortes, ce qui vous permet de survivre en vous nourrissant de l'étrange faune et flore qu'on peut y trouver. Vous gagnez +1 case de stress.",
+      "description": "Que ce soit grâce à l'expérience chèrement acquise ou à un rituel occulte, vous êtes immunisé contre les miasmes empoisonnés des terres mortes, ce qui vous permet de survivre en vous nourrissant de l'étrange faune et flore qu'on peut y trouver. Vous gagnez en outre +1 case de stress.",
       "label": "Survivant"
     },
     "Tempest": {
-      "description": "Vous pouvez vous dépasser pour accomplir l'une des choses suivantes : lancer un éclair que vous utilisez comme une arme — invoquer une tempête à proximité immédiate (pluie torrentielle, vents hurlants, brouillard épais, givre glacial et neige, etc).",
+      "description": "Vous pouvez vous dépasser pour : soit faire s'abattre la foudre, utilisée comme une arme — soit invoquer une tempête à proximité immédiate (pluie torrentielle, vents hurlants, brouillard épais, givre glacial et neige, etc.).",
       "label": "Tempête"
     },
     "The-devils-footsteps": {
-      "description": "Vous pouvez vous dépasser afin d'accomplir l'un des exploits suivants : accomplir un exploit athlétique proche du surhumain ou manœuvrer pour embrouiller vos ennemis, de manière à ce qu'ils s'affrontent mutuellement par erreur.",
+      "description": "Vous pouvez vous dépasser pour : accomplir un exploit athlétique proche du surhumain ou vous déplacer de façon à semer la confusion chez vos ennemis, au point qu'ils s'affrontent mutuellement par erreur.",
       "label": "Le diable au corps"
     },
     "Tough-as-nails": {
@@ -201,15 +201,15 @@
       "label": "Dur à cuir"
     },
     "Trust-in-me": {
-      "description": "Vous gagnez +1 dé contre toute cible avec laquelle vous développez une relation intime.",
+      "description": "Vous gagnez +1 dé pour toute action impliquant une cible avec laquelle vous avez une relation intime.",
       "label": "Aie confiance"
     },
     "Vengeful": {
-      "description": "Vous bénéficiez d'une condition supplémentaire pour gagner de l'expérience : « Vous vous êtes vengé de quelqu'un qui vous a causé du tort, à vous ou a un proche». Si la bande vous a aidé à accomplir votre vengeance, elle gagne aussi de l'expérience.",
+      "description": "Vous gagnez un critère de gain d'expérience supplémentaire : « Vous avez pu rendre la pareille à quelqu'un qui vous a causé du tort, à vous ou à une personne qui vous est chère ». Si la bande vous a aidé, elle gagne aussi un px.",
       "label": "Vengeur"
     },
     "Venomous": {
-      "description": "Choisissez une drogue ou un poison (que vous portez en bandoulière). Vous êtes immunisé contre cette substance. Vous pouvez vous dépasser pour le sécréter par les pores de votre peau, le concentrer dans votre salive ou l'exhaler sous la forme d'une vapeur.",
+      "description": "Choisissez une drogue ou un poison (de ceux que vous pouvez emporter dans votre bandoulière). Vous êtes immunisé contre cette substance. Vous pouvez vous dépasser pour la sécréter par les pores de votre peau, la concentrer dans votre salive ou l'exhaler sous la forme d'une vapeur.",
       "label": "Venimeux"
     },
     "Vigorous": {
@@ -217,61 +217,61 @@
       "label": "Vigoureux"
     },
     "Warded": {
-      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence en rapport avec le surnaturel, ou pour vous dépasser quand vous affrontez ou recourez à une force ésotérique.",
+      "description": "Vous pouvez dépenser votre armure spéciale pour résister à une conséquence surnaturelle, ou pour vous dépasser quand vous affrontez ou maniez des forces occultes.",
       "label": "Conjureur"
     },
     "Weaving-the-web": {
-      "description": "Vous obtenez +1 dé pour côtoyer quand vous recueillez des informations au sujet d'une cible pour un coup. Vous obtenez +1 dé au jet d'engagement pour cette opération.",
+      "description": "Vous gagnez +1 dé pour Côtoyer si vous recueillez des informations sur une cible pour un coup, et +1 dé au jet d'engagement pour cette opération.",
       "label": "Tisser sa toile"
     }
   },
   "Actions": {
     "Attune": {
-      "description": "Communier avec les esprits et le champ ectoplasmique; Canaliser l'énergie electroplasmique; percevoir et communiquer avec les esprits; comprendre la spectrologie.",
+      "description": "Ouvrir son esprit au champ spectral ou à d'autres forces occultes ; communiquer avec un fantôme ; comprendre certains aspects de la spectrologie ; ouvrir son troisième œil.",
       "label": "Communier"
     },
     "Command": {
-      "description": "Se faire obéir par la force ou l'aura; intimider ou menacer; mener une action avec une cohorte du gang.",
+      "description": "Se faire promptement obéir ; intimider ou menacer ; diriger des comparses ; mener l'action coordonnée d'un gang.",
       "label": "Commander"
     },
     "Consort": {
-      "description": "Côtoyer les relations issues de vos origines, vos antécédents, amis et rivaux pour obtenir des ressources, informations, personnes ou lieux.",
+      "description": "Discuter avec ses amis et ses contacts ; renouer avec ses origines ou ses antécédents ; user de son charme pour accéder à des ressources, des informations, des personnes ou des lieux.",
       "label": "Côtoyer"
     },
     "Finesse": {
-      "description": "Subtiliser un objet des poches de quelqu'un; faire usage d'habiles manipulations et de subtils détournement d'attention; contrôler un véhicule ou une monture.",
-      "label": "Manoeuvrer"
+      "description": "Faire les poches d'une cible ; se livrer à d'habiles manipulations ou à de subtils détournement d'attention ; contrôler un véhicule ; guider une monture.",
+      "label": "Manœuvrer"
     },
     "Hunt": {
-      "description": "Traquer une cible; collecter des informations à propos de sa localisation et ses déplacements; attaquer à distance au fusil de précision.",
+      "description": "Pister prudemment une cible ; prendre en filature ; attaquer par un tir de précision à grande distance.",
       "label": "Traquer"
     },
     "Prowl": {
-      "description": "Rôder discrêtement et franchir des obstacles; grimper, nager, courir, sauter, rouler. Attaquer par surprise - poignarder, égorger, etc.",
+      "description": "Se déplacer habilement ou discrètement ; se tapir dans les ombres ; s'élancer d'un toit à un autre ; attaquer par surprise à coup de poignard.",
       "label": "Rôder"
     },
     "Skirmish": {
-      "description": "Combattre un adversaire en combat rapproché; monter à l'assaut ou tenir une position; se bagarrer, lutter.",
+      "description": "Engager une cible au corps à corps ; s'emparer ou tenir une position ; rouer de coups.",
       "label": "Combattre"
     },
     "Study": {
-      "description": "Etudier une personne, un document, faire l'examen approfondi d'un objet pour collecter des informations; acquérir une meilleure compréhension; faire des recherches.",
-      "label": "Etudier"
+      "description": "Scruter les moindre détails ; interpréter les indices ; recueillir des informations dans des documents, des journaux ou des livres ; repérer des mensonges.",
+      "label": "Étudier"
     },
     "Survey": {
-      "description": "Surveiller un lieu ou une situation pour comprendre de quoi il retourne; sentir les embrouilles avant qu'elles n'arrivent; collecter des informations concernant une opportunité.",
+      "description": "Examiner la situation pour en anticiper l'issue ; repérer des signes annonciateurs pour agir préventivement ; découvrir des ouvertures ou des faiblesse.",
       "label": "Surveiller"
     },
     "Sway": {
-      "description": "Influencer une personne par le charme, le raisonnement, la tromperie, le bluff; modifier la disposition ou le comportement par la manipulation et la séduction.",
+      "description": "User de persuasion, de charme ou d'argument ; mentir de façon convaincante ; ruser pour obtenir affection ou obéissance.",
       "label": "Influencer"
     },
     "Tinker": {
-      "description": "Bricoler des mécanismes pour créer, modifier, désactiver ou réparer; désactiver un piège, forcer une serrure, ouvrir un coffre-fort. Utiliser un engin electroplasmique.",
+      "description": "Traficoter des appareils et des mécanismes ; créer un tout nouveau gadget ou modifier un objet existant ; crocheter une serrure ; neutraliser une alarme ou un piège ; tirer parti des appareils électroplasmiques présents dans toute la ville.",
       "label": "Bricoler"
     },
     "Wreck": {
-      "description": "Démolir un lieu, un objet ou un obstacle par la force brute ou le sabotage précis; pénétrer les défenses par la force; semer le désordre et la distraction.",
+      "description": "Déchaîner une force brutale ; abattre une porte ou un mur avec une masse ou des explosifs ; déchaîner le chaos ; saboter.",
       "label": "Démolir"
     }
   },
@@ -281,26 +281,26 @@
     "resolve": "Détermination"
   },
   "Background-suggestions": {
-    "acolyte-spirit-warden": "Gardien Spirite acolyte",
+    "acolyte-spirit-warden": "Acolyte des Sentinelles",
     "antiquarian": "Antiquaire",
     "artisan": "Artisan",
     "artist": "Artiste",
     "bluecoat": "Manteau bleu",
     "bounty-hunter": "Chasseur de prime",
     "captain": "Capitaine",
-    "convict": "Condamné",
+    "convict": "Taulard",
     "councilor": "Conseiller",
-    "courier": "Coursier",
+    "courier": "Courrier",
     "courtier": "Courtisan",
     "criminologist": "Criminologue",
-    "cultist": "Cultiste",
+    "cultist": "Sectateur",
     "dealer": "Trafiquant",
     "demonologist": "Démonologue",
     "dilettante": "Dilettante",
     "diplomat": "Diplomate",
-    "docker": "Débardeur",
+    "docker": "Docker",
     "driver": "Conducteur",
-    "duelist": "Dueliste",
+    "duelist": "Duelliste",
     "electrochemist": "Électrochimiste",
     "engineer": "Ingénieur",
     "envoy": "Émissaire",
@@ -314,28 +314,28 @@
     "hustler": "Arnaqueur",
     "informant": "Informateur",
     "journalist": "Journaliste",
-    "lark": "Prostitué",
+    "lark": "Belle de nuit",
     "leviathan-hunter": "Chasseur de léviathans",
-    "linewalker": "Encâbleur",
-    "mediciner": "Médecin",
-    "merchant": "Marchant",
-    "military-guardsman": "Garde militaire",
+    "linewalker": "Électrofunambule",
+    "mediciner": "Soigneur",
+    "merchant": "Marchand",
+    "military-guardsman": "Garde impérial",
     "miner": "Mineur",
     "ministry-agent": "Agent du ministère",
     "naturalist": "Naturaliste",
     "occultist": "Occultiste",
-    "psychometrist": "Psychometricien",
+    "psychometrist": "Psychométricien",
     "purveyor": "Fournisseur",
-    "rail-jack": "Poseur de rails",
-    "rifle-scout": "Éclaireur",
-    "roof-runner": "Monte en l'air",
+    "rail-jack": "Cheminard",
+    "rifle-scout": "Éclaireur d'élite",
+    "roof-runner": "Monte-en-l'air",
     "sailor": "Marin",
     "scavenger": "Pilleur",
     "scholar": "Érudit",
     "secretary": "Secrétaire",
     "sentry": "Sentinelle",
-    "servant": "Serviteur",
-    "sparkwright": "Sparkwright",
+    "servant": "Domestique",
+    "sparkwright": "Étincelleur",
     "spectrologist": "Spectrologue",
     "steward": "Intendant",
     "taverner": "Tavernier",
@@ -345,37 +345,37 @@
   },
   "Backgrounds": {
     "Academic": {
-      "description": "Un érudit, un professeur ou un étudiant à l'Académie de Doskvol, un philosohe ou un journaliste, etc.",
-      "label": "Académique"
+      "description": "Un érudit, un professeur ou un étudiant à l'Académie de Doskvol, un philosophe ou un journaliste, etc.",
+      "label": "Académie"
     },
     "Labor": {
-      "description": "Un domestique, un ouvrier, un cocher, un débardeur, un marin, un poseur de rails, etc. Un débardeur pour la Compagnie Crochet Nord.",
+      "description": "Un domestique, un ouvrier, un cocher, un docker, un marin, un poseur de rails, etc. Un débardeur pour la Compagnie du Croc-du-Nord.",
       "label": "Labeur"
     },
     "Law": {
-      "description": "Un avocat ou un juriste, un Manteau Bleu ou un inspecteur (voire un Gardien Spirite), un maton dans la prison de Crochet-de-Fer, etc.",
+      "description": "Un avocat ou un juriste, un Manteau bleu ou un Inspecteur (voire une Sentinelle), un maton dans la prison de Croc-de-Fer, etc.",
       "label": "Loi"
     },
     "Military": {
-      "description": "Un soldat impérial ou Skovlandien, un mercenaire, un agent de renseignement, un stratège, un sergent instructeur, etc.",
+      "description": "Un soldat impérial ou skovlan, un mercenaire, un agent de renseignement, un stratège, un sergent instructeur, etc.",
       "label": "Militaire"
     },
     "Noble": {
-      "description": "Une dilettante, un courtisan, l'héritier d'une famille en déclin, etc.",
-      "label": "Noble"
+      "description": "Un dilettante, un courtisan, l'héritier d'une famille sur le déclin, etc.",
+      "label": "Noblesse"
     },
     "Trade": {
-      "description": "Un boutiquier, un marchand, un artisan de talent, un coursier, etc. Un agent de liaison auprès du Ministère de la Préservation.",
+      "description": "Un boutiquier, un marchand, un artisan de talent, un courtier maritime, etc. Un agent de liaison auprès du ministère de la Préservation.",
       "label": "Commerce"
     },
     "Underworld": {
       "description": "Un enfant des rues, un gangster, un jeune voyou, ou tout autre paria ayant grandi dans le caniveau.",
-      "label": "Bas-Fonds"
+      "label": "Bas-fonds"
     }
   },
   "Friends": {
     "Augus": {
-      "description": "Un maitre architecte",
+      "description": "Un maître-architecte",
       "label": "Augus"
     },
     "Bazso-baz": {
@@ -383,7 +383,7 @@
       "label": "Bazso Baz"
     },
     "Bryl": {
-      "description": "Un trafiquant de drogues",
+      "description": "Un vendeur de drogue",
       "label": "Bryl"
     },
     "Casta": {
@@ -391,15 +391,15 @@
       "label": "Casta"
     },
     "Celene": {
-      "description": "Une sentinelle",
+      "description": "Une vigie",
       "label": "Celene"
     },
     "Chael": {
-      "description": "Un voyou vicieux",
+      "description": "Une brute vicieuse",
       "label": "Chael"
     },
     "Darmot": {
-      "description": "Un manteau bleu",
+      "description": "Un Manteau bleu",
       "label": "Darmot"
     },
     "Eckerd": {
@@ -427,7 +427,7 @@
       "label": "Jennah"
     },
     "Jeren": {
-      "description": "Un archiviste des manteaux bleus",
+      "description": "Un archiviste chez les Manteaux bleus",
       "label": "Jeren"
     },
     "Jul": {
@@ -435,11 +435,11 @@
       "label": "Jul"
     },
     "Khyra": {
-      "description": "Une tenancière de taverne",
-      "label": "Khyra"
+      "description": "La tenancière d'une taverne",
+      "label": "Klyra"
     },
     "Malista": {
-      "description": "Une prétresse",
+      "description": "Une prêtresse",
       "label": "Malista"
     },
     "Marlane": {
@@ -484,7 +484,7 @@
     },
     "Sawtooth": {
       "description": "Un médecin",
-      "label": "Sawtooth"
+      "label": "Dents-de-scie"
     },
     "Scurlock": {
       "description": "Un vampire",
@@ -495,7 +495,7 @@
       "label": "Setarra"
     },
     "Stazia": {
-      "description": "Un aptothicaire",
+      "description": "Un apothicaire",
       "label": "Stazia"
     },
     "Steiner": {
@@ -516,7 +516,7 @@
     }
   },
   "Heritage-suggestions": {
-    "bastion-elders": "Ainés du Bastion",
+    "bastion-elders": "Aînés du Bastion",
     "blackvale-coven": "Clan Blackvale",
     "blood-cullers": "Collecteurs de Sang",
     "bonewalker": "Marche-Os",
@@ -987,7 +987,7 @@
         "name-prompt": "Votre nom",
         "portrait-custom": "Portrait personnalisé depuis une URL",
         "portrait-prompt": "Choisissez un portrait",
-        "portrait-url-prompt": "Chemin vers l’image du portrait",
+        "portrait-url-prompt": "Chemin vers l'image du portrait",
         "randomize-alias-button": "Alias aléatoire",
         "randomize-look-button": "Apparence aléatoire",
         "randomize-name-button": "Nom aléatoire",
