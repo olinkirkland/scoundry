@@ -153,6 +153,14 @@ fetch('/assets/news.json?_t=' + Date.now())
                 }
             }
         }
+
+        img {
+            width: 100%;
+            max-width: 32rem;
+            border-radius: 5px;
+            box-shadow: var(--shadow-sm);
+            margin-left: auto;
+        }
     }
 }
 

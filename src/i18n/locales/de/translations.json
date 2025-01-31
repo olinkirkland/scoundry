@@ -987,7 +987,7 @@
         "name-prompt": "Dein Name",
         "portrait-custom": "Benutzerdefiniertes Porträt von URL",
         "portrait-prompt": "Wähle ein Porträt",
-        "portrait-url-prompt": "Pfad zum Porträtbild (Auswahl oder benutzerdefinierte URL)",
+        "portrait-url-prompt": "Pfad zum Porträtbild",
         "randomize-alias-button": "Alias zufällig wählen",
         "randomize-look-button": "Aussehen zufällig wählen",
         "randomize-name-button": "Name zufällig wählen",

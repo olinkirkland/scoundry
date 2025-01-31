@@ -78,11 +78,15 @@
             $t('User-interface.Steps.Name-and-look.portrait-custom')
         }}</label>
     </div>
-    <div class="input-block">
-        <label>
-            {{ $t('User-interface.Steps.Name-and-look.portrait-url-prompt') }}
-        </label>
-        <input type="text" v-model="scoundrel.portrait" />
+    <div class="portrait-url-block">
+        <div class="input-block">
+            <label>
+                {{
+                    $t('User-interface.Steps.Name-and-look.portrait-url-prompt')
+                }}
+            </label>
+            <input type="text" v-model="scoundrel.portrait" />
+        </div>
     </div>
 </template>
 
@@ -248,6 +252,15 @@ function getPortraitSource(portraitPath: string) {
 
     > label:last-child {
         margin-top: 1rem;
+    }
+}
+
+.portrait-url-block {
+    padding: 0 1.2rem;
+
+    .input-block {
+        max-width: unset;
+        width: 100%;
     }
 }
 
