@@ -2,6 +2,8 @@ import rough from 'roughjs';
 import { Scoundrel } from './scoundrel';
 import { getActionValue } from './util/action-util';
 import { RoughCanvas } from 'roughjs/bin/canvas';
+import { capitalize } from './util/string-util';
+import { t } from './i18n/locale';
 
 export async function paintSheet(
     scoundrel: Scoundrel
@@ -318,8 +320,10 @@ async function paintDeepCutsSheet(
             });
 
             // Write Vice
-            if (scoundrel.vice)
-                ctx.fillText(scoundrel.vice, data.vice.x, data.vice.y);
+            if (scoundrel.vice) {
+                const viceText = t(`Vices.${capitalize(scoundrel.vice)}.label`);
+                ctx.fillText(viceText, data.vice.x, data.vice.y);
+            }
 
             // Write Vice Detail
             if (scoundrel.viceDetail)
@@ -328,7 +332,7 @@ async function paintDeepCutsSheet(
                     scoundrel.viceDetail,
                     data.viceText.x,
                     data.viceText.y,
-                    400,
+                    380,
                     40,
                     false
                 );
@@ -396,11 +400,13 @@ function fillMultilineText(
             line = testLine;
         }
     }
+
     lines.push({ text: line, x, y });
-    // Move the text up by line count * line height
+    // Move the text (up or down) by line count * line height
     if (!directionUp)
-        lines.forEach((line) => (line.y -= lineCount * lineHeight));
+        lines.forEach((line) => (line.y += lineCount * lineHeight));
     else lines.forEach((line) => (line.y -= lineCount * lineHeight));
+
     lines.forEach((line) => ctx.fillText(line.text, line.x, line.y));
 }
 
