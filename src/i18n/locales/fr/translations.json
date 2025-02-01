@@ -632,49 +632,49 @@
     },
     "Joining-words": {
       "and": "et",
-      "dressed-in": "habillé avec",
+      "dressed-in": "avec, comme vêtement,",
       "sporting": "revêtant",
       "wearing": "portant"
     },
     "Person-word-adjectives": {
       "affable": "affable",
       "athletic": "athlétique",
-      "bony": "osseux•se",
-      "bright": "solaire",
-      "brooding": "ténébreux•se",
+      "bony": "émacié·e",
+      "bright": "joyeux·se",
+      "brooding": "maussade",
       "calm": "calme",
-      "chiseled": "buriné•e",
-      "cold": "froid•e",
-      "dark": "teint sombre",
-      "delicate": "délicat•e",
-      "fair": "teint pâle",
+      "chiseled": "buriné·e",
+      "cold": "froid·e",
+      "dark": "sombre",
+      "delicate": "délicat·e",
+      "fair": "pâle",
       "fierce": "féroce",
-      "grimy": "sinistre",
-      "handsome": "beau•elle",
-      "huge": "immense",
-      "hunched": "courbé•e",
-      "languid": "languissant•e",
-      "lovely": "charmant•e",
-      "open": "ouvert•e",
-      "plump": "dodue",
-      "rough": "brutal•e",
+      "grimy": "crasseux·se",
+      "handsome": "belle·au",
+      "huge": "énorme",
+      "hunched": "voûté·e",
+      "languid": "léthargique",
+      "lovely": "adorable",
+      "open": "ouvert·e",
+      "plump": "potelé·e",
+      "rough": "rude",
       "sad": "triste",
-      "scarred": "marqué•e",
-      "slim": "maigre",
-      "soft": "doux•ce",
-      "squat": "trapu•e",
+      "scarred": "balafré·e",
+      "slim": "mince",
+      "soft": "doux·ce",
+      "squat": "trapu·e",
       "stern": "sévère",
-      "stout": "corpulent•e",
+      "stout": "corpulent·e",
       "striking": "remarquable",
-      "twitchy": "nerveux•se",
-      "weathered": "âgé•e",
-      "wiry": "râblé•e",
-      "worn": "usé•e"
+      "twitchy": "nerveux·se",
+      "weathered": "buriné·e",
+      "wiry": "maigre",
+      "worn": "usé·e"
     },
     "Person-words": {
       "child": {
-        "article": "un",
-        "word": "enfant"
+        "article": "un·e",
+        "word": "gamin·e"
       },
       "man": {
         "article": "un",
@@ -698,44 +698,44 @@
   },
   "Names": {
     "Aliases": {
-      "bell": "la cloche",
-      "birch": "le bouleau",
-      "bricks": "la brique",
-      "bug": "bestiole",
-      "chime": "la sonnette",
-      "coil": "le ressort",
-      "cricket": "le criquet",
-      "cross": "la croix",
-      "crow": "le corbeau",
+      "bell": "la Cloche",
+      "birch": "Bouleau",
+      "bricks": "Brique",
+      "bug": "Bestiole",
+      "chime": "Sonnette",
+      "coil": "Ressort",
+      "cricket": "Criquet",
+      "cross": "la Croix",
+      "crow": "Corbeau",
       "echo": "Écho",
-      "flint": "le silex",
-      "frog": "la grenouille",
-      "frost": "le givre",
-      "grip": "la poigne",
-      "gunner": "l'artilleur",
-      "hammer": "le marteau",
-      "hook": "le crochet",
-      "junker": "la bricole",
-      "mist": "Brume",
-      "moon": "Lune",
-      "nail": "le clou",
-      "needle": "l'aguille",
-      "ogre": "l'ogre",
-      "pool": "l'étang",
-      "ring": "l'anneau",
+      "flint": "Silex",
+      "frog": "la Grenouille",
+      "frost": "le Givre",
+      "grip": "la Poigne",
+      "gunner": "l'Artilleur",
+      "hammer": "Marteau",
+      "hook": "Crochet",
+      "junker": "la Bricole",
+      "mist": "des Brumes",
+      "moon": "la Lune",
+      "nail": "le Clou",
+      "needle": "l'Aiguille",
+      "ogre": "l'Ogre",
+      "pool": "l'Étang",
+      "ring": "l'Anneau",
       "ruby": "Rubis",
       "silver": "Argent",
-      "skinner": "le tanneur",
-      "song": "la chanson",
-      "spur": "l'éperon",
-      "tackle": "le palan",
-      "thistle": "le chardon",
-      "thorn": "l'épine",
-      "tick-tock": "tic-tac",
-      "twelves": "la douzaine",
-      "vixen": "la vamp",
-      "whip": "le fouet",
-      "wicker": "l'osier"
+      "skinner": "Tanneur",
+      "song": "Chanson",
+      "spur": "l'Éperon",
+      "tackle": "le Palan",
+      "thistle": "le Chardon",
+      "thorn": "l'Épine",
+      "tick-tock": "Tic-Tac",
+      "twelves": "la Douzaine",
+      "vixen": "la Vamp",
+      "whip": "le Fouet",
+      "wicker": "l'Osier"
     }
   },
   "Playbooks": {
@@ -756,7 +756,7 @@
       "label": "Chimère"
     },
     "Slide": {
-      "description": "Un manipulateur subtil et espion",
+      "description": "Un espion et manipulateur subtil",
       "label": "Arlequin"
     },
     "Spider": {
@@ -764,7 +764,7 @@
       "label": "Araignée"
     },
     "Whisper": {
-      "description": "Un adepte ésotérique et conjureur",
+      "description": "Un adepte des arcanes et conjureur",
       "label": "Haruspice"
     }
   },
@@ -773,21 +773,21 @@
       "Attribution": {
         "code-and-design": "Code & conception par <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
         "copyright": "Copyright © {year} Olin Kirkland",
-        "license-blades-in-the-dark": "Ce site est basé sur <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — un produit de One Seven Design, développé et écrit par John Harper, et licencié pour notre usage sous licence <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
-        "license-icons": "Les icones proviennent de <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
-        "license-portraits": "Les portrait sont issues de <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">la librairie du congrès</a> sans restriction connue dans leur usage",
-        "localization": "Traduction espagnole par Felix&nbsp;G.&nbsp;Rios<br />Traduction française par <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> et Thomas Girod",
-        "news-and-updates": "Nouvelles & mises à jour"
+        "license-blades-in-the-dark": "Ce site est basé sur <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — produit par One Seven Design, développé et écrit par John Harper, et mis a disposition pour notre utilisation sous licence <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>.",
+        "license-icons": "Les icônes sont issues de <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>.",
+        "license-portraits": "Les portraits proviennent de <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> et ne sont soumis à aucune restriction connue quant à leur utilisation.",
+        "localization": "Traduction espagnole par Felix&nbsp;G.&nbsp;Rios<br />Traduction française par Thomas Girod et Artamis, basée sur le travail de Thomas Pereira, Tiburce Guyard et Alexis Brossollet pour <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a>.",
+        "news-and-updates": "Nouveautés & mises à jour"
       },
       "Scoundrel-card": {
-        "no-name": "Anonyme {playbook}",
+        "no-name": "{playbook} anonyme",
         "no-playbook": "Gredin anonyme"
       },
       "description": "Un gestionnaire de gredins pour <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
       "lab-banner": "Lab",
-      "last-updated": "Updated {date}",
-      "new-scoundrel-button": "Créez un nouveau gredin",
-      "scroll-prompt": "Faites défiler pour voir les crédits",
+      "last-updated": "Mis à jour le {date}",
+      "new-scoundrel-button": "Créer un nouveau gredin",
+      "scroll-prompt": "Défiler vers le bas pour voir les crédits",
       "settings-button": "Paramètres"
     },
     "Make-page": {
@@ -801,8 +801,8 @@
         "actions": "Actions",
         "background": "Antécédents",
         "export": "Exportation",
-        "friends": "Contacts",
-        "heritage": "Origines",
+        "friends": "Relations",
+        "heritage": "Origine",
         "name-and-look": "Nom & Apparence",
         "playbook": "Livret",
         "vice": "Vice"
@@ -811,15 +811,15 @@
     "Modals": {
       "Change-language": {
         "Controls": {
-          "cancel-button": "Non, continuer d'utiliser la langue {currentLanguage}",
-          "confirm-button": "Oui, passer à la langue {newLanguage}"
+          "cancel-button": "Non, continuer d'utiliser le site en {currentLanguage}",
+          "confirm-button": "Oui, passer en {newLanguage}"
         },
-        "message": "Vous essayez de charger un gredin en langue <strong>{newLanguage}</strong> mais votre langue actuelle est <strong>{currentLanguage}</strong>. Aimeriez-vous passer à la langue <strong>{newLanguage}</strong> ?",
-        "title": "Charger un gredin en langue différente"
+        "message": "Vous essayez de charger un gredin créé en <strong>{newLanguage}</strong> mais, actuellement, vous utilisez le site en <strong>{currentLanguage}</strong>. Souhaitez-vous passer en <strong>{newLanguage}</strong> ?",
+        "title": "Charger un gredin dans une langue différente"
       },
       "Confirm": {
         "Controls": {
-          "cancel-button": "Non, j'ai changé d'avis.",
+          "cancel-button": "Non, j'ai changé d'avis",
           "confirm-button": "Oui"
         }
       },
@@ -827,26 +827,26 @@
         "Controls": {
           "confirm-button": "Supprimer"
         },
-        "message": "Êtes vous certain de vouloir supprimer ce gredin ? Cette action ne pourra pas être annulée.",
+        "message": "Êtes-vous certain de vouloir supprimer ce gredin ? Cette action est irréversible.",
         "title": "Supprimer le gredin ?"
       },
       "Import": {
         "Failed": {
-          "message": "La fiche de gredin n'a pas pu être importée. Veuillez vérifier l'URL et essayer à nouveau.",
+          "message": "La fiche de gredin n'a pas pu être importée. Veuillez vérifier l'URL et réessayer.",
           "title": "Échec de l'importation"
         },
         "Success": {
           "message": "La fiche de gredin a été importée avec succès !",
-          "title": "Réussite de l'importation"
+          "title": "Importation réussie"
         }
       },
       "News-and-updates": {
-        "title": "Nouvelles & Mises à jour"
+        "title": "Nouveautés & mises à jour"
       },
       "Settings": {
         "Language": {
           "Language-features": {
-            "data": "Données du jeu",
+            "data": "Contenu du jeu",
             "deep-cuts": "Deep Cuts",
             "sheets": "Fiche de personnage",
             "ui": "Interface utilisateur"
@@ -860,27 +860,27 @@
           "label": "Choisissez la langue de l'application"
         },
         "Tracking": {
-          "description": "La collecte minimale d'informations nous aide à améliorer Scoundry en collectant des données anonymes sur les personnages, les pages visitées, et l'utilisation des fonctionnalités. Aucune information personnelle n'est collectée ou partagée.",
-          "label": "Activer la collecte d'informations anonyme"
+          "description": "La collecte minimale d'informations nous aide à améliorer Scoundry en récupérant des données anonymisées sur les personnages, les pages visitées, et l'utilisation des fonctionnalités. Aucune information personnelle n'est collectée ni partagée.",
+          "label": "Activer la collecte d'informations anonymisées"
         },
         "title": "Paramètres"
       },
       "Tracking-consent": {
         "Controls": {
           "cancel-button": "Garder la collecte d'informations désactivée",
-          "confirm-button": "Je consent à la collecte d'informations"
+          "confirm-button": "Je consens à la collecte d'informations"
         },
-        "message": "La collecte minimale d'informations nous aide à améliorer Scoundry en collectant des données anonymes sur les personnages, les pages visitées, et l'utilisation des fonctionnalités. Aucune information personnelle n'est collectée ou partagée.",
+        "message": "La collecte minimale d'informations nous aide à améliorer Scoundry en récupérant des données anonymisées sur les personnages, les pages visitées, et l'utilisation des fonctionnalités. Aucune information personnelle n'est collectée ni partagée.",
         "title": "Préférences de collecte d'informations"
       },
       "World-map": {
-        "title": "L'archipel brisé"
+        "title": "L'Archipel brisé"
       }
     },
     "Steps": {
       "Abilities": {
         "subtitle": "Chosissez une capacité spéciale.",
-        "title": "Quel talent vous rend unique dans la bande ?"
+        "title": "Quel talent vous rend unique au sein de la bande ?"
       },
       "Actions": {
         "Action-tally": {
