@@ -857,7 +857,7 @@
             "es": "Espagnol",
             "fr": "Français"
           },
-          "label": "Choisissez la langue de l'application"
+          "label": "Choisir la langue de l'application"
         },
         "Tracking": {
           "description": "La collecte minimale d'informations nous aide à améliorer Scoundry en récupérant des données anonymisées sur les personnages, les pages visitées, et l'utilisation des fonctionnalités. Aucune information personnelle n'est collectée ni partagée.",
@@ -879,7 +879,7 @@
     },
     "Steps": {
       "Abilities": {
-        "subtitle": "Chosissez une capacité spéciale.",
+        "subtitle": "Choisissez une capacité spéciale.",
         "title": "Quel talent vous rend unique au sein de la bande ?"
       },
       "Actions": {
@@ -889,51 +889,51 @@
         },
         "Actions": {
           "Attune": {
-            "description": "Communier avec les esprits et le champ ectoplasmique; Canaliser l'énergie electroplasmique; percevoir et communiquer avec les esprits; comprendre la spectrologie.",
+            "description": "Ouvrir son esprit au champ spectral ou à d'autres forces occultes ; communiquer avec un fantôme ; comprendre certains aspects de la spectrologie ; ouvrir son troisième œil.",
             "label": "Communier"
           },
           "Command": {
-            "description": "Se faire obéir par la force ou l'aura; intimider ou menacer; mener une action avec une cohorte du gang.",
+            "description": "Se faire promptement obéir ; intimider ou menacer ; diriger des comparses ; mener l'action coordonnée d'un gang.",
             "label": "Commander"
           },
           "Consort": {
-            "description": "Côtoyer les relations issues de vos origines, vos antécédents, amis et rivaux pour obtenir des ressources, informations, personnes ou lieux.",
+            "description": "Discuter avec ses amis et ses contacts ; renouer avec ses origines ou ses antécédents ; user de son charme pour accéder à des ressources, des informations, des personnes ou des lieux.",
             "label": "Côtoyer"
           },
           "Finesse": {
-            "description": "Subtiliser un objet des poches de quelqu'un; faire usage d'habiles manipulations et de subtils détournement d'attention; contrôler un véhicule ou une monture.",
-            "label": "Manoeuvrer"
+            "description": "Faire les poches d'une cible ; se livrer à d'habiles manipulations ou à de subtils détournement d'attention ; contrôler un véhicule ; guider une monture.",
+            "label": "Manœuvrer"
           },
           "Hunt": {
-            "description": "Traquer une cible; collecter des informations à propos de sa localisation et ses déplacements; attaquer à distance au fusil de précision.",
+            "description": "Pister prudemment une cible ; prendre en filature ; attaquer par un tir de précision à grande distance.",
             "label": "Traquer"
           },
           "Prowl": {
-            "description": "Rôder discrêtement et franchir des obstacles; grimper, nager, courir, sauter, rouler. Attaquer par surprise - poignarder, égorger, etc.",
+            "description": "Se déplacer habilement ou discrètement ; se tapir dans les ombres ; s'élancer d'un toit à un autre ; attaquer par surprise à coup de poignard.",
             "label": "Rôder"
           },
           "Skirmish": {
-            "description": "Combattre un adversaire en combat rapproché; monter à l'assaut ou tenir une position; se bagarrer, lutter.",
+            "description": "Engager une cible au corps à corps ; s'emparer ou tenir une position ; rouer de coups.",
             "label": "Combattre"
           },
           "Study": {
-            "description": "Étudier une personne, un document, faire l'examen approfondi d'un objet pour collecter des informations; acquérir une meilleure compréhension; faire des recherches.",
+            "description": "Scruter les moindre détails ; interpréter les indices ; recueillir des informations dans des documents, des journaux ou des livres ; repérer des mensonges.",
             "label": "Étudier"
           },
           "Survey": {
-            "description": "Surveiller un lieu ou une situation pour comprendre de quoi il retourne; sentir les embrouilles avant qu'elles n'arrivent; collecter des informations concernant une opportunité.",
+            "description": "Examiner la situation pour en anticiper l'issue ; repérer des signes annonciateurs pour agir préventivement ; découvrir des ouvertures ou des faiblesse.",
             "label": "Surveiller"
           },
           "Sway": {
-            "description": "Influencer une personne par le charme, le raisonnement, la tromperie, le bluff; modifier la disposition ou le comportement par la manipulation et la séduction.",
+            "description": "User de persuasion, de charme ou d'argument ; mentir de façon convaincante ; ruser pour obtenir affection ou obéissance.",
             "label": "Influencer"
           },
           "Tinker": {
-            "description": "Bricoler des mécanismes pour créer, modifier, désactiver ou réparer; désactiver un piège, forcer une serrure, ouvrir un coffre-fort. Utiliser un engin electroplasmique.",
+            "description": "Traficoter des appareils et des mécanismes ; créer un tout nouveau gadget ou modifier un objet existant ; crocheter une serrure ; neutraliser une alarme ou un piège ; tirer parti des appareils électroplasmiques présents dans toute la ville.",
             "label": "Bricoler"
           },
           "Wreck": {
-            "description": "Démolir un lieu, un objet ou un obstacle par la force brute ou le sabotage précis; pénétrer les défenses par la force; semer le désordre et la distraction.",
+            "description": "Déchaîner une force brutale ; abattre une porte ou un mur avec une masse ou des explosifs ; déchaîner le chaos ; saboter.",
             "label": "Démolir"
           }
         },
@@ -944,291 +944,291 @@
         },
         "Options": {
           "character-creation-button": "Création de personnage : 7 points d'action au total, maximum 2 par action",
-          "mastery-advance-button": "Amélioration Maitrise : Permet d'avancer une action jusqu'à 4"
+          "mastery-advance-button": "Amélioration de bande \"Maîtrise\" : permet de hausser un score d'action jusqu'à 4"
         },
         "subtitle": "Assignez des points aux actions qui vous représentent le mieux.",
-        "suggested-actions": "Actions suggérées par votre passé et votre héritage :",
-        "title": "Dans quel domaine excellez-vous ?"
+        "suggested-actions": "Actions reflétant votre origine et vos antécédents :",
+        "title": "Dans quels domaines excellez-vous ?"
       },
       "Background": {
-        "deep-cuts-description": "La description complète des antécédents peut être trouvée dans l'extension à Blades in the Dark <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>.",
+        "deep-cuts-description": "La description complète des antécédents est dans <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>, une extension officielle de Blades in the Dark.",
         "detail-prompt": "Un détail à propos de votre antécédent",
-        "select-prompt": "Choisissez un antécédent pour voir sa description et des propositions de détail.",
+        "select-prompt": "Sélectionnez un antécédent pour voir sa description et des suggestions de détails.",
         "subtitle": "Choisissez un antécédent et écrivez un détail qui vous est propre.",
         "title": "Que faisiez-vous avant de rejoindre la bande ?"
       },
       "Export": {
         "Controls": {
           "classic-sheet": "Standard",
-          "copied": "Copié!",
-          "save-as-image-button": "Sauver comme image",
-          "share-as-url-button": "Partager comme URL"
+          "copied": "Copié !",
+          "save-as-image-button": "Sauvegarder en tant qu'image",
+          "share-as-url-button": "Partager en tant qu'URL"
         },
         "subtitle": "Modifiez et partagez votre fiche de gredin.",
         "title": "Exportez votre gredin"
       },
       "Friends": {
-        "friend-button": "Allié",
+        "friend-button": "Relation proche",
         "rival-button": "Rival",
-        "subtitle": "Marquez un allié de longue date, une relation familiale ou amant. Marquez ensuite un rival, ennemi, ou partenaire trahis.",
-        "title": "Qui vous en doit une, et qui est votre ennemi déclaré ?"
+        "subtitle": "Choisissez une relation proche (ami, amant, parent, etc.). Puis choisissez un rival, voire un ennemi.",
+        "title": "Qui vous en doit une, et qui est votre ennemi juré ?"
       },
       "Heritage": {
-        "deep-cuts-description": "La description complète des origines peut être trouvée dans <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>, un supplément pour Blades in the Dark.",
+        "deep-cuts-description": "La description complète des origines est dans <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a>, une extension officielle de Blades in the Dark.",
         "detail-prompt": "Un détail à propos de vos origines",
-        "select-prompt": "Choisissez un héritage pour voir sa description et des suggestions de détails.",
-        "subtitle": "Choisissez une origine et écrivez un détail qui vous est spécifique.",
-        "title": "Quelle sont vos origines ?",
+        "select-prompt": "Choisissez une origine pour voir sa description et des suggestions de détails.",
+        "subtitle": "Choisissez une origine et écrivez un détail qui vous est propre.",
+        "title": "Quelles sont vos origines ?",
         "world-map-button": "Carte du monde"
       },
       "Name-and-look": {
-        "alias-prompt": "Votre alias",
+        "alias-prompt": "Votre surnom",
         "look-prompt": "Votre apparence",
         "name-prompt": "Votre nom",
         "portrait-custom": "Portrait personnalisé depuis une URL",
         "portrait-prompt": "Choisissez un portrait",
         "portrait-url-prompt": "Chemin vers l'image du portrait",
-        "randomize-alias-button": "Alias aléatoire",
+        "randomize-alias-button": "Surnom aléatoire",
         "randomize-look-button": "Apparence aléatoire",
         "randomize-name-button": "Nom aléatoire",
-        "subtitle": "Enregistrez un nom, un alias et décrivez brèvement votre apparence.",
-        "title": "Comment vous appelle-t-on ? A quoi ressemblez-vous ?"
+        "subtitle": "Choisissez un nom, un surnom et notez quelques termes évocateurs de votre apparence.",
+        "title": "Comment vous appelle-t-on ? À quoi ressemblez-vous ?"
       },
       "Playbook": {
-        "subtitle": "Votre livret représente votre réputation dans les bas-fonds, vos talents particuliers et comment vous progressez.",
-        "title": "Quel genre de <strong>Gredin</strong> êtes vous ?"
+        "subtitle": "Votre livret représente la réputation de votre personnage, ses capacités spéciales et comment il acquiert de l'expérience.",
+        "title": "Quel genre de <strong>gredin</strong> êtes-vous ?"
       },
       "Vice": {
-        "description": "Choisissez un vice et enregistrez le nom et l'adresse de votre pourvoyeur.",
-        "purveyor-prompt": "Une description de l'endroit ou vous allez pour décompresser",
-        "select-prompt": "Choisissez un vice pour voir sa description et les pourvoyeurs suggérés.",
-        "title": "Ou allez vous pour décompresser ?"
+        "description": "Choisissez votre type de vice favori et indiquez le nom et l'emplacement de votre pourvoyeur.",
+        "purveyor-prompt": "Une description de l'endroit où vous allez pour décompresser",
+        "select-prompt": "Choisissez un type de vice pour voir sa description et des suggestions de pourvoyeurs.",
+        "title": "Où allez-vous pour décompresser ?"
       }
     }
   },
   "Vice-suggestions": {
     "Aranna-the-blessed": {
-      "description": "Cultiste d'un dieu oublié",
-      "district": "Marché nocturne",
-      "label": "Aranna la bénie",
-      "text": "Aranna la bénie; Cultiste d'un dieu oublié; Marché nocturne"
+      "description": "Sectatrice d'un Dieu oublié",
+      "district": "Le Marché de nuit",
+      "label": "Aranna la Bénie",
+      "text": "Aranna la Bénie, sectatrice d'un Dieu oublié, Marché de nuit"
     },
     "Avrick": {
-      "description": "Trafiquant de poudre",
-      "district": "Crête-Charbon",
+      "description": "Vendeur de poudre",
+      "district": "Tertre-fendu",
       "label": "Avrick",
-      "text": "Avrick; Trafiquant de poudre; Crête-Charbon"
+      "text": "Avrick, vendeur de poudre, Tertre-fendu"
     },
     "Chef-roselle": {
-      "description": "Le restaurant de la prune dorée",
-      "district": "Six tours",
-      "label": "Chef Roselle",
-      "text": "Le restaurant de la prune dorée; Six tours; Chef Roselle"
+      "description": "Restaurant de la Prune d'or",
+      "district": "Les Six Tours",
+      "label": "Roselle",
+      "text": "Roselle, chef du restaurant de la Prune d'or, les Six Tours"
     },
     "Circle-of-flame": {
-      "description": "Une société secrête",
-      "label": "Le cercle de flammes",
-      "text": "Une société secrête; Le cercle de flammes"
+      "description": "Société secrète",
+      "label": "Le Cercle de flammes",
+      "text": "Le Cercle de flammes, société secrète"
     },
     "Dunridge-sons": {
-      "description": "Tissus rafinés et tailleur",
-      "district": "Marché nocturne",
-      "label": "Dunridge & Sons",
-      "text": "Dunridge & Sons; Tissus rafinés et tailleur; Marché nocturne"
+      "description": "Étoffes raffinées et tailleur",
+      "district": "Le Marché de nuit",
+      "label": "Dunridge & Fils",
+      "text": "Dunridge & Fils, étoffes raffinées et tailleur, le Marché de nuit"
     },
     "Eldrin-prichard": {
-      "description": "La barge des plaisirs du cigne d'argent",
-      "district": "Les canaux de Pierre-Claire",
+      "description": "La barge des plaisirs du Cygne d'argent",
+      "district": "Les canaux de la Roche claire",
       "label": "Eldrin Prichard",
-      "text": "Eldrin Prichard; La barge des plaisirs du cigne d'argent; Les canaux de Pierre-Claire"
+      "text": "Eldrin Prichard, la barge des plaisirs du Cygne d'argent, sur les canaux de la Roche claire"
     },
     "Family-members": {
-      "description": "Parents (origines) ou anciens collègues (antécédents)",
-      "label": "Parents",
-      "text": "Parents; Parents (origines) ou anciens collègues (antécédents)"
+      "description": "Origines ou antécédents",
+      "label": "Parents ou anciens collègues",
+      "text": "Parents (origines) ou anciens collègues (antécédents)"
     },
     "Father-yoren": {
-      "description": "La maison de la pleureuse",
-      "district": "Six tours",
-      "label": "Père Yoren",
-      "text": "Père Yoren; La maison de la pleureuse; Six tours"
+      "description": "Les Bras de l'Éplorée",
+      "district": "Les Six Tours",
+      "label": "Le père Yoren",
+      "text": "Le père Yoren, les Bras de l'Éplorée, les Six Tours"
     },
     "Grist": {
       "description": "Combats de boxe",
-      "district": "Les docks",
+      "district": "Les Quais",
       "label": "Grist",
-      "text": "Grist; Combats de boxe; Les docks"
+      "text": "Grist, combats de boxe, les Quais"
     },
     "Harvale-brogan": {
-      "description": "Le Club Centuralia",
-      "district": "Pierre-Claire",
+      "description": "Le club Centuralia",
+      "district": "La Roche claire",
       "label": "Harvale Brogan",
-      "text": "Harvale Brogan; Le Club Centuralia; Pierre-Claire"
+      "text": "Harvale Brogan, le Club Centuralia, la Roche claire"
     },
     "Helene": {
-      "description": "Le casino du cerf d'argent",
-      "district": "Soie-Rivage",
-      "label": "Helene",
-      "text": "Helene; Le casino du cerf d'argent; Soie-Rivage"
+      "description": "Le casino du Cerf d'Argent",
+      "district": "Les Berges soyeuses",
+      "label": "Hélène",
+      "text": "Hélène, le casino du Cerf d'Argent, les Berges soyeuses"
     },
     "Hooded-proprietor": {
-      "description": "Une taverne dans une grotte à demi engloutie.",
-      "district": "Les docks",
+      "description": "Une taverne troglodyte à demi-noyée",
+      "district": "Les Quais",
       "label": "Le propriétaire encapuchonné",
-      "text": "Le propriétaire encapuchonné; Une taverne dans une grotte à demi engloutie; Les docks"
+      "text": "Le propriétaire encapuchonné d'une taverne troglodyte à demi-noyée, près des Quais"
     },
     "Hutton": {
-      "description": "Réfugiés Skovlans / Révolutionnaires",
-      "district": "Val-Roussi",
+      "description": "Réfugiés skovlans / révolutionnaires",
+      "district": "Val-brulé",
       "label": "Hutton",
-      "text": "Hutton; Réfugiés Skovlans / Révolutionnaires; Val-Roussi"
+      "text": "Hutton, réfugiés skovlans / révolutionnaires, Val-brulé"
     },
     "Ilacille": {
-      "description": "Les ruines du temple des dieux oubliés",
-      "district": "Crête-Charbon",
+      "description": "Les ruines d'un temple des Dieux oubliés",
+      "district": "La Butte noire",
       "label": "Ilacille",
-      "text": "Ilacille; Les ruines du temple des dieux oubliés; Crête-Charbon"
+      "text": "Ilacille, les ruines d'un temple des Dieux oubliés, la Butte noire"
     },
     "Jewel-bird-shine": {
-      "description": "La ruelle des chatières",
-      "district": "Les docks",
-      "label": "Jewel, Bird et Shine",
-      "text": "Jewel, Bird et Shine; La ruelle des chatières; Les docks"
+      "description": "Ruelle des Chats rampants",
+      "district": "Les Quais",
+      "label": "Saphir, l'Hirondelle et la Velue",
+      "text": "Saphir, l'Hirondelle et la Velue, ruelle des Chats rampants, les Quais"
     },
     "Lady-dusk": {
       "description": "Le club du manoir Dusk",
       "district": "Blanche-Couronne",
-      "label": "Lady Dusk",
-      "text": "Lady Dusk; Le club du manoir Dusk; Blanche-Couronne"
+      "label": "Dame Dusk",
+      "text": "Dame Dusk, le club du manoir Dusk, Blanche-Couronne"
     },
     "Lady-freyla": {
-      "description": "Le bar du tonneau de l'Empereur",
+      "description": "Cabaret de la Cuvée de l'Empereur",
       "district": "Blanche-Couronne",
       "label": "Lady Freyla",
-      "text": "Lady Freyla; Le bar du tonneau de l'Empereur; Blanche-Couronne"
+      "text": "Lady Freyla, cabaret de la Cuvée de l'Empereur, Blanche-Couronne"
     },
     "Lord-penderyn": {
-      "description": "Les archives de l'Écho",
-      "district": "Charte-Halle",
-      "label": "Lord Penderyn",
-      "text": "Lord Penderyn; Les archives de l'Écho; Charte-Halle"
+      "description": "Les Archives des Échos",
+      "district": "La Charte",
+      "label": "Marquis Penderyn",
+      "text": "Marquis Penderyn, les Archives des Échos, la Charte"
     },
     "Madame-tesslyn": {
-      "description": "Bordel de la lanterne rouge",
-      "district": "Soie-Rivage",
+      "description": "Lupanar de la Lanterne rouge",
+      "district": "Les Berges soyeuses",
       "label": "Madame Tesslyn",
-      "text": "Madame Tesslyn; Bordel de la lanterne rouge; Soie-Rivage"
+      "text": "Madame Tesslyn, lupanar de la Lanterne rouge, les Berges soyeuses"
     },
     "Maestro-helleren": {
-      "description": "Le théâtre de Flèche-Jardin",
+      "description": "Le théâtre du jardin du pic",
       "district": "Blanche-Couronne",
       "label": "Maestro Helleren",
-      "text": "Maestro Helleren; Le théâtre de Flèche-Jardin; Blanche-Couronne"
+      "text": "Maestro Helleren, le théâtre du jardin du pic, Blanche-Couronne"
     },
     "Mardin-gull": {
-      "description": "La taverne du seau troué",
-      "district": "Patte-de-Corbeau",
+      "description": "La taverne du Seau troué",
+      "district": "Serres du Corbeau",
       "label": "Mardin Gull",
-      "text": "Mardin Gull; La taverne du seau troué; Patte-de-Corbeau"
+      "text": "Mardin Gull, la taverne du Seau troué, Serres du Corbeau"
     },
     "Master-vreen": {
-      "description": "Course de lévriers",
-      "district": "Marché Nocturne",
-      "label": "Maitre Vreen",
-      "text": "Maitre Vreen; Course de lévriers; Marché Nocturne"
+      "description": "Courses de lévriers",
+      "district": "Le Marché de nuit",
+      "label": "Maître Vreen",
+      "text": "Maître Vreen, courses de lévriers, le Marché de nuit"
     },
     "Mother-narya": {
-      "description": "Maison de la pleureuse",
-      "district": "Six Tours",
-      "label": "Révérende-Mère Narya",
-      "text": "Révérende-Mère Narya; Maison de la pleureuse; Six Tours"
+      "description": "Les Bras de l'Éplorée",
+      "district": "Les Six Tours",
+      "label": "Mère supérieure Narya",
+      "text": "Mère supérieure Narya, Les Bras de l'Éplorée, les Six Tours"
     },
     "Nelisanne": {
-      "description": "Église de l'extase de la chair",
-      "district": "Pierre-Claire",
+      "description": "Église de l'Extase de la chair",
+      "district": "La Roche claire",
       "label": "Nelisanne",
-      "text": "Nelisanne; Église de l'extase de la chair; Pierre-Claire"
+      "text": "Nelisanne, l'église de l'Extase de la chair, la Roche claire"
     },
     "Ojak": {
-      "description": "Vendeur des toîts Tycherosi",
-      "district": "Soie-Rivage",
+      "description": "Vendeur des toits tycherosi",
+      "district": "Les Berges soyeuses",
       "label": "Ojak",
-      "text": "Ojak; Vendeur des toîts Tycherosi; Soie-Rivage"
+      "text": "Ojak, un vendeur des toits tycherosi, les Berges soyeuses"
     },
     "Pux-bolin": {
-      "description": "La taverne du singe harpiste",
-      "district": "Marché Nocturne",
+      "description": "La taverne du Singe harpiste",
+      "district": "Le Marché de nuit",
       "label": "Pux Bolin",
-      "text": "Pux Bolin; La taverne du singe harpiste; Marché Nocturne"
+      "text": "Pux Bolin, la taverne du Singe harpiste, le Marché de nuit"
     },
     "Rolan-volaris": {
-      "description": "Club social du voile",
-      "district": "Marché Nocturne",
+      "description": "Le Voile",
+      "district": "Le Marché de nuit",
       "label": "Rolan Volaris",
-      "text": "Rolan Volaris; Club social du voile; Marché Nocturne"
+      "text": "Rolan Volaris, le Voile, le Marché de nuit"
     },
     "Salia": {
-      "description": "Un esprit des Réconciliés, qui passe d'un corps à l'autre à sa convenance.",
-      "label": "Salia",
-      "text": "Salia; Un esprit des Réconciliés, qui passe d'un corps à l'autre à sa convenance."
+      "description": "Un esprit des Réconciliés, qui passe d'un corps à l'autre à sa guise.",
+      "label": "« Salia »",
+      "text": "« Salia », un esprit des Réconciliés, qui passe d'un corps à l'autre à sa guise"
     },
     "Sergeant-velk": {
-      "description": "Les arènes de combat",
-      "district": "Gris-Bourbier",
-      "label": "Sergent Velk",
-      "text": "Sergent Velk; Les arènes de combat; Gris-Bourbier"
+      "description": "Arènes de combat",
+      "district": "Les Marais gris",
+      "label": "Le sergent Velk",
+      "text": "Le sergent Velk, arènes de combat, les Marais gris"
     },
     "Singer": {
-      "description": "Les bains",
-      "district": "Patte-de-Corbeau",
+      "description": "Bains publics",
+      "district": "Serres du Corbeau",
       "label": "Singer",
-      "text": "Singer; Les bains; Patte-de-Corbeau"
+      "text": "Singer, bains publics, Serres du Corbeau"
     },
     "Sister-thorn": {
-      "description": "La Soeur Thorn, du gang des charognards des terres mortes",
-      "district": "Station Gaddoc",
-      "label": "Sister Thorn",
-      "text": "La Soeur Thorn, du gang des charognards des terres mortes; Station Gaddoc"
+      "description": "Gang des charognards",
+      "district": "Gare de Gaddoc",
+      "label": "Sœur Thorn",
+      "text": "Sœur Thorn, du gang des charognards, gare de Gaddoc"
     },
     "Spoggs": {
-      "district": "Patte-de-Corbeau",
+      "district": "Serres du Corbeau",
       "label": "Le tripot de Spogg",
-      "text": "Le tripot de Spogg; Patte-de-Corbeau"
+      "text": "Le tripot de Spogg, jeux de dés, Serres du Corbeau"
     },
     "Travens": {
-      "district": "Crête-Charbon",
+      "district": "La Butte noire",
       "label": "Le fumoir de Traven",
-      "text": "Le fumoir de Traven; Crête-Charbon"
+      "text": "Le fumoir de Traven, la Butte noire"
     }
   },
   "Vices": {
     "Faith": {
-      "description": "Vous êtes dévoué à un pouvoir supérieur, un dieu oublié, un ancêtre, etc.",
+      "description": "Vous vous dévouez à un pouvoir supérieur, un dieu oublié, un ancêtre...",
       "label": "Foi"
     },
     "Gambling": {
-      "description": "Vous êtes accro aux jeux de hasard, aux paris en tout genre, etc.",
+      "description": "Vous êtes accro aux jeux de hasard, aux paris en tout genre...",
       "label": "Jeu"
     },
     "Luxury": {
-      "description": "Vous vous pavanez dans l'étalage ostentatoire d'opulence.",
+      "description": "Vous jouissez de l'étalage ostentatoire de l'opulence... vraie ou factice.",
       "label": "Luxe"
     },
     "Obligation": {
-      "description": "Vous avez une obligation envers votre famille, une cause, une organisation, un oeuvre de bienfaisance, etc.",
+      "description": "Vous avez une obligation envers votre famille, une cause, une organisation, une œuvre de bienfaisance...",
       "label": "Devoir"
     },
     "Pleasure": {
-      "description": "Vous sombrez dans la jouissance des plaisirs de la chair, de la nourriture, de la boisson, des dorgues, de l'art, du théâtre, etc.",
+      "description": "Vous sombrez dans la jouissance des plaisirs de la chair et de la chère, boissons, drogues, art ou théâtre...",
       "label": "Plaisir"
     },
     "Stupor": {
-      "description": "Vous cherchez l'oubli dans l'abus de dorgues, de boissons, de combats clandestins, etc.",
+      "description": "Vous recherchez l'oubli dans l'abus de drogues ou de boissons ; vous aimez vous faire taper dessus lors de combats clandestins...",
       "label": "Stupeur"
     },
     "Weird": {
-      "description": "Vous expérimentez avec l'étrange, pactisez avec des esprits sauvages, suivez des rituels bizarres ou des pratiques taboues, etc.",
-      "label": "Étrange"
+      "description": "Vous menez des expériences sur des essences étranges, pactisez avec les esprits, suivez des rituels bizarres ou des pratiques taboues...",
+      "label": "Bizarre"
     }
   }
 }
