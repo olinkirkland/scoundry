@@ -1,0 +1,256 @@
+{
+    "name": { "x": 100, "y": 235 },
+    "alias": { "x": 704, "y": 235 },
+    "look": { "x": 100, "y": 316 },
+    "heritages": {
+        "akoros": { "x": 260, "y": 428, "w": 100 },
+        "dagger-isles": { "x": 440, "y": 428, "w": 230 },
+        "iruvia": { "x": 134, "y": 452, "w": 90 },
+        "severos": { "x": 246, "y": 452, "w": 105 },
+        "skovlan": { "x": 360, "y": 452, "w": 110 },
+        "tycheros": { "x": 492, "y": 452, "w": 120 }
+    },
+    "backgrounds": {
+        "academic": { "x": 805, "y": 428, "w": 135 },
+        "labor": { "x": 768, "y": 452, "w": 95 },
+        "law": { "x": 1030, "y": 428, "w": 45 },
+        "trade": { "x": 650, "y": 452, "w": 120 },
+        "military": { "x": 882, "y": 452, "w": 110 },
+        "noble": { "x": 1000, "y": 452, "w": 110 },
+        "underworld": { "x": 934, "y": 428, "w": 130 }
+    },
+    "heritageText": { "x": 105, "y": 400 },
+    "backgroundText": { "x": 605, "y": 400 },
+    "actions": {
+        "tinker": { "x": 1838.5, "y": 325.5 },
+        "study": { "x": 1838.5, "y": 354.1 },
+        "survey": { "x": 1838.5, "y": 382.7 },
+        "hunt": { "x": 1838.5, "y": 411.3 },
+
+        "skirmish": { "x": 1838.5, "y": 488 },
+        "wreck": { "x": 1838.5, "y": 516.6 },
+        "finesse": { "x": 1838.5, "y": 545.2 },
+        "prowl": { "x": 1838.5, "y": 573.8 },
+
+        "command": { "x": 1838.5, "y": 650.5 },
+        "attune": { "x": 1838.5, "y": 679.1 },
+        "consort": { "x": 1838.5, "y": 707.7 },
+        "sway": { "x": 1838.5, "y": 736.3 }
+    },
+    "abilities": {
+        "battleborn": { "x": 1097, "y": 260 },
+        "bodyguard": { "x": 1097, "y": 332 },
+        "ghost-fighter": { "x": 1097, "y": 403.5 },
+        "leader": { "x": 1097, "y": 497 },
+        "mule": { "x": 1097, "y": 590.5 },
+        "not-to-be-trifled-with": { "x": 1097, "y": 640 },
+        "savage": { "x": 1097, "y": 733 },
+        "vigorous": { "x": 1097, "y": 805 },
+
+        "sharpshooter": { "x": 1097, "y": 260 },
+        "focused": { "x": 1097, "y": 332 },
+        "ghost-hunter": { "x": 1097, "y": 427 },
+        "ghost-hunter-2": { "x": 1122, "y": 427 },
+        "scout": { "x": 1097, "y": 542 },
+        "survivor": { "x": 1097, "y": 615 },
+        "tough-as-nails": { "x": 1097, "y": 710 },
+        "vengeful": { "x": 1097, "y": 782 },
+
+        "alchemist": { "x": 1096.5, "y": 260 },
+        "analyst": { "x": 1096.5, "y": 332 },
+        "artificer": { "x": 1096.5, "y": 403.5 },
+        "fortitude": { "x": 1096.5, "y": 474.5 },
+        "ghost-ward": { "x": 1096.5, "y": 567.5 },
+        "physicker": { "x": 1096.5, "y": 639.5 },
+        "saboteur": { "x": 1096.5, "y": 733 },
+        "venomous": { "x": 1096.5, "y": 782.5 },
+
+        "infiltrator": { "x": 1096.5, "y": 260 },
+        "ambush": { "x": 1096.5, "y": 315 },
+        "daredevil": { "x": 1096.5, "y": 370 },
+        "the-devils-footsteps": { "x": 1096.5, "y": 446 },
+        "expertise": { "x": 1096.5, "y": 545.5 },
+        "ghost-veil": { "x": 1096.5, "y": 622 },
+        "reflexes": { "x": 1096.5, "y": 766.5 },
+        "shadow": { "x": 1096.5, "y": 799 },
+
+        "rooks-gambit": { "x": 1096.5, "y": 260 },
+        "cloak-and-dagger": { "x": 1096.5, "y": 342.5 },
+        "ghost-voice": { "x": 1096.5, "y": 448 },
+        "like-looking-into-a-mirror": { "x": 1096.5, "y": 552 },
+        "a-little-something-on-the-side": { "x": 1096.5, "y": 612 },
+        "mesmerism": { "x": 1096.5, "y": 650.5 },
+        "subterfuge": { "x": 1096.5, "y": 733 },
+        "trust-in-me": { "x": 1096.5, "y": 815 },
+
+        "foresight": { "x": 1097, "y": 260 },
+        "calculating": { "x": 1097, "y": 312.5 },
+        "connected": { "x": 1097, "y": 387 },
+        "functioning-vice": { "x": 1097, "y": 439 },
+        "ghost-contract": { "x": 1097, "y": 512.5 },
+        "jail-bird": { "x": 1097, "y": 609.5 },
+        "mastermind": { "x": 1097, "y": 727 },
+        "weaving-the-web": { "x": 1097, "y": 801 },
+
+        "compel": { "x": 1097, "y": 260 },
+        "ghost-mind": { "x": 1097, "y": 356.5 },
+        "iron-will": { "x": 1097, "y": 431 },
+        "occultist": { "x": 1097, "y": 505 },
+        "ritual": { "x": 1097, "y": 601 },
+        "strange-methods": { "x": 1097, "y": 675 },
+        "tempest": { "x": 1097, "y": 727 },
+        "warded": { "x": 1097, "y": 801.5 }
+    },
+    "friends": {
+        "marlane": {
+            "friend": { "x": 1110, "y": 958 },
+            "rival": { "x": 1138, "y": 943.5 }
+        },
+        "chael": {
+            "friend": { "x": 1110, "y": 1000 },
+            "rival": { "x": 1138, "y": 985.5 }
+        },
+        "mercy": {
+            "friend": { "x": 1110, "y": 1042 },
+            "rival": { "x": 1138, "y": 1027.5 }
+        },
+        "grace": {
+            "friend": { "x": 1110, "y": 1084 },
+            "rival": { "x": 1138, "y": 1069.5 }
+        },
+        "sawtooth": {
+            "friend": { "x": 1110, "y": 1126 },
+            "rival": { "x": 1138, "y": 1111.5 }
+        },
+        "steiner": {
+            "friend": { "x": 1110, "y": 958 },
+            "rival": { "x": 1138, "y": 944 }
+        },
+        "celene": {
+            "friend": { "x": 1110, "y": 1000 },
+            "rival": { "x": 1138, "y": 986 }
+        },
+        "melvir": {
+            "friend": { "x": 1110, "y": 1042 },
+            "rival": { "x": 1138, "y": 1028 }
+        },
+        "veleris": {
+            "friend": { "x": 1110, "y": 1084 },
+            "rival": { "x": 1138, "y": 1070 }
+        },
+        "casta": {
+            "friend": { "x": 1110, "y": 1126 },
+            "rival": { "x": 1138, "y": 1112 }
+        },
+        "stazia": {
+            "friend": { "x": 1110, "y": 958 },
+            "rival": { "x": 1138, "y": 944 }
+        },
+        "veldren": {
+            "friend": { "x": 1110, "y": 1000 },
+            "rival": { "x": 1138, "y": 986 }
+        },
+        "eckerd": {
+            "friend": { "x": 1110, "y": 1042 },
+            "rival": { "x": 1138, "y": 1028 }
+        },
+        "jul": {
+            "friend": { "x": 1110, "y": 1084 },
+            "rival": { "x": 1138, "y": 1070 }
+        },
+        "malista": {
+            "friend": { "x": 1110, "y": 1126 },
+            "rival": { "x": 1138, "y": 1112 }
+        },
+        "telda": {
+            "friend": { "x": 1110, "y": 958 },
+            "rival": { "x": 1138, "y": 944 }
+        },
+        "darmot": {
+            "friend": { "x": 1110, "y": 1000 },
+            "rival": { "x": 1138, "y": 986 }
+        },
+        "frake": {
+            "friend": { "x": 1110, "y": 1042 },
+            "rival": { "x": 1138, "y": 1028 }
+        },
+        "roslyn-kellis": {
+            "friend": { "x": 1110, "y": 1084 },
+            "rival": { "x": 1138, "y": 1070 }
+        },
+        "petra": {
+            "friend": { "x": 1110, "y": 1126 },
+            "rival": { "x": 1138, "y": 1112 }
+        },
+        "bryl": {
+            "friend": { "x": 1108.5, "y": 958 },
+            "rival": { "x": 1138, "y": 942.5 }
+        },
+        "bazso-baz": {
+            "friend": { "x": 1108.5, "y": 999.5 },
+            "rival": { "x": 1138, "y": 984.5 }
+        },
+        "khyra": {
+            "friend": { "x": 1108.5, "y": 1041.5 },
+            "rival": { "x": 1138, "y": 1026.5 }
+        },
+        "nyryx": {
+            "friend": { "x": 1108.5, "y": 1083.5 },
+            "rival": { "x": 1138, "y": 1068 }
+        },
+        "harker": {
+            "friend": { "x": 1109, "y": 1126 },
+            "rival": { "x": 1138, "y": 1111 }
+        },
+        "salia": {
+            "friend": { "x": 1108, "y": 957.5 },
+            "rival": { "x": 1138, "y": 942.5 }
+        },
+        "augus": {
+            "friend": { "x": 1108.5, "y": 1000 },
+            "rival": { "x": 1138, "y": 985 }
+        },
+        "jennah": {
+            "friend": { "x": 1108.5, "y": 1042.5 },
+            "rival": { "x": 1138, "y": 1028 }
+        },
+        "riven": {
+            "friend": { "x": 1108.5, "y": 1084.5 },
+            "rival": { "x": 1138, "y": 1070 }
+        },
+        "jeren": {
+            "friend": { "x": 1108.5, "y": 1127 },
+            "rival": { "x": 1138, "y": 1112 }
+        },
+        "nyryx-2": {
+            "friend": { "x": 1108.5, "y": 957.5 },
+            "rival": { "x": 1138, "y": 943 }
+        },
+        "scurlock": {
+            "friend": { "x": 1108.5, "y": 1000 },
+            "rival": { "x": 1138, "y": 985.5 }
+        },
+        "setarra": {
+            "friend": { "x": 1108.5, "y": 1042 },
+            "rival": { "x": 1138, "y": 1028 }
+        },
+        "quellyn": {
+            "friend": { "x": 1108.5, "y": 1084 },
+            "rival": { "x": 1138, "y": 1070 }
+        },
+        "flint": {
+            "friend": { "x": 1108.5, "y": 1127 },
+            "rival": { "x": 1138, "y": 1111 }
+        }
+    },
+    "vices": {
+        "weird": { "x": 385, "y": 542, "w": 105 },
+        "obligation": { "x": 500, "y": 542, "w": 100 },
+        "faith": { "x": 596, "y": 542, "w": 60 },
+        "gambling": { "x": 664, "y": 542, "w": 65 },
+        "luxury": { "x": 900, "y": 542, "w": 80 },
+        "pleasure": { "x": 848, "y": 542, "w": 110 },
+        "stupor": { "x": 965, "y": 542, "w": 112 }
+    },
+    "viceText": { "x": 100, "y": 515 }
+}
