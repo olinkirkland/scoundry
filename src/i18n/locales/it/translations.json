@@ -1,1 +1,1234 @@
-{}
+{
+  "Abilities": {
+    "A-little-something-on-the-side": {
+      "description": "Alla fine di ogni fase di downtime guadagni +2 Scorte.",
+      "label": "Progetti Alternativi"
+    },
+    "Alchemist": {
+      "description": "Quando inventi o crei un oggetto di tipo alchemico, ottieni +1 livello di risultato nel tuo tiro.<br>Inizi cononoscendo già una formula alchemica speciale.",
+      "label": "Alchemist"
+    },
+    "Ambush": {
+      "description": "Quando attacchi mentre sei nascosto, oppure inneschi una trappola, ottieni +1d al tuo tiro.",
+      "label": "Imboscata"
+    },
+    "Analyst": {
+      "description": "Durante il downtime ottieni due segni di spunta da distribuire tra tutti gli orologi che riguardano progetti a lungo termine di indagine, di apprendimento o piano d’azione.",
+      "label": "Analitico"
+    },
+    "Artificer": {
+      "description": "Quando inventi o crei un oggetto di tipo fulminotecnico ottieni +1 livello di risultato nel tuo\ntiro.<br/>Inizi con un progetto fulminotecnico speciale conosciuto.",
+      "label": "Artefice"
+    },
+    "Battleborn": {
+      "description": "Puoi spendere la tua armatura speciale per ridurre il danno da un attacco in combattimento o per spingerti al limite durante il combattimento.",
+      "label": "Forgiato dalla Guerra"
+    },
+    "Bodyguard": {
+      "description": "Quando proteggi un compagno prendi +1d al tuo tiro resistenza. <br/>Quando raccogli informazioni per anticipare le possibili minacce della situazione corrente, prendi +1 efficacia.",
+      "label": "Protettore"
+    },
+    "Calculating": {
+      "description": "Grazie a un’attenta pianificazione, durante il downtime puoi fornire a te stesso o a un\naltro membro della banda +1 attività di downtime.",
+      "label": "Calcolatore"
+    },
+    "Cloak-and-dagger": {
+      "description": "Ottieni +1d ai tuoi tiri per confondere o sviare sospetti quando usi un travestimento\no una forma alternativa di depistaggio.<br />Quando cali la maschera la sorpresa risultante\nti dà l’iniziativa sulla situazione corrente.",
+      "label": "Cappa e Spada"
+    },
+    "Compel": {
+      "description": "Puoi Armonizzare con il campo spettrale per forzare uno spettro nelle vicinanze ad apparire e obbedire a un tuo ordine. Non sei terrificato dal soprannaturale di uno spettro che convochi o cerchi di soggiogare.",
+      "label": "Soggiocare"
+    },
+    "Connected": {
+      "description": "Durante il downtime, ottieni +1 livello di risultato (un 1-3 diventa un 4/5, ecc.) quando\nacquisisci una risorsa o riduci il Sospetto.",
+      "label": "Immanicato"
+    },
+    "Daredevil": {
+      "description": "Quando esegui un tiro azione disperato, ottieni +1d al tiro se accetti di subire -1d a\nqualsiasi tiro resistenza contro le conseguenze della tua azione.",
+      "label": "Temerario"
+    },
+    "Expertise": {
+      "description": "Scegli uno dei tuoi valori di azione. Quando guidi un’azione di gruppo usando quell’azione, puoi subire solo 1 stress, indipendentemente dal numero di tiri falliti",
+      "label": "Competenza"
+    },
+    "Focused": {
+      "description": "Puoi spendere la tua armatura speciale per resistere alla conseguenza di una sorpresa o di un danno mentale (paura, confusione, perdere le tracce di qualcuno) o spingerti al limite in combattimenti a distanza o durante degli inseguimenti.",
+      "label": "Concentrato"
+    },
+    "Foresight": {
+      "description": "Due volte per colpo puoi assistere un compagno senza accumulare stress.<br/><em>Descrivi\ncome ti eri preparato per queste occasioni.<\\em>",
+      "label": "Lungimiranza"
+    },
+    "Fortitude": {
+      "description": "Puoi spendere la tua armatura speciale per:<br><ul><li>Resistere a una singola conseguenza di affaticamento, debolezza o esposizione a prodotti alchemici</li><li>Per spingerti al limite quando lavori con abilità tecniche o maneggi prodotti alchemici.</li></ul>",
+      "label": "Temprato"
+    },
+    "Functioning-vice": {
+      "description": "Quando indulgi al vizio puoi aggiustare il risultato di 1 o 2 (verso l’alto o il basso).<br/>Un alleato che indulga con te può fare lo stesso.",
+      "label": "Lucidità nel Vizio"
+    },
+    "Ghost-contract": {
+      "description": "Quando stipuli un contratto per stretta di mano o per iscritto sia tu che l’altra parte, umana o non, portate un marchio del vostro patto. Chiunque rompa il patto prende danno di livello 3: <em>“Maledetto”</em>.",
+      "label": "Patto Spettrale"
+    },
+    "Ghost-fighter": {
+      "description": "Puoi infondere di energia spettrale le tue mani, le armi da mischia o gli arnesi.<br/><ul><li>Guadagni potenza in combattimento contro il soprannaturale.</li><li>Puoi afferrare gli spiriti per bloccarli\ne catturarli.</li></ul>",
+      "label": "Combattente Spettrale"
+    },
+    "Ghost-hunter-2": {
+      "description": "Scegli un'abilità arcana aggiuntiva per il tuo animaleda caccia.<br /><em>Per prendere questa abilità è necessaria l'abilità Cacciatore Spettrale.</em>",
+      "label": "Cacciattore Spettrale +"
+    },
+    "Ghost-hunter": {
+      "description": "Il tuo animale da caccia è infuso di energia spettrale.<br /><ul><li>Guadagna potenza quando rintraccia o combatte il soprannaturale.</li><li>Guadagna inoltre una capacità arcana tra queste: forma spettrale, legame mentale, movimento rapido.",
+      "label": "Cacciattore Spettrale"
+    },
+    "Ghost-mind": {
+      "description": "Sei sempre consapevole delle entità soprannaturali che sono in tua presenza.<br/>Prendi +1d ogni volta che raccogli informazioni sul soprannaturale, con qualsiasi mezzo.",
+      "label": "mente Spettrale"
+    },
+    "Ghost-veil": {
+      "description": "Puoi traslarti parzialmente nel campo spettrale, diventando sfocato e intangibile per\nqualche attimo.<br/>Prendi 2 stress quando trasli, più un ulteriore stress per ognuna delle\nseguenti caratteristiche:<br/><ul><li>dura per qualche minuto anziché qualche attimo</li><li>sei invisibile anziché solo sfocato</li><li>puoi fluttuare nell’aria come un fantasma.</li></ul>",
+      "label": "Velo Spettrale"
+    },
+    "Ghost-voice": {
+      "description": "Conosci le tecniche segrete per interagire con uno spettro o un demone come se\nfosse un umano qualsiasi, indipendentemente da quanto selvaggio e ferale si mostri.<br/>\nHai potenza quando comunichi con il soprannaturale.",
+      "label": "Voce Spettrale"
+    },
+    "Ghost-ward": {
+      "description": "Quando Distruggi un’area con sostanze arcane, rendendola inutile per qualsiasi uso,\nessa diventa un anatema o richiamo per il soprannaturale (a tua scelta).",
+      "label": "Anatema Spettrale"
+    },
+    "Infiltrator": {
+      "description": "Non sei influenzato da Rango/qualità quando eludi misure di sicurezza.",
+      "label": "Infiltratore"
+    },
+    "Iron-will": {
+      "description": "Sei immune al terrore che alcune entità soprannaturali infliggono guardandole. <br/>Quando effettui un tiro resistenza con Risolutezza, hai +1d.",
+      "label": "Volontà di Ferro"
+    },
+    "Jail-bird": {
+      "description": "Quando vieni incarcerato:<br/><ul><li>il tuo Livello Ricercato conta come 1 in meno</li><li>il tuo Rango come 1 in più</li><li>Inoltre guadagni +1 status con una fazione che hai aiutato\ndurante la condanna (in aggiunta a quello che ottieni dal tiro incarcerazione).</li></ul>",
+      "label": "Carcerato"
+    },
+    "Leader": {
+      "description": "Quando Comandi una cricca in combattimento, questa continuerà a combattere anche quando normalmente sarebbe da considerare spezzata (non viene sconfitta quando subisce un danno di livello 3).<br/>La cricca ottiene inoltre +1 efficacia e +1 armatura.",
+      "label": "Leader"
+    },
+    "Like-looking-into-a-mirror": {
+      "description": "Sai sempre se qualcuno ti sta mentendo.",
+      "label": "Guardare il proprio riflesso"
+    },
+    "Mastermind": {
+      "description": "Puoi spendere la tua armatura speciale per proteggere un compagno di banda o per\nspingerti al limite mentre raccogli informazioni o lavori su un progetto a lungo termine.",
+      "label": "Pianificatore"
+    },
+    "Mesmerism": {
+      "description": "Quando Manipoli qualcuno puoi fargli dimenticare l’episodio fino alla vostra prossima\ninterazione.",
+      "label": "Mesmerismo"
+    },
+    "Mule": {
+      "description": "Il tuo limite di Carico è aumentato. <br /><ul><li>Leggero: 5. </li><li>Normale: 7. </li><li>Pesante: 8.</li></ul>",
+      "label": "Corriere"
+    },
+    "Not-to-be-trifled-with": {
+      "description": "Puoi spingerti al limite per eseguire una delle seguenti azioni: compiere un’impresa di forza fisica che rasenta il sovrumano oppure ingaggiare, alla pari, una piccola gang in corpo a corpo.",
+      "label": "Uno con cui non si scherza"
+    },
+    "Occultist": {
+      "description": "Conosci i segreti per Socializzare con poteri antichi, divinità dimenticate o demoni. Una volta Socializzato con uno di questi prendi +1d per Comandare i cultisti che lo venerano.",
+      "label": "Occultista"
+    },
+    "Physicker": {
+      "description": "Puoi Armeggiare con ossa, sangue e umori per trattare le ferite e stabilizzare i morenti.<br/>Puoi Studiare una malattia o un cadavere.<br/>Ciascuno nella tua banda riceve +1d ai propri tiri guarigione.",
+      "label": "Cerusico"
+    },
+    "Reflexes": {
+      "description": "Quando c’è dubbio su chi deve agire per primo, la risposta... sei tu (due personaggi con Riflessi agiscono contemporaneamente).",
+      "label": "Riflessi"
+    },
+    "Ritual": {
+      "description": "Conosci metodi arcani per eseguire stregonerie rituali. Puoi Studiare un rituale occulto\n(o crearne uno nuovo) per evocare un effetto o un essere soprannaturale.<br/>Inizi con un\nrituale conosciuto.",
+      "label": "Rituali"
+    },
+    "Rooks-gambit": {
+      "description": "Puoi prendere 2 stress per utilizzare il tuo valore di azione più alto mentre esegui un’azione di diversa tipologia. <br/><em>Spiega come adatti la tua abilità a questo scopo.</em>",
+      "label": "Gambetto di torre"
+    },
+    "Saboteur": {
+      "description": "Quando Distruggi, le tue azioni sono molto più silenziose di quanto ci si aspetterebbe e il danno è ben occultato e protetto dalle ispezioni sbrigative.",
+      "label": "Guastatore"
+    },
+    "Savage": {
+      "description": "Quando ti scateni in tutta la tua violenza fisica crei sgomento e spaventi chi ti circonda. <br/>Quando Comandi un bersaglio intimorito prendi +1d.",
+      "label": "Feroce"
+    },
+    "Scout": {
+      "description": "Quando raccogli informazioni per scoprire la posizione di un bersaglio, ottieni un +1 efficacia.<br/>Quando ti nascondi in un luogo predisposto o usi un camuffamento, ottieni +1d ai tiri per evitare di essere scoperto.",
+      "label": "Scout"
+    },
+    "Shadow": {
+      "description": "Puoi utilizzare la tua armatura speciale per resistere alle conseguenze di un rilevamento o di misure di sicurezza, oppure per metterti alla prova in un'impresa atletica o di furtività.",
+      "label": "Ombra"
+    },
+    "Sharpshooter": {
+      "description": "Puoi spingerti al limite per eseguire una delle seguenti azioni::<br /><ul><li>Colpire con un attacco a distanza un bersaglio estremamente lontano, oltre il limite normale dell’arma.</li><li>Scatenare una raffica di fuoco rapido per respingere il nemico.</li></ul>",
+      "label": "Cecchino"
+    },
+    "Strange-methods": {
+      "description": "Quando inventi o crei un oggetto di tipo arcano, ottieni +1 livello di risultato nel tuo tiro.<br/>Inizi conoscendo già un progetto arcano speciale.",
+      "label": "Metodologie Insolite"
+    },
+    "Subterfuge": {
+      "description": "Puoi spendere la tua armatura speciale per resistere a una conseguenza di sospetto o\npersuasione o per spingerti al limite per un sotterfugio.",
+      "label": "Sotterfugio"
+    },
+    "Survivor": {
+      "description": "In virtù di una dura esperienza di vita o grazie a un rituale occulto, sei immune al miasma velenoso delle Terre Morte e sei in grado di sostentarti con la sua bizzarra flora e fauna. <br/>Guadagni una casella di stress aggiuntiva.",
+      "label": "Sopravvissuto"
+    },
+    "Tempest": {
+      "description": "Puoi spingerti al limite per eseguire una delle seguenti azioni:<br /><ul><li>Scatenare un fulmine e usarlo come arma.</li><li>Richiamare una tempesta nelle tue immediate vicinanze (pioggia torrenziale, venti roboanti, nebbia fitta, ghiaccio e neve, ecc.).</li></ul>",
+      "label": "Tempesta"
+    },
+    "The-devils-footsteps": {
+      "description": "Puoi spingerti al limite per eseguire una delle seguenti azioni: <br/><ul><li>compiere un gesto atletico al limite del sovrumano.</li><li>Svolgere manovre atte a confondere i nemici, in modo che si attacchino l’un l’altro per errore.</li></ul>",
+      "label": "Le Orme del Diavolo"
+    },
+    "Tough-as-nails": {
+      "description": "Le penalità derivanti dal danno subito sono di un livello meno gravi<br /><em>(sebbene il danno di livello 4 sia ancora letale).</em>",
+      "label": "Duro come la Roccia"
+    },
+    "Trust-in-me": {
+      "description": "Ottieni +1d contro bersagli con cui hai una relazione intima",
+      "label": "Fidati di me"
+    },
+    "Vengeful": {
+      "description": "Ottieni un ulteriore innesco PE: se hai ottenuto vendetta contro qualcuno che aveva danneggiato te o qualcuno a cui tieni. <br/>Se la tua banda ti ha aiutato a ottenere la tua vendetta, segna anche un PE della banda.",
+      "label": "Vendicativo"
+    },
+    "Venomous": {
+      "description": "Scegli una droga o un veleno (dalla riserva della tua bandoliera), al quale sei diventato immune.<br/>Puoi spingerti al limite per secernerla tramite la tua pelle, la tua saliva, o tramite il tuo respiro.",
+      "label": "Tossico"
+    },
+    "Vigorous": {
+      "description": "Ti riprendi dal danno più velocemente. Riempi una delle sezioni del tuo orologio di guarigione in modo permanente. Prendi +1d al tiro guarigione.",
+      "label": "Vigoroso"
+    },
+    "Warded": {
+      "description": "Puoi spendere la tua armatura speciale per resistere a una conseguenza soprannaturale o per spingerti al limite quando combatti o usi forze arcane.",
+      "label": "Protetto"
+    },
+    "Weaving-the-web": {
+      "description": "Ottieni +1d a Socializzare quando raccogli informazioni su un obiettivo per un colpo.<br/>Ottieni +1d al tiro di ingaggio per quell’operazione.",
+      "label": "Tessere la Tela"
+    }
+  },
+  "Actions": {
+    "Attune": {
+      "description": "Apri la tua mente al campo di energia spettrale o ad altri poteri arcani. Comunichi con uno spirito, comprendi alcuni aspetti di spettrologia.",
+      "label": "Armonizzare"
+    },
+    "Command": {
+      "description": "Puoi intimidire o minacciare qualcuno per ottenere quello che vuoi. Puoi guidare una gang in un’azione di gruppo.",
+      "label": "Comandare"
+    },
+    "Consort": {
+      "description": "Puoi socializzare per ottenere risorse, informazioni, persone o entrare in posti altrimenti vietati. Puoi fare una bella impressione con qualcuno o conquistarlo con il tuo fascino e stile. Puoi fare nuove amicizie o creare legami grazie al tuo retaggio o background.",
+      "label": "Socializzare"
+    },
+    "Finesse": {
+      "description": "Borseggi qualcuno. Controlli un veicolo o una cavalcatura. Duelli con un avversario combattendo con eleganza.",
+      "label": "Destreggiarsi"
+    },
+    "Hunt": {
+      "description": "Segui un obiettivo o scopri la sua posizione. Fai un’imboscata. Attacchi con un tiro di precisione da lontano.",
+      "label": "Cacciare"
+    },
+    "Prowl": {
+      "description": "Sgattaioli senza farti vedere dalla guardia o ti nascondi nell’ombra. Puoi correre da un tetto all’altro. Puoi attaccare qualcuno con una coltellata alle spalle.",
+      "label": "Sgattaiolare"
+    },
+    "Skirmish": {
+      "description": "Lotti o ti azzuffi con il nemico. Combatti all’arma bianca. Conquisti o difendi una posizione in battaglia.",
+      "label": "Schermire"
+    },
+    "Study": {
+      "description": "Raccogli informazioni da documenti, giornali e libri. Fai ricerca su un tema esoterico. Analizzi da vicino una persona per captare bugie e le sue vere emozioni.",
+      "label": "Studiare"
+    },
+    "Survey": {
+      "description": "Riconosci i segni rivelatori che anticipano guai in arrivo. Scopri opportunità e debolezze. Capisci le intenzioni o motivazioni di una persona.",
+      "label": "Sondare"
+    },
+    "Sway": {
+      "description": "Menti in modo credibile. Convinci qualcuno a fare quello che vuoi. Argomenti una posizione in modo inconfutabile.",
+      "label": "Manipolare"
+    },
+    "Tinker": {
+      "description": "Crei un nuovo gadget o modifichi un oggetto esistente. Puoi aprire un lucchetto o scassinare una cassaforte. Puoi disarmare una trappola o un allarme. Puoi sfruttare i meccanismi e dispositivi elettroplasmatici in giro per la città.",
+      "label": "Armeggiare"
+    },
+    "Wreck": {
+      "description": "Puoi sfondare una porta o un muro con una mazza o esplosivi. Usi un sabotaggio per creare confusione e superare un ostacolo.",
+      "label": "Distruggere"
+    }
+  },
+  "Attributes": {
+    "insight": "Intuizione",
+    "prowess": "Prestanza",
+    "resolve": "Risolutezza"
+  },
+  "Background-suggestions": {
+    "acolyte-spirit-warden": "Accolito Giardiano Spirituale",
+    "antiquarian": "Antiquario",
+    "artisan": "Artigiano",
+    "artist": "Artista",
+    "bluecoat": "Giubba Blu",
+    "bounty-hunter": "Cacciatore di taglie",
+    "captain": "Capitano",
+    "convict": "Detenuto",
+    "councilor": "Consigliere",
+    "courier": "Corriere",
+    "courtier": "Cortigiano",
+    "criminologist": "Ciminologo",
+    "cultist": "Cultista",
+    "dealer": "Trafficante",
+    "demonologist": "Demonologo",
+    "dilettante": "Dilettante",
+    "diplomat": "Diplomatico",
+    "docker": "Portuale",
+    "driver": "Conducente",
+    "duelist": "Duellante",
+    "electrochemist": "Elettrochimico",
+    "engineer": "Ingegnere",
+    "envoy": "Inviato",
+    "explorer": "Esploratore",
+    "factory-worker": "Operaio di Fabbrica",
+    "farmhand": "Bracciante Agricolo",
+    "fence": "Ricettatore",
+    "fighter": "Combattente",
+    "firefighter": "Vigile del Fuoco",
+    "gondolier": "Gondoliere",
+    "hustler": "Truffatore",
+    "informant": "Informatore",
+    "journalist": "Giornalista",
+    "lark": "Allodola",
+    "leviathan-hunter": "Cacciatore di Leviatani",
+    "linewalker": "Guardarotaie",
+    "mediciner": "Medico",
+    "merchant": "Mercante",
+    "military-guardsman": "Guardia Militare",
+    "miner": "Minatore",
+    "ministry-agent": "Agente Ministeriale",
+    "naturalist": "Naturalista",
+    "occultist": "Occultista",
+    "psychometrist": "Psicometrista",
+    "purveyor": "Fornitore",
+    "rail-jack": "Cricco Ferroviario",
+    "rifle-scout": "Esploratore con fucile",
+    "roof-runner": "corridore sui tetti",
+    "sailor": "Marinaio",
+    "scavenger": "Sciacallo",
+    "scholar": "Erudito",
+    "secretary": "Segretario",
+    "sentry": "Sentinella",
+    "servant": "Servo",
+    "sparkwright": "Folgoratore",
+    "spectrologist": "Spettrologo",
+    "steward": "Maggiordomo",
+    "taverner": "Taverniere",
+    "technician": "Tecnico",
+    "thief": "Ladro",
+    "thug": "Delinquente"
+  },
+  "Backgrounds": {
+    "Academic": {
+      "description": "Uno studioso, un professore o studente dell’Accademia di Doskvol, un filosofo o giornalista, ecc.",
+      "label": "Accademia"
+    },
+    "Labor": {
+      "description": "Un servitore, un operaio, un vetturino, uno scaricatore di porto, un Guardarotaie, ecc. Uno stivatore dalla Compagnia di Punta Nord.",
+      "label": "Manovalanza"
+    },
+    "Law": {
+      "description": "Un avvocato o un magistrato, una Giubba Blu o ispettore (o un Guardiano di Spiriti), una guardia della prigione di Ironhook, ecc.",
+      "label": "Legge"
+    },
+    "Military": {
+      "description": "Un soldato Imperiale o Skovlanese, un mercenario, un agente dei servizi segreti, uno stratega, un addestratore, ecc.",
+      "label": "Militare"
+    },
+    "Noble": {
+      "description": "Un amatore, un cortigiano, il discendente di una casa caduta in disgrazia, ecc.",
+      "label": "Nobile"
+    },
+    "Trade": {
+      "description": "Un negoziante, un mercante, un abile artigiano, uno spedizioniere, ecc.\nUn agente di collegamento del Ministero della Conservazione.",
+      "label": "Commercio"
+    },
+    "Underworld": {
+      "description": "Un ragazzo di strada, membro di una gang, giovane teppista, un emarginato cresciuto in strada.",
+      "label": "Criminalità"
+    }
+  },
+  "Friends": {
+    "Augus": {
+      "description": "Un maestro architetto",
+      "label": "Augus"
+    },
+    "Bazso-baz": {
+      "description": "Un capo banda",
+      "label": "Bazso Baz"
+    },
+    "Bryl": {
+      "description": "Uno spacciatore",
+      "label": "Bryl"
+    },
+    "Casta": {
+      "description": "Una cacciatrice di taglie",
+      "label": "Casta"
+    },
+    "Celene": {
+      "description": "Una sentinella",
+      "label": "Celene"
+    },
+    "Chael": {
+      "description": "Un feroce farabutto",
+      "label": "Chael"
+    },
+    "Darmot": {
+      "description": "Una giubba blu",
+      "label": "Darmot"
+    },
+    "Eckerd": {
+      "description": "Un monatto",
+      "label": "Eckerd"
+    },
+    "Flint": {
+      "description": "Un trafficante di spiriti",
+      "label": "Flint"
+    },
+    "Frake": {
+      "description": "Un maestro di chiavi",
+      "label": "Frake"
+    },
+    "Grace": {
+      "description": "Un ricattatore",
+      "label": "Grace"
+    },
+    "Harker": {
+      "description": "Un carcerato",
+      "label": "Harker"
+    },
+    "Jennah": {
+      "description": "una servitrice",
+      "label": "Jennah"
+    },
+    "Jeren": {
+      "description": "Un archivista delle Giubble Blu",
+      "label": "Jeren"
+    },
+    "Jul": {
+      "description": "Uno spacciatore di sangue",
+      "label": "Jun"
+    },
+    "Khyra": {
+      "description": "La proprietaria di una taverna",
+      "label": "Klyra"
+    },
+    "Malista": {
+      "description": "Una sacerdotessa",
+      "label": "Malista"
+    },
+    "Marlane": {
+      "description": "Un pugile",
+      "label": "Marlane"
+    },
+    "Melvir": {
+      "description": "Un cerusico",
+      "label": "Melvir"
+    },
+    "Mercy": {
+      "description": "Un assassino",
+      "label": "Mercy"
+    },
+    "Nyryx-2": {
+      "description": "Uno spettro possessore",
+      "label": "Nyryx"
+    },
+    "Nyryx": {
+      "description": "Una prostituta",
+      "label": "Nyryx"
+    },
+    "Petra": {
+      "description": "Un'impiegata governativa",
+      "label": "Petra"
+    },
+    "Quellyn": {
+      "description": "Una strega",
+      "label": "Quellyn"
+    },
+    "Riven": {
+      "description": "Un chimico",
+      "label": "Riven"
+    },
+    "Roslyn-kellis": {
+      "description": "Una nobile",
+      "label": "Roslyn Kellis"
+    },
+    "Salia": {
+      "description": "Un intermediario di informazioni",
+      "label": "Salia"
+    },
+    "Sawtooth": {
+      "description": "Un cerusico",
+      "label": "Sawtooth"
+    },
+    "Scurlock": {
+      "description": "Un vampiro",
+      "label": "Scurlock"
+    },
+    "Setarra": {
+      "description": "Una demone",
+      "label": "Setarra"
+    },
+    "Stazia": {
+      "description": "Una farmacista",
+      "label": "Stazia"
+    },
+    "Steiner": {
+      "description": "Un assassino",
+      "label": "Steiner"
+    },
+    "Telda": {
+      "description": "Una mendicante",
+      "label": "Telda"
+    },
+    "Veldren": {
+      "description": "Uno psiconauta",
+      "label": "Veldren"
+    },
+    "Veleris": {
+      "description": "Una spia",
+      "label": "Valeris"
+    }
+  },
+  "Heritage-suggestions": {
+    "bastion-elders": "Anziani della Fortezza",
+    "blackvale-coven": "Congrega di Blackvale",
+    "blood-cullers": "Raccoglitori di Sangue",
+    "bonewalker": "Camminatore delle ossa",
+    "bright-harbor-fleet": "Flotta Bright harbor",
+    "church-of-ecstasy": "Chiesa dell'Estasi della Carne",
+    "city-guardians": "Guardie Cittadine",
+    "cloudspire-aeronauts": "aeronauti di Cloudspire",
+    "confessors": "Confessore",
+    "cullfield-observatory": "Osservatorio Cullfield",
+    "deathlander": "Abitante delle Terre Morte",
+    "demon-scholars": "Eruditi Demoniaci",
+    "doskvol-academy": "Accademia di Doskvol",
+    "emissaries": "Emissario",
+    "exile": "Esiliato",
+    "falconers": "Falconiere",
+    "governors-stronghold": "Fortezza del Lord Governatore",
+    "home-guard-militia": "Milizia della Guardia Nazionale",
+    "ilysian-guard": "Guardia Ilysiana",
+    "imperial-city-courtiers": "Cortigiani della Città Imperiale",
+    "imperial-collaborators": "Collaboratori Imperiali",
+    "irondale-metalworks": "Acciaierie Irondale",
+    "ironworks-labor": "Lavoro in Fonderia",
+    "lhan-lhaban": "Lhan Lhaban",
+    "liberators": "Liberatori",
+    "lightning-couriers": "Messaggeri Lampanti",
+    "lockport-scummer": "Truffatore di Lockport",
+    "lore-keepers": "Guarida",
+    "lunarium-players": "Attori del Lunarium",
+    "melamatines": "Melamatines",
+    "nomad": "Nomade",
+    "north-hook-company": "Compagnia di Punta Nord",
+    "onyx-citadel": "Cittadella di Onice",
+    "outlaw": "Fuorilegge",
+    "radiant-energy-farmers": "Agricoltori di Energia Radiante",
+    "refugee": "Rifugiato",
+    "seekers": "Cercatore",
+    "south-point-traders": "Commercianti di Punta Sud",
+    "spirit-hunters": "Cacciatore di Spiriti",
+    "steelhand": "Mano di Acciaio",
+    "thorn-devils": "Diavoli delle Spine",
+    "tyrmoor-clanholder": "Capo del clan Tyrmoor",
+    "vidyad": "Vidyad",
+    "void-gate-sentries": "Sentinelle del Portale del Vuoto",
+    "water-bearers": "Portatori d'Acqua",
+    "whitehollow-miners": "Minatore di Whitehollow",
+    "wintercliff-wardens": "Guardie di Wintercliff"
+  },
+  "Heritages": {
+    "Akoros": {
+      "description": "La terra più vasta e industrializzata dell’Imperium e sede della città capitale e di Duskwall stessa. Gli Akorosiani sono noti per essere una mescolanza di culture che sono cresciute insieme in prossimità, similmente all’Europa.",
+      "label": "Akoros"
+    },
+    "Dagger-isles": {
+      "description": "Lì spesso si cresce sulle navi e si viaggia molto prima di stabilirsi definitivamente.\nLe persone originarie delle isole sono note come corsari e mercanti che vivono senza le barriere folgoranti, gestendo gli spettri in altro modo.",
+      "label": "Isole del Pugnale"
+    },
+    "Iruvia": {
+      "description": "Un regno ricco e potente nel deserto del sud. È un’altra terra di culture diverse come l’antica Persia, l’Egitto o l’India",
+      "label": "Iruvia"
+    },
+    "Severos": {
+      "description": "La maggior parte dei Severosiani vive in tribù nomadi equestri sparse attraverso le Terre Morte, sopravvivendo tra le rovine delle fortezze arcane che ancora respingono gli spiriti.",
+      "label": "Severos"
+    },
+    "Skovlan": {
+      "description": "Una terra frastagliata di fredde montagne e tundra grezza. Skovlan è stato l’ultimo\nbaluardo di resistenza al controllo imperiale. Hanno generalmente la pelle chiara e i\ncapelli chiari o rossi.",
+      "label": "Skovlan"
+    },
+    "Tycheros": {
+      "description": "È un luogo semi-mitologico, distante, al di là del Mare Vuoto. Tutti dicono che chi proviene da lì sia mezzo demone. Se scegli un retaggio Tycherosiano dovete anche segnare un tratto demoniaco",
+      "label": "Tycheros"
+    }
+  },
+  "Looks": {
+    "Apparel": {
+      "collared-shirt": "una camicia con colletto",
+      "eel-skin-bodysuit": "un body in pelle d’anguilla",
+      "fancy-waistcoat": "una giacca aderente",
+      "fitted-dress": "giacca aderente",
+      "fitted-leggings": "dei leggins aderenti",
+      "half-cape": "una mantelletta",
+      "heavy-cloak": "un mantello pesante",
+      "heavy-jacket": "un pastrano",
+      "hide-and-furs": "pelle e pelliccia",
+      "hood-and-veil": "cappuccio e velo",
+      "hooded-cape": "una mantella con cappuccio",
+      "hooded-coat": "un cappotto con cappuccio",
+      "knit-cap": "un berretto a maglia",
+      "knit-sweater": "un maglione",
+      "leathers": "pelle",
+      "long-coat": "una giacca lunga",
+      "long-scarf": "una sciarpa",
+      "loose-silks": "drappeggi di seta",
+      "mask-and-robes": "maschera e vestiti",
+      "rags-and-tatters": "tracci",
+      "rough-tunic": "una tunica grezza",
+      "scavenged-uniform": "una uniforme depredata",
+      "sharp-trousers": "degli pantaloni eleganti",
+      "short-cloak": "un mantello corto",
+      "skirt-and-blouse": "gonna e camicietta",
+      "slim-jacket": "vestito aderente",
+      "soft-boots": "degli stivaletti",
+      "suit-and-tie": "in giacca e cravatta",
+      "suspenders": "delle bretelle",
+      "tall-boots": "degli stivali alti",
+      "thick-greatcoat": "una giacca pesante",
+      "tricorn-hat": "un cappello tricorno",
+      "vest": "panciotto e gilet",
+      "waxed-coat": "un impermeabile",
+      "wide-belt": "una cintura",
+      "work-boots": "anfibi da lavoro",
+      "work-trousers": "pantaloni da lavoro"
+    },
+    "Joining-words": {
+      "and": "e",
+      "dressed-in": "vestito in",
+      "sporting": "che sembra",
+      "wearing": "indossando"
+    },
+    "Person-word-adjectives": {
+      "affable": "affabile",
+      "athletic": "atletico•a",
+      "bony": "consumato•a",
+      "bright": "solare",
+      "brooding": "cupo•a",
+      "calm": "calmo•a",
+      "chiseled": "cesellato•a",
+      "cold": "freddo•a",
+      "dark": "cupo•a",
+      "delicate": "delicato•a",
+      "fair": "giusto•a",
+      "fierce": "fiero•a",
+      "grimy": "sporco•a",
+      "handsome": "affascinante",
+      "huge": "enorme",
+      "hunched": "ricurvo",
+      "languid": "languido•a",
+      "lovely": "delizioso•a",
+      "open": "aperto•a",
+      "plump": "paffuto•a",
+      "rough": "grezzo•a",
+      "sad": "triste",
+      "scarred": "sfregiato•a",
+      "slim": "magro•a",
+      "soft": "morbido•a",
+      "squat": "tarchiato•a",
+      "stern": "severo•a",
+      "stout": "tozzo•a",
+      "striking": "appariscente",
+      "twitchy": "irrequieto•a",
+      "weathered": "consumato•a",
+      "wiry": "snello•a",
+      "worn": "segnat•a"
+    },
+    "Person-words": {
+      "child": {
+        "article": "un(a)",
+        "word": "un(a)"
+      },
+      "man": {
+        "article": "un",
+        "word": "uomo"
+      },
+      "person": {
+        "article": "una",
+        "word": "persona"
+      },
+      "woman": {
+        "article": "una",
+        "word": "donna"
+      }
+    },
+    "Templates": {
+      "one-adjective-one-apparel": "{personWordArticle} {personWord} di aspetto {personWordAdjective1}  {wearingVerb} {apparel1}",
+      "one-adjective-two-apparel": "{personWordArticle} {personWord} di aspetto {personWordAdjective1} {wearingVerb} {apparel1} e {apparel2}",
+      "two-adjectives-one-apparel": "{personWordArticle} {personWord} di aspetto {personWordAdjective1} e {personWordAdjective2} {wearingVerb} {apparel1}",
+      "two-adjectives-two-apparel": "{personWordArticle} {personWord} di aspetto {personWordAdjective1} e {personWordAdjective2} {wearingVerb} {apparel1} e {apparel2}"
+    }
+  },
+  "Names": {
+    "Aliases": {
+      "bell": "Campanaccio",
+      "birch": "Stecco",
+      "bricks": "Mazzetta",
+      "bug": "Insetto",
+      "chime": "Tintinnio",
+      "coil": "Spire",
+      "cricket": "Grillo",
+      "cross": "Croce",
+      "crow": "Corvo",
+      "echo": "Eco",
+      "flint": "Acciarino",
+      "frog": "Rana",
+      "frost": "Brina",
+      "grip": "Morsa",
+      "gunner": "Pistolero",
+      "hammer": "Martello",
+      "hook": "Uncino",
+      "junker": "Catorcio",
+      "mist": "Foschia",
+      "moon": "Pallida",
+      "nail": "Artiglio",
+      "needle": "Ago",
+      "ogre": "Orco",
+      "pool": "Acqua Cheta",
+      "ring": "Squillo",
+      "ruby": "Rubino",
+      "silver": "Splendido",
+      "skinner": "Scorticatore",
+      "song": "Canto",
+      "spur": "Sperone",
+      "tackle": "Puleggia",
+      "thistle": "Gramigna",
+      "thorn": "Scheggia",
+      "tick-tock": "Ammaccato",
+      "twelves": "Dozzina",
+      "vixen": "Volpe",
+      "whip": "Frusta",
+      "wicker": "Cuore Tenero"
+    }
+  },
+  "Playbooks": {
+    "Cutter": {
+      "description": "Un combattente pericoloso e intimidatorio",
+      "label": "Tagliagole"
+    },
+    "Hound": {
+      "description": "Un inseguitore e un cecchino letale",
+      "label": "Segugio"
+    },
+    "Leech": {
+      "description": "Un tecnico e guastatore",
+      "label": "Sanguisuga"
+    },
+    "Lurk": {
+      "description": "Un furtivo infiltratore e scassinatore",
+      "label": "Nebbia"
+    },
+    "Slide": {
+      "description": "Una spia e subdolo manipolatore",
+      "label": "Guanto"
+    },
+    "Spider": {
+      "description": "Un subdolo pianificatore",
+      "label": "Ragno"
+    },
+    "Whisper": {
+      "description": "Un adepto e tramite arcano",
+      "label": "Susurro"
+    }
+  },
+  "User-interface": {
+    "Home-page": {
+      "Attribution": {
+        "code-and-design": "Codice & design di <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+        "copyright": "Copyright © {year} Olin Kirkland",
+        "license-blades-in-the-dark": "Questo lavoro è basato su <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — un prodoto di One Seven Design, sviluppato e scritto da John Harper, e autorizzato per l'uso attraverso la <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Licenza Creative Commons Attribution 3.0</a>",
+        "license-icons": "Icone provenienti da <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
+        "license-portraits": "Immagini di ritratto provenienti da <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> senza restrizioni note sul loro uso",
+        "localization": "Traduzione in spagnolo di Felix&nbsp;G.&nbsp;Rios<br />Traduzione in francese di <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> e Thomas Girod<br />Traduzione in italiano di <a href=\"https://www.reddit.com/user/Xnon_/\">Xnon</a>",
+        "news-and-updates": "Notizie & Aggiornamenti"
+      },
+      "Scoundrel-card": {
+        "no-name": "{playbook} senza nome",
+        "no-playbook": "Canaglia senza nome"
+      },
+      "description": "Un registro personaggi per <a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a>",
+      "lab-banner": "Lab",
+      "last-updated": "Aggiornato {date}",
+      "new-scoundrel-button": "Crea una nuova Canaglia",
+      "scroll-prompt": "Scorri verso il basso per vedere l'attribuzione",
+      "settings-button": "Impostazioni"
+    },
+    "Make-page": {
+      "Controls": {
+        "delete-button": "Cancella",
+        "home-button": "Home",
+        "next-button": "Prossimo"
+      },
+      "Step-navigation": {
+        "abilities": "Abilità",
+        "actions": "Azioni",
+        "background": "Background",
+        "export": "Esporta",
+        "friends": "Amici",
+        "heritage": "Retaggio",
+        "name-and-look": "Nome & Aspetto",
+        "playbook": "Libretto",
+        "vice": "Vizio"
+      }
+    },
+    "Modals": {
+      "Change-language": {
+        "Controls": {
+          "cancel-button": "No, continua ad usare {currentLanguage}",
+          "confirm-button": "Si, cambia in {newLanguage}"
+        },
+        "message": "Stai cercando di caricare una Canaglia usando <strong>{newLanguage}</strong> ma la tua lingua attuale è <strong>{currentLanguage}</strong>. Vuoi cambiare la lingua in <strong>{newLanguage}</strong>?",
+        "title": "Carica una Canaglia con una lingua differente"
+      },
+      "Confirm": {
+        "Controls": {
+          "cancel-button": "No, ho cambiato idea",
+          "confirm-button": "Si"
+        }
+      },
+      "Delete-scoundrel": {
+        "Controls": {
+          "confirm-button": "Cancella"
+        },
+        "message": "Sei sicuro di voler cancellare questa Canaglia? Questa azione non potrà essere annullata.",
+        "title": "Cancellare Canaglia?"
+      },
+      "Import": {
+        "Failed": {
+          "message": "La scheda personaggio non poteva essere importata. Per favore, controlla la URL e riprova.",
+          "title": "Importazione non riuscita"
+        },
+        "Success": {
+          "message": "Scheda personaggio importata con successo!",
+          "title": "Importato con successo"
+        }
+      },
+      "News-and-updates": {
+        "title": "Notizie & Aggiornamenti"
+      },
+      "Settings": {
+        "Language": {
+          "Language-features": {
+            "data": "Dati di Gioco",
+            "deep-cuts": "Deep Cuts",
+            "sheets": "Schede",
+            "ui": "Interfaccia utente"
+          },
+          "Languages": {
+            "de": "Tedesco",
+            "en": "Inglese",
+            "es": "Spagnolo",
+            "fr": "Francese"
+          },
+          "label": "Seleziona la lingua dell'applicazione"
+        },
+        "Tracking": {
+          "description": "Il monitoraggio minimo aiuta a migliorare Scoundry raccogliendo dati anonimi su personaggi, visite di pagine e utilizzo delle funzionalità. Nessuna informazione personale viene raccolta o condivisa.",
+          "label": "Abilita il raccoglimento di informazioni anonimo"
+        },
+        "title": "Impostazioni"
+      },
+      "Tracking-consent": {
+        "Controls": {
+          "cancel-button": "Mantieni la raccolta di informazioni disattivata",
+          "confirm-button": "Acconsento alla raccolta di informazioni"
+        },
+        "message": "Il monitoraggio minimo aiuta a migliorare Scoundry raccogliendo dati anonimi su personaggi, visite di pagine e utilizzo delle funzionalità. Nessuna informazione personale viene raccolta o condivisa.",
+        "title": "Preferenze di raccoglimento informazioni"
+      },
+      "World-map": {
+        "title": "Le Isole Infrante"
+      }
+    },
+    "Steps": {
+      "Abilities": {
+        "subtitle": "Scegli una abilità speciale",
+        "title": "Quale abilità ti distingue nella banda?"
+      },
+      "Actions": {
+        "Action-tally": {
+          "with-character-creation": "<strong>{count}</strong> di 7 punti azione assegnati",
+          "without-character-creation": "<strong>{count}</strong> punti azione assegnati"
+        },
+        "Actions": {
+          "Attune": {
+            "description": "Apri la tua mente al campo di energia spettrale o ad altri poteri arcani. Comunichi con uno spirito, comprendi alcuni aspetti di spettrologia.",
+            "label": "Armonizzare"
+          },
+          "Command": {
+            "description": "Puoi intimidire o minacciare qualcuno per ottenere quello che vuoi. Puoi guidare una gang in un’azione di gruppo.",
+            "label": "Comandare"
+          },
+          "Consort": {
+            "description": "Puoi socializzare per ottenere risorse, informazioni, persone o entrare in posti altrimenti vietati. Puoi fare una bella impressione con qualcuno o conquistarlo con il tuo fascino e stile. Puoi fare nuove amicizie o creare legami grazie al tuo retaggio o background.",
+            "label": "Socializzare"
+          },
+          "Finesse": {
+            "description": "Borseggi qualcuno. Controlli un veicolo o una cavalcatura. Duelli con un avversario combattendo con eleganza.",
+            "label": "Destreggiarsi"
+          },
+          "Hunt": {
+            "description": "Segui un obiettivo o scopri la sua posizione. Fai un’imboscata. Attacchi con un tiro di precisione da lontano.",
+            "label": "Cacciare"
+          },
+          "Prowl": {
+            "description": "Sgattaioli senza farti vedere dalla guardia o ti nascondi nell’ombra. Puoi correre da un tetto all’altro. Puoi attaccare qualcuno con una coltellata alle spalle.",
+            "label": "Sgattaiolare"
+          },
+          "Skirmish": {
+            "description": "Lotti o ti azzuffi con il nemico. Combatti all’arma bianca. Conquisti o difendi una posizione in battaglia.",
+            "label": "Schermire"
+          },
+          "Study": {
+            "description": "Raccogli informazioni da documenti, giornali e libri. Fai ricerca su un tema esoterico. Analizzi da vicino una persona per captare bugie e le sue vere emozioni.",
+            "label": "Studiare"
+          },
+          "Survey": {
+            "description": "Riconosci i segni rivelatori che anticipano guai in arrivo. Scopri opportunità e debolezze. Capisci le intenzioni o motivazioni di una persona.",
+            "label": "Sondare"
+          },
+          "Sway": {
+            "description": "Menti in modo credibile. Convinci qualcuno a fare quello che vuoi. Argomenti una posizione in modo inconfutabile.",
+            "label": "Manipolare"
+          },
+          "Tinker": {
+            "description": "Crei un nuovo gadget o modifichi un oggetto esistente. Puoi aprire un lucchetto o scassinare una cassaforte. Puoi disarmare una trappola o un allarme. Puoi sfruttare i meccanismi e dispositivi elettroplasmatici in giro per la città.",
+            "label": "Armeggiare"
+          },
+          "Wreck": {
+            "description": "Puoi sfondare una porta o un muro con una mazza o esplosivi. Usi un sabotaggio per creare confusione e superare un ostacolo.",
+            "label": "Distruggere"
+          }
+        },
+        "Attributes": {
+          "Insight": "Intuizione",
+          "Prowess": "Prestanza",
+          "Resolve": "Risolutezza"
+        },
+        "Options": {
+          "character-creation-button": "Creazione Personaggio: 7 punti azione totali, limite di 2 per azione",
+          "mastery-advance-button": "Padronanza Avanzata: consente di avanzare le azioni a 4"
+        },
+        "subtitle": "Assegna punti ad azioni che ti rappresentano meglio.",
+        "suggested-actions": "Azioni suggerite dal tuo background e dal tuo retaggio:",
+        "title": "In cosa eccelli?"
+      },
+      "Background": {
+        "deep-cuts-description": "Descrizione completa di questi backgrounds trovabili nella espansione <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> di  Blades in the Dark.",
+        "detail-prompt": "Un dettaglio sul tuo background",
+        "select-prompt": "Seleziona uno sfondo per vedere la sua descrizione e i dettagli suggeriti.",
+        "subtitle": "Scegli un background e scrivi un dettaglio specifico per te.",
+        "title": "Che cosa facevi prima di entrare a far parte della banda?"
+      },
+      "Export": {
+        "Controls": {
+          "classic-sheet": "Standard",
+          "copied": "Copiata!",
+          "save-as-image-button": "Salva come immagine",
+          "share-as-url-button": "Condividi come URL"
+        },
+        "subtitle": "Personalizza e condividi la tua scheda personaggio",
+        "title": "Esporta la tua canaglia"
+      },
+      "Friends": {
+        "friend-button": "Amici",
+        "rival-button": "Rivale",
+        "subtitle": "Segna un alleato di lunga data, parente, amante. Poi segna un PNG come rivale, nemico, amante abbandonato, compagno tradito",
+        "title": "Chi ti deve un favore e chi è il tuo nemico giurato?"
+      },
+      "Heritage": {
+        "deep-cuts-description": "Descrizione completa di questi backgrounds trovabili nella espansione <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> di  Blades in the Dark.",
+        "detail-prompt": "Un dettaglio sul tuo background",
+        "select-prompt": "Seleziona uno sfondo per vedere la sua descrizione e i dettagli suggeriti.",
+        "subtitle": "Scegli un background e scrivi un dettaglio specifico per te.",
+        "title": "Quali sono le tue origini?",
+        "world-map-button": "Mappa del mondo"
+      },
+      "Name-and-look": {
+        "alias-prompt": "Il tuo alias",
+        "look-prompt": "Il tuo aspetto",
+        "name-prompt": "Il tuo nome",
+        "portrait-custom": "Ritratto personalizzato da URL",
+        "portrait-prompt": "Scegli un ritratto",
+        "portrait-url-prompt": "Indirizzo del ritratto",
+        "randomize-alias-button": "Randomizza alias",
+        "randomize-look-button": "Aspetto casuale",
+        "randomize-name-button": "Nome casuale",
+        "subtitle": "Registra un nome, alias criminale e una breve descrizione del tuo aspetto.",
+        "title": "Come ti chiamano? Che aspetto hai?"
+      },
+      "Playbook": {
+        "subtitle": "Il libretto rappresenta la tua reputazione nel mondo criminale, le tue abilità speciali, e come avanzano.",
+        "title": "Che tipo di <strong>Canaglia</strong>sei?"
+      },
+      "Vice": {
+        "description": "Scegli il tipo di vizio e indica il nome e la location del tuo fornitore.",
+        "purveyor-prompt": "Una descrizione dove indulgi",
+        "select-prompt": "Seleziona un vizio per vedere la sua descrizione e fornitori suggeriti",
+        "title": "Dove vai a liberarti del tuo stress?"
+      }
+    }
+  },
+  "Vice-suggestions": {
+    "Aranna-the-blessed": {
+      "description": "Cultista di un dio perduto",
+      "district": "Nightmarket",
+      "label": "Aranna la Benedetta",
+      "text": "Aranna la Benedetta; Cultista di un dio dimenticato; Nightmarket"
+    },
+    "Avrick": {
+      "description": "Spacciatore di polveri",
+      "district": "Barrowcleft",
+      "label": "Avrick",
+      "text": "Avrick; Spacciatore di polveri; Barrowcleft"
+    },
+    "Chef-roselle": {
+      "description": "Il ristorante Prugna Dorata",
+      "district": "Le Sei Torri",
+      "label": "Chef Roselle",
+      "text": "Chef Roselle; Il ristorante Prugna Dorata; Le Sei Torri"
+    },
+    "Circle-of-flame": {
+      "description": "Società Segreta",
+      "label": "Il Circolo della Fiamma",
+      "text": "Il Circolo della Fiamma; Società Segreta"
+    },
+    "Dunridge-sons": {
+      "description": "Stoffe pregiate e sartoria",
+      "district": "Nightmarket",
+      "label": "Dunridge & Figli",
+      "text": "Dunridge & Figli; Stoffe pregiate e sartoria"
+    },
+    "Eldrin-prichard": {
+      "description": "Il Cigno d'Argento, casa di piacere",
+      "district": "Canali di Brightstone",
+      "label": "Eldrin Prichard",
+      "text": "Eldrin Prichard; il Cigno d'Argento, casa di piacere; Canali di Brightstone"
+    },
+    "Family-members": {
+      "description": "(retaggio) o ex-colleghi (background).",
+      "label": "Parenti",
+      "text": "Parenti; (retaggio) o ex-colleghi (background)."
+    },
+    "Father-yoren": {
+      "description": "Casa della Signora del Pianto",
+      "district": "Le Sei Torri",
+      "label": "Padre Yoren",
+      "text": "Padre Yoren; Casa della Signora del Pianto; Le Sei Torri"
+    },
+    "Grist": {
+      "description": "Pugilato",
+      "district": "Il Porto",
+      "label": "Grist",
+      "text": "Grist; Pugilato; Il Porto"
+    },
+    "Harvale-brogan": {
+      "description": "Il Centuralia, locale",
+      "district": "Brightstone",
+      "label": "Harvale Brogan",
+      "text": "Harvale Brogan; Il Centuralia, locale; Brightstone"
+    },
+    "Helene": {
+      "description": "Casinò Cervo Argentato",
+      "district": "Silkshore",
+      "label": "Helene",
+      "text": "Helene; Casinò Cervo Argentato; Silkshore"
+    },
+    "Hooded-proprietor": {
+      "description": "Una taverna mezza allagata",
+      "district": "Il Porto",
+      "label": "Il proprietario incappucciato",
+      "text": "Il proprietario incappucciato; Una taverna mezza allagata; Il Porto"
+    },
+    "Hutton": {
+      "description": "Rifugiati Skovlanesi/Rivoluzionari",
+      "district": "Charhollow",
+      "label": "Hutton",
+      "text": "Hutton; Rifugiati Skovlanesi/Rivoluzionari; Charhollow"
+    },
+    "Ilacille": {
+      "description": "Le rovine del Tempio del dio perduto",
+      "district": "Le rovine del Tempio del dio perduto",
+      "label": "Ilacille",
+      "text": "Ilacille; Le rovine del Tempio del dio perduto; Coalridge"
+    },
+    "Jewel-bird-shine": {
+      "description": "Vicolo delle Gatte",
+      "district": "Il Porto",
+      "label": "Gioiello, Usignolo, e Diamante",
+      "text": "Gioiello, Usignolo, e Diamante; Vicolo delle Gatte; il Porto"
+    },
+    "Lady-dusk": {
+      "description": "Il Circolo di Dusk",
+      "district": "Whitecrown",
+      "label": "Lady Dusk",
+      "text": "Lady Dusk; Il Circolo di Dusk; Whitecrown"
+    },
+    "Lady-freyla": {
+      "description": "Il fusto dell’Imperatore, bar",
+      "district": "Whitecrown",
+      "label": "Lady Freyla",
+      "text": "Lady Freyla; Il fusto dell’Imperatore, bar; Whitecrown"
+    },
+    "Lord-penderyn": {
+      "description": "L’Archivio degli Echi",
+      "district": "Charterhall",
+      "label": "Lord Penderyn",
+      "text": "Lord Penderyn; L’Archivio degli Echi; Charterhall"
+    },
+    "Madame-tesslyn": {
+      "description": "La Lanterna Rossa, bordello",
+      "district": "Silkshore",
+      "label": "Madame Tesslym",
+      "text": "Madame Tesslyn; La Lanterna Rossa, bordello; Silkshore"
+    },
+    "Maestro-helleren": {
+      "description": "Teatro di Spiregarden",
+      "district": "Whitecrown",
+      "label": "Maestro Helleren",
+      "text": "Maestro Helleren; Teatro di Spiregarden; Whitecrown"
+    },
+    "Mardin-gull": {
+      "description": "Il Secchio, taverna",
+      "district": "Crow’s Foot",
+      "label": "Mardin Gull",
+      "text": "Mardin Gull; Il Secchio, taverna; Crow’s Foot"
+    },
+    "Master-vreen": {
+      "description": "Corse di segugi",
+      "district": "Nightmarket",
+      "label": "Master Vreen",
+      "text": "Master Vreen; Corse di segugi; Nightmarket"
+    },
+    "Mother-narya": {
+      "description": "Casa della Signora del Pianto",
+      "district": "Le Sei Torri",
+      "label": "Madre Narya",
+      "text": "Madre Narya; Casa della Signora del Pianto; Le Sei Torri"
+    },
+    "Nelisanne": {
+      "description": "La Chiesa dell’Estasi della Carne",
+      "district": "Brightstone",
+      "label": "Nelisanne",
+      "text": "Nelisanne; La Chiesa dell’Estasi della Carne; Brightstone"
+    },
+    "Ojak": {
+      "description": "Thycherosiano al mercato sui tetti",
+      "district": "Silkshore",
+      "label": "Ojak",
+      "text": "Ojak; venditore Thycherosiano al mercato sui tetti; Silkshore"
+    },
+    "Pux-bolin": {
+      "description": "La Scimmia insistente, taverna",
+      "district": "Nightmarket",
+      "label": "Pux Bolin",
+      "text": "Pux Bolin; La Scimmia insistente, taverna; Nightmarket"
+    },
+    "Rolan-volaris": {
+      "description": "Il Velo, club",
+      "district": "Nightmarket",
+      "label": "Rolan Volaris",
+      "text": "Rolan Volaris; Il Velo, club; Nightmarket"
+    },
+    "Salia": {
+      "description": "Uno spirito dei Riconciliati, si sposta da corpo a corpo a piacimento",
+      "label": "“Salia\"",
+      "text": "“Salia”; Uno spirito dei Riconciliati, si sposta da corpo a corpo a piacimento"
+    },
+    "Sergeant-velk": {
+      "description": "Le arene da combattimento",
+      "district": "Dunslough",
+      "label": "Sergeant Velk",
+      "text": "Sergeant Velk; Le arene da combattimento; Dunslough"
+    },
+    "Singer": {
+      "description": "Bagni pubblici",
+      "district": "Crow’s Foot",
+      "label": "Singer",
+      "text": "Singer; Bagni pubblici; Crow’s Foot"
+    },
+    "Sister-thorn": {
+      "description": "Gang di predoni delle Terre Morte",
+      "district": "Stazione di Gaddoc",
+      "label": "Sorella Thorn",
+      "text": "Sorella Thorn; Gang di predoni delle Terre Morte; Stazione di Gaddoc"
+    },
+    "Spoggs": {
+      "district": "Crow’s Foot",
+      "label": "Da Spogg, gioco di dadi",
+      "text": "Da Spogg, gioco di dadi; Crow’s Foot"
+    },
+    "Travens": {
+      "district": "Coalridge",
+      "label": "Il negozio di fumo di Travern",
+      "text": "Il negozio di fumo di Travern; Coalridge"
+    }
+  },
+  "Vices": {
+    "Faith": {
+      "description": "Sei dedito a una forza invisibile, un dio dimenticato, un antenato, ecc.",
+      "label": "Fede"
+    },
+    "Gambling": {
+      "description": "Brami i giochi d’azzardo, le scommesse sugli eventi sportivi, ecc.",
+      "label": "Azzardo"
+    },
+    "Luxury": {
+      "description": "Ami esibizioni costose e ostentate di opulenza.",
+      "label": "Lusso"
+    },
+    "Obligation": {
+      "description": "Sei devoto alla famiglia, una causa, un’organizzazione, un’opera di carità, ecc.",
+      "label": "Devozione"
+    },
+    "Pleasure": {
+      "description": "Trovi gratificazione nei piaceri materiali come amanti, cibo, alcol, droga, arte, teatro, ecc.",
+      "label": "Piacere"
+    },
+    "Stupor": {
+      "description": "Cerchi l’oblio abusando di droga, ubriacandoti, facendoti pestare a sangue in combattimenti clandestini, ecc.",
+      "label": "Oblio"
+    },
+    "Weird": {
+      "description": "Sperimenti con strane essenze, frequentate spiriti fuori controllo, osservi curiosi rituali o tabù, ecc.",
+      "label": "Stramberie"
+    }
+  }
+}
