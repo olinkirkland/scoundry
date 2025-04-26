@@ -57,7 +57,7 @@
       "label": "Concentrato"
     },
     "Foresight": {
-      "description": "Due volte per colpo puoi assistere un compagno senza accumulare stress.<br/><em>Descrivi\ncome ti eri preparato per queste occasioni.<\\em>",
+      "description": "Due volte per colpo puoi assistere un compagno senza accumulare stress.<br/><em>Descrivi\ncome ti eri preparato per queste occasioni.<em>",
       "label": "Lungimiranza"
     },
     "Fortitude": {
@@ -855,7 +855,8 @@
             "de": "Tedesco",
             "en": "Inglese",
             "es": "Spagnolo",
-            "fr": "Francese"
+            "fr": "Francese",
+            "it": "Italiano"
           },
           "label": "Seleziona la lingua dell'applicazione"
         },
