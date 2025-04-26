@@ -69,7 +69,7 @@
       "label": "Vice caché"
     },
     "Ghost-contract": {
-      "description": "Lorsque vous concluez un marché en vous serrant la main ou en rédigeant un contrat écrit, votre partenaire et vous — humain ou autre — portez désormais chacun la marque de ce serment. Si l'un de vous deux enfreint les termes du contrat, il subit une blessure de niveau 3, \"Maudit\".",
+      "description": "Lorsque vous concluez un marché en vous serrant la main ou en rédigeant un contrat écrit, votre partenaire et vous — humain ou autre — portez désormais chacun la marque de ce serment. Si l'un de vous deux enfreint les termes du contrat, il subit une blessure de niveau 3, \"Maudit\"..",
       "label": "Contrat spectral"
     },
     "Ghost-fighter": {
@@ -773,11 +773,11 @@
       "Attribution": {
         "code-and-design": "Code & conception par <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
         "copyright": "Copyright © {year} Olin Kirkland",
-        "license-blades-in-the-dark": "Ce site est basé sur <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — produit par One Seven Design, développé et écrit par John Harper, et mis a disposition pour notre utilisation sous licence <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>.",
-        "license-icons": "Les icônes sont issues de <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>.",
-        "license-portraits": "Les portraits proviennent de <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> et ne sont soumis à aucune restriction connue quant à leur utilisation.",
-        "localization": "Traduction espagnole par Felix&nbsp;G.&nbsp;Rios<br />Traduction française par Thomas Girod et Artamis, basée sur le travail de Thomas Pereira, Tiburce Guyard et Alexis Brossollet pour <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a>",
-        "news-and-updates": "Nouveautés & mises à jour"
+        "license-blades-in-the-dark": "Ce site est basé sur <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> — un produit de One Seven Design, développé et écrit par John Harper, et licencié pour notre usage sous licence <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 license</a>",
+        "license-icons": "Les icones proviennent de <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
+        "license-portraits": "Les portrait sont issues de <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">la librairie du congrès</a> sans restriction connue dans leur usage",
+        "localization": "Traduction espagnole par Felix&nbsp;G.&nbsp;Rios<br />Traduction française par <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> et Thomas Girod",
+        "news-and-updates": "Nouvelles & mises à jour"
       },
       "Scoundrel-card": {
         "no-name": "{playbook} anonyme",
@@ -855,7 +855,8 @@
             "de": "Allemand",
             "en": "Anglais",
             "es": "Espagnol",
-            "fr": "Français"
+            "fr": "Français",
+            "it": "Italien"
           },
           "label": "Choisir la langue de l'application"
         },
