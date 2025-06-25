@@ -111,15 +111,15 @@
         },
         "Steps": {
             "Playbook": {
-                "subtitle": "Karakterin genel türünü ve tarzını seç",
-                "title": "Vesika"
+                "subtitle": "Vesikan yeraltı dünyasındaki itibarını, özel yeteneklerini ve nasıl gelişeceğini temsil eder.",
+                "title": "Ne tür bir <strong>Haydut</strong>sun?"
             },
             "Heritage": {
-                "deep-cuts-description": "Detaylı memleket seçenekleri için",
-                "detail-prompt": "Memleket detayını yaz",
-                "select-prompt": "Bir memleket seç",
-                "subtitle": "Karakterin hangi topraklardan geldiğini seç",
-                "title": "Memleket",
+                "deep-cuts-description": "Bu memleketlerin tam açıklamaları <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> Blades in the Dark genişleme paketinde bulunabilir.",
+                "detail-prompt": "Memleketin hakkında bir detay",
+                "select-prompt": "Açıklamasını ve önerilen detayları görmek için bir memleket seç.",
+                "subtitle": "Bir memleket seç ve sana özel bir detay yaz.",
+                "title": "Kökenin nedir?",
                 "world-map-button": "Dünya Haritası"
             },
             "Background": {
@@ -409,7 +409,228 @@
             "label": "Acayip"
         }
     },
-    "Abilities": {},
+    "Abilities": {
+        "Battleborn": {
+            "description": "Özel zırhını harcayarak bir saldırının verdiği zararı azaltabilir veya bir dövüşte gayret edebilirsin.",
+            "label": "Doğuştan Cengaver"
+        },
+        "Bodyguard": {
+            "description": "Bir tayfa arkadaşını korurken mukavemet zarına +1 zar alırsın. Mevcut durumda ortaya çıkabilecek tehditleri önceden kestirmek için malumat toplarken +1 tesir alırsın.",
+            "label": "Fedai"
+        },
+        "Ghost-fighter": {
+            "description": "Ellerini, yakın dövüş silahlarını veya aletlerini ruhani enerjiyle donatabilirsin. Uhrevi varlıklara karşı cenk ederken kudret kazanırsın. Ruhları tutmak ve zapt etmek için güreşebilirsin.",
+            "label": "Ruh Dövüşçüsü"
+        },
+        "Leader": {
+            "description": "Bir avaneyi dövüşte Buyruk ile yönettiğinde, bozguna uğrayacak haldeyken bile dövüşmeye devam ederler (3. seviye hasar aldıklarında saf dışı kalmazlar). +1 tesir ve 1 zırh kazanırlar.",
+            "label": "Reis"
+        },
+        "Mule": {
+            "description": "Yük haddin daha yüksektir. Hafif: 5, Normal: 7, Ağır: 8.",
+            "label": "Katır"
+        },
+        "Not-to-be-trifled-with": {
+            "description": "Gayret ederek şu iki şeyden birini yapabilirsin: insanüstü sayılabilecek fiziksel bir güç gösterisi gerçekleştirmek ya da küçük bir çeteyle yakın dövüşte başa baş kapışmak.",
+            "label": "Şakası Yok"
+        },
+        "Savage": {
+            "description": "Fiziksel şiddet uyguladığında bu özellikle korkutucu olur. Korkmuş bir hedefe Buyruk kullandığında +1 zar alırsın.",
+            "label": "Yabani"
+        },
+        "Vigorous": {
+            "description": "Hasardan daha hızlı kurtulursun. Nekahat saati dilimlerinden birini kalıcı olarak doldur. Şifa işlerinde +1 zar alırsın.",
+            "label": "Dinç"
+        },
+        "Sharpshooter": {
+            "description": "Gayret ettiğinde, şu ikisinden birini yapabilirsin: silahın normal menzilinin çok ötesinden bir atış yap, ya da düşmanı baskı altına almak için ateş yağmuruna tut.",
+            "label": "Keskin Nişancı"
+        },
+        "Focused": {
+            "description": "Özel zırhını şu durumlar için harcayabilirsin: sürpriz veya zihinsel zarar (korku, şaşkınlık, vb.) karşısında mukavemet göstermek ya da uzak çatışma veya takip için gayret etmek.",
+            "label": "Odaklı"
+        },
+        "Ghost-hunter": {
+            "description": "Av hayvanın ruhani güçle yoğruludur. Gaibi takip veya onun ile cenk ederken kudretli olur ve uhrevi bir kabiliyet edinir: hayalet-şekli, zihin-bağı veya ok-hızı. Bu hüneri tekrar alarak hayvana başka bir yetenek daha ekleyebilirsin.",
+            "label": "Hayalet Avcısı"
+        },
+        "Scout": {
+            "description": "Hedef belirlemek için malumat topladığında +1 tesir alırsın. Hakim vaziyette saklandığında veya kamuflaj kullandığında, fark edilmemek için +1 zar alırsın.",
+            "label": "İzci"
+        },
+        "Survivor": {
+            "description": "Ya zorlu deneyimlerden, ya da bir ezoterik ritüelden geçerek ölüm topraklarının zehirli havasına bağışıklık kazandın. Oranın garip bitkileri ve yaratıklarıyla hayatta kalabiliyorsun. +1 buhran kutusu kazanırsın.",
+            "label": "Sağ Kalan"
+        },
+        "Tough-as-nails": {
+            "description": "Hasarın sebep olduğu bedeller bir seviye alttaymış gibi olur. (Seviye 4 hasar hâlâ ölümcüldür.)",
+            "label": "Domuz Gibi"
+        },
+        "Vengeful": {
+            "description": "Yeni bir TP tetikleyicin olur: sana ya da sevdiklerine zarar veren birinden intikam aldın. Tayfan da yardımcı olduysa, tayfa TP'si de kazanırsın.",
+            "label": "İntikamcı"
+        },
+        "Alchemist": {
+            "description": "Simyevi bir icat ya da imalat yaptığında, zar neticesini bir seviye yükselt. Bir özel formül bilerek başlarsın.",
+            "label": "Simyager"
+        },
+        "Analyst": {
+            "description": "Mola sırasında, araştırma ya da yeni bir formül/tasarım planı öğrenme içeren uzun vadeli proje saatlerine toplamda iki işaret koyabilirsin.",
+            "label": "Tetkikçi"
+        },
+        "Artificer": {
+            "description": "Cereyan özellikli bir icat ya da imalat yaptığında, zar neticesini bir seviye yükselt. Bir özel tasarım bilerek başlarsın.",
+            "label": "Cihaz Ustası"
+        },
+        "Fortitude": {
+            "description": "Özel zırhını şu durumlar için harcayabilirsin: yorgunluk, halsizlik veya kimyasal etkilerden kaynaklanan bir sıkıntıya mukavemet göstermek; ya da teknik kabiliyetler veya simyevi maddelerle çalışırken kendini zorlamak.",
+            "label": "Metanet"
+        },
+        "Ghost-ward": {
+            "description": "Büyülü maddeler ve usûllerle bir alanı Tahrip ederek ruhlar için ya câzip veya sakil hâle getirmeyi bilirsin (seç).",
+            "label": "Ruhkovan"
+        },
+        "Physicker": {
+            "description": "Kemikler, kan ve vücut sıvıları üzerinde Tertibat yapa­rak yaraları tedavi edebilir veya can çekişeni sakinleşti­re­bilir­sin. Bir hastalık ya da ceset üzerinde Tahlil yapabilirsin. Tayfandaki herkes nekahat zarlarında +1 zar alır.",
+            "label": "Şifacı"
+        },
+        "Saboteur": {
+            "description": "Tahribat hareketlerinde çıkardığın ses beklenenden daha azdır ve oluşturduğun hasar vasat bir tetkikle fark edilemez.",
+            "label": "Sabotajcı"
+        },
+        "Venomous": {
+            "description": "Bandolyerindeki bir ilaç ya da zehire bağışıklık kazanır­sın. Gayret ederek onu cildinden ya da tükürüğünden salgılayabilir veya buhar olarak soluyabilirsin.",
+            "label": "Zehirli"
+        },
+        "Infiltrator": {
+            "description": "Güvenlik tedbirlerini atlatırken Kalite ya da Kademe tarafından etkilenmezsin.",
+            "label": "Sızmacı"
+        },
+        "Ambush": {
+            "description": "Gizlendiğin yerden saldırdığında veya kurduğun tuzak harekete geçtiğinde +1 zar alırsın.",
+            "label": "Pusu"
+        },
+        "Daredevil": {
+            "description": "Vahim bir harekette zar atarken, o eylemden doğabi­le­cek sıkıntılara karşı mukavemet atışlarında -1 zar almak şartıyla +1 zar alırsın.",
+            "label": "Gözü Kara"
+        },
+        "The-devils-footsteps": {
+            "description": "Gayret ettiğinde şu ek faydalardan birini seçebilirsin: doğaüstü atletik bir hareket gerçekleştir ya da düşmanlarını kandırıp birbirlerine saldırmalarını sağla.",
+            "label": "Şeytan Adımları"
+        },
+        "Expertise": {
+            "description": "Bir hareket puanını seç. Bu hareketle başı çektiğinde en fazla 1 buhran alırsın (başarısız zar sayısından bağımsız olarak).",
+            "label": "Ehliyet"
+        },
+        "Ghost-veil": {
+            "description": "Ruh alanına kısmen geçerek bir anlığına gölgemsi ve maddesiz hâle gelebilirsin. 2 buhran al, fazladan her özellik için +1 buhran: birkaç dakika sürsün, görünmez ol, havada süzül.",
+            "label": "Ruh Peçesi"
+        },
+        "Reflexes": {
+            "description": "Kimin önce harekete geçtiği sorulduğunda cevap sensindir (iki Refleks sahibi karakter aynı anda hareket eder).",
+            "label": "Refleks"
+        },
+        "Shadow": {
+            "description": "Özel zırhını şu durumlar için harcayabilirsin: tespit ya da güvenlik önlemlerinden kaynaklanan bir sıkıntıya mukavemet etmek; ya da atletizm ya da sinsi bir hareket için gayret etmek.",
+            "label": "Gölge"
+        },
+        "Rooks-gambit": {
+            "description": "2 buhran al ve başka bir hareketi yaparken en yüksek puanlı hareketini kullan. Nasıl kılıfına uydurduğunu da anlat.",
+            "label": "Şah Mat"
+        },
+        "Cloak-and-dagger": {
+            "description": "Tebdil-i-kıyafet veya başka bir gizli şaşırtma yöntemi kulla­narak şüphe uyandırmaktan kaçınma atışlarına +1 zar alırsın. Kılığını attığında, ortaya çıkan şaşkınlık sana ilk hamleyi verir.",
+            "label": "Zoka"
+        },
+        "Ghost-voice": {
+            "description": "Ne kadar vahşi ya da çılgın olursa olsun, bir hayalet ya da iblisle normal bir insan gibi iletişim kurmanın sırrını bilirsin. Doğaüstü varlıklarla iletişimde kudretli olursun.",
+            "label": "Ruh Sesi"
+        },
+        "Like-looking-into-a-mirror": {
+            "description": "Sana biri yalan söylediğinde her daim anlarsın.",
+            "label": "Aynadaki Suret"
+        },
+        "A-little-something-on-the-side": {
+            "description": "Her mola evresinin sonunda +2 zula kazan.",
+            "label": "Yan Gelir"
+        },
+        "Mesmerism": {
+            "description": "Birini İkna hareketiyle etkilediğinde, bu etkiyi yaşadığı­nı bir sonraki karşılaşmanıza kadar unutmasını sağlayabilirsin.",
+            "label": "Hipnoz"
+        },
+        "Subterfuge": {
+            "description": "Özel zırhını harcayarak ya şüphe veya ikna kaynaklı bir bedele mukavemet edebilir, ya da kurnazlıkla ilgili bir hareket için gayret edebilirsin.",
+            "label": "Fırıldak"
+        },
+        "Trust-in-me": {
+            "description": "Yakın bağ kurduğun hedefe karşı +1 zar alırsın.",
+            "label": "Bana Güven"
+        },
+        "Foresight": {
+            "description": "Her işte iki kez olmak üzere, bir yoldaşına buhrana girmeden omuz ver. Önceden nasıl hazırlık yaptığını anlat.",
+            "label": "İleri Görüş"
+        },
+        "Calculating": {
+            "description": "Planlı çalışmanın meyvesi: Mola vaktinde kendine ya da bir tayfa üyesine +1 ek faaliyet ver.",
+            "label": "Hesap Kitap"
+        },
+        "Connected": {
+            "description": "Molada mülk edinme veya hararet düşürme hamlelerinde +1 netice seviyesi alırsın.",
+            "label": "Bağlantılar"
+        },
+        "Functioning-vice": {
+            "description": "Zaafına kapıldığında zar atışının sonucunu 1 veya 2 puan aşağı ya da yukarı oynatabilirsin. Seninle birlikte zaafına kapılan bir yoldaş da aynısını yapabilir.",
+            "label": "İşleyen Zaaf"
+        },
+        "Ghost-contract": {
+            "description": "Bir anlaşmayı el sıkışarak mühürlediğinde, ister insan ister başka bir varlık olsun, her iki taraf da anlaşmanın izini taşır. Anlaşmayı bozan taraf 3. seviye hasar alır: \"Lanetli\".",
+            "label": "Ruh Mukavelesi"
+        },
+        "Jail-bird": {
+            "description": "Mapusa girersen firari seviyen 1 az, kademen 1 faz­la sayılır. Ayrıca içeride yardım ettiğin bir camiayla aranı +1 yap.",
+            "label": "Kodes Kuşu"
+        },
+        "Mastermind": {
+            "description": "Özel zırhını bir yoldaşını korumak veya malumat toplarken ya da uzun vadeli bir proje üzerinde çalışırken gayret etmek için kullanabilirsin.",
+            "label": "Kurnaz"
+        },
+        "Weaving-the-web": {
+            "description": "Bir hedef hakkında malumat toplarken Muhabbet hare­ketine +1 zar alırsın. İlgili işte angajman zarına da +1 zar eklenir.",
+            "label": "Ağ Örmek"
+        },
+        "Compel": {
+            "description": "İntibak ile yakındaki bir hayaleti zorla ortaya çıkarabilir ve bir emrine uydurabilirsin. Çağırdığın hayaletten doğan korku seni etkilemez (ama yoldaşlarını etkileyebilir).",
+            "label": "Hüküm"
+        },
+        "Ghost-mind": {
+            "description": "Yanında doğaüstü bir varlık varsa onu her zaman hissedersin. Doğaüstüyle ilgili malumat toplarken +1 zar alırsın.",
+            "label": "Ruh Aklı"
+        },
+        "Iron-will": {
+            "description": "Bazı doğaüstü varlıkların yol açtığı dehşete karşı bağışıksın. Dirayet ile mukavemet zarlarında +1 zar alırsın.",
+            "label": "Demir İrade"
+        },
+        "Occultist": {
+            "description": "Kadim güçler, unutulmuş tanrılar ya da iblislerle Muhabbet kurmanın gizli yollarını bilirsin. Sonrasında, onlara tapan birine Buyruk verirken +1 zar alırsın.",
+            "label": "Gizemli"
+        },
+        "Ritual": {
+            "description": "Gizli bir ayini Tahlil ederek öğrenebilir ya da sıfırdan kurgulayabilirsin. Büyüsel etkiler ya da varlıklar çağırmak için gereken ayin yöntemlerini bilirsin. Başlarken bildiğin bir ayin olur.",
+            "label": "Ayin"
+        },
+        "Strange-methods": {
+            "description": "Tertibat hareketiyle büyülü özellikler taşıyan bir şey icat veya imal ettiğinde +1 netice seviyesi alırsın. Oyuna başlarken bildiğin bir büyülü tasarım olur.",
+            "label": "Acayip Usuller"
+        },
+        "Tempest": {
+            "description": "Gayret ederek şu etkilerden birini yaratabilirsin: Yıldırım çakımıyla saldırı veya çevrende fırtına koparma (şiddetli yağmur, rüzgâr, sis, dolu vs.)",
+            "label": "Kasırga"
+        },
+        "Warded": {
+            "description": "Özel zırhını harcayarak doğaüstü bir şeye mukavemet veya büyüyle ilgili bir hamle yapmak için gayret edebilirsin.",
+            "label": "Mühürlü"
+        }
+    },
     "Background-suggestions": {},
     "Friends": {},
     "Heritage-suggestions": {},
