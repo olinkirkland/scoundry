@@ -631,7 +631,69 @@
             "label": "Mühürlü"
         }
     },
-    "Background-suggestions": {},
+    "Background-suggestions": {
+        "acolyte-spirit-warden": "Ruh Zabiti Çırağı",
+        "antiquarian": "Antikacı",
+        "artisan": "Zanaatkâr",
+        "artist": "Sanatçı",
+        "bluecoat": "Mavi Urbalı",
+        "bounty-hunter": "Kelle Avcısı",
+        "captain": "Kaptan",
+        "convict": "Mahkum",
+        "councilor": "Konsey Üyesi",
+        "courier": "Ulak",
+        "courtier": "Saray Mensubu",
+        "criminologist": "Kriminolog",
+        "cultist": "Tarikatçı",
+        "dealer": "Simsar",
+        "demonologist": "Cinci",
+        "dilettante": "Sefa pezevengi",
+        "diplomat": "Diplomat",
+        "docker": "Rıhtım İşçisi",
+        "driver": "Arabacı",
+        "duelist": "Düellocu",
+        "electrochemist": "Elektrokimyager",
+        "engineer": "Mühendis",
+        "envoy": "Elçi",
+        "explorer": "Kaşif",
+        "factory-worker": "Fabrika İşçisi",
+        "farmhand": "Reçber",
+        "fence": "Malın Aklayıcısı",
+        "fighter": "Dövüşçü",
+        "firefighter": "İtfaiyeci",
+        "gondolier": "Gondolcu",
+        "hustler": "Dolandırıcı",
+        "informant": "Muhbir",
+        "journalist": "Gazeteci",
+        "lark": "Şakacı",
+        "leviathan-hunter": "Azmarân Avcısı",
+        "linewalker": "Hat Bekçisi",
+        "mediciner": "Hekim",
+        "merchant": "Tüccar",
+        "military-guardsman": "Asker Muhafız",
+        "miner": "Madenci",
+        "ministry-agent": "Bakanlık Ajanı",
+        "naturalist": "Tabiat Alimi",
+        "occultist": "Efsuncu",
+        "psychometrist": "Psikometrist",
+        "purveyor": "Tedarikçi",
+        "rail-jack": "Demirdar",
+        "rifle-scout": "Tüfekli İzci",
+        "roof-runner": "Çatı Koşucusu",
+        "sailor": "Denizci",
+        "scavenger": "Hurdacı",
+        "scholar": "Bilgin",
+        "secretary": "Sekreter",
+        "sentry": "Nöbetçi",
+        "servant": "Hizmetçi",
+        "sparkwright": "Çakıncı",
+        "spectrologist": "Spektrolog",
+        "steward": "Kâhya",
+        "taverner": "Meyhaneci",
+        "technician": "Teknisyen",
+        "thief": "Hırsız",
+        "thug": "Hergele"
+    },
     "Friends": {
         "Marlane": {
             "description": "Bir boksör",
@@ -770,7 +832,55 @@
             "label": "Setarra"
         }
     },
-    "Heritage-suggestions": {},
+    "Heritage-suggestions": {
+        "bastion-elders": "Bastion İhtiyarı",
+        "blackvale-coven": "Karavadi Meclisi",
+        "blood-cullers": "Kan Toplayıcıları",
+        "bonewalker": "Kemik Yürüyücü",
+        "bright-harbor-fleet": "Parlak Liman Filosu",
+        "church-of-ecstasy": "Vecdin Kilisesi",
+        "city-guardians": "Şehir Muhafızları",
+        "cloudspire-aeronauts": "Bulutdiken Havacıları",
+        "confessors": "İtirafçılar",
+        "cullfield-observatory": "Cullfield Rasathanesi",
+        "deathlander": "Ölümdiyarlı",
+        "demon-scholars": "İblis Alimler",
+        "doskvol-academy": "Doskvol Akademisi",
+        "emissaries": "Sefirler",
+        "exile": "Sürgün",
+        "falconers": "Şahinciler",
+        "governors-stronghold": "Vali Kalesi",
+        "home-guard-militia": "Muhafız Milisleri",
+        "ilysian-guard": "Ilysia Muhafızları",
+        "imperial-city-courtiers": "İmparatorluk Şehri Saray Mensupları",
+        "imperial-collaborators": "İmparatorluk İşbirlikçileri",
+        "irondale-metalworks": "Demirdere Metal İşleri",
+        "ironworks-labor": "Demir İşleri Emekçileri",
+        "lhan-lhaban": "Lhan Lhaban",
+        "liberators": "Kurtarıcılar",
+        "lightning-couriers": "Yıldırım Ulakları",
+        "lockport-scummer": "Lockport Sefilleri",
+        "lore-keepers": "Hâfızlar",
+        "lunarium-players": "Lunarium Oyuncuları",
+        "melamatines": "Melâmiler",
+        "nomad": "Göçebe",
+        "north-hook-company": "Kuzey Burnu Şirketi",
+        "onyx-citadel": "Mermerkale",
+        "outlaw": "Haydut",
+        "radiant-energy-farmers": "Şua Enerjisi Çiftçileri",
+        "refugee": "Mülteci",
+        "seekers": "Arayıcılar",
+        "south-point-traders": "Güney Burnu Tüccarları",
+        "spirit-hunters": "Ruh Avcıları",
+        "steelhand": "Çelik El",
+        "thorn-devils": "Diken Şeytanları",
+        "tyrmoor-clanholder": "Tyrmoor Klan Lideri",
+        "vidyad": "Vidyad",
+        "void-gate-sentries": "Zifir Kapısı Nöbetçileri",
+        "water-bearers": "Su Taşıyıcıları",
+        "whitehollow-miners": "Akçukur Madencileri",
+        "wintercliff-wardens": "Kışyamacı Bekçileri"
+    },
     "Looks": {
         "Apparel": {
             "collared-shirt": "Yakalı Gömlek",
@@ -923,5 +1033,194 @@
             "worm": "Solucan"
         }
     },
-    "Vice-suggestions": {}
+    "Vice-suggestions": {
+        "Mother-narya": {
+            "description": "Gözyaşı Kadını'nın Şapeli",
+            "district": "Altıkule",
+            "label": "Rahibe Narya",
+            "text": "Rahibe Narya; Gözyaşı Kadını'nın Şapeli; Altıkule"
+        },
+        "Ilacille": {
+            "description": "Unutulmuş Tanrılar Tapınağı'nın harabeleri",
+            "district": "Kömürsırtı",
+            "label": "Ilacille",
+            "text": "Ilacille; Unutulmuş Tanrılar Tapınağı'nın harabeleri; Kömürsırtı"
+        },
+        "Nelisanne": {
+            "description": "Bedenin Vecdi Kilisesi",
+            "district": "Billurtaş",
+            "label": "Nelisanne",
+            "text": "Nelisanne; Bedenin Vecdi Kilisesi; Billurtaş"
+        },
+        "Lord-penderyn": {
+            "description": "Yankılar Arşivi",
+            "district": "Nizamhane",
+            "label": "Lord Penderyn",
+            "text": "Lord Penderyn; Yankılar Arşivi; Nizamhane"
+        },
+        "Spoggs": {
+            "description": "zar oyunu",
+            "district": "Kargaayağı",
+            "label": "Spogg'un zar oyunu",
+            "text": "Spogg'un zar oyunu; Kargaayağı"
+        },
+        "Grist": {
+            "description": "boks ringi",
+            "district": "Rıhtım",
+            "label": "Grist",
+            "text": "Grist; boks ringi; Rıhtım"
+        },
+        "Helene": {
+            "description": "Gümüş Geyik kumarhanesi",
+            "district": "İpekyalı",
+            "label": "Helene",
+            "text": "Helene; Gümüş Geyik kumarhanesi; İpekyalı"
+        },
+        "Master-vreen": {
+            "description": "tazı yarışları",
+            "district": "Gecepazarı",
+            "label": "Vreen Usta",
+            "text": "Vreen Usta; tazı yarışları; Gecepazarı"
+        },
+        "Lady-dusk": {
+            "description": "Dusk Malikanesi Kulübü",
+            "district": "Aktaç",
+            "label": "Leydi Dusk",
+            "text": "Leydi Dusk; Dusk Malikanesi Kulübü; Aktaç"
+        },
+        "Sergeant-velk": {
+            "description": "dövüş çukurları",
+            "district": "Bozçamur",
+            "label": "Çavuş Velk",
+            "text": "Çavuş Velk; dövüş çukurları; Bozçamur"
+        },
+        "Singer": {
+            "description": "hamam",
+            "district": "Kargaayağı",
+            "label": "Singer",
+            "text": "Singer; hamam; Kargaayağı"
+        },
+        "Harvale-brogan": {
+            "description": "Sentraliya Kulübü",
+            "district": "Billurtaş",
+            "label": "Harvale Brogan",
+            "text": "Harvale Brogan; Sentraliya Kulübü; Billurtaş"
+        },
+        "Travens": {
+            "district": "Kömürsırtı",
+            "label": "Traven'in tütün dükkânı",
+            "text": "Traven'in tütün dükkânı; Kömürsırtı"
+        },
+        "Dunridge-sons": {
+            "description": "has kumaşçı ve terzi",
+            "district": "Gecepazarı",
+            "label": "Dunridge & Sons",
+            "text": "Dunridge & Sons; has kumaşçı ve terzi; Gecepazarı"
+        },
+        "Chef-roselle": {
+            "description": "Altın Erik lokantası",
+            "district": "Altıkule",
+            "label": "Aşçı Roselle",
+            "text": "Aşçı Roselle; Altın Erik lokantası; Altıkule"
+        },
+        "Maestro-helleren": {
+            "description": "Spiregarden tiyatrosu",
+            "district": "Aktaç",
+            "label": "Maestro Helleren",
+            "text": "Maestro Helleren; Spiregarden tiyatrosu; Aktaç"
+        },
+        "Family-members": {
+            "description": "memleket ya da eski iş bağlantıları",
+            "label": "Aile üyeleri",
+            "text": "Aile üyeleri; memleket ya da eski iş bağlantıları"
+        },
+        "Hutton": {
+            "description": "Skovlanlı Mülteciler/Devrimciler",
+            "district": "Yarıktepe",
+            "label": "Hutton",
+            "text": "Hutton; Skovlanlı Mülteciler/Devrimciler; Yarıktepe"
+        },
+        "Circle-of-flame": {
+            "description": "gizli bir cemiyet",
+            "label": "Alev Çemberi",
+            "text": "Alev Çemberi; gizli bir cemiyet"
+        },
+        "Mardin-gull": {
+            "description": "Dökülen Kova meyhanesi",
+            "district": "Kargaayağı",
+            "label": "Mardin Gull",
+            "text": "Mardin Gull; Dökülen Kova meyhanesi; Kargaayağı"
+        },
+        "Pux-bolin": {
+            "description": "Telli Direk meyhanesi",
+            "district": "Gecepazarı",
+            "label": "Pux Bolin",
+            "text": "Pux Bolin; Telli Direk meyhanesi; Gecepazarı"
+        },
+        "Lady-freyla": {
+            "description": "İmparatorun Varili barı",
+            "district": "Aktaç",
+            "label": "Leydi Freyla",
+            "text": "Leydi Freyla; İmparatorun Varili barı; Aktaç"
+        },
+        "Avrick": {
+            "description": "toz satıcısı",
+            "district": "Duskwall Mezarlığı",
+            "label": "Avrick",
+            "text": "Avrick; toz satıcısı; Duskwall Mezarlığı"
+        },
+        "Rolan-volaris": {
+            "description": "Veil cemiyet kulübü",
+            "district": "Gecepazarı",
+            "label": "Rolan Volaris",
+            "text": "Rolan Volaris; Veil cemiyet kulübü; Gecepazarı"
+        },
+        "Madame-tesslyn": {
+            "description": "Kırmızı Lamba genelevi",
+            "district": "İpekyalı",
+            "label": "Madam Tesslyn",
+            "text": "Madam Tesslyn; Kırmızı Lamba genelevi; İpekyalı"
+        },
+        "Eldrin-prichard": {
+            "description": "Gümüş Kuğu zevk salı",
+            "district": "Billurtaş kanalında",
+            "label": "Eldrin Prichard",
+            "text": "Eldrin Prichard; Gümüş Kuğu zevk salı; Billurtaş kanalında"
+        },
+        "Jewel-bird-shine": {
+            "description": "Kedigeçidi",
+            "district": "Rıhtım",
+            "label": "Jewel‚ Bird ve Shine",
+            "text": "Jewel‚ Bird ve Shine; Kedigeçidi; Rıhtım"
+        },
+        "Hooded-proprietor": {
+            "description": "yarı sular altında kalmış mağara meyhanesi",
+            "district": "Rıhtım",
+            "label": "Kukuletalı İşletmeci",
+            "text": "Kukuletalı İşletmeci; yarı sular altında kalmış mağara meyhanesi; Rıhtım civarı"
+        },
+        "Father-yoren": {
+            "description": "Gözyaşı Kadını'nın Şapeli",
+            "district": "Altıkule",
+            "label": "Peder Yoren",
+            "text": "Peder Yoren; Gözyaşı Kadını'nın Şapeli; Altıkule"
+        },
+        "Salia": {
+            "description": "ehlileşmiş bir ruh, ödünç bedenlerde dolaşır",
+            "label": "\"Salia\"",
+            "text": "\"Salia\"; ehlileşmiş bir ruh, ödünç bedenlerde dolaşır"
+        },
+        "Sister-thorn": {
+            "description": "ölümdiyarı hurdacı çetesi",
+            "district": "Gaddoc istasyonu",
+            "label": "Diken Bacı",
+            "text": "Diken Bacı; ölümdiyarı hurdacı çetesi; Gaddoc istasyonu"
+        },
+        "Ojak": {
+            "description": "Tycheros'lu çatı pazarı satıcısı",
+            "district": "İpekyalı",
+            "label": "Ojak",
+            "text": "Ojak; Tycheros'lu çatı pazarı satıcısı; İpekyalı"
+        }
+    }
 }
