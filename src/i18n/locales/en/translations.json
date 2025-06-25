@@ -855,7 +855,8 @@
             "de": "German",
             "en": "English",
             "es": "Spanish",
-            "fr": "French"
+            "fr": "French",
+            "tr": "Turkish"
           },
           "label": "Select the app language"
         },

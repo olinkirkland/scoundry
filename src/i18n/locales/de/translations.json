@@ -855,7 +855,8 @@
             "de": "Deutsch",
             "en": "Englisch",
             "es": "Spanisch",
-            "fr": "Französisch"
+            "fr": "Französisch",
+            "tr": "Türkisch"
           },
           "label": "App-Sprache auswählen"
         },
