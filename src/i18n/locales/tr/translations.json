@@ -1,0 +1,454 @@
+{
+    "User-interface": {
+        "Home-page": {
+            "Attribution": {
+                "code-and-design": "Kod ve tasarım: <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+                "copyright": "Telif hakkı © {year} Olin Kirkland",
+                "license-blades-in-the-dark": "Bu çalışma, John Harper tarafından geliştirilen ve yazılan One Seven Design ürünü <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> temel alınarak hazırlanmış olup <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">Creative Commons Attribution 3.0 lisansı</a> kapsamında kullanım için lisanslanmıştır",
+                "license-icons": "İkonlar <a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a> sitesinden alınmıştır",
+                "license-portraits": "Portre resimleri <a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> arşivinden alınmış olup kullanımları konusunda bilinen bir kısıtlama bulunmamaktadır",
+                "localization": "İspanyolca çeviri: Felix&nbsp;G.&nbsp;Rios<br />Fransızca çeviri: <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> ve Thomas Girod<br />Türkçe çeviri: Mert Torun",
+                "news-and-updates": "Haberler ve Güncellemeler"
+            },
+            "Scoundrel-card": {
+                "no-name": "İsimsiz {playbook}",
+                "no-playbook": "İsimsiz Haydut"
+            },
+            "description": "<a href=\"https://bladesinthedark.com/\" target=\"_blank\">Blades in the Dark</a> için karakter yaratıcısı",
+            "lab-banner": "Laboratuvar",
+            "last-updated": "{date} tarihinde güncellendi",
+            "new-scoundrel-button": "Yeni Haydut Yarat",
+            "scroll-prompt": "Künye için aşağı kaydır",
+            "settings-button": "Ayarlar"
+        },
+        "Make-page": {
+            "Controls": {
+                "delete-button": "Sil",
+                "home-button": "Ana Sayfa",
+                "next-button": "İleri"
+            },
+            "Step-navigation": {
+                "abilities": "Kabiliyetler",
+                "actions": "Hareketler",
+                "background": "Mazi",
+                "export": "Dışa Aktar",
+                "friends": "Dostlar",
+                "heritage": "Memleket",
+                "name-and-look": "İsim ve Görünüş",
+                "playbook": "Vesika",
+                "vice": "Zaaf"
+            }
+        },
+        "Modals": {
+            "Change-language": {
+                "Controls": {
+                    "cancel-button": "İptal",
+                    "confirm-button": "Onayla"
+                },
+                "message": "Dil değişikliği sayfayı yeniden yükleyecektir.",
+                "title": "Dili Değiştir"
+            },
+            "Confirm": {
+                "Controls": {
+                    "cancel-button": "İptal",
+                    "confirm-button": "Onayla"
+                }
+            },
+            "Delete-scoundrel": {
+                "Controls": {
+                    "confirm-button": "Sil"
+                },
+                "message": "Bu haydut kalıcı olarak silinecektir. Bu işlem geri alınamaz.",
+                "title": "Haydut Sil"
+            },
+            "Import": {
+                "Failed": {
+                    "message": "Dosya içe aktarılamadı. Lütfen geçerli bir JSON dosyası seçin.",
+                    "title": "İçe Aktarma Başarısız"
+                },
+                "Success": {
+                    "message": "Haydut başarıyla içe aktarıldı.",
+                    "title": "İçe Aktarma Başarılı"
+                }
+            },
+            "News-and-updates": {
+                "title": "Haberler ve Güncellemeler"
+            },
+            "Settings": {
+                "Language": {
+                    "Language-features": {
+                        "data": "Veri",
+                        "deep-cuts": "Deep Cuts",
+                        "sheets": "Kağıtlar",
+                        "ui": "Arayüz"
+                    },
+                    "Languages": {
+                        "de": "Almanca",
+                        "en": "İngilizce",
+                        "es": "İspanyolca",
+                        "fr": "Fransızca",
+                        "tr": "Türkçe"
+                    },
+                    "label": "Dil"
+                },
+                "Tracking": {
+                    "description": "Anonim kullanım verilerinin toplanmasına izin ver",
+                    "label": "Kullanım İzleme"
+                },
+                "title": "Ayarlar"
+            },
+            "Tracking-consent": {
+                "Controls": {
+                    "cancel-button": "Hayır",
+                    "confirm-button": "Evet"
+                },
+                "message": "Bu uygulama anonim kullanım verilerini toplar. Bu, uygulamayı geliştirmemize yardımcı olur. İzin veriyor musunuz?",
+                "title": "Kullanım İzleme"
+            },
+            "World-map": {
+                "title": "Dünya Haritası"
+            }
+        },
+        "Steps": {
+            "Playbook": {
+                "subtitle": "Karakterin genel türünü ve tarzını seç",
+                "title": "Vesika"
+            },
+            "Heritage": {
+                "deep-cuts-description": "Detaylı memleket seçenekleri için",
+                "detail-prompt": "Memleket detayını yaz",
+                "select-prompt": "Bir memleket seç",
+                "subtitle": "Karakterin hangi topraklardan geldiğini seç",
+                "title": "Memleket",
+                "world-map-button": "Dünya Haritası"
+            },
+            "Background": {
+                "deep-cuts-description": "Bu mazilerin detaylı açıklaması <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">Deep Cuts</a> ek kitabında görülebilir",
+                "detail-prompt": "Mazine dair teferruat",
+                "select-prompt": "Açıklama ve onerileri görmek için bir mazi seç",
+                "subtitle": "Bir mazi seç ve şahsi bir teferruat yaz",
+                "title": "Tayfaya katılmadan önce ne yapıyordun?"
+            },
+            "Name-and-look": {
+                "alias-prompt": "Lakabın",
+                "look-prompt": "Eşgalin",
+                "name-prompt": "İsmin",
+                "portrait-custom": "URL'den özel portre",
+                "portrait-prompt": "Bir portre seç",
+                "portrait-url-prompt": "Portre resminin URL'si",
+                "randomize-alias-button": "Rastgele Lakap",
+                "randomize-look-button": "Rastgele Eşgal",
+                "randomize-name-button": "Rastgele İsim",
+                "subtitle": "Karakterin ismini, lakabını ve eşgalini belirle",
+                "title": "Elalem sana nasıl hitap eder? Neye benzersin?"
+            },
+            "Actions": {
+                "Action-tally": {
+                    "with-character-creation": "7 puandan <strong>{count}</strong> tanesi dağıtıldı",
+                    "without-character-creation": "<strong>{count}</strong> puan dağıtıldı"
+                },
+                "Actions": {
+                    "Attune": {
+                        "description": "Ruhlara ve hayalet düzlemine intibak et; elektroplazmik enerjiyi yönlendir; hayaletleri algıla ve onlarla iletişim kur; ruhbilimini anla.",
+                        "label": "İntibak"
+                    },
+                    "Command": {
+                        "description": "Kişiliğinle otorite kurarak buyruk ver; gözdağı ver ya da tehdit et; tayfadan biriyle bir eyleme liderlik et.",
+                        "label": "Buyruk"
+                    },
+                    "Consort": {
+                        "description": "Geçmişin, dostların ya da rakiplerinle bağlantı kurarak muhabbet et; kaynaklara, bilgilere, kişilere veya mekânlara erişim sağla.",
+                        "label": "Muhabbet"
+                    },
+                    "Finesse": {
+                        "description": "Birinin cebinden bir şeyi çalarak, el çabukluğuyla kandırarak ya da bir aracı kullanarak marifet göster.",
+                        "label": "Marifet"
+                    },
+                    "Hunt": {
+                        "description": "Bir hedefi gözleyip konumunu ve hareketlerini belirleyerek, uzaktan hassas atışlarla avla.",
+                        "label": "Av"
+                    },
+                    "Prowl": {
+                        "description": "Fark edilmeden hareket et, engelleri aşarak tırman, yüz, koş, zıpla, yuvarlan. Yakın mesafeden ani şiddetle süzül: enseden sapla, boğaz kes, haydarı ver vb.",
+                        "label": "Süzülme"
+                    },
+                    "Skirmish": {
+                        "description": "Yakın dövüşte bir rakiple cenk et; mevzi al, saldır; kavga et, güreş tut.",
+                        "label": "Cenk"
+                    },
+                    "Study": {
+                        "description": "Bir kişiyi, belgeyi ya da nesneyi dikkatlice inceleyerek tahlil et; bilgi topla, kavrayış kazan, araştırma yap.",
+                        "label": "Tahlil"
+                    },
+                    "Survey": {
+                        "description": "Bir yeri ya da durumu keşfet; olup biteni anlamaya çalış, tehlikeyi önceden sez, fırsatlara dair bilgi edin.",
+                        "label": "Keşif"
+                    },
+                    "Sway": {
+                        "description": "Birini cazibe, mantık, aldatma, kılık değiştirme ya da blöf ile etkile; tutumlarını ya da davranışlarını iknaile değiştir.",
+                        "label": "İkna"
+                    },
+                    "Tinker": {
+                        "description": "Tuzağı etkisizleştirerek, kilit açarak ya da kasayı kırarak tertip yap; mekanizmalar yarat, değiştir, boz, onar; zemberekli ve elektroplazmik cihazları lehine kullan.",
+                        "label": "Tertibat"
+                    },
+                    "Wreck": {
+                        "description": "Bir yeri, nesneyi ya da engeli vahşi güçle ya da dikkatli sabotajla tahrip et; savunmayı kır, dikkat dağıt, karmaşa yarat.",
+                        "label": "Tahribat"
+                    }
+                },
+                "Attributes": {
+                    "Insight": "İdrak",
+                    "Prowess": "Maharet",
+                    "Resolve": "Dirayet"
+                },
+                "Options": {
+                    "character-creation-button": "Karakter Yaratımı: Toplam 7 puan, bir harekete azami 2 puan",
+                    "mastery-advance-button": "Ustalık Takviyesi: Hareketler 4 puana çıkabilir"
+                },
+                "subtitle": "Seni en iyi temsil eden hareketlere puan ver",
+                "suggested-actions": "Memleket ve mazine göre önerilen hareketler",
+                "title": "Neyi en iyi yaparsın?"
+            },
+            "Abilities": {
+                "subtitle": "Bir hüner seç.",
+                "title": "Hangi hüner tayfa arasında seni özel kılar?"
+            },
+            "Friends": {
+                "friend-button": "Dost",
+                "rival-button": "Hasım",
+                "subtitle": "Bir müttefik, akraba veya manita seç. Bir de rakip, düşman veya ihanete uğramış eş seç",
+                "title": "Kimin sana borcu var ve kim azılı düşmanın?"
+            },
+            "Vice": {
+                "description": "Bir zaaf ve tedarikçisini seç.",
+                "purveyor-prompt": "Zaafına erişmek için gittiğin yerin tanımı",
+                "select-prompt": "İzahat ve tedarikçi tavsiyesi görmek için bir zaaf seç",
+                "title": "Buhrandan kurtulmak için nereye gidersin?"
+            },
+            "Export": {
+                "Controls": {
+                    "classic-sheet": "Klasik",
+                    "copied": "Kopyalandı!",
+                    "save-as-image-button": "Resim kaydet",
+                    "share-as-url-button": "URL paylaş"
+                },
+                "subtitle": "Karakterini kaydet veya paylaş",
+                "title": "Haydutunu dışa aktar"
+            }
+        }
+    },
+    "Playbooks": {
+        "Cutter": {
+            "description": "Belalı ve dehşetengiz bir cengâver",
+            "label": "Pala"
+        },
+        "Hound": {
+            "description": "Ölümcül bir nişancı ve izci",
+            "label": "Tazı"
+        },
+        "Leech": {
+            "description": "Sabotajcı ve zanaatkâr",
+            "label": "Sülük"
+        },
+        "Lurk": {
+            "description": "Sessiz bir sızmacı ve hırsız",
+            "label": "Sinsi"
+        },
+        "Slide": {
+            "description": "İnce bir sahtekâr ve casus",
+            "label": "Kaypak"
+        },
+        "Spider": {
+            "description": "Kurnaz bir komplocu",
+            "label": "Örümcek"
+        },
+        "Whisper": {
+            "description": "İhtisas sahibi bir büyücu ve medyum",
+            "label": "Fısıltı"
+        }
+    },
+    "Actions": {
+        "Attune": {
+            "description": "Ruhlara ve hayalet düzlemine intibak et; elektroplazmik enerjiyi yönlendir; hayaletleri algıla ve onlarla iletişim kur; ruhbilimini anla.",
+            "label": "İntibak"
+        },
+        "Command": {
+            "description": "Kişiliğinle otorite kurarak buyruk ver; gözdağı ver ya da tehdit et; tayfadan biriyle bir eyleme liderlik et.",
+            "label": "Buyruk"
+        },
+        "Consort": {
+            "description": "Geçmişin, dostların ya da rakiplerinle bağlantı kurarak muhabbet et; kaynaklara, bilgilere, kişilere veya mekânlara erişim sağla.",
+            "label": "Muhabbet"
+        },
+        "Finesse": {
+            "description": "Birinin cebinden bir şeyi çalarak, el çabukluğuyla kandırarak ya da bir aracı kullanarak marifet göster.",
+            "label": "Marifet"
+        },
+        "Hunt": {
+            "description": "Bir hedefi gözleyip konumunu ve hareketlerini belirleyerek, uzaktan hassas atışlarla avla.",
+            "label": "Av"
+        },
+        "Prowl": {
+            "description": "Fark edilmeden hareket et, engelleri aşarak tırman, yüz, koş, zıpla, yuvarlan. Yakın mesafeden ani şiddetle süzül: enseden sapla, boğaz kes, haydarı ver vb.",
+            "label": "Süzülme"
+        },
+        "Skirmish": {
+            "description": "Yakın dövüşte bir rakiple cenk et; mevzi al, saldır; kavga et, güreş tut.",
+            "label": "Cenk"
+        },
+        "Study": {
+            "description": "Bir kişiyi, belgeyi ya da nesneyi dikkatlice inceleyerek tahlil et; bilgi topla, kavrayış kazan, araştırma yap.",
+            "label": "Tahlil"
+        },
+        "Survey": {
+            "description": "Bir yeri ya da durumu keşfet; olup biteni anlamaya çalış, tehlikeyi önceden sez, fırsatlara dair bilgi edin.",
+            "label": "Keşif"
+        },
+        "Sway": {
+            "description": "Birini cazibe, mantık, aldatma, kılık değiştirme ya da blöf ile etkile; tutumlarını ya da davranışlarını iknaile değiştir.",
+            "label": "İkna"
+        },
+        "Tinker": {
+            "description": "Tuzağı etkisizleştirerek, kilit açarak ya da kasayı kırarak tertip yap; mekanizmalar yarat, değiştir, boz, onar; zemberekli ve elektroplazmik cihazları lehine kullan.",
+            "label": "Tertibat"
+        },
+        "Wreck": {
+            "description": "Bir yeri, nesneyi ya da engeli vahşi güçle ya da dikkatli sabotajla tahrip et; savunmayı kır, dikkat dağıt, karmaşa yarat.",
+            "label": "Tahribat"
+        }
+    },
+    "Attributes": {
+        "insight": "İdrak",
+        "prowess": "Maharet",
+        "resolve": "Dirayet"
+    },
+    "Backgrounds": {
+        "Academic": {
+            "description": "Tahsilli, okumuş",
+            "label": "Âlim"
+        },
+        "Labor": {
+            "description": "Beden işlerinde çalışmış",
+            "label": "Amele"
+        },
+        "Law": {
+            "description": "Yasayla ilgili mesleklerden gelme (memur, muhbir vb.)",
+            "label": "Memur"
+        },
+        "Military": {
+            "description": "Ordu, savaş veya silahlı hizmet geçmişi",
+            "label": "Asker"
+        },
+        "Noble": {
+            "description": "Asilzade, üst sınıf kökenli",
+            "label": "Asil"
+        },
+        "Trade": {
+            "description": "Ticaret ve pazarlama geçmişi",
+            "label": "Tüccar"
+        },
+        "Underworld": {
+            "description": "Suç dünyası, çeteler, karanlık ilişkiler",
+            "label": "Eşkıya"
+        }
+    },
+    "Heritages": {
+        "Akoros": {
+            "description": "İmparatorluk'taki en büyük ve sanayileşmiş topraklar; hem başkentin hem de Duskwall'ın evidir. Çeşitli kültürlerin karışımı olarak bilinen, Avrupa benzeri heterojen bir toplum.",
+            "label": "Akoros"
+        },
+        "Dagger-isles": {
+            "description": "Hançer Adaları halkı genellikle gemilerde büyür ve yerleşmeden önce çok seyahat eder. Yıldırım bariyerleri olmadan yaşayan, ruhlarla başka yollarla başa çıkan korsan ve tüccarlar olarak bilinirler.",
+            "label": "Hançer Adaları"
+        },
+        "Iruvia": {
+            "description": "Güneyde uzak bir yerde bulunan zengin ve güçlü çöl krallığı. Eski Pers, Mısır ve Hindistan'a benzer çeşitli kültürlerin yaşadığı zengin bir diyar.",
+            "label": "Iruvia"
+        },
+        "Severos": {
+            "description": "Çoğu Severoslu, ölüm topraklarında dağılmış göçebe at kabilelerinde yaşar ve ruhları hâlâ defeden eski büyülü kalıntılar içinde hayatta kalır.",
+            "label": "Severos"
+        },
+        "Skovlan": {
+            "description": "Duskwall'ın deniz karşısındaki soğuk ve engebeli ada krallığı. Skovlan, İmparatorluk egemenliğine en son boyun eğen yerdi; birkaç yıl önce sona eren Birlik Savaşı sırasında.",
+            "label": "Skovlan"
+        },
+        "Tycheros": {
+            "description": "Kuzey Boşluk Denizi'nin ötesinde uzak bir yerde bulunan yarı-efsanevi ülke. Oradaki halkın yarı-iblis olduğu söylenir. Tycherosi mirası seçersen, karakterini işaretleyen bir iblisi belirtisi de yaratmalısın.",
+            "label": "Tycheros"
+        }
+    },
+    "Vices": {
+        "Faith": {
+            "description": "Görülmeyen bir güce, unutulmuş bir tanrıya, ata ruhuna adanmışlık.",
+            "label": "İman"
+        },
+        "Gambling": {
+            "description": "Şansa dayalı oyunlar, bahis, spor karşılaşmalarına para yatırma arzusu.",
+            "label": "Kumar"
+        },
+        "Luxury": {
+            "description": "Gösterişli, pahalı, abartılı zevk ve zenginlik alışkanlıkları.",
+            "label": "Şatafat"
+        },
+        "Obligation": {
+            "description": "Aile, inanç, hayır kurumu gibi bir şeye karşı sorumluluk hissi.",
+            "label": "Vazife"
+        },
+        "Pleasure": {
+            "description": "Sevgililer, yemek, içki, uyuşturucu, sanat, tiyatro vb. aracılığıyla zevk arayışı.",
+            "label": "Sefa"
+        },
+        "Stupor": {
+            "description": "Aşırı içki, uyuşturucu, dövüş çukurlarında dayak yiyerek kendinden geçme arzusu.",
+            "label": "Kafa"
+        },
+        "Weird": {
+            "description": "Tuhaf özlerle deneyler, başıboş ruhlarla ilişki, sıra dışı ritüeller ya da tabularla uğraşma.",
+            "label": "Acayip"
+        }
+    },
+    "Abilities": {},
+    "Background-suggestions": {},
+    "Friends": {},
+    "Heritage-suggestions": {},
+    "Looks": {
+        "Apparel": {},
+        "Joining-words": {
+            "and": "ve",
+            "dressed-in": "giyimli",
+            "sporting": "taşıyan",
+            "wearing": "giyen"
+        },
+        "Person-word-adjectives": {},
+        "Person-words": {
+            "child": {
+                "article": "bir",
+                "word": "çocuk"
+            },
+            "man": {
+                "article": "bir",
+                "word": "adam"
+            },
+            "person": {
+                "article": "bir",
+                "word": "kişi"
+            },
+            "woman": {
+                "article": "bir",
+                "word": "kadın"
+            }
+        },
+        "Templates": {
+            "one-adjective-one-apparel": "{adjective} {personWord} {joiningWord} {apparel}",
+            "one-adjective-two-apparel": "{adjective} {personWord} {joiningWord} {apparel1} {and} {apparel2}",
+            "two-adjectives-one-apparel": "{adjective1}, {adjective2} {personWord} {joiningWord} {apparel}",
+            "two-adjectives-two-apparel": "{adjective1}, {adjective2} {personWord} {joiningWord} {apparel1} {and} {apparel2}"
+        }
+    },
+    "Names": {
+        "Aliases": {}
+    },
+    "Vice-suggestions": {}
+}
