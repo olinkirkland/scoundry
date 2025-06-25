@@ -632,17 +632,227 @@
         }
     },
     "Background-suggestions": {},
-    "Friends": {},
+    "Friends": {
+        "Marlane": {
+            "description": "Bir boksör",
+            "label": "Marlane"
+        },
+        "Chael": {
+            "description": "Azılı bir serseri",
+            "label": "Chael"
+        },
+        "Mercy": {
+            "description": "Soğukkanlı bir katil",
+            "label": "Mercy"
+        },
+        "Grace": {
+            "description": "Bir şantajcı",
+            "label": "Grace"
+        },
+        "Sawtooth": {
+            "description": "Bir şifacı",
+            "label": "Testere"
+        },
+        "Steiner": {
+            "description": "Bir suikastçı",
+            "label": "Steiner"
+        },
+        "Celene": {
+            "description": "Bir gözcü",
+            "label": "Celene"
+        },
+        "Melvir": {
+            "description": "Bir şifacı",
+            "label": "Melvir"
+        },
+        "Veleris": {
+            "description": "Bir casus",
+            "label": "Veleris"
+        },
+        "Casta": {
+            "description": "Bir kelle avcısı",
+            "label": "Casta"
+        },
+        "Stazia": {
+            "description": "Bir eczacı",
+            "label": "Stazia"
+        },
+        "Veldren": {
+            "description": "Bir zihinbaz",
+            "label": "Veldren"
+        },
+        "Eckerd": {
+            "description": "Bir ceset hırsızı",
+            "label": "Eckerd"
+        },
+        "Jul": {
+            "description": "Bir kan taciri",
+            "label": "Jul"
+        },
+        "Malista": {
+            "description": "Bir rahibe",
+            "label": "Malista"
+        },
+        "Telda": {
+            "description": "Bir dilenci",
+            "label": "Telda"
+        },
+        "Darmot": {
+            "description": "Bir kodeszabiti",
+            "label": "Darmot"
+        },
+        "Frake": {
+            "description": "Bir çilingir",
+            "label": "Frake"
+        },
+        "Roslyn-kellis": {
+            "description": "Bir soylu",
+            "label": "Roslyn Kellis"
+        },
+        "Petra": {
+            "description": "Bir şehir memuru",
+            "label": "Petra"
+        },
+        "Bryl": {
+            "description": "Bir toz simsarı",
+            "label": "Bryl"
+        },
+        "Bazso-baz": {
+            "description": "Bir çete reisi",
+            "label": "Bazso Baz"
+        },
+        "Khyra": {
+            "description": "Bir meyhane sahibi",
+            "label": "Klyra"
+        },
+        "Nyryx": {
+            "description": "Bir fahişe",
+            "label": "Nyryx"
+        },
+        "Harker": {
+            "description": "Bir kodes kuşu",
+            "label": "Harker"
+        },
+        "Salia": {
+            "description": "Bir bilgi simsarı",
+            "label": "Salia"
+        },
+        "Augus": {
+            "description": "Usta bir mimar",
+            "label": "Augus"
+        },
+        "Jennah": {
+            "description": "Bir hizmetçi",
+            "label": "Jennah"
+        },
+        "Riven": {
+            "description": "Bir kimyager",
+            "label": "Riven"
+        },
+        "Jeren": {
+            "description": "Bir mavi urbalı arşivci",
+            "label": "Jeren"
+        },
+        "Nyryx-2": {
+            "description": "Bir işgalci hayalet",
+            "label": "Nyryx"
+        },
+        "Flint": {
+            "description": "Bir tapınak bekçisi",
+            "label": "Flint"
+        },
+        "Quellyn": {
+            "description": "Bir başka fısıltı",
+            "label": "Quellyn"
+        },
+        "Setarra": {
+            "description": "Bir iblis",
+            "label": "Setarra"
+        }
+    },
     "Heritage-suggestions": {},
     "Looks": {
-        "Apparel": {},
+        "Apparel": {
+            "collared-shirt": "Yakalı Gömlek",
+            "eel-skin-bodysuit": "Yılanderisi Tulum",
+            "fitted-dress": "Dar Elbise",
+            "fitted-leggings": "Dar Tayt",
+            "half-cape": "Yarım Pelerin",
+            "heavy-cloak": "Kalın Pelerin",
+            "heavy-jacket": "Kalın Ceket",
+            "hide-and-furs": "Post ve Kürkler",
+            "hood-and-veil": "Başlık ve Peçe",
+            "hooded-cape": "Başlıklı Pelerin",
+            "hooded-coat": "Başlıklı Kaban",
+            "knit-cap": "Örgü Bere",
+            "knit-sweater": "Örgü Kazak",
+            "leathers": "Derilikler",
+            "long-coat": "Uzun Kaban",
+            "long-scarf": "Uzun Atkı",
+            "loose-silks": "Bol İpekler",
+            "mask-and-robes": "Maske ve Cübbe",
+            "rags-and-tatters": "Paçavra ve Parçalar",
+            "rough-tunic": "Kalın Tunik",
+            "scavenged-uniform": "Ganimet Üniforması",
+            "sharp-trousers": "Keskin Pantolon",
+            "short-cloak": "Kısa Pelerin",
+            "skirt-and-blouse": "Etek ve Bluz",
+            "slim-jacket": "Dar Ceket",
+            "soft-boots": "Yumuşak Çizme",
+            "suit-and-tie": "Takım Elbise Kravat",
+            "suspenders": "Askılar",
+            "tall-boots": "Uzun Çizme",
+            "thick-greatcoat": "Kalın Palto",
+            "tricorn-hat": "Üçgen Şapka",
+            "vest": "Yelek / Cepken",
+            "waxed-coat": "Mumlu Ceket",
+            "wide-belt": "Geniş Kemer",
+            "work-boots": "İş Çizmesi",
+            "work-trousers": "İş Pantolonu",
+            "fancy-waistcoat": "Süslü Yelek"
+        },
         "Joining-words": {
             "and": "ve",
             "dressed-in": "giyimli",
             "sporting": "taşıyan",
             "wearing": "giyen"
         },
-        "Person-word-adjectives": {},
+        "Person-word-adjectives": {
+            "affable": "Sempatik",
+            "athletic": "Atik",
+            "bony": "İskeletimsi",
+            "bright": "Parlak",
+            "brooding": "Dalgın",
+            "calm": "Sakin",
+            "chiseled": "Keskin Hatlı",
+            "cold": "Soğuk",
+            "dark": "Karanlık",
+            "delicate": "Narin",
+            "fair": "Alımlı",
+            "fierce": "Sert",
+            "grimy": "Kirli",
+            "handsome": "Yakışıklı",
+            "huge": "İri",
+            "hunched": "Kambur",
+            "languid": "Gevşek",
+            "lovely": "Güzel",
+            "open": "Açık",
+            "plump": "Tombul",
+            "rough": "Sert",
+            "sad": "Hüzünlü",
+            "scarred": "Façalı",
+            "slim": "İnce",
+            "soft": "Yumuşak",
+            "squat": "Tıknaz",
+            "stern": "Sert Mizaçlı",
+            "stout": "Güçlü",
+            "striking": "Çarpıcı",
+            "twitchy": "Tedirgin",
+            "weathered": "Yıpranmış",
+            "wiry": "İnce",
+            "worn": "Yıpranık",
+            "graceful": "Zarif"
+        },
         "Person-words": {
             "child": {
                 "article": "bir",
@@ -662,14 +872,56 @@
             }
         },
         "Templates": {
-            "one-adjective-one-apparel": "{adjective} {personWord} {joiningWord} {apparel}",
-            "one-adjective-two-apparel": "{adjective} {personWord} {joiningWord} {apparel1} {and} {apparel2}",
-            "two-adjectives-one-apparel": "{adjective1}, {adjective2} {personWord} {joiningWord} {apparel}",
-            "two-adjectives-two-apparel": "{adjective1}, {adjective2} {personWord} {joiningWord} {apparel1} {and} {apparel2}"
+            "one-adjective-one-apparel": "{apparel1} {wearingVerb} {personWordAdjective1} {personWordArticle} {personWord}",
+            "one-adjective-two-apparel": "{apparel1} ve {apparel2} {wearingVerb} {personWordAdjective1} {personWordArticle} {personWord} {wearingVerb} ",
+            "two-adjectives-one-apparel": "{apparel1} {wearingVerb} {personWordAdjective1} ve {personWordAdjective2} {personWordArticle} {personWord}",
+            "two-adjectives-two-apparel": "{apparel1} ve {apparel2} {wearingVerb} {personWordAdjective1} ve {personWordAdjective2} {personWordArticle} {personWord}"
         }
     },
     "Names": {
-        "Aliases": {}
+        "Aliases": {
+            "bell": "Zil",
+            "birch": "Huş",
+            "bricks": "Tuğla",
+            "bug": "Böcek",
+            "chime": "Çıngırak",
+            "coil": "Sargı",
+            "cricket": "Cırcır",
+            "cross": "Haç",
+            "crow": "Karga",
+            "echo": "Yankı",
+            "flint": "Çakmak",
+            "frog": "Kurbağa",
+            "frost": "Ayaz",
+            "grip": "Pençe",
+            "gunner": "Nişancı",
+            "hammer": "Tokmak",
+            "hook": "Kanca",
+            "junker": "Hurda",
+            "mist": "Sis",
+            "moon": "Ay",
+            "nail": "Çivi",
+            "needle": "İğne",
+            "ogre": "Yek",
+            "pool": "Gölet",
+            "ring": "Halka",
+            "ruby": "Yakut",
+            "silver": "Gümüş",
+            "skinner": "Yüzücü",
+            "song": "Nâme",
+            "spur": "Mahmuz",
+            "tackle": "Tutaç",
+            "thistle": "Dikenotu",
+            "thorn": "Diken",
+            "tick-tock": "Tik-Tak",
+            "twelves": "Onikiler",
+            "vixen": "Tilki",
+            "whip": "Kırbaç",
+            "wicker": "Sepetçi",
+            "hilt": "Kabza",
+            "stump": "Kütük",
+            "worm": "Solucan"
+        }
     },
     "Vice-suggestions": {}
 }
