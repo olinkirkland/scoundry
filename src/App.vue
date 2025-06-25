@@ -1,5 +1,5 @@
 <template>
-    <div class="app-layout">
+    <div class="app-layout" :lang="getLanguage()">
         <div class="pattern"></div>
         <router-view name="page"></router-view>
         <the-modal-container />
@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import TheModalContainer from './components/modals/the-modal-container.vue';
-import { initializeI18nInstance } from './i18n/locale';
+import { initializeI18nInstance, getLanguage } from './i18n/locale';
 
 initializeI18nInstance();
 </script>
