@@ -28,13 +28,13 @@
                 "next-button": "İleri"
             },
             "Step-navigation": {
-                "abilities": "Kabiliyetler",
+                "abilities": "Hünerler",
                 "actions": "Hareketler",
                 "background": "Mazi",
                 "export": "Dışa Aktar",
                 "friends": "Dostlar",
                 "heritage": "Memleket",
-                "name-and-look": "İsim ve Görünüş",
+                "name-and-look": "İsim ve Eşkâl",
                 "playbook": "Vesika",
                 "vice": "Zaaf"
             }
@@ -131,15 +131,15 @@
             },
             "Name-and-look": {
                 "alias-prompt": "Lakabın",
-                "look-prompt": "Eşgalin",
+                "look-prompt": "Eşkâlin",
                 "name-prompt": "İsmin",
                 "portrait-custom": "URL'den özel portre",
                 "portrait-prompt": "Bir portre seç",
                 "portrait-url-prompt": "Portre resminin URL'si",
                 "randomize-alias-button": "Rastgele Lakap",
-                "randomize-look-button": "Rastgele Eşgal",
+                "randomize-look-button": "Rastgele Eşkâl",
                 "randomize-name-button": "Rastgele İsim",
-                "subtitle": "Karakterin ismini, lakabını ve eşgalini belirle",
+                "subtitle": "Karakterin ismini, lakabını ve eşkâlini belirle",
                 "title": "Elalem sana nasıl hitap eder? Neye benzersin?"
             },
             "Actions": {
@@ -451,8 +451,12 @@
             "label": "Odaklı"
         },
         "Ghost-hunter": {
-            "description": "Av hayvanın ruhani güçle yoğruludur. Gaibi takip veya onun ile cenk ederken kudretli olur ve uhrevi bir kabiliyet edinir: hayalet-şekli, zihin-bağı veya ok-hızı. Bu hüneri tekrar alarak hayvana başka bir yetenek daha ekleyebilirsin.",
+            "description": "Av hayvanın ruhani güçle yoğruludur. Gaibi takip veya onun ile cenk ederken kudretli olur ve uhrevi bir kabiliyet edinir: hayalet-şekli, zihin-bağı veya ok-hızı.",
             "label": "Hayalet Avcısı"
+        },
+        "Ghost-hunter-2": {
+            "description": "Bu hüneri tekrar alarak hayvana başka bir yetenek daha ekleyebilirsin.",
+            "label": "Hayalet Avcısı +"
         },
         "Scout": {
             "description": "Hedef belirlemek için malumat topladığında +1 tesir alırsın. Hakim vaziyette saklandığında veya kamuflaj kullandığında, fark edilmemek için +1 zar alırsın.",
