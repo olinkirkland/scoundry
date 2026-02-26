@@ -856,7 +856,8 @@
             "en": "Englisch",
             "es": "Spanisch",
             "fr": "Französisch",
-            "it": "Italienisch"
+            "it": "Italienisch",
+            "zh": "Chinesisch"
           },
           "label": "App-Sprache auswählen"
         },
