@@ -4,6 +4,7 @@ import de from './locales/de/translations.json';
 import es from './locales/es/translations.json';
 import fr from './locales/fr/translations.json';
 import it from './locales/it/translations.json';
+import zh from './locales/zh/translations.json';
 
 // Use the i18n-editor from https://github.com/jcbvm/i18n-editor/releases/tag/1.0.0
 
@@ -29,7 +30,9 @@ const i18n = createI18n<[MessageSchema], 'en'>({
         // @ts-ignore
         fr, // French
         // @ts-ignore
-        it // Italian
+        it, // Italian
+        // @ts-ignore
+        zh // Chinese (Simplified)
     }
 });
 
