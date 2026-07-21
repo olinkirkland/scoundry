@@ -379,7 +379,7 @@ function fillMultilineText(
     y: number,
     maxWidth: number,
     lineHeight: number,
-    directionUp = true
+    directionIsUp = true
 ) {
     // Fill a text box with a maximum width and a maximum number of lines
     // Use an ellipsis to cut off the text if it's too long
@@ -403,9 +403,8 @@ function fillMultilineText(
 
     lines.push({ text: line, x, y });
     // Move the text (up or down) by line count * line height
-    if (!directionUp)
-        lines.forEach((line) => (line.y += lineCount * lineHeight));
-    else lines.forEach((line) => (line.y -= lineCount * lineHeight));
+    if (directionIsUp)
+        lines.forEach((line) => (line.y -= lineCount * lineHeight));
 
     lines.forEach((line) => ctx.fillText(line.text, line.x, line.y));
 }
