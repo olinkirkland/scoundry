@@ -1,1236 +1,1236 @@
 {
-  "Abilities": {
-    "A-little-something-on-the-side": {
-      "description": "在每个休整期结束时，你都获得+2存款。",
-      "label": "暗中收获"
-    },
-    "Alchemist": {
-      "description": "当你发明或制造一项炼金物时，你的掷骰结果提高1级。<br />你起始将知晓一个特殊炼金配方。",
-      "label": "炼金术士"
-    },
-    "Ambush": {
-      "description": "当你躲藏起来准备攻击或设置陷阱时，你的掷骰+1d。",
-      "label": "伏击"
-    },
-    "Analyst": {
-      "description": "在休整期间，你可以为任何调查、研究配方、或设计方案的长期项目进度钟推进两格。",
-      "label": "分析师"
-    },
-    "Artificer": {
-      "description": "当你发明或制造一个火花工艺物件时，你的掷骰结果提高1级。<br />你起始将知晓一个特殊设计方案。",
-      "label": "能工巧匠"
-    },
-    "Battleborn": {
-      "description": "你可以消耗特殊护甲以降低在战斗中遭受的攻击伤害，或是在战斗中逼迫自我。",
-      "label": "为战而生"
-    },
-    "Bodyguard": {
-      "description": "当你保护队友时，你的抵抗骰+1d。<br />当你收集信息以预测当前情况下的潜在威胁时，你+1效果等级。",
-      "label": "保镖"
-    },
-    "Calculating": {
-      "description": "得益于你的精心规划，休整期间，你可以给自己或其他成员额外安排1次休整活动。",
-      "label": "预估计算"
-    },
-    "Cloak-and-dagger": {
-      "description": "当你利用伪装或其他手段来进行隐蔽和误导时，你为混淆或转移怀疑的掷骰+1d。<br />当你卸下伪装时，给他人带来的震惊能让你在情境中占据主动权。",
-      "label": "斗篷与匕首"
-    },
-    "Compel": {
-      "description": "你能与幽灵领域同调，迫使附近的一个幽灵在你面前现身并服从你所下达的指令。<br />你不会被自己所召唤或是强令的幽灵吓到（不过你的盟友可能会）。",
-      "label": "强令"
-    },
-    "Connected": {
-      "description": "休整期间，当你置办资产或降低罪熵时，你的掷骰结果提高1级。",
-      "label": "联络关系"
-    },
-    "Daredevil": {
-      "description": "当你掷一个严峻的行动骰时，你可以使此行动骰+1d；但你接下来若为此行动产生的任何后果掷抵抗骰，则-1d。",
-      "label": "冒险狂"
-    },
-    "Expertise": {
-      "description": "选择你的某一项行动值。当你领导一个小队执行此行动时，无论失败的掷骰数目为何，你最多都只承受1压力。",
-      "label": "专精技能"
-    },
-    "Focused": {
-      "description": "你可以消耗特殊护甲，来抵抗意料之外的后果或是精神伤害后果（恐惧、困惑、失去某人的踪迹等），或是用来逼迫自我以进行远程战斗或追踪。",
-      "label": "聚精会神"
-    },
-    "Foresight": {
-      "description": "每场刻痕两次，你可以帮助队友而不承担压力。<br /><em>叙述你为这种情况准备了什么。</em>",
-      "label": "远见"
-    },
-    "Fortitude": {
-      "description": "你可以消耗特殊护甲来:<br /><ul><li>抵抗疲劳、虚弱或是炼金效应的后果；</li><li>你也可以消耗它用以在技术工作或炼金操作中逼迫自我。</li></ul>",
-      "label": "强打精神"
-    },
-    "Functioning-vice": {
-      "description": "当你放纵恶欲时，你可以将骰子出目（向上或向下）调整1或2，<br />与你一道的盟友也可以如此做。",
-      "label": "掌控恶欲"
-    },
-    "Ghost-contract": {
-      "description": "当你以书面形式起草或敲定一项协议时，你和对方——无论其是人类或是别的什么——都将立誓并留下印记。如果任何一方违反契约，其都会受到3级伤害, <em>诅咒</em>.",
-      "label": "幽灵契约"
-    },
-    "Ghost-fighter": {
-      "description": "你可以使自己的双手、近战武器或是工具上附着灵魂能量。<br /><ul><li>你在与超凡存在的战斗中具有效能。</li><li>你可以与幽灵缠斗，并且制服然后捕获他们。</li></ul>",
-      "label": "幽灵斗士"
-    },
-    "Ghost-hunter-2": {
-      "description": "使你的狩猎宠物再选择一项额外的神秘能力。<br /><em>必须已习得幽灵猎手才能习得这一能力</em>",
-      "label": "幽灵猎手+"
-    },
-    "Ghost-hunter": {
-      "description": "你的狩猎宠物充斥着灵魂能量。<br /><ul><li>它在对抗或追踪超凡存在时拥有效能。</li><li>且其获得一项神秘能力：幽灵形态、心灵链接、或是飞矢急速。</li></ul>",
-      "label": "幽灵猎手"
-    },
-    "Ghost-mind": {
-      "description": "你总能感知到当下的超凡存在。<br />无论何时，当你通过任何方式来收集有关超凡存在的信息时都+1d。",
-      "label": "幽灵意识"
-    },
-    "Ghost-veil": {
-      "description": "你可以不完全地进入幽灵领域中，在接下来的片刻身形模糊虚幻。<br />。当你如此做时，承受2压力，你每选择一项额外功能，就再多承受1压力：<br /><ul><li>这将持续数分钟而非片刻；</li><li>你将是隐形的而非仅仅朦胧；</li><li>；你将能像幽灵那样漂浮在空中。</li></ul>",
-      "label": "幽灵面纱"
-    },
-    "Ghost-voice": {
-      "description": "你知晓和幽灵以及恶魔交流的秘密手段，无论其表现得多么狂暴，你都可以和其像平常人一样交流。<br />当你与超凡存在交流时，你将获得效能。",
-      "label": "幽灵谈吐"
-    },
-    "Ghost-ward": {
-      "description": "当你使用神秘事物破坏一个区域，将其摧毁以作其他用途时，它将能够引诱或是排斥灵魂（由你决定）。",
-      "label": "幽灵结界"
-    },
-    "Infiltrator": {
-      "description": "当你试图绕过安保措施时，不受其质量或层级的影响。.",
-      "label": "潜入者"
-    },
-    "Iron-will": {
-      "description": "你免疫因直视某些超凡存在而产生的恐惧。每当你使用决心掷抵抗骰时+1d。",
-      "label": "钢铁意志"
-    },
-    "Jail-bird": {
-      "description": "当你服刑时，<br /><ul><li>你的通缉等级视为低1级，</li><li>，你的层级视为高1级，</li><li>除了你从服刑骰中 获得的好处之外，你在狱中帮助过的每个派系也都会与你们+1派系关系。</li></ul>",
-      "label": "笼中鸟"
-    },
-    "Leader": {
-      "description": "当你命令麾下作战时，他们在本该被打垮的时候会继续作战（当他们受到3级伤害时不会失能）。<br />。他们获得+1效果等级和1护甲。",
-      "label": "领袖"
-    },
-    "Like-looking-into-a-mirror": {
-      "description": "当有人在欺骗你时，你总能看得出来。",
-      "label": "窥镜自视"
-    },
-    "Mastermind": {
-      "description": "你可以消耗特殊护甲以保护队友，或是在收集信息以及埋头于长期项目时逼迫自我。",
-      "label": "主谋"
-    },
-    "Mesmerism": {
-      "description": "当你动摇某人时，你可以使其完全忘记这件事的发生，直至其下次与你互动为止。",
-      "label": "催眠术"
-    },
-    "Mule": {
-      "description": "你的负载上限提高。<br /><ul><li>轻便：5、</li><li>、通常：7、</li><li>、重装：8。</li></ul>",
-      "label": "骡子"
-    },
-    "Not-to-be-trifled-with": {
-      "description": "Y你可以逼迫自我以做到以下一项：做到一项近乎超人的体力壮举；或是与一小伙帮众在近身交战中势均力敌。.",
-      "label": "不容小觑"
-    },
-    "Occultist": {
-      "description": "你了解与远古力量、被遗忘之神、以及恶魔交结的秘密手段。当你与其交结后，你命令崇拜其的邪教徒时+1d。",
-      "label": "通神术士"
-    },
-    "Physicker": {
-      "description": "你能够操作骨骼、血液和体液以治疗伤势或是稳定致命伤。<br />你也可以研究疾病和尸体。<br />你团伙中的所有人（包括你）的疗伤骰+1d。",
-      "label": "外科医生"
-    },
-    "Reflexes": {
-      "description": "当问到谁先行动时，答案总会是你。",
-      "label": "反射本能"
-    },
-    "Ritual": {
-      "description": "你了解进行仪式魔法的神秘手段。你可以研究某种玄奥仪式（或是创造一种新的）来召唤超凡现象或是存在。<br />你起始将习得一种仪式。",
-      "label": "仪式"
-    },
-    "Rooks-gambit": {
-      "description": "你可以承受2压力以使用你的最高行动值来掷其他行动骰，<br /><em>然后解释你的技艺是如何适用于这种用途的。</em>",
-      "label": "骗徒险棋"
-    },
-    "Saboteur": {
-      "description": "当你破坏，你发出的动静将会更小，造成的损毁将更隐蔽，难以被发现。",
-      "label": "破坏分子"
-    },
-    "Savage": {
-      "description": "当你宣泄暴力时会极为骇人。<br />当你命令一个恐惧的目标时+1d。",
-      "label": "凶残"
-    },
-    "Scout": {
-      "description": "当你收集信息以寻找目标位置时，获得+1效果等级。<br />当你躲在预先准备好的位置或是利用伪装时，你在躲藏时的掷骰+1d。",
-      "label": "斥候"
-    },
-    "Shadow": {
-      "description": "你可以消耗特殊护甲来抵抗侦察或是安保措施的后果；你也可以消耗它用以逼迫自我来完成一项运动或潜行的壮举。",
-      "label": "阴影"
-    },
-    "Sharpshooter": {
-      "description": "你可以逼迫自我来做到以下一项：<br /><ul><li>在超出武器范围的极端距离进行射击；</li><li>；或者发起迅速凶猛的火力弹幕压制敌人。</li></ul>",
-      "label": "神枪手"
-    },
-    "Strange-methods": {
-      "description": "当你发明或制造一个神秘造物时，结果等级提升1级。<br />你起始懂得一种神秘设计。",
-      "label": "奇异范式"
-    },
-    "Subterfuge": {
-      "description": "你可以消耗自己的特殊护甲以抵抗来自猜疑或是劝说的后果，或是在使用诡计时逼迫自我。",
-      "label": "诡计"
-    },
-    "Survivor": {
-      "description": "由于罕见的经历或是神秘仪式，你免疫死域的邪毒瘴气，并且能够靠着那里诡异的动植物生存下去。<br />你获得+1压力格。",
-      "label": "幸存者"
-    },
-    "Tempest": {
-      "description": "你可以逼迫自我以做到以下一项：<br /><ul><li>释放一道闪电用作武器；</li><li>；或是在你周身引发风暴（暴雨、狂风、大雾、霜雪等）。</li></ul>",
-      "label": "风暴"
-    },
-    "The-devils-footsteps": {
-      "description": "你可以逼迫自我以做到以下一项：<br /><ul><li>做到一项非凡的运动壮举；</li><li>或是迷惑敌人犯下错误，让他们彼此攻击。</li></ul>",
-      "label": "魔鬼足迹"
-    },
-    "Tough-as-nails": {
-      "description": "所受伤害的惩罚降低一级<br /><em>但4级伤害仍然致命。</em>",
-      "label": "坚忍不拔"
-    },
-    "Trust-in-me": {
-      "description": "当你对抗的目标和你之间存在亲密关系时，你获得+1d。",
-      "label": "信赖于我"
-    },
-    "Vengeful": {
-      "description": "你获得一个额外的经验触发器：你报复了某个家伙，其伤害过你或是你关心的人。<br />如果你的集团帮助你完成了报复，也标记集团经验。",
-      "label": "心怀报复"
-    },
-    "Venomous": {
-      "description": "选择一种（你武装带中的）毒品或毒药，你将对其免疫。<br />。你可以逼迫自我，以通过皮肤或唾液分泌出这种物质，或是呼出这种蒸汽。",
-      "label": "渗毒"
-    },
-    "Vigorous": {
-      "description": "你能更快地恢复伤势。永久填充你治愈进度钟的1格。<br />你的疗伤骰+1d。",
-      "label": "健壮活力"
-    },
-    "Warded": {
-      "description": "你可以消耗特殊护甲以抵抗超凡后果，或是在对抗或利用神秘力量时逼迫自我。",
-      "label": "卫护"
-    },
-    "Weaving-the-web": {
-      "description": "当你为刻痕收集目标信息时，你的交结+1d。<br />你为刻痕所掷的交锋骰+1d。",
-      "label": "织网"
-    }
-  },
-  "Actions": {
-    "Attune": {
-      "description": "同调灵魂和幽灵领域；沟通电离灵质能量；感知鬼魂并与其交流；理解幽灵光谱。",
-      "label": "同调"
-    },
-    "Command": {
-      "description": "靠你的个人力量强迫服从命令；恐吓或威胁领导集团的帮众们做出行动。",
-      "label": "命令"
-    },
-    "Consort": {
-      "description": "交结你的出身、经历相关人物，以及亲朋或是宿敌，从而获取资源、信息、人脉或场地。",
-      "label": "交结"
-    },
-    "Finesse": {
-      "description": "灵巧地从别人口袋里偷走东西；运用巧妙误导或精妙手法；操纵车辆或是坐骑。",
-      "label": "灵巧"
-    },
-    "Hunt": {
-      "description": "狩猎目标；收集其位置与行踪；从远处进行精准射击。",
-      "label": "狩猎"
-    },
-    "Prowl": {
-      "description": "潜行穿越障碍：攀爬、游泳、跳跃及奔跑。近距离暴力突袭——背刺、割喉、闷棍等.",
-      "label": "潜行"
-    },
-    "Skirmish": {
-      "description": "与对手近战斗殴；发起攻击或坚守阵地；搏斗与摔跤。",
-      "label": "斗殴"
-    },
-    "Study": {
-      "description": "仔细研究审查一个人、一份文件或一个物品，从而收集信息并应用知识；获得更为深入的理解；进行深入调研。",
-      "label": "研究"
-    },
-    "Survey": {
-      "description": "审视某个地点或情境，从而了解当下情况；在问题发生前就察觉苗头；收集信息来寻找机遇或优势。",
-      "label": "审视"
-    },
-    "Sway": {
-      "description": "动摇他人，利用魅力、逻辑、伪装或是虚张声势；通过操纵或诱导来改变他人的态度和行为。",
-      "label": "动摇"
-    },
-    "Tinker": {
-      "description": "操作机械装置进行创造、修改、禁用或是修复；解除陷阱、撬锁、打开保险箱；使用电离灵质科技。",
-      "label": "操作"
-    },
-    "Wreck": {
-      "description": "以蛮力或蓄意策划手段去破坏摧毁某地、某物或某障碍；暴力突破防御；制造混乱和骚动。",
-      "label": "破坏"
-    }
-  },
-  "Attributes": {
-    "insight": "洞察",
-    "prowess": "勇猛",
-    "resolve": "决心"
-  },
-  "Background-suggestions": {
-    "acolyte-spirit-warden": "灵魂协守",
-    "antiquarian": "文物学家",
-    "artisan": "工匠",
-    "artist": "艺术家",
-    "bluecoat": "蓝衫军",
-    "bounty-hunter": "赏金猎人",
-    "captain": "船长",
-    "convict": "囚徒",
-    "councilor": "议员",
-    "courier": "信使",
-    "courtier": "廷臣",
-    "criminologist": "犯罪学家",
-    "cultist": "邪教徒",
-    "dealer": "毒贩",
-    "demonologist": "恶魔学家",
-    "dilettante": "浪荡子",
-    "diplomat": "外交官",
-    "docker": "码头工",
-    "driver": "司机",
-    "duelist": "决斗家",
-    "electrochemist": "电能学家",
-    "engineer": "工程师",
-    "envoy": "特使",
-    "explorer": "探险家",
-    "factory-worker": "工厂劳工",
-    "farmhand": "农场劳工",
-    "fence": "赃物贩子",
-    "fighter": "斗士",
-    "firefighter": "火警",
-    "gondolier": "凤尾船夫",
-    "hustler": "骗徒",
-    "informant": "线人",
-    "journalist": "记者",
-    "lark": "百灵鸟",
-    "leviathan-hunter": "利维坦猎人",
-    "linewalker": "管线工",
-    "mediciner": "医药师",
-    "merchant": "货商",
-    "military-guardsman": "军事警卫",
-    "miner": "矿工",
-    "ministry-agent": "运维部特工",
-    "naturalist": "博物学家",
-    "occultist": "秘血书士",
-    "psychometrist": "心理学家",
-    "purveyor": "供给商",
-    "rail-jack": "铁道护卫",
-    "rifle-scout": "步枪斥候",
-    "roof-runner": "屋檐行者",
-    "sailor": "海员",
-    "scavenger": "拾荒者",
-    "scholar": "学者",
-    "secretary": "文秘",
-    "sentry": "哨兵",
-    "servant": "仆役",
-    "sparkwright": "火花发明家",
-    "spectrologist": "幽灵光谱学家",
-    "steward": "主管",
-    "taverner": "酒馆",
-    "technician": "技师",
-    "thief": "盗贼",
-    "thug": "暴徒"
-  },
-  "Backgrounds": {
-    "Academic": {
-      "description": "学者、多斯科沃学校里的教授和学生、哲学家、记者等。",
-      "label": "学术"
-    },
-    "Labor": {
-      "description": "仆从、工厂职工、长途司机、码头工人、水手、铁道员等。“一个北钩公司的码头装卸工”",
-      "label": "劳工"
-    },
-    "Law": {
-      "description": "：事务律师或出庭律师、蓝衫军或督察官（甚至是灵魂监守），铁钩狱警等。",
-      "label": "执法"
-    },
-    "Military": {
-      "description": "帝国或是斯科夫兰士兵、雇佣兵、情报人员、战略家、军事教官等。",
-      "label": "军队"
-    },
-    "Noble": {
-      "description": "败家子、廷臣、衰败家族的继承人等。",
-      "label": "贵族"
-    },
-    "Trade": {
-      "description": "店主、批发商、手艺精湛的手工艺人、货运代理商等。“一个政府运维部的联络员”",
-      "label": "经商"
-    },
-    "Underworld": {
-      "description": "街头流浪儿、帮派成员、少年恶棍、或是其他任何在街头长大的流浪者。",
-      "label": "黑道"
-    }
-  },
-  "Friends": {
-    "Augus": {
-      "description": "建筑大师",
-      "label": "奥古斯"
-    },
-    "Bazso-baz": {
-      "description": "帮派头目",
-      "label": "巴佐·巴兹"
-    },
-    "Bryl": {
-      "description": "毒贩",
-      "label": "布里尔"
-    },
-    "Casta": {
-      "description": "赏金猎人",
-      "label": "卡斯塔"
-    },
-    "Celene": {
-      "description": "哨兵",
-      "label": "赛琳"
-    },
-    "Chael": {
-      "description": "恶毒暴徒",
-      "label": "查尔"
-    },
-    "Darmot": {
-      "description": "蓝衫军",
-      "label": "达默特"
-    },
-    "Eckerd": {
-      "description": "窃尸贼",
-      "label": "埃克德"
-    },
-    "Flint": {
-      "description": "灵魂贩子",
-      "label": "燧石"
-    },
-    "Frake": {
-      "description": "锁匠",
-      "label": "弗莱克"
-    },
-    "Grace": {
-      "description": "敲诈犯",
-      "label": "恩泽"
-    },
-    "Harker": {
-      "description": "笼中鸟",
-      "label": "哈克尔"
-    },
-    "Jennah": {
-      "description": "女仆",
-      "label": "珍娜"
-    },
-    "Jeren": {
-      "description": "蓝衫军档案员",
-      "label": "杰任"
-    },
-    "Jul": {
-      "description": "血贩",
-      "label": "朱"
-    },
-    "Khyra": {
-      "description": "酒吧老板",
-      "label": "克里拉"
-    },
-    "Malista": {
-      "description": "女祭司",
-      "label": "玛莉斯塔"
-    },
-    "Marlane": {
-      "description": "拳击手",
-      "label": "马兰尼"
-    },
-    "Melvir": {
-      "description": "外科医生",
-      "label": "梅尔维尔"
-    },
-    "Mercy": {
-      "description": "冷酷的杀手",
-      "label": "怜悯"
-    },
-    "Nyryx-2": {
-      "description": "拥有自我的幽灵",
-      "label": "奈瑞克斯"
-    },
-    "Nyryx": {
-      "description": "娼妓",
-      "label": "奈瑞克斯"
-    },
-    "Petra": {
-      "description": "市政书记",
-      "label": "佩特拉"
-    },
-    "Quellyn": {
-      "description": "女巫",
-      "label": "奎琳"
-    },
-    "Riven": {
-      "description": "炼金术士",
-      "label": "利文"
-    },
-    "Roslyn-kellis": {
-      "description": "贵族",
-      "label": "罗丝林·凯利斯"
-    },
-    "Salia": {
-      "description": "情报贩子",
-      "label": "萨莉亚"
-    },
-    "Sawtooth": {
-      "description": "外科医生",
-      "label": "锯齿"
-    },
-    "Scurlock": {
-      "description": "吸血鬼",
-      "label": "司库洛克"
-    },
-    "Setarra": {
-      "description": "恶魔",
-      "label": "塞塔拉"
-    },
-    "Stazia": {
-      "description": "药剂师",
-      "label": "斯塔奇亚"
-    },
-    "Steiner": {
-      "description": "杀手",
-      "label": "斯泰纳"
-    },
-    "Telda": {
-      "description": "乞丐",
-      "label": "忒尔达"
-    },
-    "Veldren": {
-      "description": "精神病人",
-      "label": "韦尔登"
-    },
-    "Veleris": {
-      "description": "间谍",
-      "label": "威利斯"
-    }
-  },
-  "Heritage-suggestions": {
-    "bastion-elders": "堡垒长老",
-    "blackvale-coven": "黑谷女巫集会",
-    "blood-cullers": "刮血人",
-    "bonewalker": "骨行者",
-    "bright-harbor-fleet": "璨湾舰队",
-    "church-of-ecstasy": "血肉之躯无我教会",
-    "city-guardians": "城市守卫",
-    "cloudspire-aeronauts": "云顶航空",
-    "confessors": "聆听告解者",
-    "cullfield-observatory": "宰场观星台",
-    "deathlander": "死域居民",
-    "demon-scholars": "恶魔学者",
-    "doskvol-academy": "多斯科沃学院",
-    "emissaries": "特使",
-    "exile": "受逐者",
-    "falconers": "驯隼者",
-    "governors-stronghold": "总督要塞",
-    "home-guard-militia": "卫国义勇军",
-    "ilysian-guard": "伊利西安卫队",
-    "imperial-city-courtiers": "帝都朝臣",
-    "imperial-collaborators": "帝国通敌者",
-    "irondale-metalworks": "铁峪金属厂",
-    "ironworks-labor": "钢铁厂劳工",
-    "lhan-lhaban": "生而弃民",
-    "liberators": "解放者",
-    "lightning-couriers": "闪电信使",
-    "lockport-scummer": "船闸港残渣",
-    "lore-keepers": "吟咏传人",
-    "lunarium-players": "月相仪演员",
-    "melamatines": "生连死结",
-    "nomad": "浪游民",
-    "north-hook-company": "北钩公司",
-    "onyx-citadel": "玛瑙城堡",
-    "outlaw": "亡命徒",
-    "radiant-energy-farmers": "光辐农民",
-    "refugee": "流亡难民",
-    "seekers": "索寻者",
-    "south-point-traders": "南角贸易",
-    "spirit-hunters": "灵魂猎手",
-    "steelhand": "铁手工人",
-    "thorn-devils": "棘刺魔鬼",
-    "tyrmoor-clanholder": "泰野传承氏族",
-    "vidyad": "持明藏修",
-    "void-gate-sentries": "虚无门哨兵",
-    "water-bearers": "护水人",
-    "whitehollow-miners": "纯白低地矿工",
-    "wintercliff-wardens": "冬崖监守"
-  },
-  "Heritages": {
-    "Akoros": {
-      "description": "帝国最辽阔、工业化程度最高的地区，也是帝都以及薄暮壁垒的所在地区。它被视作是一个囊括了多种文化的集合体，几个世纪以来都紧密联系着共同生活，有点儿像欧洲。",
-      "label": "阿克洛斯"
-    },
-    "Dagger-isles": {
-      "description": "。那里的人通常在船上长大，会漂泊许久才寻求安定。他们以海盗和商队而闻名，生活在没有闪电屏障的地方——他们有别的对付幽灵的手段。",
-      "label": "匕首群岛"
-    },
-    "Iruvia": {
-      "description": "，一个远在南方的富饶强大沙漠王国。这是另一片文化多样的土地，类似于古波斯、埃及和印度。",
-      "label": "伊鲁维亚"
-    },
-    "Severos": {
-      "description": "大多数赛维洛斯人生活在那几个帝国聚居区之外，他们是马背上的游牧民族，散落在令人畏惧的死亡焦土各处，生活在古代奥术堡垒的废墟里，它们依然能够阻挡幽灵。",
-      "label": "赛维洛斯"
-    },
-    "Skovlan": {
-      "description": "一个和多斯科沃隔海相望的岛国。斯科夫兰是在持续了36年的大一统战争（几年前才刚结束）里，最后一个臣服于帝国统治的。许多在战火里失去了工作还有家园的难民都来到了多斯科沃寻找新机遇。",
-      "label": "斯科夫兰"
-    },
-    "Tycheros": {
-      "description": "神秘交融之地，远在虚空海至北。所有人都说那里的家伙全是半恶魔。如果你选择了泰彻洛斯的出身，就得给你的角色标记上一些恶魔特征，比如鲨鱼一样的纯黑眼球、长着羽毛而非头发等等。",
-      "label": "泰彻洛斯"
-    }
-  },
-  "Looks": {
-    "Apparel": {
-      "collared-shirt": "立领衬衫",
-      "eel-skin-bodysuit": "鳗鱼皮连体衣",
-      "fancy-waistcoat": "花哨马甲",
-      "fitted-dress": "修身连衣裙",
-      "fitted-leggings": "紧身裤袜",
-      "half-cape": "单肩斗篷",
-      "heavy-cloak": "厚斗篷",
-      "heavy-jacket": "厚夹克",
-      "hide-and-furs": "皮草大衣",
-      "hood-and-veil": "兜帽和面纱",
-      "hooded-cape": "连帽斗篷",
-      "hooded-coat": "连帽外套",
-      "knit-cap": "针织帽",
-      "knit-sweater": "针织毛衣",
-      "leathers": "皮衣",
-      "long-coat": "长大衣",
-      "long-scarf": "长围巾",
-      "loose-silks": "宽松丝绸衣物",
-      "mask-and-robes": "面具和长袍",
-      "rags-and-tatters": "破布和纹身",
-      "rough-tunic": "粗布外套",
-      "scavenged-uniform": "拾荒者制服",
-      "sharp-trousers": "时髦裤子",
-      "short-cloak": "短大衣",
-      "skirt-and-blouse": "短裙和衬衫",
-      "slim-jacket": "修身夹克",
-      "soft-boots": "软靴子",
-      "suit-and-tie": "西装和领带",
-      "suspenders": "背带裤",
-      "tall-boots": "高筒靴",
-      "thick-greatcoat": "厚大衣",
-      "tricorn-hat": "三角帽",
-      "vest": "坎肩",
-      "waxed-coat": "防水大衣",
-      "wide-belt": "宽皮带",
-      "work-boots": "工作靴",
-      "work-trousers": "工装裤"
-    },
-    "Joining-words": {
-      "and": "和",
-      "dressed-in": "身穿",
-      "sporting": "运动",
-      "wearing": "穿戴"
-    },
-    "Person-word-adjectives": {
-      "affable": "和蔼可亲",
-      "athletic": "健壮",
-      "bony": "瘦骨嶙峋",
-      "bright": "活泼明快",
-      "brooding": "沉思者",
-      "calm": "沉着镇定",
-      "chiseled": "轮廓分明",
-      "cold": "冷漠",
-      "dark": "神秘忧郁",
-      "delicate": "纤弱精致",
-      "fair": "美丽",
-      "fierce": "狂热",
-      "grimy": "肮脏",
-      "handsome": "英俊",
-      "huge": "巨人",
-      "hunched": "驼背",
-      "languid": "无精打采",
-      "lovely": "可爱迷人",
-      "open": "开放",
-      "plump": "丰满",
-      "rough": "粗犷",
-      "sad": "悲伤",
-      "scarred": "伤痕累累",
-      "slim": "苗条",
-      "soft": "温柔",
-      "squat": "矮胖",
-      "stern": "严苛",
-      "stout": "粗壮",
-      "striking": "俊秀",
-      "twitchy": "焦躁",
-      "weathered": "饱经风霜",
-      "wiry": "精瘦",
-      "worn": "蓄须"
-    },
-    "Person-words": {
-      "child": {
-        "article": "一个",
-        "word": "孩子"
-      },
-      "man": {
-        "article": "一个",
-        "word": "男人"
-      },
-      "person": {
-        "article": "一个",
-        "word": "人"
-      },
-      "woman": {
-        "article": "一个",
-        "word": "女人"
-      }
-    },
-    "Templates": {
-      "one-adjective-one-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1}",
-      "one-adjective-two-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1} and {apparel2}",
-      "two-adjectives-one-apparel": "{personWordArticle} {personWordAdjective1} and {personWordAdjective2} {personWord} {wearingVerb} {apparel1}",
-      "two-adjectives-two-apparel": "{personWordArticle} {personWordAdjective1} and {personWordAdjective2} {personWord} {wearingVerb} {apparel1} and {apparel2}"
-    }
-  },
-  "Names": {
-    "Aliases": {
-      "bell": "铃声",
-      "birch": "白桦",
-      "bricks": "红砖",
-      "bug": "飞虫",
-      "chime": "钟声",
-      "coil": "死亡缠绕",
-      "cricket": "蟋蟀",
-      "cross": "十字架",
-      "crow": "乌鸦",
-      "echo": "回音",
-      "flint": "燧石",
-      "frog": "青蛙",
-      "frost": "霜冻",
-      "grip": "抓手",
-      "gunner": "神枪手",
-      "hammer": "锤手",
-      "hook": "钩子",
-      "junker": "废人",
-      "mist": "薄雾",
-      "moon": "月亮",
-      "nail": "铁钉",
-      "needle": "针头",
-      "ogre": "食人魔",
-      "pool": "水塘",
-      "ring": "叮当",
-      "ruby": "红宝石",
-      "silver": "银币",
-      "skinner": "油皮",
-      "song": "歌者",
-      "spur": "骨刺",
-      "tackle": "切断",
-      "thistle": "蓟花",
-      "thorn": "荆棘",
-      "tick-tock": "滴答",
-      "twelves": "十二",
-      "vixen": "悍妇",
-      "whip": "长鞭",
-      "wicker": "柳条人"
-    }
-  },
-  "Playbooks": {
-    "Cutter": {
-      "description": "令人胆寒的危险战士。",
-      "label": "剃刀"
-    },
-    "Hound": {
-      "description": "致命的神枪手与追踪者",
-      "label": "猎犬"
-    },
-    "Leech": {
-      "description": "破坏者与技术员",
-      "label": "毒蛭"
-    },
-    "Lurk": {
-      "description": "秘密潜入者与窃贼。",
-      "label": "潜影"
-    },
-    "Slide": {
-      "description": "狡猾的操纵者与间谍",
-      "label": "滑弦"
-    },
-    "Spider": {
-      "description": "心思错综的幕后主谋",
-      "label": "络蛛"
-    },
-    "Whisper": {
-      "description": "神秘专家与通灵者",
-      "label": "低语"
-    }
-  },
-  "User-interface": {
-    "Home-page": {
-      "Attribution": {
-        "code-and-design": "代码与设计排版为 <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
-        "copyright": "版权所有 © {year} Olin Kirkland",
-        "license-blades-in-the-dark": "此网站基于 <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">《》</a> — 由One Seven设计工作室出版， John Harper设计撰写, 并允许我们按 <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">知识共享署名3.0 协议</a>使用",
-        "license-icons": "图标来自<a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
-        "license-portraits": "肖像图片来自<a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> with no known restrictions on their use",
-        "localization": "西班牙语翻译：Felix G. Rios<br />法语翻译：Thomas Girod 和 Artamis，基于 Thomas Pereira、Tiburce Guyard 和 Alexis Brossollet 为 <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> 所做的工作<br />意大利语翻译：<a href=\"https://www.reddit.com/user/Xnon_/\">Xnon</a><br />中文翻译：极夜十四",
-        "news-and-updates": "新闻＆更新"
-      },
-      "Scoundrel-card": {
-        "no-name": "无名剧本",
-        "no-playbook": "无名恶棍"
-      },
-      "description": "一个人物卡存档器，用于<a href=\"https://bladesinthedark.com/\" target=\"_blank\">《暗夜刀锋》</a>",
-      "lab-banner": "工坊",
-      "last-updated": "更新日期{date}",
-      "new-scoundrel-button": "创建新恶棍",
-      "scroll-prompt": "向下滚动查看出处",
-      "settings-button": "设置"
-    },
-    "Make-page": {
-      "Controls": {
-        "delete-button": "删除",
-        "home-button": "主页",
-        "next-button": "下一步"
-      },
-      "Step-navigation": {
-        "abilities": "特殊能力",
-        "actions": "行动",
-        "background": "经历",
-        "export": "导出",
-        "friends": "亲朋",
-        "heritage": "出身",
-        "name-and-look": "姓名与外观",
-        "playbook": "剧本",
-        "vice": "恶欲"
-      }
-    },
-    "Modals": {
-      "Change-language": {
-        "Controls": {
-          "cancel-button": "不，保持使用{currentLanguage}",
-          "confirm-button": "是的，选择{newLanguage}"
+    "Abilities": {
+        "A-little-something-on-the-side": {
+            "description": "在每个休整期结束时，你都获得+2存款。",
+            "label": "暗中收获"
         },
-        "message": "您正尝试使用<strong>{newLanguage}</strong> 语言创建恶棍角色，但您当前使用的语言是<strong>{currentLanguage}</strong>. 您是否希望切换到<strong>{newLanguage}</strong> 语言?",
-        "title": "使用新语言创建当前恶棍"
-      },
-      "Confirm": {
-        "Controls": {
-          "cancel-button": "不，我改主意了",
-          "confirm-button": "是的"
+        "Alchemist": {
+            "description": "当你发明或制造一项炼金物时，你的掷骰结果提高1级。<br />你起始将知晓一个特殊炼金配方。",
+            "label": "炼金术士"
+        },
+        "Ambush": {
+            "description": "当你躲藏起来准备攻击或设置陷阱时，你的掷骰+1d。",
+            "label": "伏击"
+        },
+        "Analyst": {
+            "description": "在休整期间，你可以为任何调查、研究配方、或设计方案的长期项目进度钟推进两格。",
+            "label": "分析师"
+        },
+        "Artificer": {
+            "description": "当你发明或制造一个火花工艺物件时，你的掷骰结果提高1级。<br />你起始将知晓一个特殊设计方案。",
+            "label": "能工巧匠"
+        },
+        "Battleborn": {
+            "description": "你可以消耗特殊护甲以降低在战斗中遭受的攻击伤害，或是在战斗中逼迫自我。",
+            "label": "为战而生"
+        },
+        "Bodyguard": {
+            "description": "当你保护队友时，你的抵抗骰+1d。<br />当你收集信息以预测当前情况下的潜在威胁时，你+1效果等级。",
+            "label": "保镖"
+        },
+        "Calculating": {
+            "description": "得益于你的精心规划，休整期间，你可以给自己或其他成员额外安排1次休整活动。",
+            "label": "预估计算"
+        },
+        "Cloak-and-dagger": {
+            "description": "当你利用伪装或其他手段来进行隐蔽和误导时，你为混淆或转移怀疑的掷骰+1d。<br />当你卸下伪装时，给他人带来的震惊能让你在情境中占据主动权。",
+            "label": "斗篷与匕首"
+        },
+        "Compel": {
+            "description": "你能与幽灵领域同调，迫使附近的一个幽灵在你面前现身并服从你所下达的指令。<br />你不会被自己所召唤或是强令的幽灵吓到（不过你的盟友可能会）。",
+            "label": "强令"
+        },
+        "Connected": {
+            "description": "休整期间，当你置办资产或降低罪熵时，你的掷骰结果提高1级。",
+            "label": "联络关系"
+        },
+        "Daredevil": {
+            "description": "当你掷一个严峻的行动骰时，你可以使此行动骰+1d；但你接下来若为此行动产生的任何后果掷抵抗骰，则-1d。",
+            "label": "冒险狂"
+        },
+        "Expertise": {
+            "description": "选择你的某一项行动值。当你领导一个小队执行此行动时，无论失败的掷骰数目为何，你最多都只承受1压力。",
+            "label": "专精技能"
+        },
+        "Focused": {
+            "description": "你可以消耗特殊护甲，来抵抗意料之外的后果或是精神伤害后果（恐惧、困惑、失去某人的踪迹等），或是用来逼迫自我以进行远程战斗或追踪。",
+            "label": "聚精会神"
+        },
+        "Foresight": {
+            "description": "每场刻痕两次，你可以帮助队友而不承担压力。<br /><em>叙述你为这种情况准备了什么。</em>",
+            "label": "远见"
+        },
+        "Fortitude": {
+            "description": "你可以消耗特殊护甲来:<br /><ul><li>抵抗疲劳、虚弱或是炼金效应的后果；</li><li>你也可以消耗它用以在技术工作或炼金操作中逼迫自我。</li></ul>",
+            "label": "强打精神"
+        },
+        "Functioning-vice": {
+            "description": "当你放纵恶欲时，你可以将骰子出目（向上或向下）调整1或2，<br />与你一道的盟友也可以如此做。",
+            "label": "掌控恶欲"
+        },
+        "Ghost-contract": {
+            "description": "当你以书面形式起草或敲定一项协议时，你和对方——无论其是人类或是别的什么——都将立誓并留下印记。如果任何一方违反契约，其都会受到3级伤害, <em>诅咒</em>.",
+            "label": "幽灵契约"
+        },
+        "Ghost-fighter": {
+            "description": "你可以使自己的双手、近战武器或是工具上附着灵魂能量。<br /><ul><li>你在与超凡存在的战斗中具有效能。</li><li>你可以与幽灵缠斗，并且制服然后捕获他们。</li></ul>",
+            "label": "幽灵斗士"
+        },
+        "Ghost-hunter-2": {
+            "description": "使你的狩猎宠物再选择一项额外的神秘能力。<br /><em>必须已习得幽灵猎手才能习得这一能力</em>",
+            "label": "幽灵猎手+"
+        },
+        "Ghost-hunter": {
+            "description": "你的狩猎宠物充斥着灵魂能量。<br /><ul><li>它在对抗或追踪超凡存在时拥有效能。</li><li>且其获得一项神秘能力：幽灵形态、心灵链接、或是飞矢急速。</li></ul>",
+            "label": "幽灵猎手"
+        },
+        "Ghost-mind": {
+            "description": "你总能感知到当下的超凡存在。<br />无论何时，当你通过任何方式来收集有关超凡存在的信息时都+1d。",
+            "label": "幽灵意识"
+        },
+        "Ghost-veil": {
+            "description": "你可以不完全地进入幽灵领域中，在接下来的片刻身形模糊虚幻。<br />。当你如此做时，承受2压力，你每选择一项额外功能，就再多承受1压力：<br /><ul><li>这将持续数分钟而非片刻；</li><li>你将是隐形的而非仅仅朦胧；</li><li>；你将能像幽灵那样漂浮在空中。</li></ul>",
+            "label": "幽灵面纱"
+        },
+        "Ghost-voice": {
+            "description": "你知晓和幽灵以及恶魔交流的秘密手段，无论其表现得多么狂暴，你都可以和其像平常人一样交流。<br />当你与超凡存在交流时，你将获得效能。",
+            "label": "幽灵谈吐"
+        },
+        "Ghost-ward": {
+            "description": "当你使用神秘事物破坏一个区域，将其摧毁以作其他用途时，它将能够引诱或是排斥灵魂（由你决定）。",
+            "label": "幽灵结界"
+        },
+        "Infiltrator": {
+            "description": "当你试图绕过安保措施时，不受其质量或层级的影响。.",
+            "label": "潜入者"
+        },
+        "Iron-will": {
+            "description": "你免疫因直视某些超凡存在而产生的恐惧。每当你使用决心掷抵抗骰时+1d。",
+            "label": "钢铁意志"
+        },
+        "Jail-bird": {
+            "description": "当你服刑时，<br /><ul><li>你的通缉等级视为低1级，</li><li>，你的层级视为高1级，</li><li>除了你从服刑骰中 获得的好处之外，你在狱中帮助过的每个派系也都会与你们+1派系关系。</li></ul>",
+            "label": "笼中鸟"
+        },
+        "Leader": {
+            "description": "当你命令麾下作战时，他们在本该被打垮的时候会继续作战（当他们受到3级伤害时不会失能）。<br />。他们获得+1效果等级和1护甲。",
+            "label": "领袖"
+        },
+        "Like-looking-into-a-mirror": {
+            "description": "当有人在欺骗你时，你总能看得出来。",
+            "label": "窥镜自视"
+        },
+        "Mastermind": {
+            "description": "你可以消耗特殊护甲以保护队友，或是在收集信息以及埋头于长期项目时逼迫自我。",
+            "label": "主谋"
+        },
+        "Mesmerism": {
+            "description": "当你动摇某人时，你可以使其完全忘记这件事的发生，直至其下次与你互动为止。",
+            "label": "催眠术"
+        },
+        "Mule": {
+            "description": "你的负载上限提高。<br /><ul><li>轻便：5、</li><li>、通常：7、</li><li>、重装：8。</li></ul>",
+            "label": "骡子"
+        },
+        "Not-to-be-trifled-with": {
+            "description": "Y你可以逼迫自我以做到以下一项：做到一项近乎超人的体力壮举；或是与一小伙帮众在近身交战中势均力敌。.",
+            "label": "不容小觑"
+        },
+        "Occultist": {
+            "description": "你了解与远古力量、被遗忘之神、以及恶魔交结的秘密手段。当你与其交结后，你命令崇拜其的邪教徒时+1d。",
+            "label": "通神术士"
+        },
+        "Physicker": {
+            "description": "你能够操作骨骼、血液和体液以治疗伤势或是稳定致命伤。<br />你也可以研究疾病和尸体。<br />你团伙中的所有人（包括你）的疗伤骰+1d。",
+            "label": "外科医生"
+        },
+        "Reflexes": {
+            "description": "当问到谁先行动时，答案总会是你。",
+            "label": "反射本能"
+        },
+        "Ritual": {
+            "description": "你了解进行仪式魔法的神秘手段。你可以研究某种玄奥仪式（或是创造一种新的）来召唤超凡现象或是存在。<br />你起始将习得一种仪式。",
+            "label": "仪式"
+        },
+        "Rooks-gambit": {
+            "description": "你可以承受2压力以使用你的最高行动值来掷其他行动骰，<br /><em>然后解释你的技艺是如何适用于这种用途的。</em>",
+            "label": "骗徒险棋"
+        },
+        "Saboteur": {
+            "description": "当你破坏，你发出的动静将会更小，造成的损毁将更隐蔽，难以被发现。",
+            "label": "破坏分子"
+        },
+        "Savage": {
+            "description": "当你宣泄暴力时会极为骇人。<br />当你命令一个恐惧的目标时+1d。",
+            "label": "凶残"
+        },
+        "Scout": {
+            "description": "当你收集信息以寻找目标位置时，获得+1效果等级。<br />当你躲在预先准备好的位置或是利用伪装时，你在躲藏时的掷骰+1d。",
+            "label": "斥候"
+        },
+        "Shadow": {
+            "description": "你可以消耗特殊护甲来抵抗侦察或是安保措施的后果；你也可以消耗它用以逼迫自我来完成一项运动或潜行的壮举。",
+            "label": "阴影"
+        },
+        "Sharpshooter": {
+            "description": "你可以逼迫自我来做到以下一项：<br /><ul><li>在超出武器范围的极端距离进行射击；</li><li>；或者发起迅速凶猛的火力弹幕压制敌人。</li></ul>",
+            "label": "神枪手"
+        },
+        "Strange-methods": {
+            "description": "当你发明或制造一个神秘造物时，结果等级提升1级。<br />你起始懂得一种神秘设计。",
+            "label": "奇异范式"
+        },
+        "Subterfuge": {
+            "description": "你可以消耗自己的特殊护甲以抵抗来自猜疑或是劝说的后果，或是在使用诡计时逼迫自我。",
+            "label": "诡计"
+        },
+        "Survivor": {
+            "description": "由于罕见的经历或是神秘仪式，你免疫死域的邪毒瘴气，并且能够靠着那里诡异的动植物生存下去。<br />你获得+1压力格。",
+            "label": "幸存者"
+        },
+        "Tempest": {
+            "description": "你可以逼迫自我以做到以下一项：<br /><ul><li>释放一道闪电用作武器；</li><li>；或是在你周身引发风暴（暴雨、狂风、大雾、霜雪等）。</li></ul>",
+            "label": "风暴"
+        },
+        "The-devils-footsteps": {
+            "description": "你可以逼迫自我以做到以下一项：<br /><ul><li>做到一项非凡的运动壮举；</li><li>或是迷惑敌人犯下错误，让他们彼此攻击。</li></ul>",
+            "label": "魔鬼足迹"
+        },
+        "Tough-as-nails": {
+            "description": "所受伤害的惩罚降低一级<br /><em>但4级伤害仍然致命。</em>",
+            "label": "坚忍不拔"
+        },
+        "Trust-in-me": {
+            "description": "当你对抗的目标和你之间存在亲密关系时，你获得+1d。",
+            "label": "信赖于我"
+        },
+        "Vengeful": {
+            "description": "你获得一个额外的经验触发器：你报复了某个家伙，其伤害过你或是你关心的人。<br />如果你的集团帮助你完成了报复，也标记集团经验。",
+            "label": "心怀报复"
+        },
+        "Venomous": {
+            "description": "选择一种（你武装带中的）毒品或毒药，你将对其免疫。<br />。你可以逼迫自我，以通过皮肤或唾液分泌出这种物质，或是呼出这种蒸汽。",
+            "label": "渗毒"
+        },
+        "Vigorous": {
+            "description": "你能更快地恢复伤势。永久填充你治愈进度钟的1格。<br />你的疗伤骰+1d。",
+            "label": "健壮活力"
+        },
+        "Warded": {
+            "description": "你可以消耗特殊护甲以抵抗超凡后果，或是在对抗或利用神秘力量时逼迫自我。",
+            "label": "卫护"
+        },
+        "Weaving-the-web": {
+            "description": "当你为刻痕收集目标信息时，你的交结+1d。<br />你为刻痕所掷的交锋骰+1d。",
+            "label": "织网"
         }
-      },
-      "Delete-scoundrel": {
-        "Controls": {
-          "confirm-button": "删除"
-        },
-        "message": "你确定要删除这一恶棍吗？此操作无法撤销。",
-        "title": "删除恶棍？"
-      },
-      "Import": {
-        "Failed": {
-          "message": "角色卡无法导入，请检查网址并重试。",
-          "title": "导入失败"
-        },
-        "Success": {
-          "message": "角色卡导入成功！",
-          "title": "导入成功"
-        }
-      },
-      "News-and-updates": {
-        "title": "新闻＆更新"
-      },
-      "Settings": {
-        "Language": {
-          "Language-features": {
-            "data": "游戏数据",
-            "deep-cuts": "深度切割",
-            "sheets": "人物卡",
-            "ui": "用户界面"
-          },
-          "Languages": {
-            "de": "德语",
-            "en": "英语",
-            "es": "西班牙语",
-            "fr": "法语",
-            "it": "意大利语",
-            "zh": "中国人"
-          },
-          "label": "选择使用语言"
-        },
-        "Tracking": {
-          "description": "最小化追踪通过收集角色、页面访问和功能使用的匿名数据来帮助改进Scoundry。不会收集或共享任何个人信息。",
-          "label": "启用匿名追踪"
-        },
-        "title": "设置"
-      },
-      "Tracking-consent": {
-        "Controls": {
-          "cancel-button": "禁用追踪",
-          "confirm-button": "我接受追踪"
-        },
-        "message": "最小化追踪通过收集角色、页面访问和功能使用的匿名数据来帮助改进Scoundry。不会收集或共享任何个人信息。",
-        "title": "追踪偏好"
-      },
-      "World-map": {
-        "title": "破碎诸陆"
-      }
     },
-    "Steps": {
-      "Abilities": {
-        "subtitle": "选择一项特殊能力",
-        "title": "什么能力让你在集团中与众不同？"
-      },
-      "Actions": {
-        "Action-tally": {
-          "with-character-creation": "<strong>{count}</strong>分配7个行动点",
-          "without-character-creation": "<strong>{count}</strong> 已分配行动点"
-        },
-        "Actions": {
-          "Attune": {
-            "description": "同调灵魂和幽灵领域；沟通电离灵质能量；感知鬼魂并与其交流；理解幽灵光谱.",
+    "Actions": {
+        "Attune": {
+            "description": "同调灵魂和幽灵领域；沟通电离灵质能量；感知鬼魂并与其交流；理解幽灵光谱。",
             "label": "同调"
-          },
-          "Command": {
+        },
+        "Command": {
             "description": "靠你的个人力量强迫服从命令；恐吓或威胁领导集团的帮众们做出行动。",
             "label": "命令"
-          },
-          "Consort": {
+        },
+        "Consort": {
             "description": "交结你的出身、经历相关人物，以及亲朋或是宿敌，从而获取资源、信息、人脉或场地。",
             "label": "交结"
-          },
-          "Finesse": {
+        },
+        "Finesse": {
             "description": "灵巧地从别人口袋里偷走东西；运用巧妙误导或精妙手法；操纵车辆或是坐骑。",
             "label": "灵巧"
-          },
-          "Hunt": {
+        },
+        "Hunt": {
             "description": "狩猎目标；收集其位置与行踪；从远处进行精准射击。",
             "label": "狩猎"
-          },
-          "Prowl": {
-            "description": "潜行穿越障碍：攀爬、游泳、跳跃及奔跑。近距离暴力突袭——背刺、割喉、闷棍等。",
+        },
+        "Prowl": {
+            "description": "潜行穿越障碍：攀爬、游泳、跳跃及奔跑。近距离暴力突袭——背刺、割喉、闷棍等.",
             "label": "潜行"
-          },
-          "Skirmish": {
+        },
+        "Skirmish": {
             "description": "与对手近战斗殴；发起攻击或坚守阵地；搏斗与摔跤。",
             "label": "斗殴"
-          },
-          "Study": {
+        },
+        "Study": {
             "description": "仔细研究审查一个人、一份文件或一个物品，从而收集信息并应用知识；获得更为深入的理解；进行深入调研。",
             "label": "研究"
-          },
-          "Survey": {
+        },
+        "Survey": {
             "description": "审视某个地点或情境，从而了解当下情况；在问题发生前就察觉苗头；收集信息来寻找机遇或优势。",
             "label": "审视"
-          },
-          "Sway": {
+        },
+        "Sway": {
             "description": "动摇他人，利用魅力、逻辑、伪装或是虚张声势；通过操纵或诱导来改变他人的态度和行为。",
             "label": "动摇"
-          },
-          "Tinker": {
+        },
+        "Tinker": {
             "description": "操作机械装置进行创造、修改、禁用或是修复；解除陷阱、撬锁、打开保险箱；使用电离灵质科技。",
             "label": "操作"
-          },
-          "Wreck": {
+        },
+        "Wreck": {
             "description": "以蛮力或蓄意策划手段去破坏摧毁某地、某物或某障碍；暴力突破防御；制造混乱和骚动。",
             "label": "破坏"
-          }
+        }
+    },
+    "Attributes": {
+        "insight": "洞察",
+        "prowess": "勇猛",
+        "resolve": "决心"
+    },
+    "Background-suggestions": {
+        "acolyte-spirit-warden": "灵魂协守",
+        "antiquarian": "文物学家",
+        "artisan": "工匠",
+        "artist": "艺术家",
+        "bluecoat": "蓝衫军",
+        "bounty-hunter": "赏金猎人",
+        "captain": "船长",
+        "convict": "囚徒",
+        "councilor": "议员",
+        "courier": "信使",
+        "courtier": "廷臣",
+        "criminologist": "犯罪学家",
+        "cultist": "邪教徒",
+        "dealer": "毒贩",
+        "demonologist": "恶魔学家",
+        "dilettante": "浪荡子",
+        "diplomat": "外交官",
+        "docker": "码头工",
+        "driver": "司机",
+        "duelist": "决斗家",
+        "electrochemist": "电能学家",
+        "engineer": "工程师",
+        "envoy": "特使",
+        "explorer": "探险家",
+        "factory-worker": "工厂劳工",
+        "farmhand": "农场劳工",
+        "fence": "赃物贩子",
+        "fighter": "斗士",
+        "firefighter": "火警",
+        "gondolier": "凤尾船夫",
+        "hustler": "骗徒",
+        "informant": "线人",
+        "journalist": "记者",
+        "lark": "百灵鸟",
+        "leviathan-hunter": "利维坦猎人",
+        "linewalker": "管线工",
+        "mediciner": "医药师",
+        "merchant": "货商",
+        "military-guardsman": "军事警卫",
+        "miner": "矿工",
+        "ministry-agent": "运维部特工",
+        "naturalist": "博物学家",
+        "occultist": "秘血书士",
+        "psychometrist": "心理学家",
+        "purveyor": "供给商",
+        "rail-jack": "铁道护卫",
+        "rifle-scout": "步枪斥候",
+        "roof-runner": "屋檐行者",
+        "sailor": "海员",
+        "scavenger": "拾荒者",
+        "scholar": "学者",
+        "secretary": "文秘",
+        "sentry": "哨兵",
+        "servant": "仆役",
+        "sparkwright": "火花发明家",
+        "spectrologist": "幽灵光谱学家",
+        "steward": "主管",
+        "taverner": "酒馆",
+        "technician": "技师",
+        "thief": "盗贼",
+        "thug": "暴徒"
+    },
+    "Backgrounds": {
+        "Academic": {
+            "description": "学者、多斯科沃学校里的教授和学生、哲学家、记者等。",
+            "label": "学术"
         },
-        "Attributes": {
-          "Insight": "洞察",
-          "Prowess": "勇猛",
-          "Resolve": "决心"
+        "Labor": {
+            "description": "仆从、工厂职工、长途司机、码头工人、水手、铁道员等。“一个北钩公司的码头装卸工”",
+            "label": "劳工"
         },
-        "Options": {
-          "character-creation-button": "角色共有7行动点，每个行动至多分配2点",
-          "mastery-advance-button": "精通强化: 允许行动值提升至"
+        "Law": {
+            "description": "事务律师或出庭律师、蓝衫军或督察官（甚至是灵魂监守），铁钩狱警等。",
+            "label": "执法"
         },
-        "subtitle": "点出最能代表你的行动",
-        "suggested-actions": "你的出身和经历所隐喻的行动",
-        "title": "什么是你最拿手的？"
-      },
-      "Background": {
-        "deep-cuts-description": "这些背景的完整描述见 <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">《深度切割》</a>，《暗夜刀锋》的扩展集.",
-        "detail-prompt": "你经历中的一个细节",
-        "select-prompt": "选中一个经历，查看其描述及建议细节",
-        "subtitle": "选定一个经历，然后写下你的细节",
-        "title": "你在加入集团前做过什么"
-      },
-      "Export": {
-        "Controls": {
-          "classic-sheet": "标准",
-          "copied": "已复制！",
-          "save-as-image-button": "保存为图片",
-          "share-as-url-button": "分享链接"
+        "Military": {
+            "description": "帝国或是斯科夫兰士兵、雇佣兵、情报人员、战略家、军事教官等。",
+            "label": "军队"
         },
-        "subtitle": "定制并分享你的角色卡",
-        "title": "导出你的恶棍"
-      },
-      "Friends": {
-        "friend-button": "亲朋",
-        "rival-button": "宿敌",
-        "subtitle": "标记一个作为长期盟友、家人或是恋人。然后标记另一个作为对手、敌人或是被背叛的搭档",
-        "title": "谁欠你人情，谁视你为死敌?"
-      },
-      "Heritage": {
-        "deep-cuts-description": "这些出身的完整描述见 <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">《深度切割》</a>，《暗夜刀锋》扩展集",
-        "detail-prompt": "你出身中的一个细节",
-        "select-prompt": "选中一个出身，查看其描述及建议细节",
-        "subtitle": "选定一个经历，然后写下你的细节",
-        "title": "你的祖源是什么?",
-        "world-map-button": "世界地图"
-      },
-      "Name-and-look": {
-        "alias-prompt": "你的绰号",
-        "look-prompt": "你的外貌",
-        "name-prompt": "你的姓名",
-        "portrait-custom": "插入肖像链接",
-        "portrait-prompt": "选择一张肖像",
-        "portrait-url-prompt": "肖像图片路径",
-        "randomize-alias-button": "随机绰号",
-        "randomize-look-button": "随机外貌",
-        "randomize-name-button": "随机姓名",
-        "subtitle": "记录姓名，黑道绰号，并简要描述你的外貌特征",
-        "title": "别人怎么称呼你？你看起来什么样？"
-      },
-      "Playbook": {
-        "subtitle": "你的剧本代表了你在黑道里的名头、你的特殊能力以及你的发展路径。",
-        "title": "你是什么类型的<strong>恶棍</strong> ？"
-      },
-      "Vice": {
-        "description": "选择一项恶欲，然后记录恶欲供应者的名字和所在地",
-        "purveyor-prompt": "你常去消遣之地的描述",
-        "select-prompt": "选择一项恶欲，查看其描述和建议的恶欲供应者。",
-        "title": "你通常去哪儿释放压力？"
-      }
+        "Noble": {
+            "description": "败家子、廷臣、衰败家族的继承人等。",
+            "label": "贵族"
+        },
+        "Trade": {
+            "description": "店主、批发商、手艺精湛的手工艺人、货运代理商等。“一个政府运维部的联络员”",
+            "label": "经商"
+        },
+        "Underworld": {
+            "description": "街头流浪儿、帮派成员、少年恶棍、或是其他任何在街头长大的流浪者。",
+            "label": "黑道"
+        }
+    },
+    "Friends": {
+        "Augus": {
+            "description": "建筑大师",
+            "label": "奥古斯"
+        },
+        "Bazso-baz": {
+            "description": "帮派头目",
+            "label": "巴佐·巴兹"
+        },
+        "Bryl": {
+            "description": "毒贩",
+            "label": "布里尔"
+        },
+        "Casta": {
+            "description": "赏金猎人",
+            "label": "卡斯塔"
+        },
+        "Celene": {
+            "description": "哨兵",
+            "label": "赛琳"
+        },
+        "Chael": {
+            "description": "恶毒暴徒",
+            "label": "查尔"
+        },
+        "Darmot": {
+            "description": "蓝衫军",
+            "label": "达默特"
+        },
+        "Eckerd": {
+            "description": "窃尸贼",
+            "label": "埃克德"
+        },
+        "Flint": {
+            "description": "灵魂贩子",
+            "label": "燧石"
+        },
+        "Frake": {
+            "description": "锁匠",
+            "label": "弗莱克"
+        },
+        "Grace": {
+            "description": "敲诈犯",
+            "label": "恩泽"
+        },
+        "Harker": {
+            "description": "笼中鸟",
+            "label": "哈克尔"
+        },
+        "Jennah": {
+            "description": "女仆",
+            "label": "珍娜"
+        },
+        "Jeren": {
+            "description": "蓝衫军档案员",
+            "label": "杰任"
+        },
+        "Jul": {
+            "description": "血贩",
+            "label": "朱"
+        },
+        "Khyra": {
+            "description": "酒吧老板",
+            "label": "克里拉"
+        },
+        "Malista": {
+            "description": "女祭司",
+            "label": "玛莉斯塔"
+        },
+        "Marlane": {
+            "description": "拳击手",
+            "label": "马兰尼"
+        },
+        "Melvir": {
+            "description": "外科医生",
+            "label": "梅尔维尔"
+        },
+        "Mercy": {
+            "description": "冷酷的杀手",
+            "label": "怜悯"
+        },
+        "Nyryx-2": {
+            "description": "拥有自我的幽灵",
+            "label": "奈瑞克斯"
+        },
+        "Nyryx": {
+            "description": "娼妓",
+            "label": "奈瑞克斯"
+        },
+        "Petra": {
+            "description": "市政书记",
+            "label": "佩特拉"
+        },
+        "Quellyn": {
+            "description": "女巫",
+            "label": "奎琳"
+        },
+        "Riven": {
+            "description": "炼金术士",
+            "label": "利文"
+        },
+        "Roslyn-kellis": {
+            "description": "贵族",
+            "label": "罗丝林·凯利斯"
+        },
+        "Salia": {
+            "description": "情报贩子",
+            "label": "萨莉亚"
+        },
+        "Sawtooth": {
+            "description": "外科医生",
+            "label": "锯齿"
+        },
+        "Scurlock": {
+            "description": "吸血鬼",
+            "label": "司库洛克"
+        },
+        "Setarra": {
+            "description": "恶魔",
+            "label": "塞塔拉"
+        },
+        "Stazia": {
+            "description": "药剂师",
+            "label": "斯塔奇亚"
+        },
+        "Steiner": {
+            "description": "杀手",
+            "label": "斯泰纳"
+        },
+        "Telda": {
+            "description": "乞丐",
+            "label": "忒尔达"
+        },
+        "Veldren": {
+            "description": "精神病人",
+            "label": "韦尔登"
+        },
+        "Veleris": {
+            "description": "间谍",
+            "label": "威利斯"
+        }
+    },
+    "Heritage-suggestions": {
+        "bastion-elders": "堡垒长老",
+        "blackvale-coven": "黑谷女巫集会",
+        "blood-cullers": "刮血人",
+        "bonewalker": "骨行者",
+        "bright-harbor-fleet": "璨湾舰队",
+        "church-of-ecstasy": "血肉之躯无我教会",
+        "city-guardians": "城市守卫",
+        "cloudspire-aeronauts": "云顶航空",
+        "confessors": "聆听告解者",
+        "cullfield-observatory": "宰场观星台",
+        "deathlander": "死域居民",
+        "demon-scholars": "恶魔学者",
+        "doskvol-academy": "多斯科沃学院",
+        "emissaries": "特使",
+        "exile": "受逐者",
+        "falconers": "驯隼者",
+        "governors-stronghold": "总督要塞",
+        "home-guard-militia": "卫国义勇军",
+        "ilysian-guard": "伊利西安卫队",
+        "imperial-city-courtiers": "帝都朝臣",
+        "imperial-collaborators": "帝国通敌者",
+        "irondale-metalworks": "铁峪金属厂",
+        "ironworks-labor": "钢铁厂劳工",
+        "lhan-lhaban": "生而弃民",
+        "liberators": "解放者",
+        "lightning-couriers": "闪电信使",
+        "lockport-scummer": "船闸港残渣",
+        "lore-keepers": "吟咏传人",
+        "lunarium-players": "月相仪演员",
+        "melamatines": "生连死结",
+        "nomad": "浪游民",
+        "north-hook-company": "北钩公司",
+        "onyx-citadel": "玛瑙城堡",
+        "outlaw": "亡命徒",
+        "radiant-energy-farmers": "光辐农民",
+        "refugee": "流亡难民",
+        "seekers": "索寻者",
+        "south-point-traders": "南角贸易",
+        "spirit-hunters": "灵魂猎手",
+        "steelhand": "铁手工人",
+        "thorn-devils": "棘刺魔鬼",
+        "tyrmoor-clanholder": "泰野传承氏族",
+        "vidyad": "持明藏修",
+        "void-gate-sentries": "虚无门哨兵",
+        "water-bearers": "护水人",
+        "whitehollow-miners": "纯白低地矿工",
+        "wintercliff-wardens": "冬崖监守"
+    },
+    "Heritages": {
+        "Akoros": {
+            "description": "帝国最辽阔、工业化程度最高的地区，也是帝都以及薄暮壁垒的所在地区。它被视作是一个囊括了多种文化的集合体，几个世纪以来都紧密联系着共同生活，有点儿像欧洲。",
+            "label": "阿克洛斯"
+        },
+        "Dagger-isles": {
+            "description": "那里的人通常在船上长大，会漂泊许久才寻求安定。他们以海盗和商队而闻名，生活在没有闪电屏障的地方——他们有别的对付幽灵的手段。",
+            "label": "匕首群岛"
+        },
+        "Iruvia": {
+            "description": "一个远在南方的富饶强大沙漠王国。这是另一片文化多样的土地，类似于古波斯、埃及和印度。",
+            "label": "伊鲁维亚"
+        },
+        "Severos": {
+            "description": "大多数赛维洛斯人生活在那几个帝国聚居区之外，他们是马背上的游牧民族，散落在令人畏惧的死亡焦土各处，生活在古代奥术堡垒的废墟里，它们依然能够阻挡幽灵。",
+            "label": "赛维洛斯"
+        },
+        "Skovlan": {
+            "description": "一个和多斯科沃隔海相望的岛国。斯科夫兰是在持续了36年的大一统战争（几年前才刚结束）里，最后一个臣服于帝国统治的。许多在战火里失去了工作还有家园的难民都来到了多斯科沃寻找新机遇。",
+            "label": "斯科夫兰"
+        },
+        "Tycheros": {
+            "description": "神秘交融之地，远在虚空海至北。所有人都说那里的家伙全是半恶魔。如果你选择了泰彻洛斯的出身，就得给你的角色标记上一些恶魔特征，比如鲨鱼一样的纯黑眼球、长着羽毛而非头发等等。",
+            "label": "泰彻洛斯"
+        }
+    },
+    "Looks": {
+        "Apparel": {
+            "collared-shirt": "立领衬衫",
+            "eel-skin-bodysuit": "鳗鱼皮连体衣",
+            "fancy-waistcoat": "花哨马甲",
+            "fitted-dress": "修身连衣裙",
+            "fitted-leggings": "紧身裤袜",
+            "half-cape": "单肩斗篷",
+            "heavy-cloak": "厚斗篷",
+            "heavy-jacket": "厚夹克",
+            "hide-and-furs": "皮草大衣",
+            "hood-and-veil": "兜帽和面纱",
+            "hooded-cape": "连帽斗篷",
+            "hooded-coat": "连帽外套",
+            "knit-cap": "针织帽",
+            "knit-sweater": "针织毛衣",
+            "leathers": "皮衣",
+            "long-coat": "长大衣",
+            "long-scarf": "长围巾",
+            "loose-silks": "宽松丝绸衣物",
+            "mask-and-robes": "面具和长袍",
+            "rags-and-tatters": "破布和纹身",
+            "rough-tunic": "粗布外套",
+            "scavenged-uniform": "拾荒者制服",
+            "sharp-trousers": "时髦裤子",
+            "short-cloak": "短大衣",
+            "skirt-and-blouse": "短裙和衬衫",
+            "slim-jacket": "修身夹克",
+            "soft-boots": "软靴子",
+            "suit-and-tie": "西装和领带",
+            "suspenders": "背带裤",
+            "tall-boots": "高筒靴",
+            "thick-greatcoat": "厚大衣",
+            "tricorn-hat": "三角帽",
+            "vest": "坎肩",
+            "waxed-coat": "防水大衣",
+            "wide-belt": "宽皮带",
+            "work-boots": "工作靴",
+            "work-trousers": "工装裤"
+        },
+        "Joining-words": {
+            "and": "及",
+            "dressed-in": "身穿",
+            "sporting": "运动",
+            "wearing": "穿戴"
+        },
+        "Person-word-adjectives": {
+            "affable": "和蔼可亲",
+            "athletic": "健壮",
+            "bony": "瘦骨嶙峋",
+            "bright": "活泼明快",
+            "brooding": "沉思者",
+            "calm": "沉着镇定",
+            "chiseled": "轮廓分明",
+            "cold": "冷漠",
+            "dark": "神秘忧郁",
+            "delicate": "纤弱精致",
+            "fair": "美丽",
+            "fierce": "狂热",
+            "grimy": "肮脏",
+            "handsome": "英俊",
+            "huge": "巨人",
+            "hunched": "驼背",
+            "languid": "无精打采",
+            "lovely": "可爱迷人",
+            "open": "开放",
+            "plump": "丰满",
+            "rough": "粗犷",
+            "sad": "悲伤",
+            "scarred": "伤痕累累",
+            "slim": "苗条",
+            "soft": "温柔",
+            "squat": "矮胖",
+            "stern": "严苛",
+            "stout": "粗壮",
+            "striking": "俊秀",
+            "twitchy": "焦躁",
+            "weathered": "饱经风霜",
+            "wiry": "精瘦",
+            "worn": "蓄须"
+        },
+        "Person-words": {
+            "child": {
+                "article": "一个",
+                "word": "孩子"
+            },
+            "man": {
+                "article": "一个",
+                "word": "男人"
+            },
+            "person": {
+                "article": "一个",
+                "word": "人"
+            },
+            "woman": {
+                "article": "一个",
+                "word": "女人"
+            }
+        },
+        "Templates": {
+            "one-adjective-one-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1}",
+            "one-adjective-two-apparel": "{personWordArticle} {personWordAdjective1} {personWord} {wearingVerb} {apparel1} 与 {apparel2}",
+            "two-adjectives-one-apparel": "{personWordArticle} {personWordAdjective1} 且 {personWordAdjective2} {personWord} {wearingVerb} {apparel1}",
+            "two-adjectives-two-apparel": "{personWordArticle} {personWordAdjective1} 且 {personWordAdjective2} {personWord} {wearingVerb} {apparel1} 与 {apparel2}"
+        }
+    },
+    "Names": {
+        "Aliases": {
+            "bell": "铃声",
+            "birch": "白桦",
+            "bricks": "红砖",
+            "bug": "飞虫",
+            "chime": "钟声",
+            "coil": "死亡缠绕",
+            "cricket": "蟋蟀",
+            "cross": "十字架",
+            "crow": "乌鸦",
+            "echo": "回音",
+            "flint": "燧石",
+            "frog": "青蛙",
+            "frost": "霜冻",
+            "grip": "抓手",
+            "gunner": "神枪手",
+            "hammer": "锤手",
+            "hook": "钩子",
+            "junker": "废人",
+            "mist": "薄雾",
+            "moon": "月亮",
+            "nail": "铁钉",
+            "needle": "针头",
+            "ogre": "食人魔",
+            "pool": "水塘",
+            "ring": "叮当",
+            "ruby": "红宝石",
+            "silver": "银币",
+            "skinner": "油皮",
+            "song": "歌者",
+            "spur": "骨刺",
+            "tackle": "切断",
+            "thistle": "蓟花",
+            "thorn": "荆棘",
+            "tick-tock": "滴答",
+            "twelves": "十二",
+            "vixen": "悍妇",
+            "whip": "长鞭",
+            "wicker": "柳条人"
+        }
+    },
+    "Playbooks": {
+        "Cutter": {
+            "description": "令人胆寒的危险战士。",
+            "label": "剃刀"
+        },
+        "Hound": {
+            "description": "致命的神枪手与追踪者",
+            "label": "猎犬"
+        },
+        "Leech": {
+            "description": "破坏者与技术员",
+            "label": "毒蛭"
+        },
+        "Lurk": {
+            "description": "秘密潜入者与窃贼。",
+            "label": "潜影"
+        },
+        "Slide": {
+            "description": "狡猾的操纵者与间谍",
+            "label": "滑弦"
+        },
+        "Spider": {
+            "description": "心思错综的幕后主谋",
+            "label": "络蛛"
+        },
+        "Whisper": {
+            "description": "神秘专家与通灵者",
+            "label": "低语"
+        }
+    },
+    "User-interface": {
+        "Home-page": {
+            "Attribution": {
+                "code-and-design": "代码与设计排版为 <a href=\"https://olinkirk.land/\" target=\"_blank\">Olin Kirkland</a>",
+                "copyright": "版权所有 © {year} Olin Kirkland",
+                "license-blades-in-the-dark": "此网站基于 <a href=\"http://www.bladesinthedark.com/\" target=\"_blank\">《》</a> — 由One Seven设计工作室出版， John Harper设计撰写, 并允许我们按 <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\">知识共享署名3.0 协议</a>使用",
+                "license-icons": "图标来自<a href=\"https://icons8.com\" target=\"_blank\">Icons8.com</a>",
+                "license-portraits": "肖像图片来自<a href=\"https://guides.loc.gov/p-and-p-rights-and-restrictions/risk-assessment\" target=\"_blank\">The Library of Congress</a> with no known restrictions on their use",
+                "localization": "Spanish translation by Felix&nbsp;G.&nbsp;Rios<br />French translation by <a href=\"https://500nuancesdegeek.fr/\" target=\"_blank\">500 Nuances de Geek</a> and Thomas Girod<br />中文翻译由极夜十四提供",
+                "news-and-updates": "新闻＆更新"
+            },
+            "Scoundrel-card": {
+                "no-name": "无名剧本",
+                "no-playbook": "无名恶棍"
+            },
+            "description": "一个人物卡存档器，用于<a href=\"https://bladesinthedark.com/\" target=\"_blank\">《暗夜刀锋》</a>",
+            "lab-banner": "工坊",
+            "last-updated": "更新日期{date}",
+            "new-scoundrel-button": "创建新恶棍",
+            "scroll-prompt": "向下滚动查看出处",
+            "settings-button": "设置"
+        },
+        "Make-page": {
+            "Controls": {
+                "delete-button": "删除",
+                "home-button": "主页",
+                "next-button": "下一步"
+            },
+            "Step-navigation": {
+                "abilities": "特殊能力",
+                "actions": "行动",
+                "background": "经历",
+                "export": "导出",
+                "friends": "亲朋",
+                "heritage": "出身",
+                "name-and-look": "姓名与外观",
+                "playbook": "剧本",
+                "vice": "恶欲"
+            }
+        },
+        "Modals": {
+            "Change-language": {
+                "Controls": {
+                    "cancel-button": "不，保持使用{currentLanguage}",
+                    "confirm-button": "是的，选择{newLanguage}"
+                },
+                "message": "您正尝试使用<strong>{newLanguage}</strong> 语言创建恶棍角色，但您当前使用的语言是<strong>{currentLanguage}</strong>. 您是否希望切换到<strong>{newLanguage}</strong> 语言?",
+                "title": "使用新语言创建当前恶棍"
+            },
+            "Confirm": {
+                "Controls": {
+                    "cancel-button": "不，我改主意了",
+                    "confirm-button": "是的"
+                }
+            },
+            "Delete-scoundrel": {
+                "Controls": {
+                    "confirm-button": "删除"
+                },
+                "message": "你确定要删除这一恶棍吗？此操作无法撤销。",
+                "title": "删除恶棍？"
+            },
+            "Import": {
+                "Failed": {
+                    "message": "角色卡无法导入，请检查网址并重试。",
+                    "title": "导入失败"
+                },
+                "Success": {
+                    "message": "角色卡导入成功！",
+                    "title": "导入成功"
+                }
+            },
+            "News-and-updates": {
+                "title": "新闻＆更新"
+            },
+            "Settings": {
+                "Language": {
+                    "Language-features": {
+                        "data": "游戏数据",
+                        "deep-cuts": "深度切割",
+                        "sheets": "人物卡",
+                        "ui": "用户界面"
+                    },
+                    "Languages": {
+                        "de": "德语",
+                        "en": "英语",
+                        "es": "西班牙语",
+                        "fr": "法语",
+                        "it": "意大利语",
+                        "zh": "中文"
+                    },
+                    "label": "选择使用语言"
+                },
+                "Tracking": {
+                    "description": "最小化追踪通过收集角色、页面访问和功能使用的匿名数据来帮助改进Scoundry。不会收集或共享任何个人信息。",
+                    "label": "启用匿名追踪"
+                },
+                "title": "设置"
+            },
+            "Tracking-consent": {
+                "Controls": {
+                    "cancel-button": "禁用追踪",
+                    "confirm-button": "我接受追踪"
+                },
+                "message": "最小化追踪通过收集角色、页面访问和功能使用的匿名数据来帮助改进Scoundry。不会收集或共享任何个人信息。",
+                "title": "追踪偏好"
+            },
+            "World-map": {
+                "title": "破碎诸陆"
+            }
+        },
+        "Steps": {
+            "Abilities": {
+                "subtitle": "选择一项特殊能力",
+                "title": "什么能力让你在集团中与众不同？"
+            },
+            "Actions": {
+                "Action-tally": {
+                    "with-character-creation": "<strong>{count}</strong>分配7个行动点",
+                    "without-character-creation": "<strong>{count}</strong> 已分配行动点"
+                },
+                "Actions": {
+                    "Attune": {
+                        "description": "同调灵魂和幽灵领域；沟通电离灵质能量；感知鬼魂并与其交流；理解幽灵光谱.",
+                        "label": "同调"
+                    },
+                    "Command": {
+                        "description": "靠你的个人力量强迫服从命令；恐吓或威胁领导集团的帮众们做出行动。",
+                        "label": "命令"
+                    },
+                    "Consort": {
+                        "description": "交结你的出身、经历相关人物，以及亲朋或是宿敌，从而获取资源、信息、人脉或场地。",
+                        "label": "交结"
+                    },
+                    "Finesse": {
+                        "description": "灵巧地从别人口袋里偷走东西；运用巧妙误导或精妙手法；操纵车辆或是坐骑。",
+                        "label": "灵巧"
+                    },
+                    "Hunt": {
+                        "description": "狩猎目标；收集其位置与行踪；从远处进行精准射击。",
+                        "label": "狩猎"
+                    },
+                    "Prowl": {
+                        "description": "潜行穿越障碍：攀爬、游泳、跳跃及奔跑。近距离暴力突袭——背刺、割喉、闷棍等。",
+                        "label": "潜行"
+                    },
+                    "Skirmish": {
+                        "description": "与对手近战斗殴；发起攻击或坚守阵地；搏斗与摔跤。",
+                        "label": "斗殴"
+                    },
+                    "Study": {
+                        "description": "仔细研究审查一个人、一份文件或一个物品，从而收集信息并应用知识；获得更为深入的理解；进行深入调研。",
+                        "label": "研究"
+                    },
+                    "Survey": {
+                        "description": "审视某个地点或情境，从而了解当下情况；在问题发生前就察觉苗头；收集信息来寻找机遇或优势。",
+                        "label": "审视"
+                    },
+                    "Sway": {
+                        "description": "动摇他人，利用魅力、逻辑、伪装或是虚张声势；通过操纵或诱导来改变他人的态度和行为。",
+                        "label": "动摇"
+                    },
+                    "Tinker": {
+                        "description": "操作机械装置进行创造、修改、禁用或是修复；解除陷阱、撬锁、打开保险箱；使用电离灵质科技。",
+                        "label": "操作"
+                    },
+                    "Wreck": {
+                        "description": "以蛮力或蓄意策划手段去破坏摧毁某地、某物或某障碍；暴力突破防御；制造混乱和骚动。",
+                        "label": "破坏"
+                    }
+                },
+                "Attributes": {
+                    "Insight": "洞察",
+                    "Prowess": "勇猛",
+                    "Resolve": "决心"
+                },
+                "Options": {
+                    "character-creation-button": "角色共有7行动点，每个行动至多分配2点",
+                    "mastery-advance-button": "精通强化: 允许行动值提升至4点"
+                },
+                "subtitle": "点出最能代表你的行动",
+                "suggested-actions": "你的出身和经历所隐喻的行动",
+                "title": "什么是你最拿手的？"
+            },
+            "Background": {
+                "deep-cuts-description": "这些背景的完整描述见 <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">《深度切割》</a>，《暗夜刀锋》的扩展集.",
+                "detail-prompt": "你经历中的一个细节",
+                "select-prompt": "选中一个经历，查看其描述及建议细节",
+                "subtitle": "选定一个经历，然后写下你的细节",
+                "title": "你在加入集团前做过什么"
+            },
+            "Export": {
+                "Controls": {
+                    "classic-sheet": "标准",
+                    "copied": "已复制！",
+                    "save-as-image-button": "保存为图片",
+                    "share-as-url-button": "分享链接"
+                },
+                "subtitle": "定制并分享你的角色卡",
+                "title": "导出你的恶棍"
+            },
+            "Friends": {
+                "friend-button": "亲朋",
+                "rival-button": "宿敌",
+                "subtitle": "标记一个作为长期盟友、家人或是恋人。然后标记另一个作为对手、敌人或是被背叛的搭档",
+                "title": "谁欠你人情，谁视你为死敌?"
+            },
+            "Heritage": {
+                "deep-cuts-description": "这些出身的完整描述见 <a href=\"https://johnharper.itch.io/deep-cuts/\" target=\"_blank\">《深度切割》</a>，《暗夜刀锋》扩展集",
+                "detail-prompt": "你出身中的一个细节",
+                "select-prompt": "选中一个出身，查看其描述及建议细节",
+                "subtitle": "选定一个经历，然后写下你的细节",
+                "title": "你的祖源是什么?",
+                "world-map-button": "世界地图"
+            },
+            "Name-and-look": {
+                "alias-prompt": "你的绰号",
+                "look-prompt": "你的外貌",
+                "name-prompt": "你的姓名",
+                "portrait-custom": "插入肖像链接",
+                "portrait-prompt": "选择一张肖像",
+                "portrait-url-prompt": "肖像图片路径",
+                "randomize-alias-button": "随机绰号",
+                "randomize-look-button": "随机外貌",
+                "randomize-name-button": "随机姓名",
+                "subtitle": "记录姓名，黑道绰号，并简要描述你的外貌特征",
+                "title": "别人怎么称呼你？你看起来什么样？"
+            },
+            "Playbook": {
+                "subtitle": "你的剧本代表了你在黑道里的名头、你的特殊能力以及你的发展路径。",
+                "title": "你是什么类型的<strong>恶棍</strong> ？"
+            },
+            "Vice": {
+                "description": "选择一项恶欲，然后记录恶欲供应者的名字和所在地",
+                "purveyor-prompt": "你常去消遣之地的描述",
+                "select-prompt": "选择一项恶欲，查看其描述和建议的恶欲供应者。",
+                "title": "你通常去哪儿释放压力？"
+            }
+        }
+    },
+    "Vice-suggestions": {
+        "Aranna-the-blessed": {
+            "description": "被遗忘之神的信徒",
+            "district": "夜市",
+            "label": "受祝的阿兰娜",
+            "text": "受祝的阿兰娜，被遗忘之神的信徒，夜市"
+        },
+        "Avrick": {
+            "description": "贩子",
+            "district": "峡",
+            "label": "阿维克",
+            "text": "阿维克，粉贩子，运峡"
+        },
+        "Chef-roselle": {
+            "description": "金梅餐厅",
+            "district": "六塔",
+            "label": "大厨罗塞尔",
+            "text": "大厨罗塞尔，金梅餐厅，六塔"
+        },
+        "Circle-of-flame": {
+            "description": "一个秘密结社",
+            "label": "红焰环社",
+            "text": "红焰环社，一个秘密结社"
+        },
+        "Dunridge-sons": {
+            "description": "精致布料与裁缝",
+            "district": "夜市",
+            "label": "邓德里奇父子店",
+            "text": "邓德里奇父子精致布料与裁缝店，夜市。"
+        },
+        "Eldrin-prichard": {
+            "description": "银天鹅游轮",
+            "district": "辉石运河",
+            "label": "艾德琳·普理查德",
+            "text": "艾德琳·普理查德，银天鹅游轮，辉石运河"
+        },
+        "Family-members": {
+            "description": "出身或经历",
+            "label": "家庭成员或曾经的同事",
+            "text": "家庭成员（出身），或曾经的同事（经历）"
+        },
+        "Father-yoren": {
+            "description": "哭泣女士之家",
+            "district": "六塔",
+            "label": "尤伦神父",
+            "text": "尤伦神父，哭泣女士之家，六塔"
+        },
+        "Grist": {
+            "description": "Boxing",
+            "district": "The docks",
+            "label": "Grist",
+            "text": "Grist; Boxing; The docks"
+        },
+        "Harvale-brogan": {
+            "description": "百年俱乐部",
+            "district": "辉石",
+            "label": "哈维尔·布罗冈",
+            "text": "哈维尔·布罗冈，百年俱乐部，辉石"
+        },
+        "Helene": {
+            "description": "银鹿赌场",
+            "district": "丝浦",
+            "label": "海伦涅",
+            "text": "海伦涅，银鹿赌场，丝浦"
+        },
+        "Hooded-proprietor": {
+            "description": "码头边的半沉石窟酒馆",
+            "district": "海港",
+            "label": "戴着兜帽的老板",
+            "text": "戴着兜帽的老板，半沉石窟酒馆，海港"
+        },
+        "Hutton": {
+            "description": "斯科夫兰难民/革命派",
+            "district": "焦洼",
+            "label": "赫顿",
+            "text": "赫顿，斯科夫兰的难民，也是革命家，焦洼。"
+        },
+        "Ilacille": {
+            "description": "被遗忘诸神的圣堂废墟",
+            "district": "煤岭",
+            "label": "埃拉希尔",
+            "text": "埃拉希尔，被遗忘诸神的圣堂废墟，煤岭"
+        },
+        "Jewel-bird-shine": {
+            "description": "猫爬巷",
+            "district": "海港",
+            "label": "珠宝、飞鸟与闪耀",
+            "text": "珠宝、飞鸟与闪耀，猫爬巷，海港"
+        },
+        "Lady-dusk": {
+            "description": "薄暮庄园俱乐部",
+            "district": "白冕",
+            "label": "暮色女士",
+            "text": "暮色女士，薄暮庄园俱乐部，白冕"
+        },
+        "Lady-freyla": {
+            "description": "皇帝的酒桶酒吧",
+            "district": "白冕",
+            "label": "芙瑞拉女士",
+            "text": "芙瑞拉女士，皇帝的酒桶酒吧，白冕"
+        },
+        "Lord-penderyn": {
+            "description": "回响档案馆",
+            "district": "宪厅",
+            "label": "潘德林勋爵",
+            "text": "潘德林勋爵，回响档案馆，宪厅"
+        },
+        "Madame-tesslyn": {
+            "description": "红灯妓院",
+            "district": "丝浦",
+            "label": "泰斯林夫人",
+            "text": "泰斯林夫人，红灯妓院，丝浦。"
+        },
+        "Maestro-helleren": {
+            "description": "塔尖花园剧院",
+            "district": "白冕",
+            "label": "赫列论大师",
+            "text": "赫列论大师，塔尖花园剧院，白冕"
+        },
+        "Mardin-gull": {
+            "description": "漏光水桶酒馆",
+            "district": "鸦爪",
+            "label": "马丁·贼鸥",
+            "text": "马丁·贼鸥，漏光水桶酒馆，鸦爪"
+        },
+        "Master-vreen": {
+            "description": "猎犬赛跑",
+            "district": "夜市",
+            "label": "弗林大师",
+            "text": "弗林大师，猎犬赛跑，夜市"
+        },
+        "Mother-narya": {
+            "description": "哭泣女士之家",
+            "district": "六塔",
+            "label": "女院长娜娅",
+            "text": "女院长娜娅，哭泣女士之家，六塔"
+        },
+        "Nelisanne": {
+            "description": "血肉之躯无我教会",
+            "district": "辉石",
+            "label": "奈尔莉萨",
+            "text": "奈尔莉萨，血肉之躯无我教会，辉石"
+        },
+        "Ojak": {
+            "description": "泰彻洛斯屋顶集市摊贩",
+            "district": "丝浦",
+            "label": "奥加克",
+            "text": "奥加克，泰彻洛斯屋顶集市摊贩，丝浦"
+        },
+        "Pux-bolin": {
+            "description": "竖琴猴酒馆",
+            "district": "夜市",
+            "label": "帕克斯·波林",
+            "text": "帕克斯·波林，竖琴猴酒馆，夜市"
+        },
+        "Rolan-volaris": {
+            "description": "曼纱社交俱乐部",
+            "district": "夜市",
+            "label": "罗兰 ·沃拉里斯",
+            "text": "罗兰 ·沃拉里斯，曼纱社交俱乐部，夜市"
+        },
+        "Salia": {
+            "description": "一个调和灵，其会随心所欲地从一具躯体转移至另一具躯体身上",
+            "label": "““萨莉亚”",
+            "text": "““萨莉亚”，一个调和灵，其会随心所欲地从一具躯体转移至另一具躯体身上"
+        },
+        "Sergeant-velk": {
+            "description": "坑斗场",
+            "district": "黯沼",
+            "label": "维尔克巡佐",
+            "text": "维尔克巡佐，坑斗场，黯沼"
+        },
+        "Singer": {
+            "description": "澡堂",
+            "district": "鸦爪",
+            "label": "歌手",
+            "text": "歌手，澡堂，鸦爪"
+        },
+        "Sister-thorn": {
+            "description": "死域拾荒者帮派",
+            "district": "伽多克火车站",
+            "label": "荆棘修女",
+            "text": "荆棘修女，死域拾荒者帮派，伽多克火车站"
+        },
+        "Spoggs": {
+            "district": "鸦爪",
+            "label": "斯伯格的骰子游戏",
+            "text": "斯伯格的骰子游戏，鸦爪"
+        },
+        "Travens": {
+            "district": "煤岭",
+            "label": "特拉文的烟草店",
+            "text": "特拉文的烟草店，煤岭"
+        }
+    },
+    "Vices": {
+        "Faith": {
+            "description": "：你献身于一股无形伟力，被遗忘的神明、先祖等。",
+            "label": "信仰"
+        },
+        "Gambling": {
+            "description": "你热衷于运气游戏，在体育赛事上下注等。",
+            "label": "赌博"
+        },
+        "Luxury": {
+            "description": "炫耀你的奢华多金。",
+            "label": "奢侈"
+        },
+        "Obligation": {
+            "description": "你服务于一个家族、一项事业、一个组织、一个慈善机构等。",
+            "label": "义务"
+        },
+        "Pleasure": {
+            "description": "来自情人、美食、美酒、毒品、艺术、戏剧等方面的满足感。",
+            "label": "享乐"
+        },
+        "Stupor": {
+            "description": "你通过滥用毒品、酗酒、在战斗中挨上痛揍等方式来寻求遗忘。",
+            "label": "麻木"
+        },
+        "Weird": {
+            "description": "你研究奇异的本质、与暴戾的幽灵厮混、遵从诡异的仪式或禁忌等。",
+            "label": "怪诞"
+        }
     }
-  },
-  "Vice-suggestions": {
-    "Aranna-the-blessed": {
-      "description": "被遗忘之神的信徒",
-      "district": "夜市",
-      "label": "受祝的阿兰娜",
-      "text": "受祝的阿兰娜，被遗忘之神的信徒，夜市"
-    },
-    "Avrick": {
-      "description": "贩子",
-      "district": "峡",
-      "label": "阿维克",
-      "text": "阿维克，粉贩子，运峡"
-    },
-    "Chef-roselle": {
-      "description": "金梅餐厅",
-      "district": "六塔",
-      "label": "大厨罗塞尔",
-      "text": "大厨罗塞尔，金梅餐厅，六塔"
-    },
-    "Circle-of-flame": {
-      "description": "一个秘密结社",
-      "label": "红焰环社",
-      "text": "红焰环社，一个秘密结社"
-    },
-    "Dunridge-sons": {
-      "description": "精致布料与裁缝",
-      "district": "夜市",
-      "label": "邓德里奇父子店",
-      "text": "邓德里奇父子精致布料与裁缝店，夜市。"
-    },
-    "Eldrin-prichard": {
-      "description": "银天鹅游轮",
-      "district": "辉石运河",
-      "label": "艾德琳·普理查德",
-      "text": "艾德琳·普理查德，银天鹅游轮，辉石运河"
-    },
-    "Family-members": {
-      "description": "出身或经历",
-      "label": "家庭成员或曾经的同事",
-      "text": "家庭成员（出身），或曾经的同事（经历）"
-    },
-    "Father-yoren": {
-      "description": "哭泣女士之家",
-      "district": "六塔",
-      "label": "尤伦神父",
-      "text": "尤伦神父，哭泣女士之家，六塔"
-    },
-    "Grist": {
-      "description": "Boxing",
-      "district": "The docks",
-      "label": "Grist",
-      "text": "Grist; Boxing; The docks"
-    },
-    "Harvale-brogan": {
-      "description": "百年俱乐部",
-      "district": "辉石",
-      "label": "哈维尔·布罗冈",
-      "text": "哈维尔·布罗冈，百年俱乐部，辉石"
-    },
-    "Helene": {
-      "description": "银鹿赌场",
-      "district": "丝浦",
-      "label": "海伦涅",
-      "text": "海伦涅，银鹿赌场，丝浦"
-    },
-    "Hooded-proprietor": {
-      "description": "码头边的半沉石窟酒馆",
-      "district": "海港",
-      "label": "戴着兜帽的老板",
-      "text": "戴着兜帽的老板，半沉石窟酒馆，海港"
-    },
-    "Hutton": {
-      "description": "斯科夫兰难民/革命派",
-      "district": "焦洼",
-      "label": "赫顿",
-      "text": "赫顿，斯科夫兰的难民，也是革命家，焦洼。"
-    },
-    "Ilacille": {
-      "description": "被遗忘诸神的圣堂废墟",
-      "district": "煤岭",
-      "label": "埃拉希尔",
-      "text": "埃拉希尔，被遗忘诸神的圣堂废墟，煤岭"
-    },
-    "Jewel-bird-shine": {
-      "description": "猫爬巷",
-      "district": "海港",
-      "label": "珠宝、飞鸟与闪耀",
-      "text": "珠宝、飞鸟与闪耀，猫爬巷，海港"
-    },
-    "Lady-dusk": {
-      "description": "薄暮庄园俱乐部",
-      "district": "白冕",
-      "label": "暮色女士",
-      "text": "暮色女士，薄暮庄园俱乐部，白冕"
-    },
-    "Lady-freyla": {
-      "description": "皇帝的酒桶酒吧",
-      "district": "白冕",
-      "label": "芙瑞拉女士",
-      "text": "芙瑞拉女士，皇帝的酒桶酒吧，白冕"
-    },
-    "Lord-penderyn": {
-      "description": "回响档案馆",
-      "district": "宪厅",
-      "label": "潘德林勋爵",
-      "text": "潘德林勋爵，回响档案馆，宪厅"
-    },
-    "Madame-tesslyn": {
-      "description": "红灯妓院",
-      "district": "丝浦",
-      "label": "泰斯林夫人",
-      "text": "泰斯林夫人，红灯妓院，丝浦。"
-    },
-    "Maestro-helleren": {
-      "description": "塔尖花园剧院",
-      "district": "白冕",
-      "label": "赫列论大师",
-      "text": "赫列论大师，塔尖花园剧院，白冕"
-    },
-    "Mardin-gull": {
-      "description": "漏光水桶酒馆",
-      "district": "鸦爪",
-      "label": "马丁·贼鸥",
-      "text": "马丁·贼鸥，漏光水桶酒馆，鸦爪"
-    },
-    "Master-vreen": {
-      "description": "猎犬赛跑",
-      "district": "夜市",
-      "label": "弗林大师",
-      "text": "弗林大师，猎犬赛跑，夜市"
-    },
-    "Mother-narya": {
-      "description": "哭泣女士之家",
-      "district": "六塔",
-      "label": "女院长娜娅",
-      "text": "女院长娜娅，哭泣女士之家，六塔"
-    },
-    "Nelisanne": {
-      "description": "血肉之躯无我教会",
-      "district": "辉石",
-      "label": "奈尔莉萨",
-      "text": "奈尔莉萨，血肉之躯无我教会，辉石"
-    },
-    "Ojak": {
-      "description": "泰彻洛斯屋顶集市摊贩",
-      "district": "丝浦",
-      "label": "奥加克",
-      "text": "奥加克，泰彻洛斯屋顶集市摊贩，丝浦"
-    },
-    "Pux-bolin": {
-      "description": "竖琴猴酒馆",
-      "district": "夜市",
-      "label": "帕克斯·波林",
-      "text": "帕克斯·波林，竖琴猴酒馆，夜市"
-    },
-    "Rolan-volaris": {
-      "description": "曼纱社交俱乐部",
-      "district": "夜市",
-      "label": "罗兰 ·沃拉里斯",
-      "text": "罗兰 ·沃拉里斯，曼纱社交俱乐部，夜市"
-    },
-    "Salia": {
-      "description": "一个调和灵，其会随心所欲地从一具躯体转移至另一具躯体身上",
-      "label": "““萨莉亚”",
-      "text": "““萨莉亚”，一个调和灵，其会随心所欲地从一具躯体转移至另一具躯体身上"
-    },
-    "Sergeant-velk": {
-      "description": "坑斗场",
-      "district": "黯沼",
-      "label": "维尔克巡佐",
-      "text": "维尔克巡佐，坑斗场，黯沼"
-    },
-    "Singer": {
-      "description": "澡堂",
-      "district": "鸦爪",
-      "label": "歌手",
-      "text": "歌手，澡堂，鸦爪"
-    },
-    "Sister-thorn": {
-      "description": "死域拾荒者帮派",
-      "district": "伽多克火车站",
-      "label": "荆棘修女",
-      "text": "荆棘修女，死域拾荒者帮派，伽多克火车站"
-    },
-    "Spoggs": {
-      "district": "鸦爪",
-      "label": "斯伯格的骰子游戏",
-      "text": "斯伯格的骰子游戏，鸦爪"
-    },
-    "Travens": {
-      "district": "煤岭",
-      "label": "特拉文的烟草店",
-      "text": "特拉文的烟草店，煤岭"
-    }
-  },
-  "Vices": {
-    "Faith": {
-      "description": "：你献身于一股无形伟力，被遗忘的神明、先祖等。",
-      "label": "信仰"
-    },
-    "Gambling": {
-      "description": "你热衷于运气游戏，在体育赛事上下注等。",
-      "label": "赌博"
-    },
-    "Luxury": {
-      "description": "炫耀你的奢华多金。",
-      "label": "奢侈"
-    },
-    "Obligation": {
-      "description": "你服务于一个家族、一项事业、一个组织、一个慈善机构等。",
-      "label": "义务"
-    },
-    "Pleasure": {
-      "description": "来自情人、美食、美酒、毒品、艺术、戏剧等方面的满足感。",
-      "label": "享乐"
-    },
-    "Stupor": {
-      "description": "你通过滥用毒品、酗酒、在战斗中挨上痛揍等方式来寻求遗忘。",
-      "label": "麻木"
-    },
-    "Weird": {
-      "description": "你研究奇异的本质、与暴戾的幽灵厮混、遵从诡异的仪式或禁忌等。",
-      "label": "怪诞"
-    }
-  }
 }

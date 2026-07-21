@@ -168,7 +168,7 @@ const languageFeatures = {
     },
     zh: {
         ui: true,
-        data: false,
+        data: true,
         sheets: false,
         deepCuts: false
     }
