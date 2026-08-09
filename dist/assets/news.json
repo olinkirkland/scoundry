@@ -22,5 +22,11 @@
         "title": "Version 1.4 Release Notes",
         "date": "July 20, 2026",
         "content": "<section><p>Another round of localization updates! Thanks to everyone in the community who helped translate and proofread these new languages.</section><section><h3>New Languages</h3><ul><li>Added <strong>Italian</strong> language localization (data only, no sheets).<li>Added <strong>Chinese</strong> language localization (data only, no sheets).</ul></section><section><h3>Fixes & Improvements</h3><ul><li>Minor styling adjustments to accommodate longer text strings in the new translations.</ul></section>"
+    },
+    {
+        "id": 5,
+        "title": "Version 1.5 Release Notes",
+        "date": "August 15, 2026",
+        "content": "<section><p>Finally, the Turkish localization is here! Thanks to everyone's patience. I will add sheets for Turkish soon, since they were kindly provided to me.</p></section>"
     }
 ]
