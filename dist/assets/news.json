@@ -27,6 +27,6 @@
         "id": 5,
         "title": "Version 1.5 Release Notes",
         "date": "August 15, 2026",
-        "content": "<section><p>Finally, the Turkish localization is here! Thanks to everyone's patience. I will add sheets for Turkish soon, since they were kindly provided to me.</p></section>"
+        "content": "<section><p>Finally, the Turkish localization is here! Thanks to everyone's patience. I will add sheets for Turkish soon, since they were kindly provided to me.</p></section><section><h3>New Language</h3><ul><li>Added <strong>Turkish</strong> language localization (data only, no sheets).</ul></section>"
     }
 ]
