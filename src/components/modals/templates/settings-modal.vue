@@ -175,7 +175,7 @@ const languageFeatures = {
     tr: {
         ui: true,
         data: true,
-        sheets: true,
+        sheets: false,
         deepCuts: false
     }
 };
