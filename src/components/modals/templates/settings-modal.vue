@@ -134,7 +134,7 @@ import { startTracking, stopTracking } from '@/tracker';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-const languages = ['en', 'es', 'de', 'fr', 'it', 'zh'];
+const languages = ['en', 'es', 'de', 'fr', 'it', 'zh', 'tr'];
 const languageFeatures = {
     en: {
         ui: true,
@@ -170,6 +170,12 @@ const languageFeatures = {
         ui: true,
         data: true,
         sheets: false,
+        deepCuts: false
+    },
+    tr: {
+        ui: true,
+        data: true,
+        sheets: true,
         deepCuts: false
     }
 };
